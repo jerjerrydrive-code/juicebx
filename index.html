@@ -267,35 +267,19 @@
     <div class="relative flex flex-row overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full h-full" id="app-container">
 
       <!-- ═══ PANEL 0: HOME / TOP 100 SHUFFLES ═══ -->
-      <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-36 px-4 pt-3.5" style="background: var(--bg-panel);">
+      <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-36 px-4 pt-6" style="background: var(--bg-panel);">
         
-        <!-- Top Bar -->
-        <div class="flex items-center justify-between mb-3.5">
-          <div class="flex items-center gap-2">
-            <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-8 sm:h-10 w-auto max-w-[160px] object-contain filter drop-shadow-[0_2px_12px_rgba(255,79,0,0.35)] cursor-pointer active:scale-95 transition-transform" title="JuiceBx">
-          </div>
-          <div class="text-right">
-            <div class="flex items-center justify-end gap-1 mb-0.5">
-              <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span class="text-[9px] font-black tracking-widest uppercase text-purple-400">v2.9.0</span>
-            </div>
-            <span class="text-[11px] font-bold" style="color: var(--text-secondary);">Top 100 Shuffles</span>
-          </div>
+        <!-- Top Bar: Centered Title -->
+        <div class="flex items-center justify-center mb-6">
+          <h1 class="text-2xl font-black tracking-tight" style="color: var(--text-primary);">Shuffles</h1>
         </div>
 
         <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
           <div class="mb-5 space-y-3">
-            <div class="flex items-center justify-between px-1">
-              <span class="text-xs font-black uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
-                <i class="ph-fill ph-crown-simple text-sm text-amber-400"></i> Featured Shuffles
-              </span>
-              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300">100 Tracks Each</span>
-            </div>
-
             <!-- Top 2 Hero Cards -->
             <div class="grid grid-cols-2 gap-3.5">
               <!-- Official Discography -->
-              <div class="genre-card relative h-40 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3.5 flex flex-col justify-between bg-gradient-to-br from-purple-800 via-indigo-950 to-black shadow-xl border border-purple-500/40 group hover:border-purple-400/60" data-genre="Juice WRLD: Official Discography">
+              <div class="genre-card relative h-40 rounded-3xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3.5 flex flex-col justify-between bg-gradient-to-br from-purple-800 via-indigo-950 to-black shadow-xl border border-purple-500/40 group hover:border-purple-400/60" data-genre="Juice WRLD: Official Discography">
                 <div class="flex items-center justify-between">
                   <span class="text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-purple-500/60 text-white flex items-center gap-1 shadow-sm">
                     <i class="ph-fill ph-broadcast animate-pulse"></i> OFFICIAL
@@ -307,7 +291,6 @@
                 <div>
                   <span class="font-black text-white text-[15px] leading-tight block">Official Discography</span>
                   <span class="text-[11px] font-medium text-purple-200/80 mt-0.5 block">All Albums, Singles & Hits</span>
-                  <span class="text-[10px] font-bold text-amber-300 mt-1 block">107 Tracks Shuffled</span>
                 </div>
               </div>
 
@@ -333,8 +316,7 @@
           <!-- TOP 100 GENRE SHUFFLES GRID -->
           <div class="mb-4">
             <div class="flex items-center justify-between px-1 mb-2.5">
-              <p class="text-xs font-black uppercase tracking-wider" style="color: var(--text-tertiary);">Top 100 Genre Shuffles</p>
-              <span class="text-[10px] font-bold" style="color: var(--text-tertiary);">Tap to Shuffle & Play</span>
+
             </div>
             
             <div class="grid grid-cols-2 gap-3" id="home-shuffles-grid">

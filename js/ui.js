@@ -1134,9 +1134,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // ═══ LAUNCH GENRE RADIO (DYNAMIC FALLBACK) ═══
   window.launchGenreRadio = async function(genreName) {
     try {
-      const res = await fetch(`/api/genre_radio?genre=${encodeURIComponent(genreName)}`);
-      const data = res.ok ? await res.json() : null;
-      let tracks = (data?.tracks && data.tracks.length > 0) ? data.tracks : await engine.search(`${genreName} hits`);
+      let tracks = [];
+
+      // 1. DEDICATED THE LOST VAULT API INTEGRATION (2,500+ Unreleased Songs)
+      if (genreName === "Juice WRLD: The Lost Vault" || genreName === "the_lost_vault") {
+        try {
+          const maxPage = 127; // Approx 2554 songs / 20
+          const randomPage = Math.floor(Math.random() * maxPage) + 1;
+          const res = await fetch(`https://juicewrldapi.com/juicewrld/songs/?page=${randomPage}`);
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.results && data.results.length > 0) {
+              tracks = data.results.map(song => ({
+                id: `jwapi-${song.id}`,
+                title: song.name,
+                artist: "Juice WRLD (Unreleased)",
+                duration: song.length || "3:00",
+                seconds: parseInt((song.length || "3:00").split(':')[0]) * 60 + parseInt((song.length || "3:00").split(':')[1] || 0),
+                thumb: song.image_url ? `https://juicewrldapi.com${song.image_url}` : "https://images.unsplash.com/photo-1614113489855-66422ad300a4?w=500&q=80",
+                audioUrl: song.path ? `https://juicewrldapi.com/juicewrld/files/download/?path=${encodeURIComponent(song.path)}` : null,
+                isDirectAudio: !!song.path,
+                hasLyrics: !!song.lyrics || !!song.synced_lyrics,
+                rawLyrics: song.synced_lyrics || song.lyrics || null
+              })).filter(t => t.audioUrl); // Only keep playable tracks
+            }
+          }
+        } catch(e) {
+          console.warn("Vault API Failed:", e);
+        }
+      }
+
+      // 2. STANDARD RADIO FALLBACK
+      if (!tracks || tracks.length === 0) {
+        const res = await fetch(`/api/genre_radio?genre=${encodeURIComponent(genreName)}`);
+        const data = res.ok ? await res.json() : null;
+        tracks = (data?.tracks && data.tracks.length > 0) ? data.tracks : await engine.search(`${genreName} hits`);
+      }
 
       if (tracks && tracks.length > 0) {
         // Guaranteed fresh Fisher-Yates random shuffle on every single radio launch
