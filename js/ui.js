@@ -1626,7 +1626,16 @@ document.addEventListener('DOMContentLoaded', () => {
     "Nirvana": ["Alice in Chains", "Soundgarden", "Pearl Jam", "Foo Fighters", "Green Day", "Linkin Park", "Smashing Pumpkins"],
     "Linkin Park": ["Evanescence", "Three Days Grace", "System of a Down", "Papa Roach", "Limp Bizkit", "Nirvana"],
     "Daft Punk": ["Justice", "Kavinsky", "Deadmau5", "The Chemical Brothers", "Swedish House Mafia", "Disclosure"],
-    "Kordhell": ["DVRST", "Hensonn", "Pharmacist", "SXMPRA", "PlayaPhonk", "Shadxwbxrn", "GHOSTFACE PLAYA"]
+    "Kordhell": ["DVRST", "Hensonn", "Pharmacist", "SXMPRA", "PlayaPhonk", "Shadxwbxrn", "GHOSTFACE PLAYA"],
+    "Queen": ["Led Zeppelin", "AC/DC", "Pink Floyd", "The Rolling Stones", "The Who", "Elton John", "David Bowie", "Aerosmith"],
+    "Led Zeppelin": ["Pink Floyd", "The Rolling Stones", "AC/DC", "Queen", "The Who", "Jimi Hendrix", "Black Sabbath", "Deep Purple"],
+    "AC/DC": ["Guns N' Roses", "Led Zeppelin", "Def Leppard", "KISS", "Van Halen", "Ozzy Osbourne", "ZZ Top"],
+    "Pink Floyd": ["Led Zeppelin", "The Doors", "Queen", "The Rolling Stones", "Jethro Tull", "Rush", "David Bowie"],
+    "Morgan Wallen": ["Zach Bryan", "Luke Combs", "Bailey Zimmerman", "Chris Stapleton", "Jason Aldean", "Post Malone", "Ernest", "Hardy"],
+    "Zach Bryan": ["Tyler Childers", "Morgan Wallen", "Chris Stapleton", "Noah Kahan", "Sam Barber", "Flatland Cavalry", "Kacey Musgraves"],
+    "Luke Combs": ["Morgan Wallen", "Chris Stapleton", "Cody Johnson", "Jordan Davis", "Jon Pardi", "Zac Brown Band", "Luke Bryan"],
+    "Chris Stapleton": ["Zach Bryan", "Luke Combs", "Tyler Childers", "Johnny Cash", "George Strait", "Eric Church"],
+    "Johnny Cash": ["Willie Nelson", "Waylon Jennings", "Dolly Parton", "George Jones", "Hank Williams", "Kris Kristofferson"]
   };
 
   window.launchArtistShuffle = async function(artistName) {

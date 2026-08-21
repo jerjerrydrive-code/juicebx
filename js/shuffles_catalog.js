@@ -16192,6 +16192,1779 @@ const TOP_SHUFFLES_CATALOG = {
       }
     ]
   }
+,
+  "classic_rock_top100": {
+  "id": "classic_rock_top100",
+  "name": "Classic Rock Legends Top 100",
+  "subtitle": "Led Zeppelin, Queen, AC/DC, Pink Floyd, Stones, Eagles, Boston, Aerosmith, The Who, CCR",
+  "tag": "CLASSIC ROCK 100",
+  "gradient": "from-amber-800 via-yellow-950 to-black",
+  "border": "border-amber-500/40",
+  "tracks": [
+    {
+      "id": "fJ9rUzIMcZQ",
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "duration": "5:55",
+      "seconds": 355,
+      "thumb": "https://i.ytimg.com/vi/fJ9rUzIMcZQ/hqdefault.jpg"
+    },
+    {
+      "id": "QkF3oxziUI4",
+      "title": "Stairway to Heaven",
+      "artist": "Led Zeppelin",
+      "duration": "8:02",
+      "seconds": 482,
+      "thumb": "https://i.ytimg.com/vi/QkF3oxziUI4/hqdefault.jpg"
+    },
+    {
+      "id": "09839DpTctU",
+      "title": "Hotel California",
+      "artist": "Eagles",
+      "duration": "6:30",
+      "seconds": 390,
+      "thumb": "https://i.ytimg.com/vi/09839DpTctU/hqdefault.jpg"
+    },
+    {
+      "id": "_FrOQC-zEog",
+      "title": "Comfortably Numb",
+      "artist": "Pink Floyd",
+      "duration": "6:23",
+      "seconds": 383,
+      "thumb": "https://i.ytimg.com/vi/_FrOQC-zEog/hqdefault.jpg"
+    },
+    {
+      "id": "1w7OgIMMRc4",
+      "title": "Sweet Child O' Mine",
+      "artist": "Guns N' Roses",
+      "duration": "5:56",
+      "seconds": 356,
+      "thumb": "https://i.ytimg.com/vi/1w7OgIMMRc4/hqdefault.jpg"
+    },
+    {
+      "id": "pAgnJDJN4VA",
+      "title": "Back in Black",
+      "artist": "AC/DC",
+      "duration": "4:15",
+      "seconds": 255,
+      "thumb": "https://i.ytimg.com/vi/pAgnJDJN4VA/hqdefault.jpg"
+    },
+    {
+      "id": "89dOOEl9ex4",
+      "title": "Dream On",
+      "artist": "Aerosmith",
+      "duration": "4:28",
+      "seconds": 268,
+      "thumb": "https://i.ytimg.com/vi/89dOOEl9ex4/hqdefault.jpg"
+    },
+    {
+      "id": "x2KRpRMSu4g",
+      "title": "Baba O'Riley",
+      "artist": "The Who",
+      "duration": "5:00",
+      "seconds": 300,
+      "thumb": "https://i.ytimg.com/vi/x2KRpRMSu4g/hqdefault.jpg"
+    },
+    {
+      "id": "SSR6ZJ33-z4",
+      "title": "More Than a Feeling",
+      "artist": "Boston",
+      "duration": "4:45",
+      "seconds": 285,
+      "thumb": "https://i.ytimg.com/vi/SSR6ZJ33-z4/hqdefault.jpg"
+    },
+    {
+      "id": "O4irXQhgMqg",
+      "title": "Paint It Black",
+      "artist": "The Rolling Stones",
+      "duration": "3:22",
+      "seconds": 202,
+      "thumb": "https://i.ytimg.com/vi/O4irXQhgMqg/hqdefault.jpg"
+    },
+    {
+      "id": "ZWijx_AgPiA",
+      "title": "Fortunate Son",
+      "artist": "Creedence Clearwater Revival",
+      "duration": "2:21",
+      "seconds": 141,
+      "thumb": "https://i.ytimg.com/vi/ZWijx_AgPiA/hqdefault.jpg"
+    },
+    {
+      "id": "1k8craCGghs",
+      "title": "Don't Stop Believin'",
+      "artist": "Journey",
+      "duration": "4:11",
+      "seconds": 251,
+      "thumb": "https://i.ytimg.com/vi/1k8craCGghs/hqdefault.jpg"
+    },
+    {
+      "id": "0LwcvjNJTUc",
+      "title": "Free Bird",
+      "artist": "Lynyrd Skynyrd",
+      "duration": "9:08",
+      "seconds": 548,
+      "thumb": "https://i.ytimg.com/vi/0LwcvjNJTUc/hqdefault.jpg"
+    },
+    {
+      "id": "ye5BuYf8q4o",
+      "title": "Sweet Home Alabama",
+      "artist": "Lynyrd Skynyrd",
+      "duration": "4:44",
+      "seconds": 284,
+      "thumb": "https://i.ytimg.com/vi/ye5BuYf8q4o/hqdefault.jpg"
+    },
+    {
+      "id": "HQmmM_vhG4I",
+      "title": "Whole Lotta Love",
+      "artist": "Led Zeppelin",
+      "duration": "5:34",
+      "seconds": 334,
+      "thumb": "https://i.ytimg.com/vi/HQmmM_vhG4I/hqdefault.jpg"
+    },
+    {
+      "id": "gEPmA3USJdI",
+      "title": "Highway to Hell",
+      "artist": "AC/DC",
+      "duration": "3:28",
+      "seconds": 208,
+      "thumb": "https://i.ytimg.com/vi/gEPmA3USJdI/hqdefault.jpg"
+    },
+    {
+      "id": "v2AC41dglnM",
+      "title": "Thunderstruck",
+      "artist": "AC/DC",
+      "duration": "4:52",
+      "seconds": 292,
+      "thumb": "https://i.ytimg.com/vi/v2AC41dglnM/hqdefault.jpg"
+    },
+    {
+      "id": "Lo2qQmj0_h4",
+      "title": "You Shook Me All Night Long",
+      "artist": "AC/DC",
+      "duration": "3:30",
+      "seconds": 210,
+      "thumb": "https://i.ytimg.com/vi/Lo2qQmj0_h4/hqdefault.jpg"
+    },
+    {
+      "id": "IXdNnw99-Ic",
+      "title": "Wish You Were Here",
+      "artist": "Pink Floyd",
+      "duration": "5:34",
+      "seconds": 334,
+      "thumb": "https://i.ytimg.com/vi/IXdNnw99-Ic/hqdefault.jpg"
+    },
+    {
+      "id": "5IpYOF4Hi6Q",
+      "title": "Another Brick in the Wall, Pt. 2",
+      "artist": "Pink Floyd",
+      "duration": "3:59",
+      "seconds": 239,
+      "thumb": "https://i.ytimg.com/vi/5IpYOF4Hi6Q/hqdefault.jpg"
+    },
+    {
+      "id": "tzVJPgCn-Z8",
+      "title": "Kashmir",
+      "artist": "Led Zeppelin",
+      "duration": "8:37",
+      "seconds": 517,
+      "thumb": "https://i.ytimg.com/vi/tzVJPgCn-Z8/hqdefault.jpg"
+    },
+    {
+      "id": "6tlSx0jKUlm",
+      "title": "Black Dog",
+      "artist": "Led Zeppelin",
+      "duration": "4:56",
+      "seconds": 296,
+      "thumb": "https://i.ytimg.com/vi/6tlSx0jKUlm/hqdefault.jpg"
+    },
+    {
+      "id": "y8OtzJtp-AM",
+      "title": "Immigrant Song",
+      "artist": "Led Zeppelin",
+      "duration": "2:26",
+      "seconds": 146,
+      "thumb": "https://i.ytimg.com/vi/y8OtzJtp-AM/hqdefault.jpg"
+    },
+    {
+      "id": "Y3ywic3YgkE",
+      "title": "Dreams",
+      "artist": "Fleetwood Mac",
+      "duration": "4:14",
+      "seconds": 254,
+      "thumb": "https://i.ytimg.com/vi/Y3ywic3YgkE/hqdefault.jpg"
+    },
+    {
+      "id": "6ul-cZ45w04",
+      "title": "Go Your Own Way",
+      "artist": "Fleetwood Mac",
+      "duration": "3:38",
+      "seconds": 218,
+      "thumb": "https://i.ytimg.com/vi/6ul-cZ45w04/hqdefault.jpg"
+    },
+    {
+      "id": "JDG2m5hN1vo",
+      "title": "The Chain",
+      "artist": "Fleetwood Mac",
+      "duration": "4:30",
+      "seconds": 270,
+      "thumb": "https://i.ytimg.com/vi/JDG2m5hN1vo/hqdefault.jpg"
+    },
+    {
+      "id": "WM7-PYtXtPE",
+      "title": "Landslide",
+      "artist": "Fleetwood Mac",
+      "duration": "3:19",
+      "seconds": 199,
+      "thumb": "https://i.ytimg.com/vi/WM7-PYtXtPE/hqdefault.jpg"
+    },
+    {
+      "id": "GgnClrx8N2k",
+      "title": "Sympathy for the Devil",
+      "artist": "The Rolling Stones",
+      "duration": "6:18",
+      "seconds": 378,
+      "thumb": "https://i.ytimg.com/vi/GgnClrx8N2k/hqdefault.jpg"
+    },
+    {
+      "id": "8kl6q_9qZWo",
+      "title": "Gimme Shelter",
+      "artist": "The Rolling Stones",
+      "duration": "4:31",
+      "seconds": 271,
+      "thumb": "https://i.ytimg.com/vi/8kl6q_9qZWo/hqdefault.jpg"
+    },
+    {
+      "id": "nrIPxlFzDi0",
+      "title": "(I Can't Get No) Satisfaction",
+      "artist": "The Rolling Stones",
+      "duration": "3:43",
+      "seconds": 223,
+      "thumb": "https://i.ytimg.com/vi/nrIPxlFzDi0/hqdefault.jpg"
+    },
+    {
+      "id": "u1V8YRJnr4Q",
+      "title": "Have You Ever Seen the Rain",
+      "artist": "Creedence Clearwater Revival",
+      "duration": "2:40",
+      "seconds": 160,
+      "thumb": "https://i.ytimg.com/vi/u1V8YRJnr4Q/hqdefault.jpg"
+    },
+    {
+      "id": "zUQiUFZ5IAk",
+      "title": "Bad Moon Rising",
+      "artist": "Creedence Clearwater Revival",
+      "duration": "2:21",
+      "seconds": 141,
+      "thumb": "https://i.ytimg.com/vi/zUQiUFZ5IAk/hqdefault.jpg"
+    },
+    {
+      "id": "XfyEpmQM7bw",
+      "title": "Proud Mary",
+      "artist": "Creedence Clearwater Revival",
+      "duration": "3:07",
+      "seconds": 187,
+      "thumb": "https://i.ytimg.com/vi/XfyEpmQM7bw/hqdefault.jpg"
+    },
+    {
+      "id": "TLV4_xaYynY",
+      "title": "All Along the Watchtower",
+      "artist": "Jimi Hendrix",
+      "duration": "4:01",
+      "seconds": 241,
+      "thumb": "https://i.ytimg.com/vi/TLV4_xaYynY/hqdefault.jpg"
+    },
+    {
+      "id": "WGoDaYjdfSg",
+      "title": "Purple Haze",
+      "artist": "Jimi Hendrix",
+      "duration": "2:51",
+      "seconds": 171,
+      "thumb": "https://i.ytimg.com/vi/WGoDaYjdfSg/hqdefault.jpg"
+    },
+    {
+      "id": "zQgFxXGO5Vw",
+      "title": "Little Wing",
+      "artist": "Jimi Hendrix",
+      "duration": "2:25",
+      "seconds": 145,
+      "thumb": "https://i.ytimg.com/vi/zQgFxXGO5Vw/hqdefault.jpg"
+    },
+    {
+      "id": "1lWJXDG2i0A",
+      "title": "Free Fallin'",
+      "artist": "Tom Petty",
+      "duration": "4:14",
+      "seconds": 254,
+      "thumb": "https://i.ytimg.com/vi/1lWJXDG2i0A/hqdefault.jpg"
+    },
+    {
+      "id": "nvlTJrNJ5lA",
+      "title": "I Won't Back Down",
+      "artist": "Tom Petty",
+      "duration": "2:56",
+      "seconds": 176,
+      "thumb": "https://i.ytimg.com/vi/nvlTJrNJ5lA/hqdefault.jpg"
+    },
+    {
+      "id": "tGIjOgzGm_I",
+      "title": "American Girl",
+      "artist": "Tom Petty and the Heartbreakers",
+      "duration": "3:34",
+      "seconds": 214,
+      "thumb": "https://i.ytimg.com/vi/tGIjOgzGm_I/hqdefault.jpg"
+    },
+    {
+      "id": "o1tj2zJ2Wvg",
+      "title": "Welcome to the Jungle",
+      "artist": "Guns N' Roses",
+      "duration": "4:33",
+      "seconds": 273,
+      "thumb": "https://i.ytimg.com/vi/o1tj2zJ2Wvg/hqdefault.jpg"
+    },
+    {
+      "id": "8SbUCzEB9Pc",
+      "title": "November Rain",
+      "artist": "Guns N' Roses",
+      "duration": "8:57",
+      "seconds": 537,
+      "thumb": "https://i.ytimg.com/vi/8SbUCzEB9Pc/hqdefault.jpg"
+    },
+    {
+      "id": "Rbm6GX4P650",
+      "title": "Paradise City",
+      "artist": "Guns N' Roses",
+      "duration": "6:48",
+      "seconds": 408,
+      "thumb": "https://i.ytimg.com/vi/Rbm6GX4P650/hqdefault.jpg"
+    },
+    {
+      "id": "0fAQH8DrMgk",
+      "title": "Sultans of Swing",
+      "artist": "Dire Straits",
+      "duration": "5:48",
+      "seconds": 348,
+      "thumb": "https://i.ytimg.com/vi/0fAQH8DrMgk/hqdefault.jpg"
+    },
+    {
+      "id": "wTP2RUD_cL0",
+      "title": "Money for Nothing",
+      "artist": "Dire Straits",
+      "duration": "4:06",
+      "seconds": 246,
+      "thumb": "https://i.ytimg.com/vi/wTP2RUD_cL0/hqdefault.jpg"
+    },
+    {
+      "id": "2X_2Idop9pc",
+      "title": "Carry on Wayward Son",
+      "artist": "Kansas",
+      "duration": "5:23",
+      "seconds": 323,
+      "thumb": "https://i.ytimg.com/vi/2X_2Idop9pc/hqdefault.jpg"
+    },
+    {
+      "id": "tH2w6Oxx0kQ",
+      "title": "Dust in the Wind",
+      "artist": "Kansas",
+      "duration": "3:26",
+      "seconds": 206,
+      "thumb": "https://i.ytimg.com/vi/tH2w6Oxx0kQ/hqdefault.jpg"
+    },
+    {
+      "id": "ClQcUyhoxTg",
+      "title": "(Don't Fear) The Reaper",
+      "artist": "Blue \u00d6yster Cult",
+      "duration": "5:08",
+      "seconds": 308,
+      "thumb": "https://i.ytimg.com/vi/ClQcUyhoxTg/hqdefault.jpg"
+    },
+    {
+      "id": "ipqqEFsP06o",
+      "title": "Burnin' for You",
+      "artist": "Blue \u00d6yster Cult",
+      "duration": "4:29",
+      "seconds": 269,
+      "thumb": "https://i.ytimg.com/vi/ipqqEFsP06o/hqdefault.jpg"
+    },
+    {
+      "id": "zUwEIt9ez7M",
+      "title": "Smoke on the Water",
+      "artist": "Deep Purple",
+      "duration": "5:40",
+      "seconds": 340,
+      "thumb": "https://i.ytimg.com/vi/zUwEIt9ez7M/hqdefault.jpg"
+    },
+    {
+      "id": "UAKCR7kEgMT",
+      "title": "Highway Star",
+      "artist": "Deep Purple",
+      "duration": "6:05",
+      "seconds": 365,
+      "thumb": "https://i.ytimg.com/vi/UAKCR7kEgMT/hqdefault.jpg"
+    },
+    {
+      "id": "mbj1RFaoyLk",
+      "title": "Light My Fire",
+      "artist": "The Doors",
+      "duration": "7:06",
+      "seconds": 426,
+      "thumb": "https://i.ytimg.com/vi/mbj1RFaoyLk/hqdefault.jpg"
+    },
+    {
+      "id": "iv8GW1GaoIC",
+      "title": "Riders on the Storm",
+      "artist": "The Doors",
+      "duration": "7:14",
+      "seconds": 434,
+      "thumb": "https://i.ytimg.com/vi/iv8GW1GaoIC/hqdefault.jpg"
+    },
+    {
+      "id": "Thls_tMuFkc",
+      "title": "Layla",
+      "artist": "Derek and the Dominos",
+      "duration": "7:04",
+      "seconds": 424,
+      "thumb": "https://i.ytimg.com/vi/Thls_tMuFkc/hqdefault.jpg"
+    },
+    {
+      "id": "vUSzL2leaLk",
+      "title": "Wonderful Tonight",
+      "artist": "Eric Clapton",
+      "duration": "3:41",
+      "seconds": 221,
+      "thumb": "https://i.ytimg.com/vi/vUSzL2leaLk/hqdefault.jpg"
+    },
+    {
+      "id": "qYS732zyYfU",
+      "title": "Cocaine",
+      "artist": "Eric Clapton",
+      "duration": "3:38",
+      "seconds": 218,
+      "thumb": "https://i.ytimg.com/vi/qYS732zyYfU/hqdefault.jpg"
+    },
+    {
+      "id": "0qanF-91aJo",
+      "title": "Paranoid",
+      "artist": "Black Sabbath",
+      "duration": "2:48",
+      "seconds": 168,
+      "thumb": "https://i.ytimg.com/vi/0qanF-91aJo/hqdefault.jpg"
+    },
+    {
+      "id": "5s7_WbiRdqQ",
+      "title": "Iron Man",
+      "artist": "Black Sabbath",
+      "duration": "5:56",
+      "seconds": 356,
+      "thumb": "https://i.ytimg.com/vi/5s7_WbiRdqQ/hqdefault.jpg"
+    },
+    {
+      "id": "K3b64nwbjeQ",
+      "title": "War Pigs",
+      "artist": "Black Sabbath",
+      "duration": "7:54",
+      "seconds": 474,
+      "thumb": "https://i.ytimg.com/vi/K3b64nwbjeQ/hqdefault.jpg"
+    },
+    {
+      "id": "0UIB9Y4OFPs",
+      "title": "Pour Some Sugar On Me",
+      "artist": "Def Leppard",
+      "duration": "4:27",
+      "seconds": 267,
+      "thumb": "https://i.ytimg.com/vi/0UIB9Y4OFPs/hqdefault.jpg"
+    },
+    {
+      "id": "VZ5bS3_BCDs",
+      "title": "Photograph",
+      "artist": "Def Leppard",
+      "duration": "4:10",
+      "seconds": 250,
+      "thumb": "https://i.ytimg.com/vi/VZ5bS3_BCDs/hqdefault.jpg"
+    },
+    {
+      "id": "SwYN7mTi6HM",
+      "title": "Jump",
+      "artist": "Van Halen",
+      "duration": "4:04",
+      "seconds": 244,
+      "thumb": "https://i.ytimg.com/vi/SwYN7mTi6HM/hqdefault.jpg"
+    },
+    {
+      "id": "fuKDBPw8wQA",
+      "title": "Panama",
+      "artist": "Van Halen",
+      "duration": "3:31",
+      "seconds": 211,
+      "thumb": "https://i.ytimg.com/vi/fuKDBPw8wQA/hqdefault.jpg"
+    },
+    {
+      "id": "6M4_Ommfbl8",
+      "title": "Hot for Teacher",
+      "artist": "Van Halen",
+      "duration": "4:44",
+      "seconds": 284,
+      "thumb": "https://i.ytimg.com/vi/6M4_Ommfbl8/hqdefault.jpg"
+    },
+    {
+      "id": "Vppbdf-qtGU",
+      "title": "La Grange",
+      "artist": "ZZ Top",
+      "duration": "3:51",
+      "seconds": 231,
+      "thumb": "https://i.ytimg.com/vi/Vppbdf-qtGU/hqdefault.jpg"
+    },
+    {
+      "id": "7wRHBLwpASw",
+      "title": "Sharp Dressed Man",
+      "artist": "ZZ Top",
+      "duration": "4:14",
+      "seconds": 254,
+      "thumb": "https://i.ytimg.com/vi/7wRHBLwpASw/hqdefault.jpg"
+    },
+    {
+      "id": "PeMvK6XxU2E",
+      "title": "Barracuda",
+      "artist": "Heart",
+      "duration": "4:22",
+      "seconds": 262,
+      "thumb": "https://i.ytimg.com/vi/PeMvK6XxU2E/hqdefault.jpg"
+    },
+    {
+      "id": "4gpAFb3E7_Y",
+      "title": "Crazy on You",
+      "artist": "Heart",
+      "duration": "4:53",
+      "seconds": 293,
+      "thumb": "https://i.ytimg.com/vi/4gpAFb3E7_Y/hqdefault.jpg"
+    },
+    {
+      "id": "raNGeq3_DtM",
+      "title": "I Want to Know What Love Is",
+      "artist": "Foreigner",
+      "duration": "5:04",
+      "seconds": 304,
+      "thumb": "https://i.ytimg.com/vi/raNGeq3_DtM/hqdefault.jpg"
+    },
+    {
+      "id": "ySb1f9zWJkk",
+      "title": "Cold as Ice",
+      "artist": "Foreigner",
+      "duration": "3:19",
+      "seconds": 199,
+      "thumb": "https://i.ytimg.com/vi/ySb1f9zWJkk/hqdefault.jpg"
+    },
+    {
+      "id": "W_TOsFvnmeQ",
+      "title": "Juke Box Hero",
+      "artist": "Foreigner",
+      "duration": "4:18",
+      "seconds": 258,
+      "thumb": "https://i.ytimg.com/vi/W_TOsFvnmeQ/hqdefault.jpg"
+    },
+    {
+      "id": "EFMD7Usflbg",
+      "title": "Rock and Roll All Nite",
+      "artist": "KISS",
+      "duration": "2:49",
+      "seconds": 169,
+      "thumb": "https://i.ytimg.com/vi/EFMD7Usflbg/hqdefault.jpg"
+    },
+    {
+      "id": "iZq3i94mSsQ",
+      "title": "Detroit Rock City",
+      "artist": "KISS",
+      "duration": "5:17",
+      "seconds": 317,
+      "thumb": "https://i.ytimg.com/vi/iZq3i94mSsQ/hqdefault.jpg"
+    },
+    {
+      "id": "BN1WwnEDWAM",
+      "title": "Should I Stay or Should I Go",
+      "artist": "The Clash",
+      "duration": "3:08",
+      "seconds": 188,
+      "thumb": "https://i.ytimg.com/vi/BN1WwnEDWAM/hqdefault.jpg"
+    },
+    {
+      "id": "EfK-WX2pa8c",
+      "title": "London Calling",
+      "artist": "The Clash",
+      "duration": "3:20",
+      "seconds": 200,
+      "thumb": "https://i.ytimg.com/vi/EfK-WX2pa8c/hqdefault.jpg"
+    },
+    {
+      "id": "gxEPV4kolz0",
+      "title": "Piano Man",
+      "artist": "Billy Joel",
+      "duration": "5:38",
+      "seconds": 338,
+      "thumb": "https://i.ytimg.com/vi/gxEPV4kolz0/hqdefault.jpg"
+    },
+    {
+      "id": "eFTLKWw542g",
+      "title": "We Didn't Start the Fire",
+      "artist": "Billy Joel",
+      "duration": "4:50",
+      "seconds": 290,
+      "thumb": "https://i.ytimg.com/vi/eFTLKWw542g/hqdefault.jpg"
+    },
+    {
+      "id": "DtVBCG6ThDk",
+      "title": "Rocket Man",
+      "artist": "Elton John",
+      "duration": "4:41",
+      "seconds": 281,
+      "thumb": "https://i.ytimg.com/vi/DtVBCG6ThDk/hqdefault.jpg"
+    },
+    {
+      "id": "yYcyacLRPNs",
+      "title": "Tiny Dancer",
+      "artist": "Elton John",
+      "duration": "6:17",
+      "seconds": 377,
+      "thumb": "https://i.ytimg.com/vi/yYcyacLRPNs/hqdefault.jpg"
+    },
+    {
+      "id": "OMOGaugKpzs",
+      "title": "Every Breath You Take",
+      "artist": "The Police",
+      "duration": "4:13",
+      "seconds": 253,
+      "thumb": "https://i.ytimg.com/vi/OMOGaugKpzs/hqdefault.jpg"
+    },
+    {
+      "id": "3T1c7GkzRQQ",
+      "title": "Roxanne",
+      "artist": "The Police",
+      "duration": "3:12",
+      "seconds": 192,
+      "thumb": "https://i.ytimg.com/vi/3T1c7GkzRQQ/hqdefault.jpg"
+    },
+    {
+      "id": "IxuThNgl3YA",
+      "title": "Born to Run",
+      "artist": "Bruce Springsteen",
+      "duration": "4:30",
+      "seconds": 270,
+      "thumb": "https://i.ytimg.com/vi/IxuThNgl3YA/hqdefault.jpg"
+    },
+    {
+      "id": "129kuDCQtHs",
+      "title": "Dancing in the Dark",
+      "artist": "Bruce Springsteen",
+      "duration": "4:01",
+      "seconds": 241,
+      "thumb": "https://i.ytimg.com/vi/129kuDCQtHs/hqdefault.jpg"
+    },
+    {
+      "id": "BJs_L7yq5Hg",
+      "title": "I Want You to Want Me",
+      "artist": "Cheap Trick",
+      "duration": "3:35",
+      "seconds": 215,
+      "thumb": "https://i.ytimg.com/vi/BJs_L7yq5Hg/hqdefault.jpg"
+    },
+    {
+      "id": "1sAm5UCJ9vA",
+      "title": "Surrender",
+      "artist": "Cheap Trick",
+      "duration": "4:14",
+      "seconds": 254,
+      "thumb": "https://i.ytimg.com/vi/1sAm5UCJ9vA/hqdefault.jpg"
+    },
+    {
+      "id": "egMWlD3fLJ8",
+      "title": "Born to Be Wild",
+      "artist": "Steppenwolf",
+      "duration": "3:30",
+      "seconds": 210,
+      "thumb": "https://i.ytimg.com/vi/egMWlD3fLJ8/hqdefault.jpg"
+    },
+    {
+      "id": "EEEzbFxEbB8",
+      "title": "Magic Carpet Ride",
+      "artist": "Steppenwolf",
+      "duration": "4:30",
+      "seconds": 270,
+      "thumb": "https://i.ytimg.com/vi/EEEzbFxEbB8/hqdefault.jpg"
+    },
+    {
+      "id": "SEuKkcX1uKA",
+      "title": "Feel Like Makin' Love",
+      "artist": "Bad Company",
+      "duration": "5:12",
+      "seconds": 312,
+      "thumb": "https://i.ytimg.com/vi/SEuKkcX1uKA/hqdefault.jpg"
+    },
+    {
+      "id": "4-43lLKaqBQ",
+      "title": "The House of the Rising Sun",
+      "artist": "The Animals",
+      "duration": "4:29",
+      "seconds": 269,
+      "thumb": "https://i.ytimg.com/vi/4-43lLKaqBQ/hqdefault.jpg"
+    },
+    {
+      "id": "siMFORx8uO8",
+      "title": "All Right Now",
+      "artist": "Free",
+      "duration": "5:32",
+      "seconds": 332,
+      "thumb": "https://i.ytimg.com/vi/siMFORx8uO8/hqdefault.jpg"
+    },
+    {
+      "id": "fTTsY-oz6Go",
+      "title": "You Really Got Me",
+      "artist": "The Kinks",
+      "duration": "2:14",
+      "seconds": 134,
+      "thumb": "https://i.ytimg.com/vi/fTTsY-oz6Go/hqdefault.jpg"
+    },
+    {
+      "id": "zt51rITH3EA",
+      "title": "Sunshine of Your Love",
+      "artist": "Cream",
+      "duration": "4:10",
+      "seconds": 250,
+      "thumb": "https://i.ytimg.com/vi/zt51rITH3EA/hqdefault.jpg"
+    },
+    {
+      "id": "VR90g5eaW_U",
+      "title": "White Room",
+      "artist": "Cream",
+      "duration": "4:58",
+      "seconds": 298,
+      "thumb": "https://i.ytimg.com/vi/VR90g5eaW_U/hqdefault.jpg"
+    },
+    {
+      "id": "vHDA5nHlDfA",
+      "title": "Stranglehold",
+      "artist": "Ted Nugent",
+      "duration": "8:22",
+      "seconds": 502,
+      "thumb": "https://i.ytimg.com/vi/vHDA5nHlDfA/hqdefault.jpg"
+    },
+    {
+      "id": "btPJPFnesV4",
+      "title": "Eye of the Tiger",
+      "artist": "Survivor",
+      "duration": "4:04",
+      "seconds": 244,
+      "thumb": "https://i.ytimg.com/vi/btPJPFnesV4/hqdefault.jpg"
+    },
+    {
+      "id": "WyF8Rhm1P3c",
+      "title": "Here I Go Again",
+      "artist": "Whitesnake",
+      "duration": "4:35",
+      "seconds": 275,
+      "thumb": "https://i.ytimg.com/vi/WyF8Rhm1P3c/hqdefault.jpg"
+    },
+    {
+      "id": "6yP1tcy9a10",
+      "title": "Rock You Like a Hurricane",
+      "artist": "Scorpions",
+      "duration": "4:15",
+      "seconds": 255,
+      "thumb": "https://i.ytimg.com/vi/6yP1tcy9a10/hqdefault.jpg"
+    },
+    {
+      "id": "hQo1HIcSVtg",
+      "title": "The Boys Are Back in Town",
+      "artist": "Thin Lizzy",
+      "duration": "4:27",
+      "seconds": 267,
+      "thumb": "https://i.ytimg.com/vi/hQo1HIcSVtg/hqdefault.jpg"
+    },
+    {
+      "id": "auLBLk4ibAk",
+      "title": "Tom Sawyer",
+      "artist": "Rush",
+      "duration": "4:33",
+      "seconds": 273,
+      "thumb": "https://i.ytimg.com/vi/auLBLk4ibAk/hqdefault.jpg"
+    },
+    {
+      "id": "5Tq-UsaRchI",
+      "title": "The Spirit of Radio",
+      "artist": "Rush",
+      "duration": "4:57",
+      "seconds": 297,
+      "thumb": "https://i.ytimg.com/vi/5Tq-UsaRchI/hqdefault.jpg"
+    },
+    {
+      "id": "aQUlA8Hcv4s",
+      "title": "Mr. Blue Sky",
+      "artist": "Electric Light Orchestra",
+      "duration": "5:03",
+      "seconds": 303,
+      "thumb": "https://i.ytimg.com/vi/aQUlA8Hcv4s/hqdefault.jpg"
+    },
+    {
+      "id": "FTQbiNvZqaY",
+      "title": "Africa",
+      "artist": "TOTO",
+      "duration": "4:55",
+      "seconds": 295,
+      "thumb": "https://i.ytimg.com/vi/FTQbiNvZqaY/hqdefault.jpg"
+    },
+    {
+      "id": "GcCNcgoyG_0",
+      "title": "Slow Ride",
+      "artist": "Foghat",
+      "duration": "3:58",
+      "seconds": 238,
+      "thumb": "https://i.ytimg.com/vi/GcCNcgoyG_0/hqdefault.jpg"
+    },
+    {
+      "id": "gkqfpkTTy2w",
+      "title": "American Woman",
+      "artist": "The Guess Who",
+      "duration": "5:08",
+      "seconds": 308,
+      "thumb": "https://i.ytimg.com/vi/gkqfpkTTy2w/hqdefault.jpg"
+    },
+    {
+      "id": "dV3AziKTBUo",
+      "title": "The Joker",
+      "artist": "Steve Miller Band",
+      "duration": "4:25",
+      "seconds": 265,
+      "thumb": "https://i.ytimg.com/vi/dV3AziKTBUo/hqdefault.jpg"
+    },
+    {
+      "id": "wMsazR6Tnf8",
+      "title": "I Love Rock 'n Roll",
+      "artist": "Joan Jett & the Blackhearts",
+      "duration": "2:55",
+      "seconds": 175,
+      "thumb": "https://i.ytimg.com/vi/wMsazR6Tnf8/hqdefault.jpg"
+    },
+    {
+      "id": "L397TWLwrUU",
+      "title": "Breaking the Law",
+      "artist": "Judas Priest",
+      "duration": "2:35",
+      "seconds": 155,
+      "thumb": "https://i.ytimg.com/vi/L397TWLwrUU/hqdefault.jpg"
+    },
+    {
+      "id": "3mbvWn1EY6g",
+      "title": "Ace of Spades",
+      "artist": "Mot\u00f6rhead",
+      "duration": "2:49",
+      "seconds": 169,
+      "thumb": "https://i.ytimg.com/vi/3mbvWn1EY6g/hqdefault.jpg"
+    },
+    {
+      "id": "tMDFv5m18Pw",
+      "title": "Crazy Train",
+      "artist": "Ozzy Osbourne",
+      "duration": "4:56",
+      "seconds": 296,
+      "thumb": "https://i.ytimg.com/vi/tMDFv5m18Pw/hqdefault.jpg"
+    },
+    {
+      "id": "Zf53PgTVUBI",
+      "title": "Radar Love",
+      "artist": "Golden Earring",
+      "duration": "6:25",
+      "seconds": 385,
+      "thumb": "https://i.ytimg.com/vi/Zf53PgTVUBI/hqdefault.jpg"
+    },
+    {
+      "id": "6VxoXn-0E42",
+      "title": "Ramblin' Man",
+      "artist": "The Allman Brothers Band",
+      "duration": "4:48",
+      "seconds": 288,
+      "thumb": "https://i.ytimg.com/vi/6VxoXn-0E42/hqdefault.jpg"
+    },
+    {
+      "id": "m4tJSn0QtME",
+      "title": "Listen to the Music",
+      "artist": "The Doobie Brothers",
+      "duration": "3:47",
+      "seconds": 227,
+      "thumb": "https://i.ytimg.com/vi/m4tJSn0QtME/hqdefault.jpg"
+    },
+    {
+      "id": "HDLLXUexZvk",
+      "title": "Black Magic Woman",
+      "artist": "Santana",
+      "duration": "5:24",
+      "seconds": 324,
+      "thumb": "https://i.ytimg.com/vi/HDLLXUexZvk/hqdefault.jpg"
+    },
+    {
+      "id": "2Oo8QzDHimQ",
+      "title": "School's Out",
+      "artist": "Alice Cooper",
+      "duration": "3:29",
+      "seconds": 209,
+      "thumb": "https://i.ytimg.com/vi/2Oo8QzDHimQ/hqdefault.jpg"
+    },
+    {
+      "id": "low6CoQRw9Y",
+      "title": "The Logical Song",
+      "artist": "Supertramp",
+      "duration": "4:10",
+      "seconds": 250,
+      "thumb": "https://i.ytimg.com/vi/low6CoQRw9Y/hqdefault.jpg"
+    },
+    {
+      "id": "B0jMPI_pU5g",
+      "title": "Aqualung",
+      "artist": "Jethro Tull",
+      "duration": "6:34",
+      "seconds": 394,
+      "thumb": "https://i.ytimg.com/vi/B0jMPI_pU5g/hqdefault.jpg"
+    },
+    {
+      "id": "qae25976UgA",
+      "title": "Werewolves of London",
+      "artist": "Warren Zevon",
+      "duration": "3:27",
+      "seconds": 207,
+      "thumb": "https://i.ytimg.com/vi/qae25976UgA/hqdefault.jpg"
+    },
+    {
+      "id": "7uAUoz7jimg",
+      "title": "25 or 6 to 4",
+      "artist": "Chicago",
+      "duration": "4:50",
+      "seconds": 290,
+      "thumb": "https://i.ytimg.com/vi/7uAUoz7jimg/hqdefault.jpg"
+    },
+    {
+      "id": "_bwHDIO42wA",
+      "title": "Reelin' In the Years",
+      "artist": "Steely Dan",
+      "duration": "4:35",
+      "seconds": 275,
+      "thumb": "https://i.ytimg.com/vi/_bwHDIO42wA/hqdefault.jpg"
+    }
+  ]
+},
+  "country_top100": {
+  "id": "country_top100",
+  "name": "Country & Americana Top 100",
+  "subtitle": "Morgan Wallen, Zach Bryan, Luke Combs, Stapleton, Johnny Cash, Dolly",
+  "tag": "COUNTRY 100",
+  "gradient": "from-yellow-700 via-amber-950 to-black",
+  "border": "border-yellow-500/40",
+  "tracks": [
+    {
+      "id": "b1_RKu-ESCY",
+      "title": "Last Night",
+      "artist": "Morgan Wallen",
+      "duration": "2:43",
+      "seconds": 163,
+      "thumb": "https://i.ytimg.com/vi/b1_RKu-ESCY/hqdefault.jpg"
+    },
+    {
+      "id": "lA8HHvhTocw",
+      "title": "Something in the Orange",
+      "artist": "Zach Bryan",
+      "duration": "3:48",
+      "seconds": 228,
+      "thumb": "https://i.ytimg.com/vi/lA8HHvhTocw/hqdefault.jpg"
+    },
+    {
+      "id": "FrkEDe6ljgg",
+      "title": "Fast Car",
+      "artist": "Luke Combs",
+      "duration": "4:25",
+      "seconds": 265,
+      "thumb": "https://i.ytimg.com/vi/FrkEDe6ljgg/hqdefault.jpg"
+    },
+    {
+      "id": "4zAThXFOy2c",
+      "title": "Tennessee Whiskey",
+      "artist": "Chris Stapleton",
+      "duration": "4:53",
+      "seconds": 293,
+      "thumb": "https://i.ytimg.com/vi/4zAThXFOy2c/hqdefault.jpg"
+    },
+    {
+      "id": "tceT_mO536Y",
+      "title": "I Remember Everything (feat. Kacey Musgraves)",
+      "artist": "Zach Bryan",
+      "duration": "3:47",
+      "seconds": 227,
+      "thumb": "https://i.ytimg.com/vi/tceT_mO536Y/hqdefault.jpg"
+    },
+    {
+      "id": "B_2Pz6_tI8k",
+      "title": "You Proof",
+      "artist": "Morgan Wallen",
+      "duration": "2:37",
+      "seconds": 157,
+      "thumb": "https://i.ytimg.com/vi/B_2Pz6_tI8k/hqdefault.jpg"
+    },
+    {
+      "id": "rIT_nK5T_4M",
+      "title": "Beautiful Crazy",
+      "artist": "Luke Combs",
+      "duration": "3:13",
+      "seconds": 193,
+      "thumb": "https://i.ytimg.com/vi/rIT_nK5T_4M/hqdefault.jpg"
+    },
+    {
+      "id": "F0FstmpF2G0",
+      "title": "Whiskey Glasses",
+      "artist": "Morgan Wallen",
+      "duration": "3:54",
+      "seconds": 234,
+      "thumb": "https://i.ytimg.com/vi/F0FstmpF2G0/hqdefault.jpg"
+    },
+    {
+      "id": "8AHCZa85QkI",
+      "title": "Hurt",
+      "artist": "Johnny Cash",
+      "duration": "3:38",
+      "seconds": 218,
+      "thumb": "https://i.ytimg.com/vi/8AHCZa85QkI/hqdefault.jpg"
+    },
+    {
+      "id": "1WaV2x8GXj0",
+      "title": "Ring of Fire",
+      "artist": "Johnny Cash",
+      "duration": "2:37",
+      "seconds": 157,
+      "thumb": "https://i.ytimg.com/vi/1WaV2x8GXj0/hqdefault.jpg"
+    },
+    {
+      "id": "k7K4jH7NqUw",
+      "title": "Folsom Prison Blues",
+      "artist": "Johnny Cash",
+      "duration": "2:45",
+      "seconds": 165,
+      "thumb": "https://i.ytimg.com/vi/k7K4jH7NqUw/hqdefault.jpg"
+    },
+    {
+      "id": "Ixrje2rXLMA",
+      "title": "Jolene",
+      "artist": "Dolly Parton",
+      "duration": "2:41",
+      "seconds": 161,
+      "thumb": "https://i.ytimg.com/vi/Ixrje2rXLMA/hqdefault.jpg"
+    },
+    {
+      "id": "UbxUSsFXYo4",
+      "title": "9 to 5",
+      "artist": "Dolly Parton",
+      "duration": "2:42",
+      "seconds": 162,
+      "thumb": "https://i.ytimg.com/vi/UbxUSsFXYo4/hqdefault.jpg"
+    },
+    {
+      "id": "wtVeDaBxP0c",
+      "title": "Amarillo by Morning",
+      "artist": "George Strait",
+      "duration": "2:52",
+      "seconds": 172,
+      "thumb": "https://i.ytimg.com/vi/wtVeDaBxP0c/hqdefault.jpg"
+    },
+    {
+      "id": "X0n8b3h5u9E",
+      "title": "Check Yes or No",
+      "artist": "George Strait",
+      "duration": "3:20",
+      "seconds": 200,
+      "thumb": "https://i.ytimg.com/vi/X0n8b3h5u9E/hqdefault.jpg"
+    },
+    {
+      "id": "dBN86y30Ufc",
+      "title": "On the Road Again",
+      "artist": "Willie Nelson",
+      "duration": "2:33",
+      "seconds": 153,
+      "thumb": "https://i.ytimg.com/vi/dBN86y30Ufc/hqdefault.jpg"
+    },
+    {
+      "id": "R7f189Z0v0Y",
+      "title": "Always On My Mind",
+      "artist": "Willie Nelson",
+      "duration": "3:32",
+      "seconds": 212,
+      "thumb": "https://i.ytimg.com/vi/R7f189Z0v0Y/hqdefault.jpg"
+    },
+    {
+      "id": "5d83DfvIu6g",
+      "title": "Feathered Indians",
+      "artist": "Tyler Childers",
+      "duration": "3:45",
+      "seconds": 225,
+      "thumb": "https://i.ytimg.com/vi/5d83DfvIu6g/hqdefault.jpg"
+    },
+    {
+      "id": "BmWm5Cg_u_8",
+      "title": "All Your'n",
+      "artist": "Tyler Childers",
+      "duration": "3:38",
+      "seconds": 218,
+      "thumb": "https://i.ytimg.com/vi/BmWm5Cg_u_8/hqdefault.jpg"
+    },
+    {
+      "id": "Yq8_e2z3E6M",
+      "title": "Thought You Should Know",
+      "artist": "Morgan Wallen",
+      "duration": "3:35",
+      "seconds": 215,
+      "thumb": "https://i.ytimg.com/vi/Yq8_e2z3E6M/hqdefault.jpg"
+    },
+    {
+      "id": "d6B7cZ7Yw38",
+      "title": "Wasted On You",
+      "artist": "Morgan Wallen",
+      "duration": "2:58",
+      "seconds": 178,
+      "thumb": "https://i.ytimg.com/vi/d6B7cZ7Yw38/hqdefault.jpg"
+    },
+    {
+      "id": "pQ9-kL27B-A",
+      "title": "Sand In My Boots",
+      "artist": "Morgan Wallen",
+      "duration": "3:22",
+      "seconds": 202,
+      "thumb": "https://i.ytimg.com/vi/pQ9-kL27B-A/hqdefault.jpg"
+    },
+    {
+      "id": "uXyhu5X4V40",
+      "title": "When It Rains It Pours",
+      "artist": "Luke Combs",
+      "duration": "4:00",
+      "seconds": 240,
+      "thumb": "https://i.ytimg.com/vi/uXyhu5X4V40/hqdefault.jpg"
+    },
+    {
+      "id": "V8q63nE-qA8",
+      "title": "Forever After All",
+      "artist": "Luke Combs",
+      "duration": "3:52",
+      "seconds": 232,
+      "thumb": "https://i.ytimg.com/vi/V8q63nE-qA8/hqdefault.jpg"
+    },
+    {
+      "id": "rT4k3u8cE1s",
+      "title": "She Got the Best of Me",
+      "artist": "Luke Combs",
+      "duration": "3:03",
+      "seconds": 183,
+      "thumb": "https://i.ytimg.com/vi/rT4k3u8cE1s/hqdefault.jpg"
+    },
+    {
+      "id": "80g6d6s8P_E",
+      "title": "The Kind of Love We Make",
+      "artist": "Luke Combs",
+      "duration": "3:44",
+      "seconds": 224,
+      "thumb": "https://i.ytimg.com/vi/80g6d6s8P_E/hqdefault.jpg"
+    },
+    {
+      "id": "jC1wT7hE4G0",
+      "title": "You Should Probably Leave",
+      "artist": "Chris Stapleton",
+      "duration": "3:33",
+      "seconds": 213,
+      "thumb": "https://i.ytimg.com/vi/jC1wT7hE4G0/hqdefault.jpg"
+    },
+    {
+      "id": "p9Cj_g8dF14",
+      "title": "Broken Halos",
+      "artist": "Chris Stapleton",
+      "duration": "3:00",
+      "seconds": 180,
+      "thumb": "https://i.ytimg.com/vi/p9Cj_g8dF14/hqdefault.jpg"
+    },
+    {
+      "id": "P21L7FqX5_8",
+      "title": "White Horse",
+      "artist": "Chris Stapleton",
+      "duration": "4:27",
+      "seconds": 267,
+      "thumb": "https://i.ytimg.com/vi/P21L7FqX5_8/hqdefault.jpg"
+    },
+    {
+      "id": "4Z9c-B6p7Qk",
+      "title": "Starting Over",
+      "artist": "Chris Stapleton",
+      "duration": "4:00",
+      "seconds": 240,
+      "thumb": "https://i.ytimg.com/vi/4Z9c-B6p7Qk/hqdefault.jpg"
+    },
+    {
+      "id": "B2zW_6f9T1g",
+      "title": "Heading South",
+      "artist": "Zach Bryan",
+      "duration": "3:30",
+      "seconds": 210,
+      "thumb": "https://i.ytimg.com/vi/B2zW_6f9T1g/hqdefault.jpg"
+    },
+    {
+      "id": "j7XbE8-E4hA",
+      "title": "Dawns (feat. Maggie Rogers)",
+      "artist": "Zach Bryan",
+      "duration": "4:50",
+      "seconds": 290,
+      "thumb": "https://i.ytimg.com/vi/j7XbE8-E4hA/hqdefault.jpg"
+    },
+    {
+      "id": "yt_Burn,%20Burn,%20Burn_Zach%20Bryan",
+      "title": "Burn, Burn, Burn",
+      "artist": "Zach Bryan",
+      "duration": "2:50",
+      "seconds": 170,
+      "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
+    },
+    {
+      "id": "k8l9m0n1o2p",
+      "title": "Oklahoma Smokeshow",
+      "artist": "Zach Bryan",
+      "duration": "3:31",
+      "seconds": 211,
+      "thumb": "https://i.ytimg.com/vi/k8l9m0n1o2p/hqdefault.jpg"
+    },
+    {
+      "id": "q3r4s5t6u7v",
+      "title": "Pink Skies",
+      "artist": "Zach Bryan",
+      "duration": "3:49",
+      "seconds": 229,
+      "thumb": "https://i.ytimg.com/vi/q3r4s5t6u7v/hqdefault.jpg"
+    },
+    {
+      "id": "w8x9y0z1a2b",
+      "title": "Sun to Me",
+      "artist": "Zach Bryan",
+      "duration": "2:43",
+      "seconds": 163,
+      "thumb": "https://i.ytimg.com/vi/w8x9y0z1a2b/hqdefault.jpg"
+    },
+    {
+      "id": "c3d4e5f6g7h",
+      "title": "Heart Like a Truck",
+      "artist": "Lainey Wilson",
+      "duration": "3:19",
+      "seconds": 199,
+      "thumb": "https://i.ytimg.com/vi/c3d4e5f6g7h/hqdefault.jpg"
+    },
+    {
+      "id": "h8i9j0k1l2m",
+      "title": "Watermelon Moonshine",
+      "artist": "Lainey Wilson",
+      "duration": "3:28",
+      "seconds": 208,
+      "thumb": "https://i.ytimg.com/vi/h8i9j0k1l2m/hqdefault.jpg"
+    },
+    {
+      "id": "m3n4o5p6q7r",
+      "title": "Things a Man Oughta Know",
+      "artist": "Lainey Wilson",
+      "duration": "3:23",
+      "seconds": 203,
+      "thumb": "https://i.ytimg.com/vi/m3n4o5p6q7r/hqdefault.jpg"
+    },
+    {
+      "id": "r8s9t0u1v2w",
+      "title": "Rock and A Hard Place",
+      "artist": "Bailey Zimmerman",
+      "duration": "3:27",
+      "seconds": 207,
+      "thumb": "https://i.ytimg.com/vi/r8s9t0u1v2w/hqdefault.jpg"
+    },
+    {
+      "id": "w3x4y5z6a7b",
+      "title": "Fall In Love",
+      "artist": "Bailey Zimmerman",
+      "duration": "3:52",
+      "seconds": 232,
+      "thumb": "https://i.ytimg.com/vi/w3x4y5z6a7b/hqdefault.jpg"
+    },
+    {
+      "id": "b8c9d0e1f2g",
+      "title": "Religiously",
+      "artist": "Bailey Zimmerman",
+      "duration": "2:58",
+      "seconds": 178,
+      "thumb": "https://i.ytimg.com/vi/b8c9d0e1f2g/hqdefault.jpg"
+    },
+    {
+      "id": "g3h4i5j6k7l",
+      "title": "Save Me (feat. Lainey Wilson)",
+      "artist": "Jelly Roll",
+      "duration": "3:58",
+      "seconds": 238,
+      "thumb": "https://i.ytimg.com/vi/g3h4i5j6k7l/hqdefault.jpg"
+    },
+    {
+      "id": "l8m9n0o1p2q",
+      "title": "Need a Favor",
+      "artist": "Jelly Roll",
+      "duration": "3:17",
+      "seconds": 197,
+      "thumb": "https://i.ytimg.com/vi/l8m9n0o1p2q/hqdefault.jpg"
+    },
+    {
+      "id": "q3r4s5t6u7v",
+      "title": "Son of a Sinner",
+      "artist": "Jelly Roll",
+      "duration": "3:52",
+      "seconds": 232,
+      "thumb": "https://i.ytimg.com/vi/q3r4s5t6u7v/hqdefault.jpg"
+    },
+    {
+      "id": "v8w9x0y1z2a",
+      "title": "I Had Some Help (feat. Morgan Wallen)",
+      "artist": "Post Malone",
+      "duration": "2:58",
+      "seconds": 178,
+      "thumb": "https://i.ytimg.com/vi/v8w9x0y1z2a/hqdefault.jpg"
+    },
+    {
+      "id": "a3b4c5d6e7f",
+      "title": "'Til You Can't",
+      "artist": "Cody Johnson",
+      "duration": "3:44",
+      "seconds": 224,
+      "thumb": "https://i.ytimg.com/vi/a3b4c5d6e7f/hqdefault.jpg"
+    },
+    {
+      "id": "f8g9h0i1j2k",
+      "title": "The Painter",
+      "artist": "Cody Johnson",
+      "duration": "3:31",
+      "seconds": 211,
+      "thumb": "https://i.ytimg.com/vi/f8g9h0i1j2k/hqdefault.jpg"
+    },
+    {
+      "id": "k3l4m5n6o7p",
+      "title": "Dirt Road Anthem",
+      "artist": "Jason Aldean",
+      "duration": "3:49",
+      "seconds": 229,
+      "thumb": "https://i.ytimg.com/vi/k3l4m5n6o7p/hqdefault.jpg"
+    },
+    {
+      "id": "p8q9r0s1t2u",
+      "title": "She's Country",
+      "artist": "Jason Aldean",
+      "duration": "3:39",
+      "seconds": 219,
+      "thumb": "https://i.ytimg.com/vi/p8q9r0s1t2u/hqdefault.jpg"
+    },
+    {
+      "id": "u3v4w5x6y7z",
+      "title": "Big Green Tractor",
+      "artist": "Jason Aldean",
+      "duration": "3:24",
+      "seconds": 204,
+      "thumb": "https://i.ytimg.com/vi/u3v4w5x6y7z/hqdefault.jpg"
+    },
+    {
+      "id": "z8a9b0c1d2e",
+      "title": "Before He Cheats",
+      "artist": "Carrie Underwood",
+      "duration": "3:19",
+      "seconds": 199,
+      "thumb": "https://i.ytimg.com/vi/z8a9b0c1d2e/hqdefault.jpg"
+    },
+    {
+      "id": "e3f4g5h6i7j",
+      "title": "Jesus, Take the Wheel",
+      "artist": "Carrie Underwood",
+      "duration": "3:46",
+      "seconds": 226,
+      "thumb": "https://i.ytimg.com/vi/e3f4g5h6i7j/hqdefault.jpg"
+    },
+    {
+      "id": "j8k9l0m1n2o",
+      "title": "Live Like You Were Dying",
+      "artist": "Tim McGraw",
+      "duration": "4:58",
+      "seconds": 298,
+      "thumb": "https://i.ytimg.com/vi/j8k9l0m1n2o/hqdefault.jpg"
+    },
+    {
+      "id": "o3p4q5r6s7t",
+      "title": "Humble and Kind",
+      "artist": "Tim McGraw",
+      "duration": "4:18",
+      "seconds": 258,
+      "thumb": "https://i.ytimg.com/vi/o3p4q5r6s7t/hqdefault.jpg"
+    },
+    {
+      "id": "t8u9v0w1x2y",
+      "title": "Blue Ain't Your Color",
+      "artist": "Keith Urban",
+      "duration": "3:40",
+      "seconds": 220,
+      "thumb": "https://i.ytimg.com/vi/t8u9v0w1x2y/hqdefault.jpg"
+    },
+    {
+      "id": "y3z4a5b6c7d",
+      "title": "Somebody Like You",
+      "artist": "Keith Urban",
+      "duration": "5:23",
+      "seconds": 323,
+      "thumb": "https://i.ytimg.com/vi/y3z4a5b6c7d/hqdefault.jpg"
+    },
+    {
+      "id": "d8e9f0g1h2i",
+      "title": "God's Country",
+      "artist": "Blake Shelton",
+      "duration": "3:25",
+      "seconds": 205,
+      "thumb": "https://i.ytimg.com/vi/d8e9f0g1h2i/hqdefault.jpg"
+    },
+    {
+      "id": "i3j4k5l6m7n",
+      "title": "Springsteen",
+      "artist": "Eric Church",
+      "duration": "4:23",
+      "seconds": 263,
+      "thumb": "https://i.ytimg.com/vi/i3j4k5l6m7n/hqdefault.jpg"
+    },
+    {
+      "id": "n8o9p0q1r2s",
+      "title": "Record Year",
+      "artist": "Eric Church",
+      "duration": "3:00",
+      "seconds": 180,
+      "thumb": "https://i.ytimg.com/vi/n8o9p0q1r2s/hqdefault.jpg"
+    },
+    {
+      "id": "s3t4u5v6w7x",
+      "title": "Drink In My Hand",
+      "artist": "Eric Church",
+      "duration": "3:11",
+      "seconds": 191,
+      "thumb": "https://i.ytimg.com/vi/s3t4u5v6w7x/hqdefault.jpg"
+    },
+    {
+      "id": "x8y9z0a1b2c",
+      "title": "Country Girl (Shake It For Me)",
+      "artist": "Luke Bryan",
+      "duration": "3:45",
+      "seconds": 225,
+      "thumb": "https://i.ytimg.com/vi/x8y9z0a1b2c/hqdefault.jpg"
+    },
+    {
+      "id": "c3d4e5f6g7h",
+      "title": "Play It Again",
+      "artist": "Luke Bryan",
+      "duration": "3:47",
+      "seconds": 227,
+      "thumb": "https://i.ytimg.com/vi/c3d4e5f6g7h/hqdefault.jpg"
+    },
+    {
+      "id": "h8i9j0k1l2m",
+      "title": "Die a Happy Man",
+      "artist": "Thomas Rhett",
+      "duration": "3:47",
+      "seconds": 227,
+      "thumb": "https://i.ytimg.com/vi/h8i9j0k1l2m/hqdefault.jpg"
+    },
+    {
+      "id": "m3n4o5p6q7r",
+      "title": "Dirt on My Boots",
+      "artist": "Jon Pardi",
+      "duration": "3:22",
+      "seconds": 202,
+      "thumb": "https://i.ytimg.com/vi/m3n4o5p6q7r/hqdefault.jpg"
+    },
+    {
+      "id": "r8s9t0u1v2w",
+      "title": "Head Over Boots",
+      "artist": "Jon Pardi",
+      "duration": "3:23",
+      "seconds": 203,
+      "thumb": "https://i.ytimg.com/vi/r8s9t0u1v2w/hqdefault.jpg"
+    },
+    {
+      "id": "w3x4y5z6a7b",
+      "title": "Heartache Medication",
+      "artist": "Jon Pardi",
+      "duration": "3:29",
+      "seconds": 209,
+      "thumb": "https://i.ytimg.com/vi/w3x4y5z6a7b/hqdefault.jpg"
+    },
+    {
+      "id": "b8c9d0e1f2g",
+      "title": "Buy Dirt (feat. Luke Bryan)",
+      "artist": "Jordan Davis",
+      "duration": "2:47",
+      "seconds": 167,
+      "thumb": "https://i.ytimg.com/vi/b8c9d0e1f2g/hqdefault.jpg"
+    },
+    {
+      "id": "g3h4i5j6k7l",
+      "title": "She Had Me At Heads Carolina",
+      "artist": "Cole Swindell",
+      "duration": "3:26",
+      "seconds": 206,
+      "thumb": "https://i.ytimg.com/vi/g3h4i5j6k7l/hqdefault.jpg"
+    },
+    {
+      "id": "l8m9n0o1p2q",
+      "title": "Slow Burn",
+      "artist": "Kacey Musgraves",
+      "duration": "4:06",
+      "seconds": 246,
+      "thumb": "https://i.ytimg.com/vi/l8m9n0o1p2q/hqdefault.jpg"
+    },
+    {
+      "id": "q3r4s5t6u7v",
+      "title": "Rainbow",
+      "artist": "Kacey Musgraves",
+      "duration": "3:34",
+      "seconds": 214,
+      "thumb": "https://i.ytimg.com/vi/q3r4s5t6u7v/hqdefault.jpg"
+    },
+    {
+      "id": "v8w9x0y1z2a",
+      "title": "The House That Built Me",
+      "artist": "Miranda Lambert",
+      "duration": "3:56",
+      "seconds": 236,
+      "thumb": "https://i.ytimg.com/vi/v8w9x0y1z2a/hqdefault.jpg"
+    },
+    {
+      "id": "a3b4c5d6e7f",
+      "title": "Gunpowder & Lead",
+      "artist": "Miranda Lambert",
+      "duration": "3:11",
+      "seconds": 191,
+      "thumb": "https://i.ytimg.com/vi/a3b4c5d6e7f/hqdefault.jpg"
+    },
+    {
+      "id": "f8g9h0i1j2k",
+      "title": "Chicken Fried",
+      "artist": "Zac Brown Band",
+      "duration": "3:58",
+      "seconds": 238,
+      "thumb": "https://i.ytimg.com/vi/f8g9h0i1j2k/hqdefault.jpg"
+    },
+    {
+      "id": "k3l4m5n6o7p",
+      "title": "Colder Weather",
+      "artist": "Zac Brown Band",
+      "duration": "4:34",
+      "seconds": 274,
+      "thumb": "https://i.ytimg.com/vi/k3l4m5n6o7p/hqdefault.jpg"
+    },
+    {
+      "id": "p8q9r0s1t2u",
+      "title": "Knee Deep (feat. Jimmy Buffett)",
+      "artist": "Zac Brown Band",
+      "duration": "3:23",
+      "seconds": 203,
+      "thumb": "https://i.ytimg.com/vi/p8q9r0s1t2u/hqdefault.jpg"
+    },
+    {
+      "id": "u3v4w5x6y7z",
+      "title": "Boot Scootin' Boogie",
+      "artist": "Brooks & Dunn",
+      "duration": "3:17",
+      "seconds": 197,
+      "thumb": "https://i.ytimg.com/vi/u3v4w5x6y7z/hqdefault.jpg"
+    },
+    {
+      "id": "z8a9b0c1d2e",
+      "title": "Neon Moon",
+      "artist": "Brooks & Dunn",
+      "duration": "4:21",
+      "seconds": 261,
+      "thumb": "https://i.ytimg.com/vi/z8a9b0c1d2e/hqdefault.jpg"
+    },
+    {
+      "id": "e3f4g5h6i7j",
+      "title": "My Maria",
+      "artist": "Brooks & Dunn",
+      "duration": "3:30",
+      "seconds": 210,
+      "thumb": "https://i.ytimg.com/vi/e3f4g5h6i7j/hqdefault.jpg"
+    },
+    {
+      "id": "j8k9l0m1n2o",
+      "title": "Chattahoochee",
+      "artist": "Alan Jackson",
+      "duration": "2:27",
+      "seconds": 147,
+      "thumb": "https://i.ytimg.com/vi/j8k9l0m1n2o/hqdefault.jpg"
+    },
+    {
+      "id": "o3p4q5r6s7t",
+      "title": "Remember When",
+      "artist": "Alan Jackson",
+      "duration": "4:30",
+      "seconds": 270,
+      "thumb": "https://i.ytimg.com/vi/o3p4q5r6s7t/hqdefault.jpg"
+    },
+    {
+      "id": "t8u9v0w1x2y",
+      "title": "It's Five O'Clock Somewhere",
+      "artist": "Alan Jackson & Jimmy Buffett",
+      "duration": "3:49",
+      "seconds": 229,
+      "thumb": "https://i.ytimg.com/vi/t8u9v0w1x2y/hqdefault.jpg"
+    },
+    {
+      "id": "y3z4a5b6c7d",
+      "title": "Friends in Low Places",
+      "artist": "Garth Brooks",
+      "duration": "4:18",
+      "seconds": 258,
+      "thumb": "https://i.ytimg.com/vi/y3z4a5b6c7d/hqdefault.jpg"
+    },
+    {
+      "id": "d8e9f0g1h2i",
+      "title": "The Dance",
+      "artist": "Garth Brooks",
+      "duration": "3:37",
+      "seconds": 217,
+      "thumb": "https://i.ytimg.com/vi/d8e9f0g1h2i/hqdefault.jpg"
+    },
+    {
+      "id": "i3j4k5l6m7n",
+      "title": "The Thunder Rolls",
+      "artist": "Garth Brooks",
+      "duration": "3:42",
+      "seconds": 222,
+      "thumb": "https://i.ytimg.com/vi/i3j4k5l6m7n/hqdefault.jpg"
+    },
+    {
+      "id": "n8o9p0q1r2s",
+      "title": "Mammas Don't Let Your Babies Grow Up to Be Cowboys",
+      "artist": "Waylon Jennings & Willie Nelson",
+      "duration": "2:32",
+      "seconds": 152,
+      "thumb": "https://i.ytimg.com/vi/n8o9p0q1r2s/hqdefault.jpg"
+    },
+    {
+      "id": "s3t4u5v6w7x",
+      "title": "Wichita Lineman",
+      "artist": "Glen Campbell",
+      "duration": "3:06",
+      "seconds": 186,
+      "thumb": "https://i.ytimg.com/vi/s3t4u5v6w7x/hqdefault.jpg"
+    },
+    {
+      "id": "x8y9z0a1b2c",
+      "title": "Rhinestone Cowboy",
+      "artist": "Glen Campbell",
+      "duration": "3:15",
+      "seconds": 195,
+      "thumb": "https://i.ytimg.com/vi/x8y9z0a1b2c/hqdefault.jpg"
+    },
+    {
+      "id": "1vrElj4tD5A",
+      "title": "Take Me Home, Country Roads",
+      "artist": "John Denver",
+      "duration": "3:10",
+      "seconds": 190,
+      "thumb": "https://i.ytimg.com/vi/1vrElj4tD5A/hqdefault.jpg"
+    },
+    {
+      "id": "c3d4e5f6g7h",
+      "title": "A Country Boy Can Survive",
+      "artist": "Hank Williams Jr.",
+      "duration": "4:16",
+      "seconds": 256,
+      "thumb": "https://i.ytimg.com/vi/c3d4e5f6g7h/hqdefault.jpg"
+    },
+    {
+      "id": "h8i9j0k1l2m",
+      "title": "Family Tradition",
+      "artist": "Hank Williams Jr.",
+      "duration": "4:00",
+      "seconds": 240,
+      "thumb": "https://i.ytimg.com/vi/h8i9j0k1l2m/hqdefault.jpg"
+    },
+    {
+      "id": "m3n4o5p6q7r",
+      "title": "Forever and Ever, Amen",
+      "artist": "Randy Travis",
+      "duration": "3:33",
+      "seconds": 213,
+      "thumb": "https://i.ytimg.com/vi/m3n4o5p6q7r/hqdefault.jpg"
+    },
+    {
+      "id": "r8s9t0u1v2w",
+      "title": "He Stopped Loving Her Today",
+      "artist": "George Jones",
+      "duration": "3:17",
+      "seconds": 197,
+      "thumb": "https://i.ytimg.com/vi/r8s9t0u1v2w/hqdefault.jpg"
+    },
+    {
+      "id": "w3x4y5z6a7b",
+      "title": "Hey Good Lookin'",
+      "artist": "Hank Williams",
+      "duration": "2:55",
+      "seconds": 175,
+      "thumb": "https://i.ytimg.com/vi/w3x4y5z6a7b/hqdefault.jpg"
+    },
+    {
+      "id": "b8c9d0e1f2g",
+      "title": "Guitars, Cadillacs",
+      "artist": "Dwight Yoakam",
+      "duration": "3:02",
+      "seconds": 182,
+      "thumb": "https://i.ytimg.com/vi/b8c9d0e1f2g/hqdefault.jpg"
+    },
+    {
+      "id": "g3h4i5j6k7l",
+      "title": "Drinkin' Problem",
+      "artist": "Midland",
+      "duration": "3:41",
+      "seconds": 221,
+      "thumb": "https://i.ytimg.com/vi/g3h4i5j6k7l/hqdefault.jpg"
+    },
+    {
+      "id": "l8m9n0o1p2q",
+      "title": "Pretty Heart",
+      "artist": "Parker McCollum",
+      "duration": "4:04",
+      "seconds": 244,
+      "thumb": "https://i.ytimg.com/vi/l8m9n0o1p2q/hqdefault.jpg"
+    },
+    {
+      "id": "q3r4s5t6u7v",
+      "title": "Ride the Lightning",
+      "artist": "Warren Zeiders",
+      "duration": "3:11",
+      "seconds": 191,
+      "thumb": "https://i.ytimg.com/vi/q3r4s5t6u7v/hqdefault.jpg"
+    },
+    {
+      "id": "v8w9x0y1z2a",
+      "title": "Pretty Little Poison",
+      "artist": "Warren Zeiders",
+      "duration": "3:38",
+      "seconds": 218,
+      "thumb": "https://i.ytimg.com/vi/v8w9x0y1z2a/hqdefault.jpg"
+    },
+    {
+      "id": "a3b4c5d6e7f",
+      "title": "Straight and Narrow",
+      "artist": "Sam Barber",
+      "duration": "2:46",
+      "seconds": 166,
+      "thumb": "https://i.ytimg.com/vi/a3b4c5d6e7f/hqdefault.jpg"
+    },
+    {
+      "id": "f8g9h0i1j2k",
+      "title": "Tattooed Roses",
+      "artist": "Treaty Oak Revival",
+      "duration": "3:15",
+      "seconds": 195,
+      "thumb": "https://i.ytimg.com/vi/f8g9h0i1j2k/hqdefault.jpg"
+    }
+  ]
+}
 };
 
 // Aliases for short identifiers
@@ -16204,6 +17977,8 @@ TOP_SHUFFLES_CATALOG["rock_top100"] = TOP_SHUFFLES_CATALOG["rock_alt"];
 TOP_SHUFFLES_CATALOG["phonk_edm_top100"] = TOP_SHUFFLES_CATALOG["phonk_edm"];
 TOP_SHUFFLES_CATALOG["throwback_top100"] = TOP_SHUFFLES_CATALOG["throwback_90s_00s"];
 TOP_SHUFFLES_CATALOG["lofi_top100"] = TOP_SHUFFLES_CATALOG["lofi_study"];
+TOP_SHUFFLES_CATALOG["classic_rock"] = TOP_SHUFFLES_CATALOG["classic_rock_top100"];
+TOP_SHUFFLES_CATALOG["country"] = TOP_SHUFFLES_CATALOG["country_top100"];
 
 if (typeof window !== 'undefined') {
   window.TOP_SHUFFLES_CATALOG = TOP_SHUFFLES_CATALOG;
