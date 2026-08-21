@@ -174,6 +174,15 @@ window.JuiceEngine = (() => {
     } catch(e) {}
   }
 
+  function parseDuration(str) {
+    if (!str) return 0;
+    if (typeof str === 'number') return str;
+    const parts = String(str).split(':').map(Number);
+    if (parts.length === 2) return (parts[0] * 60) + parts[1];
+    if (parts.length === 3) return (parts[0] * 3600) + (parts[1] * 60) + parts[2];
+    return 0;
+  }
+
   // ═══ HTML5 LOCAL AUDIO PLAYER ═══
   function initLocalAudio() {
     if (!localAudio) {
@@ -188,7 +197,7 @@ window.JuiceEngine = (() => {
       localAudio.addEventListener('play', attachDSP);
 
       localAudio.addEventListener('play', () => {
-        if (localAudio.src.startsWith('data:audio/mp3;base64,')) return; // Ignore silent track
+        if (!localAudio.src || localAudio.src.startsWith('data:audio')) return; // Ignore silent background lock track
         state.isPlaying = true;
         state.isLocalPlaying = true;
         startLocalProgressTracker();
@@ -196,14 +205,14 @@ window.JuiceEngine = (() => {
       });
 
       localAudio.addEventListener('pause', () => {
-        if (localAudio.src.startsWith('data:audio/mp3;base64,')) return; // Ignore silent track
+        if (!localAudio.src || localAudio.src.startsWith('data:audio')) return; // Ignore silent background lock track
         state.isPlaying = false;
         stopProgressTracker();
         emit('engine:stateChanged', state);
       });
 
       localAudio.addEventListener('ended', () => {
-        if (localAudio.src.startsWith('data:audio/mp3;base64,')) return; // Ignore silent track
+        if (!localAudio.src || localAudio.src.startsWith('data:audio')) return; // Ignore silent background lock track
         state.isPlaying = false;
         stopProgressTracker();
         emit('engine:stateChanged', state);
@@ -216,13 +225,15 @@ window.JuiceEngine = (() => {
       });
 
       localAudio.addEventListener('loadedmetadata', () => {
-        state.duration = localAudio.duration || 0;
-        emit('engine:progress', { currentTime: 0, duration: state.duration });
+        if (!localAudio.src || localAudio.src.startsWith('data:audio') || !state.isLocalPlaying) return;
+        state.duration = localAudio.duration || state.duration || 0;
+        emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
       });
 
       localAudio.addEventListener('timeupdate', () => {
+        if (!localAudio.src || localAudio.src.startsWith('data:audio') || !state.isLocalPlaying) return;
         state.currentTime = localAudio.currentTime || 0;
-        state.duration = localAudio.duration || 0;
+        state.duration = localAudio.duration || state.duration || 0;
         emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
       });
     }
@@ -231,9 +242,9 @@ window.JuiceEngine = (() => {
   function startLocalProgressTracker() {
     stopProgressTracker();
     progressInterval = setInterval(() => {
-      if (localAudio && !localAudio.paused) {
+      if (localAudio && !localAudio.paused && state.isLocalPlaying && localAudio.src && !localAudio.src.startsWith('data:audio')) {
         state.currentTime = localAudio.currentTime || 0;
-        state.duration = localAudio.duration || 0;
+        state.duration = localAudio.duration || state.duration || 0;
         emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
       }
     }, 250);
@@ -480,9 +491,13 @@ window.JuiceEngine = (() => {
     stopProgressTracker();
     progressInterval = setInterval(() => {
       if (ytPlayer && typeof ytPlayer.getCurrentTime === 'function' && !state.isLocalPlaying) {
-        state.currentTime = ytPlayer.getCurrentTime() || 0;
-        state.duration = ytPlayer.getDuration() || 0;
-        emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
+        try {
+          const cur = ytPlayer.getCurrentTime() || 0;
+          const dur = (typeof ytPlayer.getDuration === 'function' ? ytPlayer.getDuration() : 0) || state.duration || 0;
+          state.currentTime = cur;
+          if (dur > 0) state.duration = dur;
+          emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
+        } catch(e) {}
       }
     }, 250);
   }
@@ -649,6 +664,9 @@ window.JuiceEngine = (() => {
       track.id = cachedId;
     }
 
+    state.currentTime = 0;
+    state.duration = track.seconds || (track.duration ? parseDuration(track.duration) : 0);
+    emit('engine:progress', { currentTime: 0, duration: state.duration });
     emit('engine:trackChanged', track);
 
     if ((track.isLocal || track.isDirectAudio) && track.audioUrl) {

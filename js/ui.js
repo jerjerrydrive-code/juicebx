@@ -1993,13 +1993,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('engine:progress', (e) => {
     if (isDragging) return;
-    const { currentTime, duration } = e.detail;
-    if (duration > 0) {
-      const pct = (currentTime / duration) * 100;
+    const { currentTime, duration } = e.detail || {};
+    const cur = (typeof currentTime === 'number' && !isNaN(currentTime)) ? Math.max(0, currentTime) : 0;
+    const dur = (typeof duration === 'number' && !isNaN(duration)) ? Math.max(0, duration) : 0;
+
+    if (els.deckTimeCurrent) els.deckTimeCurrent.innerText = formatTime(cur);
+    if (els.deckTimeTotal && dur > 0) els.deckTimeTotal.innerText = formatTime(dur);
+
+    if (dur > 0) {
+      const pct = Math.min(100, Math.max(0, (cur / dur) * 100));
       if (els.deckScrubberFill) els.deckScrubberFill.style.transform = `scaleX(${pct / 100})`;
       if (els.deckScrubberThumb) els.deckScrubberThumb.style.left = `${pct}%`;
-      if (els.deckTimeCurrent) els.deckTimeCurrent.innerText = formatTime(currentTime);
-      if (els.deckTimeTotal) els.deckTimeTotal.innerText = formatTime(duration);
     }
   });
 
