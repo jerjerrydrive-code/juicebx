@@ -854,11 +854,9 @@
           <!-- Dynamic Ambient Aura Glow -->
           <div id="ambient-aura-glow" class="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full blur-3xl opacity-35 pointer-events-none transition-all duration-1000" style="background: radial-gradient(circle, #a855f7 0%, #6366f1 50%, transparent 80%);"></div>
 
-          <!-- Top Player Header Bar -->
-          <div class="flex flex-wrap items-center justify-between pt-1 pb-2 shrink-0 z-20 gap-x-2 gap-y-2">
-            <div class="flex items-center gap-2">
-              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-16 sm:h-20 w-auto max-w-[220px] object-contain cursor-pointer active:scale-95 transition-transform" id="deck-brand-tribute" title="999 Forever Tribute">
-            </div>
+          <!-- Top Player Header Bar (Clean 1-Line Header) -->
+          <div class="flex items-center justify-between pt-1 pb-1.5 shrink-0 z-20 w-full px-1">
+            <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-11 sm:h-14 w-auto max-w-[110px] object-contain cursor-pointer active:scale-95 transition-transform" id="deck-brand-tribute" title="999 Forever Tribute">
             
             <!-- View Switcher Pills (YouTube Music style: SONG / VIDEO / LYRICS) -->
             <div class="flex items-center gap-1 p-1 rounded-full glass-card" id="deck-mode-pills">
@@ -867,25 +865,10 @@
               <button class="deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="lyrics" style="color: var(--text-tertiary);">LYRICS</button>
             </div>
 
-            <!-- Header Quick Actions (Fullscreen, Like, Download, Add to Playlist, Sleep Timer) -->
-            <div class="flex items-center gap-1.5">
-              <button id="deck-btn-fullscreen" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Enter Fullscreen">
-                <i class="ph-bold ph-corners-out text-base" id="deck-fullscreen-icon"></i>
-              </button>
-              <button id="deck-btn-favorite" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card text-pink-500" title="Like / Favorite">
-                <i class="ph-bold ph-heart text-base" id="deck-heart-icon"></i>
-              </button>
-              <button id="deck-btn-download-hero" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Download for Offline">
-                <i class="ph-bold ph-download-simple text-sm" id="deck-download-hero-icon"></i>
-              </button>
-              <button id="deck-btn-add-playlist" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Add to Playlist">
-                <i class="ph-bold ph-playlist text-base"></i>
-              </button>
-              <button id="deck-btn-sleep" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card relative" style="color: var(--text-primary);" title="Sleep Timer">
-                <i class="ph-bold ph-timer text-sm" id="deck-sleep-icon"></i>
-                <span id="deck-sleep-badge" class="hidden text-[8px] font-black text-indigo-400"></span>
-              </button>
-            </div>
+            <!-- Top Fullscreen Button -->
+            <button id="deck-btn-fullscreen" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Enter Fullscreen">
+              <i class="ph-bold ph-corners-out text-base" id="deck-fullscreen-icon"></i>
+            </button>
           </div>
 
           <!-- CENTER STAGE (ENLARGED UNIVERSAL SQUIRCLE STAGE - TAP TO MORPH 2028 / M3 VISUALIZERS) -->
@@ -970,10 +953,29 @@
           <!-- BOTTOM CONTROLS STACK -->
           <div class="w-full shrink-0 space-y-3 z-20 pb-2">
             
-            <!-- Metadata -->
-            <div class="text-center px-2">
-              <h2 id="deck-track-title" class="font-black text-[22px] tracking-tight truncate" style="color: var(--text-primary);">JuiceBx</h2>
-              <p id="deck-track-artist" class="text-sm font-bold truncate mt-0.5" style="color: var(--text-secondary);">Select a track</p>
+            <!-- Metadata & Quick Actions Bar -->
+            <div class="flex items-center justify-between px-2 gap-2">
+              <button id="deck-btn-favorite" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card text-pink-500 shrink-0" title="Like / Favorite">
+                <i class="ph-bold ph-heart text-lg" id="deck-heart-icon"></i>
+              </button>
+              
+              <div class="text-center flex-1 overflow-hidden px-1">
+                <h2 id="deck-track-title" class="font-black text-[20px] sm:text-[22px] tracking-tight truncate leading-snug" style="color: var(--text-primary);">JuiceBx</h2>
+                <p id="deck-track-artist" class="text-xs sm:text-sm font-bold truncate mt-0.5" style="color: var(--text-secondary);">Select a track</p>
+              </div>
+
+              <div class="flex items-center gap-1.5 shrink-0">
+                <button id="deck-btn-download-hero" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Download for Offline">
+                  <i class="ph-bold ph-download-simple text-base" id="deck-download-hero-icon"></i>
+                </button>
+                <button id="deck-btn-add-playlist" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Add to Playlist">
+                  <i class="ph-bold ph-playlist text-base"></i>
+                </button>
+                <button id="deck-btn-sleep" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card relative" style="color: var(--text-primary);" title="Sleep Timer">
+                  <i class="ph-bold ph-timer text-base" id="deck-sleep-icon"></i>
+                  <span id="deck-sleep-badge" class="hidden text-[8px] font-black text-indigo-400"></span>
+                </button>
+              </div>
             </div>
 
             <!-- Time Scrubber -->
