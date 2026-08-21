@@ -258,13 +258,13 @@
     ::-webkit-scrollbar { display: none; }
   </style>
 </head>
-<body class="h-screen w-screen p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
+<body class="h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
 
   <!-- MAIN APP CONTAINER -->
-  <div id="app-frame" class="relative w-full h-full min-h-screen overflow-hidden flex flex-col" style="background: var(--bg-app);">
+  <div id="app-frame" class="relative w-[100vw] h-[100dvh] max-w-[100vw] max-h-[100dvh] overflow-hidden" style="background: var(--bg-app);">
 
     <!-- 5-Panel Horizontal Swipe Carousel -->
-    <div class="flex-1 relative flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full h-full" id="app-container">
+    <div class="relative flex flex-row overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full h-full" id="app-container">
 
       <!-- ═══ PANEL 0: HOME / TOP 100 SHUFFLES ═══ -->
       <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-28 px-4 pt-3.5" style="background: var(--bg-panel);">
@@ -280,6 +280,7 @@
               <span class="text-[9px] font-black tracking-widest uppercase text-purple-400">v2.9.0</span>
             </div>
             <span class="text-[11px] font-bold" style="color: var(--text-secondary);">Top 100 Shuffles</span>
+          </div>
         </div>
 
         <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
@@ -435,6 +436,7 @@
             </div>
           </div>
         </div>
+      </div>
 
         <!-- ═══ PANEL 1: DEDICATED SEARCH VIEW ═══ -->
         <div id="view-search" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-28 px-4 pt-3.5" style="background: var(--bg-panel);">
