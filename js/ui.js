@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     deckSleepIcon: document.getElementById('deck-sleep-icon'),
     ambientAuraGlow: document.getElementById('ambient-aura-glow'),
     deckSpindleTribute: document.getElementById('deck-spindle-tribute'),
+    homeBrandTribute: document.getElementById('home-brand-tribute'),
     deckBrandTribute: document.getElementById('deck-brand-tribute'),
     deckVisualizerCanvas: document.getElementById('deck-visualizer-canvas'),
 
@@ -3091,6 +3092,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 200);
   }
 
+  if (els.homeBrandTribute) els.homeBrandTribute.addEventListener('click', open999Tribute);
   if (els.deckBrandTribute) els.deckBrandTribute.addEventListener('click', open999Tribute);
   if (els.deckSpindleTribute) els.deckSpindleTribute.addEventListener('click', open999Tribute);
   if (els.settingsTributeLink) els.settingsTributeLink.addEventListener('click', open999Tribute);
