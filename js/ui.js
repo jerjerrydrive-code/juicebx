@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const engine = window.JuiceEngine;
+  const engine = window.JuiceEngine; window.engine = engine;
   if (!engine) { console.error("JuiceEngine not found."); return; }
 
   // iOS Safari Audio Context Unlocker
@@ -3261,7 +3261,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const active = document.body.classList.toggle('light-mode');
       toggleLight.classList.toggle('active', active);
       localStorage.setItem('juicebx_light_mode', active ? 'true' : 'false');
+      if (window.ThemeManager) {
+        window.ThemeManager.applyPalette(window.ThemeManager.currentQuad, window.ThemeManager.currentHex, true);
+      }
       engine.playHaptic(600, 0.02);
+      if (typeof showToast === 'function') {
+        showToast(active ? "☀️ Light Mode Enabled" : "🌙 Dark Mode Enabled", "info");
+      }
     });
   }
 
@@ -3333,7 +3339,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bloodruby: { name: "Blood Ruby", quad: ["#EF4444", "#B91C1C", "#450A0A", "#140204"] }
   };
 
-  class OSThemeManager {
+    class OSThemeManager {
     constructor() {
       this.rowEl = document.getElementById('theme-swatch-row');
       this.expandBtn = document.getElementById('btn-theme-expand');
@@ -3372,7 +3378,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (Array.isArray(parsed) && parsed.length === 4) return parsed;
         }
       } catch(e) {}
-      return PRESET_NAMED_THEMES.midnight.quad;
+      return ["#A855F7", "#FF4F00", "#1F5C6B", "#080911"];
     }
 
     initExpandToggle() {
@@ -3380,7 +3386,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.expandBtn.addEventListener('click', () => {
         const isOpen = this.rowEl.classList.toggle('expanded');
         this.expandBtn.textContent = isOpen ? 'Show less' : `Browse all ${THEMES.length}`;
-        engine.playHaptic(500, 0.015);
+        engine.playHaptic(500, 0.02);
       });
     }
 
@@ -3388,15 +3394,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!this.rowEl) return;
       this.rowEl.innerHTML = '';
 
-      if (this.favorites.length > 0) {
-        this.favorites.forEach(favHex => {
-          this.rowEl.appendChild(this.createFavPill(favHex));
+      // 1. Render user saved favorite themes first
+      if (this.favorites && this.favorites.length > 0) {
+        this.favorites.forEach((fav) => {
+          if (Array.isArray(fav)) {
+            this.rowEl.appendChild(this.createThemeSwatch(fav));
+          } else if (typeof fav === 'string') {
+            this.rowEl.appendChild(this.createColorDot(fav, true));
+          }
         });
-        const sep = document.createElement('div');
-        sep.className = 'w-[1px] h-8 self-center mx-1 bg-white/20 shrink-0';
-        this.rowEl.appendChild(sep);
       }
 
+      // 2. Render all 338 curated ColorHunt palettes
       THEMES.forEach((quad) => {
         this.rowEl.appendChild(this.createThemeSwatch(quad));
       });
@@ -3404,61 +3413,45 @@ document.addEventListener('DOMContentLoaded', () => {
       this.syncActiveRings();
     }
 
-    createFavPill(hex) {
-      const btn = document.createElement('button');
-      btn.className = 'accent-swatch shrink-0 relative overflow-hidden';
-      btn.style.backgroundColor = hex;
-      btn._pinnedHex = hex;
-      btn.title = `Favorite: ${hex} (Long press to remove)`;
+    createColorDot(hex, isPinned = false) {
+      const dot = document.createElement('div');
+      dot.className = 'accent-swatch';
+      dot._pinnedHex = hex;
+      dot.style.background = hex;
+      dot.style.boxShadow = `0 4px 14px ${hex}55`;
+      dot.setAttribute('title', `Favorite Accent: ${hex}`);
 
-      const star = document.createElement('i');
-      star.className = 'ph-fill ph-star text-white text-[10px] absolute top-1 right-1 drop-shadow-md';
-      btn.appendChild(star);
-
-      let pressTimer = null;
-      let longPressed = false;
-      const startPress = () => {
-        longPressed = false;
-        pressTimer = setTimeout(() => {
-          longPressed = true;
-          this.toggleFavorite(hex);
-          engine.playHaptic(800, 0.04);
-        }, 550);
-      };
-      const cancelPress = () => { if (pressTimer) clearTimeout(pressTimer); };
-
-      btn.addEventListener('pointerdown', startPress);
-      btn.addEventListener('pointerup', (e) => {
-        cancelPress();
-        if (!longPressed) this.selectSwatch(null, hex, e);
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.selectSwatch(null, hex, e);
       });
-      btn.addEventListener('pointerleave', cancelPress);
-
-      return btn;
+      return dot;
     }
 
     createThemeSwatch(quad) {
       const btn = document.createElement('button');
-      btn.className = 'accent-swatch shrink-0 relative overflow-hidden flex flex-col';
+      btn.className = 'accent-swatch flex flex-col p-0 overflow-hidden';
       btn._quad = quad;
-      btn.title = `Palette: ${quad.join(', ')} (Long press to favorite)`;
+      btn.setAttribute('title', `Palette: ${quad.join(', ')} (Tap to apply, Hold to favorite)`);
 
-      quad.forEach((c) => {
-        const stripe = document.createElement('div');
-        stripe.className = 'w-full flex-1 pointer-events-none';
-        stripe.style.backgroundColor = c;
-        btn.appendChild(stripe);
+      quad.forEach(col => {
+        const band = document.createElement('div');
+        band.className = 'flex-1 w-full';
+        band.style.background = col;
+        btn.appendChild(band);
       });
 
       let pressTimer = null;
       let longPressed = false;
+
       const startPress = () => {
         longPressed = false;
         pressTimer = setTimeout(() => {
           longPressed = true;
-          this.toggleFavorite(quad[0]);
+          this.toggleFavorite(quad);
           engine.playHaptic(800, 0.04);
-        }, 550);
+          if (typeof showToast === 'function') showToast("Saved to Favorite Themes!", "success");
+        }, 500);
       };
       const cancelPress = () => { if (pressTimer) clearTimeout(pressTimer); };
 
@@ -3472,40 +3465,37 @@ document.addEventListener('DOMContentLoaded', () => {
       return btn;
     }
 
-    bandAt(btn, e) {
-      const rect = btn.getBoundingClientRect();
-      if (!rect.height || !e || typeof e.clientY !== 'number') return -1;
-      const y = e.clientY - rect.top;
-      if (y < 0 || y > rect.height) return -1;
-      return Math.min(3, Math.max(0, Math.floor((y / rect.height) * 4)));
+    selectSwatch(quad, hex, event) {
+      const targetQuad = quad || this.currentQuad;
+      const targetHex = (hex || targetQuad[0]).toUpperCase();
+      engine.playHaptic(700, 0.02);
+      this.applyPalette(targetQuad, targetHex, true);
+      this.showThemeToast(targetQuad);
     }
 
-    selectSwatch(quad, pinnedHex, e) {
-      let hex;
-      let paletteQuad = quad;
-      if (pinnedHex) {
-        hex = pinnedHex;
-        paletteQuad = [hex, '#ffffff', '#121218', '#030305'];
-      } else {
-        const band = (e && e.currentTarget) ? this.bandAt(e.currentTarget, e) : 0;
-        hex = (band >= 0 && band < 4) ? quad[band] : quad[0];
-      }
-      engine.playHaptic(650, 0.02);
-      this.applyPalette(paletteQuad, hex, true);
-    }
-
-    toggleFavorite(hex) {
-      const upper = hex.toUpperCase();
-      const idx = this.favorites.findIndex(f => f.toUpperCase() === upper);
-      if (idx !== -1) {
-        this.favorites.splice(idx, 1);
-      } else {
-        this.favorites.unshift(hex);
+    toggleFavorite(item) {
+      if (Array.isArray(item)) {
+        const key = item.join('-');
+        const idx = this.favorites.findIndex(f => Array.isArray(f) && f.join('-') === key);
+        if (idx !== -1) {
+          this.favorites.splice(idx, 1);
+        } else {
+          this.favorites.unshift(item);
+        }
+      } else if (typeof item === 'string') {
+        const upper = item.toUpperCase();
+        const idx = this.favorites.findIndex(f => typeof f === 'string' && f.toUpperCase() === upper);
+        if (idx !== -1) {
+          this.favorites.splice(idx, 1);
+        } else {
+          this.favorites.unshift(upper);
+        }
       }
       this.saveFavorites();
       this.render();
     }
 
+    // ═══ SYSTEM-WIDE THEME APPLICATION ═══
     applyPalette(quad, hex, persist = true) {
       if (!quad || quad.length !== 4) return;
       this.currentQuad = quad;
@@ -3522,67 +3512,42 @@ document.addEventListener('DOMContentLoaded', () => {
       root.setProperty('--rabbit-orange', c2);
       root.setProperty('--accent-glow', `color-mix(in srgb, ${this.currentHex} 50%, transparent)`);
 
-      // Compute luminance of the background (c4) and primary (c1)
-      const cleanC4 = c4.replace('#', '');
-      const r4 = parseInt(cleanC4.substring(0, 2), 16) || 0;
-      const g4 = parseInt(cleanC4.substring(2, 4), 16) || 0;
-      const b4 = parseInt(cleanC4.substring(4, 6), 16) || 0;
-      const lum4 = (0.299 * r4 + 0.587 * g4 + 0.114 * b4) / 255;
+      const isLight = document.body.classList.contains('light-mode');
 
-      if (lum4 > 0.6) {
-        // ── 1. LIGHT / WHITE CERAMIC PALETTE ──
-        root.setProperty('--bg-app', c4);
-        root.setProperty('--bg-panel', c4);
-        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 20%, rgba(255, 255, 255, 0.92))`);
-        root.setProperty('--bg-card-solid', '#ffffff');
-        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 15%, rgba(238, 242, 248, 0.95))`);
-        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 30%, rgba(255, 255, 255, 0.96))`);
-        root.setProperty('--bg-mini', `color-mix(in srgb, ${c4} 30%, rgba(255, 255, 255, 0.96))`);
-        root.setProperty('--text-primary', '#0f172a');
-        root.setProperty('--text-secondary', '#334155');
-        root.setProperty('--text-tertiary', '#64748b');
-        root.setProperty('--border-card', `color-mix(in srgb, ${c1} 25%, rgba(0, 0, 0, 0.08))`);
-        root.setProperty('--border-input', `color-mix(in srgb, ${c1} 30%, rgba(0, 0, 0, 0.12))`);
-        root.setProperty('--btn-active-bg', '#0f172a');
-        root.setProperty('--btn-active-text', '#ffffff');
-        root.setProperty('--shadow-card', '0 16px 36px -8px rgba(0, 0, 0, 0.12)');
-        document.body.classList.add('light-mode');
-      } else if (lum4 >= 0.2) {
-        // ── 2. VIBRANT SATURATED (e.g. Electric Rabbit Orange / Crimson) ──
-        root.setProperty('--bg-app', c4);
-        root.setProperty('--bg-panel', c4);
-        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 70%, rgba(0, 0, 0, 0.35))`);
-        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c3} 85%, #000000)`);
-        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 50%, rgba(0, 0, 0, 0.4))`);
-        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 85%, rgba(0, 0, 0, 0.9))`);
-        root.setProperty('--bg-mini', `color-mix(in srgb, ${c3} 80%, rgba(0, 0, 0, 0.92))`);
-        root.setProperty('--text-primary', '#ffffff');
-        root.setProperty('--text-secondary', 'rgba(255, 255, 255, 0.85)');
-        root.setProperty('--text-tertiary', 'rgba(255, 255, 255, 0.6)');
-        root.setProperty('--border-card', `color-mix(in srgb, ${c1} 45%, rgba(255, 255, 255, 0.2))`);
-        root.setProperty('--border-input', `color-mix(in srgb, ${c1} 50%, rgba(255, 255, 255, 0.25))`);
-        root.setProperty('--btn-active-bg', '#ffffff');
-        root.setProperty('--btn-active-text', '#000000');
-        root.setProperty('--shadow-card', '0 20px 45px -10px rgba(0, 0, 0, 0.7)');
-        document.body.classList.remove('light-mode');
-      } else {
-        // ── 3. DEEP OLED / OBSIDIAN / MIDNIGHT ──
-        root.setProperty('--bg-app', c4);
-        root.setProperty('--bg-panel', c4);
-        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 38%, rgba(18, 19, 26, 0.82))`);
-        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c4} 70%, #0d0e14)`);
-        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 50%, rgba(27, 28, 38, 0.7))`);
-        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 80%, rgba(10, 11, 16, 0.94))`);
-        root.setProperty('--bg-mini', `color-mix(in srgb, ${c4} 85%, rgba(18, 19, 26, 0.95))`);
+      if (!isLight) {
+        // Dark Mode: Deep themeing using palette colors
+        root.setProperty('--bg-app', `color-mix(in srgb, ${c4} 45%, #030408)`);
+        root.setProperty('--bg-panel', `color-mix(in srgb, ${c4} 45%, #030408)`);
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 26%, rgba(18, 19, 26, 0.72))`);
+        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c4} 38%, #0d0e14)`);
+        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 32%, rgba(27, 28, 38, 0.55))`);
+        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 42%, rgba(10, 11, 16, 0.88))`);
+        root.setProperty('--bg-mini', `color-mix(in srgb, ${c4} 45%, rgba(18, 19, 26, 0.92))`);
         root.setProperty('--text-primary', '#ffffff');
         root.setProperty('--text-secondary', '#94a3b8');
         root.setProperty('--text-tertiary', '#64748b');
-        root.setProperty('--border-card', `color-mix(in srgb, ${c1} 30%, rgba(255, 255, 255, 0.08))`);
-        root.setProperty('--border-input', `color-mix(in srgb, ${c1} 35%, rgba(255, 255, 255, 0.12))`);
+        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 24%, rgba(255, 255, 255, 0.08))`);
+        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 28%, rgba(255, 255, 255, 0.12))`);
         root.setProperty('--btn-active-bg', 'rgba(255, 255, 255, 0.95)');
         root.setProperty('--btn-active-text', '#000000');
-        root.setProperty('--shadow-card', '0 24px 48px -12px rgba(0, 0, 0, 0.85)');
-        document.body.classList.remove('light-mode');
+        root.setProperty('--shadow-card', '0 24px 48px -12px rgba(0, 0, 0, 0.8)');
+      } else {
+        // Light Mode: Clean high-contrast white glass themeing
+        root.setProperty('--bg-app', `color-mix(in srgb, ${c4} 8%, #f4f5fa)`);
+        root.setProperty('--bg-panel', `color-mix(in srgb, ${c4} 8%, #f4f5fa)`);
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 10%, rgba(255, 255, 255, 0.92))`);
+        root.setProperty('--bg-card-solid', '#ffffff');
+        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 6%, rgba(238, 240, 246, 0.95))`);
+        root.setProperty('--bg-nav', 'rgba(255, 255, 255, 0.95)');
+        root.setProperty('--bg-mini', 'rgba(255, 255, 255, 0.95)');
+        root.setProperty('--text-primary', '#0f172a');
+        root.setProperty('--text-secondary', '#334155');
+        root.setProperty('--text-tertiary', '#64748b');
+        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 18%, rgba(0, 0, 0, 0.08))`);
+        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 22%, rgba(0, 0, 0, 0.12))`);
+        root.setProperty('--btn-active-bg', '#0f172a');
+        root.setProperty('--btn-active-text', '#ffffff');
+        root.setProperty('--shadow-card', '0 16px 32px -8px rgba(0, 0, 0, 0.08)');
       }
 
       // Update ambient bloom aura
@@ -3598,18 +3563,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const sw4 = document.getElementById('swatch-4');
       const dot = document.getElementById('theme-indicator-dot');
       const nameLabel = document.getElementById('theme-active-name');
-      const paletteIcon = document.getElementById('btn-settings-palette-icon');
 
       if (sw1) sw1.style.background = c1;
       if (sw2) sw2.style.background = c2;
       if (sw3) sw3.style.background = c3;
       if (sw4) sw4.style.background = c4;
       if (dot) dot.style.background = this.currentHex;
-      if (paletteIcon) paletteIcon.style.background = `linear-gradient(135deg, ${c1}, ${c2})`;
-
       if (nameLabel) {
-        const matchPreset = Object.values(PRESET_NAMED_THEMES).find(p => p.quad[0] === c1 && p.quad[1] === c2);
-        nameLabel.innerText = matchPreset ? matchPreset.name : `Aesthetic #${(THEMES.indexOf(quad) >= 0 ? THEMES.indexOf(quad) + 1 : 'Custom')}`;
+        const themeIdx = THEMES.indexOf(quad) >= 0 ? THEMES.indexOf(quad) + 1 : 'Custom';
+        nameLabel.innerText = `Palette #${themeIdx}`;
       }
 
       this.syncActiveRings();
@@ -3635,6 +3597,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     bindPresets() {}
 
+    // ═══ TAP TO ROTATE / CYCLE COLORS, HOLD TO SAVE FAVORITE ═══
     bindCycleButtons() {
       const cycleButtons = [
         document.getElementById('btn-settings-palette-icon'),
@@ -3650,18 +3613,12 @@ document.addEventListener('DOMContentLoaded', () => {
           pressTimer = setTimeout(() => {
             isLongPress = true;
             if (window.engine && typeof window.engine.playHaptic === 'function') {
-                window.engine.playHaptic(300, 0.1);
+              window.engine.playHaptic(300, 0.1);
             }
-            // Add to favorites list so it shows up in the UI
-            if (this.currentHex) {
-                if (!this.favorites.includes(this.currentHex)) {
-                    this.toggleFavorite(this.currentHex);
-                    if (typeof showToast === 'function') showToast("Saved to Favorite Themes!", "success");
-                } else {
-                    if (typeof showToast === 'function') showToast("Already in Favorites", "info");
-                }
-            }
-          }, 500);
+            // Save favorite
+            this.toggleFavorite(this.currentQuad);
+            if (typeof showToast === 'function') showToast("Saved palette variant as favorite!", "success");
+          }, 450);
         };
 
         const cancelPress = () => {
@@ -3675,13 +3632,18 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             return;
           }
-          // Short click: cycle
+          // Shift-click also saves
+          if (e.shiftKey) {
+            e.stopPropagation();
+            e.preventDefault();
+            this.toggleFavorite(this.currentQuad);
+            if (typeof showToast === 'function') showToast("Saved palette variant as favorite!", "success");
+            return;
+          }
+          // Normal Tap: Rotate the 4 colors of the current palette
           e.stopPropagation();
           e.preventDefault();
-          this.cycleTheme();
-          if (window.engine && typeof window.engine.playHaptic === 'function') {
-              window.engine.playHaptic(100, 0.05);
-          }
+          this.rotateCurrentPalette();
         };
 
         // Desktop
@@ -3694,12 +3656,23 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('touchcancel', cancelPress, {passive: true});
         btn.addEventListener('touchend', endPress, {passive: false});
         
-        // Block default click since we use mouseup/touchend
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
           e.preventDefault();
         });
       });
+    }
+
+    // Rotates the 4 colors in the current palette: [C1, C2, C3, C4] -> [C2, C3, C4, C1]
+    rotateCurrentPalette() {
+      if (!this.currentQuad || this.currentQuad.length !== 4) return;
+      const [c1, c2, c3, c4] = this.currentQuad;
+      const rotated = [c2, c3, c4, c1];
+      this.applyPalette(rotated, rotated[0], true);
+      this.showThemeToast(rotated);
+      if (window.engine && typeof window.engine.playHaptic === 'function') {
+        window.engine.playHaptic(100, 0.05);
+      }
     }
 
     cycleTheme() {
@@ -3724,9 +3697,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(toast);
       }
 
-      const matchPreset = Object.values(PRESET_NAMED_THEMES).find(p => p.quad[0] === quad[0] && p.quad[1] === quad[1]);
-      const themeIdx = THEMES.indexOf(quad) >= 0 ? THEMES.indexOf(quad) + 1 : 'Palette';
-      const themeName = matchPreset ? matchPreset.name : `Aesthetic #${themeIdx}`;
+      const themeIdx = THEMES.indexOf(quad) >= 0 ? THEMES.indexOf(quad) + 1 : 'Custom';
+      const themeName = `Palette #${themeIdx}`;
 
       toast.innerHTML = `
         <span class="text-xs font-black text-white flex items-center gap-1.5">
@@ -3740,23 +3712,22 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
-      toast.classList.remove('opacity-0', 'scale-90');
-      toast.classList.add('opacity-100', 'scale-100');
-
-      if (this.toastTimeout) clearTimeout(this.toastTimeout);
-      this.toastTimeout = setTimeout(() => {
-        toast.classList.remove('opacity-100', 'scale-100');
-        toast.classList.add('opacity-0', 'scale-90');
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) scale(1)';
+      clearTimeout(this._toastTimer);
+      this._toastTimer = setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) scale(0.9)';
       }, 1600);
     }
 
     bindRandomizer() {
-      const btnRandom = document.getElementById('btn-random-colorhunt');
-      if (!btnRandom) return;
-      btnRandom.addEventListener('click', () => {
+      const randBtn = document.getElementById('btn-random-colorhunt');
+      if (!randBtn) return;
+      randBtn.addEventListener('click', () => {
+        engine.playHaptic(800, 0.03);
         const randQuad = THEMES[Math.floor(Math.random() * THEMES.length)] || THEMES[0];
         const randHex = randQuad[Math.floor(Math.random() * 4)];
-        engine.playHaptic(750, 0.025);
         this.applyPalette(randQuad, randHex, true);
         this.showThemeToast(randQuad);
       });
@@ -3775,7 +3746,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!toast) {
       toast = document.createElement('div');
       toast.id = 'juicebx-toast';
-      toast.style.cssText = 'position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);z-index:9999;padding:10px 18px;border-radius:20px;font-size:13px;font-weight:600;letter-spacing:0.02em;pointer-events:none;transition:opacity 0.25s,transform 0.25s;opacity:0;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);white-space:nowrap;max-width:80vw;overflow:hidden;text-overflow:ellipsis;';
+      toast.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-20px);z-index:9999;padding:10px 18px;border-radius:20px;font-size:13px;font-weight:600;letter-spacing:0.02em;pointer-events:none;transition:opacity 0.25s,transform 0.25s;opacity:0;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);white-space:nowrap;max-width:80vw;overflow:hidden;text-overflow:ellipsis;';
       document.body.appendChild(toast);
     }
     var colors = { info: 'rgba(10,10,20,0.92)', error: 'rgba(160,20,20,0.92)', success: 'rgba(10,110,55,0.92)' };

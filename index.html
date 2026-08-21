@@ -348,6 +348,11 @@
       position: relative; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
     html.light .toggle-switch { background-color: #cbd5e1; }
+    
+    .toggle-switch.active {
+      background: var(--accent, #ff4f00) !important;
+      box-shadow: 0 0 12px var(--accent-glow, rgba(255, 79, 0, 0.4)) !important;
+    }
     .toggle-switch.active { background-color: var(--accent); }
     .toggle-switch .toggle-knob {
       position: absolute; left: 3px; top: 3px; width: 22px; height: 22px;
@@ -677,7 +682,7 @@
         <div class="w-full max-w-md mx-auto flex flex-col">
         
         <!-- Top Bar: Massive Logo (Sticky) -->
-        <div class="sticky top-0 z-40 flex items-center justify-center mb-4 py-2.5 -mx-4 px-4" style="background: rgba(3, 3, 5, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,0.05); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.8);">
+        <div class="sticky top-0 z-40 flex items-center justify-center mb-4 py-2.5 -mx-4 px-4" style="background: var(--bg-panel); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border-card);">
           <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-14 sm:h-20 w-auto max-w-[220px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
         </div>
 
@@ -889,7 +894,7 @@
           <div class="flex-1 flex flex-col items-center justify-center relative w-full overflow-hidden my-1 z-10">
             
             <!-- UNIFIED SQUIRCLE STAGE FRAME (Large Hardware Stage) -->
-            <div id="deck-stage-window" class="w-[min(260px,68vw,32vh)] h-[min(260px,68vw,32vh)] sm:w-[280px] sm:h-[280px] rounded-[32px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border border-white/10 mx-auto transition-all cursor-pointer select-none active:scale-[0.985]" style="background: rgba(10, 10, 15, 0.95);" title="Tap to switch visualizer style">
+            <div id="deck-stage-window" class="w-[min(260px,68vw,32vh)] h-[min(260px,68vw,32vh)] sm:w-[280px] sm:h-[280px] rounded-[32px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border mx-auto transition-all cursor-pointer select-none active:scale-[0.985]" style="background: var(--bg-card); border-color: var(--border-card); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); box-shadow: var(--shadow-card);" title="Tap to switch visualizer style">
 
               <!-- 1. 💽 iOS Dynamic Luxe Holographic Vinyl Platter (DEFAULT) -->
               <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex flex-col items-center justify-center relative">

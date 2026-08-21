@@ -919,7 +919,7 @@ window.JuiceEngine = (() => {
       if (localStorage.getItem('juicebx_remember_session') !== 'false') {
         localStorage.setItem('juicebx_last_session', JSON.stringify({
           track: track,
-          index: index,
+          index: state.currentIndex,
           queue: state.queue.slice(0, 80)
         }));
       }
@@ -978,19 +978,7 @@ window.JuiceEngine = (() => {
 
 
             isResolvingTrack = false;
-
-            if (ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
-
-              ytPlayer.loadVideoById(matched.id);
-
-              setTimeout(() => { if (ytPlayer && typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo(); }, 150);
-
-            }
-
-            emit('engine:trackChanged', track);
-
-            emit('engine:stateChanged', state);
-
+            loadTrack(state.currentIndex, true);
             return;
 
           }
@@ -1028,19 +1016,7 @@ window.JuiceEngine = (() => {
           setCachedResolvedId(query, matched.videoId);
 
           isResolvingTrack = false;
-
-          if (ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
-
-            ytPlayer.loadVideoById(matched.videoId);
-
-            setTimeout(() => { if (ytPlayer && typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo(); }, 150);
-
-          }
-
-          emit('engine:trackChanged', track);
-
-          emit('engine:stateChanged', state);
-
+          loadTrack(state.currentIndex, true);
           return;
 
         }
@@ -1406,7 +1382,7 @@ window.JuiceEngine = (() => {
       if (localStorage.getItem('juicebx_remember_session') !== 'false') {
         localStorage.setItem('juicebx_last_session', JSON.stringify({
           track: track,
-          index: index,
+          index: state.currentIndex,
           queue: state.queue.slice(0, 80)
         }));
       }
