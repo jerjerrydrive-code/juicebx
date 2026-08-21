@@ -1,4 +1,4 @@
-const CACHE_NAME = 'juicebx-v3-r1-native';
+const CACHE_NAME = 'juicebx-v3.1-colorhunt-338';
 const ASSETS = [
   './',
   './index.html',
