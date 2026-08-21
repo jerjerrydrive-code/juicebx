@@ -2468,33 +2468,33 @@ document.addEventListener('DOMContentLoaded', () => {
       const isSaved = downloads.some(d => d.id === track.id || d.title === track.title);
       const isFav = engine.isFavorite(track.id);
       return `
-        <div class="track-item flex items-center p-2.5 rounded-[16px] mb-1.5 transition-all hover:bg-white/5 cursor-pointer ${isActive ? 'bg-white/10 shadow-sm border border-white/10' : ''}" data-idx="${i}">
-          <span class="text-[11px] font-semibold w-5 text-center mr-1.5 font-mono" style="color: var(--text-tertiary);">${i + 1}</span>
+        <div class="track-item flex items-center p-2.5 rounded-[18px] mb-2 transition-all cursor-pointer ${isActive ? 'bg-white/15 shadow-sm border border-white/25' : ''}" data-idx="${i}">
+          <span class="text-[11px] font-bold w-5 text-center mr-1.5 font-mono" style="color: var(--text-tertiary);">${i + 1}</span>
           <div class="w-[44px] h-[44px] rounded-[13px] overflow-hidden flex-shrink-0 relative shadow-sm" style="background: var(--bg-card-solid);">
             <img src="${track.thumb}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80'">
             ${isCurrentlyPlaying ? '<div class="absolute inset-0 bg-black/50 backdrop-blur-[2px] flex items-center justify-center gap-[2px]"><div class="w-0.5 h-2.5 bg-white rounded-full animate-[bounce_1s_infinite]"></div><div class="w-0.5 h-3.5 bg-white rounded-full animate-[bounce_1s_infinite_0.2s]"></div><div class="w-0.5 h-2 bg-white rounded-full animate-[bounce_1s_infinite_0.4s]"></div></div>' : ''}
           </div>
           <div class="flex-1 overflow-hidden ml-3 mr-2">
-            <div class="font-bold truncate text-[14px] leading-tight ${isActive ? 'text-white' : ''}" style="${isActive ? '' : 'color: var(--text-primary);'}">${track.title}</div>
+            <div class="font-bold truncate text-[14px] leading-tight" style="color: var(--text-primary);">${track.title}</div>
             <div class="flex items-center gap-1.5 mt-0.5">
-              <span class="font-medium text-[11px] truncate text-white/60">${track.artist}</span>
-              ${isSaved ? '<span class="text-[9px] bg-emerald-500/20 text-emerald-400 font-bold px-1.5 py-0.5 rounded-full">Saved</span>' : ''}
-              ${track.isLocal ? '<span class="text-[9px] bg-indigo-500/20 text-indigo-300 font-bold px-1.5 py-0.5 rounded-full">Local</span>' : ''}
+              <span class="font-medium text-[11px] truncate" style="color: var(--text-secondary);">${track.artist}</span>
+              ${isSaved ? '<span class="text-[9px] bg-emerald-500/20 text-emerald-500 font-bold px-1.5 py-0.5 rounded-full">Saved</span>' : ''}
+              ${track.isLocal ? '<span class="text-[9px] bg-indigo-500/20 text-indigo-400 font-bold px-1.5 py-0.5 rounded-full">Local</span>' : ''}
             </div>
           </div>
-          <div class="flex items-center gap-1 shrink-0">
-            <span class="text-[11px] font-medium mr-1 font-mono text-white/40">${track.duration || ''}</span>
-            <button class="btn-direct-like w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-pink-500" data-idx="${i}" title="Favorite">
+          <div class="flex items-center gap-1.5 shrink-0">
+            <span class="text-[11px] font-semibold mr-1 font-mono track-duration" style="color: var(--text-tertiary);">${track.duration || ''}</span>
+            <button class="btn-direct-like w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all ${isFav ? 'text-pink-500' : ''}" style="${isFav ? '' : 'color: var(--text-secondary);'}" data-idx="${i}" title="Favorite">
               <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'}"></i>
             </button>
-            <button class="btn-direct-add-pl w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-xs text-white/40 hover:text-white" data-idx="${i}" title="Add to Playlist">
+            <button class="btn-direct-add-pl w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-xs" style="color: var(--text-secondary);" data-idx="${i}" title="Add to Playlist">
               <i class="ph-bold ph-plus"></i>
             </button>
-            <button class="btn-direct-download w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-white" data-track-id="${track.id}" title="Save track">
-              <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-400' : 'ph-bold ph-download-simple'}"></i>
+            <button class="btn-direct-download w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all ${isSaved ? 'text-emerald-500' : ''}" style="${isSaved ? '' : 'color: var(--text-secondary);'}" data-track-id="${track.id}" title="${isSaved ? 'Downloaded' : 'Save Track'}">
+              <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-500' : 'ph-bold ph-download-simple'}"></i>
             </button>
-            <button class="btn-remove-queue w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-red-400" data-idx="${i}" title="Remove from queue">
-              <i class="ph-bold ph-x text-xs"></i>
+            <button class="btn-remove-queue w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-xs" style="color: var(--text-secondary);" data-idx="${i}" title="Remove from queue">
+              <i class="ph-bold ph-x"></i>
             </button>
           </div>
         </div>`;
