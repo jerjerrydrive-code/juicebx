@@ -44,29 +44,23 @@
   
   <style>
     :root {
-      --bg-app: #131419;
-      --bg-panel: #131419;
-      --bg-card: #131419;
-      --bg-card-solid: #131419;
-      --bg-input: #131419;
-      --bg-nav: rgba(19, 20, 25, 0.95);
-      --bg-mini: #131419;
-      --text-primary: #f1f5f9;
+      --bg-app: #030305;
+      --bg-panel: #030305;
+      --bg-card: rgba(22, 22, 28, 0.45);
+      --bg-card-solid: #0d0d12;
+      --bg-input: rgba(27, 27, 36, 0.5);
+      --bg-nav: rgba(10, 10, 14, 0.75);
+      --bg-mini: rgba(18, 18, 24, 0.85);
+      --text-primary: #ffffff;
       --text-secondary: #94a3b8;
       --text-tertiary: #64748b;
-      --border-card: transparent;
-      --border-input: transparent;
-      --accent: #ff4f00;
-      --accent-glow: rgba(255, 79, 0, 0.35);
-      --btn-active-bg: #131419;
-      --btn-active-text: #ff4f00;
-      
-      /* Pure Dark Neumorphism Shadows */
-      --neu-shadow-flat: 6px 6px 14px #0a0a0d, -6px -6px 14px #1c1e25;
-      --neu-shadow-inset: inset 6px 6px 14px #0a0a0d, inset -6px -6px 14px #1c1e25;
-      --neu-shadow-soft: 4px 4px 10px #0a0a0d, -4px -4px 10px #1c1e25;
-      
-      --shadow-card: var(--neu-shadow-flat);
+      --border-card: rgba(255, 255, 255, 0.06);
+      --border-input: rgba(255, 255, 255, 0.1);
+      --accent: #a855f7;
+      --accent-glow: rgba(168, 85, 247, 0.4);
+      --btn-active-bg: rgba(255, 255, 255, 0.95);
+      --btn-active-text: #000000;
+      --shadow-card: 0 24px 48px -12px rgba(0, 0, 0, 0.8);
       --rabbit-orange: #ff4f00;
     }
 
@@ -104,45 +98,42 @@
       filter: brightness(0);
     }
 
-    /* ═══ NEUMORPHIC COMPONENTS ═══ */
+    /* ═══ PREMIUM GLASSMORPHISM COMPONENTS ═══ */
     .glass-card {
       background: var(--bg-card);
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
       border-radius: 20px;
-      box-shadow: var(--neu-shadow-flat);
-      border: none;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-card);
     }
     
     .glass-card-solid {
       background: var(--bg-card-solid);
       border-radius: 20px;
-      box-shadow: var(--neu-shadow-flat);
-      border: none;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-card);
     }
 
     .glass-input {
       background: var(--bg-input);
       border-radius: 12px;
-      box-shadow: var(--neu-shadow-inset);
-      border: none;
+      border: 1px solid var(--border-input);
       color: var(--text-primary);
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+      transition: all 0.2s ease;
     }
     .glass-input:focus {
       outline: none;
-      box-shadow: var(--neu-shadow-inset), 0 0 0 2px var(--accent-glow);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent-glow), inset 0 2px 8px rgba(0,0,0,0.4);
     }
 
     .glass-nav {
       background: var(--bg-nav);
-      box-shadow: 0 -4px 16px rgba(163,177,198,0.3);
-      border-top: none;
-    }
-    
-    .neu-pressed {
-      box-shadow: var(--neu-shadow-inset) !important;
-    }
-    
-    .neu-flat {
-      box-shadow: var(--neu-shadow-flat) !important;
+      backdrop-filter: blur(40px);
+      -webkit-backdrop-filter: blur(40px);
+      border-top: 1px solid var(--border-card);
     }
 
     /* ═══ 3D VINYL TURNTABLE ═══ */
