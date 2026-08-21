@@ -105,11 +105,6 @@
       filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12)) !important;
     }
 
-    body.light-mode #m3-ambient-backdrop {
-      opacity: 0.35 !important;
-      display: block !important;
-    }
-
     body.light-mode #deck-stage-window {
       background: #0b0c10 !important;
       border: 1px solid rgba(0, 0, 0, 0.08) !important;
@@ -923,29 +918,6 @@
       #ambient-aura-glow { display: none !important; }
     }
 
-    /* ═══ MATERIAL 3 ORGANIC MORPHING BLOBS & REACTIVE BACKDROP ═══ */
-    @keyframes m3Morph1 {
-      0%, 100% { transform: translate(0px, 0px) rotate(0deg) scale(1); border-radius: 48% 52% 60% 40% / 50% 40% 60% 50%; }
-      33% { transform: translate(35px, 45px) rotate(120deg) scale(1.12); border-radius: 60% 40% 40% 60% / 40% 60% 50% 50%; }
-      66% { transform: translate(-25px, 25px) rotate(240deg) scale(0.96); border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%; }
-    }
-    @keyframes m3Morph2 {
-      0%, 100% { transform: translate(0px, 0px) rotate(0deg) scale(1); border-radius: 50% 50% 40% 60% / 40% 50% 50% 60%; }
-      50% { transform: translate(-45px, -35px) rotate(180deg) scale(1.18); border-radius: 35% 65% 60% 40% / 55% 45% 55% 45%; }
-    }
-    @keyframes m3Morph3 {
-      0%, 100% { transform: translate(0px, 0px) scale(1) rotate(0deg); border-radius: 55% 45% 65% 35% / 45% 55% 35% 65%; }
-      50% { transform: translate(30px, -40px) scale(1.22) rotate(90deg); border-radius: 40% 60% 45% 55% / 60% 40% 55% 45%; }
-    }
-    @keyframes m3Morph4 {
-      0%, 100% { transform: translate(0px, 0px) scale(1); }
-      50% { transform: translate(-30px, 30px) scale(1.15); }
-    }
-    .m3-blob-1 { animation: m3Morph1 16s ease-in-out infinite; }
-    .m3-blob-2 { animation: m3Morph2 20s ease-in-out infinite reverse; }
-    .m3-blob-3 { animation: m3Morph3 24s ease-in-out infinite; }
-    .m3-blob-4 { animation: m3Morph4 18s ease-in-out infinite reverse; }
-
     .pulse-glow-playing {
       box-shadow: 0 0 28px var(--accent-glow, rgba(255, 120, 40, 0.6)), 0 12px 32px rgba(0,0,0,0.6) !important;
     }
@@ -956,26 +928,6 @@
 
   <!-- MAIN APP CONTAINER (Flex Column to guarantee nav bar is always inside visible screen) -->
   <div id="app-frame" class="relative flex flex-col w-[100vw] h-[100dvh] max-w-[100vw] max-h-[100dvh] overflow-hidden" style="background: var(--bg-app);">
-
-    <!-- 5-Panel Horizontal Swipe Carousel (Fills remaining height perfectly) -->
-    
-    <!-- ═══ MATERIAL 3 REACTIVE FLUID MESH & ORGANIC SHAPES BACKDROP ═══ -->
-    <div id="m3-ambient-backdrop" class="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none">
-      <!-- Shape 1: Top-Left Organic Squircle Blob (Theme Color 1: Primary Accent) -->
-      <div id="m3-shape-1" class="m3-blob m3-blob-1 absolute -top-12 -left-12 w-96 h-96 rounded-[48%] blur-[70px] opacity-60 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-1, #a855f7) 0%, transparent 70%);"></div>
-      
-      <!-- Shape 2: Top-Right Fluid Pill Blob (Theme Color 2: Secondary Accent) -->
-      <div id="m3-shape-2" class="m3-blob m3-blob-2 absolute top-1/4 -right-16 w-88 h-88 rounded-[42%_58%_70%_30%/45%_45%_55%_55%] blur-[70px] opacity-55 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-2, #ff4f00) 0%, transparent 70%);"></div>
-
-      <!-- Shape 3: Center-Bottom Morphing Star/Sun Blob (Theme Color 3: Card Tint) -->
-      <div id="m3-shape-3" class="m3-blob m3-blob-3 absolute bottom-20 left-1/5 w-96 h-96 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] blur-[80px] opacity-50 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-3, #1f5c6b) 0%, transparent 75%);"></div>
-
-      <!-- Shape 4: Deep Ambient Base Atmosphere (Theme Color 4) -->
-      <div id="m3-shape-4" class="m3-blob m3-blob-4 absolute -bottom-16 -right-16 w-88 h-88 rounded-[50%] blur-[70px] opacity-45 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-4, #080911) 0%, transparent 70%);"></div>
-      
-      <!-- Soft translucent grain/ambient mesh -->
-      <div class="absolute inset-0 pointer-events-none bg-black/25 dark:bg-black/40"></div>
-    </div>
 
     <div class="flex-1 min-h-0 relative flex flex-row overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full" id="app-container">
 
