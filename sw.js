@@ -1,4 +1,4 @@
-const CACHE_NAME = 'juicebx-v2';
+const CACHE_NAME = 'juicebx-v3-r1-native';
 const ASSETS = [
   './',
   './index.html',
@@ -8,7 +8,7 @@ const ASSETS = [
   './manifest.json'
 ];
 
-// Install: pre-cache core assets
+// Install: pre-cache core assets & skip waiting
 self.addEventListener('install', (e) => {
   self.skipWaiting();
   e.waitUntil(
@@ -16,7 +16,7 @@ self.addEventListener('install', (e) => {
   );
 });
 
-// Activate: clean old caches
+// Activate: delete old cache versions and claim clients immediately
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) =>
@@ -25,18 +25,26 @@ self.addEventListener('activate', (e) => {
   );
 });
 
-// Fetch: network-first for API calls, cache-first for static assets
+// Fetch: Network-First strategy so updates are instant, with offline fallback
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   
-  // Always go to network for API calls and audio streams
+  // Always go direct to network for dynamic API calls & audio streams
   if (url.pathname.startsWith('/api/') || url.hostname !== location.hostname) {
     e.respondWith(fetch(e.request));
     return;
   }
-  
-  // Cache-first for static assets
+
+  // Network-First for app assets so latest deployed code loads immediately
   e.respondWith(
-    caches.match(e.request).then((cached) => cached || fetch(e.request))
+    fetch(e.request)
+      .then((networkRes) => {
+        if (networkRes && networkRes.status === 200) {
+          const resClone = networkRes.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(e.request, resClone));
+        }
+        return networkRes;
+      })
+      .catch(() => caches.match(e.request))
   );
 });
