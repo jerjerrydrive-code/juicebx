@@ -277,8 +277,7 @@ window.JuiceEngine = (() => {
           iv_load_policy: 3,
           showinfo: 0,
           playsinline: 1,
-          widget_referrer: window.location.href,
-          origin: window.location.origin
+          origin: (window.location.origin && window.location.origin.startsWith('http')) ? window.location.origin : 'https://juicebx.onrender.com'
         },
         events: {
           onReady: (event) => {
@@ -343,6 +342,13 @@ window.JuiceEngine = (() => {
     }
   }
 
+  function getApiUrl(path) {
+    const isAppAssets = typeof window !== 'undefined' && 
+      (window.location.protocol === 'file:' || (window.location.origin && window.location.origin.includes('appassets.androidplatform.net')));
+    const base = isAppAssets ? 'https://juicebx.onrender.com' : '';
+    return `${base}${path.startsWith('/') ? path : '/' + path}`;
+  }
+
   // ═══ RESOLVED ID PERSISTENT CACHE & DYNAMIC STREAM RESOLVER ═══
   const resolvedCache = (() => {
     try {
@@ -368,16 +374,54 @@ window.JuiceEngine = (() => {
   async function resolveAndPlayTrack(track) {
     if (isResolvingTrack) return;
     isResolvingTrack = true;
-    const query = `${track.title} ${track.artist} audio`.trim();
+    const query = `${track.title} ${track.artist}`.trim();
     console.log(`[JuiceEngine] Dynamically resolving stream for: "${query}"...`);
 
+    // 1. If it's a Juice WRLD unreleased track or direct audio
+    if ((track.artist && track.artist.toLowerCase().includes('juice wrld')) || 
+        (track.title && track.title.toLowerCase().includes('unreleased')) || 
+        (track.id && (String(track.id).startsWith('jwapi-') || String(track.id).startsWith('vault_')))) {
+      try {
+        const cleanTitle = track.title.replace(/\(.*\)/g, '').trim();
+        const jwRes = await fetch(`https://juicewrldapi.com/juicewrld/songs/?search=${encodeURIComponent(cleanTitle)}`);
+        if (jwRes.ok) {
+          const jwData = await jwRes.json();
+          if (jwData && jwData.results && jwData.results.length > 0) {
+            const hit = jwData.results.find(s => s.path && s.path.trim().length > 0 && !s.path.endsWith('/')) || jwData.results[0];
+            if (hit && hit.path) {
+              const directAudioUrl = `https://juicewrldapi.com/juicewrld/files/download/?path=${encodeURIComponent(hit.path)}`;
+              track.audioUrl = directAudioUrl;
+              track.isDirectAudio = true;
+              track.duration = hit.length || track.duration;
+              if (hit.synced_lyrics || hit.lyrics) track.rawLyrics = hit.synced_lyrics || hit.lyrics;
+              
+              isResolvingTrack = false;
+              if (ytPlayer && typeof ytPlayer.pauseVideo === 'function') ytPlayer.pauseVideo();
+              initLocalAudio();
+              localAudio.loop = false;
+              localAudio.src = directAudioUrl;
+              state.isLocalPlaying = true;
+              state.isPlaying = true;
+              localAudio.play().catch(e => console.warn("Direct audio play error:", e));
+              emit('engine:trackChanged', track);
+              emit('engine:stateChanged', state);
+              return;
+            }
+          }
+        }
+      } catch(jwErr) {
+        console.warn("[JuiceEngine] JuiceWRLD API lookup fallback:", jwErr);
+      }
+    }
+
+    // 2. Try Render backend search endpoint (works in APK, Web & LAN)
     try {
-      const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+      const res = await fetch(getApiUrl(`/api/search?q=${encodeURIComponent(query)}`));
       if (res.ok) {
         const results = await res.json();
         if (Array.isArray(results) && results.length > 0) {
-          const matched = results.find(r => r.id && r.id !== track.id) || results[0];
-          if (matched && matched.id) {
+          const matched = results.find(r => r.id && r.id.length === 11 && r.id !== track.id) || results[0];
+          if (matched && matched.id && matched.id.length === 11) {
             console.log(`[JuiceEngine] Resolved "${track.title}" -> ${matched.id}`);
             track.id = matched.id;
             if (matched.duration) track.duration = matched.duration;
@@ -399,6 +443,27 @@ window.JuiceEngine = (() => {
     } catch (err) {
       console.warn("[JuiceEngine] Dynamic resolution network failure:", err);
     }
+
+    // 3. Fallback: Try Invidious public instances
+    try {
+      const invRes = await fetch(`https://inv.nadeko.net/api/v1/search?q=${encodeURIComponent(query)}&type=video`);
+      if (invRes.ok) {
+        const items = await invRes.json();
+        if (Array.isArray(items) && items.length > 0 && items[0].videoId) {
+          const matched = items[0];
+          track.id = matched.videoId;
+          setCachedResolvedId(query, matched.videoId);
+          isResolvingTrack = false;
+          if (ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
+            ytPlayer.loadVideoById(matched.videoId);
+            setTimeout(() => { if (ytPlayer && typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo(); }, 150);
+          }
+          emit('engine:trackChanged', track);
+          emit('engine:stateChanged', state);
+          return;
+        }
+      }
+    } catch(invErr) {}
 
     isResolvingTrack = false;
     // Failed resolution - gracefully stop without looping
@@ -860,24 +925,45 @@ window.JuiceEngine = (() => {
     search: async (query) => {
       if (!query || !query.trim()) return [];
       try {
-        const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+        const res = await fetch(getApiUrl(`/api/search?q=${encodeURIComponent(query)}`));
         if (res.ok) {
           const results = await res.json();
           if (Array.isArray(results) && results.length > 0) return results;
         }
       } catch (e) {
-        console.warn("Backend search failed, falling back to local library.");
+        console.warn("Backend search failed, trying Invidious fallback...", e);
       }
-      // Fallback: Client-side search across the built-in library
+
+      try {
+        const invRes = await fetch(`https://inv.nadeko.net/api/v1/search?q=${encodeURIComponent(query)}&type=video`);
+        if (invRes.ok) {
+          const items = await invRes.json();
+          if (Array.isArray(items) && items.length > 0) {
+            return items.map(item => ({
+              id: item.videoId,
+              title: item.title,
+              artist: item.author || 'YouTube Music',
+              duration: Math.floor(item.lengthSeconds / 60) + ':' + String(item.lengthSeconds % 60).padStart(2, '0'),
+              seconds: item.lengthSeconds,
+              thumb: (item.videoThumbnails && item.videoThumbnails[0]?.url) || `https://i.ytimg.com/vi/${item.videoId}/hqdefault.jpg`
+            }));
+          }
+        }
+      } catch(invErr) {}
+
+      // Fallback: Client-side search across all loaded catalogs
       const q = query.toLowerCase().trim();
-      return DEFAULT_LIBRARY.filter(t => 
+      const allTracks = (typeof TOP_SHUFFLES_CATALOG !== 'undefined')
+        ? Object.values(TOP_SHUFFLES_CATALOG).flatMap(c => c.tracks || [])
+        : DEFAULT_LIBRARY;
+      return allTracks.filter(t => 
         (t.title && t.title.toLowerCase().includes(q)) || 
         (t.artist && t.artist.toLowerCase().includes(q))
       );
     },
     playJuiceRadio: async () => {
       try {
-        const res = await fetch('/api/juicewrld/radio');
+        const res = await fetch(getApiUrl('/api/juicewrld/radio'));
         if (res.ok) {
           const track = await res.json();
           if (track && track.title) {
@@ -895,7 +981,7 @@ window.JuiceEngine = (() => {
     searchJuiceVault: async (query) => {
       if (!query) return [];
       try {
-        const res = await fetch(`/api/juicewrld/search?q=${encodeURIComponent(query)}`);
+        const res = await fetch(getApiUrl(`/api/juicewrld/search?q=${encodeURIComponent(query)}`));
         if (res.ok) {
           const data = await res.json();
           return data?.results || [];
@@ -935,7 +1021,6 @@ window.JuiceEngine = (() => {
       try {
         const stored = localStorage.getItem('juicebx_favorites');
         if (stored) return JSON.parse(stored);
-        // Default initial favorites
         const defaults = [
           { id: "mzB1V935Gsw", title: "Lucid Dreams", artist: "Juice WRLD", duration: "3:51", seconds: 231, thumb: "https://i.ytimg.com/vi/mzB1V935Gsw/hqdefault.jpg" },
           { id: "iILFsYwZ_eY", title: "Robbery", artist: "Juice WRLD", duration: "4:00", seconds: 240, thumb: "https://i.ytimg.com/vi/iILFsYwZ_eY/hqdefault.jpg" },
@@ -970,7 +1055,7 @@ window.JuiceEngine = (() => {
     // ═══ CUSTOM PLAYLISTS ═══
     getPlaylists: () => {
       try {
-        const stored = localStorage.getItem('juicebx_playlists');
+        const stored = localStorage.getItem('juicebx_playlists');;
         if (stored) return JSON.parse(stored);
         const defaults = [
           {
