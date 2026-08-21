@@ -528,523 +528,282 @@ window.JuiceEngine = (() => {
   });
 
   function initYouTubePlayer() {
-
-    let host = document.getElementById('yt-player-host') || document.getElementById('yt-player-hidden');
-
+    let host = document.getElementById('yt-player-slot') || document.getElementById('yt-player-host') || document.getElementById('yt-player-hidden');
     if (!host) {
-
       host = document.createElement('div');
-
       host.id = 'yt-player-host';
-
       document.body.appendChild(host);
-
     }
-
-
 
     if (window.YT && window.YT.Player) {
-
       createPlayer(host.id);
-
     } else {
-
       window.onYouTubeIframeAPIReady = () => createPlayer(host.id);
-
       if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
-
         const tag = document.createElement('script');
-
         tag.src = 'https://www.youtube.com/iframe_api';
-
         document.head.appendChild(tag);
-
       }
-
     }
-
   }
 
-
-
-  function createPlayer(targetId = 'yt-player-host') {
-
+  function createPlayer(targetId = 'yt-player-slot') {
     try {
+      const playerVars = {
+        autoplay: 0,
+        controls: 0,
+        disablekb: 1,
+        enablejsapi: 1,
+        fs: 0,
+        modestbranding: 1,
+        rel: 0,
+        iv_load_policy: 3,
+        showinfo: 0,
+        playsinline: 1
+      };
+      if (window.location.origin && window.location.origin.startsWith('http')) {
+        playerVars.origin = window.location.origin;
+      }
 
       ytPlayer = new window.YT.Player(targetId, {
-
         height: '100%',
-
         width: '100%',
-
-        host: 'https://www.youtube.com',
-
-        playerVars: {
-
-          autoplay: 0,
-
-          controls: 0,
-
-          disablekb: 1,
-
-          enablejsapi: 1,
-
-          fs: 0,
-
-          modestbranding: 1,
-
-          rel: 0,
-
-          iv_load_policy: 3,
-
-          showinfo: 0,
-
-          playsinline: 1,
-
-          origin: (window.location.origin && window.location.origin.startsWith('http')) ? window.location.origin : 'https://juicebx.onrender.com'
-
-        },
-
+        host: 'https://www.youtube-nocookie.com',
+        playerVars: playerVars,
         events: {
-
           onReady: (event) => {
-
             state.isApiReady = true;
-
             ytPlayer.setVolume(state.volume);
-
             emit('engine:ready', state);
 
             if (pendingVideoId) {
-
               const vid = pendingVideoId;
-
               const shouldPlay = pendingAutoPlay;
-
               pendingVideoId = null;
-
               pendingAutoPlay = false;
 
               if (shouldPlay) {
-
                 try { ytPlayer.unMute(); } catch(e) {}
-
                 ytPlayer.loadVideoById(vid);
-
                 const tryPlayOnReady = (attempts) => {
-
                   if (!ytPlayer || attempts <= 0) return;
-
                   try {
-
                     const ps = ytPlayer.getPlayerState();
-
-                    if (ps === 1) return;
-
+                    if (ps === 1) return; // already playing
                     ytPlayer.playVideo();
-
                     if (ps !== 1) setTimeout(() => tryPlayOnReady(attempts - 1), 400);
-
                   } catch(e) { try { ytPlayer.playVideo(); } catch(ee) {} }
-
                 };
-
                 setTimeout(() => tryPlayOnReady(10), 500);
-
               } else {
-
                 ytPlayer.cueVideoById(vid);
-
               }
-
             }
-
           },
-
           onStateChange: (event) => {
-
             if (event.data === window.YT.PlayerState.PLAYING) {
-
               state.isPlaying = true;
-
               state.isLocalPlaying = false;
-
               if (typeof ytPlayer.getDuration === 'function') {
-
                 const d = ytPlayer.getDuration();
-
                 if (d > 0) state.duration = d;
-
               }
-
               startYTProgressTracker();
-
               emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
-
             } else if (event.data === window.YT.PlayerState.PAUSED) {
-
               state.isPlaying = false;
-
               stopProgressTracker();
-
             } else if (event.data === window.YT.PlayerState.ENDED) {
-
               state.isPlaying = false;
-
               stopProgressTracker();
-
-              const wasRealPlayback = (state.currentTime >= 3 && state.duration >= 10);
-
               if (state.repeat) {
-
                 api.seek(0);
-
                 api.togglePlay();
-
-              } else if (state.autoplay && wasRealPlayback) {
-
+              } else if (state.autoplay) {
                 api.next();
-
               }
-
             }
-
             emit('engine:stateChanged', state);
-
           },
-
           onError: (e) => {
-
             console.warn("YouTube Player Error code:", e.data, "on track:", state.queue[state.currentIndex]);
-
             const currentTrack = state.queue[state.currentIndex];
-
             if (!currentTrack) {
-
               state.isPlaying = false;
-
               stopProgressTracker();
-
               emit('engine:stateChanged', state);
-
               return;
-
             }
-
-
 
             // Error codes: 2=invalidParam, 5=html5Error, 100=notFound, 101/150=notEmbeddable
-            // Codes 100/101/150 after a resolution attempt = permanently unavailable, skip
-
-            const permanentlyUnavailable = (e.data === 100 || e.data === 101 || e.data === 150) && currentTrack._resolutionTried;
-
             if (!currentTrack._resolutionTried) {
-
               currentTrack._resolutionTried = true;
-
               resolveAndPlayTrack(currentTrack);
-
-            } else if (permanentlyUnavailable) {
-
-              // Skip to next without looping
-              state.isPlaying = false;
-              stopProgressTracker();
-              emit('engine:stateChanged', state);
-              if (state.autoplay) setTimeout(() => api.next(), 800);
-
             } else {
-
-              // Resolution was already tried and also threw an error - stop cleanly
-
+              // Auto-advance seamlessly without hanging
+              console.warn("Stream unavailable for track, skipping to next:", currentTrack.title);
               state.isPlaying = false;
-
               stopProgressTracker();
-
               emit('engine:stateChanged', state);
-
-              emit('engine:streamError', {
-
-                track: currentTrack,
-
-                message: `Stream unavailable for "${currentTrack.title}". Please try another track.`
-
-              });
-
+              if (state.autoplay) {
+                setTimeout(() => api.next(), 600);
+              }
             }
-
           }
-
         }
-
       });
-
     } catch (e) {
-
       console.error("YouTube Player init error:", e);
-
     }
-
   }
-
-
 
   function getApiUrl(path) {
-
-    const isAppAssets = typeof window !== 'undefined' && 
-
-      (window.location.protocol === 'file:' || (window.location.origin && window.location.origin.includes('appassets.androidplatform.net')));
-
-    const base = isAppAssets ? 'https://juicebx.onrender.com' : '';
-
+    const isLocalDevPort = typeof window !== 'undefined' && (window.location.port === '3000' || window.location.port === '5000');
+    const base = isLocalDevPort ? '' : 'https://juicebx.onrender.com';
     return `${base}${path.startsWith('/') ? path : '/' + path}`;
-
   }
 
-
-
-  // ΓòÉΓòÉΓòÉ RESOLVED ID PERSISTENT CACHE & DYNAMIC STREAM RESOLVER ΓòÉΓòÉΓòÉ
-
+  // ═══ RESOLVED ID PERSISTENT CACHE & DYNAMIC STREAM RESOLVER ═══
   const resolvedCache = (() => {
-
     try {
-
       return JSON.parse(localStorage.getItem('juicebx_resolved_cache') || '{}');
-
     } catch(e) {
-
       return {};
-
     }
-
   })();
 
-
-
   function getCachedResolvedId(key) {
-
     return resolvedCache[key.toLowerCase().trim()] || null;
-
   }
-
-
 
   function setCachedResolvedId(key, id) {
-
     resolvedCache[key.toLowerCase().trim()] = id;
-
     try {
-
       localStorage.setItem('juicebx_resolved_cache', JSON.stringify(resolvedCache));
-
     } catch(e) {}
-
   }
 
-
-
-  let isResolvingTrack = false;
-
-
+  const activeResolutions = new Set();
 
   async function resolveAndPlayTrack(track) {
+    if (!track || !track.title) return;
+    const trackKey = `${track.title}_${track.artist || ''}`.toLowerCase().trim();
+    if (activeResolutions.has(trackKey)) return;
+    activeResolutions.add(trackKey);
 
-    if (isResolvingTrack) return;
-
-    isResolvingTrack = true;
-
-    const query = `${track.title} ${track.artist}`.trim();
-
+    const query = `${track.title} ${track.artist || ''}`.trim();
     console.log(`[JuiceEngine] Dynamically resolving stream for: "${query}"...`);
 
-
-
     // 1. If it's a Juice WRLD unreleased track or direct audio
-
     if ((track.artist && track.artist.toLowerCase().includes('juice wrld')) || 
-
         (track.title && track.title.toLowerCase().includes('unreleased')) || 
-
         (track.id && (String(track.id).startsWith('jwapi-') || String(track.id).startsWith('vault_')))) {
-
       try {
-
         const cleanTitle = track.title.replace(/\(.*\)/g, '').trim();
-
         const jwCtrl = new AbortController();
-        setTimeout(() => jwCtrl.abort(), 8000);
+        setTimeout(() => jwCtrl.abort(), 6000);
         const jwRes = await fetch(`https://juicewrldapi.com/juicewrld/songs/?search=${encodeURIComponent(cleanTitle)}`, { signal: jwCtrl.signal });
-
         if (jwRes.ok) {
-
           const jwData = await jwRes.json();
-
           if (jwData && jwData.results && jwData.results.length > 0) {
-
             const hit = jwData.results.find(s => s.path && s.path.trim().length > 0 && !s.path.endsWith('/')) || jwData.results[0];
-
             if (hit && hit.path) {
-
               const directAudioUrl = `https://juicewrldapi.com/juicewrld/files/download/?path=${encodeURIComponent(hit.path)}`;
-
               track.audioUrl = directAudioUrl;
-
               track.isDirectAudio = true;
-
               track.duration = hit.length || track.duration;
-
               if (hit.synced_lyrics || hit.lyrics) track.rawLyrics = hit.synced_lyrics || hit.lyrics;
 
-              
-
-              isResolvingTrack = false;
-
+              activeResolutions.delete(trackKey);
               if (ytPlayer && typeof ytPlayer.pauseVideo === 'function') ytPlayer.pauseVideo();
-
               initLocalAudio();
-
               localAudio.loop = false;
-
               localAudio.src = directAudioUrl;
-
               state.isLocalPlaying = true;
-
               state.isPlaying = true;
-
               localAudio.play().catch(e => console.warn("Direct audio play error:", e));
-
               emit('engine:trackChanged', track);
-
-    // Persist last played session to localStorage if enabled
-    try {
-      if (localStorage.getItem('juicebx_remember_session') !== 'false') {
-        localStorage.setItem('juicebx_last_session', JSON.stringify({
-          track: track,
-          index: state.currentIndex,
-          queue: state.queue.slice(0, 80)
-        }));
-      }
-    } catch(e) {}
-
+              try {
+                if (localStorage.getItem('juicebx_remember_session') !== 'false') {
+                  localStorage.setItem('juicebx_last_session', JSON.stringify({
+                    track: track,
+                    index: state.currentIndex,
+                    queue: state.queue.slice(0, 80)
+                  }));
+                }
+              } catch(e) {}
               emit('engine:stateChanged', state);
-
               return;
-
             }
-
           }
-
         }
-
       } catch(jwErr) {
-
         console.warn("[JuiceEngine] JuiceWRLD API lookup fallback:", jwErr);
-
       }
-
     }
-
-
 
     // 2. Try Render backend search endpoint (works in APK, Web & LAN)
-
     try {
-
       const renderCtrl = new AbortController();
-      setTimeout(() => renderCtrl.abort(), 8000);
+      setTimeout(() => renderCtrl.abort(), 6000);
       const res = await fetch(getApiUrl(`/api/search?q=${encodeURIComponent(query)}`), { signal: renderCtrl.signal });
-
       if (res.ok) {
-
         const results = await res.json();
-
         if (Array.isArray(results) && results.length > 0) {
-
           const matched = results.find(r => r.id && r.id.length === 11 && r.id !== track.id) || results[0];
-
           if (matched && matched.id && matched.id.length === 11) {
-
             console.log(`[JuiceEngine] Resolved "${track.title}" -> ${matched.id}`);
-
             track.id = matched.id;
-
             if (matched.duration) track.duration = matched.duration;
-
             if (matched.seconds) track.seconds = matched.seconds;
-
             if (matched.thumb) track.thumb = matched.thumb;
-
             setCachedResolvedId(query, matched.id);
 
-
-
-            isResolvingTrack = false;
-            loadTrack(state.currentIndex, true);
+            activeResolutions.delete(trackKey);
+            const cur = state.queue[state.currentIndex];
+            if (cur && (cur.id === track.id || cur.title === track.title)) {
+              loadTrack(state.currentIndex, true);
+            }
             return;
-
           }
-
         }
-
       }
-
     } catch (err) {
-
       console.warn("[JuiceEngine] Dynamic resolution network failure:", err);
-
     }
 
-
-
     // 3. Fallback: Try Invidious public instances
-
     try {
-
       const invCtrl = new AbortController();
-      setTimeout(() => invCtrl.abort(), 8000);
+      setTimeout(() => invCtrl.abort(), 6000);
       const invRes = await fetch(`https://inv.nadeko.net/api/v1/search?q=${encodeURIComponent(query)}&type=video`, { signal: invCtrl.signal });
-
       if (invRes.ok) {
-
         const items = await invRes.json();
-
         if (Array.isArray(items) && items.length > 0 && items[0].videoId) {
-
           const matched = items[0];
-
           track.id = matched.videoId;
-
           setCachedResolvedId(query, matched.videoId);
 
-          isResolvingTrack = false;
-          loadTrack(state.currentIndex, true);
+          activeResolutions.delete(trackKey);
+          const cur = state.queue[state.currentIndex];
+          if (cur && (cur.id === track.id || cur.title === track.title)) {
+            loadTrack(state.currentIndex, true);
+          }
           return;
-
         }
-
       }
-
     } catch(invErr) {}
 
+    activeResolutions.delete(trackKey);
 
-
-    isResolvingTrack = false;
-
-    // Failed resolution - gracefully stop without looping
-
+    // Failed resolution - gracefully auto-advance if autoplay is enabled
     state.isPlaying = false;
-
     stopProgressTracker();
-
     emit('engine:stateChanged', state);
-
     emit('engine:streamError', {
-
       track,
-
       message: `Could not load stream for "${track.title}".`
-
     });
-
   }
 
 
@@ -1653,9 +1412,7 @@ window.JuiceEngine = (() => {
       // Async fetch online top hits to augment
 
       try {
-
-        const res = await fetch('/api/top');
-
+        const res = await fetch(getApiUrl('/api/top'));
         if (res.ok) {
 
           const onlineTracks = await res.json();
@@ -1690,20 +1447,14 @@ window.JuiceEngine = (() => {
 
     getDefaultLibrary: () => [...DEFAULT_LIBRARY],
 
-    setQueue: (newTracks, playFirst = false) => {
-
+    setQueue: (newTracks, playFirst = false, startIndex = 0) => {
       if (Array.isArray(newTracks) && newTracks.length > 0) {
-
         state.queue = newTracks;
-
-        state.currentIndex = 0;
-
-        loadTrack(0, playFirst);
-
+        const validIndex = Math.max(0, Math.min(startIndex, newTracks.length - 1));
+        state.currentIndex = validIndex;
+        loadTrack(validIndex, playFirst);
         emit('engine:queueUpdated', state.queue);
-
       }
-
     },
 
     playTrack: (index) => {

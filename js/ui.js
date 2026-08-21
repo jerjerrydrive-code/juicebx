@@ -330,33 +330,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (VINYL, CASSETTE, NEON) ═══
-  const VISUALIZER_STYLES = ['vinyl', 'cassette', 'neon'];
+  // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (8 iOS 28 & GOOGLE M3 STYLES) ═══
+  const VISUALIZER_STYLES = ['equalizer', 'cyberwave', 'orb', 'm3', 'blobs', 'hifi', 'vinyl', 'cassette'];
 
-  let currentCenterpieceStyle = localStorage.getItem('juicebx_center_style') || 'vinyl';
-  if (!VISUALIZER_STYLES.includes(currentCenterpieceStyle)) currentCenterpieceStyle = 'vinyl';
+  const VISUALIZER_NAMES = {
+    'equalizer': '🌈 M3 & iOS 28 Wave Equalizer',
+    'cyberwave': '⚡ Cyberwave 999 Neon',
+    'orb': '🔮 iOS 28 Siri Liquid Glass Orb',
+    'm3': '🎨 Google M3 Expressive Ribbons',
+    'blobs': '🫧 Spatial Fluid Glass Plasma',
+    'hifi': '⚡ 2028 Precision M3 Hi-Fi Spectrum',
+    'vinyl': '💽 Dynamic Luxe Holographic Vinyl',
+    'cassette': '📼 Vintage Type II Cassette Deck'
+  };
+
+  let currentCenterpieceStyle = localStorage.getItem('juicebx_center_style') || 'equalizer';
+  if (!VISUALIZER_STYLES.includes(currentCenterpieceStyle)) currentCenterpieceStyle = 'equalizer';
 
   const deckStageWindow = document.getElementById('deck-stage-window');
+  const deckDisplayEqualizer = document.getElementById('deck-display-equalizer');
+  const deckDisplayCyberwave = document.getElementById('deck-display-cyberwave');
+  const deckDisplayOrb = document.getElementById('deck-display-orb');
+  const deckDisplayM3 = document.getElementById('deck-display-m3');
+  const deckDisplayBlobs = document.getElementById('deck-display-blobs');
+  const deckDisplayHifi = document.getElementById('deck-display-hifi');
   const deckDisplayVinyl = document.getElementById('deck-display-vinyl');
   const deckDisplayCassette = document.getElementById('deck-display-cassette');
-  const deckDisplayNeon = document.getElementById('deck-display-neon');
 
-  // Legacy canvas refs kept for compatibility
-  const orbCanvas = null;
-  const orbCtx = null;
-  const m3Canvas = null;
-  const m3Ctx = null;
-  const blobsCanvas = null;
-  const blobsCtx = null;
-  const hifiCanvas = null;
-  const hifiCtx = null;
+  const equalizerCanvas = document.getElementById('deck-reactive-equalizer-canvas');
+  const equalizerCtx = equalizerCanvas ? equalizerCanvas.getContext('2d') : null;
+
+  const orbCanvas = document.getElementById('deck-reactive-orb-canvas');
+  const orbCtx = orbCanvas ? orbCanvas.getContext('2d') : null;
+
+  const m3Canvas = document.getElementById('deck-reactive-m3-canvas');
+  const m3Ctx = m3Canvas ? m3Canvas.getContext('2d') : null;
+
+  const blobsCanvas = document.getElementById('deck-reactive-blobs-canvas');
+  const blobsCtx = blobsCanvas ? blobsCanvas.getContext('2d') : null;
+
+  const hifiCanvas = document.getElementById('deck-reactive-hifi-canvas');
+  const hifiCtx = hifiCanvas ? hifiCanvas.getContext('2d') : null;
 
   let orbPhase = 0;
-  const orbDust = [];
+  const orbDust = Array.from({ length: 28 }, () => ({
+    angle: Math.random() * Math.PI * 2,
+    dist: 50 + Math.random() * 90,
+    speed: (0.005 + Math.random() * 0.015) * (Math.random() > 0.5 ? 1 : -1),
+    size: 1 + Math.random() * 2,
+    alpha: 0.2 + Math.random() * 0.6
+  }));
   let m3Phase = 0;
   let blobPhase = 0;
-  const spatialBlobs = [];
-  const hifiPeaks = [];
+  const spatialBlobs = [
+    { baseR: 44, color1: '#ff4f00', color2: '#ec4899' },
+    { baseR: 26, orbitR: 64, speed: 0.015, color1: '#8b5cf6', color2: '#06b6d4' },
+    { baseR: 20, orbitR: 85, speed: -0.012, color1: '#ec4899', color2: '#ff4f00' },
+    { baseR: 16, orbitR: 105, speed: 0.02, color1: '#06b6d4', color2: '#8b5cf6' }
+  ];
+  const hifiPeaks = new Array(36).fill(0);
   const hifiSparks = [];
 
   function setCenterpieceStyle(style) {
@@ -365,11 +397,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (deckStageWindow) deckStageWindow.setAttribute('data-visualizer-style', style);
 
     if (currentDeckMode === 'vinyl') {
+      if (deckDisplayEqualizer) deckDisplayEqualizer.classList.toggle('hidden', style !== 'equalizer');
+      if (deckDisplayCyberwave) deckDisplayCyberwave.classList.toggle('hidden', style !== 'cyberwave');
+      if (deckDisplayOrb) deckDisplayOrb.classList.toggle('hidden', style !== 'orb');
+      if (deckDisplayM3) deckDisplayM3.classList.toggle('hidden', style !== 'm3');
+      if (deckDisplayBlobs) deckDisplayBlobs.classList.toggle('hidden', style !== 'blobs');
+      if (deckDisplayHifi) deckDisplayHifi.classList.toggle('hidden', style !== 'hifi');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.toggle('hidden', style !== 'vinyl');
       if (deckDisplayCassette) deckDisplayCassette.classList.toggle('hidden', style !== 'cassette');
-      if (deckDisplayNeon) deckDisplayNeon.classList.toggle('hidden', style !== 'neon');
     }
   }
+  window.setCenterpieceStyle = setCenterpieceStyle;
 
   function morphToNextVisualizer() {
     if (currentDeckMode !== 'vinyl') return;
@@ -379,6 +417,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     engine.playHaptic(650, 0.02);
     setCenterpieceStyle(nextStyle);
+    const name = VISUALIZER_NAMES[nextStyle] || nextStyle;
+    if (typeof showToast === 'function') {
+      showToast(name, 'info');
+    }
   }
 
   if (deckStageWindow) {
@@ -414,38 +456,37 @@ document.addEventListener('DOMContentLoaded', () => {
       if (els.deckDisplayVideo) {
         els.deckDisplayVideo.style.opacity = '0';
         els.deckDisplayVideo.style.pointerEvents = 'none';
-        els.deckDisplayVideo.style.position = 'absolute';
-        els.deckDisplayVideo.style.zIndex = '-1';
-        els.deckDisplayVideo.classList.add('hidden');
+        els.deckDisplayVideo.style.zIndex = '0';
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
     } else if (mode === 'video') {
-      if (deckDisplayVinyl) deckDisplayVinyl.classList.add('hidden');
-      if (deckDisplayCassette) deckDisplayCassette.classList.add('hidden');
-      if (deckDisplayNeon) deckDisplayNeon.classList.add('hidden');
+      [deckDisplayEqualizer, deckDisplayCyberwave, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl, deckDisplayCassette].forEach(el => {
+        if (el) el.classList.add('hidden');
+      });
       if (els.deckDisplayVideo) {
-        els.deckDisplayVideo.classList.remove('hidden');
         els.deckDisplayVideo.style.opacity = '1';
         els.deckDisplayVideo.style.pointerEvents = 'auto';
-        els.deckDisplayVideo.style.position = 'relative';
-        els.deckDisplayVideo.style.zIndex = '10';
+        els.deckDisplayVideo.style.zIndex = '20';
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
+      // Ensure video is actively playing if engine state is playing
+      if (state.isPlaying && window.engine && typeof window.engine.play === 'function') {
+        try { window.engine.play(); } catch(e) {}
+      }
     } else if (mode === 'lyrics') {
-      if (deckDisplayVinyl) deckDisplayVinyl.classList.add('hidden');
-      if (deckDisplayCassette) deckDisplayCassette.classList.add('hidden');
-      if (deckDisplayNeon) deckDisplayNeon.classList.add('hidden');
+      [deckDisplayEqualizer, deckDisplayCyberwave, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl, deckDisplayCassette].forEach(el => {
+        if (el) el.classList.add('hidden');
+      });
       if (els.deckDisplayVideo) {
         els.deckDisplayVideo.style.opacity = '0';
         els.deckDisplayVideo.style.pointerEvents = 'none';
-        els.deckDisplayVideo.style.position = 'absolute';
-        els.deckDisplayVideo.style.zIndex = '-1';
-        els.deckDisplayVideo.classList.add('hidden');
+        els.deckDisplayVideo.style.zIndex = '0';
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.remove('hidden');
       if (track) loadTrackLyrics(track.title, track.artist);
     }
   }
+  window.setDeckMode = setDeckMode;
 
   els.deckModePills.forEach(pill => {
     pill.addEventListener('click', () => {
@@ -454,7 +495,152 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ═══ 1. 🍏 iOS 28 SIRI DYNAMIC LIQUID GLASS ORB RENDERER ═══
+  // ═══ 1. 🌈 MATERIAL 3 MEETS IOS 28 DUAL-WAVE EQUALIZER (Exact 1000260681.jpg) ═══
+  const eqBarsCount = 42;
+  const eqPeaks = new Array(eqBarsCount).fill(0);
+  const eqPeakVels = new Array(eqBarsCount).fill(0);
+  let eqWavePhase = 0;
+  const eqEmbers = Array.from({ length: 42 }, () => ({
+    x: Math.random(),
+    y: Math.random() * 0.58,
+    size: 0.8 + Math.random() * 1.6,
+    alpha: 0.2 + Math.random() * 0.8,
+    speedY: 0.0006 + Math.random() * 0.0016,
+    speedX: (Math.random() - 0.5) * 0.0008,
+    color: ['#ff5722', '#ff9800', '#e91e63', '#9c27b0', '#7c4dff', '#ffffff'][Math.floor(Math.random() * 6)]
+  }));
+
+  function drawM3iOS28Equalizer(ctx, w, h, levels, isPlaying) {
+    ctx.clearRect(0, 0, w, h);
+
+    // Deep Obsidian Atmosphere
+    ctx.fillStyle = '#0a0c16';
+    ctx.fillRect(0, 0, w, h);
+
+    eqWavePhase += isPlaying ? 0.035 + levels.energy * 0.04 : 0.012;
+
+    // 1. Drifting Twinkling Starry Embers in Sky
+    eqEmbers.forEach(em => {
+      em.y -= em.speedY * (isPlaying ? 1 + levels.energy : 0.6);
+      em.x += em.speedX;
+      if (em.y < 0.02) {
+        em.y = 0.58;
+        em.x = Math.random();
+      }
+      if (em.x < 0) em.x = 1;
+      if (em.x > 1) em.x = 0;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(em.x * w, em.y * h, em.size * (isPlaying ? 1 + levels.treble * 0.5 : 1), 0, Math.PI * 2);
+      ctx.fillStyle = em.color;
+      ctx.globalAlpha = em.alpha * (isPlaying ? 0.6 + levels.treble * 0.4 : 0.45);
+      ctx.shadowBlur = 6;
+      ctx.shadowColor = em.color;
+      ctx.fill();
+      ctx.restore();
+    });
+
+    // 2. Dual-Wave Harmonic Spectrum Bars
+    const totalBars = eqBarsCount;
+    const paddingX = w * 0.06;
+    const availableW = w - paddingX * 2;
+    const barSpacing = availableW / totalBars;
+    const barWidth = Math.max(2.5, barSpacing - 2.0);
+    const baseY = h * 0.72;
+    const maxHeight = h * 0.45;
+
+    for (let i = 0; i < totalBars; i++) {
+      const x = paddingX + i * barSpacing;
+      const t = i / (totalBars - 1);
+
+      // Dual-Wave profile: First hill around t=0.22 (Bass), Second hill around t=0.72 (Mids/Treble)
+      const hill1 = Math.exp(-Math.pow((t - 0.22) / 0.16, 2));
+      const hill2 = Math.exp(-Math.pow((t - 0.72) / 0.20, 2));
+      
+      const wave1 = Math.sin(t * Math.PI * 4.5 + eqWavePhase * 1.5) * 0.25;
+      const wave2 = Math.cos(t * Math.PI * 2.5 - eqWavePhase * 2.0) * 0.20;
+
+      let dynHeight = 6;
+      if (isPlaying) {
+        const bassImpact = levels.bass * 1.3 * hill1;
+        const trebleImpact = (levels.mid * 0.8 + levels.treble * 1.0) * hill2;
+        const energyWave = (wave1 + wave2) * levels.energy;
+        const baseShape = (hill1 * 0.65 + hill2 * 0.95 + 0.15) * maxHeight;
+        dynHeight = Math.max(6, baseShape * (0.4 + bassImpact + trebleImpact + energyWave));
+      } else {
+        const idleWave = Math.sin(t * Math.PI * 3 + Date.now() * 0.002) * 0.3;
+        dynHeight = Math.max(6, (hill1 * 0.5 + hill2 * 0.8 + 0.15) * maxHeight * (0.35 + idleWave * 0.15));
+      }
+      dynHeight = Math.min(maxHeight, dynHeight);
+
+      // Peak Physics
+      if (dynHeight >= eqPeaks[i]) {
+        eqPeaks[i] = dynHeight;
+        eqPeakVels[i] = 0;
+      } else {
+        eqPeakVels[i] += 0.3;
+        eqPeaks[i] = Math.max(dynHeight, eqPeaks[i] - eqPeakVels[i]);
+      }
+
+      // 3. Smooth Multi-Stop Chromatic Gradient (Red/Orange -> Pink/Magenta -> Violet/Purple)
+      const barGrad = ctx.createLinearGradient(x, baseY, x, baseY - dynHeight);
+      if (t < 0.36) {
+        barGrad.addColorStop(0, '#ff3b30');
+        barGrad.addColorStop(0.5, '#ff6700');
+        barGrad.addColorStop(1, '#ff9500');
+      } else if (t < 0.68) {
+        barGrad.addColorStop(0, '#d81b60');
+        barGrad.addColorStop(0.5, '#e91e63');
+        barGrad.addColorStop(1, '#ff4081');
+      } else {
+        barGrad.addColorStop(0, '#673ab7');
+        barGrad.addColorStop(0.5, '#8e24aa');
+        barGrad.addColorStop(1, '#ba68c8');
+      }
+
+      // Draw Rounded Equalizer Bar
+      ctx.save();
+      ctx.fillStyle = barGrad;
+      ctx.shadowBlur = isPlaying ? 10 : 3;
+      ctx.shadowColor = t < 0.4 ? '#ff5722' : (t < 0.7 ? '#e91e63' : '#8e24aa');
+      
+      const r = Math.min(barWidth / 2, 2.0);
+      const topY = baseY - dynHeight;
+      ctx.beginPath();
+      ctx.moveTo(x + r, topY);
+      ctx.lineTo(x + barWidth - r, topY);
+      ctx.quadraticCurveTo(x + barWidth, topY, x + barWidth, topY + r);
+      ctx.lineTo(x + barWidth, baseY);
+      ctx.lineTo(x, baseY);
+      ctx.lineTo(x, topY + r);
+      ctx.quadraticCurveTo(x, topY, x + r, topY);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+
+      // 4. Floating White Peak Cap / Dot
+      const peakY = baseY - eqPeaks[i] - 4.5;
+      ctx.save();
+      ctx.fillStyle = '#ffffff';
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = '#ffffff';
+      ctx.fillRect(x, peakY, barWidth, 2.5);
+      ctx.restore();
+    }
+
+    // Subtle Baseline Floor Glow
+    ctx.save();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(paddingX, baseY + 1);
+    ctx.lineTo(w - paddingX, baseY + 1);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  // ═══ 2. 🍏 iOS 28 SIRI DYNAMIC LIQUID GLASS ORB RENDERER ═══
   function drawFluidOrb(ctx, w, h, levels, isPlaying) {
     ctx.clearRect(0, 0, w, h);
 
@@ -550,6 +736,120 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.fillStyle = 'rgba(255, 255, 255, 0.35)';
     ctx.fill();
     ctx.restore();
+  }
+
+  // ═══ 3. 🌈 NEON SPECTRUM EQUALIZER (Exact Mockup Match: 1000260681.jpg) ═══
+  const spectrumBarsCount = 36;
+  const barPeaks = new Array(spectrumBarsCount).fill(0);
+  const barPeakVels = new Array(spectrumBarsCount).fill(0);
+  const starryEmbers = Array.from({ length: 35 }, () => ({
+    x: Math.random(),
+    y: Math.random() * 0.65,
+    size: 0.8 + Math.random() * 1.8,
+    alpha: 0.2 + Math.random() * 0.8,
+    speedY: 0.0008 + Math.random() * 0.002,
+    speedX: (Math.random() - 0.5) * 0.001,
+    color: ['#ff4500', '#ec4899', '#a855f7', '#ffffff', '#fbbf24'][Math.floor(Math.random() * 5)]
+  }));
+
+  function drawNeonSpectrumVisualizer(ctx, w, h, levels, isPlaying) {
+    ctx.clearRect(0, 0, w, h);
+
+    // Deep Obsidian Backdrop
+    ctx.fillStyle = '#07080f';
+    ctx.fillRect(0, 0, w, h);
+
+    // Floating Ember Star Particles in Sky
+    starryEmbers.forEach(em => {
+      em.y -= em.speedY * (isPlaying ? 1 + levels.energy : 0.6);
+      em.x += em.speedX;
+      if (em.y < 0) {
+        em.y = 0.65;
+        em.x = Math.random();
+      }
+      if (em.x < 0) em.x = 1;
+      if (em.x > 1) em.x = 0;
+
+      ctx.beginPath();
+      ctx.arc(em.x * w, em.y * h, em.size, 0, Math.PI * 2);
+      ctx.fillStyle = em.color;
+      ctx.globalAlpha = em.alpha * (isPlaying ? 0.6 + levels.treble * 0.4 : 0.4);
+      ctx.shadowBlur = 6;
+      ctx.shadowColor = em.color;
+      ctx.fill();
+    });
+    ctx.globalAlpha = 1.0;
+
+    // Spectrum Equalizer Bars
+    const totalBars = spectrumBarsCount;
+    const barWidth = (w - (totalBars + 1) * 2.5) / totalBars;
+    const baseY = h * 0.84;
+    const maxHeight = h * 0.58;
+
+    for (let i = 0; i < totalBars; i++) {
+      const x = 2.5 + i * (barWidth + 2.5);
+      
+      const normIdx = i / totalBars;
+      const freqWeight = Math.sin(normIdx * Math.PI) * (1 - normIdx * 0.25);
+      const wave = Math.sin(normIdx * 6 + Date.now() * 0.005) * 0.2;
+      
+      let targetHeight = 8;
+      if (isPlaying) {
+        const bandEnergy = normIdx < 0.33 ? levels.bass : (normIdx < 0.66 ? levels.mid : levels.treble);
+        targetHeight = 10 + (bandEnergy * freqWeight + wave + Math.random() * 0.12) * maxHeight;
+      } else {
+        targetHeight = 8 + Math.sin(normIdx * 4 + Date.now() * 0.002) * 5;
+      }
+      targetHeight = Math.max(6, Math.min(maxHeight, targetHeight));
+
+      if (targetHeight >= barPeaks[i]) {
+        barPeaks[i] = targetHeight;
+        barPeakVels[i] = 0;
+      } else {
+        barPeakVels[i] += 0.25;
+        barPeaks[i] = Math.max(6, barPeaks[i] - barPeakVels[i]);
+      }
+
+      const barGrad = ctx.createLinearGradient(x, baseY, x, baseY - targetHeight);
+      const colorRatio = i / totalBars;
+      if (colorRatio < 0.35) {
+        barGrad.addColorStop(0, '#ff3b30');
+        barGrad.addColorStop(0.6, '#ff6b00');
+        barGrad.addColorStop(1, '#ff9500');
+      } else if (colorRatio < 0.7) {
+        barGrad.addColorStop(0, '#e11d48');
+        barGrad.addColorStop(0.5, '#ec4899');
+        barGrad.addColorStop(1, '#f43f5e');
+      } else {
+        barGrad.addColorStop(0, '#8b5cf6');
+        barGrad.addColorStop(0.6, '#a855f7');
+        barGrad.addColorStop(1, '#c084fc');
+      }
+
+      ctx.fillStyle = barGrad;
+      ctx.shadowBlur = isPlaying ? 12 : 4;
+      ctx.shadowColor = colorRatio < 0.5 ? '#ff4500' : '#ec4899';
+      
+      ctx.beginPath();
+      const radius = Math.min(barWidth / 2, 2.5);
+      const topY = baseY - targetHeight;
+      ctx.moveTo(x + radius, topY);
+      ctx.lineTo(x + barWidth - radius, topY);
+      ctx.quadraticCurveTo(x + barWidth, topY, x + barWidth, topY + radius);
+      ctx.lineTo(x + barWidth, baseY);
+      ctx.lineTo(x, baseY);
+      ctx.lineTo(x, topY + radius);
+      ctx.quadraticCurveTo(x, topY, x + radius, topY);
+      ctx.closePath();
+      ctx.fill();
+
+      // Floating white peak cap dot
+      const peakY = baseY - barPeaks[i] - 3;
+      ctx.fillStyle = '#ffffff';
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = '#ffffff';
+      ctx.fillRect(x, peakY, barWidth, 2);
+    }
   }
 
   // ═══ 2. 🎨 GOOGLE MATERIAL 3 EXPRESSIVE DYNAMIC FLUID RIBBONS ═══
@@ -790,27 +1090,75 @@ document.addEventListener('DOMContentLoaded', () => {
     const isPlaying = state.isPlaying;
 
     if (currentDeckMode === 'vinyl') {
-      // 1. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb
-      if (currentCenterpieceStyle === 'orb' && orbCtx && orbCanvas) {
-        drawFluidOrb(orbCtx, orbCanvas.width, orbCanvas.height, levels, isPlaying);
+      // 1. 🌈 M3 & iOS 28 Wave Equalizer (Exact Mockup: 1000260681.jpg - DEFAULT)
+      if (currentCenterpieceStyle === 'equalizer' && equalizerCanvas) {
+        if (equalizerCanvas.width !== equalizerCanvas.clientWidth && equalizerCanvas.clientWidth > 0) {
+          equalizerCanvas.width = equalizerCanvas.clientWidth;
+          equalizerCanvas.height = equalizerCanvas.clientHeight;
+        }
+        const eqCtx = equalizerCanvas.getContext('2d');
+        if (eqCtx) drawM3iOS28Equalizer(eqCtx, equalizerCanvas.width, equalizerCanvas.height, levels, isPlaying);
       }
 
-      // 2. 🎨 Google Material 3 Expressive Dynamic Fluid Ribbons
-      if (currentCenterpieceStyle === 'm3' && m3Ctx && m3Canvas) {
-        drawM3Expressive(m3Ctx, m3Canvas.width, m3Canvas.height, levels, isPlaying);
+      // 2. ⚡ Cyberwave 999 6-Bar Spectrum (Exact Mockup Match)
+      if (currentCenterpieceStyle === 'cyberwave') {
+        const bars = document.querySelectorAll('#cyberwave-bars-container .cyberwave-bar');
+        if (bars.length === 6) {
+          const heights = [
+            isPlaying ? Math.min(100, Math.max(15, 25 + levels.bass * 70 + Math.sin(Date.now() * 0.008) * 15)) : 38,
+            isPlaying ? Math.min(100, Math.max(20, 35 + levels.bass * 65 + Math.cos(Date.now() * 0.007) * 20)) : 65,
+            isPlaying ? Math.min(100, Math.max(25, 45 + levels.energy * 60 + Math.sin(Date.now() * 0.01) * 25)) : 92,
+            isPlaying ? Math.min(100, Math.max(15, 30 + levels.mid * 70 + Math.cos(Date.now() * 0.009) * 20)) : 48,
+            isPlaying ? Math.min(100, Math.max(20, 40 + levels.treble * 65 + Math.sin(Date.now() * 0.011) * 20)) : 75,
+            isPlaying ? Math.min(100, Math.max(15, 20 + levels.treble * 80 + Math.cos(Date.now() * 0.012) * 15)) : 32
+          ];
+          bars.forEach((bar, bIdx) => {
+            bar.style.height = `${heights[bIdx]}%`;
+          });
+        }
       }
 
-      // 3. 🫧 Spatial Fluid Glass Metaballs & Audio Plasma
-      if (currentCenterpieceStyle === 'blobs' && blobsCtx && blobsCanvas) {
-        drawSpatialBlobs(blobsCtx, blobsCanvas.width, blobsCanvas.height, levels, isPlaying);
+      // 2. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb
+      if (currentCenterpieceStyle === 'orb' && orbCanvas) {
+        if (orbCanvas.width !== orbCanvas.clientWidth && orbCanvas.clientWidth > 0) {
+          orbCanvas.width = orbCanvas.clientWidth;
+          orbCanvas.height = orbCanvas.clientHeight;
+        }
+        const oCtx = orbCanvas.getContext('2d');
+        if (oCtx) drawFluidOrb(oCtx, orbCanvas.width, orbCanvas.height, levels, isPlaying);
       }
 
-      // 4. ⚡ 2028 Precision M3 Hi-Fi Fluid Spectrum
-      if (currentCenterpieceStyle === 'hifi' && hifiCtx && hifiCanvas) {
-        drawM3HiFiSpectrum(hifiCtx, hifiCanvas.width, hifiCanvas.height, levels, isPlaying);
+      // 3. 🎨 Google Material 3 Expressive Dynamic Fluid Ribbons
+      if (currentCenterpieceStyle === 'm3' && m3Canvas) {
+        if (m3Canvas.width !== m3Canvas.clientWidth && m3Canvas.clientWidth > 0) {
+          m3Canvas.width = m3Canvas.clientWidth;
+          m3Canvas.height = m3Canvas.clientHeight;
+        }
+        const mCtx = m3Canvas.getContext('2d');
+        if (mCtx) drawM3Expressive(mCtx, m3Canvas.width, m3Canvas.height, levels, isPlaying);
       }
 
-      // 1. 💽 iOS Dynamic Luxe Holographic Vinyl Platter
+      // 4. 🫧 Spatial Fluid Glass Metaballs & Audio Plasma
+      if (currentCenterpieceStyle === 'blobs' && blobsCanvas) {
+        if (blobsCanvas.width !== blobsCanvas.clientWidth && blobsCanvas.clientWidth > 0) {
+          blobsCanvas.width = blobsCanvas.clientWidth;
+          blobsCanvas.height = blobsCanvas.clientHeight;
+        }
+        const bCtx = blobsCanvas.getContext('2d');
+        if (bCtx) drawSpatialBlobs(bCtx, blobsCanvas.width, blobsCanvas.height, levels, isPlaying);
+      }
+
+      // 5. ⚡ 2028 Precision M3 Hi-Fi Fluid Spectrum
+      if (currentCenterpieceStyle === 'hifi' && hifiCanvas) {
+        if (hifiCanvas.width !== hifiCanvas.clientWidth && hifiCanvas.clientWidth > 0) {
+          hifiCanvas.width = hifiCanvas.clientWidth;
+          hifiCanvas.height = hifiCanvas.clientHeight;
+        }
+        const hCtx = hifiCanvas.getContext('2d');
+        if (hCtx) drawM3HiFiSpectrum(hCtx, hifiCanvas.width, hifiCanvas.height, levels, isPlaying);
+      }
+
+      // 6. 💽 Dynamic Luxe Holographic Vinyl Platter
       if (currentCenterpieceStyle === 'vinyl' && els.deckVinyl) {
         const wrapper = document.getElementById('deck-vinyl-wrapper');
         if (isPlaying) {
@@ -926,8 +1274,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     els.searchRecentChips.innerHTML = list.map(item => `
-      <button class="recent-chip px-3.5 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 active:scale-95 transition-all glass-input" style="color: var(--text-primary);">
-        <i class="ph-bold ph-magnifying-glass text-[11px]" style="color: var(--text-tertiary);"></i>
+      <button class="recent-chip px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 active:scale-95 transition-all bg-white/5 border border-white/10 text-white/90 hover:text-white hover:bg-white/10 backdrop-blur-md shadow-sm">
+        <i class="ph-bold ph-magnifying-glass text-[11px] text-white/50"></i>
         <span>${item}</span>
       </button>
     `).join('');
@@ -991,7 +1339,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!els.searchResultsList) return;
 
     if (!tracks || tracks.length === 0) {
-      els.searchResultsList.innerHTML = `<div class="text-center py-8 text-xs font-bold" style="color: var(--text-tertiary);">No matching standalone songs found for "${query}".</div>`;
+      els.searchResultsList.innerHTML = `<div class="text-center py-8 text-xs font-bold text-white/50">No matching standalone songs found for "${query}".</div>`;
       if (els.searchResultsCount) els.searchResultsCount.innerText = '0 results';
       return;
     }
@@ -999,40 +1347,70 @@ document.addEventListener('DOMContentLoaded', () => {
     if (els.searchResultsCount) els.searchResultsCount.innerText = `${tracks.length} songs`;
     const downloads = engine.getDownloads();
 
-    els.searchResultsList.innerHTML = tracks.map((t, i) => {
+    const artistRadioHero = `
+      <div class="mb-3 p-3 rounded-[18px] bg-gradient-to-r from-purple-900/60 via-indigo-950/70 to-black/80 border border-purple-400/25 backdrop-blur-md flex items-center justify-between shadow-lg cursor-pointer active:scale-[0.98] transition-all" id="btn-search-artist-radio">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-500 to-indigo-600 flex items-center justify-center text-white shadow-md shrink-0">
+            <i class="ph-fill ph-broadcast text-lg animate-pulse"></i>
+          </div>
+          <div class="overflow-hidden">
+            <div class="font-bold text-sm text-white flex items-center gap-1.5 truncate">
+              <span>"${query}" Radio</span>
+              <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-purple-500/30 text-purple-200 border border-purple-400/30">SHUFFLE</span>
+            </div>
+            <div class="text-[11px] font-medium text-white/60 truncate">Artist & similar tracks mix</div>
+          </div>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-white/10 border border-white/15 backdrop-blur-md flex items-center justify-center text-white shadow-sm shrink-0">
+          <i class="ph-fill ph-shuffle text-sm text-purple-300"></i>
+        </div>
+      </div>
+    `;
+
+    const trackItemsHtml = tracks.map((t, i) => {
       const isSaved = downloads.some(d => d.id === t.id);
       const isFav = engine.isFavorite(t.id);
       return `
-        <div class="search-result-item flex items-center justify-between p-2.5 rounded-2xl mb-2 glass-card cursor-pointer active:scale-[0.99] transition-all" data-search-idx="${i}">
+        <div class="search-result-item flex items-center justify-between p-3 rounded-[18px] mb-2.5 bg-white/5 border border-white/10 backdrop-blur-md cursor-pointer hover:bg-white/10 active:scale-[0.99] transition-all shadow-sm" data-search-idx="${i}">
           <div class="flex items-center space-x-3 overflow-hidden flex-1 mr-2">
             <div class="w-[46px] h-[46px] rounded-[14px] overflow-hidden flex-shrink-0 relative shadow-sm" style="background: var(--bg-card-solid);">
               <img src="${t.thumb}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80'">
             </div>
             <div class="overflow-hidden flex-1">
-              <div class="font-bold text-[14px] truncate" style="color: var(--text-primary);">${t.title}</div>
-              <div class="flex items-center gap-1.5 mt-0.5">
-                <span class="font-medium text-[11px] truncate" style="color: var(--text-secondary);">${t.artist}</span>
-                <span class="text-[10px] font-bold px-1.5 py-0.2 rounded-full" style="background: var(--bg-input); color: var(--text-tertiary);">${t.duration || ''}</span>
+              <div class="font-bold text-[14px] truncate text-white leading-tight">${t.title}</div>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="font-medium text-[11px] truncate text-white/60">${t.artist}</span>
+                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/60">${t.duration || ''}</span>
               </div>
             </div>
           </div>
           <div class="flex items-center gap-1 shrink-0">
-            <button class="btn-search-like w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all" data-track-id="${t.id}" title="Favorite">
-              <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'}" style="${isFav ? '' : 'color: var(--text-tertiary);'}"></i>
+            <button class="btn-search-like w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-pink-500" data-track-id="${t.id}" title="Favorite">
+              <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'} text-base"></i>
             </button>
-            <button class="btn-search-add-pl w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-xs" data-track-id="${t.id}" title="Add to Playlist" style="color: var(--text-tertiary);">
-              <i class="ph-bold ph-plus"></i>
+            <button class="btn-search-add-pl w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-white" data-track-id="${t.id}" title="Add to Playlist">
+              <i class="ph-bold ph-plus text-base"></i>
             </button>
-            <button class="btn-search-download w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all" data-track-id="${t.id}" title="Download song">
-              <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-400' : 'ph-bold ph-download-simple'}" style="${isSaved ? '' : 'color: var(--text-tertiary);'}"></i>
+            <button class="btn-search-download w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-white" data-track-id="${t.id}" title="Download song">
+              <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-400' : 'ph-bold ph-download-simple'} text-base"></i>
             </button>
-            <button class="btn-search-play px-3 py-1.5 rounded-full text-xs font-black flex items-center gap-1 active:scale-95 transition-transform shadow-md" style="background: var(--btn-active-bg); color: var(--btn-active-text);">
+            <button class="btn-search-play px-3.5 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 active:scale-95 transition-transform shadow-md hover:scale-105" style="background: var(--btn-active-bg); color: var(--btn-active-text);">
               <i class="ph-fill ph-play text-xs"></i> Play
             </button>
           </div>
         </div>
       `;
     }).join('');
+
+    els.searchResultsList.innerHTML = artistRadioHero + trackItemsHtml;
+
+    const artistRadioBtn = document.getElementById('btn-search-artist-radio');
+    if (artistRadioBtn) {
+      artistRadioBtn.addEventListener('click', () => {
+        saveRecentSearch(query);
+        window.launchArtistShuffle(query);
+      });
+    }
 
     // Event listeners on search result items
     els.searchResultsList.querySelectorAll('.search-result-item').forEach(item => {
@@ -1255,54 +1633,80 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ═══ ARTIST DETAIL SUB-VIEW ═══
-  async function openArtistDetail(artistName, artistAvatar = null) {
-    if (!els.libraryArtistView) return;
-    
-    if (els.libraryList) els.libraryList.classList.add('hidden');
-    if (els.libraryArtistsGrid) els.libraryArtistsGrid.classList.add('hidden');
-    if (els.libraryAlbumsGrid) els.libraryAlbumsGrid.classList.add('hidden');
-    if (els.libraryGenresGrid) els.libraryGenresGrid.classList.add('hidden');
-    els.libraryArtistView.classList.remove('hidden');
+  // ═══ ARTIST & SIMILAR SHUFFLE RADIO SYSTEM ═══
+  const SIMILAR_ARTIST_GRAPH = {
+    "Juice WRLD": ["The Kid LAROI", "Trippie Redd", "XXXTENTACION", "Lil Peep", "Polo G", "Lil Tecca", "Post Malone", "Lil Uzi Vert", "Ski Mask the Slump God"],
+    "Drake": ["Travis Scott", "21 Savage", "Future", "Lil Baby", "The Weeknd", "PARTYNEXTDOOR", "Jack Harlow", "J. Cole"],
+    "Travis Scott": ["Drake", "Future", "Don Toliver", "A$AP Rocky", "Playboi Carti", "Metro Boomin", "Lil Uzi Vert", "Kid Cudi"],
+    "The Weeknd": ["Frank Ocean", "Post Malone", "Dua Lipa", "SZA", "Brent Faiyaz", "Joji", "Gesaffelstein", "Lana Del Rey"],
+    "XXXTENTACION": ["Juice WRLD", "Lil Peep", "Trippie Redd", "Ski Mask the Slump God", "Lil Uzi Vert", "POORSTACY", "Iann Dior"],
+    "Trippie Redd": ["Juice WRLD", "Playboi Carti", "Lil Uzi Vert", "XXXTENTACION", "Polo G", "Lil Yachty", "Coi Leray"],
+    "Lil Uzi Vert": ["Playboi Carti", "Juice WRLD", "Trippie Redd", "Travis Scott", "Young Thug", "Future", "Gunna"],
+    "Kendrick Lamar": ["J. Cole", "Baby Keem", "SZA", "ScHoolboy Q", "Jay-Z", "Nas", "Pusha T", "Drake"],
+    "Frank Ocean": ["SZA", "Brent Faiyaz", "Tyler, the Creator", "Steve Lacy", "Daniel Caesar", "Joji", "The Weeknd"],
+    "SZA": ["Summer Walker", "Jhené Aiko", "Frank Ocean", "Brent Faiyaz", "Kehlani", "Doja Cat", "The Weeknd"],
+    "Post Malone": ["The Weeknd", "Swae Lee", "Juice WRLD", "Morgan Wallen", "Justin Bieber", "Khalid", "21 Savage"],
+    "Eminem": ["50 Cent", "Dr. Dre", "Snoop Dogg", "Royce da 5'9\"", "D12", "Joyner Lucas", "NF", "Outkast"],
+    "Nirvana": ["Alice in Chains", "Soundgarden", "Pearl Jam", "Foo Fighters", "Green Day", "Linkin Park", "Smashing Pumpkins"],
+    "Linkin Park": ["Evanescence", "Three Days Grace", "System of a Down", "Papa Roach", "Limp Bizkit", "Nirvana"],
+    "Daft Punk": ["Justice", "Kavinsky", "Deadmau5", "The Chemical Brothers", "Swedish House Mafia", "Disclosure"],
+    "Kordhell": ["DVRST", "Hensonn", "Pharmacist", "SXMPRA", "PlayaPhonk", "Shadxwbxrn", "GHOSTFACE PLAYA"]
+  };
 
-    if (els.artistViewName) els.artistViewName.innerText = artistName;
-    const initialsEl = document.getElementById('artist-view-avatar-initials');
-    const avatarBox = document.getElementById('artist-view-avatar-box');
-    const initials = artistName.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
-    const grad = ARTIST_GRADIENTS[artistName] || 'from-purple-600 via-indigo-700 to-black';
-    if (initialsEl) initialsEl.innerText = initials;
-    if (avatarBox) avatarBox.className = `w-16 h-16 rounded-full overflow-hidden shadow-md border-2 flex items-center justify-center bg-gradient-to-tr ${grad} shrink-0`;
+  window.launchArtistShuffle = async function(artistName) {
+    if (!artistName) return;
+    engine.playHaptic(600, 0.03);
 
-    if (els.artistViewTracks) els.artistViewTracks.innerHTML = '<div class="text-center py-8 text-xs font-bold" style="color: var(--text-tertiary);">Loading artist tracks...</div>';
+    // 1. Gather tracks by this artist + similar artists from loaded catalog
+    const allTracks = (typeof TOP_SHUFFLES_CATALOG !== 'undefined')
+      ? Object.values(TOP_SHUFFLES_CATALOG).flatMap(c => c.tracks || [])
+      : engine.getDefaultLibrary();
 
-    try {
-      const res = await fetch(`/api/artist?name=${encodeURIComponent(artistName)}`);
-      const data = res.ok ? await res.json() : null;
-      const tracks = data?.tracks || await engine.search(`${artistName} songs`);
+    const cleanArtist = artistName.toLowerCase().trim();
+    const similarList = (SIMILAR_ARTIST_GRAPH[artistName] || []).map(a => a.toLowerCase());
 
-      if (tracks && tracks.length > 0) {
-        if (els.artistViewMeta) els.artistViewMeta.innerText = `${tracks.length} popular tracks`;
-        renderArtistTracks(tracks);
+    let directTracks = allTracks.filter(t => {
+      const art = (t.artist || '').toLowerCase();
+      return art.includes(cleanArtist);
+    });
 
-        if (els.artistBtnPlayAll) {
-          els.artistBtnPlayAll.onclick = () => {
-            engine.setQueue(tracks, true);
-            scrollToPanel(2);
-          };
+    let similarTracks = allTracks.filter(t => {
+      const art = (t.artist || '').toLowerCase();
+      return similarList.some(sim => art.includes(sim));
+    });
+
+    if (directTracks.length < 5) {
+      try {
+        const searched = await engine.search(`${artistName} songs`);
+        if (searched && searched.length > 0) {
+          directTracks.push(...searched);
         }
-        if (els.artistBtnShuffle) {
-          els.artistBtnShuffle.onclick = () => {
-            engine.setQueue(tracks, false);
-            engine.toggleShuffle();
-            engine.playTrack(0);
-            scrollToPanel(2);
-          };
-        }
-      }
-    } catch(e) {
-      if (els.artistViewTracks) els.artistViewTracks.innerHTML = '<div class="text-center py-8 text-xs font-bold" style="color: var(--text-tertiary);">Could not load artist tracks.</div>';
+      } catch(e) {}
     }
-  }
+
+    let radioPool = [...directTracks, ...similarTracks];
+    if (radioPool.length === 0) {
+      radioPool = await engine.search(`${artistName} radio`);
+    }
+
+    const seen = new Set();
+    const uniquePool = radioPool.filter(t => {
+      const key = `${t.title}_${t.artist}`.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+
+    const shuffled = uniquePool.map(t => ({ ...t }));
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    engine.setQueue(shuffled, true, 0);
+    scrollToPanel(2);
+    setDeckMode('vinyl');
+  };
 
   if (els.artistBackBtn) {
     els.artistBackBtn.addEventListener('click', () => {
@@ -1866,12 +2270,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const btnClearSearchHistory = document.getElementById('btn-clear-search-history');
+  if (btnClearSearchHistory) {
+    btnClearSearchHistory.addEventListener('click', () => {
+      localStorage.removeItem('juicebx_search_history');
+      engine.playHaptic(400, 0.02);
+      if (typeof showToast === 'function') showToast("Search history cleared", "info");
+      else alert("Search history cleared.");
+    });
+  }
+
   if (els.btnClearDownloads) {
     els.btnClearDownloads.addEventListener('click', () => {
       engine.clearDownloads();
       engine.playHaptic(400, 0.02);
       refreshCurrentLibrary();
-      alert("Offline cache cleared.");
+      if (typeof showToast === 'function') showToast("Offline cache cleared", "info");
+      else alert("Offline cache cleared.");
     });
   }
 
@@ -2062,33 +2477,33 @@ document.addEventListener('DOMContentLoaded', () => {
       const isSaved = downloads.some(d => d.id === track.id || d.title === track.title);
       const isFav = engine.isFavorite(track.id);
       return `
-        <div class="track-item flex items-center cursor-pointer ${isActive ? 'ring-2 ring-indigo-500/50' : ''}" data-idx="${i}">
-          <span class="text-[11px] font-bold w-5 text-center mr-2" style="color: var(--text-tertiary);">${i + 1}</span>
+        <div class="track-item flex items-center p-2.5 rounded-[16px] mb-1.5 transition-all hover:bg-white/5 cursor-pointer ${isActive ? 'bg-white/10 shadow-sm border border-white/10' : ''}" data-idx="${i}">
+          <span class="text-[11px] font-semibold w-5 text-center mr-1.5 font-mono" style="color: var(--text-tertiary);">${i + 1}</span>
           <div class="w-[44px] h-[44px] rounded-[13px] overflow-hidden flex-shrink-0 relative shadow-sm" style="background: var(--bg-card-solid);">
             <img src="${track.thumb}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80'">
-            ${isCurrentlyPlaying ? '<div class="absolute inset-0 bg-black/50 flex items-center justify-center gap-[2px]"><div class="w-0.5 h-2.5 bg-white rounded-full animate-[bounce_1s_infinite]"></div><div class="w-0.5 h-3.5 bg-white rounded-full animate-[bounce_1s_infinite_0.2s]"></div><div class="w-0.5 h-2 bg-white rounded-full animate-[bounce_1s_infinite_0.4s]"></div></div>' : ''}
+            ${isCurrentlyPlaying ? '<div class="absolute inset-0 bg-black/50 backdrop-blur-[2px] flex items-center justify-center gap-[2px]"><div class="w-0.5 h-2.5 bg-white rounded-full animate-[bounce_1s_infinite]"></div><div class="w-0.5 h-3.5 bg-white rounded-full animate-[bounce_1s_infinite_0.2s]"></div><div class="w-0.5 h-2 bg-white rounded-full animate-[bounce_1s_infinite_0.4s]"></div></div>' : ''}
           </div>
           <div class="flex-1 overflow-hidden ml-3 mr-2">
-            <div class="font-bold truncate text-[14px] leading-tight" style="color: var(--text-primary);">${track.title}</div>
+            <div class="font-bold truncate text-[14px] leading-tight ${isActive ? 'text-white' : ''}" style="${isActive ? '' : 'color: var(--text-primary);'}">${track.title}</div>
             <div class="flex items-center gap-1.5 mt-0.5">
-              <span class="font-medium text-[11px] truncate" style="color: var(--text-secondary);">${track.artist}</span>
-              ${isSaved ? '<span class="text-[9px] bg-emerald-500/20 text-emerald-500 font-bold px-1.5 py-0.5 rounded-full">Saved</span>' : ''}
-              ${track.isLocal ? '<span class="text-[9px] bg-indigo-500/20 text-indigo-400 font-bold px-1.5 py-0.5 rounded-full">Local</span>' : ''}
+              <span class="font-medium text-[11px] truncate text-white/60">${track.artist}</span>
+              ${isSaved ? '<span class="text-[9px] bg-emerald-500/20 text-emerald-400 font-bold px-1.5 py-0.5 rounded-full">Saved</span>' : ''}
+              ${track.isLocal ? '<span class="text-[9px] bg-indigo-500/20 text-indigo-300 font-bold px-1.5 py-0.5 rounded-full">Local</span>' : ''}
             </div>
           </div>
           <div class="flex items-center gap-1 shrink-0">
-            <span class="text-[11px] font-medium mr-1" style="color: var(--text-tertiary);">${track.duration || ''}</span>
-            <button class="btn-direct-like w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all" data-idx="${i}" title="Favorite">
-              <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'}" style="${isFav ? '' : 'color: var(--text-tertiary);'}"></i>
+            <span class="text-[11px] font-medium mr-1 font-mono text-white/40">${track.duration || ''}</span>
+            <button class="btn-direct-like w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-pink-500" data-idx="${i}" title="Favorite">
+              <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'}"></i>
             </button>
-            <button class="btn-direct-add-pl w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-xs" data-idx="${i}" title="Add to Playlist" style="color: var(--text-tertiary);">
+            <button class="btn-direct-add-pl w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-xs text-white/40 hover:text-white" data-idx="${i}" title="Add to Playlist">
               <i class="ph-bold ph-plus"></i>
             </button>
-            <button class="btn-direct-download w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all" data-track-id="${track.id}" title="Save track">
-              <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-500' : 'ph-bold ph-download-simple'}" style="${isSaved ? '' : 'color: var(--text-tertiary);'}"></i>
+            <button class="btn-direct-download w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-white" data-track-id="${track.id}" title="Save track">
+              <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-400' : 'ph-bold ph-download-simple'}"></i>
             </button>
-            <button class="btn-remove-queue w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all opacity-50 hover:opacity-100" data-idx="${i}" title="Remove from queue" style="color: var(--text-tertiary);">
-              <i class="ph-bold ph-x text-xs hover:text-red-400"></i>
+            <button class="btn-remove-queue w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-red-400" data-idx="${i}" title="Remove from queue">
+              <i class="ph-bold ph-x text-xs"></i>
             </button>
           </div>
         </div>`;
@@ -2183,17 +2598,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const gradients = [
-      'from-indigo-900/70 via-purple-950 to-black',
-      'from-blue-900/70 via-cyan-950 to-black',
-      'from-emerald-900/70 via-teal-950 to-black',
-      'from-rose-900/70 via-amber-950 to-black'
+      'linear-gradient(135deg, #2a1d47, #120d20)',
+      'linear-gradient(135deg, #12363b, #08181c)',
+      'linear-gradient(135deg, #1e1b4b, #0f172a)',
+      'linear-gradient(135deg, #3b0764, #18022e)'
     ];
 
     els.userPlaylistsGrid.innerHTML = playlists.map((pl, idx) => {
       const count = pl.tracks ? pl.tracks.length : 0;
       const grad = gradients[idx % gradients.length];
       return `
-        <div class="user-playlist-card glass-card p-3.5 rounded-2xl relative overflow-hidden cursor-pointer active:scale-95 transition-all group flex flex-col justify-between h-36 bg-gradient-to-br ${grad} border" style="border-color: var(--border-card);" data-pl-id="${pl.id}">
+        <div class="user-playlist-card p-3.5 rounded-2xl relative overflow-hidden cursor-pointer active:scale-95 transition-all group flex flex-col justify-between h-36 border border-black/5 shadow-md" style="background: ${grad}; color: #ffffff;" data-pl-id="${pl.id}">
           <div class="flex items-center justify-between">
             <div class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center text-white text-base">
               <i class="ph-fill ph-playlist"></i>
@@ -2205,7 +2620,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div>
             <h4 class="font-black text-sm text-white truncate">${pl.name}</h4>
             <p class="text-[11px] text-white/70 truncate mt-0.5">${pl.description || 'Custom Playlist'}</p>
-            <span class="text-[10px] font-bold text-indigo-300 mt-1 block">${count} ${count === 1 ? 'Track' : 'Tracks'}</span>
+            <span class="text-[10px] font-bold text-pink-300 mt-1 block">${count} ${count === 1 ? 'Track' : 'Tracks'}</span>
           </div>
         </div>
       `;
@@ -2232,11 +2647,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       const favs = engine.getFavorites();
       if (favs.length > 0) {
-        engine.setQueue(favs, false);
-        engine.playTrack(0);
+        engine.setQueue(favs, true, 0);
         scrollToPanel(2);
-      } else {
-        alert("You haven't liked any songs yet! Tap the heart icon on any song to add it.");
       }
     });
   }
@@ -2251,11 +2663,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const j = Math.floor(Math.random() * (i + 1));
           [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
         }
-        engine.setQueue(shuffled, false);
-        engine.playTrack(0);
+        engine.setQueue(shuffled, true, 0);
         scrollToPanel(2);
-      } else {
-        alert("You haven't liked any songs yet! Tap the heart icon on any song to add it.");
       }
     });
   }
@@ -2300,8 +2709,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (els.playlistBtnPlayAll) {
       els.playlistBtnPlayAll.onclick = () => {
         if (tracks.length > 0) {
-          engine.setQueue(tracks, false);
-          engine.playTrack(0);
+          engine.setQueue(tracks, true, 0);
           scrollToPanel(2);
         }
       };
@@ -2315,8 +2723,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const j = Math.floor(Math.random() * (i + 1));
             [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
           }
-          engine.setQueue(shuffled, false);
-          engine.playTrack(0);
+          engine.setQueue(shuffled, true, 0);
           scrollToPanel(2);
         }
       };
@@ -2358,8 +2765,7 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', (e) => {
           if (e.target.closest('.btn-item-like') || e.target.closest('.btn-item-remove-pl')) return;
           const idx = parseInt(item.getAttribute('data-pl-track-idx'));
-          engine.setQueue(tracks, false);
-          engine.playTrack(idx);
+          engine.setQueue(tracks, true, idx);
           scrollToPanel(2);
         });
       });
@@ -2580,22 +2986,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (els.artistBtnPlayAll) {
       els.artistBtnPlayAll.onclick = () => {
-        engine.setQueue(tracks, false);
-        engine.playTrack(0);
-        scrollToPanel(2);
+        if (tracks.length > 0) {
+          engine.setQueue(tracks, true, 0);
+          scrollToPanel(2);
+        }
       };
     }
 
     if (els.artistBtnShuffle) {
       els.artistBtnShuffle.onclick = () => {
-        const shuffled = [...tracks];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        if (typeof window.launchArtistShuffle === 'function') {
+          window.launchArtistShuffle(artistName);
+        } else if (tracks.length > 0) {
+          const shuffled = [...tracks];
+          for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+          }
+          engine.setQueue(shuffled, true, 0);
+          scrollToPanel(2);
         }
-        engine.setQueue(shuffled, false);
-        engine.playTrack(0);
-        scrollToPanel(2);
       };
     }
 
@@ -2605,31 +3015,40 @@ document.addEventListener('DOMContentLoaded', () => {
         const isSaved = downloads.some(d => d.id === t.id);
         const isFav = engine.isFavorite(t.id);
         return `
-          <div class="track-item flex items-center cursor-pointer" data-aidx="${idx}">
+          <div class="track-item flex items-center cursor-pointer p-2.5 rounded-2xl mb-1.5 glass-card" data-aidx="${idx}">
             <span class="text-[11px] font-bold w-5 text-center mr-2" style="color: var(--text-tertiary);">${idx + 1}</span>
             <div class="w-[44px] h-[44px] rounded-[13px] overflow-hidden flex-shrink-0 shadow-sm" style="background: var(--bg-card-solid);">
               <img src="${t.thumb}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80'">
             </div>
             <div class="flex-1 overflow-hidden ml-3 mr-2">
-              <div class="font-bold truncate text-[14px] leading-tight" style="color: var(--text-primary);">${t.title}</div>
-              <span class="font-medium text-[11px]" style="color: var(--text-secondary);">${t.artist}</span>
+              <div class="font-bold truncate text-[14px] leading-tight text-white">${t.title}</div>
+              <span class="font-medium text-[11px] text-white/60">${t.artist}</span>
             </div>
             <div class="flex items-center gap-1.5 shrink-0">
-              <span class="text-[11px] font-medium" style="color: var(--text-tertiary);">${t.duration || ''}</span>
-              <button class="btn-artist-like w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all" data-track-id="${t.id}" title="Favorite">
-                <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'}" style="${isFav ? '' : 'color: var(--text-tertiary);'}"></i>
+              <span class="text-[11px] font-medium text-white/40 font-mono mr-1">${t.duration || ''}</span>
+              <button class="btn-artist-like w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-pink-500" data-track-id="${t.id}" title="Favorite">
+                <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'}"></i>
               </button>
-              <button class="btn-artist-add-pl w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-xs" data-track-id="${t.id}" title="Add to Playlist" style="color: var(--text-tertiary);">
+              <button class="btn-artist-add-pl w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-xs text-white/40 hover:text-white" data-track-id="${t.id}" title="Add to Playlist">
                 <i class="ph-bold ph-plus"></i>
               </button>
-              <button class="btn-direct-download w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all" data-track-id="${t.id}" title="Save track">
-                <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-500' : 'ph-bold ph-download-simple'}" style="${isSaved ? '' : 'color: var(--text-tertiary);'}"></i>
+              <button class="btn-direct-download w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-white" data-track-id="${t.id}" title="Save track">
+                <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-400' : 'ph-bold ph-download-simple'}"></i>
               </button>
-              <i class="ph-fill ph-play text-sm ml-0.5" style="color: var(--text-secondary);"></i>
+              <i class="ph-fill ph-play text-sm ml-0.5 text-white/50"></i>
             </div>
           </div>
         `;
       }).join('');
+
+      els.artistViewTracks.querySelectorAll('.track-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+          if (e.target.closest('.btn-artist-like') || e.target.closest('.btn-artist-add-pl') || e.target.closest('.btn-direct-download')) return;
+          const idx = parseInt(item.getAttribute('data-aidx'));
+          engine.setQueue(tracks, true, idx);
+          scrollToPanel(2);
+        });
+      });
 
       els.artistViewTracks.querySelectorAll('.track-item').forEach(item => {
         item.addEventListener('click', (e) => {
@@ -3215,13 +3634,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ═══ LIGHT MODE CONTROLLER ═══
+  // ═══ LIGHT MODE CONTROLLER (Default to True matching user's exact mockup) ═══
   const toggleLight = document.getElementById('toggle-light-mode');
   if (toggleLight) {
-    const isLight = localStorage.getItem('juicebx_light_mode') === 'true';
+    const savedLight = localStorage.getItem('juicebx_light_mode');
+    const isLight = (savedLight === null || savedLight === 'true');
     if (isLight) {
       document.body.classList.add('light-mode');
       toggleLight.classList.add('active');
+    } else {
+      document.body.classList.remove('light-mode');
+      toggleLight.classList.remove('active');
     }
     toggleLight.addEventListener('click', () => {
       const active = document.body.classList.toggle('light-mode');
@@ -3678,37 +4101,12 @@ document.addEventListener('DOMContentLoaded', () => {
           vinylPlatter.style.transform = `translateZ(0) scale(${vScale.toFixed(3)})`;
         }
 
-        // 2. Reactive Ambient Aura glow pulse
-        if (auraGlow) {
-          const auraScale = 1.0 + (energy * 0.35);
-          const auraOpacity = 0.28 + (bass * 0.35);
-          auraGlow.style.transform = `translateX(-50%) scale(${auraScale.toFixed(2)})`;
-          auraGlow.style.opacity = auraOpacity.toFixed(2);
-        }
-
-        // 3. Reactive Material 3 Floating Shapes (Luminous & Alive)
-        if (m3Shape1) {
-          m3Shape1.style.opacity = (0.45 + bass * 0.35).toFixed(2);
-          m3Shape1.style.transform = `scale(${(1.0 + bass * 0.15).toFixed(3)})`;
-        }
-        if (m3Shape2) {
-          m3Shape2.style.opacity = (0.40 + energy * 0.32).toFixed(2);
-          m3Shape2.style.transform = `scale(${(1.0 + energy * 0.14).toFixed(3)})`;
-        }
-        if (m3Shape3) {
-          m3Shape3.style.opacity = (0.35 + mid * 0.30).toFixed(2);
-          m3Shape3.style.transform = `scale(${(1.0 + mid * 0.12).toFixed(3)})`;
-        }
-        if (m3Shape4) {
-          m3Shape4.style.opacity = (0.30 + treble * 0.25).toFixed(2);
-        }
-
-        // 4. Play Button energetic pulse
+        // 2. Play Button energetic pulse
         if (playBtn) {
           playBtn.style.boxShadow = `0 0 ${(16 + bass * 28).toFixed(0)}px var(--accent-glow, rgba(255,120,40,0.6)), 0 12px 24px rgba(0,0,0,0.5)`;
         }
 
-        // 5. Mini-player soundwave bars
+        // 3. Mini-player soundwave bars
         if (miniWaveBars && miniWaveBars.length > 0) {
           const freqs = [bass, mid, energy, treble];
           miniWaveBars.forEach((bar, i) => {
@@ -3719,10 +4117,6 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         if (vinylPlatter && vinylPlatter.classList.contains('paused')) {
           vinylPlatter.style.transform = `translateZ(0) scale(0.96)`;
-        }
-        if (auraGlow) {
-          auraGlow.style.transform = `translateX(-50%) scale(1.0)`;
-          auraGlow.style.opacity = '0.25';
         }
         if (playBtn) {
           playBtn.style.boxShadow = '0 12px 24px rgba(0,0,0,0.4)';
