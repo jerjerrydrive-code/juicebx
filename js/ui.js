@@ -330,12 +330,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (8 iOS 28 & GOOGLE M3 STYLES) ═══
-  const VISUALIZER_STYLES = ['equalizer', 'cyberwave', 'orb', 'm3', 'blobs', 'hifi', 'vinyl', 'cassette'];
+  // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (7 iOS 28 & GOOGLE M3 STYLES) ═══
+  const VISUALIZER_STYLES = ['equalizer', 'orb', 'm3', 'blobs', 'hifi', 'vinyl', 'cassette'];
 
   const VISUALIZER_NAMES = {
     'equalizer': '🌈 M3 & iOS 28 Wave Equalizer',
-    'cyberwave': '⚡ Cyberwave 999 Neon',
     'orb': '🔮 iOS 28 Siri Liquid Glass Orb',
     'm3': '🎨 Google M3 Expressive Ribbons',
     'blobs': '🫧 Spatial Fluid Glass Plasma',
@@ -349,7 +348,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deckStageWindow = document.getElementById('deck-stage-window');
   const deckDisplayEqualizer = document.getElementById('deck-display-equalizer');
-  const deckDisplayCyberwave = document.getElementById('deck-display-cyberwave');
   const deckDisplayOrb = document.getElementById('deck-display-orb');
   const deckDisplayM3 = document.getElementById('deck-display-m3');
   const deckDisplayBlobs = document.getElementById('deck-display-blobs');
@@ -398,7 +396,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (currentDeckMode === 'vinyl') {
       if (deckDisplayEqualizer) deckDisplayEqualizer.classList.toggle('hidden', style !== 'equalizer');
-      if (deckDisplayCyberwave) deckDisplayCyberwave.classList.toggle('hidden', style !== 'cyberwave');
       if (deckDisplayOrb) deckDisplayOrb.classList.toggle('hidden', style !== 'orb');
       if (deckDisplayM3) deckDisplayM3.classList.toggle('hidden', style !== 'm3');
       if (deckDisplayBlobs) deckDisplayBlobs.classList.toggle('hidden', style !== 'blobs');
@@ -460,7 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
     } else if (mode === 'video') {
-      [deckDisplayEqualizer, deckDisplayCyberwave, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl, deckDisplayCassette].forEach(el => {
+      [deckDisplayEqualizer, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl, deckDisplayCassette].forEach(el => {
         if (el) el.classList.add('hidden');
       });
       if (els.deckDisplayVideo) {
@@ -474,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try { window.engine.play(); } catch(e) {}
       }
     } else if (mode === 'lyrics') {
-      [deckDisplayEqualizer, deckDisplayCyberwave, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl, deckDisplayCassette].forEach(el => {
+      [deckDisplayEqualizer, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl, deckDisplayCassette].forEach(el => {
         if (el) el.classList.add('hidden');
       });
       if (els.deckDisplayVideo) {
@@ -1098,24 +1095,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const eqCtx = equalizerCanvas.getContext('2d');
         if (eqCtx) drawM3iOS28Equalizer(eqCtx, equalizerCanvas.width, equalizerCanvas.height, levels, isPlaying);
-      }
-
-      // 2. ⚡ Cyberwave 999 6-Bar Spectrum (Exact Mockup Match)
-      if (currentCenterpieceStyle === 'cyberwave') {
-        const bars = document.querySelectorAll('#cyberwave-bars-container .cyberwave-bar');
-        if (bars.length === 6) {
-          const heights = [
-            isPlaying ? Math.min(100, Math.max(15, 25 + levels.bass * 70 + Math.sin(Date.now() * 0.008) * 15)) : 38,
-            isPlaying ? Math.min(100, Math.max(20, 35 + levels.bass * 65 + Math.cos(Date.now() * 0.007) * 20)) : 65,
-            isPlaying ? Math.min(100, Math.max(25, 45 + levels.energy * 60 + Math.sin(Date.now() * 0.01) * 25)) : 92,
-            isPlaying ? Math.min(100, Math.max(15, 30 + levels.mid * 70 + Math.cos(Date.now() * 0.009) * 20)) : 48,
-            isPlaying ? Math.min(100, Math.max(20, 40 + levels.treble * 65 + Math.sin(Date.now() * 0.011) * 20)) : 75,
-            isPlaying ? Math.min(100, Math.max(15, 20 + levels.treble * 80 + Math.cos(Date.now() * 0.012) * 15)) : 32
-          ];
-          bars.forEach((bar, bIdx) => {
-            bar.style.height = `${heights[bIdx]}%`;
-          });
-        }
       }
 
       // 2. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb
