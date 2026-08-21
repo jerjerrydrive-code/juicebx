@@ -3299,6 +3299,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const PRESET_NAMED_THEMES = {
     midnight: { name: "Midnight 999", quad: ["#A855F7", "#FF4F00", "#1F5C6B", "#080911"] },
+    rabbit: { name: "Rabbit R1 Orange", quad: ["#FFFFFF", "#FFA000", "#D84315", "#FF4F00"] },
+    ceramic: { name: "White Ceramic Pod", quad: ["#007AFF", "#64748B", "#E2E8F0", "#F8FAFC"] },
+    charcoal: { name: "Matte Charcoal", quad: ["#38BDF8", "#818CF8", "#1E293B", "#0B0F19"] },
+    aurora: { name: "Aurora Borealis", quad: ["#06B6D4", "#A855F7", "#1E1B4B", "#050714"] },
     sunset: { name: "Sunset Blaze", quad: ["#FF4F00", "#FBBF24", "#7C2D12", "#180804"] },
     cyberpunk: { name: "Cyberpunk 2077", quad: ["#EC4899", "#06B6D4", "#4C1D95", "#0C0214"] },
     emerald: { name: "Emerald Abyss", quad: ["#10B981", "#06B6D4", "#064E3B", "#02120A"] },
@@ -3361,41 +3365,32 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!this.rowEl) return;
       this.rowEl.innerHTML = '';
 
-      // Render pinned favorites first
-      this.favorites.forEach(hex => this.rowEl.appendChild(this.createSwatch(null, hex)));
-      if (this.favorites.length) {
-        const divider = document.createElement('div');
-        divider.className = 'w-0.5 bg-white/10 shrink-0 my-1 rounded-full';
-        this.rowEl.appendChild(divider);
+      if (this.favorites.length > 0) {
+        this.favorites.forEach(favHex => {
+          this.rowEl.appendChild(this.createFavPill(favHex));
+        });
+        const sep = document.createElement('div');
+        sep.className = 'w-[1px] h-8 self-center mx-1 bg-white/20 shrink-0';
+        this.rowEl.appendChild(sep);
       }
 
-      // Render all 338 ColorHunt palettes
-      THEMES.forEach(quad => this.rowEl.appendChild(this.createSwatch(quad, null)));
+      THEMES.forEach((quad) => {
+        this.rowEl.appendChild(this.createThemeSwatch(quad));
+      });
+
+      this.syncActiveRings();
     }
 
-    createSwatch(quad, pinnedHex) {
+    createFavPill(hex) {
       const btn = document.createElement('button');
-      btn._quad = quad;
-      btn._pinnedHex = pinnedHex;
+      btn.className = 'accent-swatch shrink-0 relative overflow-hidden';
+      btn.style.backgroundColor = hex;
+      btn._pinnedHex = hex;
+      btn.title = `Favorite: ${hex} (Long press to remove)`;
 
-      const isActive = pinnedHex
-        ? pinnedHex.toUpperCase() === this.currentHex
-        : quad && quad.some(c => c.toUpperCase() === this.currentHex);
-
-      btn.className = `accent-swatch ${isActive ? 'active' : ''}`;
-
-      if (pinnedHex) {
-        btn.style.backgroundColor = pinnedHex;
-      } else {
-        btn.style.backgroundImage = `linear-gradient(180deg, ${quad[0]} 0 25%, ${quad[1]} 25% 50%, ${quad[2]} 50% 75%, ${quad[3]} 75% 100%)`;
-      }
-
-      if (pinnedHex) {
-        const star = document.createElement('div');
-        star.className = 'absolute -top-1 -right-1 w-3.5 h-3.5 bg-yellow-400 text-black rounded-full flex items-center justify-center text-[8px] font-black shadow';
-        star.innerHTML = '★';
-        btn.appendChild(star);
-      }
+      const star = document.createElement('i');
+      star.className = 'ph-fill ph-star text-white text-[10px] absolute top-1 right-1 drop-shadow-md';
+      btn.appendChild(star);
 
       let pressTimer = null;
       let longPressed = false;
@@ -3403,7 +3398,7 @@ document.addEventListener('DOMContentLoaded', () => {
         longPressed = false;
         pressTimer = setTimeout(() => {
           longPressed = true;
-          this.toggleFavorite(pinnedHex || this.currentHex);
+          this.toggleFavorite(hex);
           engine.playHaptic(800, 0.04);
         }, 550);
       };
@@ -3412,7 +3407,42 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('pointerdown', startPress);
       btn.addEventListener('pointerup', (e) => {
         cancelPress();
-        if (!longPressed) this.selectSwatch(quad, pinnedHex, e);
+        if (!longPressed) this.selectSwatch(null, hex, e);
+      });
+      btn.addEventListener('pointerleave', cancelPress);
+
+      return btn;
+    }
+
+    createThemeSwatch(quad) {
+      const btn = document.createElement('button');
+      btn.className = 'accent-swatch shrink-0 relative overflow-hidden flex flex-col';
+      btn._quad = quad;
+      btn.title = `Palette: ${quad.join(', ')} (Long press to favorite)`;
+
+      quad.forEach((c) => {
+        const stripe = document.createElement('div');
+        stripe.className = 'w-full flex-1 pointer-events-none';
+        stripe.style.backgroundColor = c;
+        btn.appendChild(stripe);
+      });
+
+      let pressTimer = null;
+      let longPressed = false;
+      const startPress = () => {
+        longPressed = false;
+        pressTimer = setTimeout(() => {
+          longPressed = true;
+          this.toggleFavorite(quad[0]);
+          engine.playHaptic(800, 0.04);
+        }, 550);
+      };
+      const cancelPress = () => { if (pressTimer) clearTimeout(pressTimer); };
+
+      btn.addEventListener('pointerdown', startPress);
+      btn.addEventListener('pointerup', (e) => {
+        cancelPress();
+        if (!longPressed) this.selectSwatch(quad, null, e);
       });
       btn.addEventListener('pointerleave', cancelPress);
 
@@ -3467,6 +3497,76 @@ document.addEventListener('DOMContentLoaded', () => {
       root.setProperty('--pal-4', c4);
       root.setProperty('--accent', this.currentHex);
       root.setProperty('--rabbit-orange', c2);
+      root.setProperty('--accent-glow', `color-mix(in srgb, ${this.currentHex} 50%, transparent)`);
+
+      // Compute luminance of the background (c4) and primary (c1)
+      const cleanC4 = c4.replace('#', '');
+      const r4 = parseInt(cleanC4.substring(0, 2), 16) || 0;
+      const g4 = parseInt(cleanC4.substring(2, 4), 16) || 0;
+      const b4 = parseInt(cleanC4.substring(4, 6), 16) || 0;
+      const lum4 = (0.299 * r4 + 0.587 * g4 + 0.114 * b4) / 255;
+
+      if (lum4 > 0.6) {
+        // ── 1. LIGHT / WHITE CERAMIC PALETTE ──
+        root.setProperty('--bg-app', c4);
+        root.setProperty('--bg-panel', c4);
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 20%, rgba(255, 255, 255, 0.92))`);
+        root.setProperty('--bg-card-solid', '#ffffff');
+        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 15%, rgba(238, 242, 248, 0.95))`);
+        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 30%, rgba(255, 255, 255, 0.96))`);
+        root.setProperty('--bg-mini', `color-mix(in srgb, ${c4} 30%, rgba(255, 255, 255, 0.96))`);
+        root.setProperty('--text-primary', '#0f172a');
+        root.setProperty('--text-secondary', '#334155');
+        root.setProperty('--text-tertiary', '#64748b');
+        root.setProperty('--border-card', `color-mix(in srgb, ${c1} 25%, rgba(0, 0, 0, 0.08))`);
+        root.setProperty('--border-input', `color-mix(in srgb, ${c1} 30%, rgba(0, 0, 0, 0.12))`);
+        root.setProperty('--btn-active-bg', '#0f172a');
+        root.setProperty('--btn-active-text', '#ffffff');
+        root.setProperty('--shadow-card', '0 16px 36px -8px rgba(0, 0, 0, 0.12)');
+        document.body.classList.add('light-mode');
+      } else if (lum4 >= 0.2) {
+        // ── 2. VIBRANT SATURATED (e.g. Electric Rabbit Orange / Crimson) ──
+        root.setProperty('--bg-app', c4);
+        root.setProperty('--bg-panel', c4);
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 70%, rgba(0, 0, 0, 0.35))`);
+        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c3} 85%, #000000)`);
+        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 50%, rgba(0, 0, 0, 0.4))`);
+        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 85%, rgba(0, 0, 0, 0.9))`);
+        root.setProperty('--bg-mini', `color-mix(in srgb, ${c3} 80%, rgba(0, 0, 0, 0.92))`);
+        root.setProperty('--text-primary', '#ffffff');
+        root.setProperty('--text-secondary', 'rgba(255, 255, 255, 0.85)');
+        root.setProperty('--text-tertiary', 'rgba(255, 255, 255, 0.6)');
+        root.setProperty('--border-card', `color-mix(in srgb, ${c1} 45%, rgba(255, 255, 255, 0.2))`);
+        root.setProperty('--border-input', `color-mix(in srgb, ${c1} 50%, rgba(255, 255, 255, 0.25))`);
+        root.setProperty('--btn-active-bg', '#ffffff');
+        root.setProperty('--btn-active-text', '#000000');
+        root.setProperty('--shadow-card', '0 20px 45px -10px rgba(0, 0, 0, 0.7)');
+        document.body.classList.remove('light-mode');
+      } else {
+        // ── 3. DEEP OLED / OBSIDIAN / MIDNIGHT ──
+        root.setProperty('--bg-app', c4);
+        root.setProperty('--bg-panel', c4);
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 38%, rgba(18, 19, 26, 0.82))`);
+        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c4} 70%, #0d0e14)`);
+        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 50%, rgba(27, 28, 38, 0.7))`);
+        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 80%, rgba(10, 11, 16, 0.94))`);
+        root.setProperty('--bg-mini', `color-mix(in srgb, ${c4} 85%, rgba(18, 19, 26, 0.95))`);
+        root.setProperty('--text-primary', '#ffffff');
+        root.setProperty('--text-secondary', '#94a3b8');
+        root.setProperty('--text-tertiary', '#64748b');
+        root.setProperty('--border-card', `color-mix(in srgb, ${c1} 30%, rgba(255, 255, 255, 0.08))`);
+        root.setProperty('--border-input', `color-mix(in srgb, ${c1} 35%, rgba(255, 255, 255, 0.12))`);
+        root.setProperty('--btn-active-bg', 'rgba(255, 255, 255, 0.95)');
+        root.setProperty('--btn-active-text', '#000000');
+        root.setProperty('--shadow-card', '0 24px 48px -12px rgba(0, 0, 0, 0.85)');
+        document.body.classList.remove('light-mode');
+      }
+
+      // Update ambient bloom aura
+      const aura = document.getElementById('ambient-aura-glow');
+      if (aura) {
+        aura.style.background = `radial-gradient(circle, ${c1} 0%, ${c2} 50%, transparent 80%)`;
+      }
 
       // Update live indicator chips in Settings
       const sw1 = document.getElementById('swatch-1');
@@ -3475,15 +3575,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const sw4 = document.getElementById('swatch-4');
       const dot = document.getElementById('theme-indicator-dot');
       const nameLabel = document.getElementById('theme-active-name');
+      const paletteIcon = document.getElementById('btn-settings-palette-icon');
 
       if (sw1) sw1.style.background = c1;
       if (sw2) sw2.style.background = c2;
       if (sw3) sw3.style.background = c3;
       if (sw4) sw4.style.background = c4;
       if (dot) dot.style.background = this.currentHex;
+      if (paletteIcon) paletteIcon.style.background = `linear-gradient(135deg, ${c1}, ${c2})`;
+
       if (nameLabel) {
         const matchPreset = Object.values(PRESET_NAMED_THEMES).find(p => p.quad[0] === c1 && p.quad[1] === c2);
-        nameLabel.innerText = matchPreset ? matchPreset.name : `ColorHunt #${(THEMES.indexOf(quad) >= 0 ? THEMES.indexOf(quad) + 1 : 'Custom')}`;
+        nameLabel.innerText = matchPreset ? matchPreset.name : `Aesthetic #${(THEMES.indexOf(quad) >= 0 ? THEMES.indexOf(quad) + 1 : 'Custom')}`;
       }
 
       this.syncActiveRings();
@@ -3523,9 +3626,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     bindCycleButtons() {
       const cycleButtons = [
-        document.getElementById('home-cycle-theme-btn'),
-        document.getElementById('deck-cycle-theme-btn'),
-        document.getElementById('btn-cycle-theme-hero')
+        document.getElementById('btn-settings-palette-icon'),
+        document.getElementById('theme-active-indicator')
       ].filter(Boolean);
 
       cycleButtons.forEach(btn => {

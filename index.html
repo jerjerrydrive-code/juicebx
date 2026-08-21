@@ -661,13 +661,9 @@
       <!-- ═══ PANEL 0: HOME / TOP 100 SHUFFLES ═══ -->
       <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-4" style="background: var(--bg-panel);">
         
-        <!-- Top Bar: Sticky Logo + Cycle Theme Action -->
-        <div class="sticky top-0 z-40 flex items-center justify-between mb-4 py-2.5 -mx-4 px-4" style="background: rgba(3, 3, 5, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,0.05); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.8);">
-          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-12 sm:h-16 w-auto max-w-[180px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
-          <button id="home-cycle-theme-btn" class="px-3.5 py-1.5 rounded-full text-xs font-black flex items-center gap-1.5 active:scale-95 transition-all shadow-md text-white border border-white/20 glass-card cursor-pointer hover:border-white/40" style="background: linear-gradient(135deg, color-mix(in srgb, var(--pal-1) 75%, transparent), color-mix(in srgb, var(--pal-2) 75%, transparent));" title="Cycle Theme Palette">
-            <i class="ph-fill ph-palette text-sm"></i>
-            <span>Theme</span>
-          </button>
+        <!-- Top Bar: Massive Logo (Sticky) -->
+        <div class="sticky top-0 z-40 flex items-center justify-center mb-4 py-2.5 -mx-4 px-4" style="background: rgba(3, 3, 5, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,0.05); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.8);">
+          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-14 sm:h-20 w-auto max-w-[220px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
         </div>
 
         <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
@@ -868,11 +864,8 @@
               <button class="deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="lyrics" style="color: var(--text-tertiary);">LYRICS</button>
             </div>
 
-            <!-- Header Quick Actions (Theme, Fullscreen, Like, Download, Add to Playlist, Sleep Timer) -->
+            <!-- Header Quick Actions (Fullscreen, Like, Download, Add to Playlist, Sleep Timer) -->
             <div class="flex items-center gap-1.5">
-              <button id="deck-cycle-theme-btn" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--accent);" title="Cycle Aesthetic Theme">
-                <i class="ph-fill ph-palette text-base"></i>
-              </button>
               <button id="deck-btn-fullscreen" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Enter Fullscreen">
                 <i class="ph-bold ph-corners-out text-base" id="deck-fullscreen-icon"></i>
               </button>
@@ -1221,19 +1214,18 @@
           <!-- 🎨 Aesthetic Theme Studio & ColorHunt 338-Palette Engine -->
           <div class="glass-card p-4 mb-3 space-y-3">
             <div class="flex items-center justify-between">
-              <div>
-                <p class="font-bold text-sm" style="color: var(--text-primary);">Aesthetic Themes (338 Palettes)</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Curated 4-band palettes from ColorHunt</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <button id="btn-cycle-theme-hero" class="px-3.5 py-1.5 rounded-full text-xs font-black flex items-center gap-1.5 active:scale-95 transition-all shadow-md text-white border border-white/20" style="background: linear-gradient(135deg, var(--pal-1), var(--pal-2));" title="Cycle to next palette">
-                  <i class="ph-fill ph-sparkle text-sm"></i>
-                  <span>Cycle Theme</span>
+              <div class="flex items-center gap-3">
+                <button id="btn-settings-palette-icon" class="w-10 h-10 rounded-2xl flex items-center justify-center shadow-lg active:scale-90 transition-transform cursor-pointer border border-white/20" style="background: linear-gradient(135deg, var(--pal-1), var(--pal-2));" title="Cycle Theme Palette">
+                  <i class="ph-fill ph-palette text-white text-lg"></i>
                 </button>
-                <button id="btn-random-colorhunt" class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black active:scale-95 transition-all glass-input text-white border border-white/10" title="Randomize Palette">
-                  <i class="ph-bold ph-dice-five text-base"></i>
-                </button>
+                <div>
+                  <p class="font-bold text-sm" style="color: var(--text-primary);">Theme Engine (338 Palettes)</p>
+                  <p class="text-xs" style="color: var(--text-tertiary);">Tap icon to cycle system-wide themes</p>
+                </div>
               </div>
+              <button id="btn-random-colorhunt" class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black active:scale-95 transition-all glass-input text-white border border-white/10" title="Randomize Palette">
+                <i class="ph-bold ph-dice-five text-base"></i>
+              </button>
             </div>
 
             <!-- Active Palette Live Indicator -->
@@ -1265,42 +1257,56 @@
             <div class="pt-1 border-t" style="border-color: var(--border-card);">
               <p class="text-[10px] font-bold uppercase tracking-wider mb-2" style="color: var(--text-tertiary);">Quick Presets</p>
               <div class="grid grid-cols-2 gap-2" id="theme-presets-grid">
-                <button class="theme-preset-btn active p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="midnight" style="border-color: var(--accent); background: rgba(168, 85, 247, 0.12);">
+                <button class="theme-preset-btn active p-2.5 rounded-xl text-left border transition-all flex items-center gap-2 cursor-pointer active:scale-95" data-theme="midnight" style="border-color: var(--accent); background: rgba(168, 85, 247, 0.12);">
                   <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #a855f7, #ff4f00);"></div>
                   <div class="truncate">
                     <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Midnight 999</p>
                     <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Purple & Orange</p>
                   </div>
                 </button>
-                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="sunset" style="border-color: var(--border-card); background: var(--bg-input);">
-                  <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #ff4f00, #fbbf24);"></div>
+                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2 cursor-pointer active:scale-95" data-theme="rabbit" style="border-color: var(--border-card); background: var(--bg-input);">
+                  <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #ff4f00, #ffa000);"></div>
                   <div class="truncate">
-                    <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Sunset Blaze</p>
-                    <p class="text-[10px] truncate" style="color: var(--text-tertiary);">999 Amber & Gold</p>
+                    <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Rabbit R1 Orange</p>
+                    <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Luminous Amber</p>
                   </div>
                 </button>
-                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="cyberpunk" style="border-color: var(--border-card); background: var(--bg-input);">
+                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2 cursor-pointer active:scale-95" data-theme="ceramic" style="border-color: var(--border-card); background: var(--bg-input);">
+                  <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #007aff, #e2e8f0);"></div>
+                  <div class="truncate">
+                    <p class="font-bold text-xs truncate" style="color: var(--text-primary);">White Ceramic Pod</p>
+                    <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Pearl & Frosted Glass</p>
+                  </div>
+                </button>
+                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2 cursor-pointer active:scale-95" data-theme="charcoal" style="border-color: var(--border-card); background: var(--bg-input);">
+                  <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #38bdf8, #1e293b);"></div>
+                  <div class="truncate">
+                    <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Matte Charcoal</p>
+                    <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Stealth Obsidian</p>
+                  </div>
+                </button>
+                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2 cursor-pointer active:scale-95" data-theme="aurora" style="border-color: var(--border-card); background: var(--bg-input);">
+                  <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #06b6d4, #a855f7);"></div>
+                  <div class="truncate">
+                    <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Aurora Borealis</p>
+                    <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Cyan & Violet Glow</p>
+                  </div>
+                </button>
+                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2 cursor-pointer active:scale-95" data-theme="cyberpunk" style="border-color: var(--border-card); background: var(--bg-input);">
                   <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #ec4899, #06b6d4);"></div>
                   <div class="truncate">
                     <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Cyberpunk 2077</p>
                     <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Neon Pink & Cyan</p>
                   </div>
                 </button>
-                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="emerald" style="border-color: var(--border-card); background: var(--bg-input);">
+                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2 cursor-pointer active:scale-95" data-theme="emerald" style="border-color: var(--border-card); background: var(--bg-input);">
                   <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #10b981, #06b6d4);"></div>
                   <div class="truncate">
                     <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Emerald Abyss</p>
                     <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Forest Jade & Mint</p>
                   </div>
                 </button>
-                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="oceanic" style="border-color: var(--border-card); background: var(--bg-input);">
-                  <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);"></div>
-                  <div class="truncate">
-                    <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Oceanic Deep</p>
-                    <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Sapphire & Ice</p>
-                  </div>
-                </button>
-                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="bloodruby" style="border-color: var(--border-card); background: var(--bg-input);">
+                <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2 cursor-pointer active:scale-95" data-theme="bloodruby" style="border-color: var(--border-card); background: var(--bg-input);">
                   <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #ef4444, #b91c1c);"></div>
                   <div class="truncate">
                     <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Blood Ruby</p>
