@@ -1706,9 +1706,9 @@ window.JuiceEngine = (() => {
 
       if (index < 0 || index >= state.queue.length) return;
 
-      const wasPlaying = state.isPlaying;
-
       const isCurrent = (index === state.currentIndex);
+
+      const wasPlaying = state.isPlaying;
 
 
 
@@ -1718,7 +1718,7 @@ window.JuiceEngine = (() => {
 
       if (state.queue.length === 0) {
 
-        state.currentIndex = 0;
+        state.currentIndex = -1;
 
         state.isPlaying = false;
 
@@ -1728,9 +1728,23 @@ window.JuiceEngine = (() => {
 
       } else if (isCurrent) {
 
+        // Removed the current track - advance pointer but DO NOT autoplay
+
         state.currentIndex = Math.min(index, state.queue.length - 1);
 
-        loadTrack(state.currentIndex, wasPlaying);
+        if (wasPlaying) {
+
+          // Was playing: continue from next track seamlessly
+
+          loadTrack(state.currentIndex, true);
+
+        } else {
+
+          // Was paused: just update display, do not start playing
+
+          loadTrack(state.currentIndex, false);
+
+        }
 
       } else if (index < state.currentIndex) {
 

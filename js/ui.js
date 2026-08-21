@@ -1959,7 +1959,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('engine:queueUpdated', () => {
-    refreshCurrentLibrary();
+    // Small delay so remove-queue slide animation completes before DOM is replaced
+    setTimeout(() => refreshCurrentLibrary(), 250);
   });
 
   window.addEventListener('engine:trackChanged', (e) => {
@@ -2154,15 +2155,18 @@ document.addEventListener('DOMContentLoaded', () => {
     els.libraryList.querySelectorAll('.btn-remove-queue').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
+        e.preventDefault();
         const item = btn.closest('.track-item');
         if (item) {
-          item.style.transition = 'all 0.2s ease-out';
-          item.style.transform = 'translateX(-120%)';
+          // Capture idx BEFORE animation so DOM replacement doesn't lose it
+          const idx = parseInt(item.getAttribute('data-idx'));
+          if (isNaN(idx)) return;
+          item.style.transition = 'opacity 0.18s ease-out, transform 0.18s ease-out';
+          item.style.transform = 'translateX(-100%)';
           item.style.opacity = '0';
           setTimeout(() => {
-            const idx = parseInt(item.getAttribute('data-idx'));
-            if (!isNaN(idx)) engine.removeFromQueue(idx);
-          }, 180);
+            engine.removeFromQueue(idx);
+          }, 200);
         }
       });
     });
