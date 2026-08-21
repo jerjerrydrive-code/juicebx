@@ -3242,4 +3242,62 @@ document.addEventListener('DOMContentLoaded', () => {
     if (els.miniArtist) els.miniArtist.innerText = t.artist;
     if (cassetteTrackLabel) cassetteTrackLabel.innerText = t.title;
   }
+
+  // ═══ ACCELEROMETER & ROTATION AUTO-LYRICS ENGINE (Rabbit R1 & Mobile) ═══
+  let previousOrientationMode = 'portrait';
+  let orientationDebounce = false;
+
+  function handleOrientationTrigger(isLandscape) {
+    if (orientationDebounce) return;
+    const newMode = isLandscape ? 'landscape' : 'portrait';
+    if (newMode === previousOrientationMode) return;
+
+    previousOrientationMode = newMode;
+    orientationDebounce = true;
+    setTimeout(() => orientationDebounce = false, 400);
+
+    if (isLandscape) {
+      // Rotated sideways / Landscape -> Auto-switch to Synced Lyrics Mode
+      scrollToPanel(2); // Jump straight to Player Deck
+      setDeckMode('lyrics');
+      engine.playHaptic(600, 0.02);
+    } else {
+      // Rotated back upright / Portrait -> Return to Vinyl / Centerpiece mode
+      setDeckMode('vinyl');
+      engine.playHaptic(500, 0.015);
+    }
+  }
+
+  // 1. Standard Screen Orientation & Viewport API
+  window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+      const isLandscape = window.innerWidth > window.innerHeight;
+      handleOrientationTrigger(isLandscape);
+    }, 120);
+  });
+
+  if (window.screen && window.screen.orientation) {
+    window.screen.orientation.addEventListener('change', () => {
+      const type = window.screen.orientation.type || '';
+      const isLandscape = type.includes('landscape') || (window.innerWidth > window.innerHeight);
+      handleOrientationTrigger(isLandscape);
+    });
+  }
+
+  const landscapeMedia = window.matchMedia('(orientation: landscape)');
+  if (landscapeMedia.addEventListener) {
+    landscapeMedia.addEventListener('change', (e) => handleOrientationTrigger(e.matches));
+  }
+
+  // 2. Hardware Accelerometer & Gyroscope Tilt (Physical Rabbit R1 rotation)
+  window.addEventListener('deviceorientation', (e) => {
+    if (e.gamma === null && e.beta === null) return;
+    // When device is physically tilted sideways (> 48 deg left or right, and not completely flat)
+    const isSidewaysTilt = Math.abs(e.gamma) > 48 && Math.abs(e.beta) < 80;
+    if (isSidewaysTilt && previousOrientationMode !== 'landscape') {
+      handleOrientationTrigger(true);
+    } else if (!isSidewaysTilt && Math.abs(e.gamma) < 32 && previousOrientationMode === 'landscape') {
+      handleOrientationTrigger(false);
+    }
+  }, { passive: true });
 });
