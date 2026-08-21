@@ -687,20 +687,6 @@
 </head>
 <body class="h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
 
-  <!-- ═══ FAST BOOT SPLASH SCREEN INTRO ═══ -->
-  <div id="app-splash-screen" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center pointer-events-auto transition-all duration-700 ease-out" style="background: #040407;">
-    <!-- Radiant Ambient Light Blobs -->
-    <div class="absolute w-72 h-72 rounded-full blur-3xl opacity-40 pointer-events-none transition-all duration-1000 animate-pulse" style="background: radial-gradient(circle, var(--accent, #a855f7) 0%, var(--pal-2, #ff4f00) 50%, transparent 75%);"></div>
-    
-    <div class="relative z-10 flex flex-col items-center justify-center transform transition-all duration-500 scale-95" id="splash-logo-container">
-      <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-20 sm:h-28 w-auto max-w-[260px] object-contain drop-shadow-[0_8px_32px_rgba(255,79,0,0.8)]">
-      <div class="mt-5 flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/15 backdrop-blur-md bg-white/5 shadow-xl">
-        <span class="w-2 h-2 rounded-full animate-ping" style="background: var(--accent, #ff4f00);"></span>
-        <span class="text-[10px] font-black tracking-widest uppercase text-white/90" id="splash-status-text">999 Tribute Edition</span>
-      </div>
-    </div>
-  </div>
-
   <!-- MAIN APP CONTAINER (Flex Column to guarantee nav bar is always inside visible screen) -->
   <div id="app-frame" class="relative flex flex-col w-[100vw] h-[100dvh] max-w-[100vw] max-h-[100dvh] overflow-hidden" style="background: var(--bg-app);">
 

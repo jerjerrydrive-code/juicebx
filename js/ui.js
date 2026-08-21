@@ -330,56 +330,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ═══ AUDIO-REACT 
+  // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (VINYL, CASSETTE, NEON) ═══
   const VISUALIZER_STYLES = ['vinyl', 'cassette', 'neon'];
 
   let currentCenterpieceStyle = localStorage.getItem('juicebx_center_style') || 'vinyl';
   if (!VISUALIZER_STYLES.includes(currentCenterpieceStyle)) currentCenterpieceStyle = 'vinyl';
 
   const deckStageWindow = document.getElementById('deck-stage-window');
-
   const deckDisplayVinyl = document.getElementById('deck-display-vinyl');
   const deckDisplayCassette = document.getElementById('deck-display-cassette');
   const deckDisplayNeon = document.getElementById('deck-display-neon');
 
-  // Legacy refs (no longer in DOM, kept as null to prevent errors)
-  const deckDisplayOrb = null;
-  const deckDisplayM3 = null;
-  const deckDisplayBlobs = null;
-  const deckDisplayHifi = null;
+  // Legacy canvas refs kept for compatibility
+  const orbCanvas = null;
+  const orbCtx = null;
+  const m3Canvas = null;
+  const m3Ctx = null;
+  const blobsCanvas = null;
+  const blobsCtx = null;
+  const hifiCanvas = null;
+  const hifiCtx = null;
 
-  const orbCanvas = document.getElementById('deck-reactive-orb-canvas');
-  const orbCtx = orbCanvas ? orbCanvas.getContext('2d') : null;
-
-  const m3Canvas = document.getElementById('deck-reactive-m3-canvas');
-  const m3Ctx = m3Canvas ? m3Canvas.getContext('2d') : null;
-
-  const blobsCanvas = document.getElementById('deck-reactive-blobs-canvas');
-  const blobsCtx = blobsCanvas ? blobsCanvas.getContext('2d') : null;
-
-  const hifiCanvas = document.getElementById('deck-reactive-hifi-canvas');
-  const hifiCtx = hifiCanvas ? hifiCanvas.getContext('2d') : null;
-
-    speed: (0.005 + Math.random() * 0.015) * (Math.random() > 0.5 ? 1 : -1),
-    size: 1 + Math.random() * 2,
-    alpha: 0.2 + Math.random() * 0.6
-  }));
-
-  // 2. Google Material 3 Expressive Ribbons State
+  let orbPhase = 0;
+  const orbDust = [];
   let m3Phase = 0;
-
-  // 3. Spatial Glass Metaballs State
   let blobPhase = 0;
-  const spatialBlobs = [
-    { baseR: 44, orbitR: 0, speed: 0, color1: '#ff4f00', color2: '#a855f7' },
-    { baseR: 26, orbitR: 62, speed: 0.018, color1: '#06b6d4', color2: '#3b82f6' },
-    { baseR: 22, orbitR: 78, speed: -0.014, color1: '#ec4899', color2: '#f43f5e' },
-    { baseR: 19, orbitR: 95, speed: 0.022, color1: '#8b5cf6', color2: '#6366f1' },
-    { baseR: 16, orbitR: 110, speed: -0.019, color1: '#10b981', color2: '#06b6d4' }
-  ];
-
-  // 4. M3 Hi-Fi Precision Spectrum State
-  const hifiPeaks = Array.from({ length: 38 }, () => ({ y: 0, vel: 0 }));
+  const spatialBlobs = [];
+  const hifiPeaks = [];
   const hifiSparks = [];
 
   function setCenterpieceStyle(style) {
@@ -388,11 +365,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (deckStageWindow) deckStageWindow.setAttribute('data-visualizer-style', style);
 
     if (currentDeckMode === 'vinyl') {
-      if (deckDisplayOrb) deckDisplayOrb.classList.toggle('hidden', style !== 'orb');
-      if (deckDisplayM3) deckDisplayM3.classList.toggle('hidden', style !== 'm3');
-      if (deckDisplayBlobs) deckDisplayBlobs.classList.toggle('hidden', style !== 'blobs');
-      if (deckDisplayHifi) deckDisplayHifi.classList.toggle('hidden', style !== 'hifi');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.toggle('hidden', style !== 'vinyl');
+      if (deckDisplayCassette) deckDisplayCassette.classList.toggle('hidden', style !== 'cassette');
+      if (deckDisplayNeon) deckDisplayNeon.classList.toggle('hidden', style !== 'neon');
     }
   }
 
@@ -432,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const state = engine.getState();
-    const track = state.queue[state.currentIndex];
+    const track = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
 
     if (mode === 'vinyl') {
       setCenterpieceStyle(currentCenterpieceStyle);
@@ -441,15 +416,15 @@ document.addEventListener('DOMContentLoaded', () => {
         els.deckDisplayVideo.style.pointerEvents = 'none';
         els.deckDisplayVideo.style.position = 'absolute';
         els.deckDisplayVideo.style.zIndex = '-1';
+        els.deckDisplayVideo.classList.add('hidden');
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
     } else if (mode === 'video') {
-      if (deckDisplayOrb) deckDisplayOrb.classList.add('hidden');
-      if (deckDisplayM3) deckDisplayM3.classList.add('hidden');
-      if (deckDisplayBlobs) deckDisplayBlobs.classList.add('hidden');
-      if (deckDisplayHifi) deckDisplayHifi.classList.add('hidden');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.add('hidden');
+      if (deckDisplayCassette) deckDisplayCassette.classList.add('hidden');
+      if (deckDisplayNeon) deckDisplayNeon.classList.add('hidden');
       if (els.deckDisplayVideo) {
+        els.deckDisplayVideo.classList.remove('hidden');
         els.deckDisplayVideo.style.opacity = '1';
         els.deckDisplayVideo.style.pointerEvents = 'auto';
         els.deckDisplayVideo.style.position = 'relative';
@@ -457,16 +432,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
     } else if (mode === 'lyrics') {
-      if (deckDisplayOrb) deckDisplayOrb.classList.add('hidden');
-      if (deckDisplayM3) deckDisplayM3.classList.add('hidden');
-      if (deckDisplayBlobs) deckDisplayBlobs.classList.add('hidden');
-      if (deckDisplayHifi) deckDisplayHifi.classList.add('hidden');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.add('hidden');
+      if (deckDisplayCassette) deckDisplayCassette.classList.add('hidden');
+      if (deckDisplayNeon) deckDisplayNeon.classList.add('hidden');
       if (els.deckDisplayVideo) {
         els.deckDisplayVideo.style.opacity = '0';
         els.deckDisplayVideo.style.pointerEvents = 'none';
         els.deckDisplayVideo.style.position = 'absolute';
         els.deckDisplayVideo.style.zIndex = '-1';
+        els.deckDisplayVideo.classList.add('hidden');
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.remove('hidden');
       if (track) loadTrackLyrics(track.title, track.artist);
@@ -3788,29 +3762,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (els.deckVinylArt) els.deckVinylArt.style.backgroundImage = "url('999_rose_heart_logo.png')";
   }
 
-  // ═══ FAST SPLASH SCREEN DISMISS WITH SMOOTH REVEAL ═══
-  const splash = document.getElementById('app-splash-screen');
-  const splashContainer = document.getElementById('splash-logo-container');
-  if (splash) {
-    // If loading ever takes longer than 2s, update status gracefully
-    const hangTimeout = setTimeout(() => {
-      const statusEl = document.getElementById('splash-status-text');
-      if (statusEl) statusEl.innerText = "Initializing Audio Engine...";
-    }, 1800);
-
-    setTimeout(() => {
-      clearTimeout(hangTimeout);
-      if (splashContainer) {
-        splashContainer.style.transform = 'scale(1.06)';
-        splashContainer.style.opacity = '0';
-      }
-      splash.style.opacity = '0';
-      splash.style.pointerEvents = 'none';
-      setTimeout(() => {
-        try { splash.remove(); } catch(e) {}
-      }, 700);
-    }, 650);
-  }
 
   // ═══ REMEMBER SESSION TOGGLE SETTINGS ═══
   const toggleRemember = document.getElementById('toggle-remember-session');
