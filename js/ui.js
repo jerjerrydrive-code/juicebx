@@ -3804,15 +3804,61 @@ document.addEventListener('DOMContentLoaded', () => {
   setCenterpieceStyle(currentCenterpieceStyle);
 
   const initialState = engine.getState();
-  if (initialState.queue[initialState.currentIndex]) {
+  if (initialState.queue && initialState.currentIndex >= 0 && initialState.queue[initialState.currentIndex]) {
     const t = initialState.queue[initialState.currentIndex];
     updateArtwork(t.id, t.thumb);
     updateAmbientAura(t);
     if (els.deckTrackTitle) els.deckTrackTitle.innerText = t.title;
     if (els.deckTrackArtist) els.deckTrackArtist.innerText = t.artist;
     if (els.miniTitle) els.miniTitle.innerText = t.title;
-    const cassetteLabel = document.getElementById('cassette-track-label');
-    if (cassetteLabel) cassetteLabel.innerText = t.title;
+    if (els.miniArtist) els.miniArtist.innerText = t.artist;
+    if (els.deckTimeTotal && t.duration) els.deckTimeTotal.innerText = t.duration;
+  } else {
+    // Clean first boot appearance
+    if (els.deckTrackTitle) els.deckTrackTitle.innerText = "Juice WRLD 999";
+    if (els.deckTrackArtist) els.deckTrackArtist.innerText = "Tap any shuffle to start";
+    if (els.deckVinylArt) els.deckVinylArt.style.backgroundImage = "url('999_rose_heart_logo.png')";
+  }
+
+  // ═══ FAST SPLASH SCREEN DISMISS WITH SMOOTH REVEAL ═══
+  const splash = document.getElementById('app-splash-screen');
+  const splashContainer = document.getElementById('splash-logo-container');
+  if (splash) {
+    // If loading ever takes longer than 2s, update status gracefully
+    const hangTimeout = setTimeout(() => {
+      const statusEl = document.getElementById('splash-status-text');
+      if (statusEl) statusEl.innerText = "Initializing Audio Engine...";
+    }, 1800);
+
+    setTimeout(() => {
+      clearTimeout(hangTimeout);
+      if (splashContainer) {
+        splashContainer.style.transform = 'scale(1.06)';
+        splashContainer.style.opacity = '0';
+      }
+      splash.style.opacity = '0';
+      splash.style.pointerEvents = 'none';
+      setTimeout(() => {
+        try { splash.remove(); } catch(e) {}
+      }, 700);
+    }, 650);
+  }
+
+  // ═══ REMEMBER SESSION TOGGLE SETTINGS ═══
+  const toggleRemember = document.getElementById('toggle-remember-session');
+  if (toggleRemember) {
+    const isRemember = localStorage.getItem('juicebx_remember_session') !== 'false';
+    toggleRemember.classList.toggle('active', isRemember);
+    toggleRemember.addEventListener('click', () => {
+      const active = toggleRemember.classList.toggle('active');
+      localStorage.setItem('juicebx_remember_session', active ? 'true' : 'false');
+      if (!active) {
+        localStorage.removeItem('juicebx_last_session');
+      }
+      if (typeof showToast === 'function') {
+        showToast(active ? "Session will restore on launch" : "Fresh startup on restart", "info");
+      }
+    });
   }
 
   // ═══ ACCELEROMETER & ROTATION AUTO-VIDEO ENGINE (Default: Off) ═══

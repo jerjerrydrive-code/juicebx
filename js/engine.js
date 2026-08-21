@@ -914,6 +914,17 @@ window.JuiceEngine = (() => {
 
               emit('engine:trackChanged', track);
 
+    // Persist last played session to localStorage if enabled
+    try {
+      if (localStorage.getItem('juicebx_remember_session') !== 'false') {
+        localStorage.setItem('juicebx_last_session', JSON.stringify({
+          track: track,
+          index: index,
+          queue: state.queue.slice(0, 80)
+        }));
+      }
+    } catch(e) {}
+
               emit('engine:stateChanged', state);
 
               return;
@@ -1390,6 +1401,17 @@ window.JuiceEngine = (() => {
 
     if (!track) return;
 
+    // Persist last played session to localStorage if enabled
+    try {
+      if (localStorage.getItem('juicebx_remember_session') !== 'false') {
+        localStorage.setItem('juicebx_last_session', JSON.stringify({
+          track: track,
+          index: index,
+          queue: state.queue.slice(0, 80)
+        }));
+      }
+    } catch(e) {}
+
 
 
     updateMediaSession(track);
@@ -1618,19 +1640,31 @@ window.JuiceEngine = (() => {
 
 
 
-      // Clean Fresh App Boot: Start fresh and clean without forcing any song on startup
+      // Clean App Boot: Check if last session should be restored
+      let sessionRestored = false;
+      try {
+        if (localStorage.getItem('juicebx_remember_session') !== 'false') {
+          const savedSession = JSON.parse(localStorage.getItem('juicebx_last_session'));
+          if (savedSession && savedSession.track && Array.isArray(savedSession.queue) && savedSession.queue.length > 0) {
+            state.queue = savedSession.queue;
+            state.currentIndex = Math.max(0, Math.min(savedSession.index || 0, savedSession.queue.length - 1));
+            state.isPlaying = false;
+            state.currentTime = 0;
+            const cur = state.queue[state.currentIndex];
+            state.duration = cur.seconds || (cur.duration ? parseDuration(cur.duration) : 0);
+            sessionRestored = true;
+          }
+        }
+      } catch(e) {}
 
-      const savedDownloads = api.getDownloads();
-
-      state.queue = (savedDownloads && savedDownloads.length > 0) ? [...savedDownloads] : [];
-
-      state.currentIndex = -1;
-
-      state.isPlaying = false;
-
-      state.currentTime = 0;
-
-      state.duration = 0;
+      if (!sessionRestored) {
+        const savedDownloads = api.getDownloads();
+        state.queue = (savedDownloads && savedDownloads.length > 0) ? [...savedDownloads] : [];
+        state.currentIndex = -1;
+        state.isPlaying = false;
+        state.currentTime = 0;
+        state.duration = 0;
+      }
 
 
 

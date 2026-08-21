@@ -652,6 +652,20 @@
 </head>
 <body class="h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
 
+  <!-- ═══ FAST BOOT SPLASH SCREEN INTRO ═══ -->
+  <div id="app-splash-screen" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center pointer-events-auto transition-all duration-700 ease-out" style="background: #040407;">
+    <!-- Radiant Ambient Light Blobs -->
+    <div class="absolute w-72 h-72 rounded-full blur-3xl opacity-40 pointer-events-none transition-all duration-1000 animate-pulse" style="background: radial-gradient(circle, var(--accent, #a855f7) 0%, var(--pal-2, #ff4f00) 50%, transparent 75%);"></div>
+    
+    <div class="relative z-10 flex flex-col items-center justify-center transform transition-all duration-500 scale-95" id="splash-logo-container">
+      <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-20 sm:h-28 w-auto max-w-[260px] object-contain drop-shadow-[0_8px_32px_rgba(255,79,0,0.8)]">
+      <div class="mt-5 flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/15 backdrop-blur-md bg-white/5 shadow-xl">
+        <span class="w-2 h-2 rounded-full animate-ping" style="background: var(--accent, #ff4f00);"></span>
+        <span class="text-[10px] font-black tracking-widest uppercase text-white/90" id="splash-status-text">999 Tribute Edition</span>
+      </div>
+    </div>
+  </div>
+
   <!-- MAIN APP CONTAINER (Flex Column to guarantee nav bar is always inside visible screen) -->
   <div id="app-frame" class="relative flex flex-col w-[100vw] h-[100dvh] max-w-[100vw] max-h-[100dvh] overflow-hidden" style="background: var(--bg-app);">
 
@@ -882,7 +896,7 @@
                 <div class="vinyl-deck-wrapper relative flex items-center justify-center transition-transform duration-300" id="deck-vinyl-wrapper">
                   <div class="vinyl-platter paused relative transition-all duration-300 shadow-2xl" id="deck-vinyl-platter" style="width: min(220px,58vw,27vh); height: min(220px,58vw,27vh);">
                     <div class="vinyl-grooves"></div>
-                    <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80');"></div>
+                    <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('999_rose_heart_logo.png');"></div>
                     <div class="vinyl-reflection"></div>
                     <div class="spindle-hole cursor-pointer hover:scale-110 active:scale-95 transition-all" id="deck-spindle-tribute" title="999 Forever"></div>
                   </div>
@@ -960,8 +974,8 @@
               </button>
               
               <div class="text-center flex-1 overflow-hidden px-1">
-                <h2 id="deck-track-title" class="font-black text-[20px] sm:text-[22px] tracking-tight truncate leading-snug" style="color: var(--text-primary);">JuiceBx</h2>
-                <p id="deck-track-artist" class="text-xs sm:text-sm font-bold truncate mt-0.5" style="color: var(--text-secondary);">Select a track</p>
+                <h2 id="deck-track-title" class="font-black text-[20px] sm:text-[22px] tracking-tight truncate leading-snug" style="color: var(--text-primary);">Juice WRLD 999</h2>
+                <p id="deck-track-artist" class="text-xs sm:text-sm font-bold truncate mt-0.5" style="color: var(--text-secondary);">Tap any shuffle to start</p>
               </div>
 
               <div class="flex items-center gap-1.5 shrink-0">
@@ -1220,14 +1234,26 @@
                 <div class="toggle-knob"></div>
               </div>
             </div>
+            <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
+              <div>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Remember Last Session</p>
+                <p class="text-xs" style="color: var(--text-tertiary);">Restore last song & queue on boot</p>
+              </div>
+              <div class="toggle-switch active" id="toggle-remember-session">
+                <div class="toggle-knob"></div>
+              </div>
+            </div>
           </div>
 
           <!-- 🎨 Aesthetic Theme Studio & ColorHunt 338-Palette Engine -->
           <div class="glass-card p-4 mb-3 space-y-3">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <button id="btn-settings-palette-icon" class="w-10 h-10 rounded-2xl flex items-center justify-center shadow-lg active:scale-90 transition-transform cursor-pointer border border-white/20" style="background: linear-gradient(135deg, var(--pal-1), var(--pal-2));" title="Cycle Theme Palette">
-                  <i class="ph-fill ph-palette text-white text-lg"></i>
+                <button id="btn-settings-palette-icon" class="w-12 h-12 rounded-full overflow-hidden flex flex-col shadow-lg active:scale-90 transition-transform cursor-pointer border-2 border-white/20 shrink-0" title="Tap to Cycle, Long-press to Save Theme">
+                  <div class="flex-1 w-full" style="background: var(--pal-1)"></div>
+                  <div class="flex-1 w-full" style="background: var(--pal-2)"></div>
+                  <div class="flex-1 w-full" style="background: var(--pal-3)"></div>
+                  <div class="flex-1 w-full" style="background: var(--pal-4)"></div>
                 </button>
                 <div>
                   <p class="font-bold text-sm" style="color: var(--text-primary);">Theme Engine (338 Palettes)</p>
