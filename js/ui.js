@@ -1,7 +1,15 @@
-// JuiceBx UI Controller — Master Edition with Dedicated Search & Rabbit R1 Mode
 document.addEventListener('DOMContentLoaded', () => {
   const engine = window.JuiceEngine;
   if (!engine) { console.error("JuiceEngine not found."); return; }
+
+  // iOS Safari Audio Context Unlocker
+  const unlocker = () => {
+    if (engine.unlockAudio) engine.unlockAudio();
+    document.body.removeEventListener('click', unlocker);
+    document.body.removeEventListener('touchstart', unlocker);
+  };
+  document.body.addEventListener('click', unlocker);
+  document.body.addEventListener('touchstart', unlocker);
 
   // ═══ CLIENT-SIDE SEARCH CACHE ═══
   const clientSearchCache = new Map();

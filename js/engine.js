@@ -682,6 +682,14 @@ window.JuiceEngine = (() => {
       emit('engine:queueUpdated', state.queue);
       emit('engine:stateChanged', state);
     },
+    unlockAudio: () => {
+      // Force unlock iOS Safari audio context on first user interaction
+      initLocalAudio();
+      if (localAudio && localAudio.paused && !localAudio.src) {
+        localAudio.src = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU2LjM2LjEwMAAAAAAAAAAAAAAA//OEAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAABIAD+//7+////////////////////////////////////////////////////////AAAAAExhdmM1Ni40MS4xMDAAAAAAAAAAAAAAAAEkEQAAAAAAAAAASQRFgEAAQAAAAAAAAAA//OEAAAAAAAAAAAAAAABXAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ==';
+        localAudio.play().then(() => localAudio.pause()).catch(() => {});
+      }
+    },
     togglePlay: () => {
       const track = state.queue[state.currentIndex];
       if (track && (track.isLocal || track.isDirectAudio) && localAudio) {
