@@ -3546,36 +3546,36 @@ document.addEventListener('DOMContentLoaded', () => {
       const isLight = document.body.classList.contains('light-mode');
 
       if (!isLight) {
-        // Dark Mode: Deep themeing using all 4 palette colors
-        root.setProperty('--bg-app', `color-mix(in srgb, ${c4} 45%, #030408)`);
-        root.setProperty('--bg-panel', `color-mix(in srgb, ${c4} 45%, #030408)`);
-        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 26%, rgba(18, 19, 26, 0.75))`);
-        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c4} 40%, #0d0e14)`);
-        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 32%, rgba(27, 28, 38, 0.55))`);
-        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 42%, rgba(10, 11, 16, 0.90))`);
-        root.setProperty('--bg-mini', `color-mix(in srgb, ${c4} 45%, rgba(18, 19, 26, 0.92))`);
+        // Dark Mode: Translucent frosted glass themeing letting M3 shapes shine through
+        root.setProperty('--bg-app', '#05060a');
+        root.setProperty('--bg-panel', 'transparent');
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 20%, rgba(18, 20, 30, 0.60))`);
+        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c4} 35%, #0d0e16)`);
+        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 25%, rgba(27, 28, 42, 0.55))`);
+        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 30%, rgba(10, 11, 18, 0.85))`);
+        root.setProperty('--bg-mini', `color-mix(in srgb, ${c4} 30%, rgba(18, 19, 28, 0.85))`);
         root.setProperty('--text-primary', '#ffffff');
         root.setProperty('--text-secondary', '#94a3b8');
         root.setProperty('--text-tertiary', '#64748b');
-        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 24%, rgba(255, 255, 255, 0.08))`);
-        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 28%, rgba(255, 255, 255, 0.12))`);
+        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 28%, rgba(255, 255, 255, 0.10))`);
+        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 32%, rgba(255, 255, 255, 0.14))`);
         root.setProperty('--btn-active-bg', 'rgba(255, 255, 255, 0.95)');
         root.setProperty('--btn-active-text', '#000000');
-        root.setProperty('--shadow-card', '0 24px 48px -12px rgba(0, 0, 0, 0.8)');
+        root.setProperty('--shadow-card', '0 24px 48px -12px rgba(0, 0, 0, 0.65)');
       } else {
-        // Light Mode: Clean high-contrast white ceramic glass themeing
-        root.setProperty('--bg-app', `color-mix(in srgb, ${c4} 8%, #f4f5fa)`);
-        root.setProperty('--bg-panel', `color-mix(in srgb, ${c4} 8%, #f4f5fa)`);
-        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 10%, rgba(255, 255, 255, 0.92))`);
+        // Light Mode: Translucent frosted white ceramic glass themeing
+        root.setProperty('--bg-app', '#f6f7fb');
+        root.setProperty('--bg-panel', 'transparent');
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 12%, rgba(255, 255, 255, 0.72))`);
         root.setProperty('--bg-card-solid', '#ffffff');
-        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 6%, rgba(238, 240, 246, 0.95))`);
-        root.setProperty('--bg-nav', 'rgba(255, 255, 255, 0.95)');
-        root.setProperty('--bg-mini', 'rgba(255, 255, 255, 0.95)');
+        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 6%, rgba(238, 240, 248, 0.85))`);
+        root.setProperty('--bg-nav', 'rgba(255, 255, 255, 0.88)');
+        root.setProperty('--bg-mini', 'rgba(255, 255, 255, 0.90)');
         root.setProperty('--text-primary', '#0f172a');
         root.setProperty('--text-secondary', '#334155');
         root.setProperty('--text-tertiary', '#64748b');
-        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 18%, rgba(0, 0, 0, 0.08))`);
-        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 22%, rgba(0, 0, 0, 0.12))`);
+        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 20%, rgba(0, 0, 0, 0.08))`);
+        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 24%, rgba(0, 0, 0, 0.12))`);
         root.setProperty('--btn-active-bg', '#0f172a');
         root.setProperty('--btn-active-text', '#ffffff');
         root.setProperty('--shadow-card', '0 16px 32px -8px rgba(0, 0, 0, 0.08)');
@@ -3684,6 +3684,97 @@ document.addEventListener('DOMContentLoaded', () => {
     showToast('Stream unavailable for "' + name + '" — skipping...', 'error', 3500);
   });
 
+
+  // ═══ REAL-TIME AUDIO REACTIVITY & MUSIC VIBES CONTROLLER ═══
+  let audioReactivityRAF = null;
+  function startAudioReactivity() {
+    const vinylPlatter = document.getElementById('deck-vinyl-platter');
+    const auraGlow = document.getElementById('ambient-aura-glow');
+    const m3Shape1 = document.getElementById('m3-shape-1');
+    const m3Shape2 = document.getElementById('m3-shape-2');
+    const m3Shape3 = document.getElementById('m3-shape-3');
+    const m3Shape4 = document.getElementById('m3-shape-4');
+    const playBtn = document.getElementById('deck-btn-play');
+    const miniWaveBars = document.querySelectorAll('.mini-wave-bar');
+
+    function tick() {
+      const state = engine.getState();
+      if (state && state.isPlaying) {
+        const levels = engine.getAudioLevels ? engine.getAudioLevels() : { bass: 0.5, energy: 0.5, mid: 0.5, treble: 0.5 };
+        const bass = levels.bass || 0;
+        const energy = levels.energy || 0;
+        const mid = levels.mid || 0;
+        const treble = levels.treble || 0;
+
+        // 1. Reactive Vinyl bounce on bass kick
+        if (vinylPlatter && !vinylPlatter.classList.contains('paused')) {
+          const vScale = 1.0 + (bass * 0.045);
+          vinylPlatter.style.transform = `translateZ(0) scale(${vScale.toFixed(3)})`;
+        }
+
+        // 2. Reactive Ambient Aura glow pulse
+        if (auraGlow) {
+          const auraScale = 1.0 + (energy * 0.35);
+          const auraOpacity = 0.28 + (bass * 0.35);
+          auraGlow.style.transform = `translateX(-50%) scale(${auraScale.toFixed(2)})`;
+          auraGlow.style.opacity = auraOpacity.toFixed(2);
+        }
+
+        // 3. Reactive Material 3 Floating Shapes (Luminous & Alive)
+        if (m3Shape1) {
+          m3Shape1.style.opacity = (0.45 + bass * 0.35).toFixed(2);
+          m3Shape1.style.transform = `scale(${(1.0 + bass * 0.15).toFixed(3)})`;
+        }
+        if (m3Shape2) {
+          m3Shape2.style.opacity = (0.40 + energy * 0.32).toFixed(2);
+          m3Shape2.style.transform = `scale(${(1.0 + energy * 0.14).toFixed(3)})`;
+        }
+        if (m3Shape3) {
+          m3Shape3.style.opacity = (0.35 + mid * 0.30).toFixed(2);
+          m3Shape3.style.transform = `scale(${(1.0 + mid * 0.12).toFixed(3)})`;
+        }
+        if (m3Shape4) {
+          m3Shape4.style.opacity = (0.30 + treble * 0.25).toFixed(2);
+        }
+
+        // 4. Play Button energetic pulse
+        if (playBtn) {
+          playBtn.style.boxShadow = `0 0 ${(16 + bass * 28).toFixed(0)}px var(--accent-glow, rgba(255,120,40,0.6)), 0 12px 24px rgba(0,0,0,0.5)`;
+        }
+
+        // 5. Mini-player soundwave bars
+        if (miniWaveBars && miniWaveBars.length > 0) {
+          const freqs = [bass, mid, energy, treble];
+          miniWaveBars.forEach((bar, i) => {
+            const h = Math.max(3, Math.min(18, (freqs[i % freqs.length] || 0.3) * 20));
+            bar.style.height = `${h.toFixed(1)}px`;
+          });
+        }
+      } else {
+        if (vinylPlatter && vinylPlatter.classList.contains('paused')) {
+          vinylPlatter.style.transform = `translateZ(0) scale(0.96)`;
+        }
+        if (auraGlow) {
+          auraGlow.style.transform = `translateX(-50%) scale(1.0)`;
+          auraGlow.style.opacity = '0.25';
+        }
+        if (playBtn) {
+          playBtn.style.boxShadow = '0 12px 24px rgba(0,0,0,0.4)';
+        }
+        if (miniWaveBars && miniWaveBars.length > 0) {
+          miniWaveBars.forEach(bar => { bar.style.height = '3px'; });
+        }
+      }
+
+      audioReactivityRAF = requestAnimationFrame(tick);
+    }
+
+    if (!audioReactivityRAF) {
+      audioReactivityRAF = requestAnimationFrame(tick);
+    }
+  }
+
+  startAudioReactivity();
   engine.init();
   refreshCurrentLibrary();
   setCenterpieceStyle(currentCenterpieceStyle);
