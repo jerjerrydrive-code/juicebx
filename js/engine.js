@@ -672,17 +672,14 @@ window.JuiceEngine = (() => {
         } catch(e) {}
       }
 
-      // Load saved local/downloaded tracks into storage
+      // Clean Fresh App Boot: Start fresh and clean without forcing any song on startup
       const savedDownloads = api.getDownloads();
-      if (savedDownloads.length > 0) {
-        // Prepend downloaded items
-        const combined = [...savedDownloads, ...DEFAULT_LIBRARY.filter(d => !savedDownloads.some(s => s.id === d.id))];
-        state.queue = combined;
-      } else {
-        state.queue = [...DEFAULT_LIBRARY];
-      }
+      state.queue = (savedDownloads && savedDownloads.length > 0) ? [...savedDownloads] : [];
+      state.currentIndex = -1;
+      state.isPlaying = false;
+      state.currentTime = 0;
+      state.duration = 0;
 
-      loadTrack(0, false);
       emit('engine:queueUpdated', state.queue);
       emit('engine:stateChanged', state);
 
@@ -748,6 +745,16 @@ window.JuiceEngine = (() => {
       }
     },
     togglePlay: () => {
+      if (state.currentIndex === -1 || !state.queue[state.currentIndex]) {
+        if (state.queue.length > 0) {
+          loadTrack(0, true);
+          return;
+        }
+        if (typeof window.launchGenreShuffle === 'function') {
+          window.launchGenreShuffle('hiphop_top100');
+          return;
+        }
+      }
       const track = state.queue[state.currentIndex];
       if (track && (track.isLocal || track.isDirectAudio) && localAudio) {
         if (localAudio.paused) {

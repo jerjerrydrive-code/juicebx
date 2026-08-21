@@ -1,4 +1,4 @@
-const CACHE_NAME = 'juicebx-v3.2-shuffles-video-rotate';
+const CACHE_NAME = 'juicebx-v3.3-100-shuffles-clean-boot';
 const ASSETS = [
   './',
   './index.html',

@@ -1947,7 +1947,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (miniPlayer) {
-      if (currentPanelIndex !== 2 && state.queue.length > 0) {
+      if (currentPanelIndex !== 2 && state.queue.length > 0 && state.currentIndex >= 0) {
         miniPlayer.classList.remove('hidden');
       } else {
         miniPlayer.classList.add('hidden');
