@@ -251,7 +251,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://i.ytimg.com/vi/6k8L1P4M3Gw/hqdefault.jpg"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'll%20Be%20Fine_Juice_WRLD",
         "title": "I'll Be Fine",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -259,7 +259,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Used%20To_Juice_WRLD",
         "title": "Used To",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -267,7 +267,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Candles_Juice_WRLD",
         "title": "Candles",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -275,7 +275,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scared%20of%20Love_Juice_WRLD",
         "title": "Scared of Love",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -283,7 +283,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hurt%20Me_Juice_WRLD",
         "title": "Hurt Me",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -291,7 +291,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'm%20Still_Juice_WRLD",
         "title": "I'm Still",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -299,7 +299,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_End%20of%20the%20Road_Juice_WRLD",
         "title": "End of the Road",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -307,7 +307,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Long%20Gone_Juice_WRLD",
         "title": "Long Gone",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -315,7 +315,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Empty_Juice_WRLD",
         "title": "Empty",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -323,7 +323,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Maze_Juice_WRLD",
         "title": "Maze",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -331,7 +331,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_HeMotions_Juice_WRLD",
         "title": "HeMotions",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -339,7 +339,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Demonz_Juice_WRLD",
         "title": "Demonz",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -347,7 +347,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Big_Juice_WRLD",
         "title": "Big",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -355,7 +355,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feeling_Juice_WRLD",
         "title": "Feeling",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -363,7 +363,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Syphilis_Juice_WRLD",
         "title": "Syphilis",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -371,7 +371,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Who%20Shot%20Cupid%3F_Juice_WRLD",
         "title": "Who Shot Cupid?",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -379,7 +379,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ring%20Ring_Juice_WRLD",
         "title": "Ring Ring",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -387,7 +387,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Desire_Juice_WRLD",
         "title": "Desire",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -395,7 +395,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Out%20My%20Way_Juice_WRLD",
         "title": "Out My Way",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -403,7 +403,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Bees%20Knees_Juice_WRLD",
         "title": "The Bees Knees",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -411,7 +411,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ON%20GOD_Juice_WRLD",
         "title": "ON GOD",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -419,7 +419,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_10%20Feet_Juice_WRLD",
         "title": "10 Feet",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -427,7 +427,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Won't%20Let%20Go_Juice_WRLD",
         "title": "Won't Let Go",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -435,7 +435,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_She's%20The%20One_Juice_WRLD",
         "title": "She's The One",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -443,7 +443,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rider_Juice_WRLD",
         "title": "Rider",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -451,7 +451,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Make%20Believe_Juice_WRLD",
         "title": "Make Believe",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -459,7 +459,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fine%20China_Juice_WRLD",
         "title": "Fine China",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -467,7 +467,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Astronauts_Juice_WRLD",
         "title": "Astronauts",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -475,7 +475,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Red%20Bentley_Juice_WRLD",
         "title": "Red Bentley",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -483,7 +483,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hard%20Work%20Pays%20Off_Juice_WRLD",
         "title": "Hard Work Pays Off",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -491,7 +491,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Shorty_Juice_WRLD",
         "title": "Shorty",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -499,7 +499,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Realer%20N%20Realer_Juice_WRLD",
         "title": "Realer N Realer",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -507,7 +507,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Different_Juice_WRLD",
         "title": "Different",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -515,7 +515,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ain't%20Livin%20Right_Juice_WRLD",
         "title": "Ain't Livin Right",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -523,7 +523,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_7%20AM%20Freestyle_Juice_WRLD",
         "title": "7 AM Freestyle",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -531,7 +531,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_WRLD%20On%20Drugs_Juice_WRLD",
         "title": "WRLD On Drugs",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -539,7 +539,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Afterlife_Juice_WRLD",
         "title": "Afterlife",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -547,7 +547,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Transformer_Juice_WRLD",
         "title": "Transformer",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -555,7 +555,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Issue_Juice_WRLD",
         "title": "No Issue",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -563,7 +563,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rich%20Ashell_Juice_WRLD",
         "title": "Rich Ashell",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -571,7 +571,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Autograph_Juice_WRLD",
         "title": "Autograph",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -579,7 +579,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Moonlight_Juice_WRLD",
         "title": "Moonlight",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -587,7 +587,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Eye%20Contact_Juice_WRLD",
         "title": "Eye Contact",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -595,7 +595,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Paranoid_Juice_WRLD",
         "title": "Paranoid",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -603,7 +603,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rainbow_Juice_WRLD",
         "title": "Rainbow",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -611,7 +611,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Two%20Cups_Juice_WRLD",
         "title": "Two Cups",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -619,7 +619,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Until%20The%20Plug_Juice_WRLD",
         "title": "Until The Plug",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -627,7 +627,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Not%20Enough_Juice_WRLD",
         "title": "Not Enough",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -635,7 +635,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feline_Juice_WRLD",
         "title": "Feline",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -643,7 +643,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Relocate_Juice_WRLD",
         "title": "Relocate",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -651,7 +651,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_You%20Wouldn't%20Understand_Juice_WRLD",
         "title": "You Wouldn't Understand",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -659,7 +659,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rockstar%20In%20His%20Prime_Juice_WRLD",
         "title": "Rockstar In His Prime",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -667,7 +667,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Doom_Juice_WRLD",
         "title": "Doom",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -675,7 +675,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Go%20Hard%202.0_Juice_WRLD",
         "title": "Go Hard 2.0",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -683,7 +683,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Girl%20Of%20My%20Dreams_Juice_WRLD",
         "title": "Girl Of My Dreams",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -691,7 +691,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_From%20My%20Window_Juice_WRLD",
         "title": "From My Window",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -699,7 +699,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20My%20Head_Juice_WRLD",
         "title": "In My Head",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -707,7 +707,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Face%202%20Face_Juice_WRLD",
         "title": "Face 2 Face",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -715,7 +715,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Light_Juice_WRLD",
         "title": "The Light",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -723,7 +723,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Glowed%20Up_Juice_WRLD",
         "title": "Glowed Up",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -731,7 +731,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lace%20It_Juice_WRLD",
         "title": "Lace It",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -739,7 +739,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Both%20Ways_Juice_WRLD",
         "title": "Both Ways",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -747,7 +747,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cavalier_Juice_WRLD",
         "title": "Cavalier",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -755,7 +755,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Aquafina_Juice_WRLD",
         "title": "Aquafina",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -763,7 +763,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_AGATS%202_Juice_WRLD",
         "title": "AGATS 2",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -771,7 +771,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Celebrate_Juice_WRLD",
         "title": "Celebrate",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -779,7 +779,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Best%20of%20Me_Juice_WRLD",
         "title": "Best of Me",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -787,7 +787,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Telepathy%20pt%202_Juice_WRLD",
         "title": "Telepathy pt 2",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -795,7 +795,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20Me%20Know%20(I%20Wonder%20Why)_Juice_WRLD",
         "title": "Let Me Know (I Wonder Why)",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -803,7 +803,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Roses%20(with%20benny%20blanco)_Juice_WRLD",
         "title": "Roses (with benny blanco)",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -2031,7 +2031,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-amber-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_FE!N%20(feat.%20Playboi%20Carti)_Travis%20Scott",
         "title": "FE!N (feat. Playboi Carti)",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2039,7 +2039,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SICKO%20MODE_Travis%20Scott",
         "title": "SICKO MODE",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2047,7 +2047,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Goosebumps_Travis%20Scott",
         "title": "Goosebumps",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2055,7 +2055,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Antidote_Travis%20Scott",
         "title": "Antidote",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2063,7 +2063,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_MY%20EYES_Travis%20Scott",
         "title": "MY EYES",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2071,7 +2071,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_TELEKINESIS_Travis%20Scott",
         "title": "TELEKINESIS",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2079,7 +2079,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_HIGHEST%20IN%20THE%20ROOM_Travis%20Scott",
         "title": "HIGHEST IN THE ROOM",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2087,7 +2087,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_BUTTERFLY%20EFFECT_Travis%20Scott",
         "title": "BUTTERFLY EFFECT",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2095,7 +2095,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_STARGAZING_Travis%20Scott",
         "title": "STARGAZING",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2103,7 +2103,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_MELTDOWN_Travis%20Scott",
         "title": "MELTDOWN",
         "artist": "Travis Scott",
         "duration": "3:15",
@@ -2111,7 +2111,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_God's%20Plan_Drake",
         "title": "God's Plan",
         "artist": "Drake",
         "duration": "3:15",
@@ -2119,7 +2119,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20Dance_Drake",
         "title": "One Dance",
         "artist": "Drake",
         "duration": "3:15",
@@ -2127,7 +2127,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hotline%20Bling_Drake",
         "title": "Hotline Bling",
         "artist": "Drake",
         "duration": "3:15",
@@ -2135,7 +2135,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20My%20Feelings_Drake",
         "title": "In My Feelings",
         "artist": "Drake",
         "duration": "3:15",
@@ -2143,7 +2143,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rich%20Baby%20Daddy_Drake",
         "title": "Rich Baby Daddy",
         "artist": "Drake",
         "duration": "3:15",
@@ -2151,7 +2151,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_First%20Person%20Shooter_Drake",
         "title": "First Person Shooter",
         "artist": "Drake",
         "duration": "3:15",
@@ -2159,7 +2159,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nonstop_Drake",
         "title": "Nonstop",
         "artist": "Drake",
         "duration": "3:15",
@@ -2167,7 +2167,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nice%20For%20What_Drake",
         "title": "Nice For What",
         "artist": "Drake",
         "duration": "3:15",
@@ -2175,7 +2175,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Laugh%20Now%20Cry%20Later_Drake",
         "title": "Laugh Now Cry Later",
         "artist": "Drake",
         "duration": "3:15",
@@ -2183,7 +2183,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Jimmy%20Cooks_Drake",
         "title": "Jimmy Cooks",
         "artist": "Drake",
         "duration": "3:15",
@@ -2191,7 +2191,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Not%20Like%20Us_Kendrick%20Lamar",
         "title": "Not Like Us",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2199,7 +2199,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_HUMBLE._Kendrick%20Lamar",
         "title": "HUMBLE.",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2207,7 +2207,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_DNA._Kendrick%20Lamar",
         "title": "DNA.",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2215,7 +2215,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Alright_Kendrick%20Lamar",
         "title": "Alright",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2223,7 +2223,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Swimming%20Pools_Kendrick%20Lamar",
         "title": "Swimming Pools",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2231,7 +2231,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_LOVE._Kendrick%20Lamar",
         "title": "LOVE.",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2239,7 +2239,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_King%20Kunta_Kendrick%20Lamar",
         "title": "King Kunta",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2247,7 +2247,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Money%20Trees_Kendrick%20Lamar",
         "title": "Money Trees",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2255,7 +2255,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_euphoria_Kendrick%20Lamar",
         "title": "euphoria",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2263,7 +2263,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20The%20Stars_Kendrick%20Lamar",
         "title": "All The Stars",
         "artist": "Kendrick Lamar",
         "duration": "3:15",
@@ -2271,7 +2271,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Like%20That_Future",
         "title": "Like That",
         "artist": "Future",
         "duration": "3:15",
@@ -2279,7 +2279,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mask%20Off_Future",
         "title": "Mask Off",
         "artist": "Future",
         "duration": "3:15",
@@ -2287,7 +2287,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Life%20Is%20Good_Future",
         "title": "Life Is Good",
         "artist": "Future",
         "duration": "3:15",
@@ -2295,7 +2295,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_March%20Madness_Future",
         "title": "March Madness",
         "artist": "Future",
         "duration": "3:15",
@@ -2303,7 +2303,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Solo_Future",
         "title": "Solo",
         "artist": "Future",
         "duration": "3:15",
@@ -2311,7 +2311,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wait%20For%20U_Future",
         "title": "Wait For U",
         "artist": "Future",
         "duration": "3:15",
@@ -2319,7 +2319,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Codeine%20Crazy_Future",
         "title": "Codeine Crazy",
         "artist": "Future",
         "duration": "3:15",
@@ -2327,7 +2327,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fuck%20Up%20Some%20Commas_Future",
         "title": "Fuck Up Some Commas",
         "artist": "Future",
         "duration": "3:15",
@@ -2335,7 +2335,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Low%20Life_Future",
         "title": "Low Life",
         "artist": "Future",
         "duration": "3:15",
@@ -2343,7 +2343,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Type%20Shit_Future",
         "title": "Type Shit",
         "artist": "Future",
         "duration": "3:15",
@@ -2351,7 +2351,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_redrum_21%20Savage",
         "title": "redrum",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2359,7 +2359,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bank%20Account_21%20Savage",
         "title": "Bank Account",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2367,7 +2367,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_a%20lot_21%20Savage",
         "title": "a lot",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2375,7 +2375,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Runnin_21%20Savage",
         "title": "Runnin",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2383,7 +2383,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Glock%20In%20My%20Lap_21%20Savage",
         "title": "Glock In My Lap",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2391,7 +2391,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ball%20w%2Fo%20you_21%20Savage",
         "title": "ball w/o you",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2399,7 +2399,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_nee-nah_21%20Savage",
         "title": "nee-nah",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2407,7 +2407,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_X_21%20Savage",
         "title": "X",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2415,7 +2415,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_10%20Freaky%20Girls_21%20Savage",
         "title": "10 Freaky Girls",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2423,7 +2423,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Heart_21%20Savage",
         "title": "No Heart",
         "artist": "21 Savage",
         "duration": "3:15",
@@ -2431,7 +2431,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_XO%20Tour%20Llif3_Lil%20Uzi%20Vert",
         "title": "XO Tour Llif3",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2439,7 +2439,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Just%20Wanna%20Rock_Lil%20Uzi%20Vert",
         "title": "Just Wanna Rock",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2447,7 +2447,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_20%20Min_Lil%20Uzi%20Vert",
         "title": "20 Min",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2455,7 +2455,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Way%20Life%20Goes_Lil%20Uzi%20Vert",
         "title": "The Way Life Goes",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2463,7 +2463,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Money%20Longer_Lil%20Uzi%20Vert",
         "title": "Money Longer",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2471,7 +2471,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sauce%20It%20Up_Lil%20Uzi%20Vert",
         "title": "Sauce It Up",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2479,7 +2479,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Do%20What%20I%20Want_Lil%20Uzi%20Vert",
         "title": "Do What I Want",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2487,7 +2487,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Myron_Lil%20Uzi%20Vert",
         "title": "Myron",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2495,7 +2495,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sanguine%20Paradise_Lil%20Uzi%20Vert",
         "title": "Sanguine Paradise",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2503,7 +2503,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ps%20%26%20Qs_Lil%20Uzi%20Vert",
         "title": "Ps & Qs",
         "artist": "Lil Uzi Vert",
         "duration": "3:15",
@@ -2511,7 +2511,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Magnolia_Playboi%20Carti",
         "title": "Magnolia",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2519,7 +2519,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sky_Playboi%20Carti",
         "title": "Sky",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2527,7 +2527,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Shoota_Playboi%20Carti",
         "title": "Shoota",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2535,7 +2535,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_wokeuplikethis*_Playboi%20Carti",
         "title": "wokeuplikethis*",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2543,7 +2543,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Vamp%20Anthem_Playboi%20Carti",
         "title": "Vamp Anthem",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2551,7 +2551,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Location_Playboi%20Carti",
         "title": "Location",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2559,7 +2559,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_R.I.P._Playboi%20Carti",
         "title": "R.I.P.",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2567,7 +2567,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_FE!N%20Verse_Playboi%20Carti",
         "title": "FE!N Verse",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2575,7 +2575,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ILoveUIHateU_Playboi%20Carti",
         "title": "ILoveUIHateU",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2583,7 +2583,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Stop%20Breathing_Playboi%20Carti",
         "title": "Stop Breathing",
         "artist": "Playboi Carti",
         "duration": "3:15",
@@ -2591,7 +2591,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_fukumean_Gunna",
         "title": "fukumean",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2599,7 +2599,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drip%20Too%20Hard_Gunna",
         "title": "Drip Too Hard",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2607,7 +2607,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_pushin%20P_Gunna",
         "title": "pushin P",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2615,7 +2615,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Top%20Off_Gunna",
         "title": "Top Off",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2623,7 +2623,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_bread%20%26%20butter_Gunna",
         "title": "bread & butter",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2631,7 +2631,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Space%20Cadet_Gunna",
         "title": "Space Cadet",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2639,7 +2639,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Banking%20On%20Me_Gunna",
         "title": "Banking On Me",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2647,7 +2647,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_P%20power_Gunna",
         "title": "P power",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2655,7 +2655,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_rodeo%20dr_Gunna",
         "title": "rodeo dr",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2663,7 +2663,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_prada%20dem_Gunna",
         "title": "prada dem",
         "artist": "Gunna",
         "duration": "3:15",
@@ -2671,7 +2671,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Creepin'_Metro%20Boomin",
         "title": "Creepin'",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2679,7 +2679,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Superhero_Metro%20Boomin",
         "title": "Superhero",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2687,7 +2687,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Too%20Many%20Nights_Metro%20Boomin",
         "title": "Too Many Nights",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2695,7 +2695,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Trance_Metro%20Boomin",
         "title": "Trance",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2703,7 +2703,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Annoyance_Metro%20Boomin",
         "title": "Annoyance",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2711,7 +2711,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Space%20Cadet_Metro%20Boomin",
         "title": "Space Cadet",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2719,7 +2719,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Niagara%20Falls_Metro%20Boomin",
         "title": "Niagara Falls",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2727,7 +2727,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Glock%20In%20My%20Lap_Metro%20Boomin",
         "title": "Glock In My Lap",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2735,7 +2735,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Complaints_Metro%20Boomin",
         "title": "No Complaints",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2743,7 +2743,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Overdue_Metro%20Boomin",
         "title": "Overdue",
         "artist": "Metro Boomin",
         "duration": "3:15",
@@ -2751,7 +2751,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drip%20Too%20Hard_Lil%20Baby",
         "title": "Drip Too Hard",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2759,7 +2759,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Freestyle_Lil%20Baby",
         "title": "Freestyle",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2767,7 +2767,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Yes%20Indeed_Lil%20Baby",
         "title": "Yes Indeed",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2775,7 +2775,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Woah_Lil%20Baby",
         "title": "Woah",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2783,7 +2783,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Bigger%20Picture_Lil%20Baby",
         "title": "The Bigger Picture",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2791,7 +2791,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Pure%20Cocaine_Lil%20Baby",
         "title": "Pure Cocaine",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2799,7 +2799,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Close%20Friends_Lil%20Baby",
         "title": "Close Friends",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2807,7 +2807,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_We%20Paid_Lil%20Baby",
         "title": "We Paid",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2815,7 +2815,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_My%20Dawg_Lil%20Baby",
         "title": "My Dawg",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2823,7 +2823,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20A%20Minute_Lil%20Baby",
         "title": "In A Minute",
         "artist": "Lil Baby",
         "duration": "3:15",
@@ -2841,7 +2841,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-blue-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lucid%20Dreams_Juice%20WRLD",
         "title": "Lucid Dreams",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2849,7 +2849,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Robbery_Juice%20WRLD",
         "title": "Robbery",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2857,7 +2857,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Girls%20Are%20The%20Same_Juice%20WRLD",
         "title": "All Girls Are The Same",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2865,7 +2865,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wishing%20Well_Juice%20WRLD",
         "title": "Wishing Well",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2873,7 +2873,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lean%20Wit%20Me_Juice%20WRLD",
         "title": "Lean Wit Me",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2881,7 +2881,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Righteous_Juice%20WRLD",
         "title": "Righteous",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2889,7 +2889,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Already%20Dead_Juice%20WRLD",
         "title": "Already Dead",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2897,7 +2897,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cigarettes_Juice%20WRLD",
         "title": "Cigarettes",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2905,7 +2905,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Burn_Juice%20WRLD",
         "title": "Burn",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2913,7 +2913,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Legends_Juice%20WRLD",
         "title": "Legends",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -2921,7 +2921,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Star%20Shopping_Lil%20Peep",
         "title": "Star Shopping",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -2929,7 +2929,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Save%20That%20Shit_Lil%20Peep",
         "title": "Save That Shit",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -2937,7 +2937,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Falling%20Down%20(with%20XXXTENTACION)_Lil%20Peep",
         "title": "Falling Down (with XXXTENTACION)",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -2945,7 +2945,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Witchblades%20(with%20Lil%20Tracy)_Lil%20Peep",
         "title": "Witchblades (with Lil Tracy)",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -2953,7 +2953,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Awful%20Things_Lil%20Peep",
         "title": "Awful Things",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -2961,7 +2961,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Benz%20Truck_Lil%20Peep",
         "title": "Benz Truck",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -2969,7 +2969,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Crybaby_Lil%20Peep",
         "title": "Crybaby",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -2977,7 +2977,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Beamer%20Boy_Lil%20Peep",
         "title": "Beamer Boy",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -2985,7 +2985,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Life%20is%20Beautiful_Lil%20Peep",
         "title": "Life is Beautiful",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -2993,7 +2993,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nuts_Lil%20Peep",
         "title": "Nuts",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -3001,7 +3001,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SAD!_XXXTENTACION",
         "title": "SAD!",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3009,7 +3009,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Moonlight_XXXTENTACION",
         "title": "Moonlight",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3017,7 +3017,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Jocelyn%20Flores_XXXTENTACION",
         "title": "Jocelyn Flores",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3025,7 +3025,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Look%20At%20Me!_XXXTENTACION",
         "title": "Look At Me!",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3033,7 +3033,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Changes_XXXTENTACION",
         "title": "Changes",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3041,7 +3041,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hope_XXXTENTACION",
         "title": "Hope",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3049,7 +3049,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Everybody%20Dies%20In%20Their%20Nightmares_XXXTENTACION",
         "title": "Everybody Dies In Their Nightmares",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3057,7 +3057,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Revenge_XXXTENTACION",
         "title": "Revenge",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3065,7 +3065,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_NUMB_XXXTENTACION",
         "title": "NUMB",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3073,7 +3073,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_the%20remedy%20for%20a%20broken%20heart_XXXTENTACION",
         "title": "the remedy for a broken heart",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -3081,7 +3081,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Topanga_Trippie%20Redd",
         "title": "Topanga",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3089,7 +3089,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Love%20Scars_Trippie%20Redd",
         "title": "Love Scars",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3097,7 +3097,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dark%20Knight%20Dummo%20(feat.%20Travis%20Scott)_Trippie%20Redd",
         "title": "Dark Knight Dummo (feat. Travis Scott)",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3105,7 +3105,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Taking%20A%20Walk_Trippie%20Redd",
         "title": "Taking A Walk",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3113,7 +3113,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wish%20(with%20Diplo)_Trippie%20Redd",
         "title": "Wish (with Diplo)",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3121,7 +3121,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Miss%20The%20Rage%20(feat.%20Playboi%20Carti)_Trippie%20Redd",
         "title": "Miss The Rage (feat. Playboi Carti)",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3129,7 +3129,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fuck%20Love%20Verse_Trippie%20Redd",
         "title": "Fuck Love Verse",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3137,7 +3137,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Grinch_Trippie%20Redd",
         "title": "The Grinch",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3145,7 +3145,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_1400%20%2F%20999%20Freestyle_Trippie%20Redd",
         "title": "1400 / 999 Freestyle",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3153,7 +3153,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hurts%20Me_Trippie%20Redd",
         "title": "Hurts Me",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -3161,7 +3161,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_STAY%20(with%20Justin%20Bieber)_The%20Kid%20LAROI",
         "title": "STAY (with Justin Bieber)",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3169,7 +3169,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_WITHOUT%20YOU_The%20Kid%20LAROI",
         "title": "WITHOUT YOU",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3177,7 +3177,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SO%20DONE_The%20Kid%20LAROI",
         "title": "SO DONE",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3185,7 +3185,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ALWAYS%20DO_The%20Kid%20LAROI",
         "title": "ALWAYS DO",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3193,7 +3193,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_TELL%20ME%20WHY_The%20Kid%20LAROI",
         "title": "TELL ME WHY",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3201,7 +3201,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_GO%20(feat.%20Juice%20WRLD)_The%20Kid%20LAROI",
         "title": "GO (feat. Juice WRLD)",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3209,7 +3209,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_NIGHTS%20LIKE%20THIS_The%20Kid%20LAROI",
         "title": "NIGHTS LIKE THIS",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3217,7 +3217,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_BLEED_The%20Kid%20LAROI",
         "title": "BLEED",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3225,7 +3225,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_TRAGIC%20(feat.%20YoungBoy)_The%20Kid%20LAROI",
         "title": "TRAGIC (feat. YoungBoy)",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3233,7 +3233,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_DIVORCED_The%20Kid%20LAROI",
         "title": "DIVORCED",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -3241,7 +3241,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_mood%20(with%2024kGoldn)_iann%20dior",
         "title": "mood (with 24kGoldn)",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3249,7 +3249,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_emotions_iann%20dior",
         "title": "emotions",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3257,7 +3257,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_gone%20girl%20(feat.%20Trippie%20Redd)_iann%20dior",
         "title": "gone girl (feat. Trippie Redd)",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3265,7 +3265,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_sick%20and%20tired%20(feat.%20Machine%20Gun%20Kelly)_iann%20dior",
         "title": "sick and tired (feat. Machine Gun Kelly)",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3273,7 +3273,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_let%20you_iann%20dior",
         "title": "let you",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3281,7 +3281,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_shots%20in%20the%20dark_iann%20dior",
         "title": "shots in the dark",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3289,7 +3289,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_holding%20on_iann%20dior",
         "title": "holding on",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3297,7 +3297,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_pretty%20girls_iann%20dior",
         "title": "pretty girls",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3305,7 +3305,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_prospect%20(feat.%20Lil%20Baby)_iann%20dior",
         "title": "prospect (feat. Lil Baby)",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3313,7 +3313,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_darkside_iann%20dior",
         "title": "darkside",
         "artist": "iann dior",
         "duration": "3:15",
@@ -3321,7 +3321,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_my%20ex's%20best%20friend%20(feat.%20blackbear)_Machine%20Gun%20Kelly",
         "title": "my ex's best friend (feat. blackbear)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3329,7 +3329,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_bloody%20valentine_Machine%20Gun%20Kelly",
         "title": "bloody valentine",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3337,7 +3337,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_forget%20me%20too%20(feat.%20Halsey)_Machine%20Gun%20Kelly",
         "title": "forget me too (feat. Halsey)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3345,7 +3345,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Think%20I'm%20OKAY%20(with%20YUNGBLUD)_Machine%20Gun%20Kelly",
         "title": "I Think I'm OKAY (with YUNGBLUD)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3353,7 +3353,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_maybe%20(feat.%20Bring%20Me%20The%20Horizon)_Machine%20Gun%20Kelly",
         "title": "maybe (feat. Bring Me The Horizon)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3361,7 +3361,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_papercuts_Machine%20Gun%20Kelly",
         "title": "papercuts",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3369,7 +3369,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_emo%20girl%20(feat.%20WILLOW)_Machine%20Gun%20Kelly",
         "title": "emo girl (feat. WILLOW)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3377,7 +3377,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_drunk%20face_Machine%20Gun%20Kelly",
         "title": "drunk face",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3385,7 +3385,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_jawbreaker_Machine%20Gun%20Kelly",
         "title": "jawbreaker",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3393,7 +3393,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_title%20track_Machine%20Gun%20Kelly",
         "title": "title track",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -3401,7 +3401,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_death%20bed%20(coffee%20for%20your%20head)_Powfu",
         "title": "death bed (coffee for your head)",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3409,7 +3409,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ill%20come%20back%20to%20you_Powfu",
         "title": "ill come back to you",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3417,7 +3417,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_stay4ever_Powfu",
         "title": "stay4ever",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3425,7 +3425,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_snowflake_Powfu",
         "title": "snowflake",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3433,7 +3433,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_the%20day%20that%20you%20loved%20me_Powfu",
         "title": "the day that you loved me",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3441,7 +3441,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_17again_Powfu",
         "title": "17again",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3449,7 +3449,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_im%20used%20to%20it_Powfu",
         "title": "im used to it",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3457,7 +3457,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lay%20eyes_Powfu",
         "title": "lay eyes",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3465,7 +3465,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_a%20world%20of%20chaos_Powfu",
         "title": "a world of chaos",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3473,7 +3473,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_popular%20girl%2C%20typical%20boy_Powfu",
         "title": "popular girl, typical boy",
         "artist": "Powfu",
         "duration": "3:15",
@@ -3481,7 +3481,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Red%20Roses%20(feat.%20Landon%20Cube)_Lil%20Skies",
         "title": "Red Roses (feat. Landon Cube)",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3489,7 +3489,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nowadays%20(feat.%20Landon%20Cube)_Lil%20Skies",
         "title": "Nowadays (feat. Landon Cube)",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3497,7 +3497,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I_Lil%20Skies",
         "title": "I",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3505,7 +3505,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lust_Lil%20Skies",
         "title": "Lust",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3513,7 +3513,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Creeping%20(feat.%20Rich%20the%20Kid)_Lil%20Skies",
         "title": "Creeping (feat. Rich the Kid)",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3521,7 +3521,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Signs%20of%20Jealousy_Lil%20Skies",
         "title": "Signs of Jealousy",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3529,7 +3529,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Welcome%20to%20the%20Rodeo_Lil%20Skies",
         "title": "Welcome to the Rodeo",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3537,7 +3537,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Strictly%20Business_Lil%20Skies",
         "title": "Strictly Business",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3545,7 +3545,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Name%20in%20the%20Sand_Lil%20Skies",
         "title": "Name in the Sand",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3553,7 +3553,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rihanna_Lil%20Skies",
         "title": "Rihanna",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -3561,7 +3561,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20You%20Down_NF",
         "title": "Let You Down",
         "artist": "NF",
         "duration": "3:15",
@@ -3569,7 +3569,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Search_NF",
         "title": "The Search",
         "artist": "NF",
         "duration": "3:15",
@@ -3577,7 +3577,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lie_NF",
         "title": "Lie",
         "artist": "NF",
         "duration": "3:15",
@@ -3585,7 +3585,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Time_NF",
         "title": "Time",
         "artist": "NF",
         "duration": "3:15",
@@ -3593,7 +3593,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Paralyzed_NF",
         "title": "Paralyzed",
         "artist": "NF",
         "duration": "3:15",
@@ -3601,7 +3601,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_When%20I%20Grow%20Up_NF",
         "title": "When I Grow Up",
         "artist": "NF",
         "duration": "3:15",
@@ -3609,7 +3609,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hate%20Myself_NF",
         "title": "Hate Myself",
         "artist": "NF",
         "duration": "3:15",
@@ -3617,7 +3617,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Just%20Like%20You_NF",
         "title": "Just Like You",
         "artist": "NF",
         "duration": "3:15",
@@ -3625,7 +3625,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_If%20You%20Want%20Love_NF",
         "title": "If You Want Love",
         "artist": "NF",
         "duration": "3:15",
@@ -3633,7 +3633,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_HOPE_NF",
         "title": "HOPE",
         "artist": "NF",
         "duration": "3:15",
@@ -3651,7 +3651,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-pink-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Blinding%20Lights_The%20Weeknd",
         "title": "Blinding Lights",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3659,7 +3659,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Starboy%20(feat.%20Daft%20Punk)_The%20Weeknd",
         "title": "Starboy (feat. Daft Punk)",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3667,7 +3667,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Save%20Your%20Tears_The%20Weeknd",
         "title": "Save Your Tears",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3675,7 +3675,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Die%20For%20You_The%20Weeknd",
         "title": "Die For You",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3683,7 +3683,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Hills_The%20Weeknd",
         "title": "The Hills",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3691,7 +3691,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Can't%20Feel%20My%20Face_The%20Weeknd",
         "title": "Can't Feel My Face",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3699,7 +3699,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Creepin'%20Verse_The%20Weeknd",
         "title": "Creepin' Verse",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3707,7 +3707,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Feel%20It%20Coming_The%20Weeknd",
         "title": "I Feel It Coming",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3715,7 +3715,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heartless_The%20Weeknd",
         "title": "Heartless",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3723,7 +3723,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_After%20Hours_The%20Weeknd",
         "title": "After Hours",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -3731,7 +3731,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Levitating_Dua%20Lipa",
         "title": "Levitating",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3739,7 +3739,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20Start%20Now_Dua%20Lipa",
         "title": "Don't Start Now",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3747,7 +3747,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dance%20The%20Night_Dua%20Lipa",
         "title": "Dance The Night",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3755,7 +3755,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Houdini_Dua%20Lipa",
         "title": "Houdini",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3763,7 +3763,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20Kiss%20(with%20Calvin%20Harris)_Dua%20Lipa",
         "title": "One Kiss (with Calvin Harris)",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3771,7 +3771,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_New%20Rules_Dua%20Lipa",
         "title": "New Rules",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3779,7 +3779,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Break%20My%20Heart_Dua%20Lipa",
         "title": "Break My Heart",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3787,7 +3787,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Physical_Dua%20Lipa",
         "title": "Physical",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3795,7 +3795,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Training%20Season_Dua%20Lipa",
         "title": "Training Season",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3803,7 +3803,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cold%20Heart%20(with%20Elton%20John)_Dua%20Lipa",
         "title": "Cold Heart (with Elton John)",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -3811,7 +3811,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_bad%20guy_Billie%20Eilish",
         "title": "bad guy",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3819,7 +3819,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_birds%20of%20a%20feather_Billie%20Eilish",
         "title": "birds of a feather",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3827,7 +3827,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lovely%20(with%20Khalid)_Billie%20Eilish",
         "title": "lovely (with Khalid)",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3835,7 +3835,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ocean%20eyes_Billie%20Eilish",
         "title": "ocean eyes",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3843,7 +3843,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_everything%20i%20wanted_Billie%20Eilish",
         "title": "everything i wanted",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3851,7 +3851,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_when%20the%20party's%20over_Billie%20Eilish",
         "title": "when the party's over",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3859,7 +3859,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_what%20was%20i%20made%20for%3F_Billie%20Eilish",
         "title": "what was i made for?",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3867,7 +3867,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_happier%20than%20ever_Billie%20Eilish",
         "title": "happier than ever",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3875,7 +3875,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lunch_Billie%20Eilish",
         "title": "lunch",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3883,7 +3883,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_chihiro_Billie%20Eilish",
         "title": "chihiro",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -3891,7 +3891,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Espresso_Sabrina%20Carpenter",
         "title": "Espresso",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3899,7 +3899,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Please%20Please%20Please_Sabrina%20Carpenter",
         "title": "Please Please Please",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3907,7 +3907,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Taste_Sabrina%20Carpenter",
         "title": "Taste",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3915,7 +3915,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feather_Sabrina%20Carpenter",
         "title": "Feather",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3923,7 +3923,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nonsense_Sabrina%20Carpenter",
         "title": "Nonsense",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3931,7 +3931,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bed%20Chem_Sabrina%20Carpenter",
         "title": "Bed Chem",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3939,7 +3939,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Good%20Graces_Sabrina%20Carpenter",
         "title": "Good Graces",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3947,7 +3947,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Juno_Sabrina%20Carpenter",
         "title": "Juno",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3955,7 +3955,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sharpest%20Tool_Sabrina%20Carpenter",
         "title": "Sharpest Tool",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3963,7 +3963,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Coincidence_Sabrina%20Carpenter",
         "title": "Coincidence",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -3971,7 +3971,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_drivers%20license_Olivia%20Rodrigo",
         "title": "drivers license",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -3979,7 +3979,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_good%204%20u_Olivia%20Rodrigo",
         "title": "good 4 u",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -3987,7 +3987,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_vampire_Olivia%20Rodrigo",
         "title": "vampire",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -3995,7 +3995,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_deja%20vu_Olivia%20Rodrigo",
         "title": "deja vu",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -4003,7 +4003,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_traitor_Olivia%20Rodrigo",
         "title": "traitor",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -4011,7 +4011,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_bad%20idea%20right%3F_Olivia%20Rodrigo",
         "title": "bad idea right?",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -4019,7 +4019,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_get%20him%20back!_Olivia%20Rodrigo",
         "title": "get him back!",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -4027,7 +4027,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_happier_Olivia%20Rodrigo",
         "title": "happier",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -4035,7 +4035,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_brutal_Olivia%20Rodrigo",
         "title": "brutal",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -4043,7 +4043,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_obsessed_Olivia%20Rodrigo",
         "title": "obsessed",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -4051,7 +4051,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cruel%20Summer_Taylor%20Swift",
         "title": "Cruel Summer",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4059,7 +4059,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Anti-Hero_Taylor%20Swift",
         "title": "Anti-Hero",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4067,7 +4067,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Blank%20Space_Taylor%20Swift",
         "title": "Blank Space",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4075,7 +4075,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Fortnight%20(feat.%20Post%20Malone)_Taylor%20Swift",
         "title": "Fortnight (feat. Post Malone)",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4083,7 +4083,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cardigan_Taylor%20Swift",
         "title": "Cardigan",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4091,7 +4091,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Shake%20It%20Off_Taylor%20Swift",
         "title": "Shake It Off",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4099,7 +4099,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lover_Taylor%20Swift",
         "title": "Lover",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4107,7 +4107,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Can%20Do%20It%20With%20a%20Broken%20Heart_Taylor%20Swift",
         "title": "I Can Do It With a Broken Heart",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4115,7 +4115,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Style_Taylor%20Swift",
         "title": "Style",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4123,7 +4123,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20Blame%20Me_Taylor%20Swift",
         "title": "Don't Blame Me",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -4131,7 +4131,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_As%20It%20Was_Harry%20Styles",
         "title": "As It Was",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4139,7 +4139,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Watermelon%20Sugar_Harry%20Styles",
         "title": "Watermelon Sugar",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4147,7 +4147,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Adore%20You_Harry%20Styles",
         "title": "Adore You",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4155,7 +4155,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sign%20of%20the%20Times_Harry%20Styles",
         "title": "Sign of the Times",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4163,7 +4163,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Golden_Harry%20Styles",
         "title": "Golden",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4171,7 +4171,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Late%20Night%20Talking_Harry%20Styles",
         "title": "Late Night Talking",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4179,7 +4179,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Falling_Harry%20Styles",
         "title": "Falling",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4187,7 +4187,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Music%20For%20a%20Sushi%20Restaurant_Harry%20Styles",
         "title": "Music For a Sushi Restaurant",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4195,7 +4195,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Matilda_Harry%20Styles",
         "title": "Matilda",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4203,7 +4203,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lights%20Up_Harry%20Styles",
         "title": "Lights Up",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -4211,7 +4211,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Die%20With%20A%20Smile%20(with%20Lady%20Gaga)_Bruno%20Mars",
         "title": "Die With A Smile (with Lady Gaga)",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4219,7 +4219,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_That's%20What%20I%20Like_Bruno%20Mars",
         "title": "That's What I Like",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4227,7 +4227,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_24K%20Magic_Bruno%20Mars",
         "title": "24K Magic",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4235,7 +4235,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Locked%20Out%20of%20Heaven_Bruno%20Mars",
         "title": "Locked Out of Heaven",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4243,7 +4243,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Just%20the%20Way%20You%20Are_Bruno%20Mars",
         "title": "Just the Way You Are",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4251,7 +4251,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_When%20I%20Was%20Your%20Man_Bruno%20Mars",
         "title": "When I Was Your Man",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4259,7 +4259,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Grenade_Bruno%20Mars",
         "title": "Grenade",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4267,7 +4267,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Treasure_Bruno%20Mars",
         "title": "Treasure",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4275,7 +4275,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Leave%20The%20Door%20Open_Bruno%20Mars",
         "title": "Leave The Door Open",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4283,7 +4283,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Smokin%20Out%20The%20Window_Bruno%20Mars",
         "title": "Smokin Out The Window",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -4291,7 +4291,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_7%20rings_Ariana%20Grande",
         "title": "7 rings",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4299,7 +4299,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_thank%20u%2C%20next_Ariana%20Grande",
         "title": "thank u, next",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4307,7 +4307,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_yes%2C%20and%3F_Ariana%20Grande",
         "title": "yes, and?",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4315,7 +4315,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_we%20can't%20be%20friends_Ariana%20Grande",
         "title": "we can't be friends",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4323,7 +4323,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_no%20tears%20left%20to%20cry_Ariana%20Grande",
         "title": "no tears left to cry",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4331,7 +4331,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Positions_Ariana%20Grande",
         "title": "Positions",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4339,7 +4339,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Side%20to%20Side_Ariana%20Grande",
         "title": "Side to Side",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4347,7 +4347,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Into%20You_Ariana%20Grande",
         "title": "Into You",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4355,7 +4355,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dangerous%20Woman_Ariana%20Grande",
         "title": "Dangerous Woman",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4363,7 +4363,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_God%20is%20a%20woman_Ariana%20Grande",
         "title": "God is a woman",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -4371,7 +4371,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Circles_Post%20Malone",
         "title": "Circles",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4379,7 +4379,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Sunflower%20(with%20Swae%20Lee)_Post%20Malone",
         "title": "Sunflower (with Swae Lee)",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4387,7 +4387,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Rockstar%20(feat.%2021%20Savage)_Post%20Malone",
         "title": "Rockstar (feat. 21 Savage)",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4395,7 +4395,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Congratulations_Post%20Malone",
         "title": "Congratulations",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4403,7 +4403,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Better%20Now_Post%20Malone",
         "title": "Better Now",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4411,7 +4411,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_I%20Had%20Some%20Help%20(feat.%20Morgan%20Wallen)_Post%20Malone",
         "title": "I Had Some Help (feat. Morgan Wallen)",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4419,7 +4419,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_White%20Iverson_Post%20Malone",
         "title": "White Iverson",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4427,7 +4427,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Chemical_Post%20Malone",
         "title": "Chemical",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4435,7 +4435,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Psycho_Post%20Malone",
         "title": "Psycho",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4443,7 +4443,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Wow._Post%20Malone",
         "title": "Wow.",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -4461,7 +4461,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-violet-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Thinkin%20Bout%20You_Frank%20Ocean",
         "title": "Thinkin Bout You",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4469,7 +4469,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Novacane_Frank%20Ocean",
         "title": "Novacane",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4477,7 +4477,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Chanel_Frank%20Ocean",
         "title": "Chanel",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4485,7 +4485,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nights_Frank%20Ocean",
         "title": "Nights",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4493,7 +4493,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Pink%20%2B%20White_Frank%20Ocean",
         "title": "Pink + White",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4501,7 +4501,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ivy_Frank%20Ocean",
         "title": "Ivy",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4509,7 +4509,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lost_Frank%20Ocean",
         "title": "Lost",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4517,7 +4517,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Pyramids_Frank%20Ocean",
         "title": "Pyramids",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4525,7 +4525,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Self%20Control_Frank%20Ocean",
         "title": "Self Control",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4533,7 +4533,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Godspeed_Frank%20Ocean",
         "title": "Godspeed",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -4541,7 +4541,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Kill%20Bill_SZA",
         "title": "Kill Bill",
         "artist": "SZA",
         "duration": "3:15",
@@ -4549,7 +4549,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Snooze_SZA",
         "title": "Snooze",
         "artist": "SZA",
         "duration": "3:15",
@@ -4557,7 +4557,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Good%20Days_SZA",
         "title": "Good Days",
         "artist": "SZA",
         "duration": "3:15",
@@ -4565,7 +4565,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nobody%20Gets%20Me_SZA",
         "title": "Nobody Gets Me",
         "artist": "SZA",
         "duration": "3:15",
@@ -4573,7 +4573,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Love%20Galore%20(feat.%20Travis%20Scott)_SZA",
         "title": "Love Galore (feat. Travis Scott)",
         "artist": "SZA",
         "duration": "3:15",
@@ -4581,7 +4581,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Broken%20Clocks_SZA",
         "title": "Broken Clocks",
         "artist": "SZA",
         "duration": "3:15",
@@ -4589,7 +4589,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Weekend_SZA",
         "title": "The Weekend",
         "artist": "SZA",
         "duration": "3:15",
@@ -4597,7 +4597,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Hate%20U_SZA",
         "title": "I Hate U",
         "artist": "SZA",
         "duration": "3:15",
@@ -4605,7 +4605,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Saturn_SZA",
         "title": "Saturn",
         "artist": "SZA",
         "duration": "3:15",
@@ -4613,7 +4613,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Low_SZA",
         "title": "Low",
         "artist": "SZA",
         "duration": "3:15",
@@ -4621,7 +4621,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Best%20Part%20(feat.%20H.E.R.)_Daniel%20Caesar",
         "title": "Best Part (feat. H.E.R.)",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4629,7 +4629,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Get%20You%20(feat.%20Kali%20Uchis)_Daniel%20Caesar",
         "title": "Get You (feat. Kali Uchis)",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4637,7 +4637,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Always_Daniel%20Caesar",
         "title": "Always",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4645,7 +4645,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Japanese%20Denim_Daniel%20Caesar",
         "title": "Japanese Denim",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4653,7 +4653,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hold%20Me%20Down_Daniel%20Caesar",
         "title": "Hold Me Down",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4661,7 +4661,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Streetcar_Daniel%20Caesar",
         "title": "Streetcar",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4669,7 +4669,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Toronto%202014_Daniel%20Caesar",
         "title": "Toronto 2014",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4677,7 +4677,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Do%20You%20Like%20Me%3F_Daniel%20Caesar",
         "title": "Do You Like Me?",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4685,7 +4685,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20Me%20Go_Daniel%20Caesar",
         "title": "Let Me Go",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4693,7 +4693,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cyanide_Daniel%20Caesar",
         "title": "Cyanide",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -4701,7 +4701,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dead%20Man%20Walking_Brent%20Faiyaz",
         "title": "Dead Man Walking",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4709,7 +4709,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Trust_Brent%20Faiyaz",
         "title": "Trust",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4717,7 +4717,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Gravity%20(with%20Tyler%2C%20The%20Creator)_Brent%20Faiyaz",
         "title": "Gravity (with Tyler, The Creator)",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4725,7 +4725,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Clouded_Brent%20Faiyaz",
         "title": "Clouded",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4733,7 +4733,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Poison_Brent%20Faiyaz",
         "title": "Poison",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4741,7 +4741,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Mine_Brent%20Faiyaz",
         "title": "All Mine",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4749,7 +4749,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_JACKIE%20BROWN_Brent%20Faiyaz",
         "title": "JACKIE BROWN",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4757,7 +4757,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_FUCK%20BEING%20FAITHFUL_Brent%20Faiyaz",
         "title": "FUCK BEING FAITHFUL",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4765,7 +4765,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rehab%20(Winter%20In%20Paris)_Brent%20Faiyaz",
         "title": "Rehab (Winter In Paris)",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4773,7 +4773,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wasting%20Time%20(feat.%20Drake)_Brent%20Faiyaz",
         "title": "Wasting Time (feat. Drake)",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -4781,7 +4781,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heartbreak%20Anniversary_Giveon",
         "title": "Heartbreak Anniversary",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4789,7 +4789,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_For%20Tonight_Giveon",
         "title": "For Tonight",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4797,7 +4797,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Like%20I%20Want%20You_Giveon",
         "title": "Like I Want You",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4805,7 +4805,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Vanish_Giveon",
         "title": "Vanish",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4813,7 +4813,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Favorite%20Mistake_Giveon",
         "title": "Favorite Mistake",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4821,7 +4821,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Stuck%20On%20You_Giveon",
         "title": "Stuck On You",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4829,7 +4829,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Get%20To%20You_Giveon",
         "title": "Get To You",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4837,7 +4837,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dec%2011th_Giveon",
         "title": "Dec 11th",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4845,7 +4845,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20Me%20Go_Giveon",
         "title": "Let Me Go",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4853,7 +4853,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Peaches%20Verse_Giveon",
         "title": "Peaches Verse",
         "artist": "Giveon",
         "duration": "3:15",
@@ -4861,7 +4861,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bad%20Habit_Steve%20Lacy",
         "title": "Bad Habit",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4869,7 +4869,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dark%20Red_Steve%20Lacy",
         "title": "Dark Red",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4877,7 +4877,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Static_Steve%20Lacy",
         "title": "Static",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4885,7 +4885,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Infrunami_Steve%20Lacy",
         "title": "Infrunami",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4893,7 +4893,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_C%20U%20Girl_Steve%20Lacy",
         "title": "C U Girl",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4901,7 +4901,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Some_Steve%20Lacy",
         "title": "Some",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4909,7 +4909,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ryd_Steve%20Lacy",
         "title": "Ryd",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4917,7 +4917,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sunshine%20(feat.%20Foushe%C3%A9)_Steve%20Lacy",
         "title": "Sunshine (feat. Fousheé)",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4925,7 +4925,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_N-Side_Steve%20Lacy",
         "title": "N-Side",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4933,7 +4933,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Helmet_Steve%20Lacy",
         "title": "Helmet",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -4941,7 +4941,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't_Bryson%20Tiller",
         "title": "Don't",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -4949,7 +4949,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Exchange_Bryson%20Tiller",
         "title": "Exchange",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -4957,7 +4957,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sorry%20Not%20Sorry_Bryson%20Tiller",
         "title": "Sorry Not Sorry",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -4965,7 +4965,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wild%20Thoughts%20Verse_Bryson%20Tiller",
         "title": "Wild Thoughts Verse",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -4973,7 +4973,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Right%20My%20Wrongs_Bryson%20Tiller",
         "title": "Right My Wrongs",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -4981,7 +4981,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20'Em%20Know_Bryson%20Tiller",
         "title": "Let 'Em Know",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -4989,7 +4989,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Inhale_Bryson%20Tiller",
         "title": "Inhale",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -4997,7 +4997,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Outta%20Time%20(feat.%20Drake)_Bryson%20Tiller",
         "title": "Outta Time (feat. Drake)",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -5005,7 +5005,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Run%20Me%20Dry_Bryson%20Tiller",
         "title": "Run Me Dry",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -5013,7 +5013,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sorrows_Bryson%20Tiller",
         "title": "Sorrows",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -5021,7 +5021,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Break%20from%20Toronto_PARTYNEXTDOOR",
         "title": "Break from Toronto",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5029,7 +5029,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Come%20and%20See%20Me%20(feat.%20Drake)_PARTYNEXTDOOR",
         "title": "Come and See Me (feat. Drake)",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5037,7 +5037,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Loyal%20(feat.%20Drake)_PARTYNEXTDOOR",
         "title": "Loyal (feat. Drake)",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5045,7 +5045,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Belong%20to%20the%20City_PARTYNEXTDOOR",
         "title": "Belong to the City",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5053,7 +5053,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Not%20Nice_PARTYNEXTDOOR",
         "title": "Not Nice",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5061,7 +5061,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Resentment_PARTYNEXTDOOR",
         "title": "Resentment",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5069,7 +5069,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Persian%20Rugs_PARTYNEXTDOOR",
         "title": "Persian Rugs",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5077,7 +5077,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_RNGH_PARTYNEXTDOOR",
         "title": "RNGH",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5085,7 +5085,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Chill_PARTYNEXTDOOR",
         "title": "No Chill",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5093,7 +5093,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Freak%20in%20You_PARTYNEXTDOOR",
         "title": "Freak in You",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -5101,7 +5101,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Playing%20Games%20(feat.%20Bryson%20Tiller)_Summer%20Walker",
         "title": "Playing Games (feat. Bryson Tiller)",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5109,7 +5109,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Girls%20Need%20Love%20(with%20Drake)_Summer%20Walker",
         "title": "Girls Need Love (with Drake)",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5117,7 +5117,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Love%20(with%20SZA)_Summer%20Walker",
         "title": "No Love (with SZA)",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5125,7 +5125,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Session%2032_Summer%20Walker",
         "title": "Session 32",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5133,7 +5133,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ex%20For%20A%20Reason_Summer%20Walker",
         "title": "Ex For A Reason",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5141,7 +5141,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_CPR_Summer%20Walker",
         "title": "CPR",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5149,7 +5149,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tonight_Summer%20Walker",
         "title": "Tonight",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5157,7 +5157,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Body_Summer%20Walker",
         "title": "Body",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5165,7 +5165,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Insane_Summer%20Walker",
         "title": "Insane",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5173,7 +5173,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bitter_Summer%20Walker",
         "title": "Bitter",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -5181,7 +5181,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_PRBLMS_6LACK",
         "title": "PRBLMS",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5189,7 +5189,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ex%20Calling_6LACK",
         "title": "Ex Calling",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5197,7 +5197,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Pretty%20Little%20Fears%20(feat.%20J.%20Cole)_6LACK",
         "title": "Pretty Little Fears (feat. J. Cole)",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5205,7 +5205,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Free_6LACK",
         "title": "Free",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5213,7 +5213,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_East%20Atlanta%20Love%20Letter_6LACK",
         "title": "East Atlanta Love Letter",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5221,7 +5221,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Switch_6LACK",
         "title": "Switch",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5229,7 +5229,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nonchalant_6LACK",
         "title": "Nonchalant",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5237,7 +5237,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Since%20I%20Have%20A%20Lover_6LACK",
         "title": "Since I Have A Lover",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5245,7 +5245,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Talkback_6LACK",
         "title": "Talkback",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5253,7 +5253,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Inwood%20Hill%20Park_6LACK",
         "title": "Inwood Hill Park",
         "artist": "6LACK",
         "duration": "3:15",
@@ -5271,7 +5271,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-emerald-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20The%20End_Linkin%20Park",
         "title": "In The End",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5279,7 +5279,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Numb_Linkin%20Park",
         "title": "Numb",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5287,7 +5287,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Faint_Linkin%20Park",
         "title": "Faint",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5295,7 +5295,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Crawling_Linkin%20Park",
         "title": "Crawling",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5303,7 +5303,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Somewhere%20I%20Belong_Linkin%20Park",
         "title": "Somewhere I Belong",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5311,7 +5311,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Breaking%20the%20Habit_Linkin%20Park",
         "title": "Breaking the Habit",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5319,7 +5319,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_What%20I've%20Done_Linkin%20Park",
         "title": "What I've Done",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5327,7 +5327,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Papercut_Linkin%20Park",
         "title": "Papercut",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5335,7 +5335,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bleed%20It%20Out_Linkin%20Park",
         "title": "Bleed It Out",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5343,7 +5343,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20Step%20Closer_Linkin%20Park",
         "title": "One Step Closer",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -5351,7 +5351,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Smells%20Like%20Teen%20Spirit_Nirvana",
         "title": "Smells Like Teen Spirit",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5359,7 +5359,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Come%20As%20You%20Are_Nirvana",
         "title": "Come As You Are",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5367,7 +5367,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heart-Shaped%20Box_Nirvana",
         "title": "Heart-Shaped Box",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5375,7 +5375,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lithium_Nirvana",
         "title": "Lithium",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5383,7 +5383,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20Bloom_Nirvana",
         "title": "In Bloom",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5391,7 +5391,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Man%20Who%20Sold%20The%20World_Nirvana",
         "title": "The Man Who Sold The World",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5399,7 +5399,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Apologies_Nirvana",
         "title": "All Apologies",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5407,7 +5407,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_About%20A%20Girl_Nirvana",
         "title": "About A Girl",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5415,7 +5415,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dumb_Nirvana",
         "title": "Dumb",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5423,7 +5423,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drain%20You_Nirvana",
         "title": "Drain You",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -5431,7 +5431,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Do%20I%20Wanna%20Know%3F_Arctic%20Monkeys",
         "title": "Do I Wanna Know?",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5439,7 +5439,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Why'd%20You%20Only%20Call%20Me%20When%20You're%20High%3F_Arctic%20Monkeys",
         "title": "Why'd You Only Call Me When You're High?",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5447,7 +5447,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_505_Arctic%20Monkeys",
         "title": "505",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5455,7 +5455,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_R%20U%20Mine%3F_Arctic%20Monkeys",
         "title": "R U Mine?",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5463,7 +5463,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fluorescent%20Adolescent_Arctic%20Monkeys",
         "title": "Fluorescent Adolescent",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5471,7 +5471,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Wanna%20Be%20Yours_Arctic%20Monkeys",
         "title": "I Wanna Be Yours",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5479,7 +5479,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Brianstorm_Arctic%20Monkeys",
         "title": "Brianstorm",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5487,7 +5487,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Snap%20Out%20Of%20It_Arctic%20Monkeys",
         "title": "Snap Out Of It",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5495,7 +5495,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Arabella_Arctic%20Monkeys",
         "title": "Arabella",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5503,7 +5503,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Crying%20Lightning_Arctic%20Monkeys",
         "title": "Crying Lightning",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -5511,7 +5511,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Boulevard%20of%20Broken%20Dreams_Green%20Day",
         "title": "Boulevard of Broken Dreams",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5519,7 +5519,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_American%20Idiot_Green%20Day",
         "title": "American Idiot",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5527,7 +5527,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Basket%20Case_Green%20Day",
         "title": "Basket Case",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5535,7 +5535,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wake%20Me%20Up%20When%20September%20Ends_Green%20Day",
         "title": "Wake Me Up When September Ends",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5543,7 +5543,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Holiday_Green%20Day",
         "title": "Holiday",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5551,7 +5551,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_21%20Guns_Green%20Day",
         "title": "21 Guns",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5559,7 +5559,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Good%20Riddance%20(Time%20of%20Your%20Life)_Green%20Day",
         "title": "Good Riddance (Time of Your Life)",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5567,7 +5567,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_When%20I%20Come%20Around_Green%20Day",
         "title": "When I Come Around",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5575,7 +5575,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Brain%20Stew_Green%20Day",
         "title": "Brain Stew",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5583,7 +5583,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Longview_Green%20Day",
         "title": "Longview",
         "artist": "Green Day",
         "duration": "3:15",
@@ -5591,7 +5591,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Californication_Red%20Hot%20Chili%20Peppers",
         "title": "Californication",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5599,7 +5599,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Under%20The%20Bridge_Red%20Hot%20Chili%20Peppers",
         "title": "Under The Bridge",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5607,7 +5607,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Can't%20Stop_Red%20Hot%20Chili%20Peppers",
         "title": "Can't Stop",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5615,7 +5615,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Otherside_Red%20Hot%20Chili%20Peppers",
         "title": "Otherside",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5623,7 +5623,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scar%20Tissue_Red%20Hot%20Chili%20Peppers",
         "title": "Scar Tissue",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5631,7 +5631,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Snow%20(Hey%20Oh)_Red%20Hot%20Chili%20Peppers",
         "title": "Snow (Hey Oh)",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5639,7 +5639,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_By%20The%20Way_Red%20Hot%20Chili%20Peppers",
         "title": "By The Way",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5647,7 +5647,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dani%20California_Red%20Hot%20Chili%20Peppers",
         "title": "Dani California",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5655,7 +5655,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Give%20It%20Away_Red%20Hot%20Chili%20Peppers",
         "title": "Give It Away",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5663,7 +5663,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Around%20the%20World_Red%20Hot%20Chili%20Peppers",
         "title": "Around the World",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -5671,7 +5671,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mr.%20Brightside_The%20Killers",
         "title": "Mr. Brightside",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5679,7 +5679,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Somebody%20Told%20Me_The%20Killers",
         "title": "Somebody Told Me",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5687,7 +5687,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_When%20You%20Were%20Young_The%20Killers",
         "title": "When You Were Young",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5695,7 +5695,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Human_The%20Killers",
         "title": "Human",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5703,7 +5703,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20These%20Things%20That%20I've%20Done_The%20Killers",
         "title": "All These Things That I've Done",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5711,7 +5711,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Read%20My%20Mind_The%20Killers",
         "title": "Read My Mind",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5719,7 +5719,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Spaceman_The%20Killers",
         "title": "Spaceman",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5727,7 +5727,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Shot%20At%20The%20Night_The%20Killers",
         "title": "Shot At The Night",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5735,7 +5735,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Smile%20Like%20You%20Mean%20It_The%20Killers",
         "title": "Smile Like You Mean It",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5743,7 +5743,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Man_The%20Killers",
         "title": "The Man",
         "artist": "The Killers",
         "duration": "3:15",
@@ -5751,7 +5751,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20The%20Small%20Things_Blink-182",
         "title": "All The Small Things",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5759,7 +5759,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Miss%20You_Blink-182",
         "title": "I Miss You",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5767,7 +5767,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_What's%20My%20Age%20Again%3F_Blink-182",
         "title": "What's My Age Again?",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5775,7 +5775,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Adam's%20Song_Blink-182",
         "title": "Adam's Song",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5783,7 +5783,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_First%20Date_Blink-182",
         "title": "First Date",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5791,7 +5791,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feeling%20This_Blink-182",
         "title": "Feeling This",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5799,7 +5799,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Rock%20Show_Blink-182",
         "title": "The Rock Show",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5807,7 +5807,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dammit_Blink-182",
         "title": "Dammit",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5815,7 +5815,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Stay%20Together%20For%20The%20Kids_Blink-182",
         "title": "Stay Together For The Kids",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5823,7 +5823,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ONE%20MORE%20TIME_Blink-182",
         "title": "ONE MORE TIME",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -5831,7 +5831,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Welcome%20to%20the%20Black%20Parade_My%20Chemical%20Romance",
         "title": "Welcome to the Black Parade",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5839,7 +5839,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Helena_My%20Chemical%20Romance",
         "title": "Helena",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5847,7 +5847,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'm%20Not%20Okay%20(I%20Promise)_My%20Chemical%20Romance",
         "title": "I'm Not Okay (I Promise)",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5855,7 +5855,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Famous%20Last%20Words_My%20Chemical%20Romance",
         "title": "Famous Last Words",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5863,7 +5863,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Teenagers_My%20Chemical%20Romance",
         "title": "Teenagers",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5871,7 +5871,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Ghost%20of%20You_My%20Chemical%20Romance",
         "title": "The Ghost of You",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5879,7 +5879,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Na%20Na%20Na_My%20Chemical%20Romance",
         "title": "Na Na Na",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5887,7 +5887,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cancer_My%20Chemical%20Romance",
         "title": "Cancer",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5895,7 +5895,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Disenchanted_My%20Chemical%20Romance",
         "title": "Disenchanted",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5903,7 +5903,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sing_My%20Chemical%20Romance",
         "title": "Sing",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -5911,7 +5911,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Creep_Radiohead",
         "title": "Creep",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5919,7 +5919,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Karma%20Police_Radiohead",
         "title": "Karma Police",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5927,7 +5927,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Surprises_Radiohead",
         "title": "No Surprises",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5935,7 +5935,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Paranoid%20Android_Radiohead",
         "title": "Paranoid Android",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5943,7 +5943,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_High%20and%20Dry_Radiohead",
         "title": "High and Dry",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5951,7 +5951,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fake%20Plastic%20Trees_Radiohead",
         "title": "Fake Plastic Trees",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5959,7 +5959,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Exit%20Music%20(For%20a%20Film)_Radiohead",
         "title": "Exit Music (For a Film)",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5967,7 +5967,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Just_Radiohead",
         "title": "Just",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5975,7 +5975,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Jigsaw%20Falling%20Into%20Place_Radiohead",
         "title": "Jigsaw Falling Into Place",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5983,7 +5983,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Everything%20In%20Its%20Right%20Place_Radiohead",
         "title": "Everything In Its Right Place",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -5991,7 +5991,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bohemian%20Rhapsody_Queen",
         "title": "Bohemian Rhapsody",
         "artist": "Queen",
         "duration": "3:15",
@@ -5999,7 +5999,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20Stop%20Me%20Now_Queen",
         "title": "Don't Stop Me Now",
         "artist": "Queen",
         "duration": "3:15",
@@ -6007,7 +6007,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Another%20One%20Bites%20The%20Dust_Queen",
         "title": "Another One Bites The Dust",
         "artist": "Queen",
         "duration": "3:15",
@@ -6015,7 +6015,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Under%20Pressure%20(with%20David%20Bowie)_Queen",
         "title": "Under Pressure (with David Bowie)",
         "artist": "Queen",
         "duration": "3:15",
@@ -6023,7 +6023,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_We%20Will%20Rock%20You_Queen",
         "title": "We Will Rock You",
         "artist": "Queen",
         "duration": "3:15",
@@ -6031,7 +6031,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_We%20Are%20The%20Champions_Queen",
         "title": "We Are The Champions",
         "artist": "Queen",
         "duration": "3:15",
@@ -6039,7 +6039,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Somebody%20To%20Love_Queen",
         "title": "Somebody To Love",
         "artist": "Queen",
         "duration": "3:15",
@@ -6047,7 +6047,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Radio%20Ga%20Ga_Queen",
         "title": "Radio Ga Ga",
         "artist": "Queen",
         "duration": "3:15",
@@ -6055,7 +6055,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Killer%20Queen_Queen",
         "title": "Killer Queen",
         "artist": "Queen",
         "duration": "3:15",
@@ -6063,7 +6063,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Want%20To%20Break%20Free_Queen",
         "title": "I Want To Break Free",
         "artist": "Queen",
         "duration": "3:15",
@@ -6081,7 +6081,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-cyan-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Murder%20In%20My%20Mind_KORDHELL",
         "title": "Murder In My Mind",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6089,7 +6089,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Live%20Another%20Day_KORDHELL",
         "title": "Live Another Day",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6097,7 +6097,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Killers%20From%20The%20Northside_KORDHELL",
         "title": "Killers From The Northside",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6105,7 +6105,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scopin_KORDHELL",
         "title": "Scopin",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6113,7 +6113,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Land%20of%20Fire_KORDHELL",
         "title": "Land of Fire",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6121,7 +6121,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_9mm_KORDHELL",
         "title": "9mm",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6129,7 +6129,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dat%20Phonk_KORDHELL",
         "title": "Dat Phonk",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6137,7 +6137,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fatality_KORDHELL",
         "title": "Fatality",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6145,7 +6145,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Vagabond_KORDHELL",
         "title": "Vagabond",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6153,7 +6153,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dead%20On%20Arrival_KORDHELL",
         "title": "Dead On Arrival",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -6161,7 +6161,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Close%20Eyes_DVRST",
         "title": "Close Eyes",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6169,7 +6169,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Autumn%20Lover_DVRST",
         "title": "Autumn Lover",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6177,7 +6177,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dream%20Space_DVRST",
         "title": "Dream Space",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6185,7 +6185,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Komarovo%20Phonk_DVRST",
         "title": "Komarovo Phonk",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6193,7 +6193,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Your%20Name_DVRST",
         "title": "Your Name",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6201,7 +6201,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Reason%20To%20Live_DVRST",
         "title": "Reason To Live",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6209,7 +6209,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tell%20Me%20What_DVRST",
         "title": "Tell Me What",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6217,7 +6217,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Endless%20Love_DVRST",
         "title": "Endless Love",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6225,7 +6225,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Motion_DVRST",
         "title": "Motion",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6233,7 +6233,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Old%20Genesis_DVRST",
         "title": "Old Genesis",
         "artist": "DVRST",
         "duration": "3:15",
@@ -6241,7 +6241,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Get%20Lucky%20(feat.%20Pharrell)_Daft%20Punk",
         "title": "Get Lucky (feat. Pharrell)",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6249,7 +6249,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20More%20Time_Daft%20Punk",
         "title": "One More Time",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6257,7 +6257,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Harder%20Better%20Faster%20Stronger_Daft%20Punk",
         "title": "Harder Better Faster Stronger",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6265,7 +6265,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Around%20The%20World_Daft%20Punk",
         "title": "Around The World",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6273,7 +6273,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Instant%20Crush%20(feat.%20Julian%20Casablancas)_Daft%20Punk",
         "title": "Instant Crush (feat. Julian Casablancas)",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6281,7 +6281,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lose%20Yourself%20to%20Dance_Daft%20Punk",
         "title": "Lose Yourself to Dance",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6289,7 +6289,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Da%20Funk_Daft%20Punk",
         "title": "Da Funk",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6297,7 +6297,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Digital%20Love_Daft%20Punk",
         "title": "Digital Love",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6305,7 +6305,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Something%20About%20Us_Daft%20Punk",
         "title": "Something About Us",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6313,7 +6313,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Technologic_Daft%20Punk",
         "title": "Technologic",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -6321,7 +6321,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wake%20Me%20Up_Avicii",
         "title": "Wake Me Up",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6329,7 +6329,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "_ovdm2yX4MA",
+        "id": "yt_Levels_Avicii",
         "title": "Levels",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6337,7 +6337,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Nights_Avicii",
         "title": "The Nights",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6345,7 +6345,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Waiting%20For%20Love_Avicii",
         "title": "Waiting For Love",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6353,7 +6353,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hey%20Brother_Avicii",
         "title": "Hey Brother",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6361,7 +6361,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Without%20You_Avicii",
         "title": "Without You",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6369,7 +6369,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SOS_Avicii",
         "title": "SOS",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6377,7 +6377,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Could%20Be%20The%20One_Avicii",
         "title": "I Could Be The One",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6385,7 +6385,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Addicted%20To%20You_Avicii",
         "title": "Addicted To You",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6393,7 +6393,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lonely%20Together_Avicii",
         "title": "Lonely Together",
         "artist": "Avicii",
         "duration": "3:15",
@@ -6401,7 +6401,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "YJVmu6yttiw",
+        "id": "yt_Bangarang_Skrillex",
         "title": "Bangarang",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6409,7 +6409,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scary%20Monsters%20and%20Nice%20Sprites_Skrillex",
         "title": "Scary Monsters and Nice Sprites",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6417,7 +6417,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Where%20Are%20%C3%9C%20Now_Skrillex",
         "title": "Where Are Ü Now",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6425,7 +6425,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "b4w4xX3Yh2M",
+        "id": "yt_Rumble%20(with%20Fred%20again..)_Skrillex",
         "title": "Rumble (with Fred again..)",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6433,7 +6433,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_First%20of%20the%20Year_Skrillex",
         "title": "First of the Year",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6441,7 +6441,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Make%20It%20Bun%20Dem_Skrillex",
         "title": "Make It Bun Dem",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6449,7 +6449,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Purple%20Lamborghini_Skrillex",
         "title": "Purple Lamborghini",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6457,7 +6457,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Inhale%20Exhale_Skrillex",
         "title": "Inhale Exhale",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6465,7 +6465,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Supersonic_Skrillex",
         "title": "Supersonic",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6473,7 +6473,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Butterflies_Skrillex",
         "title": "Butterflies",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -6481,7 +6481,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Adore%20U_Fred%20again..",
         "title": "Adore U",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6489,7 +6489,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_delilah%20(pull%20me%20out%20of%20this)_Fred%20again..",
         "title": "delilah (pull me out of this)",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6497,7 +6497,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Danielle%20(smile%20on%20my%20face)_Fred%20again..",
         "title": "Danielle (smile on my face)",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6505,7 +6505,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Marea%20(we've%20lost%20dancing)_Fred%20again..",
         "title": "Marea (we've lost dancing)",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6513,7 +6513,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_leavemealone_Fred%20again..",
         "title": "leavemealone",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6521,7 +6521,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ten_Fred%20again..",
         "title": "ten",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6529,7 +6529,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Jungle_Fred%20again..",
         "title": "Jungle",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6537,7 +6537,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bleu%20(better%20with%20time)_Fred%20again..",
         "title": "Bleu (better with time)",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6545,7 +6545,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_stayinit_Fred%20again..",
         "title": "stayinit",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6553,7 +6553,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_places%20to%20be_Fred%20again..",
         "title": "places to be",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -6561,7 +6561,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Summer_Calvin%20Harris",
         "title": "Summer",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6569,7 +6569,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feel%20So%20Close_Calvin%20Harris",
         "title": "Feel So Close",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6577,7 +6577,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_This%20Is%20What%20You%20Came%20For%20(feat.%20Rihanna)_Calvin%20Harris",
         "title": "This Is What You Came For (feat. Rihanna)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6585,7 +6585,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Slide%20(feat.%20Frank%20Ocean)_Calvin%20Harris",
         "title": "Slide (feat. Frank Ocean)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6593,7 +6593,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20Kiss%20(feat.%20Dua%20Lipa)_Calvin%20Harris",
         "title": "One Kiss (feat. Dua Lipa)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6601,7 +6601,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_How%20Deep%20Is%20Your%20Love_Calvin%20Harris",
         "title": "How Deep Is Your Love",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6609,7 +6609,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sweet%20Nothing_Calvin%20Harris",
         "title": "Sweet Nothing",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6617,7 +6617,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Blame_Calvin%20Harris",
         "title": "Blame",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6625,7 +6625,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Outside%20(feat.%20Ellie%20Goulding)_Calvin%20Harris",
         "title": "Outside (feat. Ellie Goulding)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6633,7 +6633,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Miracle%20(with%20Ellie%20Goulding)_Calvin%20Harris",
         "title": "Miracle (with Ellie Goulding)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -6641,7 +6641,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Closer%20(feat.%20Halsey)_The%20Chainsmokers",
         "title": "Closer (feat. Halsey)",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6649,7 +6649,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20Let%20Me%20Down_The%20Chainsmokers",
         "title": "Don't Let Me Down",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6657,7 +6657,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Something%20Just%20Like%20This%20(with%20Coldplay)_The%20Chainsmokers",
         "title": "Something Just Like This (with Coldplay)",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6665,7 +6665,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Roses%20(feat.%20ROZES)_The%20Chainsmokers",
         "title": "Roses (feat. ROZES)",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6673,7 +6673,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Paris_The%20Chainsmokers",
         "title": "Paris",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6681,7 +6681,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Takeaway_The%20Chainsmokers",
         "title": "Takeaway",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6689,7 +6689,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Side%20Effects_The%20Chainsmokers",
         "title": "Side Effects",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6697,7 +6697,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20We%20Know_The%20Chainsmokers",
         "title": "All We Know",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6705,7 +6705,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Call%20You%20Mine_The%20Chainsmokers",
         "title": "Call You Mine",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6713,7 +6713,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_High_The%20Chainsmokers",
         "title": "High",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -6721,7 +6721,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "gCYcHz2Fg60",
+        "id": "yt_Animals_Martin%20Garrix",
         "title": "Animals",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6729,7 +6729,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scared%20to%20Be%20Lonely%20(with%20Dua%20Lipa)_Martin%20Garrix",
         "title": "Scared to Be Lonely (with Dua Lipa)",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6737,7 +6737,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20the%20Name%20of%20Love%20(with%20Bebe%20Rexha)_Martin%20Garrix",
         "title": "In the Name of Love (with Bebe Rexha)",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6745,7 +6745,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_High%20On%20Life_Martin%20Garrix",
         "title": "High On Life",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6753,7 +6753,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_There%20for%20You%20(with%20Troye%20Sivan)_Martin%20Garrix",
         "title": "There for You (with Troye Sivan)",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6761,7 +6761,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Summer%20Days_Martin%20Garrix",
         "title": "Summer Days",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6769,7 +6769,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tremor_Martin%20Garrix",
         "title": "Tremor",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6777,7 +6777,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Forbidden%20Voices_Martin%20Garrix",
         "title": "Forbidden Voices",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6785,7 +6785,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Used%20to%20Love_Martin%20Garrix",
         "title": "Used to Love",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6793,7 +6793,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Starlight_Martin%20Garrix",
         "title": "Starlight",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -6801,7 +6801,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20You%20Worry%20Child_Swedish%20House%20Mafia",
         "title": "Don't You Worry Child",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6809,7 +6809,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Save%20The%20World_Swedish%20House%20Mafia",
         "title": "Save The World",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6817,7 +6817,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Moth%20To%20A%20Flame%20(with%20The%20Weeknd)_Swedish%20House%20Mafia",
         "title": "Moth To A Flame (with The Weeknd)",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6825,7 +6825,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Greyhound_Swedish%20House%20Mafia",
         "title": "Greyhound",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6833,7 +6833,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20(Your%20Name)_Swedish%20House%20Mafia",
         "title": "One (Your Name)",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6841,7 +6841,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Antidote_Swedish%20House%20Mafia",
         "title": "Antidote",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6849,7 +6849,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heaven%20Takes%20You%20Home_Swedish%20House%20Mafia",
         "title": "Heaven Takes You Home",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6857,7 +6857,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Redlight%20(with%20Sting)_Swedish%20House%20Mafia",
         "title": "Redlight (with Sting)",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6865,7 +6865,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ray%20of%20Solar_Swedish%20House%20Mafia",
         "title": "Ray of Solar",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6873,7 +6873,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Miami%202%20Ibiza_Swedish%20House%20Mafia",
         "title": "Miami 2 Ibiza",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -6891,7 +6891,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-yellow-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lose%20Yourself_Eminem",
         "title": "Lose Yourself",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6899,7 +6899,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Without%20Me_Eminem",
         "title": "Without Me",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6907,7 +6907,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Real%20Slim%20Shady_Eminem",
         "title": "The Real Slim Shady",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6915,7 +6915,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Stan%20(feat.%20Dido)_Eminem",
         "title": "Stan (feat. Dido)",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6923,7 +6923,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Till%20I%20Collapse_Eminem",
         "title": "Till I Collapse",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6931,7 +6931,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mockingbird_Eminem",
         "title": "Mockingbird",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6939,7 +6939,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Way%20I%20Am_Eminem",
         "title": "The Way I Am",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6947,7 +6947,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cleanin'%20Out%20My%20Closet_Eminem",
         "title": "Cleanin' Out My Closet",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6955,7 +6955,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_My%20Name%20Is_Eminem",
         "title": "My Name Is",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6963,7 +6963,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sing%20for%20the%20Moment_Eminem",
         "title": "Sing for the Moment",
         "artist": "Eminem",
         "duration": "3:15",
@@ -6971,7 +6971,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20Da%20Club_50%20Cent",
         "title": "In Da Club",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -6979,7 +6979,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Candy%20Shop_50%20Cent",
         "title": "Candy Shop",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -6987,7 +6987,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Many%20Men%20(Wish%20Death)_50%20Cent",
         "title": "Many Men (Wish Death)",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -6995,7 +6995,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_21%20Questions_50%20Cent",
         "title": "21 Questions",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -7003,7 +7003,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_P.I.M.P._50%20Cent",
         "title": "P.I.M.P.",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -7011,7 +7011,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Just%20A%20Lil%20Bit_50%20Cent",
         "title": "Just A Lil Bit",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -7019,7 +7019,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Disco%20Inferno_50%20Cent",
         "title": "Disco Inferno",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -7027,7 +7027,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Window%20Shopper_50%20Cent",
         "title": "Window Shopper",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -7035,7 +7035,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hustler's%20Ambition_50%20Cent",
         "title": "Hustler's Ambition",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -7043,7 +7043,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Baby%20By%20Me_50%20Cent",
         "title": "Baby By Me",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -7051,7 +7051,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hey%20Ya!_Outkast",
         "title": "Hey Ya!",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7059,7 +7059,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ms.%20Jackson_Outkast",
         "title": "Ms. Jackson",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7067,7 +7067,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Roses_Outkast",
         "title": "Roses",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7075,7 +7075,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ATLiens_Outkast",
         "title": "ATLiens",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7083,7 +7083,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_So%20Fresh%20So%20Clean_Outkast",
         "title": "So Fresh So Clean",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7091,7 +7091,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_B.O.B._Outkast",
         "title": "B.O.B.",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7099,7 +7099,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Elevators%20(Me%20%26%20You)_Outkast",
         "title": "Elevators (Me & You)",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7107,7 +7107,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Way%20You%20Move_Outkast",
         "title": "The Way You Move",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7115,7 +7115,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rosa%20Parks_Outkast",
         "title": "Rosa Parks",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7123,7 +7123,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Player's%20Ball_Outkast",
         "title": "Player's Ball",
         "artist": "Outkast",
         "duration": "3:15",
@@ -7131,7 +7131,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Still%20D.R.E.%20(feat.%20Snoop%20Dogg)_Dr.%20Dre",
         "title": "Still D.R.E. (feat. Snoop Dogg)",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7139,7 +7139,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Next%20Episode_Dr.%20Dre",
         "title": "The Next Episode",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7147,7 +7147,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Forgot%20About%20Dre%20(feat.%20Eminem)_Dr.%20Dre",
         "title": "Forgot About Dre (feat. Eminem)",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7155,7 +7155,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nuthin'%20But%20A%20G%20Thang_Dr.%20Dre",
         "title": "Nuthin' But A G Thang",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7163,7 +7163,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_What's%20the%20Difference_Dr.%20Dre",
         "title": "What's the Difference",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7171,7 +7171,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20Me%20Ride_Dr.%20Dre",
         "title": "Let Me Ride",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7179,7 +7179,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Keep%20Their%20Heads%20Ringin'_Dr.%20Dre",
         "title": "Keep Their Heads Ringin'",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7187,7 +7187,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fuck%20Wit%20Dre%20Day_Dr.%20Dre",
         "title": "Fuck Wit Dre Day",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7195,7 +7195,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Need%20a%20Doctor_Dr.%20Dre",
         "title": "I Need a Doctor",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7203,7 +7203,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Kush_Dr.%20Dre",
         "title": "Kush",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -7211,7 +7211,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drop%20It%20Like%20It's%20Hot%20(feat.%20Pharrell)_Snoop%20Dogg",
         "title": "Drop It Like It's Hot (feat. Pharrell)",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7219,7 +7219,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Gin%20and%20Juice_Snoop%20Dogg",
         "title": "Gin and Juice",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7227,7 +7227,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Who%20Am%20I%3F%20(What's%20My%20Name%3F)_Snoop%20Dogg",
         "title": "Who Am I? (What's My Name?)",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7235,7 +7235,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sensual%20Seduction_Snoop%20Dogg",
         "title": "Sensual Seduction",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7243,7 +7243,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Beautiful%20(feat.%20Pharrell)_Snoop%20Dogg",
         "title": "Beautiful (feat. Pharrell)",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7251,7 +7251,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bitch%20Please_Snoop%20Dogg",
         "title": "Bitch Please",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7259,7 +7259,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lodi%20Dodi_Snoop%20Dogg",
         "title": "Lodi Dodi",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7267,7 +7267,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ain't%20No%20Fun_Snoop%20Dogg",
         "title": "Ain't No Fun",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7275,7 +7275,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lay%20Low_Snoop%20Dogg",
         "title": "Lay Low",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7283,7 +7283,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Vato_Snoop%20Dogg",
         "title": "Vato",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -7291,7 +7291,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_California%20Love_2Pac",
         "title": "California Love",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7299,7 +7299,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Changes_2Pac",
         "title": "Changes",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7307,7 +7307,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hit%20'Em%20Up_2Pac",
         "title": "Hit 'Em Up",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7315,7 +7315,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dear%20Mama_2Pac",
         "title": "Dear Mama",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7323,7 +7323,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ambitionz%20Az%20A%20Ridah_2Pac",
         "title": "Ambitionz Az A Ridah",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7331,7 +7331,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Eyez%20On%20Me_2Pac",
         "title": "All Eyez On Me",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7339,7 +7339,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Keep%20Ya%20Head%20Up_2Pac",
         "title": "Keep Ya Head Up",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7347,7 +7347,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hail%20Mary_2Pac",
         "title": "Hail Mary",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7355,7 +7355,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Get%20Around_2Pac",
         "title": "I Get Around",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7363,7 +7363,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Picture%20Me%20Rollin'_2Pac",
         "title": "Picture Me Rollin'",
         "artist": "2Pac",
         "duration": "3:15",
@@ -7371,7 +7371,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Juicy_The%20Notorious%20B.I.G.",
         "title": "Juicy",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7379,7 +7379,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Big%20Poppa_The%20Notorious%20B.I.G.",
         "title": "Big Poppa",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7387,7 +7387,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hypnotize_The%20Notorious%20B.I.G.",
         "title": "Hypnotize",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7395,7 +7395,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mo%20Money%20Mo%20Problems_The%20Notorious%20B.I.G.",
         "title": "Mo Money Mo Problems",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7403,7 +7403,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ten%20Crack%20Commandments_The%20Notorious%20B.I.G.",
         "title": "Ten Crack Commandments",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7411,7 +7411,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "0Q9v8g_w5i8",
+        "id": "yt_Warning_The%20Notorious%20B.I.G.",
         "title": "Warning",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7419,7 +7419,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20More%20Chance_The%20Notorious%20B.I.G.",
         "title": "One More Chance",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7427,7 +7427,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Gimme%20the%20Loot_The%20Notorious%20B.I.G.",
         "title": "Gimme the Loot",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7435,7 +7435,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Notorious%20Thugs_The%20Notorious%20B.I.G.",
         "title": "Notorious Thugs",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7443,7 +7443,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Going%20Back%20to%20Cali_The%20Notorious%20B.I.G.",
         "title": "Going Back to Cali",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -7451,7 +7451,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Empire%20State%20of%20Mind%20(feat.%20Alicia%20Keys)_Jay-Z",
         "title": "Empire State of Mind (feat. Alicia Keys)",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7459,7 +7459,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Niggas%20in%20Paris%20(with%20Kanye%20West)_Jay-Z",
         "title": "Niggas in Paris (with Kanye West)",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7467,7 +7467,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_99%20Problems_Jay-Z",
         "title": "99 Problems",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7475,7 +7475,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Big%20Pimpin'_Jay-Z",
         "title": "Big Pimpin'",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7483,7 +7483,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hard%20Knock%20Life_Jay-Z",
         "title": "Hard Knock Life",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7491,7 +7491,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dirt%20Off%20Your%20Shoulder_Jay-Z",
         "title": "Dirt Off Your Shoulder",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7499,7 +7499,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Izzo%20(H.O.V.A.)_Jay-Z",
         "title": "Izzo (H.O.V.A.)",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7507,7 +7507,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Holy%20Grail%20(feat.%20Justin%20Timberlake)_Jay-Z",
         "title": "Holy Grail (feat. Justin Timberlake)",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7515,7 +7515,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Can%20I%20Get%20A..._Jay-Z",
         "title": "Can I Get A...",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7523,7 +7523,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Run%20This%20Town_Jay-Z",
         "title": "Run This Town",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -7531,7 +7531,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Stronger_Kanye%20West",
         "title": "Stronger",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7539,7 +7539,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Gold%20Digger%20(feat.%20Jamie%20Foxx)_Kanye%20West",
         "title": "Gold Digger (feat. Jamie Foxx)",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7547,7 +7547,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heartless_Kanye%20West",
         "title": "Heartless",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7555,7 +7555,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Flashing%20Lights_Kanye%20West",
         "title": "Flashing Lights",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7563,7 +7563,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Can't%20Tell%20Me%20Nothing_Kanye%20West",
         "title": "Can't Tell Me Nothing",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7571,7 +7571,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Power_Kanye%20West",
         "title": "Power",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7579,7 +7579,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Falls%20Down_Kanye%20West",
         "title": "All Falls Down",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7587,7 +7587,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Through%20The%20Wire_Kanye%20West",
         "title": "Through The Wire",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7595,7 +7595,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Touch%20The%20Sky_Kanye%20West",
         "title": "Touch The Sky",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7603,7 +7603,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Love%20Lockdown_Kanye%20West",
         "title": "Love Lockdown",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -7611,7 +7611,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_A%20Milli_Lil%20Wayne",
         "title": "A Milli",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7619,7 +7619,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lollipop_Lil%20Wayne",
         "title": "Lollipop",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7627,7 +7627,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_6%20Foot%207%20Foot_Lil%20Wayne",
         "title": "6 Foot 7 Foot",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7635,7 +7635,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_How%20to%20Love_Lil%20Wayne",
         "title": "How to Love",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7643,7 +7643,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mirror%20(feat.%20Bruno%20Mars)_Lil%20Wayne",
         "title": "Mirror (feat. Bruno Mars)",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7651,7 +7651,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drop%20The%20World%20(feat.%20Eminem)_Lil%20Wayne",
         "title": "Drop The World (feat. Eminem)",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7659,7 +7659,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Got%20Money_Lil%20Wayne",
         "title": "Got Money",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7667,7 +7667,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Right%20Above%20It%20(feat.%20Drake)_Lil%20Wayne",
         "title": "Right Above It (feat. Drake)",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7675,7 +7675,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fireman_Lil%20Wayne",
         "title": "Fireman",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7683,7 +7683,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mrs.%20Officer_Lil%20Wayne",
         "title": "Mrs. Officer",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -7701,7 +7701,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-teal-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SLOW%20DANCING%20IN%20THE%20DARK_Joji",
         "title": "SLOW DANCING IN THE DARK",
         "artist": "Joji",
         "duration": "3:15",
@@ -7709,7 +7709,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Glimpse%20of%20Us_Joji",
         "title": "Glimpse of Us",
         "artist": "Joji",
         "duration": "3:15",
@@ -7717,7 +7717,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_YEAH%20RIGHT_Joji",
         "title": "YEAH RIGHT",
         "artist": "Joji",
         "duration": "3:15",
@@ -7725,7 +7725,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sanctuary_Joji",
         "title": "Sanctuary",
         "artist": "Joji",
         "duration": "3:15",
@@ -7733,7 +7733,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Die%20For%20You_Joji",
         "title": "Die For You",
         "artist": "Joji",
         "duration": "3:15",
@@ -7741,7 +7741,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Run_Joji",
         "title": "Run",
         "artist": "Joji",
         "duration": "3:15",
@@ -7749,7 +7749,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ew_Joji",
         "title": "Ew",
         "artist": "Joji",
         "duration": "3:15",
@@ -7757,7 +7757,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ATTENTION_Joji",
         "title": "ATTENTION",
         "artist": "Joji",
         "duration": "3:15",
@@ -7765,7 +7765,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_will%20he_Joji",
         "title": "will he",
         "artist": "Joji",
         "duration": "3:15",
@@ -7773,7 +7773,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_TEST%20DRIVE_Joji",
         "title": "TEST DRIVE",
         "artist": "Joji",
         "duration": "3:15",
@@ -7781,7 +7781,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_death%20bed_Powfu",
         "title": "death bed",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7789,7 +7789,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_i'm%20used%20to%20it_Powfu",
         "title": "i'm used to it",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7797,7 +7797,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_stay4ever_Powfu",
         "title": "stay4ever",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7805,7 +7805,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_snowflake_Powfu",
         "title": "snowflake",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7813,7 +7813,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_the%20day%20that%20you%20loved%20me_Powfu",
         "title": "the day that you loved me",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7821,7 +7821,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_17again_Powfu",
         "title": "17again",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7829,7 +7829,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ill%20come%20back%20to%20you_Powfu",
         "title": "ill come back to you",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7837,7 +7837,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lay%20eyes_Powfu",
         "title": "lay eyes",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7845,7 +7845,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_popular%20girl_Powfu",
         "title": "popular girl",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7853,7 +7853,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_clueless_Powfu",
         "title": "clueless",
         "artist": "Powfu",
         "duration": "3:15",
@@ -7861,7 +7861,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Coffee_beabadoobee",
         "title": "Coffee",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7869,7 +7869,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Glue%20Song_beabadoobee",
         "title": "Glue Song",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7877,7 +7877,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_the%20perfect%20pair_beabadoobee",
         "title": "the perfect pair",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7885,7 +7885,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Apple%20Cider_beabadoobee",
         "title": "Apple Cider",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7893,7 +7893,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_See%20you%20Soon_beabadoobee",
         "title": "See you Soon",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7901,7 +7901,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Talk_beabadoobee",
         "title": "Talk",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7909,7 +7909,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sunny%20day_beabadoobee",
         "title": "Sunny day",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7917,7 +7917,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tired_beabadoobee",
         "title": "Tired",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7925,7 +7925,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_She%20Plays%20Bass_beabadoobee",
         "title": "She Plays Bass",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7933,7 +7933,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Take%20A%20Bite_beabadoobee",
         "title": "Take A Bite",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -7941,7 +7941,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_So%20Low_Shiloh%20Dynasty",
         "title": "So Low",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -7949,7 +7949,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'll%20Keep%20You%20Safe_Shiloh%20Dynasty",
         "title": "I'll Keep You Safe",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -7957,7 +7957,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Losing%20Interest_Shiloh%20Dynasty",
         "title": "Losing Interest",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -7965,7 +7965,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Downtown_Shiloh%20Dynasty",
         "title": "Downtown",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -7973,7 +7973,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tell%20Me%20Why%20I'm%20Waiting_Shiloh%20Dynasty",
         "title": "Tell Me Why I'm Waiting",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -7981,7 +7981,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Novocaine_Shiloh%20Dynasty",
         "title": "Novocaine",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -7989,7 +7989,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'm%20Sorry_Shiloh%20Dynasty",
         "title": "I'm Sorry",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -7997,7 +7997,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Give%20Me%20A%20Sign_Shiloh%20Dynasty",
         "title": "Give Me A Sign",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -8005,7 +8005,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Pure_Shiloh%20Dynasty",
         "title": "Pure",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -8013,7 +8013,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rescue%20Me_Shiloh%20Dynasty",
         "title": "Rescue Me",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -8021,7 +8021,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_controlla_Idealism",
         "title": "controlla",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8029,7 +8029,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_both%20of%20us_Idealism",
         "title": "both of us",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8037,7 +8037,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_nagashi_Idealism",
         "title": "nagashi",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8045,7 +8045,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lonely_Idealism",
         "title": "lonely",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8053,7 +8053,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_philia_Idealism",
         "title": "philia",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8061,7 +8061,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_last%20summer_Idealism",
         "title": "last summer",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8069,7 +8069,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_rainy%20evening_Idealism",
         "title": "rainy evening",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8077,7 +8077,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_hiraeth_Idealism",
         "title": "hiraeth",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8085,7 +8085,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_another%20year_Idealism",
         "title": "another year",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8093,7 +8093,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_wanderlust_Idealism",
         "title": "wanderlust",
         "artist": "Idealism",
         "duration": "3:15",
@@ -8101,7 +8101,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Kingdom%20in%20Blue_Kupla",
         "title": "Kingdom in Blue",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8109,7 +8109,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dewdrops_Kupla",
         "title": "Dewdrops",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8117,7 +8117,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Roots_Kupla",
         "title": "Roots",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8125,7 +8125,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sunlight_Kupla",
         "title": "Sunlight",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8133,7 +8133,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Memories_Kupla",
         "title": "Memories",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8141,7 +8141,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drifting%20Far_Kupla",
         "title": "Drifting Far",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8149,7 +8149,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sleepy%20Meadow_Kupla",
         "title": "Sleepy Meadow",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8157,7 +8157,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fallen%20Leaves_Kupla",
         "title": "Fallen Leaves",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8165,7 +8165,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Melody%20of%20Life_Kupla",
         "title": "Melody of Life",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8173,7 +8173,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Horizon_Kupla",
         "title": "Horizon",
         "artist": "Kupla",
         "duration": "3:15",
@@ -8181,7 +8181,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Technicolor_Kudasai",
         "title": "Technicolor",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8189,7 +8189,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_A%20Night%20Together_Kudasai",
         "title": "A Night Together",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8197,7 +8197,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Girl%20I%20Haven't%20Met_Kudasai",
         "title": "The Girl I Haven't Met",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8205,7 +8205,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dream%20of%20Her_Kudasai",
         "title": "Dream of Her",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8213,7 +8213,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20More_Kudasai",
         "title": "No More",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8221,7 +8221,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lavender_Kudasai",
         "title": "Lavender",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8229,7 +8229,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sapphire_Kudasai",
         "title": "Sapphire",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8237,7 +8237,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "uXj_f_4bI6A",
+        "id": "yt_Midnight_Kudasai",
         "title": "Midnight",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8245,7 +8245,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Moments_Kudasai",
         "title": "Moments",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8253,7 +8253,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Falling_Kudasai",
         "title": "Falling",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -8261,7 +8261,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Harbor_Tomppabeats",
         "title": "Harbor",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8269,7 +8269,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Emotional_Tomppabeats",
         "title": "Emotional",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8277,7 +8277,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Far%20Away_Tomppabeats",
         "title": "Far Away",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8285,7 +8285,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Monday%20Loop_Tomppabeats",
         "title": "Monday Loop",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8293,7 +8293,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Summer%20Romance_Tomppabeats",
         "title": "Summer Romance",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8301,7 +8301,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lipstick_Tomppabeats",
         "title": "Lipstick",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8309,7 +8309,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lonely_Tomppabeats",
         "title": "Lonely",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8317,7 +8317,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Thinking%20About%20You_Tomppabeats",
         "title": "Thinking About You",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8325,7 +8325,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20More%20Time_Tomppabeats",
         "title": "One More Time",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8333,7 +8333,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Blossom_Tomppabeats",
         "title": "Blossom",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -8341,7 +8341,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_i'm%20closing%20my%20eyes_Potsu",
         "title": "i'm closing my eyes",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8349,7 +8349,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_just%20friends_Potsu",
         "title": "just friends",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8357,7 +8357,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_food%20court_Potsu",
         "title": "food court",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8365,7 +8365,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_letting%20go_Potsu",
         "title": "letting go",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8373,7 +8373,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_breakfast_Potsu",
         "title": "breakfast",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8381,7 +8381,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_silence_Potsu",
         "title": "silence",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8389,7 +8389,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_take%20me%20there_Potsu",
         "title": "take me there",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8397,7 +8397,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_losing%20interest%20beat_Potsu",
         "title": "losing interest beat",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8405,7 +8405,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_sincerely_Potsu",
         "title": "sincerely",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8413,7 +8413,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_waves_Potsu",
         "title": "waves",
         "artist": "Potsu",
         "duration": "3:15",
@@ -8421,7 +8421,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_LIMBO_Keshi",
         "title": "LIMBO",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8429,7 +8429,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_GET%20WELL%20SOON_Keshi",
         "title": "GET WELL SOON",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8437,7 +8437,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SOMEBODY_Keshi",
         "title": "SOMEBODY",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8445,7 +8445,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_beside%20you_Keshi",
         "title": "beside you",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8453,7 +8453,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_drunk_Keshi",
         "title": "drunk",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8461,7 +8461,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_2%20soon_Keshi",
         "title": "2 soon",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8469,7 +8469,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_like%20i%20need%20u_Keshi",
         "title": "like i need u",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8477,7 +8477,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_right%20here_Keshi",
         "title": "right here",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8485,7 +8485,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_less%20of%20you_Keshi",
         "title": "less of you",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8493,7 +8493,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_TOUCH_Keshi",
         "title": "TOUCH",
         "artist": "Keshi",
         "duration": "3:15",
@@ -8751,7 +8751,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://i.ytimg.com/vi/6k8L1P4M3Gw/hqdefault.jpg"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'll%20Be%20Fine_Juice_WRLD",
         "title": "I'll Be Fine",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8759,7 +8759,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Used%20To_Juice_WRLD",
         "title": "Used To",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8767,7 +8767,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Candles_Juice_WRLD",
         "title": "Candles",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8775,7 +8775,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scared%20of%20Love_Juice_WRLD",
         "title": "Scared of Love",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8783,7 +8783,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hurt%20Me_Juice_WRLD",
         "title": "Hurt Me",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8791,7 +8791,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'm%20Still_Juice_WRLD",
         "title": "I'm Still",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8799,7 +8799,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_End%20of%20the%20Road_Juice_WRLD",
         "title": "End of the Road",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8807,7 +8807,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Long%20Gone_Juice_WRLD",
         "title": "Long Gone",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8815,7 +8815,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Empty_Juice_WRLD",
         "title": "Empty",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8823,7 +8823,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Maze_Juice_WRLD",
         "title": "Maze",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8831,7 +8831,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_HeMotions_Juice_WRLD",
         "title": "HeMotions",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8839,7 +8839,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Demonz_Juice_WRLD",
         "title": "Demonz",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8847,7 +8847,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Big_Juice_WRLD",
         "title": "Big",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8855,7 +8855,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feeling_Juice_WRLD",
         "title": "Feeling",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8863,7 +8863,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Syphilis_Juice_WRLD",
         "title": "Syphilis",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8871,7 +8871,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Who%20Shot%20Cupid%3F_Juice_WRLD",
         "title": "Who Shot Cupid?",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8879,7 +8879,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ring%20Ring_Juice_WRLD",
         "title": "Ring Ring",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8887,7 +8887,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Desire_Juice_WRLD",
         "title": "Desire",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8895,7 +8895,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Out%20My%20Way_Juice_WRLD",
         "title": "Out My Way",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8903,7 +8903,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Bees%20Knees_Juice_WRLD",
         "title": "The Bees Knees",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8911,7 +8911,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ON%20GOD_Juice_WRLD",
         "title": "ON GOD",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8919,7 +8919,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_10%20Feet_Juice_WRLD",
         "title": "10 Feet",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8927,7 +8927,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Won't%20Let%20Go_Juice_WRLD",
         "title": "Won't Let Go",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8935,7 +8935,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_She's%20The%20One_Juice_WRLD",
         "title": "She's The One",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8943,7 +8943,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rider_Juice_WRLD",
         "title": "Rider",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8951,7 +8951,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Make%20Believe_Juice_WRLD",
         "title": "Make Believe",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8959,7 +8959,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fine%20China_Juice_WRLD",
         "title": "Fine China",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8967,7 +8967,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Astronauts_Juice_WRLD",
         "title": "Astronauts",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8975,7 +8975,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Red%20Bentley_Juice_WRLD",
         "title": "Red Bentley",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8983,7 +8983,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hard%20Work%20Pays%20Off_Juice_WRLD",
         "title": "Hard Work Pays Off",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8991,7 +8991,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Shorty_Juice_WRLD",
         "title": "Shorty",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -8999,7 +8999,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Realer%20N%20Realer_Juice_WRLD",
         "title": "Realer N Realer",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9007,7 +9007,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Different_Juice_WRLD",
         "title": "Different",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9015,7 +9015,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ain't%20Livin%20Right_Juice_WRLD",
         "title": "Ain't Livin Right",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9023,7 +9023,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_7%20AM%20Freestyle_Juice_WRLD",
         "title": "7 AM Freestyle",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9031,7 +9031,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_WRLD%20On%20Drugs_Juice_WRLD",
         "title": "WRLD On Drugs",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9039,7 +9039,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Afterlife_Juice_WRLD",
         "title": "Afterlife",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9047,7 +9047,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Transformer_Juice_WRLD",
         "title": "Transformer",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9055,7 +9055,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Issue_Juice_WRLD",
         "title": "No Issue",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9063,7 +9063,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rich%20Ashell_Juice_WRLD",
         "title": "Rich Ashell",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9071,7 +9071,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Autograph_Juice_WRLD",
         "title": "Autograph",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9079,7 +9079,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Moonlight_Juice_WRLD",
         "title": "Moonlight",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9087,7 +9087,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Eye%20Contact_Juice_WRLD",
         "title": "Eye Contact",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9095,7 +9095,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Paranoid_Juice_WRLD",
         "title": "Paranoid",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9103,7 +9103,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rainbow_Juice_WRLD",
         "title": "Rainbow",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9111,7 +9111,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Two%20Cups_Juice_WRLD",
         "title": "Two Cups",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9119,7 +9119,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Until%20The%20Plug_Juice_WRLD",
         "title": "Until The Plug",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9127,7 +9127,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Not%20Enough_Juice_WRLD",
         "title": "Not Enough",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9135,7 +9135,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feline_Juice_WRLD",
         "title": "Feline",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9143,7 +9143,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Relocate_Juice_WRLD",
         "title": "Relocate",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9151,7 +9151,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_You%20Wouldn't%20Understand_Juice_WRLD",
         "title": "You Wouldn't Understand",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9159,7 +9159,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rockstar%20In%20His%20Prime_Juice_WRLD",
         "title": "Rockstar In His Prime",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9167,7 +9167,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Doom_Juice_WRLD",
         "title": "Doom",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9175,7 +9175,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Go%20Hard%202.0_Juice_WRLD",
         "title": "Go Hard 2.0",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9183,7 +9183,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Girl%20Of%20My%20Dreams_Juice_WRLD",
         "title": "Girl Of My Dreams",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9191,7 +9191,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_From%20My%20Window_Juice_WRLD",
         "title": "From My Window",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9199,7 +9199,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20My%20Head_Juice_WRLD",
         "title": "In My Head",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9207,7 +9207,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Face%202%20Face_Juice_WRLD",
         "title": "Face 2 Face",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9215,7 +9215,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Light_Juice_WRLD",
         "title": "The Light",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9223,7 +9223,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Glowed%20Up_Juice_WRLD",
         "title": "Glowed Up",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9231,7 +9231,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lace%20It_Juice_WRLD",
         "title": "Lace It",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9239,7 +9239,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Both%20Ways_Juice_WRLD",
         "title": "Both Ways",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9247,7 +9247,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cavalier_Juice_WRLD",
         "title": "Cavalier",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9255,7 +9255,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Aquafina_Juice_WRLD",
         "title": "Aquafina",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9263,7 +9263,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_AGATS%202_Juice_WRLD",
         "title": "AGATS 2",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9271,7 +9271,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Celebrate_Juice_WRLD",
         "title": "Celebrate",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9279,7 +9279,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Best%20of%20Me_Juice_WRLD",
         "title": "Best of Me",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9287,7 +9287,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Telepathy%20pt%202_Juice_WRLD",
         "title": "Telepathy pt 2",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9295,7 +9295,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20Me%20Know%20(I%20Wonder%20Why)_Juice_WRLD",
         "title": "Let Me Know (I Wonder Why)",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -9303,7 +9303,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Roses%20(with%20benny%20blanco)_Juice_WRLD",
         "title": "Roses (with benny blanco)",
         "artist": "Juice WRLD",
         "duration": "3:10",
@@ -10531,7 +10531,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-blue-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lucid%20Dreams_Juice%20WRLD",
         "title": "Lucid Dreams",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10539,7 +10539,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Robbery_Juice%20WRLD",
         "title": "Robbery",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10547,7 +10547,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Girls%20Are%20The%20Same_Juice%20WRLD",
         "title": "All Girls Are The Same",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10555,7 +10555,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wishing%20Well_Juice%20WRLD",
         "title": "Wishing Well",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10563,7 +10563,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lean%20Wit%20Me_Juice%20WRLD",
         "title": "Lean Wit Me",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10571,7 +10571,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Righteous_Juice%20WRLD",
         "title": "Righteous",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10579,7 +10579,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Already%20Dead_Juice%20WRLD",
         "title": "Already Dead",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10587,7 +10587,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cigarettes_Juice%20WRLD",
         "title": "Cigarettes",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10595,7 +10595,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Burn_Juice%20WRLD",
         "title": "Burn",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10603,7 +10603,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Legends_Juice%20WRLD",
         "title": "Legends",
         "artist": "Juice WRLD",
         "duration": "3:15",
@@ -10611,7 +10611,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Star%20Shopping_Lil%20Peep",
         "title": "Star Shopping",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10619,7 +10619,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Save%20That%20Shit_Lil%20Peep",
         "title": "Save That Shit",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10627,7 +10627,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Falling%20Down%20(with%20XXXTENTACION)_Lil%20Peep",
         "title": "Falling Down (with XXXTENTACION)",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10635,7 +10635,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Witchblades%20(with%20Lil%20Tracy)_Lil%20Peep",
         "title": "Witchblades (with Lil Tracy)",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10643,7 +10643,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Awful%20Things_Lil%20Peep",
         "title": "Awful Things",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10651,7 +10651,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Benz%20Truck_Lil%20Peep",
         "title": "Benz Truck",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10659,7 +10659,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Crybaby_Lil%20Peep",
         "title": "Crybaby",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10667,7 +10667,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Beamer%20Boy_Lil%20Peep",
         "title": "Beamer Boy",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10675,7 +10675,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Life%20is%20Beautiful_Lil%20Peep",
         "title": "Life is Beautiful",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10683,7 +10683,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nuts_Lil%20Peep",
         "title": "Nuts",
         "artist": "Lil Peep",
         "duration": "3:15",
@@ -10691,7 +10691,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SAD!_XXXTENTACION",
         "title": "SAD!",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10699,7 +10699,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Moonlight_XXXTENTACION",
         "title": "Moonlight",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10707,7 +10707,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Jocelyn%20Flores_XXXTENTACION",
         "title": "Jocelyn Flores",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10715,7 +10715,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Look%20At%20Me!_XXXTENTACION",
         "title": "Look At Me!",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10723,7 +10723,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Changes_XXXTENTACION",
         "title": "Changes",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10731,7 +10731,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hope_XXXTENTACION",
         "title": "Hope",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10739,7 +10739,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Everybody%20Dies%20In%20Their%20Nightmares_XXXTENTACION",
         "title": "Everybody Dies In Their Nightmares",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10747,7 +10747,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Revenge_XXXTENTACION",
         "title": "Revenge",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10755,7 +10755,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_NUMB_XXXTENTACION",
         "title": "NUMB",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10763,7 +10763,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_the%20remedy%20for%20a%20broken%20heart_XXXTENTACION",
         "title": "the remedy for a broken heart",
         "artist": "XXXTENTACION",
         "duration": "3:15",
@@ -10771,7 +10771,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Topanga_Trippie%20Redd",
         "title": "Topanga",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10779,7 +10779,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Love%20Scars_Trippie%20Redd",
         "title": "Love Scars",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10787,7 +10787,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dark%20Knight%20Dummo%20(feat.%20Travis%20Scott)_Trippie%20Redd",
         "title": "Dark Knight Dummo (feat. Travis Scott)",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10795,7 +10795,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Taking%20A%20Walk_Trippie%20Redd",
         "title": "Taking A Walk",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10803,7 +10803,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wish%20(with%20Diplo)_Trippie%20Redd",
         "title": "Wish (with Diplo)",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10811,7 +10811,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Miss%20The%20Rage%20(feat.%20Playboi%20Carti)_Trippie%20Redd",
         "title": "Miss The Rage (feat. Playboi Carti)",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10819,7 +10819,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fuck%20Love%20Verse_Trippie%20Redd",
         "title": "Fuck Love Verse",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10827,7 +10827,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Grinch_Trippie%20Redd",
         "title": "The Grinch",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10835,7 +10835,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_1400%20%2F%20999%20Freestyle_Trippie%20Redd",
         "title": "1400 / 999 Freestyle",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10843,7 +10843,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hurts%20Me_Trippie%20Redd",
         "title": "Hurts Me",
         "artist": "Trippie Redd",
         "duration": "3:15",
@@ -10851,7 +10851,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_STAY%20(with%20Justin%20Bieber)_The%20Kid%20LAROI",
         "title": "STAY (with Justin Bieber)",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10859,7 +10859,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_WITHOUT%20YOU_The%20Kid%20LAROI",
         "title": "WITHOUT YOU",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10867,7 +10867,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SO%20DONE_The%20Kid%20LAROI",
         "title": "SO DONE",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10875,7 +10875,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ALWAYS%20DO_The%20Kid%20LAROI",
         "title": "ALWAYS DO",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10883,7 +10883,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_TELL%20ME%20WHY_The%20Kid%20LAROI",
         "title": "TELL ME WHY",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10891,7 +10891,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_GO%20(feat.%20Juice%20WRLD)_The%20Kid%20LAROI",
         "title": "GO (feat. Juice WRLD)",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10899,7 +10899,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_NIGHTS%20LIKE%20THIS_The%20Kid%20LAROI",
         "title": "NIGHTS LIKE THIS",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10907,7 +10907,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_BLEED_The%20Kid%20LAROI",
         "title": "BLEED",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10915,7 +10915,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_TRAGIC%20(feat.%20YoungBoy)_The%20Kid%20LAROI",
         "title": "TRAGIC (feat. YoungBoy)",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10923,7 +10923,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_DIVORCED_The%20Kid%20LAROI",
         "title": "DIVORCED",
         "artist": "The Kid LAROI",
         "duration": "3:15",
@@ -10931,7 +10931,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_mood%20(with%2024kGoldn)_iann%20dior",
         "title": "mood (with 24kGoldn)",
         "artist": "iann dior",
         "duration": "3:15",
@@ -10939,7 +10939,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_emotions_iann%20dior",
         "title": "emotions",
         "artist": "iann dior",
         "duration": "3:15",
@@ -10947,7 +10947,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_gone%20girl%20(feat.%20Trippie%20Redd)_iann%20dior",
         "title": "gone girl (feat. Trippie Redd)",
         "artist": "iann dior",
         "duration": "3:15",
@@ -10955,7 +10955,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_sick%20and%20tired%20(feat.%20Machine%20Gun%20Kelly)_iann%20dior",
         "title": "sick and tired (feat. Machine Gun Kelly)",
         "artist": "iann dior",
         "duration": "3:15",
@@ -10963,7 +10963,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_let%20you_iann%20dior",
         "title": "let you",
         "artist": "iann dior",
         "duration": "3:15",
@@ -10971,7 +10971,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_shots%20in%20the%20dark_iann%20dior",
         "title": "shots in the dark",
         "artist": "iann dior",
         "duration": "3:15",
@@ -10979,7 +10979,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_holding%20on_iann%20dior",
         "title": "holding on",
         "artist": "iann dior",
         "duration": "3:15",
@@ -10987,7 +10987,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_pretty%20girls_iann%20dior",
         "title": "pretty girls",
         "artist": "iann dior",
         "duration": "3:15",
@@ -10995,7 +10995,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_prospect%20(feat.%20Lil%20Baby)_iann%20dior",
         "title": "prospect (feat. Lil Baby)",
         "artist": "iann dior",
         "duration": "3:15",
@@ -11003,7 +11003,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_darkside_iann%20dior",
         "title": "darkside",
         "artist": "iann dior",
         "duration": "3:15",
@@ -11011,7 +11011,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_my%20ex's%20best%20friend%20(feat.%20blackbear)_Machine%20Gun%20Kelly",
         "title": "my ex's best friend (feat. blackbear)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11019,7 +11019,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_bloody%20valentine_Machine%20Gun%20Kelly",
         "title": "bloody valentine",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11027,7 +11027,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_forget%20me%20too%20(feat.%20Halsey)_Machine%20Gun%20Kelly",
         "title": "forget me too (feat. Halsey)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11035,7 +11035,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Think%20I'm%20OKAY%20(with%20YUNGBLUD)_Machine%20Gun%20Kelly",
         "title": "I Think I'm OKAY (with YUNGBLUD)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11043,7 +11043,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_maybe%20(feat.%20Bring%20Me%20The%20Horizon)_Machine%20Gun%20Kelly",
         "title": "maybe (feat. Bring Me The Horizon)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11051,7 +11051,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_papercuts_Machine%20Gun%20Kelly",
         "title": "papercuts",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11059,7 +11059,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_emo%20girl%20(feat.%20WILLOW)_Machine%20Gun%20Kelly",
         "title": "emo girl (feat. WILLOW)",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11067,7 +11067,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_drunk%20face_Machine%20Gun%20Kelly",
         "title": "drunk face",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11075,7 +11075,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_jawbreaker_Machine%20Gun%20Kelly",
         "title": "jawbreaker",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11083,7 +11083,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_title%20track_Machine%20Gun%20Kelly",
         "title": "title track",
         "artist": "Machine Gun Kelly",
         "duration": "3:15",
@@ -11091,7 +11091,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_death%20bed%20(coffee%20for%20your%20head)_Powfu",
         "title": "death bed (coffee for your head)",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11099,7 +11099,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ill%20come%20back%20to%20you_Powfu",
         "title": "ill come back to you",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11107,7 +11107,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_stay4ever_Powfu",
         "title": "stay4ever",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11115,7 +11115,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_snowflake_Powfu",
         "title": "snowflake",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11123,7 +11123,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_the%20day%20that%20you%20loved%20me_Powfu",
         "title": "the day that you loved me",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11131,7 +11131,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_17again_Powfu",
         "title": "17again",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11139,7 +11139,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_im%20used%20to%20it_Powfu",
         "title": "im used to it",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11147,7 +11147,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lay%20eyes_Powfu",
         "title": "lay eyes",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11155,7 +11155,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_a%20world%20of%20chaos_Powfu",
         "title": "a world of chaos",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11163,7 +11163,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_popular%20girl%2C%20typical%20boy_Powfu",
         "title": "popular girl, typical boy",
         "artist": "Powfu",
         "duration": "3:15",
@@ -11171,7 +11171,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Red%20Roses%20(feat.%20Landon%20Cube)_Lil%20Skies",
         "title": "Red Roses (feat. Landon Cube)",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11179,7 +11179,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nowadays%20(feat.%20Landon%20Cube)_Lil%20Skies",
         "title": "Nowadays (feat. Landon Cube)",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11187,7 +11187,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I_Lil%20Skies",
         "title": "I",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11195,7 +11195,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lust_Lil%20Skies",
         "title": "Lust",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11203,7 +11203,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Creeping%20(feat.%20Rich%20the%20Kid)_Lil%20Skies",
         "title": "Creeping (feat. Rich the Kid)",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11211,7 +11211,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Signs%20of%20Jealousy_Lil%20Skies",
         "title": "Signs of Jealousy",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11219,7 +11219,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Welcome%20to%20the%20Rodeo_Lil%20Skies",
         "title": "Welcome to the Rodeo",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11227,7 +11227,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Strictly%20Business_Lil%20Skies",
         "title": "Strictly Business",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11235,7 +11235,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Name%20in%20the%20Sand_Lil%20Skies",
         "title": "Name in the Sand",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11243,7 +11243,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rihanna_Lil%20Skies",
         "title": "Rihanna",
         "artist": "Lil Skies",
         "duration": "3:15",
@@ -11251,7 +11251,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20You%20Down_NF",
         "title": "Let You Down",
         "artist": "NF",
         "duration": "3:15",
@@ -11259,7 +11259,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Search_NF",
         "title": "The Search",
         "artist": "NF",
         "duration": "3:15",
@@ -11267,7 +11267,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lie_NF",
         "title": "Lie",
         "artist": "NF",
         "duration": "3:15",
@@ -11275,7 +11275,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Time_NF",
         "title": "Time",
         "artist": "NF",
         "duration": "3:15",
@@ -11283,7 +11283,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Paralyzed_NF",
         "title": "Paralyzed",
         "artist": "NF",
         "duration": "3:15",
@@ -11291,7 +11291,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_When%20I%20Grow%20Up_NF",
         "title": "When I Grow Up",
         "artist": "NF",
         "duration": "3:15",
@@ -11299,7 +11299,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hate%20Myself_NF",
         "title": "Hate Myself",
         "artist": "NF",
         "duration": "3:15",
@@ -11307,7 +11307,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Just%20Like%20You_NF",
         "title": "Just Like You",
         "artist": "NF",
         "duration": "3:15",
@@ -11315,7 +11315,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_If%20You%20Want%20Love_NF",
         "title": "If You Want Love",
         "artist": "NF",
         "duration": "3:15",
@@ -11323,7 +11323,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_HOPE_NF",
         "title": "HOPE",
         "artist": "NF",
         "duration": "3:15",
@@ -11341,7 +11341,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-pink-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Blinding%20Lights_The%20Weeknd",
         "title": "Blinding Lights",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11349,7 +11349,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Starboy%20(feat.%20Daft%20Punk)_The%20Weeknd",
         "title": "Starboy (feat. Daft Punk)",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11357,7 +11357,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Save%20Your%20Tears_The%20Weeknd",
         "title": "Save Your Tears",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11365,7 +11365,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Die%20For%20You_The%20Weeknd",
         "title": "Die For You",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11373,7 +11373,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Hills_The%20Weeknd",
         "title": "The Hills",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11381,7 +11381,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Can't%20Feel%20My%20Face_The%20Weeknd",
         "title": "Can't Feel My Face",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11389,7 +11389,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Creepin'%20Verse_The%20Weeknd",
         "title": "Creepin' Verse",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11397,7 +11397,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Feel%20It%20Coming_The%20Weeknd",
         "title": "I Feel It Coming",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11405,7 +11405,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heartless_The%20Weeknd",
         "title": "Heartless",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11413,7 +11413,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_After%20Hours_The%20Weeknd",
         "title": "After Hours",
         "artist": "The Weeknd",
         "duration": "3:15",
@@ -11421,7 +11421,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Levitating_Dua%20Lipa",
         "title": "Levitating",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11429,7 +11429,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20Start%20Now_Dua%20Lipa",
         "title": "Don't Start Now",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11437,7 +11437,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dance%20The%20Night_Dua%20Lipa",
         "title": "Dance The Night",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11445,7 +11445,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Houdini_Dua%20Lipa",
         "title": "Houdini",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11453,7 +11453,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20Kiss%20(with%20Calvin%20Harris)_Dua%20Lipa",
         "title": "One Kiss (with Calvin Harris)",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11461,7 +11461,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_New%20Rules_Dua%20Lipa",
         "title": "New Rules",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11469,7 +11469,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Break%20My%20Heart_Dua%20Lipa",
         "title": "Break My Heart",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11477,7 +11477,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Physical_Dua%20Lipa",
         "title": "Physical",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11485,7 +11485,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Training%20Season_Dua%20Lipa",
         "title": "Training Season",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11493,7 +11493,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cold%20Heart%20(with%20Elton%20John)_Dua%20Lipa",
         "title": "Cold Heart (with Elton John)",
         "artist": "Dua Lipa",
         "duration": "3:15",
@@ -11501,7 +11501,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_bad%20guy_Billie%20Eilish",
         "title": "bad guy",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11509,7 +11509,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_birds%20of%20a%20feather_Billie%20Eilish",
         "title": "birds of a feather",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11517,7 +11517,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lovely%20(with%20Khalid)_Billie%20Eilish",
         "title": "lovely (with Khalid)",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11525,7 +11525,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ocean%20eyes_Billie%20Eilish",
         "title": "ocean eyes",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11533,7 +11533,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_everything%20i%20wanted_Billie%20Eilish",
         "title": "everything i wanted",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11541,7 +11541,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_when%20the%20party's%20over_Billie%20Eilish",
         "title": "when the party's over",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11549,7 +11549,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_what%20was%20i%20made%20for%3F_Billie%20Eilish",
         "title": "what was i made for?",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11557,7 +11557,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_happier%20than%20ever_Billie%20Eilish",
         "title": "happier than ever",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11565,7 +11565,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lunch_Billie%20Eilish",
         "title": "lunch",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11573,7 +11573,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_chihiro_Billie%20Eilish",
         "title": "chihiro",
         "artist": "Billie Eilish",
         "duration": "3:15",
@@ -11581,7 +11581,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Espresso_Sabrina%20Carpenter",
         "title": "Espresso",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11589,7 +11589,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Please%20Please%20Please_Sabrina%20Carpenter",
         "title": "Please Please Please",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11597,7 +11597,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Taste_Sabrina%20Carpenter",
         "title": "Taste",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11605,7 +11605,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feather_Sabrina%20Carpenter",
         "title": "Feather",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11613,7 +11613,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nonsense_Sabrina%20Carpenter",
         "title": "Nonsense",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11621,7 +11621,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bed%20Chem_Sabrina%20Carpenter",
         "title": "Bed Chem",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11629,7 +11629,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Good%20Graces_Sabrina%20Carpenter",
         "title": "Good Graces",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11637,7 +11637,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Juno_Sabrina%20Carpenter",
         "title": "Juno",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11645,7 +11645,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sharpest%20Tool_Sabrina%20Carpenter",
         "title": "Sharpest Tool",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11653,7 +11653,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Coincidence_Sabrina%20Carpenter",
         "title": "Coincidence",
         "artist": "Sabrina Carpenter",
         "duration": "3:15",
@@ -11661,7 +11661,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_drivers%20license_Olivia%20Rodrigo",
         "title": "drivers license",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11669,7 +11669,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_good%204%20u_Olivia%20Rodrigo",
         "title": "good 4 u",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11677,7 +11677,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_vampire_Olivia%20Rodrigo",
         "title": "vampire",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11685,7 +11685,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_deja%20vu_Olivia%20Rodrigo",
         "title": "deja vu",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11693,7 +11693,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_traitor_Olivia%20Rodrigo",
         "title": "traitor",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11701,7 +11701,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_bad%20idea%20right%3F_Olivia%20Rodrigo",
         "title": "bad idea right?",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11709,7 +11709,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_get%20him%20back!_Olivia%20Rodrigo",
         "title": "get him back!",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11717,7 +11717,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_happier_Olivia%20Rodrigo",
         "title": "happier",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11725,7 +11725,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_brutal_Olivia%20Rodrigo",
         "title": "brutal",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11733,7 +11733,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_obsessed_Olivia%20Rodrigo",
         "title": "obsessed",
         "artist": "Olivia Rodrigo",
         "duration": "3:15",
@@ -11741,7 +11741,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cruel%20Summer_Taylor%20Swift",
         "title": "Cruel Summer",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11749,7 +11749,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Anti-Hero_Taylor%20Swift",
         "title": "Anti-Hero",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11757,7 +11757,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Blank%20Space_Taylor%20Swift",
         "title": "Blank Space",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11765,7 +11765,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Fortnight%20(feat.%20Post%20Malone)_Taylor%20Swift",
         "title": "Fortnight (feat. Post Malone)",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11773,7 +11773,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cardigan_Taylor%20Swift",
         "title": "Cardigan",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11781,7 +11781,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Shake%20It%20Off_Taylor%20Swift",
         "title": "Shake It Off",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11789,7 +11789,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lover_Taylor%20Swift",
         "title": "Lover",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11797,7 +11797,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Can%20Do%20It%20With%20a%20Broken%20Heart_Taylor%20Swift",
         "title": "I Can Do It With a Broken Heart",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11805,7 +11805,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Style_Taylor%20Swift",
         "title": "Style",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11813,7 +11813,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20Blame%20Me_Taylor%20Swift",
         "title": "Don't Blame Me",
         "artist": "Taylor Swift",
         "duration": "3:15",
@@ -11821,7 +11821,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_As%20It%20Was_Harry%20Styles",
         "title": "As It Was",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11829,7 +11829,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Watermelon%20Sugar_Harry%20Styles",
         "title": "Watermelon Sugar",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11837,7 +11837,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Adore%20You_Harry%20Styles",
         "title": "Adore You",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11845,7 +11845,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sign%20of%20the%20Times_Harry%20Styles",
         "title": "Sign of the Times",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11853,7 +11853,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Golden_Harry%20Styles",
         "title": "Golden",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11861,7 +11861,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Late%20Night%20Talking_Harry%20Styles",
         "title": "Late Night Talking",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11869,7 +11869,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Falling_Harry%20Styles",
         "title": "Falling",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11877,7 +11877,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Music%20For%20a%20Sushi%20Restaurant_Harry%20Styles",
         "title": "Music For a Sushi Restaurant",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11885,7 +11885,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Matilda_Harry%20Styles",
         "title": "Matilda",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11893,7 +11893,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lights%20Up_Harry%20Styles",
         "title": "Lights Up",
         "artist": "Harry Styles",
         "duration": "3:15",
@@ -11901,7 +11901,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Die%20With%20A%20Smile%20(with%20Lady%20Gaga)_Bruno%20Mars",
         "title": "Die With A Smile (with Lady Gaga)",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11909,7 +11909,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_That's%20What%20I%20Like_Bruno%20Mars",
         "title": "That's What I Like",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11917,7 +11917,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_24K%20Magic_Bruno%20Mars",
         "title": "24K Magic",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11925,7 +11925,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Locked%20Out%20of%20Heaven_Bruno%20Mars",
         "title": "Locked Out of Heaven",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11933,7 +11933,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Just%20the%20Way%20You%20Are_Bruno%20Mars",
         "title": "Just the Way You Are",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11941,7 +11941,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_When%20I%20Was%20Your%20Man_Bruno%20Mars",
         "title": "When I Was Your Man",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11949,7 +11949,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Grenade_Bruno%20Mars",
         "title": "Grenade",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11957,7 +11957,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Treasure_Bruno%20Mars",
         "title": "Treasure",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11965,7 +11965,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Leave%20The%20Door%20Open_Bruno%20Mars",
         "title": "Leave The Door Open",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11973,7 +11973,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Smokin%20Out%20The%20Window_Bruno%20Mars",
         "title": "Smokin Out The Window",
         "artist": "Bruno Mars",
         "duration": "3:15",
@@ -11981,7 +11981,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_7%20rings_Ariana%20Grande",
         "title": "7 rings",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -11989,7 +11989,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_thank%20u%2C%20next_Ariana%20Grande",
         "title": "thank u, next",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -11997,7 +11997,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_yes%2C%20and%3F_Ariana%20Grande",
         "title": "yes, and?",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -12005,7 +12005,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_we%20can't%20be%20friends_Ariana%20Grande",
         "title": "we can't be friends",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -12013,7 +12013,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_no%20tears%20left%20to%20cry_Ariana%20Grande",
         "title": "no tears left to cry",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -12021,7 +12021,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Positions_Ariana%20Grande",
         "title": "Positions",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -12029,7 +12029,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Side%20to%20Side_Ariana%20Grande",
         "title": "Side to Side",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -12037,7 +12037,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Into%20You_Ariana%20Grande",
         "title": "Into You",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -12045,7 +12045,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dangerous%20Woman_Ariana%20Grande",
         "title": "Dangerous Woman",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -12053,7 +12053,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_God%20is%20a%20woman_Ariana%20Grande",
         "title": "God is a woman",
         "artist": "Ariana Grande",
         "duration": "3:15",
@@ -12061,7 +12061,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Circles_Post%20Malone",
         "title": "Circles",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12069,7 +12069,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Sunflower%20(with%20Swae%20Lee)_Post%20Malone",
         "title": "Sunflower (with Swae Lee)",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12077,7 +12077,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Rockstar%20(feat.%2021%20Savage)_Post%20Malone",
         "title": "Rockstar (feat. 21 Savage)",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12085,7 +12085,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Congratulations_Post%20Malone",
         "title": "Congratulations",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12093,7 +12093,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Better%20Now_Post%20Malone",
         "title": "Better Now",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12101,7 +12101,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_I%20Had%20Some%20Help%20(feat.%20Morgan%20Wallen)_Post%20Malone",
         "title": "I Had Some Help (feat. Morgan Wallen)",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12109,7 +12109,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_White%20Iverson_Post%20Malone",
         "title": "White Iverson",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12117,7 +12117,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Chemical_Post%20Malone",
         "title": "Chemical",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12125,7 +12125,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Psycho_Post%20Malone",
         "title": "Psycho",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12133,7 +12133,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_Wow._Post%20Malone",
         "title": "Wow.",
         "artist": "Post Malone",
         "duration": "3:15",
@@ -12151,7 +12151,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-violet-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Thinkin%20Bout%20You_Frank%20Ocean",
         "title": "Thinkin Bout You",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12159,7 +12159,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Novacane_Frank%20Ocean",
         "title": "Novacane",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12167,7 +12167,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Chanel_Frank%20Ocean",
         "title": "Chanel",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12175,7 +12175,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nights_Frank%20Ocean",
         "title": "Nights",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12183,7 +12183,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Pink%20%2B%20White_Frank%20Ocean",
         "title": "Pink + White",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12191,7 +12191,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ivy_Frank%20Ocean",
         "title": "Ivy",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12199,7 +12199,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lost_Frank%20Ocean",
         "title": "Lost",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12207,7 +12207,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Pyramids_Frank%20Ocean",
         "title": "Pyramids",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12215,7 +12215,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Self%20Control_Frank%20Ocean",
         "title": "Self Control",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12223,7 +12223,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Godspeed_Frank%20Ocean",
         "title": "Godspeed",
         "artist": "Frank Ocean",
         "duration": "3:15",
@@ -12231,7 +12231,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Kill%20Bill_SZA",
         "title": "Kill Bill",
         "artist": "SZA",
         "duration": "3:15",
@@ -12239,7 +12239,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Snooze_SZA",
         "title": "Snooze",
         "artist": "SZA",
         "duration": "3:15",
@@ -12247,7 +12247,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Good%20Days_SZA",
         "title": "Good Days",
         "artist": "SZA",
         "duration": "3:15",
@@ -12255,7 +12255,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nobody%20Gets%20Me_SZA",
         "title": "Nobody Gets Me",
         "artist": "SZA",
         "duration": "3:15",
@@ -12263,7 +12263,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Love%20Galore%20(feat.%20Travis%20Scott)_SZA",
         "title": "Love Galore (feat. Travis Scott)",
         "artist": "SZA",
         "duration": "3:15",
@@ -12271,7 +12271,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Broken%20Clocks_SZA",
         "title": "Broken Clocks",
         "artist": "SZA",
         "duration": "3:15",
@@ -12279,7 +12279,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Weekend_SZA",
         "title": "The Weekend",
         "artist": "SZA",
         "duration": "3:15",
@@ -12287,7 +12287,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Hate%20U_SZA",
         "title": "I Hate U",
         "artist": "SZA",
         "duration": "3:15",
@@ -12295,7 +12295,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Saturn_SZA",
         "title": "Saturn",
         "artist": "SZA",
         "duration": "3:15",
@@ -12303,7 +12303,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Low_SZA",
         "title": "Low",
         "artist": "SZA",
         "duration": "3:15",
@@ -12311,7 +12311,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Best%20Part%20(feat.%20H.E.R.)_Daniel%20Caesar",
         "title": "Best Part (feat. H.E.R.)",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12319,7 +12319,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Get%20You%20(feat.%20Kali%20Uchis)_Daniel%20Caesar",
         "title": "Get You (feat. Kali Uchis)",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12327,7 +12327,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Always_Daniel%20Caesar",
         "title": "Always",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12335,7 +12335,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Japanese%20Denim_Daniel%20Caesar",
         "title": "Japanese Denim",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12343,7 +12343,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hold%20Me%20Down_Daniel%20Caesar",
         "title": "Hold Me Down",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12351,7 +12351,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Streetcar_Daniel%20Caesar",
         "title": "Streetcar",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12359,7 +12359,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Toronto%202014_Daniel%20Caesar",
         "title": "Toronto 2014",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12367,7 +12367,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Do%20You%20Like%20Me%3F_Daniel%20Caesar",
         "title": "Do You Like Me?",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12375,7 +12375,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20Me%20Go_Daniel%20Caesar",
         "title": "Let Me Go",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12383,7 +12383,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cyanide_Daniel%20Caesar",
         "title": "Cyanide",
         "artist": "Daniel Caesar",
         "duration": "3:15",
@@ -12391,7 +12391,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dead%20Man%20Walking_Brent%20Faiyaz",
         "title": "Dead Man Walking",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12399,7 +12399,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Trust_Brent%20Faiyaz",
         "title": "Trust",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12407,7 +12407,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Gravity%20(with%20Tyler%2C%20The%20Creator)_Brent%20Faiyaz",
         "title": "Gravity (with Tyler, The Creator)",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12415,7 +12415,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Clouded_Brent%20Faiyaz",
         "title": "Clouded",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12423,7 +12423,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Poison_Brent%20Faiyaz",
         "title": "Poison",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12431,7 +12431,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Mine_Brent%20Faiyaz",
         "title": "All Mine",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12439,7 +12439,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_JACKIE%20BROWN_Brent%20Faiyaz",
         "title": "JACKIE BROWN",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12447,7 +12447,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_FUCK%20BEING%20FAITHFUL_Brent%20Faiyaz",
         "title": "FUCK BEING FAITHFUL",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12455,7 +12455,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rehab%20(Winter%20In%20Paris)_Brent%20Faiyaz",
         "title": "Rehab (Winter In Paris)",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12463,7 +12463,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wasting%20Time%20(feat.%20Drake)_Brent%20Faiyaz",
         "title": "Wasting Time (feat. Drake)",
         "artist": "Brent Faiyaz",
         "duration": "3:15",
@@ -12471,7 +12471,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heartbreak%20Anniversary_Giveon",
         "title": "Heartbreak Anniversary",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12479,7 +12479,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_For%20Tonight_Giveon",
         "title": "For Tonight",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12487,7 +12487,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Like%20I%20Want%20You_Giveon",
         "title": "Like I Want You",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12495,7 +12495,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Vanish_Giveon",
         "title": "Vanish",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12503,7 +12503,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Favorite%20Mistake_Giveon",
         "title": "Favorite Mistake",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12511,7 +12511,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Stuck%20On%20You_Giveon",
         "title": "Stuck On You",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12519,7 +12519,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Get%20To%20You_Giveon",
         "title": "Get To You",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12527,7 +12527,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dec%2011th_Giveon",
         "title": "Dec 11th",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12535,7 +12535,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20Me%20Go_Giveon",
         "title": "Let Me Go",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12543,7 +12543,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Peaches%20Verse_Giveon",
         "title": "Peaches Verse",
         "artist": "Giveon",
         "duration": "3:15",
@@ -12551,7 +12551,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bad%20Habit_Steve%20Lacy",
         "title": "Bad Habit",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12559,7 +12559,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dark%20Red_Steve%20Lacy",
         "title": "Dark Red",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12567,7 +12567,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Static_Steve%20Lacy",
         "title": "Static",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12575,7 +12575,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Infrunami_Steve%20Lacy",
         "title": "Infrunami",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12583,7 +12583,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_C%20U%20Girl_Steve%20Lacy",
         "title": "C U Girl",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12591,7 +12591,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Some_Steve%20Lacy",
         "title": "Some",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12599,7 +12599,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ryd_Steve%20Lacy",
         "title": "Ryd",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12607,7 +12607,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sunshine%20(feat.%20Foushe%C3%A9)_Steve%20Lacy",
         "title": "Sunshine (feat. Fousheé)",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12615,7 +12615,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_N-Side_Steve%20Lacy",
         "title": "N-Side",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12623,7 +12623,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Helmet_Steve%20Lacy",
         "title": "Helmet",
         "artist": "Steve Lacy",
         "duration": "3:15",
@@ -12631,7 +12631,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't_Bryson%20Tiller",
         "title": "Don't",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12639,7 +12639,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Exchange_Bryson%20Tiller",
         "title": "Exchange",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12647,7 +12647,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sorry%20Not%20Sorry_Bryson%20Tiller",
         "title": "Sorry Not Sorry",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12655,7 +12655,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wild%20Thoughts%20Verse_Bryson%20Tiller",
         "title": "Wild Thoughts Verse",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12663,7 +12663,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Right%20My%20Wrongs_Bryson%20Tiller",
         "title": "Right My Wrongs",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12671,7 +12671,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20'Em%20Know_Bryson%20Tiller",
         "title": "Let 'Em Know",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12679,7 +12679,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Inhale_Bryson%20Tiller",
         "title": "Inhale",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12687,7 +12687,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Outta%20Time%20(feat.%20Drake)_Bryson%20Tiller",
         "title": "Outta Time (feat. Drake)",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12695,7 +12695,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Run%20Me%20Dry_Bryson%20Tiller",
         "title": "Run Me Dry",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12703,7 +12703,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sorrows_Bryson%20Tiller",
         "title": "Sorrows",
         "artist": "Bryson Tiller",
         "duration": "3:15",
@@ -12711,7 +12711,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Break%20from%20Toronto_PARTYNEXTDOOR",
         "title": "Break from Toronto",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12719,7 +12719,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Come%20and%20See%20Me%20(feat.%20Drake)_PARTYNEXTDOOR",
         "title": "Come and See Me (feat. Drake)",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12727,7 +12727,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Loyal%20(feat.%20Drake)_PARTYNEXTDOOR",
         "title": "Loyal (feat. Drake)",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12735,7 +12735,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Belong%20to%20the%20City_PARTYNEXTDOOR",
         "title": "Belong to the City",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12743,7 +12743,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Not%20Nice_PARTYNEXTDOOR",
         "title": "Not Nice",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12751,7 +12751,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Resentment_PARTYNEXTDOOR",
         "title": "Resentment",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12759,7 +12759,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Persian%20Rugs_PARTYNEXTDOOR",
         "title": "Persian Rugs",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12767,7 +12767,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_RNGH_PARTYNEXTDOOR",
         "title": "RNGH",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12775,7 +12775,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Chill_PARTYNEXTDOOR",
         "title": "No Chill",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12783,7 +12783,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Freak%20in%20You_PARTYNEXTDOOR",
         "title": "Freak in You",
         "artist": "PARTYNEXTDOOR",
         "duration": "3:15",
@@ -12791,7 +12791,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Playing%20Games%20(feat.%20Bryson%20Tiller)_Summer%20Walker",
         "title": "Playing Games (feat. Bryson Tiller)",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12799,7 +12799,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Girls%20Need%20Love%20(with%20Drake)_Summer%20Walker",
         "title": "Girls Need Love (with Drake)",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12807,7 +12807,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Love%20(with%20SZA)_Summer%20Walker",
         "title": "No Love (with SZA)",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12815,7 +12815,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Session%2032_Summer%20Walker",
         "title": "Session 32",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12823,7 +12823,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ex%20For%20A%20Reason_Summer%20Walker",
         "title": "Ex For A Reason",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12831,7 +12831,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_CPR_Summer%20Walker",
         "title": "CPR",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12839,7 +12839,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tonight_Summer%20Walker",
         "title": "Tonight",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12847,7 +12847,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Body_Summer%20Walker",
         "title": "Body",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12855,7 +12855,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Insane_Summer%20Walker",
         "title": "Insane",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12863,7 +12863,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bitter_Summer%20Walker",
         "title": "Bitter",
         "artist": "Summer Walker",
         "duration": "3:15",
@@ -12871,7 +12871,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_PRBLMS_6LACK",
         "title": "PRBLMS",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12879,7 +12879,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ex%20Calling_6LACK",
         "title": "Ex Calling",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12887,7 +12887,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Pretty%20Little%20Fears%20(feat.%20J.%20Cole)_6LACK",
         "title": "Pretty Little Fears (feat. J. Cole)",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12895,7 +12895,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Free_6LACK",
         "title": "Free",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12903,7 +12903,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_East%20Atlanta%20Love%20Letter_6LACK",
         "title": "East Atlanta Love Letter",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12911,7 +12911,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Switch_6LACK",
         "title": "Switch",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12919,7 +12919,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nonchalant_6LACK",
         "title": "Nonchalant",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12927,7 +12927,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Since%20I%20Have%20A%20Lover_6LACK",
         "title": "Since I Have A Lover",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12935,7 +12935,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Talkback_6LACK",
         "title": "Talkback",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12943,7 +12943,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Inwood%20Hill%20Park_6LACK",
         "title": "Inwood Hill Park",
         "artist": "6LACK",
         "duration": "3:15",
@@ -12961,7 +12961,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-emerald-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20The%20End_Linkin%20Park",
         "title": "In The End",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -12969,7 +12969,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Numb_Linkin%20Park",
         "title": "Numb",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -12977,7 +12977,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Faint_Linkin%20Park",
         "title": "Faint",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -12985,7 +12985,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Crawling_Linkin%20Park",
         "title": "Crawling",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -12993,7 +12993,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Somewhere%20I%20Belong_Linkin%20Park",
         "title": "Somewhere I Belong",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -13001,7 +13001,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Breaking%20the%20Habit_Linkin%20Park",
         "title": "Breaking the Habit",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -13009,7 +13009,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_What%20I've%20Done_Linkin%20Park",
         "title": "What I've Done",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -13017,7 +13017,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Papercut_Linkin%20Park",
         "title": "Papercut",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -13025,7 +13025,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bleed%20It%20Out_Linkin%20Park",
         "title": "Bleed It Out",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -13033,7 +13033,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20Step%20Closer_Linkin%20Park",
         "title": "One Step Closer",
         "artist": "Linkin Park",
         "duration": "3:15",
@@ -13041,7 +13041,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Smells%20Like%20Teen%20Spirit_Nirvana",
         "title": "Smells Like Teen Spirit",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13049,7 +13049,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Come%20As%20You%20Are_Nirvana",
         "title": "Come As You Are",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13057,7 +13057,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heart-Shaped%20Box_Nirvana",
         "title": "Heart-Shaped Box",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13065,7 +13065,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lithium_Nirvana",
         "title": "Lithium",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13073,7 +13073,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20Bloom_Nirvana",
         "title": "In Bloom",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13081,7 +13081,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Man%20Who%20Sold%20The%20World_Nirvana",
         "title": "The Man Who Sold The World",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13089,7 +13089,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Apologies_Nirvana",
         "title": "All Apologies",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13097,7 +13097,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_About%20A%20Girl_Nirvana",
         "title": "About A Girl",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13105,7 +13105,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dumb_Nirvana",
         "title": "Dumb",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13113,7 +13113,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drain%20You_Nirvana",
         "title": "Drain You",
         "artist": "Nirvana",
         "duration": "3:15",
@@ -13121,7 +13121,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Do%20I%20Wanna%20Know%3F_Arctic%20Monkeys",
         "title": "Do I Wanna Know?",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13129,7 +13129,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Why'd%20You%20Only%20Call%20Me%20When%20You're%20High%3F_Arctic%20Monkeys",
         "title": "Why'd You Only Call Me When You're High?",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13137,7 +13137,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_505_Arctic%20Monkeys",
         "title": "505",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13145,7 +13145,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_R%20U%20Mine%3F_Arctic%20Monkeys",
         "title": "R U Mine?",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13153,7 +13153,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fluorescent%20Adolescent_Arctic%20Monkeys",
         "title": "Fluorescent Adolescent",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13161,7 +13161,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Wanna%20Be%20Yours_Arctic%20Monkeys",
         "title": "I Wanna Be Yours",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13169,7 +13169,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Brianstorm_Arctic%20Monkeys",
         "title": "Brianstorm",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13177,7 +13177,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Snap%20Out%20Of%20It_Arctic%20Monkeys",
         "title": "Snap Out Of It",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13185,7 +13185,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Arabella_Arctic%20Monkeys",
         "title": "Arabella",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13193,7 +13193,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Crying%20Lightning_Arctic%20Monkeys",
         "title": "Crying Lightning",
         "artist": "Arctic Monkeys",
         "duration": "3:15",
@@ -13201,7 +13201,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Boulevard%20of%20Broken%20Dreams_Green%20Day",
         "title": "Boulevard of Broken Dreams",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13209,7 +13209,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_American%20Idiot_Green%20Day",
         "title": "American Idiot",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13217,7 +13217,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Basket%20Case_Green%20Day",
         "title": "Basket Case",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13225,7 +13225,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wake%20Me%20Up%20When%20September%20Ends_Green%20Day",
         "title": "Wake Me Up When September Ends",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13233,7 +13233,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Holiday_Green%20Day",
         "title": "Holiday",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13241,7 +13241,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_21%20Guns_Green%20Day",
         "title": "21 Guns",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13249,7 +13249,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Good%20Riddance%20(Time%20of%20Your%20Life)_Green%20Day",
         "title": "Good Riddance (Time of Your Life)",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13257,7 +13257,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_When%20I%20Come%20Around_Green%20Day",
         "title": "When I Come Around",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13265,7 +13265,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Brain%20Stew_Green%20Day",
         "title": "Brain Stew",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13273,7 +13273,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Longview_Green%20Day",
         "title": "Longview",
         "artist": "Green Day",
         "duration": "3:15",
@@ -13281,7 +13281,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Californication_Red%20Hot%20Chili%20Peppers",
         "title": "Californication",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13289,7 +13289,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Under%20The%20Bridge_Red%20Hot%20Chili%20Peppers",
         "title": "Under The Bridge",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13297,7 +13297,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Can't%20Stop_Red%20Hot%20Chili%20Peppers",
         "title": "Can't Stop",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13305,7 +13305,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Otherside_Red%20Hot%20Chili%20Peppers",
         "title": "Otherside",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13313,7 +13313,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scar%20Tissue_Red%20Hot%20Chili%20Peppers",
         "title": "Scar Tissue",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13321,7 +13321,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Snow%20(Hey%20Oh)_Red%20Hot%20Chili%20Peppers",
         "title": "Snow (Hey Oh)",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13329,7 +13329,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_By%20The%20Way_Red%20Hot%20Chili%20Peppers",
         "title": "By The Way",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13337,7 +13337,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dani%20California_Red%20Hot%20Chili%20Peppers",
         "title": "Dani California",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13345,7 +13345,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Give%20It%20Away_Red%20Hot%20Chili%20Peppers",
         "title": "Give It Away",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13353,7 +13353,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Around%20the%20World_Red%20Hot%20Chili%20Peppers",
         "title": "Around the World",
         "artist": "Red Hot Chili Peppers",
         "duration": "3:15",
@@ -13361,7 +13361,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mr.%20Brightside_The%20Killers",
         "title": "Mr. Brightside",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13369,7 +13369,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Somebody%20Told%20Me_The%20Killers",
         "title": "Somebody Told Me",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13377,7 +13377,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_When%20You%20Were%20Young_The%20Killers",
         "title": "When You Were Young",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13385,7 +13385,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Human_The%20Killers",
         "title": "Human",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13393,7 +13393,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20These%20Things%20That%20I've%20Done_The%20Killers",
         "title": "All These Things That I've Done",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13401,7 +13401,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Read%20My%20Mind_The%20Killers",
         "title": "Read My Mind",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13409,7 +13409,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Spaceman_The%20Killers",
         "title": "Spaceman",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13417,7 +13417,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Shot%20At%20The%20Night_The%20Killers",
         "title": "Shot At The Night",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13425,7 +13425,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Smile%20Like%20You%20Mean%20It_The%20Killers",
         "title": "Smile Like You Mean It",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13433,7 +13433,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Man_The%20Killers",
         "title": "The Man",
         "artist": "The Killers",
         "duration": "3:15",
@@ -13441,7 +13441,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20The%20Small%20Things_Blink-182",
         "title": "All The Small Things",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13449,7 +13449,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Miss%20You_Blink-182",
         "title": "I Miss You",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13457,7 +13457,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_What's%20My%20Age%20Again%3F_Blink-182",
         "title": "What's My Age Again?",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13465,7 +13465,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Adam's%20Song_Blink-182",
         "title": "Adam's Song",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13473,7 +13473,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_First%20Date_Blink-182",
         "title": "First Date",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13481,7 +13481,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feeling%20This_Blink-182",
         "title": "Feeling This",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13489,7 +13489,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Rock%20Show_Blink-182",
         "title": "The Rock Show",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13497,7 +13497,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dammit_Blink-182",
         "title": "Dammit",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13505,7 +13505,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Stay%20Together%20For%20The%20Kids_Blink-182",
         "title": "Stay Together For The Kids",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13513,7 +13513,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ONE%20MORE%20TIME_Blink-182",
         "title": "ONE MORE TIME",
         "artist": "Blink-182",
         "duration": "3:15",
@@ -13521,7 +13521,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Welcome%20to%20the%20Black%20Parade_My%20Chemical%20Romance",
         "title": "Welcome to the Black Parade",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13529,7 +13529,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Helena_My%20Chemical%20Romance",
         "title": "Helena",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13537,7 +13537,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'm%20Not%20Okay%20(I%20Promise)_My%20Chemical%20Romance",
         "title": "I'm Not Okay (I Promise)",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13545,7 +13545,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Famous%20Last%20Words_My%20Chemical%20Romance",
         "title": "Famous Last Words",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13553,7 +13553,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Teenagers_My%20Chemical%20Romance",
         "title": "Teenagers",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13561,7 +13561,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Ghost%20of%20You_My%20Chemical%20Romance",
         "title": "The Ghost of You",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13569,7 +13569,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Na%20Na%20Na_My%20Chemical%20Romance",
         "title": "Na Na Na",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13577,7 +13577,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cancer_My%20Chemical%20Romance",
         "title": "Cancer",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13585,7 +13585,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Disenchanted_My%20Chemical%20Romance",
         "title": "Disenchanted",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13593,7 +13593,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sing_My%20Chemical%20Romance",
         "title": "Sing",
         "artist": "My Chemical Romance",
         "duration": "3:15",
@@ -13601,7 +13601,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Creep_Radiohead",
         "title": "Creep",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13609,7 +13609,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Karma%20Police_Radiohead",
         "title": "Karma Police",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13617,7 +13617,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20Surprises_Radiohead",
         "title": "No Surprises",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13625,7 +13625,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Paranoid%20Android_Radiohead",
         "title": "Paranoid Android",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13633,7 +13633,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_High%20and%20Dry_Radiohead",
         "title": "High and Dry",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13641,7 +13641,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fake%20Plastic%20Trees_Radiohead",
         "title": "Fake Plastic Trees",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13649,7 +13649,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Exit%20Music%20(For%20a%20Film)_Radiohead",
         "title": "Exit Music (For a Film)",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13657,7 +13657,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Just_Radiohead",
         "title": "Just",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13665,7 +13665,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Jigsaw%20Falling%20Into%20Place_Radiohead",
         "title": "Jigsaw Falling Into Place",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13673,7 +13673,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Everything%20In%20Its%20Right%20Place_Radiohead",
         "title": "Everything In Its Right Place",
         "artist": "Radiohead",
         "duration": "3:15",
@@ -13681,7 +13681,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bohemian%20Rhapsody_Queen",
         "title": "Bohemian Rhapsody",
         "artist": "Queen",
         "duration": "3:15",
@@ -13689,7 +13689,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20Stop%20Me%20Now_Queen",
         "title": "Don't Stop Me Now",
         "artist": "Queen",
         "duration": "3:15",
@@ -13697,7 +13697,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Another%20One%20Bites%20The%20Dust_Queen",
         "title": "Another One Bites The Dust",
         "artist": "Queen",
         "duration": "3:15",
@@ -13705,7 +13705,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Under%20Pressure%20(with%20David%20Bowie)_Queen",
         "title": "Under Pressure (with David Bowie)",
         "artist": "Queen",
         "duration": "3:15",
@@ -13713,7 +13713,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_We%20Will%20Rock%20You_Queen",
         "title": "We Will Rock You",
         "artist": "Queen",
         "duration": "3:15",
@@ -13721,7 +13721,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_We%20Are%20The%20Champions_Queen",
         "title": "We Are The Champions",
         "artist": "Queen",
         "duration": "3:15",
@@ -13729,7 +13729,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Somebody%20To%20Love_Queen",
         "title": "Somebody To Love",
         "artist": "Queen",
         "duration": "3:15",
@@ -13737,7 +13737,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Radio%20Ga%20Ga_Queen",
         "title": "Radio Ga Ga",
         "artist": "Queen",
         "duration": "3:15",
@@ -13745,7 +13745,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Killer%20Queen_Queen",
         "title": "Killer Queen",
         "artist": "Queen",
         "duration": "3:15",
@@ -13753,7 +13753,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Want%20To%20Break%20Free_Queen",
         "title": "I Want To Break Free",
         "artist": "Queen",
         "duration": "3:15",
@@ -13771,7 +13771,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-cyan-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Murder%20In%20My%20Mind_KORDHELL",
         "title": "Murder In My Mind",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13779,7 +13779,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Live%20Another%20Day_KORDHELL",
         "title": "Live Another Day",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13787,7 +13787,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Killers%20From%20The%20Northside_KORDHELL",
         "title": "Killers From The Northside",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13795,7 +13795,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scopin_KORDHELL",
         "title": "Scopin",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13803,7 +13803,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Land%20of%20Fire_KORDHELL",
         "title": "Land of Fire",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13811,7 +13811,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_9mm_KORDHELL",
         "title": "9mm",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13819,7 +13819,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dat%20Phonk_KORDHELL",
         "title": "Dat Phonk",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13827,7 +13827,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fatality_KORDHELL",
         "title": "Fatality",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13835,7 +13835,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Vagabond_KORDHELL",
         "title": "Vagabond",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13843,7 +13843,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dead%20On%20Arrival_KORDHELL",
         "title": "Dead On Arrival",
         "artist": "KORDHELL",
         "duration": "3:15",
@@ -13851,7 +13851,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Close%20Eyes_DVRST",
         "title": "Close Eyes",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13859,7 +13859,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Autumn%20Lover_DVRST",
         "title": "Autumn Lover",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13867,7 +13867,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dream%20Space_DVRST",
         "title": "Dream Space",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13875,7 +13875,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Komarovo%20Phonk_DVRST",
         "title": "Komarovo Phonk",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13883,7 +13883,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Your%20Name_DVRST",
         "title": "Your Name",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13891,7 +13891,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Reason%20To%20Live_DVRST",
         "title": "Reason To Live",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13899,7 +13899,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tell%20Me%20What_DVRST",
         "title": "Tell Me What",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13907,7 +13907,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Endless%20Love_DVRST",
         "title": "Endless Love",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13915,7 +13915,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Motion_DVRST",
         "title": "Motion",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13923,7 +13923,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Old%20Genesis_DVRST",
         "title": "Old Genesis",
         "artist": "DVRST",
         "duration": "3:15",
@@ -13931,7 +13931,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Get%20Lucky%20(feat.%20Pharrell)_Daft%20Punk",
         "title": "Get Lucky (feat. Pharrell)",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -13939,7 +13939,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20More%20Time_Daft%20Punk",
         "title": "One More Time",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -13947,7 +13947,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Harder%20Better%20Faster%20Stronger_Daft%20Punk",
         "title": "Harder Better Faster Stronger",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -13955,7 +13955,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Around%20The%20World_Daft%20Punk",
         "title": "Around The World",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -13963,7 +13963,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Instant%20Crush%20(feat.%20Julian%20Casablancas)_Daft%20Punk",
         "title": "Instant Crush (feat. Julian Casablancas)",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -13971,7 +13971,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lose%20Yourself%20to%20Dance_Daft%20Punk",
         "title": "Lose Yourself to Dance",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -13979,7 +13979,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Da%20Funk_Daft%20Punk",
         "title": "Da Funk",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -13987,7 +13987,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Digital%20Love_Daft%20Punk",
         "title": "Digital Love",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -13995,7 +13995,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Something%20About%20Us_Daft%20Punk",
         "title": "Something About Us",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -14003,7 +14003,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Technologic_Daft%20Punk",
         "title": "Technologic",
         "artist": "Daft Punk",
         "duration": "3:15",
@@ -14011,7 +14011,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Wake%20Me%20Up_Avicii",
         "title": "Wake Me Up",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14019,7 +14019,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "_ovdm2yX4MA",
+        "id": "yt_Levels_Avicii",
         "title": "Levels",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14027,7 +14027,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Nights_Avicii",
         "title": "The Nights",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14035,7 +14035,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Waiting%20For%20Love_Avicii",
         "title": "Waiting For Love",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14043,7 +14043,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hey%20Brother_Avicii",
         "title": "Hey Brother",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14051,7 +14051,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Without%20You_Avicii",
         "title": "Without You",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14059,7 +14059,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SOS_Avicii",
         "title": "SOS",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14067,7 +14067,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Could%20Be%20The%20One_Avicii",
         "title": "I Could Be The One",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14075,7 +14075,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Addicted%20To%20You_Avicii",
         "title": "Addicted To You",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14083,7 +14083,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lonely%20Together_Avicii",
         "title": "Lonely Together",
         "artist": "Avicii",
         "duration": "3:15",
@@ -14091,7 +14091,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "YJVmu6yttiw",
+        "id": "yt_Bangarang_Skrillex",
         "title": "Bangarang",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14099,7 +14099,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scary%20Monsters%20and%20Nice%20Sprites_Skrillex",
         "title": "Scary Monsters and Nice Sprites",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14107,7 +14107,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Where%20Are%20%C3%9C%20Now_Skrillex",
         "title": "Where Are Ü Now",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14115,7 +14115,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "b4w4xX3Yh2M",
+        "id": "yt_Rumble%20(with%20Fred%20again..)_Skrillex",
         "title": "Rumble (with Fred again..)",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14123,7 +14123,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_First%20of%20the%20Year_Skrillex",
         "title": "First of the Year",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14131,7 +14131,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Make%20It%20Bun%20Dem_Skrillex",
         "title": "Make It Bun Dem",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14139,7 +14139,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Purple%20Lamborghini_Skrillex",
         "title": "Purple Lamborghini",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14147,7 +14147,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Inhale%20Exhale_Skrillex",
         "title": "Inhale Exhale",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14155,7 +14155,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Supersonic_Skrillex",
         "title": "Supersonic",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14163,7 +14163,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Butterflies_Skrillex",
         "title": "Butterflies",
         "artist": "Skrillex",
         "duration": "3:15",
@@ -14171,7 +14171,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Adore%20U_Fred%20again..",
         "title": "Adore U",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14179,7 +14179,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_delilah%20(pull%20me%20out%20of%20this)_Fred%20again..",
         "title": "delilah (pull me out of this)",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14187,7 +14187,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Danielle%20(smile%20on%20my%20face)_Fred%20again..",
         "title": "Danielle (smile on my face)",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14195,7 +14195,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Marea%20(we've%20lost%20dancing)_Fred%20again..",
         "title": "Marea (we've lost dancing)",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14203,7 +14203,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "ALZHF5UqnU4",
+        "id": "yt_leavemealone_Fred%20again..",
         "title": "leavemealone",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14211,7 +14211,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ten_Fred%20again..",
         "title": "ten",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14219,7 +14219,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Jungle_Fred%20again..",
         "title": "Jungle",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14227,7 +14227,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bleu%20(better%20with%20time)_Fred%20again..",
         "title": "Bleu (better with time)",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14235,7 +14235,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_stayinit_Fred%20again..",
         "title": "stayinit",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14243,7 +14243,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_places%20to%20be_Fred%20again..",
         "title": "places to be",
         "artist": "Fred again..",
         "duration": "3:15",
@@ -14251,7 +14251,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Summer_Calvin%20Harris",
         "title": "Summer",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14259,7 +14259,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Feel%20So%20Close_Calvin%20Harris",
         "title": "Feel So Close",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14267,7 +14267,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_This%20Is%20What%20You%20Came%20For%20(feat.%20Rihanna)_Calvin%20Harris",
         "title": "This Is What You Came For (feat. Rihanna)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14275,7 +14275,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Slide%20(feat.%20Frank%20Ocean)_Calvin%20Harris",
         "title": "Slide (feat. Frank Ocean)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14283,7 +14283,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20Kiss%20(feat.%20Dua%20Lipa)_Calvin%20Harris",
         "title": "One Kiss (feat. Dua Lipa)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14291,7 +14291,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_How%20Deep%20Is%20Your%20Love_Calvin%20Harris",
         "title": "How Deep Is Your Love",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14299,7 +14299,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sweet%20Nothing_Calvin%20Harris",
         "title": "Sweet Nothing",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14307,7 +14307,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Blame_Calvin%20Harris",
         "title": "Blame",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14315,7 +14315,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Outside%20(feat.%20Ellie%20Goulding)_Calvin%20Harris",
         "title": "Outside (feat. Ellie Goulding)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14323,7 +14323,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Miracle%20(with%20Ellie%20Goulding)_Calvin%20Harris",
         "title": "Miracle (with Ellie Goulding)",
         "artist": "Calvin Harris",
         "duration": "3:15",
@@ -14331,7 +14331,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Closer%20(feat.%20Halsey)_The%20Chainsmokers",
         "title": "Closer (feat. Halsey)",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14339,7 +14339,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20Let%20Me%20Down_The%20Chainsmokers",
         "title": "Don't Let Me Down",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14347,7 +14347,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Something%20Just%20Like%20This%20(with%20Coldplay)_The%20Chainsmokers",
         "title": "Something Just Like This (with Coldplay)",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14355,7 +14355,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Roses%20(feat.%20ROZES)_The%20Chainsmokers",
         "title": "Roses (feat. ROZES)",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14363,7 +14363,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Paris_The%20Chainsmokers",
         "title": "Paris",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14371,7 +14371,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Takeaway_The%20Chainsmokers",
         "title": "Takeaway",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14379,7 +14379,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Side%20Effects_The%20Chainsmokers",
         "title": "Side Effects",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14387,7 +14387,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20We%20Know_The%20Chainsmokers",
         "title": "All We Know",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14395,7 +14395,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Call%20You%20Mine_The%20Chainsmokers",
         "title": "Call You Mine",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14403,7 +14403,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_High_The%20Chainsmokers",
         "title": "High",
         "artist": "The Chainsmokers",
         "duration": "3:15",
@@ -14411,7 +14411,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "gCYcHz2Fg60",
+        "id": "yt_Animals_Martin%20Garrix",
         "title": "Animals",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14419,7 +14419,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Scared%20to%20Be%20Lonely%20(with%20Dua%20Lipa)_Martin%20Garrix",
         "title": "Scared to Be Lonely (with Dua Lipa)",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14427,7 +14427,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20the%20Name%20of%20Love%20(with%20Bebe%20Rexha)_Martin%20Garrix",
         "title": "In the Name of Love (with Bebe Rexha)",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14435,7 +14435,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_High%20On%20Life_Martin%20Garrix",
         "title": "High On Life",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14443,7 +14443,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_There%20for%20You%20(with%20Troye%20Sivan)_Martin%20Garrix",
         "title": "There for You (with Troye Sivan)",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14451,7 +14451,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Summer%20Days_Martin%20Garrix",
         "title": "Summer Days",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14459,7 +14459,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tremor_Martin%20Garrix",
         "title": "Tremor",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14467,7 +14467,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Forbidden%20Voices_Martin%20Garrix",
         "title": "Forbidden Voices",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14475,7 +14475,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Used%20to%20Love_Martin%20Garrix",
         "title": "Used to Love",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14483,7 +14483,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Starlight_Martin%20Garrix",
         "title": "Starlight",
         "artist": "Martin Garrix",
         "duration": "3:15",
@@ -14491,7 +14491,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Don't%20You%20Worry%20Child_Swedish%20House%20Mafia",
         "title": "Don't You Worry Child",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14499,7 +14499,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Save%20The%20World_Swedish%20House%20Mafia",
         "title": "Save The World",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14507,7 +14507,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Moth%20To%20A%20Flame%20(with%20The%20Weeknd)_Swedish%20House%20Mafia",
         "title": "Moth To A Flame (with The Weeknd)",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14515,7 +14515,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Greyhound_Swedish%20House%20Mafia",
         "title": "Greyhound",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14523,7 +14523,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20(Your%20Name)_Swedish%20House%20Mafia",
         "title": "One (Your Name)",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14531,7 +14531,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Antidote_Swedish%20House%20Mafia",
         "title": "Antidote",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14539,7 +14539,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heaven%20Takes%20You%20Home_Swedish%20House%20Mafia",
         "title": "Heaven Takes You Home",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14547,7 +14547,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Redlight%20(with%20Sting)_Swedish%20House%20Mafia",
         "title": "Redlight (with Sting)",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14555,7 +14555,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ray%20of%20Solar_Swedish%20House%20Mafia",
         "title": "Ray of Solar",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14563,7 +14563,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Miami%202%20Ibiza_Swedish%20House%20Mafia",
         "title": "Miami 2 Ibiza",
         "artist": "Swedish House Mafia",
         "duration": "3:15",
@@ -14581,7 +14581,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-yellow-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lose%20Yourself_Eminem",
         "title": "Lose Yourself",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14589,7 +14589,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Without%20Me_Eminem",
         "title": "Without Me",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14597,7 +14597,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Real%20Slim%20Shady_Eminem",
         "title": "The Real Slim Shady",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14605,7 +14605,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Stan%20(feat.%20Dido)_Eminem",
         "title": "Stan (feat. Dido)",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14613,7 +14613,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Till%20I%20Collapse_Eminem",
         "title": "Till I Collapse",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14621,7 +14621,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mockingbird_Eminem",
         "title": "Mockingbird",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14629,7 +14629,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Way%20I%20Am_Eminem",
         "title": "The Way I Am",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14637,7 +14637,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Cleanin'%20Out%20My%20Closet_Eminem",
         "title": "Cleanin' Out My Closet",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14645,7 +14645,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_My%20Name%20Is_Eminem",
         "title": "My Name Is",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14653,7 +14653,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sing%20for%20the%20Moment_Eminem",
         "title": "Sing for the Moment",
         "artist": "Eminem",
         "duration": "3:15",
@@ -14661,7 +14661,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_In%20Da%20Club_50%20Cent",
         "title": "In Da Club",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14669,7 +14669,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Candy%20Shop_50%20Cent",
         "title": "Candy Shop",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14677,7 +14677,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Many%20Men%20(Wish%20Death)_50%20Cent",
         "title": "Many Men (Wish Death)",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14685,7 +14685,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_21%20Questions_50%20Cent",
         "title": "21 Questions",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14693,7 +14693,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_P.I.M.P._50%20Cent",
         "title": "P.I.M.P.",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14701,7 +14701,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Just%20A%20Lil%20Bit_50%20Cent",
         "title": "Just A Lil Bit",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14709,7 +14709,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Disco%20Inferno_50%20Cent",
         "title": "Disco Inferno",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14717,7 +14717,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Window%20Shopper_50%20Cent",
         "title": "Window Shopper",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14725,7 +14725,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hustler's%20Ambition_50%20Cent",
         "title": "Hustler's Ambition",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14733,7 +14733,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Baby%20By%20Me_50%20Cent",
         "title": "Baby By Me",
         "artist": "50 Cent",
         "duration": "3:15",
@@ -14741,7 +14741,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hey%20Ya!_Outkast",
         "title": "Hey Ya!",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14749,7 +14749,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ms.%20Jackson_Outkast",
         "title": "Ms. Jackson",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14757,7 +14757,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Roses_Outkast",
         "title": "Roses",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14765,7 +14765,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ATLiens_Outkast",
         "title": "ATLiens",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14773,7 +14773,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_So%20Fresh%20So%20Clean_Outkast",
         "title": "So Fresh So Clean",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14781,7 +14781,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_B.O.B._Outkast",
         "title": "B.O.B.",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14789,7 +14789,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Elevators%20(Me%20%26%20You)_Outkast",
         "title": "Elevators (Me & You)",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14797,7 +14797,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Way%20You%20Move_Outkast",
         "title": "The Way You Move",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14805,7 +14805,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rosa%20Parks_Outkast",
         "title": "Rosa Parks",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14813,7 +14813,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Player's%20Ball_Outkast",
         "title": "Player's Ball",
         "artist": "Outkast",
         "duration": "3:15",
@@ -14821,7 +14821,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Still%20D.R.E.%20(feat.%20Snoop%20Dogg)_Dr.%20Dre",
         "title": "Still D.R.E. (feat. Snoop Dogg)",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14829,7 +14829,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Next%20Episode_Dr.%20Dre",
         "title": "The Next Episode",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14837,7 +14837,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Forgot%20About%20Dre%20(feat.%20Eminem)_Dr.%20Dre",
         "title": "Forgot About Dre (feat. Eminem)",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14845,7 +14845,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Nuthin'%20But%20A%20G%20Thang_Dr.%20Dre",
         "title": "Nuthin' But A G Thang",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14853,7 +14853,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_What's%20the%20Difference_Dr.%20Dre",
         "title": "What's the Difference",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14861,7 +14861,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Let%20Me%20Ride_Dr.%20Dre",
         "title": "Let Me Ride",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14869,7 +14869,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Keep%20Their%20Heads%20Ringin'_Dr.%20Dre",
         "title": "Keep Their Heads Ringin'",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14877,7 +14877,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fuck%20Wit%20Dre%20Day_Dr.%20Dre",
         "title": "Fuck Wit Dre Day",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14885,7 +14885,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Need%20a%20Doctor_Dr.%20Dre",
         "title": "I Need a Doctor",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14893,7 +14893,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Kush_Dr.%20Dre",
         "title": "Kush",
         "artist": "Dr. Dre",
         "duration": "3:15",
@@ -14901,7 +14901,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drop%20It%20Like%20It's%20Hot%20(feat.%20Pharrell)_Snoop%20Dogg",
         "title": "Drop It Like It's Hot (feat. Pharrell)",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14909,7 +14909,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Gin%20and%20Juice_Snoop%20Dogg",
         "title": "Gin and Juice",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14917,7 +14917,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Who%20Am%20I%3F%20(What's%20My%20Name%3F)_Snoop%20Dogg",
         "title": "Who Am I? (What's My Name?)",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14925,7 +14925,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sensual%20Seduction_Snoop%20Dogg",
         "title": "Sensual Seduction",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14933,7 +14933,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Beautiful%20(feat.%20Pharrell)_Snoop%20Dogg",
         "title": "Beautiful (feat. Pharrell)",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14941,7 +14941,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Bitch%20Please_Snoop%20Dogg",
         "title": "Bitch Please",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14949,7 +14949,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lodi%20Dodi_Snoop%20Dogg",
         "title": "Lodi Dodi",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14957,7 +14957,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ain't%20No%20Fun_Snoop%20Dogg",
         "title": "Ain't No Fun",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14965,7 +14965,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lay%20Low_Snoop%20Dogg",
         "title": "Lay Low",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14973,7 +14973,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Vato_Snoop%20Dogg",
         "title": "Vato",
         "artist": "Snoop Dogg",
         "duration": "3:15",
@@ -14981,7 +14981,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_California%20Love_2Pac",
         "title": "California Love",
         "artist": "2Pac",
         "duration": "3:15",
@@ -14989,7 +14989,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Changes_2Pac",
         "title": "Changes",
         "artist": "2Pac",
         "duration": "3:15",
@@ -14997,7 +14997,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hit%20'Em%20Up_2Pac",
         "title": "Hit 'Em Up",
         "artist": "2Pac",
         "duration": "3:15",
@@ -15005,7 +15005,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dear%20Mama_2Pac",
         "title": "Dear Mama",
         "artist": "2Pac",
         "duration": "3:15",
@@ -15013,7 +15013,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ambitionz%20Az%20A%20Ridah_2Pac",
         "title": "Ambitionz Az A Ridah",
         "artist": "2Pac",
         "duration": "3:15",
@@ -15021,7 +15021,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Eyez%20On%20Me_2Pac",
         "title": "All Eyez On Me",
         "artist": "2Pac",
         "duration": "3:15",
@@ -15029,7 +15029,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Keep%20Ya%20Head%20Up_2Pac",
         "title": "Keep Ya Head Up",
         "artist": "2Pac",
         "duration": "3:15",
@@ -15037,7 +15037,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hail%20Mary_2Pac",
         "title": "Hail Mary",
         "artist": "2Pac",
         "duration": "3:15",
@@ -15045,7 +15045,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I%20Get%20Around_2Pac",
         "title": "I Get Around",
         "artist": "2Pac",
         "duration": "3:15",
@@ -15053,7 +15053,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Picture%20Me%20Rollin'_2Pac",
         "title": "Picture Me Rollin'",
         "artist": "2Pac",
         "duration": "3:15",
@@ -15061,7 +15061,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Juicy_The%20Notorious%20B.I.G.",
         "title": "Juicy",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15069,7 +15069,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Big%20Poppa_The%20Notorious%20B.I.G.",
         "title": "Big Poppa",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15077,7 +15077,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hypnotize_The%20Notorious%20B.I.G.",
         "title": "Hypnotize",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15085,7 +15085,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mo%20Money%20Mo%20Problems_The%20Notorious%20B.I.G.",
         "title": "Mo Money Mo Problems",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15093,7 +15093,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ten%20Crack%20Commandments_The%20Notorious%20B.I.G.",
         "title": "Ten Crack Commandments",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15101,7 +15101,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "0Q9v8g_w5i8",
+        "id": "yt_Warning_The%20Notorious%20B.I.G.",
         "title": "Warning",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15109,7 +15109,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20More%20Chance_The%20Notorious%20B.I.G.",
         "title": "One More Chance",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15117,7 +15117,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Gimme%20the%20Loot_The%20Notorious%20B.I.G.",
         "title": "Gimme the Loot",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15125,7 +15125,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Notorious%20Thugs_The%20Notorious%20B.I.G.",
         "title": "Notorious Thugs",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15133,7 +15133,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Going%20Back%20to%20Cali_The%20Notorious%20B.I.G.",
         "title": "Going Back to Cali",
         "artist": "The Notorious B.I.G.",
         "duration": "3:15",
@@ -15141,7 +15141,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Empire%20State%20of%20Mind%20(feat.%20Alicia%20Keys)_Jay-Z",
         "title": "Empire State of Mind (feat. Alicia Keys)",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15149,7 +15149,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Niggas%20in%20Paris%20(with%20Kanye%20West)_Jay-Z",
         "title": "Niggas in Paris (with Kanye West)",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15157,7 +15157,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_99%20Problems_Jay-Z",
         "title": "99 Problems",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15165,7 +15165,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Big%20Pimpin'_Jay-Z",
         "title": "Big Pimpin'",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15173,7 +15173,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Hard%20Knock%20Life_Jay-Z",
         "title": "Hard Knock Life",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15181,7 +15181,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dirt%20Off%20Your%20Shoulder_Jay-Z",
         "title": "Dirt Off Your Shoulder",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15189,7 +15189,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Izzo%20(H.O.V.A.)_Jay-Z",
         "title": "Izzo (H.O.V.A.)",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15197,7 +15197,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Holy%20Grail%20(feat.%20Justin%20Timberlake)_Jay-Z",
         "title": "Holy Grail (feat. Justin Timberlake)",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15205,7 +15205,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Can%20I%20Get%20A..._Jay-Z",
         "title": "Can I Get A...",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15213,7 +15213,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Run%20This%20Town_Jay-Z",
         "title": "Run This Town",
         "artist": "Jay-Z",
         "duration": "3:15",
@@ -15221,7 +15221,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Stronger_Kanye%20West",
         "title": "Stronger",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15229,7 +15229,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Gold%20Digger%20(feat.%20Jamie%20Foxx)_Kanye%20West",
         "title": "Gold Digger (feat. Jamie Foxx)",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15237,7 +15237,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Heartless_Kanye%20West",
         "title": "Heartless",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15245,7 +15245,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Flashing%20Lights_Kanye%20West",
         "title": "Flashing Lights",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15253,7 +15253,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Can't%20Tell%20Me%20Nothing_Kanye%20West",
         "title": "Can't Tell Me Nothing",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15261,7 +15261,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Power_Kanye%20West",
         "title": "Power",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15269,7 +15269,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_All%20Falls%20Down_Kanye%20West",
         "title": "All Falls Down",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15277,7 +15277,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Through%20The%20Wire_Kanye%20West",
         "title": "Through The Wire",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15285,7 +15285,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Touch%20The%20Sky_Kanye%20West",
         "title": "Touch The Sky",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15293,7 +15293,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Love%20Lockdown_Kanye%20West",
         "title": "Love Lockdown",
         "artist": "Kanye West",
         "duration": "3:15",
@@ -15301,7 +15301,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_A%20Milli_Lil%20Wayne",
         "title": "A Milli",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15309,7 +15309,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lollipop_Lil%20Wayne",
         "title": "Lollipop",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15317,7 +15317,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_6%20Foot%207%20Foot_Lil%20Wayne",
         "title": "6 Foot 7 Foot",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15325,7 +15325,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_How%20to%20Love_Lil%20Wayne",
         "title": "How to Love",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15333,7 +15333,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mirror%20(feat.%20Bruno%20Mars)_Lil%20Wayne",
         "title": "Mirror (feat. Bruno Mars)",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15341,7 +15341,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drop%20The%20World%20(feat.%20Eminem)_Lil%20Wayne",
         "title": "Drop The World (feat. Eminem)",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15349,7 +15349,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Got%20Money_Lil%20Wayne",
         "title": "Got Money",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15357,7 +15357,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Right%20Above%20It%20(feat.%20Drake)_Lil%20Wayne",
         "title": "Right Above It (feat. Drake)",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15365,7 +15365,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fireman_Lil%20Wayne",
         "title": "Fireman",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15373,7 +15373,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Mrs.%20Officer_Lil%20Wayne",
         "title": "Mrs. Officer",
         "artist": "Lil Wayne",
         "duration": "3:15",
@@ -15391,7 +15391,7 @@ const TOP_SHUFFLES_CATALOG = {
     "border": "border-teal-500/40",
     "tracks": [
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SLOW%20DANCING%20IN%20THE%20DARK_Joji",
         "title": "SLOW DANCING IN THE DARK",
         "artist": "Joji",
         "duration": "3:15",
@@ -15399,7 +15399,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Glimpse%20of%20Us_Joji",
         "title": "Glimpse of Us",
         "artist": "Joji",
         "duration": "3:15",
@@ -15407,7 +15407,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_YEAH%20RIGHT_Joji",
         "title": "YEAH RIGHT",
         "artist": "Joji",
         "duration": "3:15",
@@ -15415,7 +15415,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sanctuary_Joji",
         "title": "Sanctuary",
         "artist": "Joji",
         "duration": "3:15",
@@ -15423,7 +15423,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Die%20For%20You_Joji",
         "title": "Die For You",
         "artist": "Joji",
         "duration": "3:15",
@@ -15431,7 +15431,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Run_Joji",
         "title": "Run",
         "artist": "Joji",
         "duration": "3:15",
@@ -15439,7 +15439,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Ew_Joji",
         "title": "Ew",
         "artist": "Joji",
         "duration": "3:15",
@@ -15447,7 +15447,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ATTENTION_Joji",
         "title": "ATTENTION",
         "artist": "Joji",
         "duration": "3:15",
@@ -15455,7 +15455,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_will%20he_Joji",
         "title": "will he",
         "artist": "Joji",
         "duration": "3:15",
@@ -15463,7 +15463,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_TEST%20DRIVE_Joji",
         "title": "TEST DRIVE",
         "artist": "Joji",
         "duration": "3:15",
@@ -15471,7 +15471,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_death%20bed_Powfu",
         "title": "death bed",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15479,7 +15479,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_i'm%20used%20to%20it_Powfu",
         "title": "i'm used to it",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15487,7 +15487,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_stay4ever_Powfu",
         "title": "stay4ever",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15495,7 +15495,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_snowflake_Powfu",
         "title": "snowflake",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15503,7 +15503,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_the%20day%20that%20you%20loved%20me_Powfu",
         "title": "the day that you loved me",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15511,7 +15511,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_17again_Powfu",
         "title": "17again",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15519,7 +15519,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_ill%20come%20back%20to%20you_Powfu",
         "title": "ill come back to you",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15527,7 +15527,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lay%20eyes_Powfu",
         "title": "lay eyes",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15535,7 +15535,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_popular%20girl_Powfu",
         "title": "popular girl",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15543,7 +15543,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_clueless_Powfu",
         "title": "clueless",
         "artist": "Powfu",
         "duration": "3:15",
@@ -15551,7 +15551,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Coffee_beabadoobee",
         "title": "Coffee",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15559,7 +15559,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Glue%20Song_beabadoobee",
         "title": "Glue Song",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15567,7 +15567,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_the%20perfect%20pair_beabadoobee",
         "title": "the perfect pair",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15575,7 +15575,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Apple%20Cider_beabadoobee",
         "title": "Apple Cider",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15583,7 +15583,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_See%20you%20Soon_beabadoobee",
         "title": "See you Soon",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15591,7 +15591,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Talk_beabadoobee",
         "title": "Talk",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15599,7 +15599,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sunny%20day_beabadoobee",
         "title": "Sunny day",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15607,7 +15607,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tired_beabadoobee",
         "title": "Tired",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15615,7 +15615,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_She%20Plays%20Bass_beabadoobee",
         "title": "She Plays Bass",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15623,7 +15623,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Take%20A%20Bite_beabadoobee",
         "title": "Take A Bite",
         "artist": "beabadoobee",
         "duration": "3:15",
@@ -15631,7 +15631,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_So%20Low_Shiloh%20Dynasty",
         "title": "So Low",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15639,7 +15639,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'll%20Keep%20You%20Safe_Shiloh%20Dynasty",
         "title": "I'll Keep You Safe",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15647,7 +15647,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Losing%20Interest_Shiloh%20Dynasty",
         "title": "Losing Interest",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15655,7 +15655,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Downtown_Shiloh%20Dynasty",
         "title": "Downtown",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15663,7 +15663,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Tell%20Me%20Why%20I'm%20Waiting_Shiloh%20Dynasty",
         "title": "Tell Me Why I'm Waiting",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15671,7 +15671,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Novocaine_Shiloh%20Dynasty",
         "title": "Novocaine",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15679,7 +15679,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_I'm%20Sorry_Shiloh%20Dynasty",
         "title": "I'm Sorry",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15687,7 +15687,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Give%20Me%20A%20Sign_Shiloh%20Dynasty",
         "title": "Give Me A Sign",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15695,7 +15695,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Pure_Shiloh%20Dynasty",
         "title": "Pure",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15703,7 +15703,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Rescue%20Me_Shiloh%20Dynasty",
         "title": "Rescue Me",
         "artist": "Shiloh Dynasty",
         "duration": "3:15",
@@ -15711,7 +15711,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_controlla_Idealism",
         "title": "controlla",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15719,7 +15719,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_both%20of%20us_Idealism",
         "title": "both of us",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15727,7 +15727,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_nagashi_Idealism",
         "title": "nagashi",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15735,7 +15735,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_lonely_Idealism",
         "title": "lonely",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15743,7 +15743,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_philia_Idealism",
         "title": "philia",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15751,7 +15751,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_last%20summer_Idealism",
         "title": "last summer",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15759,7 +15759,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_rainy%20evening_Idealism",
         "title": "rainy evening",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15767,7 +15767,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_hiraeth_Idealism",
         "title": "hiraeth",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15775,7 +15775,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_another%20year_Idealism",
         "title": "another year",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15783,7 +15783,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_wanderlust_Idealism",
         "title": "wanderlust",
         "artist": "Idealism",
         "duration": "3:15",
@@ -15791,7 +15791,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Kingdom%20in%20Blue_Kupla",
         "title": "Kingdom in Blue",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15799,7 +15799,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dewdrops_Kupla",
         "title": "Dewdrops",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15807,7 +15807,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Roots_Kupla",
         "title": "Roots",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15815,7 +15815,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sunlight_Kupla",
         "title": "Sunlight",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15823,7 +15823,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Memories_Kupla",
         "title": "Memories",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15831,7 +15831,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Drifting%20Far_Kupla",
         "title": "Drifting Far",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15839,7 +15839,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sleepy%20Meadow_Kupla",
         "title": "Sleepy Meadow",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15847,7 +15847,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Fallen%20Leaves_Kupla",
         "title": "Fallen Leaves",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15855,7 +15855,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Melody%20of%20Life_Kupla",
         "title": "Melody of Life",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15863,7 +15863,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Horizon_Kupla",
         "title": "Horizon",
         "artist": "Kupla",
         "duration": "3:15",
@@ -15871,7 +15871,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Technicolor_Kudasai",
         "title": "Technicolor",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15879,7 +15879,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_A%20Night%20Together_Kudasai",
         "title": "A Night Together",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15887,7 +15887,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_The%20Girl%20I%20Haven't%20Met_Kudasai",
         "title": "The Girl I Haven't Met",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15895,7 +15895,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Dream%20of%20Her_Kudasai",
         "title": "Dream of Her",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15903,7 +15903,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_No%20More_Kudasai",
         "title": "No More",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15911,7 +15911,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lavender_Kudasai",
         "title": "Lavender",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15919,7 +15919,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Sapphire_Kudasai",
         "title": "Sapphire",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15927,7 +15927,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "uXj_f_4bI6A",
+        "id": "yt_Midnight_Kudasai",
         "title": "Midnight",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15935,7 +15935,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Moments_Kudasai",
         "title": "Moments",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15943,7 +15943,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Falling_Kudasai",
         "title": "Falling",
         "artist": "Kudasai",
         "duration": "3:15",
@@ -15951,7 +15951,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Harbor_Tomppabeats",
         "title": "Harbor",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -15959,7 +15959,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Emotional_Tomppabeats",
         "title": "Emotional",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -15967,7 +15967,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Far%20Away_Tomppabeats",
         "title": "Far Away",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -15975,7 +15975,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Monday%20Loop_Tomppabeats",
         "title": "Monday Loop",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -15983,7 +15983,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Summer%20Romance_Tomppabeats",
         "title": "Summer Romance",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -15991,7 +15991,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lipstick_Tomppabeats",
         "title": "Lipstick",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -15999,7 +15999,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Lonely_Tomppabeats",
         "title": "Lonely",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -16007,7 +16007,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Thinking%20About%20You_Tomppabeats",
         "title": "Thinking About You",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -16015,7 +16015,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_One%20More%20Time_Tomppabeats",
         "title": "One More Time",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -16023,7 +16023,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_Blossom_Tomppabeats",
         "title": "Blossom",
         "artist": "Tomppabeats",
         "duration": "3:15",
@@ -16031,7 +16031,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_i'm%20closing%20my%20eyes_Potsu",
         "title": "i'm closing my eyes",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16039,7 +16039,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_just%20friends_Potsu",
         "title": "just friends",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16047,7 +16047,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_food%20court_Potsu",
         "title": "food court",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16055,7 +16055,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_letting%20go_Potsu",
         "title": "letting go",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16063,7 +16063,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_breakfast_Potsu",
         "title": "breakfast",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16071,7 +16071,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_silence_Potsu",
         "title": "silence",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16079,7 +16079,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_take%20me%20there_Potsu",
         "title": "take me there",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16087,7 +16087,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_losing%20interest%20beat_Potsu",
         "title": "losing interest beat",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16095,7 +16095,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_sincerely_Potsu",
         "title": "sincerely",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16103,7 +16103,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_waves_Potsu",
         "title": "waves",
         "artist": "Potsu",
         "duration": "3:15",
@@ -16111,7 +16111,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_LIMBO_Keshi",
         "title": "LIMBO",
         "artist": "Keshi",
         "duration": "3:15",
@@ -16119,7 +16119,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_GET%20WELL%20SOON_Keshi",
         "title": "GET WELL SOON",
         "artist": "Keshi",
         "duration": "3:15",
@@ -16127,7 +16127,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_SOMEBODY_Keshi",
         "title": "SOMEBODY",
         "artist": "Keshi",
         "duration": "3:15",
@@ -16135,7 +16135,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_beside%20you_Keshi",
         "title": "beside you",
         "artist": "Keshi",
         "duration": "3:15",
@@ -16143,7 +16143,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_drunk_Keshi",
         "title": "drunk",
         "artist": "Keshi",
         "duration": "3:15",
@@ -16151,7 +16151,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_2%20soon_Keshi",
         "title": "2 soon",
         "artist": "Keshi",
         "duration": "3:15",
@@ -16159,7 +16159,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_like%20i%20need%20u_Keshi",
         "title": "like i need u",
         "artist": "Keshi",
         "duration": "3:15",
@@ -16167,7 +16167,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_right%20here_Keshi",
         "title": "right here",
         "artist": "Keshi",
         "duration": "3:15",
@@ -16175,7 +16175,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_less%20of%20you_Keshi",
         "title": "less of you",
         "artist": "Keshi",
         "duration": "3:15",
@@ -16183,7 +16183,7 @@ const TOP_SHUFFLES_CATALOG = {
         "thumb": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80"
       },
       {
-        "id": "w-sQRS-MT9k",
+        "id": "yt_TOUCH_Keshi",
         "title": "TOUCH",
         "artist": "Keshi",
         "duration": "3:15",

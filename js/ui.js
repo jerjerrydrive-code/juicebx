@@ -331,27 +331,69 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (5 iOS 28 & GOOGLE M3 EXPRESSIVE VISUALIZERS) ═══
-  
-  // ═══ CENTERPIECE VISUALIZER ENGINE (VINYL • CASSETTE • NEON) ═══
-  const VISUALIZER_STYLES = ['vinyl', 'cassette', 'neon'];
+  const VISUALIZER_STYLES = ['vinyl', 'orb', 'm3', 'blobs', 'hifi'];
+
   let currentCenterpieceStyle = localStorage.getItem('juicebx_center_style') || 'vinyl';
   if (!VISUALIZER_STYLES.includes(currentCenterpieceStyle)) currentCenterpieceStyle = 'vinyl';
 
-  const deckDisplayVinyl = document.getElementById('deck-display-vinyl');
-  const deckDisplayCassette = document.getElementById('deck-display-cassette');
-  const deckDisplayNeon = document.getElementById('deck-display-neon');
   const deckStageWindow = document.getElementById('deck-stage-window');
 
+  const deckDisplayOrb = document.getElementById('deck-display-orb');
+  const deckDisplayM3 = document.getElementById('deck-display-m3');
+  const deckDisplayBlobs = document.getElementById('deck-display-blobs');
+  const deckDisplayHifi = document.getElementById('deck-display-hifi');
+  const deckDisplayVinyl = document.getElementById('deck-display-vinyl');
+
+  const orbCanvas = document.getElementById('deck-reactive-orb-canvas');
+  const orbCtx = orbCanvas ? orbCanvas.getContext('2d') : null;
+
+  const m3Canvas = document.getElementById('deck-reactive-m3-canvas');
+  const m3Ctx = m3Canvas ? m3Canvas.getContext('2d') : null;
+
+  const blobsCanvas = document.getElementById('deck-reactive-blobs-canvas');
+  const blobsCtx = blobsCanvas ? blobsCanvas.getContext('2d') : null;
+
+  const hifiCanvas = document.getElementById('deck-reactive-hifi-canvas');
+  const hifiCtx = hifiCanvas ? hifiCanvas.getContext('2d') : null;
+
+  // 1. iOS 28 Dynamic Siri Orb State
+  let orbPhase = 0;
+  const orbDust = Array.from({ length: 28 }, () => ({
+    angle: Math.random() * Math.PI * 2,
+    dist: 50 + Math.random() * 90,
+    speed: (0.005 + Math.random() * 0.015) * (Math.random() > 0.5 ? 1 : -1),
+    size: 1 + Math.random() * 2,
+    alpha: 0.2 + Math.random() * 0.6
+  }));
+
+  // 2. Google Material 3 Expressive Ribbons State
+  let m3Phase = 0;
+
+  // 3. Spatial Glass Metaballs State
+  let blobPhase = 0;
+  const spatialBlobs = [
+    { baseR: 44, orbitR: 0, speed: 0, color1: '#ff4f00', color2: '#a855f7' },
+    { baseR: 26, orbitR: 62, speed: 0.018, color1: '#06b6d4', color2: '#3b82f6' },
+    { baseR: 22, orbitR: 78, speed: -0.014, color1: '#ec4899', color2: '#f43f5e' },
+    { baseR: 19, orbitR: 95, speed: 0.022, color1: '#8b5cf6', color2: '#6366f1' },
+    { baseR: 16, orbitR: 110, speed: -0.019, color1: '#10b981', color2: '#06b6d4' }
+  ];
+
+  // 4. M3 Hi-Fi Precision Spectrum State
+  const hifiPeaks = Array.from({ length: 38 }, () => ({ y: 0, vel: 0 }));
+  const hifiSparks = [];
+
   function setCenterpieceStyle(style) {
-    if (!VISUALIZER_STYLES.includes(style)) style = 'vinyl';
     currentCenterpieceStyle = style;
-    try { localStorage.setItem('juicebx_center_style', style); } catch(e) {}
+    localStorage.setItem('juicebx_center_style', style);
     if (deckStageWindow) deckStageWindow.setAttribute('data-visualizer-style', style);
 
     if (currentDeckMode === 'vinyl') {
+      if (deckDisplayOrb) deckDisplayOrb.classList.toggle('hidden', style !== 'orb');
+      if (deckDisplayM3) deckDisplayM3.classList.toggle('hidden', style !== 'm3');
+      if (deckDisplayBlobs) deckDisplayBlobs.classList.toggle('hidden', style !== 'blobs');
+      if (deckDisplayHifi) deckDisplayHifi.classList.toggle('hidden', style !== 'hifi');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.toggle('hidden', style !== 'vinyl');
-      if (deckDisplayCassette) deckDisplayCassette.classList.toggle('hidden', style !== 'cassette');
-      if (deckDisplayNeon) deckDisplayNeon.classList.toggle('hidden', style !== 'neon');
     }
   }
 
@@ -367,8 +409,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (deckStageWindow) {
     deckStageWindow.addEventListener('click', (e) => {
-      // Don't cycle if clicking on video or lyrics controls
-      if (e.target.closest('#btn-lyric-nudge-back') || e.target.closest('#btn-lyric-nudge-fwd') || e.target.closest('#btn-lyric-sync-reset')) return;
+      // Don't morph if clicking on video play overlay or spindle tribute or lyrics nudge
+      if (e.target.closest('#deck-spindle-tribute') || e.target.closest('#deck-video-tap-overlay') || e.target.closest('#btn-lyric-nudge-back') || e.target.closest('#btn-lyric-nudge-fwd') || e.target.closest('#btn-lyric-sync-reset')) return;
       if (currentDeckMode === 'vinyl') {
         morphToNextVisualizer();
       }
@@ -394,50 +436,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const track = state.queue[state.currentIndex];
 
     if (mode === 'vinyl') {
-      // 1. SONG MODE (Vinyl / Cassette / Neon)
-      if (deckStageWindow) {
-        deckStageWindow.style.width = 'min(280px, 74vw, 34vh)';
-        deckStageWindow.style.height = 'min(280px, 74vw, 34vh)';
-      }
       setCenterpieceStyle(currentCenterpieceStyle);
       if (els.deckDisplayVideo) {
-        els.deckDisplayVideo.classList.add('hidden');
         els.deckDisplayVideo.style.opacity = '0';
         els.deckDisplayVideo.style.pointerEvents = 'none';
         els.deckDisplayVideo.style.position = 'absolute';
+        els.deckDisplayVideo.style.zIndex = '-1';
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
     } else if (mode === 'video') {
-      // 2. VIDEO MODE (16:9 Cinema YouTube Window)
+      if (deckDisplayOrb) deckDisplayOrb.classList.add('hidden');
+      if (deckDisplayM3) deckDisplayM3.classList.add('hidden');
+      if (deckDisplayBlobs) deckDisplayBlobs.classList.add('hidden');
+      if (deckDisplayHifi) deckDisplayHifi.classList.add('hidden');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.add('hidden');
-      if (deckDisplayCassette) deckDisplayCassette.classList.add('hidden');
-      if (deckDisplayNeon) deckDisplayNeon.classList.add('hidden');
-      if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
-      if (deckStageWindow) {
-        deckStageWindow.style.width = 'min(330px, 88vw, 42vh)';
-        deckStageWindow.style.height = 'min(220px, 58vw, 28vh)';
-      }
       if (els.deckDisplayVideo) {
-        els.deckDisplayVideo.classList.remove('hidden');
         els.deckDisplayVideo.style.opacity = '1';
         els.deckDisplayVideo.style.pointerEvents = 'auto';
         els.deckDisplayVideo.style.position = 'relative';
-        els.deckDisplayVideo.style.zIndex = '20';
+        els.deckDisplayVideo.style.zIndex = '10';
       }
+      if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
     } else if (mode === 'lyrics') {
-      // 3. LYRICS MODE (Karaoke Canvas)
+      if (deckDisplayOrb) deckDisplayOrb.classList.add('hidden');
+      if (deckDisplayM3) deckDisplayM3.classList.add('hidden');
+      if (deckDisplayBlobs) deckDisplayBlobs.classList.add('hidden');
+      if (deckDisplayHifi) deckDisplayHifi.classList.add('hidden');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.add('hidden');
-      if (deckDisplayCassette) deckDisplayCassette.classList.add('hidden');
-      if (deckDisplayNeon) deckDisplayNeon.classList.add('hidden');
       if (els.deckDisplayVideo) {
-        els.deckDisplayVideo.classList.add('hidden');
         els.deckDisplayVideo.style.opacity = '0';
         els.deckDisplayVideo.style.pointerEvents = 'none';
         els.deckDisplayVideo.style.position = 'absolute';
-      }
-      if (deckStageWindow) {
-        deckStageWindow.style.width = 'min(330px, 86vw, 42vh)';
-        deckStageWindow.style.height = 'min(330px, 86vw, 42vh)';
+        els.deckDisplayVideo.style.zIndex = '-1';
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.remove('hidden');
       if (track) loadTrackLyrics(track.title, track.artist);
@@ -1039,13 +1069,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const chosenTrack = tracks[idx];
         if (chosenTrack) {
           saveRecentSearch(query);
-          // 1. Play song instantly (0ms latency)
-          engine.setQueue([chosenTrack], true);
+          const state = engine.getState();
+          const newQueue = [chosenTrack, ...state.queue.filter(t => t.id !== chosenTrack.id)];
+          engine.setQueue(newQueue, true);
           scrollToPanel(2); // Jump straight to Player Deck
-          // 2. Automatically generate YouTube Music style Up Next radio queue in background
-          if (engine.autoGenerateRadio) {
-            engine.autoGenerateRadio(chosenTrack);
-          }
         }
       });
     });
@@ -3739,173 +3766,6 @@ document.addEventListener('DOMContentLoaded', () => {
       audioReactivityRAF = requestAnimationFrame(tick);
     }
   }
-
-
-  // ═══ DEDICATED ARTIST + SIMILAR ARTIST SHUFFLE RADIO ENGINE ═══
-  const SIMILAR_ARTIST_MAP = {
-    'juice wrld': ['The Kid LAROI', 'XXXTENTACION', 'Lil Peep', 'Trippie Redd', 'Lil Skies', 'Polo G', 'Lil Uzi Vert', 'iann dior', 'Post Malone'],
-    'travis scott': ['Don Toliver', 'Sheck Wes', 'Future', 'Young Thug', 'Gunna', 'Playboi Carti', 'Metro Boomin', 'Lil Uzi Vert', 'Drake', '21 Savage'],
-    'drake': ['Future', '21 Savage', 'Travis Scott', 'Lil Baby', 'PartyNextDoor', 'The Weeknd', 'Rick Ross', 'J. Cole', 'Kendrick Lamar'],
-    'the weeknd': ['Post Malone', 'Dua Lipa', 'SZA', 'Frank Ocean', 'Brent Faiyaz', 'Giveon', 'Lana Del Rey', 'Justin Bieber', 'Khalid'],
-    'kendrick lamar': ['J. Cole', 'Baby Keem', 'ScHoolboy Q', 'Jay Rock', 'A$AP Rocky', 'Pusha T', 'Tyler, The Creator', 'Eminem', 'Nas'],
-    'lil peep': ['Juice WRLD', 'XXXTENTACION', 'Lil Tracy', 'Bilmuri', 'Brodnax', 'GothBoiClique', 'Cold Hart', 'Wicca Phase Springs Eternal'],
-    'xxxtentacion': ['Juice WRLD', 'Ski Mask The Slump God', 'Lil Peep', 'Trippie Redd', 'Denzel Curry', 'Jasiah', 'Craig Xen', 'Robb Bank$'],
-    'future': ['Metro Boomin', 'Young Thug', 'Gunna', 'Lil Baby', 'Drake', 'Travis Scott', '21 Savage', 'Don Toliver', 'Playboi Carti'],
-    'gunna': ['Young Thug', 'Lil Baby', 'Future', 'Roddy Ricch', 'Lil Durk', 'Moneybagg Yo', 'Travis Scott', 'Don Toliver'],
-    'playboi carti': ['Ken Carson', 'Destroy Lonely', 'Lil Uzi Vert', 'Travis Scott', 'Yeat', 'Pi\'erre Bourne', 'SoFaygo'],
-    'sza': ['Summer Walker', 'Jhené Aiko', 'Frank Ocean', 'Kehlani', 'Snoh Aalegra', 'Kali Uchis', 'Solange', 'Brent Faiyaz'],
-    'frank ocean': ['Daniel Caesar', 'Brent Faiyaz', 'Steve Lacy', 'Tyler, The Creator', 'Childish Gambino', 'SZA', 'Rex Orange County', 'Dominic Fike'],
-    'eminem': ['50 Cent', 'Dr. Dre', 'Snoop Dogg', 'D12', 'Jay-Z', 'Tupac', 'The Notorious B.I.G.', 'Royce da 5\'9"', 'Outkast'],
-    'billie eilish': ['FINNEAS', 'Olivia Rodrigo', 'Lorde', 'Lana Del Rey', 'Melanie Martinez', 'Girl in Red', 'Clairo', 'Phoebe Bridgers'],
-    'taylor swift': ['Olivia Rodrigo', 'Sabrina Carpenter', 'Gracie Abrams', 'Phoebe Bridgers', 'Kacey Musgraves', 'Lorde', 'Halsey']
-  };
-
-  window.launchArtistRadioShuffle = async function(artistName) {
-    if (!artistName || !artistName.trim()) artistName = 'Juice WRLD';
-    artistName = artistName.trim();
-    engine.playHaptic(600, 0.03);
-
-    console.log(`[Artist Radio] Building Shuffle for: "${artistName}" + Similar Artists...`);
-    const cleanArt = artistName.toLowerCase();
-    
-    // Find mapped similar artists or infer
-    let similarArtists = SIMILAR_ARTIST_MAP[cleanArt] || [];
-    if (similarArtists.length === 0) {
-      for (const [k, v] of Object.entries(SIMILAR_ARTIST_MAP)) {
-        if (cleanArt.includes(k) || k.includes(cleanArt)) {
-          similarArtists = v;
-          break;
-        }
-      }
-    }
-
-    let allTracks = [];
-
-    // 1. Instant 0ms Match from Built-in Catalogs (Juice WRLD, Hip-Hop, Emo Rap, Pop, R&B, Rock, etc.)
-    if (typeof TOP_SHUFFLES_CATALOG !== 'undefined') {
-      Object.values(TOP_SHUFFLES_CATALOG).forEach(cat => {
-        if (cat.tracks) {
-          cat.tracks.forEach(t => {
-            const tArt = (t.artist || '').toLowerCase();
-            if (tArt.includes(cleanArt) || cleanArt.includes(tArt)) {
-              allTracks.push(t);
-            } else if (similarArtists.some(sim => tArt.includes(sim.toLowerCase()) || sim.toLowerCase().includes(tArt))) {
-              allTracks.push(t);
-            }
-          });
-        }
-      });
-    }
-
-    // 2. If catalog gave tracks, start playing IMMEDIATELY (0ms latency!)
-    if (allTracks.length > 0) {
-      const seen = new Set();
-      const unique = allTracks.filter(t => {
-        const k = (t.title || '').toLowerCase();
-        if (seen.has(k)) return false;
-        seen.add(k);
-        return true;
-      });
-
-      for (let i = unique.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [unique[i], unique[j]] = [unique[j], unique[i]];
-      }
-
-      engine.setQueue(unique, true);
-      scrollToPanel(2); // Player Deck
-      setDeckMode('vinyl');
-      console.log(`[Artist Radio] Instant catalog launch for "${artistName}" with ${unique.length} tracks!`);
-      
-      // Concurrently fetch dynamic extensions in background
-      (async () => {
-        try {
-          const dynamic = await engine.search(`${artistName} songs greatest hits`);
-          if (dynamic && dynamic.length > 0) {
-            const newOnes = dynamic.filter(t => !seen.has((t.title || '').toLowerCase()));
-            if (newOnes.length > 0) {
-              const curState = engine.getState();
-              curState.queue.push(...newOnes.slice(0, 10));
-              engine.setQueue(curState.queue, false);
-            }
-          }
-        } catch(e) {}
-      })();
-
-      return unique;
-    }
-
-    // 3. Dynamic Search Fallback if artist was not in built-in catalogs
-    try {
-      const primaryTracks = await engine.search(`${artistName} greatest hits audio`);
-      if (primaryTracks && primaryTracks.length > 0) {
-        allTracks.push(...primaryTracks);
-      }
-    } catch(e) {}
-
-    if (allTracks.length > 0) {
-      engine.setQueue(allTracks, true);
-      scrollToPanel(2);
-      setDeckMode('vinyl');
-      return allTracks;
-    }
-    return [];
-  };
-
-  // Bind Custom Artist Shuffle Modal
-  const modalArtistShuffle = document.getElementById('modal-artist-shuffle');
-  const btnOpenArtistShuffle = document.getElementById('btn-open-custom-artist-shuffle');
-  const btnCloseArtistShuffle = document.getElementById('btn-close-artist-shuffle-modal');
-  const inputArtistShuffle = document.getElementById('input-artist-shuffle-name');
-  const btnGenerateArtistShuffle = document.getElementById('btn-generate-artist-shuffle-submit');
-
-  if (btnOpenArtistShuffle && modalArtistShuffle) {
-    btnOpenArtistShuffle.addEventListener('click', () => {
-      modalArtistShuffle.classList.remove('hidden');
-      setTimeout(() => {
-        modalArtistShuffle.classList.remove('opacity-0');
-        if (inputArtistShuffle) inputArtistShuffle.focus();
-      }, 20);
-    });
-  }
-
-  if (btnCloseArtistShuffle && modalArtistShuffle) {
-    btnCloseArtistShuffle.addEventListener('click', () => {
-      modalArtistShuffle.classList.add('opacity-0');
-      setTimeout(() => modalArtistShuffle.classList.add('hidden'), 300);
-    });
-  }
-
-  if (btnGenerateArtistShuffle && inputArtistShuffle) {
-    btnGenerateArtistShuffle.addEventListener('click', async () => {
-      const name = inputArtistShuffle.value.trim();
-      if (!name) return;
-      btnGenerateArtistShuffle.innerHTML = '<i class="ph-bold ph-spinner animate-spin text-base"></i> Generating Mix...';
-      await window.launchArtistRadioShuffle(name);
-      btnGenerateArtistShuffle.innerHTML = '<i class="ph-bold ph-play text-base"></i> Launch Artist Radio Shuffle';
-      if (modalArtistShuffle) {
-        modalArtistShuffle.classList.add('opacity-0');
-        setTimeout(() => modalArtistShuffle.classList.add('hidden'), 300);
-      }
-    });
-
-    inputArtistShuffle.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        btnGenerateArtistShuffle.click();
-      }
-    });
-  }
-
-  // Quick suggestion chips inside modal
-  document.querySelectorAll('.btn-quick-artist').forEach(chip => {
-    chip.addEventListener('click', () => {
-      const art = chip.getAttribute('data-artist');
-      if (art && inputArtistShuffle) {
-        inputArtistShuffle.value = art;
-        if (btnGenerateArtistShuffle) btnGenerateArtistShuffle.click();
-      }
-    });
-  });
 
   startAudioReactivity();
   engine.init();
