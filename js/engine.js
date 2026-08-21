@@ -382,6 +382,7 @@ window.JuiceEngine = (() => {
             isResolvingTrack = false;
             if (ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
               ytPlayer.loadVideoById(matched.id);
+              setTimeout(() => { if (ytPlayer && typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo(); }, 150);
             }
             emit('engine:trackChanged', track);
             emit('engine:stateChanged', state);
@@ -555,6 +556,7 @@ window.JuiceEngine = (() => {
       if (state.isApiReady && ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
         if (autoPlay) {
           ytPlayer.loadVideoById(track.id);
+          setTimeout(() => { if (ytPlayer && typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo(); }, 150);
         } else {
           ytPlayer.cueVideoById(track.id);
         }
