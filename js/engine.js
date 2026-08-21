@@ -280,7 +280,7 @@ window.JuiceEngine = (() => {
             ytPlayer.setVolume(state.volume);
             emit('engine:ready', state);
             if (pendingVideoId) {
-              ytPlayer.loadVideoById(pendingVideoId);
+              ytPlayer.cueVideoById(pendingVideoId);
               pendingVideoId = null;
             }
           },
