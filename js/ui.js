@@ -1809,6 +1809,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!state) return;
     const { isPlaying, shuffle, repeat } = state;
 
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.playbackState = isPlaying ? 'playing' : 'paused';
+    }
+
     const iconClass = isPlaying ? 'ph-fill ph-pause' : 'ph-fill ph-play';
     if (els.deckPlayIcon) els.deckPlayIcon.className = `${iconClass} text-3xl ${isPlaying ? '' : 'ml-0.5'}`;
     if (els.miniIcon) els.miniIcon.className = `${iconClass} text-base ${isPlaying ? '' : 'ml-0.5'}`;

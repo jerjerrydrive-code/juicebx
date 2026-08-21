@@ -185,6 +185,7 @@ window.JuiceEngine = (() => {
       localAudio.addEventListener('play', attachDSP);
 
       localAudio.addEventListener('play', () => {
+        if (localAudio.src.startsWith('data:audio/mp3;base64,')) return; // Ignore silent track
         state.isPlaying = true;
         state.isLocalPlaying = true;
         startLocalProgressTracker();
@@ -192,21 +193,23 @@ window.JuiceEngine = (() => {
       });
 
       localAudio.addEventListener('pause', () => {
+        if (localAudio.src.startsWith('data:audio/mp3;base64,')) return; // Ignore silent track
         state.isPlaying = false;
         stopProgressTracker();
         emit('engine:stateChanged', state);
       });
 
       localAudio.addEventListener('ended', () => {
+        if (localAudio.src.startsWith('data:audio/mp3;base64,')) return; // Ignore silent track
         state.isPlaying = false;
         stopProgressTracker();
+        emit('engine:stateChanged', state);
         if (state.repeat) {
           api.seek(0);
           localAudio.play();
         } else if (state.autoplay) {
           api.next();
         }
-        emit('engine:stateChanged', state);
       });
 
       localAudio.addEventListener('loadedmetadata', () => {
@@ -512,11 +515,26 @@ window.JuiceEngine = (() => {
     };
   }
 
+  function updateMediaSession(track) {
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: track.title,
+        artist: track.artist || 'Unknown Artist',
+        album: 'JuiceBx',
+        artwork: [
+          { src: track.thumb || 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=512&q=80', sizes: '512x512', type: 'image/jpeg' }
+        ]
+      });
+    }
+  }
+
   function loadTrack(index, autoPlay = true) {
     if (index < 0 || index >= state.queue.length) return;
     state.currentIndex = index;
     const track = state.queue[index];
     if (!track) return;
+
+    updateMediaSession(track);
 
     // Reset single resolution flag for new track load
     track._resolutionTried = false;
@@ -534,6 +552,7 @@ window.JuiceEngine = (() => {
       // Direct Audio Stream / Local File Playback
       if (ytPlayer && typeof ytPlayer.pauseVideo === 'function') ytPlayer.pauseVideo();
       initLocalAudio();
+      localAudio.loop = false;
       localAudio.src = track.audioUrl;
       state.isLocalPlaying = true;
       if (autoPlay) {
@@ -541,8 +560,20 @@ window.JuiceEngine = (() => {
       }
     } else {
       // YouTube Stream Playback
-      if (localAudio && !localAudio.paused) localAudio.pause();
       state.isLocalPlaying = false;
+      
+      // HACK: To allow YouTube iframe audio to continue playing when the screen is locked
+      // or the app is backgrounded on iOS/Android, we MUST have a native <audio> element playing.
+      // We play a tiny silent base64 MP3 in a loop.
+      if (localAudio) {
+        if (!localAudio.src.startsWith('data:audio/mp3;base64,')) {
+          localAudio.src = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU2LjM2LjEwMAAAAAAAAAAAAAAA//OEAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAABIAD+//7+////////////////////////////////////////////////////////AAAAAExhdmM1Ni40MS4xMDAAAAAAAAAAAAAAAAEkEQAAAAAAAAAASQRFgEAAQAAAAAAAAAA//OEAAAAAAAAAAAAAAABXAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ==';
+          localAudio.loop = true;
+        }
+        if (autoPlay) {
+          localAudio.play().catch(e => console.warn('Silent audio background lock failed', e));
+        }
+      }
 
       const isPlaceholderId = !track.id || track.id.length !== 11 || track.id.includes('4819g');
       if (isPlaceholderId) {
@@ -573,6 +604,14 @@ window.JuiceEngine = (() => {
       initYouTubePlayer();
       initLocalAudio();
       
+      // Bind Media Session Hardware Actions
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.setActionHandler('play', () => api.togglePlay());
+        navigator.mediaSession.setActionHandler('pause', () => api.togglePlay());
+        navigator.mediaSession.setActionHandler('previoustrack', () => api.prev());
+        navigator.mediaSession.setActionHandler('nexttrack', () => api.next());
+      }
+
       // Load saved local/downloaded tracks into storage
       const savedDownloads = api.getDownloads();
       if (savedDownloads.length > 0) {
@@ -663,9 +702,13 @@ window.JuiceEngine = (() => {
       try {
         if (state.isPlaying) {
           if (typeof ytPlayer.pauseVideo === 'function') ytPlayer.pauseVideo();
+          if (localAudio && localAudio.src.startsWith('data:audio')) localAudio.pause();
           state.isPlaying = false;
         } else {
           if (typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo();
+          if (localAudio && localAudio.src.startsWith('data:audio')) {
+            localAudio.play().catch(e => console.warn('Silent audio resume failed', e));
+          }
           state.isPlaying = true;
         }
         emit('engine:stateChanged', state);
@@ -1079,3 +1122,6 @@ window.JuiceEngine = (() => {
 
   return api;
 })();
+
+// Keep alive
+document.addEventListener('visibilitychange', () => { if (document.hidden && window.engine) { const state = window.engine.getState(); if (state.isPlaying && !state.isLocalPlaying && typeof ytPlayer !== 'undefined') { setTimeout(() => { if (typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo(); }, 100); } } });
