@@ -3914,37 +3914,36 @@ document.addEventListener('DOMContentLoaded', () => {
       const isLight = document.body.classList.contains('light-mode');
 
       if (!isLight) {
-        // Dark Mode: Translucent frosted glass themeing letting M3 shapes shine through
-        root.setProperty('--bg-app', '#05060a');
+        root.setProperty('--bg-app', `radial-gradient(circle at 12% 18%, color-mix(in srgb, ${c1} 34%, transparent) 0%, transparent 55%), radial-gradient(circle at 88% 22%, color-mix(in srgb, ${c2} 34%, transparent) 0%, transparent 58%), radial-gradient(circle at 50% 88%, color-mix(in srgb, ${c3} 34%, transparent) 0%, transparent 65%), #070910`);
         root.setProperty('--bg-panel', 'transparent');
-        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 20%, rgba(18, 20, 30, 0.60))`);
-        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c4} 35%, #0d0e16)`);
-        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 25%, rgba(27, 28, 42, 0.55))`);
-        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 30%, rgba(10, 11, 18, 0.85))`);
-        root.setProperty('--bg-mini', `color-mix(in srgb, ${c4} 30%, rgba(18, 19, 28, 0.85))`);
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 20%, rgba(255, 255, 255, 0.06))`);
+        root.setProperty('--bg-card-solid', '#0d0e15');
+        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 24%, rgba(255, 255, 255, 0.08))`);
+        root.setProperty('--bg-nav', 'rgba(10, 11, 17, 0.85)');
+        root.setProperty('--bg-mini', 'rgba(16, 18, 26, 0.90)');
         root.setProperty('--text-primary', '#ffffff');
         root.setProperty('--text-secondary', '#94a3b8');
         root.setProperty('--text-tertiary', '#64748b');
-        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 28%, rgba(255, 255, 255, 0.10))`);
-        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 32%, rgba(255, 255, 255, 0.14))`);
+        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 34%, rgba(255, 255, 255, 0.10))`);
+        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 34%, rgba(255, 255, 255, 0.14))`);
         root.setProperty('--btn-active-bg', 'rgba(255, 255, 255, 0.95)');
         root.setProperty('--btn-active-text', '#000000');
         root.setProperty('--shadow-card', '0 24px 48px -12px rgba(0, 0, 0, 0.65)');
       } else {
-        // Light Mode: Translucent frosted white ceramic glass themeing
-        root.setProperty('--bg-app', '#f6f7fb');
+        // Light Mode: Translucent frosted ceramic glass with 34% theme color richness across all pages
+        root.setProperty('--bg-app', `radial-gradient(circle at 12% 18%, color-mix(in srgb, ${c1} 34%, transparent) 0%, transparent 55%), radial-gradient(circle at 88% 22%, color-mix(in srgb, ${c2} 34%, transparent) 0%, transparent 58%), radial-gradient(circle at 50% 88%, color-mix(in srgb, ${c3} 34%, transparent) 0%, transparent 65%), #eef2f7`);
         root.setProperty('--bg-panel', 'transparent');
-        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 12%, rgba(255, 255, 255, 0.72))`);
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 16%, rgba(255, 255, 255, 0.78))`);
         root.setProperty('--bg-card-solid', '#ffffff');
-        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 6%, rgba(238, 240, 248, 0.85))`);
+        root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 14%, rgba(255, 255, 255, 0.85))`);
         root.setProperty('--bg-nav', 'rgba(255, 255, 255, 0.88)');
         root.setProperty('--bg-mini', 'rgba(255, 255, 255, 0.90)');
         root.setProperty('--text-primary', '#0f172a');
         root.setProperty('--text-secondary', '#334155');
         root.setProperty('--text-tertiary', '#64748b');
-        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 20%, rgba(0, 0, 0, 0.08))`);
-        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 24%, rgba(0, 0, 0, 0.12))`);
-        root.setProperty('--btn-active-bg', '#0f172a');
+        root.setProperty('--border-card', `color-mix(in srgb, ${c2} 34%, rgba(0, 0, 0, 0.08))`);
+        root.setProperty('--border-input', `color-mix(in srgb, ${c2} 34%, rgba(0, 0, 0, 0.12))`);
+        root.setProperty('--btn-active-bg', '#0d1322');
         root.setProperty('--btn-active-text', '#ffffff');
         root.setProperty('--shadow-card', '0 16px 32px -8px rgba(0, 0, 0, 0.08)');
       }
