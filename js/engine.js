@@ -590,7 +590,15 @@ window.JuiceEngine = (() => {
       if (state.isApiReady && ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
         if (autoPlay) {
           ytPlayer.loadVideoById(track.id);
-          setTimeout(() => { if (ytPlayer && typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo(); }, 150);
+          setTimeout(() => {
+            if (ytPlayer && typeof ytPlayer.playVideo === 'function') {
+              try {
+                if (typeof ytPlayer.unMute === 'function') ytPlayer.unMute();
+                if (typeof ytPlayer.setVolume === 'function') ytPlayer.setVolume(state.volume);
+              } catch(e) {}
+              ytPlayer.playVideo();
+            }
+          }, 150);
         } else {
           ytPlayer.cueVideoById(track.id);
         }
@@ -716,6 +724,10 @@ window.JuiceEngine = (() => {
           if (localAudio && localAudio.src.startsWith('data:audio')) localAudio.pause();
           state.isPlaying = false;
         } else {
+          try {
+            if (typeof ytPlayer.unMute === 'function') ytPlayer.unMute();
+            if (typeof ytPlayer.setVolume === 'function') ytPlayer.setVolume(state.volume);
+          } catch(e) {}
           if (typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo();
           if (localAudio && localAudio.src.startsWith('data:audio')) {
             localAudio.play().catch(e => console.warn('Silent audio resume failed', e));

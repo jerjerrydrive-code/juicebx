@@ -817,7 +817,7 @@
               </div>
 
               <!-- 6. Clean Video Stage (100% Pure Video - Zero YouTube UI Overlay) -->
-              <div id="deck-display-video" class="hidden w-full h-full relative overflow-hidden flex items-center justify-center bg-black group">
+              <div id="deck-display-video" class="w-full h-full relative overflow-hidden flex items-center justify-center bg-black group transition-opacity duration-300" style="position: absolute; opacity: 0; pointer-events: none; z-index: -1;">
                 <div id="yt-player-host" class="w-full h-full overflow-hidden pointer-events-none flex items-center justify-center scale-[1.38] origin-center"></div>
                 <div id="deck-video-tap-overlay" class="absolute inset-0 z-20 cursor-pointer flex items-center justify-center">
                   <div id="deck-video-tap-indicator" class="w-14 h-14 rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white text-2xl opacity-0 scale-75 transition-all duration-300 pointer-events-none shadow-xl border border-white/20">

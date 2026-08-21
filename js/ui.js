@@ -437,7 +437,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mode === 'vinyl') {
       setCenterpieceStyle(currentCenterpieceStyle);
-      if (els.deckDisplayVideo) els.deckDisplayVideo.classList.add('hidden');
+      if (els.deckDisplayVideo) {
+        els.deckDisplayVideo.style.opacity = '0';
+        els.deckDisplayVideo.style.pointerEvents = 'none';
+        els.deckDisplayVideo.style.position = 'absolute';
+        els.deckDisplayVideo.style.zIndex = '-1';
+      }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
     } else if (mode === 'video') {
       if (deckDisplayOrb) deckDisplayOrb.classList.add('hidden');
@@ -445,7 +450,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (deckDisplayBlobs) deckDisplayBlobs.classList.add('hidden');
       if (deckDisplayHifi) deckDisplayHifi.classList.add('hidden');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.add('hidden');
-      if (els.deckDisplayVideo) els.deckDisplayVideo.classList.remove('hidden');
+      if (els.deckDisplayVideo) {
+        els.deckDisplayVideo.style.opacity = '1';
+        els.deckDisplayVideo.style.pointerEvents = 'auto';
+        els.deckDisplayVideo.style.position = 'relative';
+        els.deckDisplayVideo.style.zIndex = '10';
+      }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
     } else if (mode === 'lyrics') {
       if (deckDisplayOrb) deckDisplayOrb.classList.add('hidden');
@@ -453,7 +463,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (deckDisplayBlobs) deckDisplayBlobs.classList.add('hidden');
       if (deckDisplayHifi) deckDisplayHifi.classList.add('hidden');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.add('hidden');
-      if (els.deckDisplayVideo) els.deckDisplayVideo.classList.add('hidden');
+      if (els.deckDisplayVideo) {
+        els.deckDisplayVideo.style.opacity = '0';
+        els.deckDisplayVideo.style.pointerEvents = 'none';
+        els.deckDisplayVideo.style.position = 'absolute';
+        els.deckDisplayVideo.style.zIndex = '-1';
+      }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.remove('hidden');
       if (track) loadTrackLyrics(track.title, track.artist);
     }
