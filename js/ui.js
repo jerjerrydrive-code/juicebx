@@ -3633,19 +3633,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    bindPresets() {
-      document.querySelectorAll('.theme-preset-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const key = btn.getAttribute('data-theme');
-          const preset = PRESET_NAMED_THEMES[key];
-          if (preset) {
-            engine.playHaptic(600, 0.02);
-            this.applyPalette(preset.quad, preset.quad[0], true);
-            this.showThemeToast(preset.quad);
-          }
-        });
-      });
-    }
+    bindPresets() {}
 
     bindCycleButtons() {
       const cycleButtons = [
@@ -3654,9 +3642,62 @@ document.addEventListener('DOMContentLoaded', () => {
       ].filter(Boolean);
 
       cycleButtons.forEach(btn => {
+        let pressTimer = null;
+        let isLongPress = false;
+
+        const startPress = (e) => {
+          isLongPress = false;
+          pressTimer = setTimeout(() => {
+            isLongPress = true;
+            if (window.engine && typeof window.engine.playHaptic === 'function') {
+                window.engine.playHaptic(300, 0.1);
+            }
+            // Add to favorites list so it shows up in the UI
+            if (this.currentHex) {
+                if (!this.favorites.includes(this.currentHex)) {
+                    this.toggleFavorite(this.currentHex);
+                    if (typeof showToast === 'function') showToast("Saved to Favorite Themes!", "success");
+                } else {
+                    if (typeof showToast === 'function') showToast("Already in Favorites", "info");
+                }
+            }
+          }, 500);
+        };
+
+        const cancelPress = () => {
+          if (pressTimer) clearTimeout(pressTimer);
+        };
+
+        const endPress = (e) => {
+          if (pressTimer) clearTimeout(pressTimer);
+          if (isLongPress) {
+            e.stopPropagation();
+            e.preventDefault();
+            return;
+          }
+          // Short click: cycle
+          e.stopPropagation();
+          e.preventDefault();
+          this.cycleTheme();
+          if (window.engine && typeof window.engine.playHaptic === 'function') {
+              window.engine.playHaptic(100, 0.05);
+          }
+        };
+
+        // Desktop
+        btn.addEventListener('mousedown', startPress);
+        btn.addEventListener('mouseleave', cancelPress);
+        btn.addEventListener('mouseup', endPress);
+        
+        // Mobile
+        btn.addEventListener('touchstart', startPress, {passive: true});
+        btn.addEventListener('touchcancel', cancelPress, {passive: true});
+        btn.addEventListener('touchend', endPress, {passive: false});
+        
+        // Block default click since we use mouseup/touchend
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
-          this.cycleTheme();
+          e.preventDefault();
         });
       });
     }
