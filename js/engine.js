@@ -1553,6 +1553,7 @@ window.JuiceEngine = (() => {
         pendingVideoId = track.id;
 
         pendingAutoPlay = autoPlay;
+        if (autoPlay) state.isPlaying = true;
 
       }
 
