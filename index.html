@@ -90,12 +90,7 @@
       image-rendering: auto;
       transition: filter 0.25s ease, opacity 0.25s ease, transform 0.2s ease;
       will-change: filter, transform;
-    }
-    html.dark .juicebx-logo {
-      filter: brightness(0) invert(1);
-    }
-    html.light .juicebx-logo {
-      filter: brightness(0);
+      filter: brightness(0) invert(1) drop-shadow(0 4px 16px rgba(255, 79, 0, 0.8));
     }
 
     /* ═══ PREMIUM GLASSMORPHISM COMPONENTS ═══ */
@@ -285,11 +280,11 @@
     <div class="relative flex flex-row overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full h-full" id="app-container">
 
       <!-- ═══ PANEL 0: HOME / TOP 100 SHUFFLES ═══ -->
-      <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-36 px-4 pt-6" style="background: var(--bg-panel);">
+      <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-36 px-4" style="background: var(--bg-panel);">
         
-        <!-- Top Bar: Massive Logo -->
-        <div class="flex items-center justify-center mb-6 pt-2">
-          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-16 sm:h-20 w-auto max-w-[240px] object-contain filter drop-shadow-[0_2px_12px_rgba(255,79,0,0.35)] cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
+        <!-- Top Bar: Massive Logo (Sticky) -->
+        <div class="sticky top-0 z-40 flex items-center justify-center mb-6 py-4 -mx-4 px-4" style="background: rgba(3, 3, 5, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,0.05); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.8);">
+          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-16 sm:h-20 w-auto max-w-[240px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
         </div>
 
         <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
@@ -482,7 +477,7 @@
           <!-- Top Player Header Bar -->
           <div class="flex flex-wrap items-center justify-between pt-1 pb-2 shrink-0 z-20 gap-x-2 gap-y-2">
             <div class="flex items-center gap-2">
-              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-16 sm:h-20 w-auto max-w-[220px] object-contain filter drop-shadow-[0_2px_12px_rgba(255,79,0,0.35)] cursor-pointer active:scale-95 transition-transform" id="deck-brand-tribute" title="999 Forever Tribute">
+              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-16 sm:h-20 w-auto max-w-[220px] object-contain cursor-pointer active:scale-95 transition-transform" id="deck-brand-tribute" title="999 Forever Tribute">
             </div>
             
             <!-- View Switcher Pills (YouTube Music style: SONG / VIDEO / LYRICS) -->
