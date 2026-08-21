@@ -427,6 +427,9 @@ window.JuiceEngine = (() => {
   }
 
   function emit(eventName, detail) {
+    if (eventName === 'engine:stateChanged' && 'mediaSession' in navigator && detail) {
+      navigator.mediaSession.playbackState = detail.isPlaying ? 'playing' : 'paused';
+    }
     window.dispatchEvent(new CustomEvent(eventName, { detail }));
   }
 
