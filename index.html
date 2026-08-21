@@ -888,37 +888,39 @@
           <!-- CENTER STAGE (ENLARGED UNIVERSAL SQUIRCLE STAGE - TAP TO MORPH 2028 / M3 VISUALIZERS) -->
           <div class="flex-1 flex flex-col items-center justify-center relative w-full overflow-hidden my-1 z-10">
             
-            <!-- UNIFIED SQUIRCLE STAGE FRAME (Universally Identical Size Across All Modes) -->
-            <div id="deck-stage-window" class="w-[90%] max-w-[320px] h-[200px] sm:h-[240px] rounded-[24px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border border-white/10 mx-auto transition-all cursor-pointer select-none active:scale-[0.985]" style="background: rgba(10, 10, 15, 0.95);" title="Tap to switch visualizer style">
+            <!-- UNIFIED SQUIRCLE STAGE FRAME (Large Hardware Stage) -->
+            <div id="deck-stage-window" class="w-[260px] h-[260px] sm:w-[290px] sm:h-[290px] rounded-[32px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border border-white/10 mx-auto transition-all cursor-pointer select-none active:scale-[0.985]" style="background: rgba(10, 10, 15, 0.95);" title="Tap to switch visualizer style">
 
-              <!-- 1. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb & Chromatic Aura (DEFAULT) -->
-              <div id="deck-display-orb" class="centerpiece-display w-full h-full relative">
+              <!-- 1. 💽 iOS Dynamic Luxe Holographic Vinyl Platter (DEFAULT) -->
+              <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex flex-col items-center justify-center relative">
+                <div class="vinyl-deck-wrapper relative flex items-center justify-center transition-transform duration-300" id="deck-vinyl-wrapper">
+                  <div class="vinyl-platter paused relative transition-all duration-300 shadow-2xl" id="deck-vinyl-platter" style="width: 220px; height: 220px;">
+                    <div class="vinyl-grooves"></div>
+                    <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80');"></div>
+                    <div class="vinyl-reflection"></div>
+                    <div class="spindle-hole cursor-pointer hover:scale-110 active:scale-95 transition-all" id="deck-spindle-tribute" title="999 Forever"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb -->
+              <div id="deck-display-orb" class="centerpiece-display hidden w-full h-full relative">
                 <canvas id="deck-reactive-orb-canvas" class="w-full h-full block" width="365" height="260"></canvas>
               </div>
 
-              <!-- 2. 🎨 Google Material 3 Expressive Dynamic Fluid Ribbons & Chroma Waveform -->
+              <!-- 3. 🎨 Google Material 3 Expressive Dynamic Fluid Ribbons & Chroma Waveform -->
               <div id="deck-display-m3" class="centerpiece-display hidden w-full h-full relative">
                 <canvas id="deck-reactive-m3-canvas" class="w-full h-full block" width="365" height="260"></canvas>
               </div>
 
-              <!-- 3. 🫧 Spatial Fluid Glass Metaballs & Audio Plasma -->
+              <!-- 4. 🫧 Spatial Fluid Glass Metaballs & Audio Plasma -->
               <div id="deck-display-blobs" class="centerpiece-display hidden w-full h-full relative">
                 <canvas id="deck-reactive-blobs-canvas" class="w-full h-full block" width="365" height="260"></canvas>
               </div>
 
-              <!-- 4. ⚡ 2028 Precision M3 Hi-Fi Fluid Spectrum & Floating Peaks -->
+              <!-- 5. ⚡ 2028 Precision M3 Hi-Fi Fluid Spectrum -->
               <div id="deck-display-hifi" class="centerpiece-display hidden w-full h-full relative">
                 <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block" width="365" height="260"></canvas>
-              </div>
-
-              <!-- 5. 💽 iOS Dynamic Luxe Holographic Vinyl Platter -->
-              <div id="deck-display-vinyl" class="centerpiece-display hidden w-full h-full flex flex-col items-center justify-center relative">
-                <div class="vinyl-platter paused mx-auto relative transition-all duration-300" id="deck-vinyl-platter" style="width: 205px; height: 205px;">
-                  <div class="vinyl-grooves"></div>
-                  <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80');"></div>
-                  <div class="vinyl-reflection"></div>
-                  <div class="spindle-hole cursor-pointer hover:scale-110 active:scale-95 transition-all" id="deck-spindle-tribute" title="999 Forever"></div>
-                </div>
               </div>
 
               <!-- 6. Clean Video Stage (100% Pure Video - Zero YouTube UI Overlay) -->

@@ -304,7 +304,12 @@ window.JuiceEngine = (() => {
             if (event.data === window.YT.PlayerState.PLAYING) {
               state.isPlaying = true;
               state.isLocalPlaying = false;
+              if (typeof ytPlayer.getDuration === 'function') {
+                const d = ytPlayer.getDuration();
+                if (d > 0) state.duration = d;
+              }
               startYTProgressTracker();
+              emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
             } else if (event.data === window.YT.PlayerState.PAUSED) {
               state.isPlaying = false;
               stopProgressTracker();

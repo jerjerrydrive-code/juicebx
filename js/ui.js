@@ -331,10 +331,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (5 iOS 28 & GOOGLE M3 EXPRESSIVE VISUALIZERS) ═══
-  const VISUALIZER_STYLES = ['orb', 'm3', 'blobs', 'hifi', 'vinyl'];
+  const VISUALIZER_STYLES = ['vinyl', 'orb', 'm3', 'blobs', 'hifi'];
 
-  let currentCenterpieceStyle = localStorage.getItem('juicebx_center_style') || 'orb';
-  if (!VISUALIZER_STYLES.includes(currentCenterpieceStyle)) currentCenterpieceStyle = 'orb';
+  let currentCenterpieceStyle = localStorage.getItem('juicebx_center_style') || 'vinyl';
+  if (!VISUALIZER_STYLES.includes(currentCenterpieceStyle)) currentCenterpieceStyle = 'vinyl';
 
   const deckStageWindow = document.getElementById('deck-stage-window');
 
@@ -837,19 +837,20 @@ document.addEventListener('DOMContentLoaded', () => {
         drawM3HiFiSpectrum(hifiCtx, hifiCanvas.width, hifiCanvas.height, levels, isPlaying);
       }
 
-      // 5. 💽 iOS Dynamic Luxe Holographic Vinyl Platter
+      // 1. 💽 iOS Dynamic Luxe Holographic Vinyl Platter
       if (currentCenterpieceStyle === 'vinyl' && els.deckVinyl) {
+        const wrapper = document.getElementById('deck-vinyl-wrapper');
         if (isPlaying) {
           els.deckVinyl.classList.remove('paused');
-          const scale = 1.0 + levels.bass * 0.04;
-          const blur = 30 + levels.bass * 45;
-          const alpha = 0.25 + levels.bass * 0.5;
-          els.deckVinyl.style.transform = `scale(${scale})`;
-          els.deckVinyl.style.boxShadow = `0 20px ${blur}px -8px rgba(255, 79, 0, ${alpha}), 0 10px 20px -4px rgba(0,0,0,0.5)`;
+          els.deckVinyl.style.animationPlayState = 'running';
+          if (wrapper) {
+            const scale = 1.0 + levels.bass * 0.05;
+            wrapper.style.transform = `scale(${scale})`;
+          }
         } else {
           els.deckVinyl.classList.add('paused');
-          els.deckVinyl.style.transform = 'scale(0.96)';
-          els.deckVinyl.style.boxShadow = '';
+          els.deckVinyl.style.animationPlayState = 'paused';
+          if (wrapper) wrapper.style.transform = 'scale(0.96)';
         }
       }
     }
@@ -1968,6 +1969,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (els.deckTrackArtist) els.deckTrackArtist.innerText = track.artist;
     if (els.miniTitle) els.miniTitle.innerText = track.title;
     if (els.miniArtist) els.miniArtist.innerText = track.artist;
+    if (els.deckTimeCurrent) els.deckTimeCurrent.innerText = "0:00";
+    if (els.deckTimeTotal) {
+      if (track.duration) els.deckTimeTotal.innerText = track.duration;
+      else if (track.seconds) els.deckTimeTotal.innerText = formatTime(track.seconds);
+      else els.deckTimeTotal.innerText = "0:00";
+    }
+    if (els.deckScrubberFill) els.deckScrubberFill.style.transform = "scaleX(0)";
+    if (els.deckScrubberThumb) els.deckScrubberThumb.style.left = "0%";
     updateArtwork(track.id, track.thumb);
     updateAmbientAura(track);
     updateDeckFavoriteState();
@@ -2009,7 +2018,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ═══ HELPERS ═══
   function updateArtwork(videoId, explicitThumb) {
-    const url = explicitThumb || `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    let url = explicitThumb;
+    if (!url && videoId && videoId.length === 11 && !videoId.includes('4819g')) {
+      url = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    }
+    if (!url) {
+      url = 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80';
+    }
     if (els.miniArt) els.miniArt.src = url;
     if (els.deckVinylArt) els.deckVinylArt.style.backgroundImage = `url('${url}')`;
   }
