@@ -781,13 +781,15 @@ window.JuiceEngine = (() => {
     search: async (query) => {
       if (!query || !query.trim()) return [];
       try {
-        const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
-        if (res.ok) {
-          const results = await res.json();
-          if (Array.isArray(results) && results.length > 0) return results;
-        }
+        const q = query.toLowerCase().trim();
+        // Client-side search across the built-in library (since GitHub Pages has no backend)
+        const results = DEFAULT_LIBRARY.filter(t => 
+          (t.title && t.title.toLowerCase().includes(q)) || 
+          (t.artist && t.artist.toLowerCase().includes(q))
+        );
+        return results;
       } catch (e) {
-        console.warn("Backend search fallback:", e);
+        console.warn("Client-side search failed:", e);
       }
       return [];
     },
