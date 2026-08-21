@@ -52,7 +52,7 @@ window.JuiceEngine = (() => {
   };
 
   const state = {
-    queue: [...DEFAULT_LIBRARY],
+    queue: [],
     currentIndex: 0,
     isPlaying: false,
     duration: 0,
