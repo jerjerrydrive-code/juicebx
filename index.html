@@ -64,6 +64,35 @@
       --rabbit-orange: #ff4f00;
     }
 
+    body.light-mode {
+      --bg-app: #f4f5fa !important;
+      --bg-panel: #f4f5fa !important;
+      --bg-card: rgba(255, 255, 255, 0.85) !important;
+      --bg-card-solid: #ffffff !important;
+      --bg-input: rgba(238, 240, 246, 0.9) !important;
+      --bg-nav: rgba(255, 255, 255, 0.95) !important;
+      --bg-mini: rgba(255, 255, 255, 0.95) !important;
+      --text-primary: #0f172a !important;
+      --text-secondary: #334155 !important;
+      --text-tertiary: #64748b !important;
+      --border-card: rgba(0, 0, 0, 0.08) !important;
+      --border-input: rgba(0, 0, 0, 0.12) !important;
+      --accent: #9333ea !important;
+      --accent-glow: rgba(147, 51, 234, 0.25) !important;
+      --btn-active-bg: #0f172a !important;
+      --btn-active-text: #ffffff !important;
+      --shadow-card: 0 16px 32px -8px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    body.light-mode .juicebx-logo {
+      filter: drop-shadow(0 4px 12px rgba(255, 79, 0, 0.6)) !important;
+    }
+
+    body.light-mode .glass-input {
+      color: #0f172a !important;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.03) !important;
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -1086,7 +1115,78 @@
             </div>
           </div>
 
+          <!-- 🎨 Aesthetic Theme Studio & ColorHunt Palette Engine -->
+          <div class="glass-card p-4 mb-3 space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Theme & ColorHunt Studio</p>
+                <p class="text-xs" style="color: var(--text-tertiary);">Curated visual styles & ColorHunt palettes</p>
+              </div>
+              <button id="btn-random-colorhunt" class="px-3 py-1.5 rounded-full text-xs font-black flex items-center gap-1.5 active:scale-95 transition-all shadow-md bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white hover:opacity-90">
+                <i class="ph-bold ph-dice-five text-sm"></i> 🎲 Random
+              </button>
+            </div>
 
+            <!-- Active Palette Live Indicator -->
+            <div id="theme-active-indicator" class="flex items-center justify-between px-3 py-2 rounded-xl glass-input text-xs font-bold">
+              <span class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full animate-pulse" id="theme-indicator-dot" style="background: var(--accent);"></span>
+                <span id="theme-active-name" style="color: var(--text-primary);">Midnight 999</span>
+              </span>
+              <div class="flex items-center gap-1" id="theme-palette-swatches">
+                <span class="w-3.5 h-3.5 rounded-full border border-white/20" id="swatch-1" style="background: #a855f7;"></span>
+                <span class="w-3.5 h-3.5 rounded-full border border-white/20" id="swatch-2" style="background: #ff4f00;"></span>
+                <span class="w-3.5 h-3.5 rounded-full border border-white/20" id="swatch-3" style="background: #121218;"></span>
+                <span class="w-3.5 h-3.5 rounded-full border border-white/20" id="swatch-4" style="background: #030305;"></span>
+              </div>
+            </div>
+
+            <!-- Curated Preset Theme Chips Grid -->
+            <div class="grid grid-cols-2 gap-2 pt-1" id="theme-presets-grid">
+              <button class="theme-preset-btn active p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="midnight" style="border-color: var(--accent); background: rgba(168, 85, 247, 0.12);">
+                <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #a855f7, #ff4f00);"></div>
+                <div class="truncate">
+                  <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Midnight 999</p>
+                  <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Purple & Orange</p>
+                </div>
+              </button>
+              <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="sunset" style="border-color: var(--border-card); background: var(--bg-input);">
+                <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #ff4f00, #fbbf24);"></div>
+                <div class="truncate">
+                  <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Sunset Blaze</p>
+                  <p class="text-[10px] truncate" style="color: var(--text-tertiary);">999 Amber & Gold</p>
+                </div>
+              </button>
+              <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="cyberpunk" style="border-color: var(--border-card); background: var(--bg-input);">
+                <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #ec4899, #06b6d4);"></div>
+                <div class="truncate">
+                  <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Cyberpunk 2077</p>
+                  <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Neon Pink & Cyan</p>
+                </div>
+              </button>
+              <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="emerald" style="border-color: var(--border-card); background: var(--bg-input);">
+                <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #10b981, #06b6d4);"></div>
+                <div class="truncate">
+                  <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Emerald Abyss</p>
+                  <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Forest Jade & Mint</p>
+                </div>
+              </button>
+              <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="oceanic" style="border-color: var(--border-card); background: var(--bg-input);">
+                <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #3b82f6, #60a5fa);"></div>
+                <div class="truncate">
+                  <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Oceanic Deep</p>
+                  <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Sapphire & Ice</p>
+                </div>
+              </button>
+              <button class="theme-preset-btn p-2.5 rounded-xl text-left border transition-all flex items-center gap-2" data-theme="bloodruby" style="border-color: var(--border-card); background: var(--bg-input);">
+                <div class="w-4 h-4 rounded-full shrink-0 flex items-center justify-center shadow-sm" style="background: linear-gradient(135deg, #ef4444, #b91c1c);"></div>
+                <div class="truncate">
+                  <p class="font-bold text-xs truncate" style="color: var(--text-primary);">Blood Ruby</p>
+                  <p class="text-[10px] truncate" style="color: var(--text-tertiary);">Crimson & Wine</p>
+                </div>
+              </button>
+            </div>
+          </div>
 
           <!-- Software Version & System Status Card -->
           <div class="glass-card p-4 mb-3 space-y-2.5">

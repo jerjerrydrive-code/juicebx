@@ -3226,6 +3226,122 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ═══ LIGHT MODE CONTROLLER ═══
+  const toggleLight = document.getElementById('toggle-light-mode');
+  if (toggleLight) {
+    const isLight = localStorage.getItem('juicebx_light_mode') === 'true';
+    if (isLight) {
+      document.body.classList.add('light-mode');
+      toggleLight.classList.add('active');
+    }
+    toggleLight.addEventListener('click', () => {
+      const active = document.body.classList.toggle('light-mode');
+      toggleLight.classList.toggle('active', active);
+      localStorage.setItem('juicebx_light_mode', active ? 'true' : 'false');
+      engine.playHaptic(600, 0.02);
+    });
+  }
+
+  // ═══ COLORHUNT & AESTHETIC THEME ENGINE ═══
+  const COLORHUNT_PALETTES = [
+    { id: "midnight", name: "Midnight 999", colors: ["#030305", "#121218", "#a855f7", "#ff4f00"] },
+    { id: "sunset", name: "Sunset Blaze", colors: ["#0c0604", "#1c0d08", "#ff4f00", "#fbbf24"] },
+    { id: "cyberpunk", name: "Cyberpunk 2077", colors: ["#08010f", "#180628", "#ec4899", "#06b6d4"] },
+    { id: "emerald", name: "Emerald Abyss", colors: ["#020a06", "#06180f", "#10b981", "#06b6d4"] },
+    { id: "oceanic", name: "Oceanic Deep", colors: ["#030814", "#08142a", "#3b82f6", "#60a5fa"] },
+    { id: "bloodruby", name: "Blood Ruby", colors: ["#0f0204", "#24060b", "#ef4444", "#b91c1c"] },
+    { id: "neontokyo", name: "Neon Tokyo", colors: ["#0b0c10", "#1f2833", "#66fcf1", "#45a29e"] },
+    { id: "dracula", name: "Dracula Luxe", colors: ["#1e1f29", "#282a36", "#bd93f9", "#ff79c6"] },
+    { id: "synthwave", name: "Retro Synthwave", colors: ["#1a1a2e", "#16213e", "#e94560", "#0f3460"] },
+    { id: "nordic", name: "Nordic Frost", colors: ["#1e222a", "#282c34", "#61afef", "#98c379"] },
+    { id: "velvet", name: "Velvet Poison", colors: ["#140152", "#22007c", "#8c00ff", "#49117c"] },
+    { id: "matcha", name: "Matcha Mist", colors: ["#141d1a", "#212e2b", "#709775", "#a3c9a8"] },
+    { id: "solar", name: "Solar Flare", colors: ["#1a0c00", "#331800", "#ff6b00", "#ffa600"] },
+    { id: "rosenoir", name: "Rose Noir", colors: ["#190b14", "#2e1225", "#fb7185", "#f43f5e"] },
+    { id: "deepspace", name: "Deep Space", colors: ["#05050d", "#0e0e24", "#7c3aed", "#38bdf8"] },
+    { id: "goldmirage", name: "Gold Mirage", colors: ["#141108", "#292210", "#eab308", "#facc15"] },
+    { id: "amethyst", name: "Amethyst Mystique", colors: ["#110419", "#240a33", "#c084fc", "#e879f9"] },
+    { id: "electric", name: "Electric Indigo", colors: ["#060818", "#0f1438", "#6366f1", "#818cf8"] }
+  ];
+
+  function applyThemePalette(palette, save = true) {
+    if (!palette || !palette.colors) return;
+    const [bgApp, bgCard, accent, glow] = palette.colors;
+
+    // Apply CSS Variables to Document Root
+    document.documentElement.style.setProperty('--bg-app', bgApp);
+    document.documentElement.style.setProperty('--bg-panel', bgApp);
+    document.documentElement.style.setProperty('--bg-card-solid', bgCard);
+    document.documentElement.style.setProperty('--bg-card', `${bgCard}cc`);
+    document.documentElement.style.setProperty('--bg-input', `${bgCard}99`);
+    document.documentElement.style.setProperty('--accent', accent);
+    document.documentElement.style.setProperty('--accent-glow', `${accent}66`);
+    document.documentElement.style.setProperty('--rabbit-orange', glow);
+
+    // Update settings indicator
+    const activeName = document.getElementById('theme-active-name');
+    const indicatorDot = document.getElementById('theme-indicator-dot');
+    const sw1 = document.getElementById('swatch-1');
+    const sw2 = document.getElementById('swatch-2');
+    const sw3 = document.getElementById('swatch-3');
+    const sw4 = document.getElementById('swatch-4');
+    if (activeName) activeName.innerText = palette.name;
+    if (indicatorDot) indicatorDot.style.background = accent;
+    if (sw1) sw1.style.background = accent;
+    if (sw2) sw2.style.background = glow;
+    if (sw3) sw3.style.background = bgCard;
+    if (sw4) sw4.style.background = bgApp;
+
+    // Update preset button active state
+    document.querySelectorAll('.theme-preset-btn').forEach(btn => {
+      const match = (btn.getAttribute('data-theme') === palette.id);
+      btn.classList.toggle('active', match);
+      btn.style.borderColor = match ? accent : 'var(--border-card)';
+      btn.style.background = match ? `${accent}1f` : 'var(--bg-input)';
+    });
+
+    if (save) {
+      try {
+        localStorage.setItem('juicebx_active_palette', JSON.stringify(palette));
+      } catch(e) {}
+    }
+  }
+
+  // Bind Preset Theme Buttons
+  document.querySelectorAll('.theme-preset-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const themeId = btn.getAttribute('data-theme');
+      const palette = COLORHUNT_PALETTES.find(p => p.id === themeId) || COLORHUNT_PALETTES[0];
+      engine.playHaptic(600, 0.02);
+      applyThemePalette(palette, true);
+    });
+  });
+
+  // Bind 🎲 Random ColorHunt Theme Button
+  const btnRandomColorhunt = document.getElementById('btn-random-colorhunt');
+  if (btnRandomColorhunt) {
+    btnRandomColorhunt.addEventListener('click', () => {
+      const currentSaved = localStorage.getItem('juicebx_active_palette');
+      const currentName = currentSaved ? JSON.parse(currentSaved)?.name : '';
+      const pool = COLORHUNT_PALETTES.filter(p => p.name !== currentName);
+      const randomPalette = pool[Math.floor(Math.random() * pool.length)] || COLORHUNT_PALETTES[0];
+
+      engine.playHaptic(750, 0.025);
+      applyThemePalette(randomPalette, true);
+    });
+  }
+
+  // Restore saved theme palette on boot
+  try {
+    const savedPaletteRaw = localStorage.getItem('juicebx_active_palette');
+    if (savedPaletteRaw) {
+      const savedPalette = JSON.parse(savedPaletteRaw);
+      if (savedPalette && savedPalette.colors) {
+        applyThemePalette(savedPalette, false);
+      }
+    }
+  } catch(e) {}
+
   // ═══ BOOT ═══
   engine.init();
   refreshCurrentLibrary();
