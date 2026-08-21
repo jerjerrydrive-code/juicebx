@@ -808,32 +808,95 @@ window.JuiceEngine = (() => {
 
 
 
+  // ═══ SMART SONG MODE: SPONSORBLOCK NON-MUSIC SKIP ENGINE ═══
+  const sponsorBlockCache = new Map();
+  let currentTrackSkipSegments = [];
+  let isSkipNonMusicEnabled = (() => {
+    try {
+      return localStorage.getItem('juicebx_skip_non_music') !== 'false';
+    } catch(e) {
+      return true;
+    }
+  })();
+  let currentDeckMode = 'vinyl';
+  let lastAutoSkippedSegment = null;
+
+  async function fetchSkipSegments(videoId) {
+    currentTrackSkipSegments = [];
+    lastAutoSkippedSegment = null;
+    if (!videoId || typeof videoId !== 'string' || videoId.length !== 11 || videoId.startsWith('data:') || videoId.startsWith('blob:') || videoId.includes('4819g')) return;
+
+    if (sponsorBlockCache.has(videoId)) {
+      currentTrackSkipSegments = sponsorBlockCache.get(videoId);
+      return;
+    }
+
+    try {
+      const ctrl = new AbortController();
+      setTimeout(() => ctrl.abort(), 2500);
+      const url = `https://sponsor.ajay.app/api/skipSegments?videoID=${encodeURIComponent(videoId)}&categories=${encodeURIComponent(JSON.stringify(["music_offtopic","intro","outro"]))}`;
+      const res = await fetch(url, { signal: ctrl.signal });
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data)) {
+          const segments = data
+            .map(s => s.segment)
+            .filter(s => Array.isArray(s) && s.length === 2 && s[1] > s[0])
+            .sort((a, b) => a[0] - b[0]);
+          sponsorBlockCache.set(videoId, segments);
+          currentTrackSkipSegments = segments;
+          console.log(`[JuiceEngine] SponsorBlock loaded ${segments.length} non-music segments for ${videoId}:`, segments);
+
+          // If starting at intro (start <= 1.5s) and in SONG mode, auto-skip immediately!
+          if (isSkipNonMusicEnabled && currentDeckMode !== 'video' && segments.length > 0 && segments[0][0] <= 1.5) {
+            const skipTo = segments[0][1];
+            if (skipTo > 1.0) {
+              console.log(`[JuiceEngine] Auto-skipping music video intro from 0s -> ${skipTo.toFixed(1)}s`);
+              lastAutoSkippedSegment = `${segments[0][0]}-${segments[0][1]}`;
+              api.seek(skipTo);
+            }
+          }
+        }
+      } else {
+        sponsorBlockCache.set(videoId, []);
+      }
+    } catch(err) {
+      sponsorBlockCache.set(videoId, []);
+    }
+  }
+
+  function checkAndSkipNonMusicSegments(currentTime) {
+    if (!isSkipNonMusicEnabled || currentDeckMode === 'video' || !currentTrackSkipSegments || currentTrackSkipSegments.length === 0) return;
+
+    for (const [start, end] of currentTrackSkipSegments) {
+      if (currentTime >= start && currentTime < (end - 0.25)) {
+        const segKey = `${start}-${end}`;
+        if (lastAutoSkippedSegment !== segKey) {
+          lastAutoSkippedSegment = segKey;
+          console.log(`[JuiceEngine] Auto-skipping non-music segment (${start.toFixed(1)}s -> ${end.toFixed(1)}s)`);
+          api.seek(end);
+        }
+        break;
+      }
+    }
+  }
+
   function startYTProgressTracker() {
-
     stopProgressTracker();
-
     progressInterval = setInterval(() => {
-
       if (ytPlayer && typeof ytPlayer.getCurrentTime === 'function' && !state.isLocalPlaying) {
-
         try {
-
           const cur = ytPlayer.getCurrentTime() || 0;
-
           const dur = (typeof ytPlayer.getDuration === 'function' ? ytPlayer.getDuration() : 0) || state.duration || 0;
-
           state.currentTime = cur;
-
           if (dur > 0) state.duration = dur;
 
+          checkAndSkipNonMusicSegments(cur);
+
           emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
-
         } catch(e) {}
-
       }
-
     }, 250);
-
   }
 
 
@@ -1262,6 +1325,8 @@ window.JuiceEngine = (() => {
       }
 
 
+
+      if (track.id) fetchSkipSegments(track.id);
 
       if (state.isApiReady && ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
 
@@ -1750,6 +1815,25 @@ window.JuiceEngine = (() => {
     },
 
     getPlaybackSpeed: () => state.playbackSpeed || 1.0,
+
+    setDeckMode: (mode) => {
+      currentDeckMode = mode;
+      console.log(`[JuiceEngine] Deck mode switched to: ${mode}`);
+    },
+
+    getDeckMode: () => currentDeckMode,
+
+    setSkipNonMusic: (enabled) => {
+      isSkipNonMusicEnabled = !!enabled;
+      try {
+        localStorage.setItem('juicebx_skip_non_music', isSkipNonMusicEnabled);
+      } catch(e) {}
+      console.log(`[JuiceEngine] Skip non-music segments set to: ${isSkipNonMusicEnabled}`);
+    },
+
+    isSkipNonMusicEnabled: () => isSkipNonMusicEnabled,
+
+    getSkipSegments: () => currentTrackSkipSegments,
 
     getAudioLevels: () => getAudioLevels(),
 
