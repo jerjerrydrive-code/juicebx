@@ -3014,14 +3014,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ═══ INSTANT GENRE CARDS & SHUFFLE SYSTEM ═══
-  const genreCards = document.querySelectorAll('.genre-card');
-  genreCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const genre = card.getAttribute('data-genre') || 'hiphop_top100';
-      launchGenreShuffle(genre);
-    });
-  });
+  // Genre cards wired at top
 
   // ═══ DYNAMIC AMBIENT AURA ═══
   const MOOD_GRADIENTS = {
