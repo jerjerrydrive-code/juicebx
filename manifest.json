@@ -1,16 +1,32 @@
 {
-  "name": "JuiceBx",
+  "name": "JuiceBx — Ad-Free Music Player",
   "short_name": "JuiceBx",
-  "start_url": "./",
+  "description": "Ad-free Juice WRLD music player with 2500+ unreleased songs, lyrics, and a 999 Memorial Tribute.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#0a0a0f",
-  "theme_color": "#a855f7",
+  "orientation": "portrait",
+  "background_color": "#030305",
+  "theme_color": "#FF4F00",
+  "categories": ["music", "entertainment"],
   "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "logo.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
