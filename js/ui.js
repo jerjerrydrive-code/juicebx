@@ -3722,6 +3722,38 @@ document.addEventListener('DOMContentLoaded', () => {
   window.ThemeManager.bindCycleButtons();
 
   // ═══ BOOT ═══
+
+  // === TOAST NOTIFICATION SYSTEM ===
+  function showToast(message, type, duration) {
+    type = type || 'info'; duration = duration || 3000;
+    var toast = document.getElementById('juicebx-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'juicebx-toast';
+      toast.style.cssText = 'position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);z-index:9999;padding:10px 18px;border-radius:20px;font-size:13px;font-weight:600;letter-spacing:0.02em;pointer-events:none;transition:opacity 0.25s,transform 0.25s;opacity:0;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);white-space:nowrap;max-width:80vw;overflow:hidden;text-overflow:ellipsis;';
+      document.body.appendChild(toast);
+    }
+    var colors = { info: 'rgba(10,10,20,0.92)', error: 'rgba(160,20,20,0.92)', success: 'rgba(10,110,55,0.92)' };
+    toast.style.background = colors[type] || colors.info;
+    toast.style.color = '#fff';
+    toast.style.border = type === 'error' ? '1px solid rgba(255,80,80,0.3)' : '1px solid rgba(255,255,255,0.1)';
+    toast.textContent = message;
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+    if (toast._timeout) clearTimeout(toast._timeout);
+    toast._timeout = setTimeout(function() {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(20px)';
+    }, duration);
+  }
+
+  // === STREAM ERROR LISTENER ===
+  window.addEventListener('engine:streamError', function(ev) {
+    var detail = (ev && ev.detail) || {};
+    var name = (detail.track && detail.track.title) || 'this track';
+    showToast('Stream unavailable for "' + name + '" — skipping...', 'error', 3500);
+  });
+
   engine.init();
   refreshCurrentLibrary();
   setCenterpieceStyle(currentCenterpieceStyle);
