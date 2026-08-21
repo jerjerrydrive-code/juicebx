@@ -519,15 +519,36 @@ window.JuiceEngine = (() => {
   }
 
   function updateMediaSession(track) {
-    if ('mediaSession' in navigator) {
+    if ('mediaSession' in navigator && window.MediaMetadata && track) {
+      const artUrl = track.thumb || (track.id && track.id.length === 11 ? `https://i.ytimg.com/vi/${track.id}/hqdefault.jpg` : 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=512&q=80');
       navigator.mediaSession.metadata = new MediaMetadata({
-        title: track.title,
-        artist: track.artist || 'Unknown Artist',
-        album: 'JuiceBx',
+        title: track.title || 'JuiceBx Track',
+        artist: track.artist || 'Juice WRLD',
+        album: track.album || track.era || 'JuiceBx 999',
         artwork: [
-          { src: track.thumb || 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=512&q=80', sizes: '512x512', type: 'image/jpeg' }
+          { src: artUrl, sizes: '96x96', type: 'image/jpeg' },
+          { src: artUrl, sizes: '128x128', type: 'image/jpeg' },
+          { src: artUrl, sizes: '192x192', type: 'image/jpeg' },
+          { src: artUrl, sizes: '256x256', type: 'image/jpeg' },
+          { src: artUrl, sizes: '512x512', type: 'image/jpeg' }
         ]
       });
+      syncMediaPlaybackState();
+    }
+  }
+
+  function syncMediaPlaybackState() {
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.playbackState = state.isPlaying ? 'playing' : 'paused';
+      if ('setPositionState' in navigator.mediaSession && state.duration > 0) {
+        try {
+          navigator.mediaSession.setPositionState({
+            duration: Math.max(state.duration, 1),
+            playbackRate: 1,
+            position: Math.min(Math.max(state.currentTime, 0), state.duration)
+          });
+        } catch(e) {}
+      }
     }
   }
 
@@ -567,10 +588,10 @@ window.JuiceEngine = (() => {
       
       // HACK: To allow YouTube iframe audio to continue playing when the screen is locked
       // or the app is backgrounded on iOS/Android, we MUST have a native <audio> element playing.
-      // We play a tiny silent base64 MP3 in a loop.
+      // We play a tiny silent base64 WAV in a loop.
       if (localAudio) {
-        if (!localAudio.src.startsWith('data:audio/mp3;base64,')) {
-          localAudio.src = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU2LjM2LjEwMAAAAAAAAAAAAAAA//OEAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAEAAABIAD+//7+////////////////////////////////////////////////////////AAAAAExhdmM1Ni40MS4xMDAAAAAAAAAAAAAAAAEkEQAAAAAAAAAASQRFgEAAQAAAAAAAAAA//OEAAAAAAAAAAAAAAABXAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ==';
+        if (!localAudio.src.startsWith('data:audio/wav;base64,')) {
+          localAudio.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
           localAudio.loop = true;
         }
         if (autoPlay) {
@@ -617,10 +638,24 @@ window.JuiceEngine = (() => {
       
       // Bind Media Session Hardware Actions
       if ('mediaSession' in navigator) {
-        navigator.mediaSession.setActionHandler('play', () => api.togglePlay());
-        navigator.mediaSession.setActionHandler('pause', () => api.togglePlay());
-        navigator.mediaSession.setActionHandler('previoustrack', () => api.prev());
-        navigator.mediaSession.setActionHandler('nexttrack', () => api.next());
+        try {
+          navigator.mediaSession.setActionHandler('play', () => api.togglePlay());
+          navigator.mediaSession.setActionHandler('pause', () => api.togglePlay());
+          navigator.mediaSession.setActionHandler('previoustrack', () => api.prev());
+          navigator.mediaSession.setActionHandler('nexttrack', () => api.next());
+          navigator.mediaSession.setActionHandler('seekto', (details) => {
+            if (details.seekTime !== undefined) api.seek(details.seekTime);
+          });
+          navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+            api.seek(Math.max(0, state.currentTime - (details.seekOffset || 10)));
+          });
+          navigator.mediaSession.setActionHandler('seekforward', (details) => {
+            api.seek(Math.min(state.duration, state.currentTime + (details.seekOffset || 10)));
+          });
+          navigator.mediaSession.setActionHandler('stop', () => {
+            if (state.isPlaying) api.togglePlay();
+          });
+        } catch(e) {}
       }
 
       // Load saved local/downloaded tracks into storage

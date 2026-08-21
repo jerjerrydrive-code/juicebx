@@ -1,9 +1,10 @@
-const CACHE_NAME = 'juicebx-v3.1-colorhunt-338';
+const CACHE_NAME = 'juicebx-v3.2-shuffles-video-rotate';
 const ASSETS = [
   './',
   './index.html',
   './js/engine.js',
   './js/ui.js',
+  './js/shuffles_catalog.js',
   './logo.png',
   './manifest.json'
 ];
