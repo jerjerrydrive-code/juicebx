@@ -224,11 +224,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function scrollToPanel(index) {
     if (!appContainer) return;
-    appContainer.scrollTo({ left: index * appContainer.clientWidth, behavior: 'smooth' });
-    updateActiveNavTab(index);
+    const boundedIndex = Math.max(0, Math.min(4, index));
+    currentPanelIndex = boundedIndex;
+    appContainer.scrollTo({ left: boundedIndex * appContainer.clientWidth, behavior: 'smooth' });
+    updateActiveNavTab(boundedIndex);
   }
 
-  navBtns.forEach((btn, index) => btn.addEventListener('click', () => scrollToPanel(index)));
+  navBtns.forEach((btn, index) => btn.addEventListener('click', () => {
+    engine.playHaptic(500, 0.015);
+    scrollToPanel(index);
+  }));
 
   if (appContainer) {
     let scrollTimeout = null;
@@ -236,8 +241,61 @@ document.addEventListener('DOMContentLoaded', () => {
       if (scrollTimeout) clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         const pw = appContainer.clientWidth;
-        if (pw > 0) updateActiveNavTab(Math.round(appContainer.scrollLeft / pw));
-      }, 50);
+        if (pw > 0) {
+          const idx = Math.round(appContainer.scrollLeft / pw);
+          currentPanelIndex = idx;
+          updateActiveNavTab(idx);
+        }
+      }, 40);
+    }, { passive: true });
+
+    // ═══ ACTIVE TOUCH SWIPE GESTURE CONTROLLER (Rabbit R1 & Mobile) ═══
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+    let isHorizontalGesture = false;
+
+    appContainer.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchStartTime = Date.now();
+        isHorizontalGesture = false;
+      }
+    }, { passive: true });
+
+    appContainer.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 1) {
+        const dx = e.touches[0].clientX - touchStartX;
+        const dy = e.touches[0].clientY - touchStartY;
+        if (!isHorizontalGesture && Math.abs(dx) > 12 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+          isHorizontalGesture = true;
+        }
+      }
+    }, { passive: true });
+
+    appContainer.addEventListener('touchend', (e) => {
+      if (e.changedTouches.length === 1) {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        const dt = Date.now() - touchStartTime;
+
+        // Snappy swipe detection
+        const isQuickFlick = dt < 320 && Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy);
+        const isSolidSwipe = Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.1;
+
+        if (isQuickFlick || isSolidSwipe) {
+          if (dx < 0 && currentPanelIndex < 4) {
+            // Swipe Left -> Move Next
+            scrollToPanel(currentPanelIndex + 1);
+            engine.playHaptic(450, 0.015);
+          } else if (dx > 0 && currentPanelIndex > 0) {
+            // Swipe Right -> Move Prev
+            scrollToPanel(currentPanelIndex - 1);
+            engine.playHaptic(450, 0.015);
+          }
+        }
+      }
     }, { passive: true });
   }
 
@@ -3168,21 +3226,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (els.miniTitle) els.miniTitle.innerText = t.title;
     if (els.miniArtist) els.miniArtist.innerText = t.artist;
     if (cassetteTrackLabel) cassetteTrackLabel.innerText = t.title;
-  }
-
-  // ═══ RABBIT R1 SCROLL WHEEL NAVIGATION ═══
-  if (window.innerWidth <= 260) {
-    let wheelDebounce = false;
-    window.addEventListener('wheel', (e) => {
-      if (wheelDebounce) return;
-      wheelDebounce = true;
-      setTimeout(() => wheelDebounce = false, 300);
-      
-      if (e.deltaY > 0 && currentPanelIndex < 4) {
-        scrollToPanel(currentPanelIndex + 1);
-      } else if (e.deltaY < 0 && currentPanelIndex > 0) {
-        scrollToPanel(currentPanelIndex - 1);
-      }
-    }, { passive: true });
   }
 });
