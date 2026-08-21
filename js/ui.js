@@ -3169,4 +3169,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (els.miniArtist) els.miniArtist.innerText = t.artist;
     if (cassetteTrackLabel) cassetteTrackLabel.innerText = t.title;
   }
+
+  // ═══ RABBIT R1 SCROLL WHEEL NAVIGATION ═══
+  if (window.innerWidth <= 260) {
+    let wheelDebounce = false;
+    window.addEventListener('wheel', (e) => {
+      if (wheelDebounce) return;
+      wheelDebounce = true;
+      setTimeout(() => wheelDebounce = false, 300);
+      
+      if (e.deltaY > 0 && currentPanelIndex < 4) {
+        scrollToPanel(currentPanelIndex + 1);
+      } else if (e.deltaY < 0 && currentPanelIndex > 0) {
+        scrollToPanel(currentPanelIndex - 1);
+      }
+    }, { passive: true });
+  }
 });
