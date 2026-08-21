@@ -330,8 +330,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (7 iOS 28 & GOOGLE M3 STYLES) ═══
-  const VISUALIZER_STYLES = ['equalizer', 'orb', 'm3', 'blobs', 'hifi', 'vinyl', 'cassette'];
+  // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (6 iOS 28 & GOOGLE M3 STYLES) ═══
+  const VISUALIZER_STYLES = ['equalizer', 'orb', 'm3', 'blobs', 'hifi', 'vinyl'];
 
   const VISUALIZER_NAMES = {
     'equalizer': '🌈 M3 & iOS 28 Wave Equalizer',
@@ -339,12 +339,14 @@ document.addEventListener('DOMContentLoaded', () => {
     'm3': '🎨 Google M3 Expressive Ribbons',
     'blobs': '🫧 Spatial Fluid Glass Plasma',
     'hifi': '⚡ 2028 Precision M3 Hi-Fi Spectrum',
-    'vinyl': '💽 Dynamic Luxe Holographic Vinyl',
-    'cassette': '📼 Vintage Type II Cassette Deck'
+    'vinyl': '💽 Dynamic Luxe Holographic Vinyl'
   };
 
   let currentCenterpieceStyle = localStorage.getItem('juicebx_center_style') || 'equalizer';
-  if (!VISUALIZER_STYLES.includes(currentCenterpieceStyle)) currentCenterpieceStyle = 'equalizer';
+  if (!VISUALIZER_STYLES.includes(currentCenterpieceStyle)) {
+    currentCenterpieceStyle = 'equalizer';
+    try { localStorage.setItem('juicebx_center_style', 'equalizer'); } catch(e) {}
+  }
 
   const deckStageWindow = document.getElementById('deck-stage-window');
   const deckDisplayEqualizer = document.getElementById('deck-display-equalizer');
@@ -353,7 +355,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const deckDisplayBlobs = document.getElementById('deck-display-blobs');
   const deckDisplayHifi = document.getElementById('deck-display-hifi');
   const deckDisplayVinyl = document.getElementById('deck-display-vinyl');
-  const deckDisplayCassette = document.getElementById('deck-display-cassette');
 
   const equalizerCanvas = document.getElementById('deck-reactive-equalizer-canvas');
   const equalizerCtx = equalizerCanvas ? equalizerCanvas.getContext('2d') : null;
@@ -390,8 +391,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const hifiSparks = [];
 
   function setCenterpieceStyle(style) {
+    if (!VISUALIZER_STYLES.includes(style)) style = 'equalizer';
     currentCenterpieceStyle = style;
-    localStorage.setItem('juicebx_center_style', style);
+    try { localStorage.setItem('juicebx_center_style', style); } catch(e) {}
     if (deckStageWindow) deckStageWindow.setAttribute('data-visualizer-style', style);
 
     if (currentDeckMode === 'vinyl') {
@@ -401,7 +403,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (deckDisplayBlobs) deckDisplayBlobs.classList.toggle('hidden', style !== 'blobs');
       if (deckDisplayHifi) deckDisplayHifi.classList.toggle('hidden', style !== 'hifi');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.toggle('hidden', style !== 'vinyl');
-      if (deckDisplayCassette) deckDisplayCassette.classList.toggle('hidden', style !== 'cassette');
     }
   }
   window.setCenterpieceStyle = setCenterpieceStyle;
@@ -414,10 +415,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     engine.playHaptic(650, 0.02);
     setCenterpieceStyle(nextStyle);
-    const name = VISUALIZER_NAMES[nextStyle] || nextStyle;
-    if (typeof showToast === 'function') {
-      showToast(name, 'info');
-    }
   }
 
   if (deckStageWindow) {
@@ -457,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
     } else if (mode === 'video') {
-      [deckDisplayEqualizer, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl, deckDisplayCassette].forEach(el => {
+      [deckDisplayEqualizer, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl].forEach(el => {
         if (el) el.classList.add('hidden');
       });
       if (els.deckDisplayVideo) {
@@ -471,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try { window.engine.play(); } catch(e) {}
       }
     } else if (mode === 'lyrics') {
-      [deckDisplayEqualizer, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl, deckDisplayCassette].forEach(el => {
+      [deckDisplayEqualizer, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl].forEach(el => {
         if (el) el.classList.add('hidden');
       });
       if (els.deckDisplayVideo) {
@@ -3979,40 +3976,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     showThemeToast(quad) {
-      let toast = document.getElementById('theme-toast-pill');
-      if (!toast) {
-        toast = document.createElement('div');
-        toast.id = 'theme-toast-pill';
-        toast.className = 'fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 px-4 py-2 rounded-full glass-card border border-white/20 shadow-2xl transition-all duration-300 pointer-events-none opacity-0 scale-90';
-        toast.style.background = 'rgba(10, 10, 15, 0.92)';
-        toast.style.backdropFilter = 'blur(20px)';
-        toast.style.webkitBackdropFilter = 'blur(20px)';
-        document.body.appendChild(toast);
-      }
-
-      const matchPreset = Object.values(PRESET_NAMED_THEMES).find(p => p.quad[0] === quad[0] && p.quad[1] === quad[1]);
-      const themeIdx = THEMES.findIndex(t => t[0] === quad[0] && t[1] === quad[1]);
-      const themeName = matchPreset ? matchPreset.name : (themeIdx >= 0 ? `Palette #${themeIdx + 1}` : 'Custom Variant');
-
-      toast.innerHTML = `
-        <span class="text-xs font-black text-white flex items-center gap-1.5">
-          <i class="ph-fill ph-sparkle text-amber-400"></i> ${themeName}
-        </span>
-        <div class="w-6 h-6 rounded-full overflow-hidden flex flex-row border border-white/40 shadow-sm shrink-0">
-          <div class="flex-1 h-full" style="background:${quad[0]}"></div>
-          <div class="flex-1 h-full" style="background:${quad[1]}"></div>
-          <div class="flex-1 h-full" style="background:${quad[2]}"></div>
-          <div class="flex-1 h-full" style="background:${quad[3]}"></div>
-        </div>
-      `;
-
-      toast.style.opacity = '1';
-      toast.style.transform = 'translateX(-50%) scale(1)';
-      clearTimeout(this._toastTimer);
-      this._toastTimer = setTimeout(() => {
-        toast.style.opacity = '0';
-        toast.style.transform = 'translateX(-50%) scale(0.9)';
-      }, 1600);
+      // Toast popups disabled per user directive
     }
   }
 
@@ -4020,28 +3984,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // ═══ BOOT ═══
 
-  // === TOAST NOTIFICATION SYSTEM ===
+  // === TOAST NOTIFICATION SYSTEM (DISABLED) ===
   function showToast(message, type, duration) {
-    type = type || 'info'; duration = duration || 3000;
-    var toast = document.getElementById('juicebx-toast');
-    if (!toast) {
-      toast = document.createElement('div');
-      toast.id = 'juicebx-toast';
-      toast.style.cssText = 'position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-20px);z-index:9999;padding:10px 18px;border-radius:20px;font-size:13px;font-weight:600;letter-spacing:0.02em;pointer-events:none;transition:opacity 0.25s,transform 0.25s;opacity:0;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);white-space:nowrap;max-width:80vw;overflow:hidden;text-overflow:ellipsis;';
-      document.body.appendChild(toast);
-    }
-    var colors = { info: 'rgba(10,10,20,0.92)', error: 'rgba(160,20,20,0.92)', success: 'rgba(10,110,55,0.92)' };
-    toast.style.background = colors[type] || colors.info;
-    toast.style.color = '#fff';
-    toast.style.border = type === 'error' ? '1px solid rgba(255,80,80,0.3)' : '1px solid rgba(255,255,255,0.1)';
-    toast.textContent = message;
-    toast.style.opacity = '1';
-    toast.style.transform = 'translateX(-50%) translateY(0)';
-    if (toast._timeout) clearTimeout(toast._timeout);
-    toast._timeout = setTimeout(function() {
-      toast.style.opacity = '0';
-      toast.style.transform = 'translateX(-50%) translateY(20px)';
-    }, duration);
+    // Toast popups disabled per user directive
   }
 
   // === STREAM ERROR LISTENER ===
