@@ -6,11 +6,12 @@
 
 <p align="center">
   <b>The Juice Box. Where you get the juice from. 🎵</b><br/>
-  <i>2 years of vision. Revived with AI. Zero frameworks. Dedicated to the eternal legacy of Juice WRLD.</i>
+  <i>Dedicated to the eternal legacy of Juice WRLD. Zero ads. Zero bloat. Pure audio.</i>
 </p>
 
 <p align="center">
-  <a href="https://jerjerrydrive-code.github.io/juicebx/">🔴 <b>Launch Web Player</b></a> •
+  <a href="https://juicebx.onrender.com/">🔴 <b>Live Web Player (Render)</b></a> •
+  <a href="https://jerjerrydrive-code.github.io/juicebx/">🌐 <b>GitHub Pages Mirror</b></a> •
   <a href="https://jerjerrydrive-code.github.io/juicebx/creation/install.html">🐇 <b>Rabbit r1 Install Card</b></a>
 </p>
 
@@ -38,21 +39,21 @@ From timeless classics like *Lucid Dreams*, *All Girls Are the Same*, *Robbery*,
 
 You know when you were a kid and you'd grab a juice box, poke the straw in, and just *vibe*? That's this — except the juice is pure music and the box is your screen. No ads. No subscriptions. No tracking. No bloat. Just press play and get the juice. **Yuh dig. 🧃**
 
-### The 2-Year Journey & AI Revival
-This project started in **2022** with a singular goal: build the smoothest, most visually mesmerizing music experience on the web without relying on bulky corporate tech stacks. After countless late nights, iterations, and a temporary hiatus, **artificial intelligence helped breathe new life into the vision** — stress-testing edge cases, auditing viewport responsiveness, and polishing hardware-accelerated animations into a pure, standalone audio deck.
-
-**Human emotion and artistic vision, supercharged by modern AI.**
+### The Journey & AI Revival
+This project started with a singular goal: build the smoothest, most visually mesmerizing music experience on the web without relying on bulky corporate tech stacks. **Artificial intelligence helped breathe new life into the vision** — stress-testing edge cases, auditing viewport responsiveness, optimizing audio reactivity, and polishing hardware-accelerated animations into a pure, standalone audio deck.
 
 ---
 
-## 🔥 Highlight Features (Only the Best)
+## 🔥 Key Features
 
-- 🌀 **Siri Orb Visualizer** — An iOS-inspired liquid-glass dynamic orb that pulses and breathes in real time with the audio frequency spectrum.
-- 🌈 **Full-Bleed Trippy Shader Modes** — Full-screen psychedelic and neon visualizers that turn your device into an immersive ambient light show.
-- 👆 **Tap-to-Morph Engine** — Seamlessly cycle visual modes on the fly: Vinyl Turntable, 3D Ribbons, Audio Blooms, and Frequency Waves.
-- 🔍 **Instant Track Discovery** — Millisecond-fast search across discographies and curated genre catalogs with zero buffering delays.
-- 🖤 **999 Sanctuary Modal** — A dedicated spiritual tribute space featuring custom 3D thorned-rose artwork and unreleased vault tracks.
-- ⚡ **Zero-Framework Architecture** — Built entirely in raw HTML5, modern CSS3, and vanilla ES6+ JavaScript. No React, no Vue, no bundles, no bloat.
+- 🎚️ **Material 3 & iOS 28-Wave Equalizer** — High-precision, real-time Web Audio API frequency visualizer that animates smoothly with bass and treble dynamics.
+- 🎨 **338 ColorHunt Dynamic Theme Engine** — Hand-curated 4-color palette matrix featuring 34% translucent ambient light washes, live swatch strip, and 1-click random palette generator.
+- ⚡ **Instant Discography & Vault Shuffles** — Streamlined 0ms playback for official albums and unreleased grails with zero buffering delay.
+- 📋 **1-Tap Queue Management** — Dedicated dock button with real-time queue count badge and high-contrast controls for effortless playlist navigation.
+- 💾 **Offline Download Storage** — Save your favorite tracks locally via IndexedDB with glowing visual indicators and instant offline playback.
+- 🔍 **Instant Universal Search** — Lightning-fast track discovery across full discographies and curated genre catalogs with clean circular controls.
+- 🐇 **Rabbit r1 & Mobile Native Design** — Responsive viewport optimization with support for touch swipe gestures, hardware wheel scrolling, and standalone PWA installation.
+- ⚡ **Zero-Framework Architecture** — 100% vanilla HTML5, Tailwind CSS, and modular ES6+ JavaScript. No bloated build steps or third-party tracking.
 
 ---
 
@@ -68,9 +69,9 @@ JuiceBx is built native-ready for handheld AI devices like the **Rabbit r1**:
 
 ## 🚀 Live Experience
 
-Experience JuiceBx right in your browser on phone, tablet, or desktop:
+Experience JuiceBx right in your browser on phone, tablet, desktop, or handheld:
 
-👉 **[https://jerjerrydrive-code.github.io/juicebx/](https://jerjerrydrive-code.github.io/juicebx/)**
+👉 **[https://juicebx.onrender.com/](https://juicebx.onrender.com/)**
 
 ---
 
