@@ -869,151 +869,171 @@
         </div>
 
         <!-- ═══ PANEL 2: UNIFIED HERO VINYL PLAYER DECK ═══ -->
-        <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-2 px-3 sm:px-4 pt-1 sm:pt-2 relative" style="background: var(--bg-app);">
+        <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-3 px-4 pt-1 sm:pt-2 relative select-none" style="background: var(--bg-app);">
           <div class="w-full max-w-md mx-auto h-full flex flex-col justify-between relative z-10">
           
           <!-- Dynamic Ambient Aura Glow -->
-          <div id="ambient-aura-glow" class="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full blur-3xl opacity-35 pointer-events-none transition-all duration-1000" style="background: radial-gradient(circle, #a855f7 0%, #6366f1 50%, transparent 80%);"></div>
+          <div id="ambient-aura-glow" class="absolute top-1/4 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full blur-3xl opacity-35 pointer-events-none transition-all duration-1000" style="background: radial-gradient(circle, #a855f7 0%, #6366f1 50%, transparent 80%);"></div>
 
-          <!-- Top Player Header Bar (Clean 1-Line Header) -->
-          <div class="flex items-center justify-between pt-1 pb-1.5 shrink-0 z-20 w-full px-1">
-            <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-11 sm:h-14 w-auto max-w-[110px] object-contain cursor-pointer active:scale-95 transition-transform" id="deck-brand-tribute" title="999 Forever Tribute">
+          <!-- 1. Top Player Header Bar (Balanced 3-Column Grid) -->
+          <div class="grid grid-cols-3 items-center pt-1 pb-1.5 shrink-0 z-20 w-full px-1">
+            <div class="flex items-center justify-start">
+              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-10 sm:h-12 w-auto max-w-[95px] object-contain cursor-pointer active:scale-95 transition-transform" id="deck-brand-tribute" title="999 Forever Tribute">
+            </div>
             
-            <!-- View Switcher Pills (YouTube Music style: SONG / VIDEO / LYRICS) -->
-            <div class="flex items-center gap-1 p-1 rounded-full glass-card" id="deck-mode-pills">
-              <button class="deck-mode-pill active px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="vinyl" style="background: var(--btn-active-bg); color: var(--btn-active-text);">SONG</button>
-              <button class="deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="video" style="color: var(--text-tertiary);">VIDEO</button>
-              <button class="deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="lyrics" style="color: var(--text-tertiary);">LYRICS</button>
+            <!-- View Switcher Pills (SONG / VIDEO / LYRICS) -->
+            <div class="flex items-center justify-center">
+              <div class="flex items-center gap-1 p-1 rounded-full glass-card border border-white/10" id="deck-mode-pills">
+                <button class="deck-mode-pill active px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="vinyl" style="background: var(--btn-active-bg); color: var(--btn-active-text);">SONG</button>
+                <button class="deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="video" style="color: var(--text-tertiary);">VIDEO</button>
+                <button class="deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="lyrics" style="color: var(--text-tertiary);">LYRICS</button>
+              </div>
             </div>
 
             <!-- Top Fullscreen Button -->
-            <button id="deck-btn-fullscreen" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Enter Fullscreen">
-              <i class="ph-bold ph-corners-out text-base" id="deck-fullscreen-icon"></i>
-            </button>
+            <div class="flex items-center justify-end">
+              <button id="deck-btn-fullscreen" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Enter Fullscreen">
+                <i class="ph-bold ph-corners-out text-base" id="deck-fullscreen-icon"></i>
+              </button>
+            </div>
           </div>
 
-          <!-- CENTER STAGE (ENLARGED UNIVERSAL SQUIRCLE STAGE - TAP TO MORPH 2028 / M3 VISUALIZERS) -->
-          <div class="flex-1 flex flex-col items-center justify-center relative w-full overflow-hidden my-1 z-10">
-            
-            <!-- UNIFIED SQUIRCLE STAGE FRAME (Large Hardware Stage) -->
-            <div id="deck-stage-window" class="w-[min(260px,68vw,32vh)] h-[min(260px,68vw,32vh)] sm:w-[280px] sm:h-[280px] rounded-[32px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border mx-auto transition-all cursor-pointer select-none active:scale-[0.985]" style="background: var(--bg-card); border-color: var(--border-card); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); box-shadow: var(--shadow-card);" title="Tap to switch visualizer style">
+          <!-- 2. CENTER STAGE (RESPONSIVE CENTERPIECE SQUIRCLE) -->
+          <div class="flex-1 min-h-0 flex items-center justify-center py-2 relative z-10 w-full">
+            <div id="deck-stage-window" class="w-[min(280px,74vw,34vh)] h-[min(280px,74vw,34vh)] rounded-[36px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border mx-auto transition-all cursor-pointer select-none active:scale-[0.99]" style="background: var(--bg-card); border-color: var(--border-card); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); box-shadow: var(--shadow-card);" title="Tap to switch visualizer style">
 
-              <!-- 1. 💽 iOS Dynamic Luxe Holographic Vinyl Platter (DEFAULT) -->
+              <!-- 1. Holographic Vinyl Platter (DEFAULT) -->
               <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex flex-col items-center justify-center relative">
                 <div class="vinyl-deck-wrapper relative flex items-center justify-center transition-transform duration-300" id="deck-vinyl-wrapper">
-                  <div class="vinyl-platter paused relative transition-all duration-300 shadow-2xl" id="deck-vinyl-platter" style="width: min(220px,58vw,27vh); height: min(220px,58vw,27vh);">
-                    <div class="vinyl-grooves"></div>
-                    <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('999_rose_heart_logo.png');"></div>
-                    <div class="vinyl-reflection"></div>
-                    <div class="spindle-hole cursor-pointer hover:scale-110 active:scale-95 transition-all" id="deck-spindle-tribute" title="999 Forever"></div>
+                  <div class="vinyl-platter paused relative transition-all duration-300 shadow-2xl" id="deck-vinyl-platter" style="width: min(230px,60vw,28vh); height: min(230px,60vw,28vh);">
+                    <div class="vinyl-platter-grooves"></div>
+                    <div class="vinyl-center-hole"></div>
+                    <div class="vinyl-label-art" id="deck-vinyl-art" style="background-image: url('999_rose_heart_logo.png');"></div>
                   </div>
                 </div>
               </div>
 
-              <!-- 2. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb -->
-              <div id="deck-display-orb" class="centerpiece-display hidden w-full h-full relative">
-                <canvas id="deck-reactive-orb-canvas" class="w-full h-full block" width="365" height="260"></canvas>
-              </div>
-
-              <!-- 3. 🎨 Google Material 3 Expressive Dynamic Fluid Ribbons & Chroma Waveform -->
-              <div id="deck-display-m3" class="centerpiece-display hidden w-full h-full relative">
-                <canvas id="deck-reactive-m3-canvas" class="w-full h-full block" width="365" height="260"></canvas>
-              </div>
-
-              <!-- 4. 🫧 Spatial Fluid Glass Metaballs & Audio Plasma -->
-              <div id="deck-display-blobs" class="centerpiece-display hidden w-full h-full relative">
-                <canvas id="deck-reactive-blobs-canvas" class="w-full h-full block" width="365" height="260"></canvas>
-              </div>
-
-              <!-- 5. ⚡ 2028 Precision M3 Hi-Fi Fluid Spectrum -->
-              <div id="deck-display-hifi" class="centerpiece-display hidden w-full h-full relative">
-                <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block" width="365" height="260"></canvas>
-              </div>
-
-              <!-- 6. Clean Video Stage (100% Pure Video - Zero YouTube UI Overlay) -->
-              <div id="deck-display-video" class="w-full h-full relative overflow-hidden flex items-center justify-center bg-black group transition-opacity duration-300" style="position: absolute; opacity: 0; pointer-events: none; z-index: -1;">
-                <div id="yt-player-host" class="w-full h-full overflow-hidden pointer-events-none flex items-center justify-center scale-[1.38] origin-center"></div>
-                <div id="deck-video-tap-overlay" class="absolute inset-0 z-20 cursor-pointer flex items-center justify-center">
-                  <div id="deck-video-tap-indicator" class="w-14 h-14 rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white text-2xl opacity-0 scale-75 transition-all duration-300 pointer-events-none shadow-xl border border-white/20">
-                    <i class="ph-fill ph-play" id="deck-video-tap-icon"></i>
+              <!-- 2. Vintage Tape Cassette Deck -->
+              <div id="deck-display-cassette" class="centerpiece-display w-full h-full flex items-center justify-center hidden p-3">
+                <div class="cassette-deck w-full h-full relative flex flex-col justify-between p-3.5 rounded-2xl shadow-inner border border-white/20" style="background: linear-gradient(145deg, #181920, #0c0d12);">
+                  <div class="flex justify-between items-center text-[9px] font-black uppercase text-amber-500 tracking-wider">
+                    <span>TYPE II • CrO2</span>
+                    <span class="cassette-label-header">JUICEBX 999</span>
+                    <span>HIGH BIAS</span>
+                  </div>
+                  <div class="cassette-window relative w-full h-14 bg-black/60 rounded-lg flex items-center justify-around border border-white/10 overflow-hidden my-auto">
+                    <div class="cassette-spool flex items-center justify-center" id="cassette-spool-left">
+                      <div class="spool-teeth"></div>
+                    </div>
+                    <div class="cassette-tape-view w-14 h-4 bg-amber-950/80 rounded border border-amber-800/40 relative flex items-center justify-center">
+                      <span class="text-[8px] font-mono text-amber-400 font-bold" id="cassette-tape-counter">000</span>
+                    </div>
+                    <div class="cassette-spool flex items-center justify-center" id="cassette-spool-right">
+                      <div class="spool-teeth"></div>
+                    </div>
+                  </div>
+                  <div class="text-center truncate px-2 py-0.5 rounded bg-white/5 border border-white/10">
+                    <p class="text-[10px] font-black truncate text-white/90" id="cassette-track-label">Select a track</p>
                   </div>
                 </div>
               </div>
 
-              <!-- 7. Real-Time Synced Karaoke Lyrics -->
-              <div id="deck-display-lyrics" class="hidden w-full h-full flex flex-col justify-between p-3.5 relative overflow-hidden">
-                <!-- Top Sync Calibration Toolbar -->
-                <div class="flex items-center justify-between px-2.5 py-1 mb-1 rounded-full glass-input text-[10px] font-black shrink-0 border border-white/10 z-20">
-                  <span class="text-[9px] text-orange-400 font-black flex items-center gap-1">
+              <!-- 3. Neon Cyberwave Visualizer -->
+              <div id="deck-display-neon" class="centerpiece-display w-full h-full flex flex-col items-center justify-center hidden relative overflow-hidden">
+                <div class="absolute inset-0 flex items-center justify-center opacity-60 pointer-events-none">
+                  <div class="w-44 h-44 rounded-full border border-orange-500/30 animate-ping" style="animation-duration: 3s;"></div>
+                  <div class="w-32 h-32 rounded-full border border-purple-500/40 animate-pulse"></div>
+                </div>
+                <div class="relative z-10 flex items-end justify-center gap-1.5 h-28 w-44 px-2" id="neon-bars-container">
+                  <div class="neon-bar w-2 bg-gradient-to-t from-orange-500 to-amber-300 rounded-t h-12"></div>
+                  <div class="neon-bar w-2 bg-gradient-to-t from-orange-500 to-amber-300 rounded-t h-20"></div>
+                  <div class="neon-bar w-2 bg-gradient-to-t from-purple-500 to-pink-400 rounded-t h-28"></div>
+                  <div class="neon-bar w-2 bg-gradient-to-t from-purple-500 to-pink-400 rounded-t h-16"></div>
+                  <div class="neon-bar w-2 bg-gradient-to-t from-indigo-500 to-cyan-300 rounded-t h-24"></div>
+                  <div class="neon-bar w-2 bg-gradient-to-t from-indigo-500 to-cyan-300 rounded-t h-10"></div>
+                </div>
+                <span class="text-[9px] font-black uppercase text-white/40 tracking-widest mt-2">CYBERWAVE 999</span>
+              </div>
+
+              <!-- 4. Video Player Mode Container -->
+              <div id="deck-display-video" class="centerpiece-display w-full h-full flex items-center justify-center hidden relative bg-black">
+                <div id="deck-video-container" class="w-full h-full relative">
+                  <div id="yt-player-slot" class="w-full h-full"></div>
+                </div>
+              </div>
+
+              <!-- 5. Synced Lyrics Mode Container -->
+              <div id="deck-display-lyrics" class="centerpiece-display w-full h-full flex flex-col items-center justify-between p-3 hidden relative select-none" style="background: var(--bg-card); color: var(--text-primary);">
+                <!-- Calibration / Offset Control Bar -->
+                <div class="flex items-center justify-between w-full px-3 py-1 rounded-full border mb-1.5 shrink-0 z-20" style="background: var(--bg-input); border-color: var(--border-card);">
+                  <span class="text-[9px] font-black flex items-center gap-1" style="color: var(--accent);">
                     <i class="ph-bold ph-sliders-horizontal text-xs"></i> SYNC OFFSET
                   </span>
                   <div class="flex items-center gap-1">
-                    <button id="btn-lyric-nudge-back" class="px-2 py-0.5 rounded-full active:scale-90 transition-all font-black text-[9px] bg-white/10 hover:bg-white/20 text-zinc-300" title="Shift Lyrics Earlier (-0.5s)">-0.5s</button>
-                    <span id="lyric-sync-offset-label" class="font-bold font-mono px-1 text-[9px] text-orange-300">±0.0s</span>
-                    <button id="btn-lyric-nudge-fwd" class="px-2 py-0.5 rounded-full active:scale-90 transition-all font-black text-[9px] bg-white/10 hover:bg-white/20 text-zinc-300" title="Shift Lyrics Later (+0.5s)">+0.5s</button>
-                    <button id="btn-lyric-sync-reset" class="w-5 h-5 rounded-full flex items-center justify-center active:scale-90 transition-all font-bold text-[9px] bg-white/10 hover:bg-white/20 text-zinc-400 hover:text-white ml-0.5" title="Reset Calibration">↺</button>
+                    <button id="btn-lyric-nudge-back" class="px-2 py-0.5 rounded-full active:scale-90 transition-all font-black text-[9px] glass-card" style="color: var(--text-secondary);">-0.5s</button>
+                    <span id="lyric-sync-offset-label" class="font-bold font-mono px-1 text-[9px]" style="color: var(--accent);">±0.0s</span>
+                    <button id="btn-lyric-nudge-fwd" class="px-2 py-0.5 rounded-full active:scale-90 transition-all font-black text-[9px] glass-card" style="color: var(--text-secondary);">+0.5s</button>
+                    <button id="btn-lyric-sync-reset" class="w-5 h-5 rounded-full flex items-center justify-center active:scale-90 transition-all font-bold text-[9px] glass-card ml-0.5" style="color: var(--text-tertiary);" title="Reset Calibration">↺</button>
                   </div>
                 </div>
 
                 <!-- Lyric Lines Scroll Area -->
-                <div id="deck-lyrics-text" class="space-y-4 py-4 flex-1 overflow-y-auto pr-1 text-center scrollbar-none z-10">
-                  <div class="flex flex-col items-center justify-center py-6 text-zinc-500">
-                    <i class="ph-bold ph-music-notes text-2xl mb-1 animate-pulse text-orange-400"></i>
+                <div id="deck-lyrics-text" class="space-y-4 py-3 flex-1 overflow-y-auto px-2 text-center scrollbar-none z-10 w-full">
+                  <div class="flex flex-col items-center justify-center py-6" style="color: var(--text-tertiary);">
+                    <i class="ph-bold ph-music-notes text-2xl mb-1 animate-pulse" style="color: var(--accent);"></i>
                     <span class="text-xs font-semibold">Loading synced lyrics...</span>
                   </div>
                 </div>
 
-                <!-- Top and Bottom Smooth Fade Shadows -->
-                <div class="pointer-events-none absolute top-10 left-0 right-0 h-6 bg-gradient-to-b from-[rgba(10,10,15,0.9)] to-transparent z-15"></div>
-                <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[rgba(10,10,15,0.9)] to-transparent z-15"></div>
+                <!-- Top and Bottom Fade Shadows -->
+                <div class="pointer-events-none absolute top-12 left-0 right-0 h-6 bg-gradient-to-b from-transparent to-transparent z-15"></div>
+                <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-transparent to-transparent z-15"></div>
               </div>
 
             </div>
           </div>
 
-          <!-- BOTTOM CONTROLS STACK -->
+          <!-- 3. BOTTOM CONTROLS STACK (PIXEL-PERFECT SYMMETRICAL & CENTERED) -->
           <div class="w-full shrink-0 space-y-3 z-20 pb-2">
             
-            <!-- Metadata & Quick Actions Bar -->
-            <div class="flex items-center justify-between px-2 gap-2">
-              <button id="deck-btn-favorite" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card text-pink-500 shrink-0" title="Like / Favorite">
-                <i class="ph-bold ph-heart text-lg" id="deck-heart-icon"></i>
-              </button>
-              
-              <div class="text-center flex-1 overflow-hidden px-1">
-                <h2 id="deck-track-title" class="font-black text-[20px] sm:text-[22px] tracking-tight truncate leading-snug" style="color: var(--text-primary);">Juice WRLD 999</h2>
-                <p id="deck-track-artist" class="text-xs sm:text-sm font-bold truncate mt-0.5" style="color: var(--text-secondary);">Tap any shuffle to start</p>
-              </div>
-
-              <div class="flex items-center gap-1.5 shrink-0">
-                <button id="deck-btn-download-hero" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Download for Offline">
-                  <i class="ph-bold ph-download-simple text-base" id="deck-download-hero-icon"></i>
-                </button>
-                <button id="deck-btn-add-playlist" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Add to Playlist">
-                  <i class="ph-bold ph-playlist text-base"></i>
-                </button>
-                <button id="deck-btn-sleep" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card relative" style="color: var(--text-primary);" title="Sleep Timer">
-                  <i class="ph-bold ph-timer text-base" id="deck-sleep-icon"></i>
-                  <span id="deck-sleep-badge" class="hidden text-[8px] font-black text-indigo-400"></span>
-                </button>
-              </div>
+            <!-- 3A. True Centered Track Metadata -->
+            <div class="text-center w-full px-4 overflow-hidden">
+              <h2 id="deck-track-title" class="font-black text-[21px] sm:text-[23px] tracking-tight truncate leading-tight" style="color: var(--text-primary);">Juice WRLD 999</h2>
+              <p id="deck-track-artist" class="text-xs sm:text-sm font-bold truncate mt-1" style="color: var(--text-secondary);">Tap any shuffle to start</p>
             </div>
 
-            <!-- Time Scrubber -->
+            <!-- 3B. Symmetrical 5-Action Glass Dock (Heart, Download, Speed, Playlist, Sleep) -->
+            <div class="flex items-center justify-center gap-3 sm:gap-4 px-2">
+              <button id="deck-btn-favorite" class="w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card text-pink-500 shadow-sm shrink-0" title="Like / Favorite">
+                <i class="ph-bold ph-heart text-lg" id="deck-heart-icon"></i>
+              </button>
+              <button id="deck-btn-download-hero" class="w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card shadow-sm shrink-0" style="color: var(--text-primary);" title="Download for Offline">
+                <i class="ph-bold ph-download-simple text-base" id="deck-download-hero-icon"></i>
+              </button>
+              <button id="deck-btn-speed" class="px-3.5 h-10 rounded-full text-[11px] font-black transition-all glass-card flex items-center justify-center active:scale-90 shadow-sm shrink-0" style="color: var(--text-primary);" title="Change Playback Speed">1.0x</button>
+              <button id="deck-btn-add-playlist" class="w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card shadow-sm shrink-0" style="color: var(--text-primary);" title="Add to Playlist">
+                <i class="ph-bold ph-playlist text-base"></i>
+              </button>
+              <button id="deck-btn-sleep" class="w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card relative shadow-sm shrink-0" style="color: var(--text-primary);" title="Sleep Timer">
+                <i class="ph-bold ph-timer text-base" id="deck-sleep-icon"></i>
+                <span id="deck-sleep-badge" class="hidden text-[8px] font-black text-indigo-400"></span>
+              </button>
+            </div>
+
+            <!-- 3C. Time Scrubber -->
             <div class="px-1">
               <div class="scrubber-track" id="deck-scrubber-track">
                 <div class="scrubber-fill" id="deck-scrubber-fill"></div>
                 <div class="scrubber-thumb" id="deck-scrubber-thumb"></div>
               </div>
-              <div class="flex justify-between items-center text-[11px] font-black mt-1.5 tracking-wider" style="color: var(--text-tertiary);">
+              <div class="flex justify-between items-center text-[11px] font-black mt-1.5 tracking-wider px-0.5" style="color: var(--text-tertiary);">
                 <span id="deck-time-current">0:00</span>
-                <button id="deck-btn-speed" class="px-2.5 py-0.5 rounded-full text-[10px] font-black transition-all glass-input hover:border-orange-500/40 active:scale-90" style="color: var(--text-secondary);" title="Change Playback Speed">1.0x</button>
                 <span id="deck-time-total">0:00</span>
               </div>
             </div>
 
-            <!-- Master Transport Bar -->
-            <div class="flex items-center justify-between px-4 pt-1">
+            <!-- 3D. Master Transport Bar -->
+            <div class="flex items-center justify-between px-4 pt-0.5">
               <button id="deck-btn-shuffle" class="p-2 active:scale-75 transition-all text-xl" style="color: var(--text-tertiary);" title="Shuffle">
                 <i class="ph-bold ph-shuffle"></i>
               </button>
