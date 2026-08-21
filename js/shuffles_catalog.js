@@ -17965,9 +17965,1633 @@ const TOP_SHUFFLES_CATALOG = {
     }
   ]
 }
+,
+  "latin_top100": {
+    "id": "latin_top100",
+    "name": "Latin & Reggaeton Top 100",
+    "subtitle": "Bad Bunny, Peso Pluma, Daddy Yankee, Karol G & Rauw",
+    "tag": "LATIN 100",
+    "gradient": "from-amber-600 via-rose-900 to-black",
+    "border": "border-amber-500/40",
+    "tracks": [
+        {
+            "id": "k85mJF88GLg",
+            "title": "D\u00c1KITI",
+            "artist": "Bad Bunny & Jhay Cortez",
+            "duration": "3:25",
+            "seconds": 205,
+            "thumb": "https://i.ytimg.com/vi/k85mJF88GLg/hqdefault.jpg"
+        },
+        {
+            "id": "7zp1TbLFPp8",
+            "title": "Me Porto Bonito",
+            "artist": "Bad Bunny & Chencho Corleone",
+            "duration": "3:11",
+            "seconds": 191,
+            "thumb": "https://i.ytimg.com/vi/7zp1TbLFPp8/hqdefault.jpg"
+        },
+        {
+            "id": "saGYMhApaH8",
+            "title": "Tit\u00ed Me Pregunt\u00f3",
+            "artist": "Bad Bunny",
+            "duration": "4:03",
+            "seconds": 243,
+            "thumb": "https://i.ytimg.com/vi/saGYMhApaH8/hqdefault.jpg"
+        },
+        {
+            "id": "T0Z0m_yF-6k",
+            "title": "Ella Baila Sola",
+            "artist": "Eslabon Armado & Peso Pluma",
+            "duration": "2:45",
+            "seconds": 165,
+            "thumb": "https://i.ytimg.com/vi/T0Z0m_yF-6k/hqdefault.jpg"
+        },
+        {
+            "id": "kJQP7kiw5Fk",
+            "title": "Despacito",
+            "artist": "Luis Fonsi & Daddy Yankee",
+            "duration": "4:41",
+            "seconds": 281,
+            "thumb": "https://i.ytimg.com/vi/kJQP7kiw5Fk/hqdefault.jpg"
+        },
+        {
+            "id": "WNcsUNKlAKw",
+            "title": "Gasolina",
+            "artist": "Daddy Yankee",
+            "duration": "3:13",
+            "seconds": 193,
+            "thumb": "https://i.ytimg.com/vi/WNcsUNKlAKw/hqdefault.jpg"
+        },
+        {
+            "id": "wnJ6LuUFpMo",
+            "title": "Mi Gente",
+            "artist": "J Balvin & Willy William",
+            "duration": "3:05",
+            "seconds": 185,
+            "thumb": "https://i.ytimg.com/vi/wnJ6LuUFpMo/hqdefault.jpg"
+        },
+        {
+            "id": "f5qmFXE9XqE",
+            "title": "Provenza",
+            "artist": "Karol G",
+            "duration": "3:30",
+            "seconds": 210,
+            "thumb": "https://i.ytimg.com/vi/f5qmFXE9XqE/hqdefault.jpg"
+        },
+        {
+            "id": "b87dCpepxtA",
+            "title": "TQG",
+            "artist": "Karol G & Shakira",
+            "duration": "3:17",
+            "seconds": 197,
+            "thumb": "https://i.ytimg.com/vi/b87dCpepxtA/hqdefault.jpg"
+        },
+        {
+            "id": "gNi_6U5Pm_o",
+            "title": "Todo De Ti",
+            "artist": "Rauw Alejandro",
+            "duration": "3:19",
+            "seconds": 199,
+            "thumb": "https://i.ytimg.com/vi/gNi_6U5Pm_o/hqdefault.jpg"
+        },
+        {
+            "id": "hBf3H-vVq7o",
+            "title": "Beso",
+            "artist": "ROSAL\u00cdA & Rauw Alejandro",
+            "duration": "3:14",
+            "seconds": 194,
+            "thumb": "https://i.ytimg.com/vi/hBf3H-vVq7o/hqdefault.jpg"
+        },
+        {
+            "id": "q0hyYWKXF0Q",
+            "title": "Despech\u00e1",
+            "artist": "ROSAL\u00cdA",
+            "duration": "2:36",
+            "seconds": 156,
+            "thumb": "https://i.ytimg.com/vi/q0hyYWKXF0Q/hqdefault.jpg"
+        },
+        {
+            "id": "5g2hT46232k",
+            "title": "Con Calma",
+            "artist": "Daddy Yankee & Snow",
+            "duration": "3:13",
+            "seconds": 193,
+            "thumb": "https://i.ytimg.com/vi/5g2hT46232k/hqdefault.jpg"
+        },
+        {
+            "id": "j9Upe3aCqX8",
+            "title": "Pepas",
+            "artist": "Farruko",
+            "duration": "4:47",
+            "seconds": 287,
+            "thumb": "https://i.ytimg.com/vi/j9Upe3aCqX8/hqdefault.jpg"
+        },
+        {
+            "id": "b3h_r4l4qXs",
+            "title": "LALA",
+            "artist": "Myke Towers",
+            "duration": "3:17",
+            "seconds": 197,
+            "thumb": "https://i.ytimg.com/vi/b3h_r4l4qXs/hqdefault.jpg"
+        },
+        {
+            "id": "9jI-z9QN6g8",
+            "title": "Danza Kuduro",
+            "artist": "Don Omar & Lucenzo",
+            "duration": "3:19",
+            "seconds": 199,
+            "thumb": "https://i.ytimg.com/vi/9jI-z9QN6g8/hqdefault.jpg"
+        },
+        {
+            "id": "i0p1bmr0EmE",
+            "title": "Bailando",
+            "artist": "Enrique Iglesias",
+            "duration": "4:03",
+            "seconds": 243,
+            "thumb": "https://i.ytimg.com/vi/i0p1bmr0EmE/hqdefault.jpg"
+        },
+        {
+            "id": "hT_nvWreIhg",
+            "title": "Counting Stars / Vivir Mi Vida",
+            "artist": "Marc Anthony",
+            "duration": "4:11",
+            "seconds": 251,
+            "thumb": "https://i.ytimg.com/vi/hT_nvWreIhg/hqdefault.jpg"
+        },
+        {
+            "id": "y83x7MgzWOA",
+            "title": "Monaco",
+            "artist": "Bad Bunny",
+            "duration": "4:27",
+            "seconds": 267,
+            "thumb": "https://i.ytimg.com/vi/y83x7MgzWOA/hqdefault.jpg"
+        },
+        {
+            "id": "2KkMyDEe6fg",
+            "title": "Yonaguni",
+            "artist": "Bad Bunny",
+            "duration": "3:26",
+            "seconds": 206,
+            "thumb": "https://i.ytimg.com/vi/2KkMyDEe6fg/hqdefault.jpg"
+        },
+        {
+            "id": "x1kLw7K66kE",
+            "title": "Moscow Mule",
+            "artist": "Bad Bunny",
+            "duration": "4:05",
+            "seconds": 245,
+            "thumb": "https://i.ytimg.com/vi/x1kLw7K66kE/hqdefault.jpg"
+        },
+        {
+            "id": "C7vy861fQ5k",
+            "title": "Calla\u00edta",
+            "artist": "Bad Bunny & Tainy",
+            "duration": "4:10",
+            "seconds": 250,
+            "thumb": "https://i.ytimg.com/vi/C7vy861fQ5k/hqdefault.jpg"
+        },
+        {
+            "id": "1m0o6pQ8v5Q",
+            "title": "Chantaje",
+            "artist": "Shakira & Maluma",
+            "duration": "3:15",
+            "seconds": 195,
+            "thumb": "https://i.ytimg.com/vi/1m0o6pQ8v5Q/hqdefault.jpg"
+        },
+        {
+            "id": "t_jHrUE5IOk",
+            "title": "Haw\u00e1i",
+            "artist": "Maluma",
+            "duration": "3:19",
+            "seconds": 199,
+            "thumb": "https://i.ytimg.com/vi/t_jHrUE5IOk/hqdefault.jpg"
+        },
+        {
+            "id": "6mgYp45214k",
+            "title": "Felices los 4",
+            "artist": "Maluma",
+            "duration": "3:49",
+            "seconds": 229,
+            "thumb": "https://i.ytimg.com/vi/6mgYp45214k/hqdefault.jpg"
+        },
+        {
+            "id": "XbXh0sH_x5k",
+            "title": "La Bachata",
+            "artist": "Manuel Turizo",
+            "duration": "2:42",
+            "seconds": 162,
+            "thumb": "https://i.ytimg.com/vi/XbXh0sH_x5k/hqdefault.jpg"
+        },
+        {
+            "id": "z8WqYv6p11E",
+            "title": "El Merengue",
+            "artist": "Marshmello & Manuel Turizo",
+            "duration": "3:09",
+            "seconds": 189,
+            "thumb": "https://i.ytimg.com/vi/z8WqYv6p11E/hqdefault.jpg"
+        },
+        {
+            "id": "1_w7b26g6jE",
+            "title": "Shakira: Bzrp Music Sessions, Vol. 53",
+            "artist": "Bizarrap & Shakira",
+            "duration": "3:33",
+            "seconds": 213,
+            "thumb": "https://i.ytimg.com/vi/1_w7b26g6jE/hqdefault.jpg"
+        },
+        {
+            "id": "A_g3lMcWAKE",
+            "title": "Quevedo: Bzrp Music Sessions, Vol. 52",
+            "artist": "Bizarrap & Quevedo",
+            "duration": "3:18",
+            "seconds": 198,
+            "thumb": "https://i.ytimg.com/vi/A_g3lMcWAKE/hqdefault.jpg"
+        },
+        {
+            "id": "p7bfOZek9t4",
+            "title": "Tusa",
+            "artist": "Karol G & Nicki Minaj",
+            "duration": "3:20",
+            "seconds": 200,
+            "thumb": "https://i.ytimg.com/vi/p7bfOZek9t4/hqdefault.jpg"
+        },
+        {
+            "id": "61p_1d8X12c",
+            "title": "MAMIII",
+            "artist": "Becky G & Karol G",
+            "duration": "3:46",
+            "seconds": 226,
+            "thumb": "https://i.ytimg.com/vi/61p_1d8X12c/hqdefault.jpg"
+        },
+        {
+            "id": "p3vX2GZ1XzE",
+            "title": "Sin Pijama",
+            "artist": "Becky G & Natti Natasha",
+            "duration": "3:08",
+            "seconds": 188,
+            "thumb": "https://i.ytimg.com/vi/p3vX2GZ1XzE/hqdefault.jpg"
+        },
+        {
+            "id": "1_gP4e7yXv8",
+            "title": "Mayores",
+            "artist": "Becky G & Bad Bunny",
+            "duration": "3:49",
+            "seconds": 229,
+            "thumb": "https://i.ytimg.com/vi/1_gP4e7yXv8/hqdefault.jpg"
+        },
+        {
+            "id": "e_zP1o_zX6k",
+            "title": "Safaera",
+            "artist": "Bad Bunny, Jowell & Randy, \u00d1engo Flow",
+            "duration": "4:55",
+            "seconds": 295,
+            "thumb": "https://i.ytimg.com/vi/e_zP1o_zX6k/hqdefault.jpg"
+        },
+        {
+            "id": "b96g1VzY6jE",
+            "title": "La Jumpa",
+            "artist": "Arc\u00e1ngel & Bad Bunny",
+            "duration": "4:15",
+            "seconds": 255,
+            "thumb": "https://i.ytimg.com/vi/b96g1VzY6jE/hqdefault.jpg"
+        },
+        {
+            "id": "k8X1l2m3n4E",
+            "title": "Classy 101",
+            "artist": "Feid & Young Miko",
+            "duration": "3:15",
+            "seconds": 195,
+            "thumb": "https://i.ytimg.com/vi/k8X1l2m3n4E/hqdefault.jpg"
+        },
+        {
+            "id": "y9P6w2X7v8E",
+            "title": "Normal",
+            "artist": "Feid",
+            "duration": "2:50",
+            "seconds": 170,
+            "thumb": "https://i.ytimg.com/vi/y9P6w2X7v8E/hqdefault.jpg"
+        },
+        {
+            "id": "q8X1v9k3L4E",
+            "title": "Feliz Cumplea\u00f1os Ferxxo",
+            "artist": "Feid",
+            "duration": "2:36",
+            "seconds": 156,
+            "thumb": "https://i.ytimg.com/vi/q8X1v9k3L4E/hqdefault.jpg"
+        },
+        {
+            "id": "a9X1l2k3j4E",
+            "title": "Luna",
+            "artist": "Feid & ATL Jacob",
+            "duration": "3:16",
+            "seconds": 196,
+            "thumb": "https://i.ytimg.com/vi/a9X1l2k3j4E/hqdefault.jpg"
+        },
+        {
+            "id": "b8P1w2X7v9E",
+            "title": "Lady Gaga",
+            "artist": "Peso Pluma, Gabito Ballesteros, Junior H",
+            "duration": "3:32",
+            "seconds": 212,
+            "thumb": "https://i.ytimg.com/vi/b8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "c9X1l2m3n5E",
+            "title": "PRC",
+            "artist": "Peso Pluma & Natanael Cano",
+            "duration": "3:04",
+            "seconds": 184,
+            "thumb": "https://i.ytimg.com/vi/c9X1l2m3n5E/hqdefault.jpg"
+        },
+        {
+            "id": "d8P1w2X7v0E",
+            "title": "AMG",
+            "artist": "Natanael Cano, Peso Pluma, Gabito Ballesteros",
+            "duration": "3:01",
+            "seconds": 181,
+            "thumb": "https://i.ytimg.com/vi/d8P1w2X7v0E/hqdefault.jpg"
+        },
+        {
+            "id": "e9X1l2m3n6E",
+            "title": "Fin de Semana",
+            "artist": "Junior H & Oscar Maydon",
+            "duration": "3:51",
+            "seconds": 231,
+            "thumb": "https://i.ytimg.com/vi/e9X1l2m3n6E/hqdefault.jpg"
+        },
+        {
+            "id": "f8P1w2X7v1E",
+            "title": "El Azul",
+            "artist": "Junior H & Peso Pluma",
+            "duration": "3:07",
+            "seconds": 187,
+            "thumb": "https://i.ytimg.com/vi/f8P1w2X7v1E/hqdefault.jpg"
+        },
+        {
+            "id": "g9X1l2m3n7E",
+            "title": "Ch y la Pizza",
+            "artist": "Fuerza Regida & Natanael Cano",
+            "duration": "2:16",
+            "seconds": 136,
+            "thumb": "https://i.ytimg.com/vi/g9X1l2m3n7E/hqdefault.jpg"
+        },
+        {
+            "id": "h8P1w2X7v2E",
+            "title": "Bebe Dame",
+            "artist": "Fuerza Regida & Grupo Frontera",
+            "duration": "4:32",
+            "seconds": 272,
+            "thumb": "https://i.ytimg.com/vi/h8P1w2X7v2E/hqdefault.jpg"
+        },
+        {
+            "id": "i9X1l2m3n8E",
+            "title": "un x100to",
+            "artist": "Grupo Frontera & Bad Bunny",
+            "duration": "3:14",
+            "seconds": 194,
+            "thumb": "https://i.ytimg.com/vi/i9X1l2m3n8E/hqdefault.jpg"
+        },
+        {
+            "id": "j8P1w2X7v3E",
+            "title": "No Se Va",
+            "artist": "Grupo Frontera",
+            "duration": "3:13",
+            "seconds": 193,
+            "thumb": "https://i.ytimg.com/vi/j8P1w2X7v3E/hqdefault.jpg"
+        },
+        {
+            "id": "k9X1l2m3n9E",
+            "title": "TQM",
+            "artist": "Fuerza Regida",
+            "duration": "2:37",
+            "seconds": 157,
+            "thumb": "https://i.ytimg.com/vi/k9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "l8P1w2X7v4E",
+            "title": "Sabor Fresa",
+            "artist": "Fuerza Regida",
+            "duration": "2:36",
+            "seconds": 156,
+            "thumb": "https://i.ytimg.com/vi/l8P1w2X7v4E/hqdefault.jpg"
+        },
+        {
+            "id": "m9X1l2m3n0E",
+            "title": "Harley Quinn",
+            "artist": "Fuerza Regida & Marshmello",
+            "duration": "2:23",
+            "seconds": 143,
+            "thumb": "https://i.ytimg.com/vi/m9X1l2m3n0E/hqdefault.jpg"
+        },
+        {
+            "id": "n8P1w2X7v5E",
+            "title": "La Bebe (Remix)",
+            "artist": "Yng Lvcas & Peso Pluma",
+            "duration": "3:54",
+            "seconds": 234,
+            "thumb": "https://i.ytimg.com/vi/n8P1w2X7v5E/hqdefault.jpg"
+        },
+        {
+            "id": "o9X1l2m3n1E",
+            "title": "QLONA",
+            "artist": "Karol G & Peso Pluma",
+            "duration": "2:52",
+            "seconds": 172,
+            "thumb": "https://i.ytimg.com/vi/o9X1l2m3n1E/hqdefault.jpg"
+        },
+        {
+            "id": "p8P1w2X7v6E",
+            "title": "Mi Ex Ten\u00eda Raz\u00f3n",
+            "artist": "Karol G",
+            "duration": "2:34",
+            "seconds": 154,
+            "thumb": "https://i.ytimg.com/vi/p8P1w2X7v6E/hqdefault.jpg"
+        },
+        {
+            "id": "q9X1l2m3n2E",
+            "title": "Amargura",
+            "artist": "Karol G",
+            "duration": "2:50",
+            "seconds": 170,
+            "thumb": "https://i.ytimg.com/vi/q9X1l2m3n2E/hqdefault.jpg"
+        },
+        {
+            "id": "r8P1w2X7v7E",
+            "title": "Cairo",
+            "artist": "Karol G & Ovy On The Drums",
+            "duration": "3:18",
+            "seconds": 198,
+            "thumb": "https://i.ytimg.com/vi/r8P1w2X7v7E/hqdefault.jpg"
+        },
+        {
+            "id": "s9X1l2m3n3E",
+            "title": "Gat\u00fabela",
+            "artist": "Karol G & Maldy",
+            "duration": "3:28",
+            "seconds": 208,
+            "thumb": "https://i.ytimg.com/vi/s9X1l2m3n3E/hqdefault.jpg"
+        },
+        {
+            "id": "t8P1w2X7v8E",
+            "title": "Bichota",
+            "artist": "Karol G",
+            "duration": "2:58",
+            "seconds": 178,
+            "thumb": "https://i.ytimg.com/vi/t8P1w2X7v8E/hqdefault.jpg"
+        },
+        {
+            "id": "u9X1l2m3n4E",
+            "title": "El Barco",
+            "artist": "Karol G",
+            "duration": "3:23",
+            "seconds": 203,
+            "thumb": "https://i.ytimg.com/vi/u9X1l2m3n4E/hqdefault.jpg"
+        },
+        {
+            "id": "v8P1w2X7v9E",
+            "title": "200 Copas",
+            "artist": "Karol G",
+            "duration": "3:37",
+            "seconds": 217,
+            "thumb": "https://i.ytimg.com/vi/v8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "w9X1l2m3n5E",
+            "title": "Ay, DiOs M\u00edo!",
+            "artist": "Karol G",
+            "duration": "3:09",
+            "seconds": 189,
+            "thumb": "https://i.ytimg.com/vi/w9X1l2m3n5E/hqdefault.jpg"
+        },
+        {
+            "id": "x8P1w2X7v0E",
+            "title": "Sejodioto",
+            "artist": "Karol G",
+            "duration": "2:38",
+            "seconds": 158,
+            "thumb": "https://i.ytimg.com/vi/x8P1w2X7v0E/hqdefault.jpg"
+        },
+        {
+            "id": "y9X1l2m3n6E",
+            "title": "China",
+            "artist": "Anuel AA, Daddy Yankee, Karol G, Ozuna, J Balvin",
+            "duration": "5:01",
+            "seconds": 301,
+            "thumb": "https://i.ytimg.com/vi/y9X1l2m3n6E/hqdefault.jpg"
+        },
+        {
+            "id": "z8P1w2X7v1E",
+            "title": "Secreto",
+            "artist": "Anuel AA & Karol G",
+            "duration": "4:18",
+            "seconds": 258,
+            "thumb": "https://i.ytimg.com/vi/z8P1w2X7v1E/hqdefault.jpg"
+        },
+        {
+            "id": "a1X1l2m3n7E",
+            "title": "Ella Quiere Beber",
+            "artist": "Anuel AA & Romeo Santos",
+            "duration": "3:39",
+            "seconds": 219,
+            "thumb": "https://i.ytimg.com/vi/a1X1l2m3n7E/hqdefault.jpg"
+        },
+        {
+            "id": "b2P1w2X7v2E",
+            "title": "Amanece",
+            "artist": "Anuel AA & Haze",
+            "duration": "3:10",
+            "seconds": 190,
+            "thumb": "https://i.ytimg.com/vi/b2P1w2X7v2E/hqdefault.jpg"
+        },
+        {
+            "id": "c3X1l2m3n8E",
+            "title": "Reloj",
+            "artist": "Rauw Alejandro & Anuel AA",
+            "duration": "3:51",
+            "seconds": 231,
+            "thumb": "https://i.ytimg.com/vi/c3X1l2m3n8E/hqdefault.jpg"
+        },
+        {
+            "id": "d4P1w2X7v3E",
+            "title": "2/Catorce",
+            "artist": "Rauw Alejandro & Mr. NaisGai",
+            "duration": "3:29",
+            "seconds": 209,
+            "thumb": "https://i.ytimg.com/vi/d4P1w2X7v3E/hqdefault.jpg"
+        },
+        {
+            "id": "e5X1l2m3n9E",
+            "title": "Desesperados",
+            "artist": "Rauw Alejandro & Chencho Corleone",
+            "duration": "3:44",
+            "seconds": 224,
+            "thumb": "https://i.ytimg.com/vi/e5X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "f6P1w2X7v4E",
+            "title": "Punto 40",
+            "artist": "Rauw Alejandro & Baby Rasta",
+            "duration": "3:10",
+            "seconds": 190,
+            "thumb": "https://i.ytimg.com/vi/f6P1w2X7v4E/hqdefault.jpg"
+        },
+        {
+            "id": "g7X1l2m3n0E",
+            "title": "Lokera",
+            "artist": "Rauw Alejandro, Lyanno, Brray",
+            "duration": "3:15",
+            "seconds": 195,
+            "thumb": "https://i.ytimg.com/vi/g7X1l2m3n0E/hqdefault.jpg"
+        },
+        {
+            "id": "h8P1w2X7v5E",
+            "title": "Te Felicito",
+            "artist": "Shakira & Rauw Alejandro",
+            "duration": "2:52",
+            "seconds": 172,
+            "thumb": "https://i.ytimg.com/vi/h8P1w2X7v5E/hqdefault.jpg"
+        },
+        {
+            "id": "i9X1l2m3n1E",
+            "title": "Hips Don't Lie",
+            "artist": "Shakira & Wyclef Jean",
+            "duration": "3:38",
+            "seconds": 218,
+            "thumb": "https://i.ytimg.com/vi/i9X1l2m3n1E/hqdefault.jpg"
+        },
+        {
+            "id": "j0P1w2X7v6E",
+            "title": "Whenever, Wherever",
+            "artist": "Shakira",
+            "duration": "3:16",
+            "seconds": 196,
+            "thumb": "https://i.ytimg.com/vi/j0P1w2X7v6E/hqdefault.jpg"
+        },
+        {
+            "id": "k1X1l2m3n2E",
+            "title": "Waka Waka (This Time for Africa)",
+            "artist": "Shakira",
+            "duration": "3:22",
+            "seconds": 202,
+            "thumb": "https://i.ytimg.com/vi/k1X1l2m3n2E/hqdefault.jpg"
+        },
+        {
+            "id": "l2P1w2X7v7E",
+            "title": "La Tortura",
+            "artist": "Shakira & Alejandro Sanz",
+            "duration": "3:33",
+            "seconds": 213,
+            "thumb": "https://i.ytimg.com/vi/l2P1w2X7v7E/hqdefault.jpg"
+        },
+        {
+            "id": "m3X1l2m3n3E",
+            "title": "Dile",
+            "artist": "Don Omar",
+            "duration": "3:24",
+            "seconds": 204,
+            "thumb": "https://i.ytimg.com/vi/m3X1l2m3n3E/hqdefault.jpg"
+        },
+        {
+            "id": "n4P1w2X7v8E",
+            "title": "Sali\u00f3 El Sol",
+            "artist": "Don Omar",
+            "duration": "3:15",
+            "seconds": 195,
+            "thumb": "https://i.ytimg.com/vi/n4P1w2X7v8E/hqdefault.jpg"
+        },
+        {
+            "id": "o5X1l2m3n4E",
+            "title": "Pobre Diabla",
+            "artist": "Don Omar",
+            "duration": "4:12",
+            "seconds": 252,
+            "thumb": "https://i.ytimg.com/vi/o5X1l2m3n4E/hqdefault.jpg"
+        },
+        {
+            "id": "p6P1w2X7v9E",
+            "title": "Virtual Diva",
+            "artist": "Don Omar",
+            "duration": "3:59",
+            "seconds": 239,
+            "thumb": "https://i.ytimg.com/vi/p6P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "q7X1l2m3n5E",
+            "title": "Taboo",
+            "artist": "Don Omar",
+            "duration": "4:52",
+            "seconds": 292,
+            "thumb": "https://i.ytimg.com/vi/q7X1l2m3n5E/hqdefault.jpg"
+        },
+        {
+            "id": "r8P1w2X7v0E",
+            "title": "Rakata",
+            "artist": "Wisin & Yandel",
+            "duration": "2:52",
+            "seconds": 172,
+            "thumb": "https://i.ytimg.com/vi/r8P1w2X7v0E/hqdefault.jpg"
+        },
+        {
+            "id": "s9X1l2m3n6E",
+            "title": "Noche de Entierro",
+            "artist": "Daddy Yankee, Wisin & Yandel, Zion, Hector",
+            "duration": "4:23",
+            "seconds": 263,
+            "thumb": "https://i.ytimg.com/vi/s9X1l2m3n6E/hqdefault.jpg"
+        },
+        {
+            "id": "t0P1w2X7v1E",
+            "title": "Mayor Que Yo",
+            "artist": "Baby Ranks, Daddy Yankee, Tonny Tun Tun, Wisin & Yandel",
+            "duration": "4:08",
+            "seconds": 248,
+            "thumb": "https://i.ytimg.com/vi/t0P1w2X7v1E/hqdefault.jpg"
+        },
+        {
+            "id": "u1X1l2m3n7E",
+            "title": "Pam Pam",
+            "artist": "Wisin & Yandel",
+            "duration": "3:47",
+            "seconds": 227,
+            "thumb": "https://i.ytimg.com/vi/u1X1l2m3n7E/hqdefault.jpg"
+        },
+        {
+            "id": "v2P1w2X7v2E",
+            "title": "Algo Me Gusta De Ti",
+            "artist": "Wisin & Yandel, Chris Brown, T-Pain",
+            "duration": "4:35",
+            "seconds": 275,
+            "thumb": "https://i.ytimg.com/vi/v2P1w2X7v2E/hqdefault.jpg"
+        },
+        {
+            "id": "w3X1l2m3n8E",
+            "title": "Adictiva",
+            "artist": "Daddy Yankee & Anuel AA",
+            "duration": "3:27",
+            "seconds": 207,
+            "thumb": "https://i.ytimg.com/vi/w3X1l2m3n8E/hqdefault.jpg"
+        },
+        {
+            "id": "x4P1w2X7v3E",
+            "title": "Dura",
+            "artist": "Daddy Yankee",
+            "duration": "3:20",
+            "seconds": 200,
+            "thumb": "https://i.ytimg.com/vi/x4P1w2X7v3E/hqdefault.jpg"
+        },
+        {
+            "id": "y5X1l2m3n9E",
+            "title": "Shaky Shaky",
+            "artist": "Daddy Yankee",
+            "duration": "3:52",
+            "seconds": 232,
+            "thumb": "https://i.ytimg.com/vi/y5X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "z6P1w2X7v4E",
+            "title": "Limbo",
+            "artist": "Daddy Yankee",
+            "duration": "3:44",
+            "seconds": 224,
+            "thumb": "https://i.ytimg.com/vi/z6P1w2X7v4E/hqdefault.jpg"
+        },
+        {
+            "id": "a7X1l2m3n0E",
+            "title": "Rompe",
+            "artist": "Daddy Yankee",
+            "duration": "3:15",
+            "seconds": 195,
+            "thumb": "https://i.ytimg.com/vi/a7X1l2m3n0E/hqdefault.jpg"
+        },
+        {
+            "id": "b8P1w2X7v5E",
+            "title": "Ella Me Levant\u00f3",
+            "artist": "Daddy Yankee",
+            "duration": "3:29",
+            "seconds": 209,
+            "thumb": "https://i.ytimg.com/vi/b8P1w2X7v5E/hqdefault.jpg"
+        },
+        {
+            "id": "c9X1l2m3n1E",
+            "title": "Pose",
+            "artist": "Daddy Yankee",
+            "duration": "3:37",
+            "seconds": 217,
+            "thumb": "https://i.ytimg.com/vi/c9X1l2m3n1E/hqdefault.jpg"
+        },
+        {
+            "id": "d0P1w2X7v6E",
+            "title": "La Despedida",
+            "artist": "Daddy Yankee",
+            "duration": "3:23",
+            "seconds": 203,
+            "thumb": "https://i.ytimg.com/vi/d0P1w2X7v6E/hqdefault.jpg"
+        },
+        {
+            "id": "e1X1l2m3n2E",
+            "title": "Problema",
+            "artist": "Daddy Yankee",
+            "duration": "3:04",
+            "seconds": 184,
+            "thumb": "https://i.ytimg.com/vi/e1X1l2m3n2E/hqdefault.jpg"
+        },
+        {
+            "id": "f2P1w2X7v7E",
+            "title": "RUMBAT\u00d3N",
+            "artist": "Daddy Yankee",
+            "duration": "4:08",
+            "seconds": 248,
+            "thumb": "https://i.ytimg.com/vi/f2P1w2X7v7E/hqdefault.jpg"
+        },
+        {
+            "id": "g3X1l2m3n3E",
+            "title": "REMIX",
+            "artist": "Daddy Yankee",
+            "duration": "2:43",
+            "seconds": 163,
+            "thumb": "https://i.ytimg.com/vi/g3X1l2m3n3E/hqdefault.jpg"
+        },
+        {
+            "id": "h4P1w2X7v8E",
+            "title": "BOMB\u00d3N",
+            "artist": "Daddy Yankee, El Alfa, Lil Jon",
+            "duration": "3:02",
+            "seconds": 182,
+            "thumb": "https://i.ytimg.com/vi/h4P1w2X7v8E/hqdefault.jpg"
+        },
+        {
+            "id": "i5X1l2m3n4E",
+            "title": "X",
+            "artist": "Nicky Jam & J Balvin",
+            "duration": "2:53",
+            "seconds": 173,
+            "thumb": "https://i.ytimg.com/vi/i5X1l2m3n4E/hqdefault.jpg"
+        },
+        {
+            "id": "j6P1w2X7v9E",
+            "title": "El Amante",
+            "artist": "Nicky Jam",
+            "duration": "3:39",
+            "seconds": 219,
+            "thumb": "https://i.ytimg.com/vi/j6P1w2X7v9E/hqdefault.jpg"
+        }
+    ]
+},
+  "instrumentals_top100": {
+    "id": "instrumentals_top100",
+    "name": "Instrumentals & Beats Top 100",
+    "subtitle": "Lofi Beats, Hans Zimmer, Piano Classics & Metro Beats",
+    "tag": "CHILL 100",
+    "gradient": "from-teal-700 via-cyan-950 to-black",
+    "border": "border-teal-500/40",
+    "tracks": [
+        {
+            "id": "jfKfPfyJRdk",
+            "title": "Lofi Hip Hop Radio - Beats to Relax/Study to",
+            "artist": "Lofi Girl",
+            "duration": "3:45",
+            "seconds": 225,
+            "thumb": "https://i.ytimg.com/vi/jfKfPfyJRdk/hqdefault.jpg"
+        },
+        {
+            "id": "8X7N_o30j5Q",
+            "title": "Resonance",
+            "artist": "HOME",
+            "duration": "3:32",
+            "seconds": 212,
+            "thumb": "https://i.ytimg.com/vi/8X7N_o30j5Q/hqdefault.jpg"
+        },
+        {
+            "id": "hX39k9N22yA",
+            "title": "Time (Inception Theme)",
+            "artist": "Hans Zimmer",
+            "duration": "4:35",
+            "seconds": 275,
+            "thumb": "https://i.ytimg.com/vi/hX39k9N22yA/hqdefault.jpg"
+        },
+        {
+            "id": "9B0nO_9p7iY",
+            "title": "Interstellar Main Theme",
+            "artist": "Hans Zimmer",
+            "duration": "4:07",
+            "seconds": 247,
+            "thumb": "https://i.ytimg.com/vi/9B0nO_9p7iY/hqdefault.jpg"
+        },
+        {
+            "id": "kcidl_zS15Y",
+            "title": "Nuvole Bianche",
+            "artist": "Ludovico Einaudi",
+            "duration": "5:57",
+            "seconds": 357,
+            "thumb": "https://i.ytimg.com/vi/kcidl_zS15Y/hqdefault.jpg"
+        },
+        {
+            "id": "2W_G3Xx6Q4k",
+            "title": "Una Mattina (The Intouchables)",
+            "artist": "Ludovico Einaudi",
+            "duration": "3:26",
+            "seconds": 206,
+            "thumb": "https://i.ytimg.com/vi/2W_G3Xx6Q4k/hqdefault.jpg"
+        },
+        {
+            "id": "1m0o6pQ8v0Q",
+            "title": "Experience",
+            "artist": "Ludovico Einaudi",
+            "duration": "5:15",
+            "seconds": 315,
+            "thumb": "https://i.ytimg.com/vi/1m0o6pQ8v0Q/hqdefault.jpg"
+        },
+        {
+            "id": "b87dCpepx9A",
+            "title": "River Flows in You",
+            "artist": "Yiruma",
+            "duration": "3:05",
+            "seconds": 185,
+            "thumb": "https://i.ytimg.com/vi/b87dCpepx9A/hqdefault.jpg"
+        },
+        {
+            "id": "saGYMhApa98",
+            "title": "Kiss the Rain",
+            "artist": "Yiruma",
+            "duration": "4:16",
+            "seconds": 256,
+            "thumb": "https://i.ytimg.com/vi/saGYMhApa98/hqdefault.jpg"
+        },
+        {
+            "id": "7zp1TbLFP98",
+            "title": "Clair de Lune",
+            "artist": "Claude Debussy",
+            "duration": "5:03",
+            "seconds": 303,
+            "thumb": "https://i.ytimg.com/vi/7zp1TbLFP98/hqdefault.jpg"
+        },
+        {
+            "id": "k85mJF88GL9",
+            "title": "Gymnop\u00e9die No. 1",
+            "artist": "Erik Satie",
+            "duration": "3:25",
+            "seconds": 205,
+            "thumb": "https://i.ytimg.com/vi/k85mJF88GL9/hqdefault.jpg"
+        },
+        {
+            "id": "T0Z0m_yF-9k",
+            "title": "Merry Christmas Mr. Lawrence",
+            "artist": "Ryuichi Sakamoto",
+            "duration": "4:43",
+            "seconds": 283,
+            "thumb": "https://i.ytimg.com/vi/T0Z0m_yF-9k/hqdefault.jpg"
+        },
+        {
+            "id": "kJQP7kiw59k",
+            "title": "Aqua",
+            "artist": "Ryuichi Sakamoto",
+            "duration": "4:28",
+            "seconds": 268,
+            "thumb": "https://i.ytimg.com/vi/kJQP7kiw59k/hqdefault.jpg"
+        },
+        {
+            "id": "WNcsUNKlA9w",
+            "title": "A Model of the Universe",
+            "artist": "J\u00f3hann J\u00f3hannsson",
+            "duration": "2:52",
+            "seconds": 172,
+            "thumb": "https://i.ytimg.com/vi/WNcsUNKlA9w/hqdefault.jpg"
+        },
+        {
+            "id": "wnJ6LuUFp9o",
+            "title": "Flight from the City",
+            "artist": "J\u00f3hann J\u00f3hannsson",
+            "duration": "6:31",
+            "seconds": 391,
+            "thumb": "https://i.ytimg.com/vi/wnJ6LuUFp9o/hqdefault.jpg"
+        },
+        {
+            "id": "f5qmFXE9X9E",
+            "title": "On the Nature of Daylight",
+            "artist": "Max Richter",
+            "duration": "6:11",
+            "seconds": 371,
+            "thumb": "https://i.ytimg.com/vi/f5qmFXE9X9E/hqdefault.jpg"
+        },
+        {
+            "id": "gNi_6U5Pm9o",
+            "title": "A Walk",
+            "artist": "Tycho",
+            "duration": "5:16",
+            "seconds": 316,
+            "thumb": "https://i.ytimg.com/vi/gNi_6U5Pm9o/hqdefault.jpg"
+        },
+        {
+            "id": "hBf3H-vVq9o",
+            "title": "Awake",
+            "artist": "Tycho",
+            "duration": "4:43",
+            "seconds": 283,
+            "thumb": "https://i.ytimg.com/vi/hBf3H-vVq9o/hqdefault.jpg"
+        },
+        {
+            "id": "q0hyYWKXF9Q",
+            "title": "Montana",
+            "artist": "Tycho",
+            "duration": "5:26",
+            "seconds": 326,
+            "thumb": "https://i.ytimg.com/vi/q0hyYWKXF9Q/hqdefault.jpg"
+        },
+        {
+            "id": "5g2hT46239k",
+            "title": "Epoch",
+            "artist": "Tycho",
+            "duration": "5:45",
+            "seconds": 345,
+            "thumb": "https://i.ytimg.com/vi/5g2hT46239k/hqdefault.jpg"
+        },
+        {
+            "id": "j9Upe3aCq98",
+            "title": "Feather (Instrumental)",
+            "artist": "Nujabes",
+            "duration": "2:55",
+            "seconds": 175,
+            "thumb": "https://i.ytimg.com/vi/j9Upe3aCq98/hqdefault.jpg"
+        },
+        {
+            "id": "b3h_r4l4q9s",
+            "title": "Aruarian Dance",
+            "artist": "Nujabes",
+            "duration": "4:10",
+            "seconds": 250,
+            "thumb": "https://i.ytimg.com/vi/b3h_r4l4q9s/hqdefault.jpg"
+        },
+        {
+            "id": "9jI-z9QN698",
+            "title": "Luv(sic) Part 3 (Instrumental)",
+            "artist": "Nujabes",
+            "duration": "5:37",
+            "seconds": 337,
+            "thumb": "https://i.ytimg.com/vi/9jI-z9QN698/hqdefault.jpg"
+        },
+        {
+            "id": "i0p1bmr0E9E",
+            "title": "Donuts (Intro) / Workinonit",
+            "artist": "J Dilla",
+            "duration": "2:57",
+            "seconds": 177,
+            "thumb": "https://i.ytimg.com/vi/i0p1bmr0E9E/hqdefault.jpg"
+        },
+        {
+            "id": "hT_nvWreI9g",
+            "title": "Life (Instrumental)",
+            "artist": "J Dilla",
+            "duration": "3:22",
+            "seconds": 202,
+            "thumb": "https://i.ytimg.com/vi/hT_nvWreI9g/hqdefault.jpg"
+        },
+        {
+            "id": "y83x7MgzW9A",
+            "title": "Time: The Donut of the Heart",
+            "artist": "J Dilla",
+            "duration": "1:38",
+            "seconds": 98,
+            "thumb": "https://i.ytimg.com/vi/y83x7MgzW9A/hqdefault.jpg"
+        },
+        {
+            "id": "2KkMyDEe69g",
+            "title": "So Far to Go (Instrumental)",
+            "artist": "J Dilla",
+            "duration": "4:06",
+            "seconds": 246,
+            "thumb": "https://i.ytimg.com/vi/2KkMyDEe69g/hqdefault.jpg"
+        },
+        {
+            "id": "x1kLw7K669E",
+            "title": "Sunflower (Instrumental)",
+            "artist": "Post Malone & Swae Lee",
+            "duration": "2:38",
+            "seconds": 158,
+            "thumb": "https://i.ytimg.com/vi/x1kLw7K669E/hqdefault.jpg"
+        },
+        {
+            "id": "C7vy861fQ9k",
+            "title": "Lucid Dreams (Guitar Instrumental)",
+            "artist": "Nick Mira / Juice WRLD",
+            "duration": "3:59",
+            "seconds": 239,
+            "thumb": "https://i.ytimg.com/vi/C7vy861fQ9k/hqdefault.jpg"
+        },
+        {
+            "id": "1m0o6pQ8v9Q",
+            "title": "Robbery (Piano Instrumental)",
+            "artist": "Juice WRLD",
+            "duration": "3:40",
+            "seconds": 220,
+            "thumb": "https://i.ytimg.com/vi/1m0o6pQ8v9Q/hqdefault.jpg"
+        },
+        {
+            "id": "t_jHrUE5I9k",
+            "title": "All Girls Are The Same (Lofi Beat)",
+            "artist": "Juice WRLD",
+            "duration": "3:10",
+            "seconds": 190,
+            "thumb": "https://i.ytimg.com/vi/t_jHrUE5I9k/hqdefault.jpg"
+        },
+        {
+            "id": "6mgYp45219k",
+            "title": "Lean Wit Me (Acoustic Beat)",
+            "artist": "Juice WRLD",
+            "duration": "3:30",
+            "seconds": 210,
+            "thumb": "https://i.ytimg.com/vi/6mgYp45219k/hqdefault.jpg"
+        },
+        {
+            "id": "XbXh0sH_x9k",
+            "title": "Wishing Well (Lofi Remix)",
+            "artist": "Juice WRLD",
+            "duration": "3:25",
+            "seconds": 205,
+            "thumb": "https://i.ytimg.com/vi/XbXh0sH_x9k/hqdefault.jpg"
+        },
+        {
+            "id": "z8WqYv6p19E",
+            "title": "Righteous (Chill Beat)",
+            "artist": "Juice WRLD",
+            "duration": "4:02",
+            "seconds": 242,
+            "thumb": "https://i.ytimg.com/vi/z8WqYv6p19E/hqdefault.jpg"
+        },
+        {
+            "id": "1_w7b26g69E",
+            "title": "Already Dead (Acoustic Instrumental)",
+            "artist": "Juice WRLD",
+            "duration": "3:51",
+            "seconds": 231,
+            "thumb": "https://i.ytimg.com/vi/1_w7b26g69E/hqdefault.jpg"
+        },
+        {
+            "id": "A_g3lMcWA9E",
+            "title": "Bandit (Instrumental Beat)",
+            "artist": "Juice WRLD & YoungBoy",
+            "duration": "3:09",
+            "seconds": 189,
+            "thumb": "https://i.ytimg.com/vi/A_g3lMcWA9E/hqdefault.jpg"
+        },
+        {
+            "id": "p7bfOZek994",
+            "title": "Armed and Dangerous (Instrumental)",
+            "artist": "Juice WRLD",
+            "duration": "2:33",
+            "seconds": 153,
+            "thumb": "https://i.ytimg.com/vi/p7bfOZek994/hqdefault.jpg"
+        },
+        {
+            "id": "61p_1d8X19c",
+            "title": "SICKO MODE (Instrumental Beat)",
+            "artist": "Travis Scott / Metro Boomin",
+            "duration": "5:12",
+            "seconds": 312,
+            "thumb": "https://i.ytimg.com/vi/61p_1d8X19c/hqdefault.jpg"
+        },
+        {
+            "id": "p3vX2GZ1X9E",
+            "title": "HIGHEST IN THE ROOM (Instrumental)",
+            "artist": "Travis Scott",
+            "duration": "2:57",
+            "seconds": 177,
+            "thumb": "https://i.ytimg.com/vi/p3vX2GZ1X9E/hqdefault.jpg"
+        },
+        {
+            "id": "1_gP4e7yX98",
+            "title": "goosebumps (Instrumental)",
+            "artist": "Travis Scott",
+            "duration": "4:03",
+            "seconds": 243,
+            "thumb": "https://i.ytimg.com/vi/1_gP4e7yX98/hqdefault.jpg"
+        },
+        {
+            "id": "e_zP1o_zX9k",
+            "title": "STARGAZING (Instrumental)",
+            "artist": "Travis Scott",
+            "duration": "4:31",
+            "seconds": 271,
+            "thumb": "https://i.ytimg.com/vi/e_zP1o_zX9k/hqdefault.jpg"
+        },
+        {
+            "id": "b96g1VzY69E",
+            "title": "Magnolia (Instrumental Beat)",
+            "artist": "Playboi Carti / Pi'erre Bourne",
+            "duration": "3:01",
+            "seconds": 181,
+            "thumb": "https://i.ytimg.com/vi/b96g1VzY69E/hqdefault.jpg"
+        },
+        {
+            "id": "k8X1l2m3n9E",
+            "title": "Location (Instrumental)",
+            "artist": "Playboi Carti",
+            "duration": "2:48",
+            "seconds": 168,
+            "thumb": "https://i.ytimg.com/vi/k8X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "y9P6w2X7v9E",
+            "title": "Sky (Instrumental Beat)",
+            "artist": "Playboi Carti",
+            "duration": "3:13",
+            "seconds": 193,
+            "thumb": "https://i.ytimg.com/vi/y9P6w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "q8X1v9k3L9E",
+            "title": "Vamp Anthem (Instrumental)",
+            "artist": "Playboi Carti",
+            "duration": "2:04",
+            "seconds": 124,
+            "thumb": "https://i.ytimg.com/vi/q8X1v9k3L9E/hqdefault.jpg"
+        },
+        {
+            "id": "a9X1l2k3j9E",
+            "title": "XO TOUR Llif3 (Instrumental)",
+            "artist": "Lil Uzi Vert / TM88",
+            "duration": "3:02",
+            "seconds": 182,
+            "thumb": "https://i.ytimg.com/vi/a9X1l2k3j9E/hqdefault.jpg"
+        },
+        {
+            "id": "b8P1w2X7v9E",
+            "title": "20 Min (Instrumental Beat)",
+            "artist": "Lil Uzi Vert",
+            "duration": "3:40",
+            "seconds": 220,
+            "thumb": "https://i.ytimg.com/vi/b8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "c9X1l2m3n9E",
+            "title": "The Way Life Goes (Instrumental)",
+            "artist": "Lil Uzi Vert",
+            "duration": "3:41",
+            "seconds": 221,
+            "thumb": "https://i.ytimg.com/vi/c9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "d8P1w2X7v9E",
+            "title": "Just Wanna Rock (Instrumental)",
+            "artist": "Lil Uzi Vert",
+            "duration": "2:03",
+            "seconds": 123,
+            "thumb": "https://i.ytimg.com/vi/d8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "e9X1l2m3n9E",
+            "title": "SAD! (Guitar Instrumental)",
+            "artist": "XXXTENTACION",
+            "duration": "2:46",
+            "seconds": 166,
+            "thumb": "https://i.ytimg.com/vi/e9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "f8P1w2X7v9E",
+            "title": "Moonlight (Instrumental Beat)",
+            "artist": "XXXTENTACION",
+            "duration": "2:15",
+            "seconds": 135,
+            "thumb": "https://i.ytimg.com/vi/f8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "g9X1l2m3n9E",
+            "title": "Jocelyn Flores (Guitar Beat)",
+            "artist": "XXXTENTACION",
+            "duration": "1:59",
+            "seconds": 119,
+            "thumb": "https://i.ytimg.com/vi/g9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "h8P1w2X7v9E",
+            "title": "Falling Down (Acoustic Instrumental)",
+            "artist": "Lil Peep & XXXTENTACION",
+            "duration": "3:16",
+            "seconds": 196,
+            "thumb": "https://i.ytimg.com/vi/h8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "i9X1l2m3n9E",
+            "title": "Star Shopping (Guitar Loop)",
+            "artist": "Lil Peep",
+            "duration": "2:22",
+            "seconds": 142,
+            "thumb": "https://i.ytimg.com/vi/i9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "j8P1w2X7v9E",
+            "title": "Witchblades (Instrumental)",
+            "artist": "Lil Peep & Lil Tracy",
+            "duration": "2:30",
+            "seconds": 150,
+            "thumb": "https://i.ytimg.com/vi/j8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "k9X1l2m3n9E",
+            "title": "Heartless (Instrumental)",
+            "artist": "The Weeknd / Metro Boomin",
+            "duration": "3:18",
+            "seconds": 198,
+            "thumb": "https://i.ytimg.com/vi/k9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "l8P1w2X7v9E",
+            "title": "Blinding Lights (Synthwave Instrumental)",
+            "artist": "The Weeknd",
+            "duration": "3:20",
+            "seconds": 200,
+            "thumb": "https://i.ytimg.com/vi/l8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "m9X1l2m3n9E",
+            "title": "Save Your Tears (80s Synth Beat)",
+            "artist": "The Weeknd",
+            "duration": "3:35",
+            "seconds": 215,
+            "thumb": "https://i.ytimg.com/vi/m9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "n8P1w2X7v9E",
+            "title": "Die For You (Instrumental)",
+            "artist": "The Weeknd",
+            "duration": "4:20",
+            "seconds": 260,
+            "thumb": "https://i.ytimg.com/vi/n8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "o9X1l2m3n9E",
+            "title": "The Hills (Bass Boosted Beat)",
+            "artist": "The Weeknd",
+            "duration": "4:02",
+            "seconds": 242,
+            "thumb": "https://i.ytimg.com/vi/o9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "p8P1w2X7v9E",
+            "title": "Midnight City (Synthwave Instrumental)",
+            "artist": "M83",
+            "duration": "4:03",
+            "seconds": 243,
+            "thumb": "https://i.ytimg.com/vi/p8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "q9X1l2m3n9E",
+            "title": "Outro",
+            "artist": "M83",
+            "duration": "4:07",
+            "seconds": 247,
+            "thumb": "https://i.ytimg.com/vi/q9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "r8P1w2X7v9E",
+            "title": "Intro",
+            "artist": "The xx",
+            "duration": "2:08",
+            "seconds": 128,
+            "thumb": "https://i.ytimg.com/vi/r8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "s9X1l2m3n9E",
+            "title": "Angels (Instrumental)",
+            "artist": "The xx",
+            "duration": "2:51",
+            "seconds": 171,
+            "thumb": "https://i.ytimg.com/vi/s9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "t8P1w2X7v9E",
+            "title": "Sunset Lover",
+            "artist": "Petit Biscuit",
+            "duration": "3:57",
+            "seconds": 237,
+            "thumb": "https://i.ytimg.com/vi/t8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "u9X1l2m3n9E",
+            "title": "Faded (Piano Instrumental)",
+            "artist": "Alan Walker",
+            "duration": "3:32",
+            "seconds": 212,
+            "thumb": "https://i.ytimg.com/vi/u9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "v8P1w2X7v9E",
+            "title": "Alone (Instrumental)",
+            "artist": "Marshmello",
+            "duration": "4:33",
+            "seconds": 273,
+            "thumb": "https://i.ytimg.com/vi/v8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "w9X1l2m3n9E",
+            "title": "Happier (Acoustic Instrumental)",
+            "artist": "Marshmello & Bastille",
+            "duration": "3:34",
+            "seconds": 214,
+            "thumb": "https://i.ytimg.com/vi/w9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "x8P1w2X7v9E",
+            "title": "Something Just Like This (Piano)",
+            "artist": "The Chainsmokers & Coldplay",
+            "duration": "4:07",
+            "seconds": 247,
+            "thumb": "https://i.ytimg.com/vi/x8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "y9X1l2m3n9E",
+            "title": "Closer (Instrumental Beat)",
+            "artist": "The Chainsmokers",
+            "duration": "4:04",
+            "seconds": 244,
+            "thumb": "https://i.ytimg.com/vi/y9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "z8P1w2X7v9E",
+            "title": "Roses (Instrumental)",
+            "artist": "The Chainsmokers",
+            "duration": "3:46",
+            "seconds": 226,
+            "thumb": "https://i.ytimg.com/vi/z8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "a1X1l2m3n9E",
+            "title": "Strobe",
+            "artist": "deadmau5",
+            "duration": "10:37",
+            "seconds": 637,
+            "thumb": "https://i.ytimg.com/vi/a1X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "b2P1w2X7v9E",
+            "title": "Ghosts 'n' Stuff (Instrumental)",
+            "artist": "deadmau5",
+            "duration": "3:15",
+            "seconds": 195,
+            "thumb": "https://i.ytimg.com/vi/b2P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "c3X1l2m3n9E",
+            "title": "Levels (Original Instrumental)",
+            "artist": "Avicii",
+            "duration": "3:19",
+            "seconds": 199,
+            "thumb": "https://i.ytimg.com/vi/c3X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "d4P1w2X7v9E",
+            "title": "Wake Me Up (Acoustic Guitar)",
+            "artist": "Avicii",
+            "duration": "4:09",
+            "seconds": 249,
+            "thumb": "https://i.ytimg.com/vi/d4P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "e5X1l2m3n9E",
+            "title": "Heart of Courage",
+            "artist": "Two Steps From Hell",
+            "duration": "3:12",
+            "seconds": 192,
+            "thumb": "https://i.ytimg.com/vi/e5X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "f6P1w2X7v9E",
+            "title": "Victory",
+            "artist": "Two Steps From Hell",
+            "duration": "5:20",
+            "seconds": 320,
+            "thumb": "https://i.ytimg.com/vi/f6P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "g7X1l2m3n9E",
+            "title": "Star Sky",
+            "artist": "Two Steps From Hell",
+            "duration": "5:30",
+            "seconds": 330,
+            "thumb": "https://i.ytimg.com/vi/g7X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "h8P1w2X7v9E",
+            "title": "Protectors of the Earth",
+            "artist": "Two Steps From Hell",
+            "duration": "2:49",
+            "seconds": 169,
+            "thumb": "https://i.ytimg.com/vi/h8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "i9X1l2m3n9E",
+            "title": "Archangel",
+            "artist": "Two Steps From Hell",
+            "duration": "2:34",
+            "seconds": 154,
+            "thumb": "https://i.ytimg.com/vi/i9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "j0P1w2X7v9E",
+            "title": "To Glory",
+            "artist": "Two Steps From Hell",
+            "duration": "4:37",
+            "seconds": 277,
+            "thumb": "https://i.ytimg.com/vi/j0P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "k1X1l2m3n9E",
+            "title": "Canon in D",
+            "artist": "Johann Pachelbel",
+            "duration": "5:03",
+            "seconds": 303,
+            "thumb": "https://i.ytimg.com/vi/k1X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "l2P1w2X7v9E",
+            "title": "Moonlight Sonata",
+            "artist": "Ludwig van Beethoven",
+            "duration": "5:15",
+            "seconds": 315,
+            "thumb": "https://i.ytimg.com/vi/l2P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "m3X1l2m3n9E",
+            "title": "F\u00fcr Elise",
+            "artist": "Ludwig van Beethoven",
+            "duration": "2:56",
+            "seconds": 176,
+            "thumb": "https://i.ytimg.com/vi/m3X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "n4P1w2X7v9E",
+            "title": "Nocturne Op. 9 No. 2",
+            "artist": "Fr\u00e9d\u00e9ric Chopin",
+            "duration": "4:32",
+            "seconds": 272,
+            "thumb": "https://i.ytimg.com/vi/n4P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "o5X1l2m3n9E",
+            "title": "Spring (The Four Seasons)",
+            "artist": "Antonio Vivaldi",
+            "duration": "3:36",
+            "seconds": 216,
+            "thumb": "https://i.ytimg.com/vi/o5X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "p6P1w2X7v9E",
+            "title": "Winter (The Four Seasons)",
+            "artist": "Antonio Vivaldi",
+            "duration": "3:29",
+            "seconds": 209,
+            "thumb": "https://i.ytimg.com/vi/p6P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "q7X1l2m3n9E",
+            "title": "Air on the G String",
+            "artist": "Johann Sebastian Bach",
+            "duration": "4:48",
+            "seconds": 288,
+            "thumb": "https://i.ytimg.com/vi/q7X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "r8P1w2X7v9E",
+            "title": "Cello Suite No. 1 in G Major: Pr\u00e9lude",
+            "artist": "Johann Sebastian Bach",
+            "duration": "2:30",
+            "seconds": 150,
+            "thumb": "https://i.ytimg.com/vi/r8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "s9X1l2m3n9E",
+            "title": "Swan Lake Suite, Op. 20a",
+            "artist": "Pyotr Ilyich Tchaikovsky",
+            "duration": "2:58",
+            "seconds": 178,
+            "thumb": "https://i.ytimg.com/vi/s9X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "t0P1w2X7v9E",
+            "title": "Dance of the Sugar Plum Fairy",
+            "artist": "Pyotr Ilyich Tchaikovsky",
+            "duration": "1:48",
+            "seconds": 108,
+            "thumb": "https://i.ytimg.com/vi/t0P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "u1X1l2m3n9E",
+            "title": "Rhapsody in Blue",
+            "artist": "George Gershwin",
+            "duration": "8:50",
+            "seconds": 530,
+            "thumb": "https://i.ytimg.com/vi/u1X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "v2P1w2X7v9E",
+            "title": "Bol\u00e9ro",
+            "artist": "Maurice Ravel",
+            "duration": "5:15",
+            "seconds": 315,
+            "thumb": "https://i.ytimg.com/vi/v2P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "w3X1l2m3n9E",
+            "title": "Pavane pour une infante d\u00e9funte",
+            "artist": "Maurice Ravel",
+            "duration": "6:08",
+            "seconds": 368,
+            "thumb": "https://i.ytimg.com/vi/w3X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "x4P1w2X7v9E",
+            "title": "Spiegel im Spiegel",
+            "artist": "Arvo P\u00e4rt",
+            "duration": "8:12",
+            "seconds": 492,
+            "thumb": "https://i.ytimg.com/vi/x4P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "y5X1l2m3n9E",
+            "title": "Metamorphosis Two",
+            "artist": "Philip Glass",
+            "duration": "7:20",
+            "seconds": 440,
+            "thumb": "https://i.ytimg.com/vi/y5X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "z6P1w2X7v9E",
+            "title": "Opening",
+            "artist": "Philip Glass",
+            "duration": "6:24",
+            "seconds": 384,
+            "thumb": "https://i.ytimg.com/vi/z6P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "a7X1l2m3n9E",
+            "title": "Comptine d'un autre \u00e9t\u00e9",
+            "artist": "Yann Tiersen",
+            "duration": "2:20",
+            "seconds": 140,
+            "thumb": "https://i.ytimg.com/vi/a7X1l2m3n9E/hqdefault.jpg"
+        },
+        {
+            "id": "b8P1w2X7v9E",
+            "title": "La Valse d'Am\u00e9lie",
+            "artist": "Yann Tiersen",
+            "duration": "2:15",
+            "seconds": 135,
+            "thumb": "https://i.ytimg.com/vi/b8P1w2X7v9E/hqdefault.jpg"
+        },
+        {
+            "id": "c9X1l2m3n9E",
+            "title": "Avril 14th",
+            "artist": "Aphex Twin",
+            "duration": "2:05",
+            "seconds": 125,
+            "thumb": "https://i.ytimg.com/vi/c9X1l2m3n9E/hqdefault.jpg"
+        }
+    ]
+}
 };
 
 // Aliases for short identifiers
+TOP_SHUFFLES_CATALOG["latin"] = TOP_SHUFFLES_CATALOG["latin_top100"];
+TOP_SHUFFLES_CATALOG["instrumentals"] = TOP_SHUFFLES_CATALOG["instrumentals_top100"];
+
 TOP_SHUFFLES_CATALOG["official_discography"] = TOP_SHUFFLES_CATALOG["Juice WRLD: Official Discography"];
 TOP_SHUFFLES_CATALOG["the_lost_vault"] = TOP_SHUFFLES_CATALOG["Juice WRLD: The Lost Vault"];
 TOP_SHUFFLES_CATALOG["emo_rap_top100"] = TOP_SHUFFLES_CATALOG["emorap_sad"];

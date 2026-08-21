@@ -540,12 +540,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Dual-Wave Harmonic Spectrum Bars
     const totalBars = eqBarsCount;
-    const paddingX = w * 0.06;
+    const paddingX = w * 0.035;
     const availableW = w - paddingX * 2;
     const barSpacing = availableW / totalBars;
-    const barWidth = Math.max(2.5, barSpacing - 2.0);
-    const baseY = h * 0.72;
-    const maxHeight = h * 0.45;
+    const barWidth = Math.max(3.0, barSpacing - 2.0);
+    const baseY = h * 0.76;
+    const maxHeight = h * 0.52;
 
     for (let i = 0; i < totalBars; i++) {
       const x = paddingX + i * barSpacing;
@@ -1080,6 +1080,25 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.restore();
   }
 
+  function prepareCanvas(canvas) {
+    if (!canvas) return null;
+    const parent = canvas.parentElement;
+    const w = parent ? (parent.clientWidth || 340) : (canvas.clientWidth || 340);
+    const h = parent ? (parent.clientHeight || 340) : (canvas.clientHeight || 340);
+    if (w <= 0 || h <= 0) return null;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    if (canvas.width !== w * dpr || canvas.height !== h * dpr) {
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+    }
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.scale(dpr, dpr);
+    }
+    return { ctx, width: w, height: h };
+  }
+
   // ═══ 60FPS AUDIO REACTIVITY RENDER LOOP ═══
   function updateAudioReactivity() {
     const state = engine.getState();
@@ -1089,52 +1108,32 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentDeckMode === 'vinyl') {
       // 1. 🌈 M3 & iOS 28 Wave Equalizer (Exact Mockup: 1000260681.jpg - DEFAULT)
       if (currentCenterpieceStyle === 'equalizer' && equalizerCanvas) {
-        if (equalizerCanvas.width !== equalizerCanvas.clientWidth && equalizerCanvas.clientWidth > 0) {
-          equalizerCanvas.width = equalizerCanvas.clientWidth;
-          equalizerCanvas.height = equalizerCanvas.clientHeight;
-        }
-        const eqCtx = equalizerCanvas.getContext('2d');
-        if (eqCtx) drawM3iOS28Equalizer(eqCtx, equalizerCanvas.width, equalizerCanvas.height, levels, isPlaying);
+        const c = prepareCanvas(equalizerCanvas);
+        if (c && c.ctx) drawM3iOS28Equalizer(c.ctx, c.width, c.height, levels, isPlaying);
       }
 
       // 2. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb
       if (currentCenterpieceStyle === 'orb' && orbCanvas) {
-        if (orbCanvas.width !== orbCanvas.clientWidth && orbCanvas.clientWidth > 0) {
-          orbCanvas.width = orbCanvas.clientWidth;
-          orbCanvas.height = orbCanvas.clientHeight;
-        }
-        const oCtx = orbCanvas.getContext('2d');
-        if (oCtx) drawFluidOrb(oCtx, orbCanvas.width, orbCanvas.height, levels, isPlaying);
+        const c = prepareCanvas(orbCanvas);
+        if (c && c.ctx) drawFluidOrb(c.ctx, c.width, c.height, levels, isPlaying);
       }
 
       // 3. 🎨 Google Material 3 Expressive Dynamic Fluid Ribbons
       if (currentCenterpieceStyle === 'm3' && m3Canvas) {
-        if (m3Canvas.width !== m3Canvas.clientWidth && m3Canvas.clientWidth > 0) {
-          m3Canvas.width = m3Canvas.clientWidth;
-          m3Canvas.height = m3Canvas.clientHeight;
-        }
-        const mCtx = m3Canvas.getContext('2d');
-        if (mCtx) drawM3Expressive(mCtx, m3Canvas.width, m3Canvas.height, levels, isPlaying);
+        const c = prepareCanvas(m3Canvas);
+        if (c && c.ctx) drawM3Expressive(c.ctx, c.width, c.height, levels, isPlaying);
       }
 
       // 4. 🫧 Spatial Fluid Glass Metaballs & Audio Plasma
       if (currentCenterpieceStyle === 'blobs' && blobsCanvas) {
-        if (blobsCanvas.width !== blobsCanvas.clientWidth && blobsCanvas.clientWidth > 0) {
-          blobsCanvas.width = blobsCanvas.clientWidth;
-          blobsCanvas.height = blobsCanvas.clientHeight;
-        }
-        const bCtx = blobsCanvas.getContext('2d');
-        if (bCtx) drawSpatialBlobs(bCtx, blobsCanvas.width, blobsCanvas.height, levels, isPlaying);
+        const c = prepareCanvas(blobsCanvas);
+        if (c && c.ctx) drawSpatialBlobs(c.ctx, c.width, c.height, levels, isPlaying);
       }
 
       // 5. ⚡ 2028 Precision M3 Hi-Fi Fluid Spectrum
       if (currentCenterpieceStyle === 'hifi' && hifiCanvas) {
-        if (hifiCanvas.width !== hifiCanvas.clientWidth && hifiCanvas.clientWidth > 0) {
-          hifiCanvas.width = hifiCanvas.clientWidth;
-          hifiCanvas.height = hifiCanvas.clientHeight;
-        }
-        const hCtx = hifiCanvas.getContext('2d');
-        if (hCtx) drawM3HiFiSpectrum(hCtx, hifiCanvas.width, hifiCanvas.height, levels, isPlaying);
+        const c = prepareCanvas(hifiCanvas);
+        if (c && c.ctx) drawM3HiFiSpectrum(c.ctx, c.width, c.height, levels, isPlaying);
       }
 
       // 6. 💽 Dynamic Luxe Holographic Vinyl Platter
@@ -1638,7 +1637,14 @@ document.addEventListener('DOMContentLoaded', () => {
     "Zach Bryan": ["Tyler Childers", "Morgan Wallen", "Chris Stapleton", "Noah Kahan", "Sam Barber", "Flatland Cavalry", "Kacey Musgraves"],
     "Luke Combs": ["Morgan Wallen", "Chris Stapleton", "Cody Johnson", "Jordan Davis", "Jon Pardi", "Zac Brown Band", "Luke Bryan"],
     "Chris Stapleton": ["Zach Bryan", "Luke Combs", "Tyler Childers", "Johnny Cash", "George Strait", "Eric Church"],
-    "Johnny Cash": ["Willie Nelson", "Waylon Jennings", "Dolly Parton", "George Jones", "Hank Williams", "Kris Kristofferson"]
+    "Johnny Cash": ["Willie Nelson", "Waylon Jennings", "Dolly Parton", "George Jones", "Hank Williams", "Kris Kristofferson"],
+    "Bad Bunny": ["Rauw Alejandro", "Karol G", "Feid", "J Balvin", "Daddy Yankee", "Myke Towers", "Anuel AA", "Peso Pluma"],
+    "Karol G": ["Bad Bunny", "Shakira", "Becky G", "Natti Natasha", "Rauw Alejandro", "Feid", "Anuel AA"],
+    "Peso Pluma": ["Natanael Cano", "Junior H", "Fuerza Regida", "Grupo Frontera", "Eslabon Armado", "Bad Bunny"],
+    "Daddy Yankee": ["Don Omar", "Wisin & Yandel", "Nicky Jam", "J Balvin", "Farruko", "Bad Bunny", "Ozuna"],
+    "Hans Zimmer": ["Ludovico Einaudi", "Max Richter", "Jóhann Jóhannsson", "Ryuichi Sakamoto", "Two Steps From Hell", "John Williams"],
+    "Ludovico Einaudi": ["Yiruma", "Max Richter", "Hans Zimmer", "Claude Debussy", "Erik Satie", "Philip Glass"],
+    "Lofi Girl": ["HOME", "Tycho", "Nujabes", "J Dilla", "ChilledCow", "Petit Biscuit", "deadmau5"]
   };
 
   window.launchArtistShuffle = async function(artistName) {

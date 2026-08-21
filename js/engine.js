@@ -568,22 +568,23 @@ window.JuiceEngine = (() => {
       ytPlayer = new window.YT.Player(targetId, {
         height: '100%',
         width: '100%',
-        host: 'https://www.youtube-nocookie.com',
+        host: 'https://www.youtube.com',
         playerVars: playerVars,
         events: {
           onReady: (event) => {
             state.isApiReady = true;
-            ytPlayer.setVolume(state.volume);
+            try { ytPlayer.setVolume(state.volume); } catch(e) {}
             emit('engine:ready', state);
 
-            if (pendingVideoId) {
-              const vid = pendingVideoId;
-              const shouldPlay = pendingAutoPlay;
-              pendingVideoId = null;
-              pendingAutoPlay = false;
+            const track = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
+            const vid = pendingVideoId || (track ? track.id : null);
+            const shouldPlay = pendingAutoPlay || state.isPlaying;
+            pendingVideoId = null;
+            pendingAutoPlay = false;
 
+            if (vid && vid.length === 11 && !vid.includes('4819g')) {
+              try { ytPlayer.unMute(); } catch(e) {}
               if (shouldPlay) {
-                try { ytPlayer.unMute(); } catch(e) {}
                 ytPlayer.loadVideoById(vid);
                 const tryPlayOnReady = (attempts) => {
                   if (!ytPlayer || attempts <= 0) return;
@@ -591,10 +592,10 @@ window.JuiceEngine = (() => {
                     const ps = ytPlayer.getPlayerState();
                     if (ps === 1) return; // already playing
                     ytPlayer.playVideo();
-                    if (ps !== 1) setTimeout(() => tryPlayOnReady(attempts - 1), 400);
+                    if (ps !== 1) setTimeout(() => tryPlayOnReady(attempts - 1), 350);
                   } catch(e) { try { ytPlayer.playVideo(); } catch(ee) {} }
                 };
-                setTimeout(() => tryPlayOnReady(10), 500);
+                setTimeout(() => tryPlayOnReady(12), 300);
               } else {
                 ytPlayer.cueVideoById(vid);
               }
@@ -916,15 +917,27 @@ window.JuiceEngine = (() => {
 
 
   function emit(eventName, detail) {
-
     if (eventName === 'engine:stateChanged' && 'mediaSession' in navigator && detail) {
-
       navigator.mediaSession.playbackState = detail.isPlaying ? 'playing' : 'paused';
+    }
 
+    if (eventName === 'engine:stateChanged' || eventName === 'engine:trackChanged') {
+      try {
+        if (typeof window !== 'undefined' && window.JuiceNative && typeof window.JuiceNative.postPlaybackState === 'function') {
+          const curTrack = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
+          if (curTrack) {
+            window.JuiceNative.postPlaybackState(
+              curTrack.title || 'JuiceBx 999',
+              curTrack.artist || 'Juice WRLD',
+              curTrack.thumb || '',
+              !!state.isPlaying
+            );
+          }
+        }
+      } catch(e) {}
     }
 
     window.dispatchEvent(new CustomEvent(eventName, { detail }));
-
   }
 
 
@@ -1650,14 +1663,16 @@ window.JuiceEngine = (() => {
 
 
 
-      if (!state.isApiReady || !ytPlayer) {
-
-        state.isPlaying = !state.isPlaying;
-
+      if (!state.isApiReady || !ytPlayer || typeof ytPlayer.playVideo !== 'function') {
+        const curTrack = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
+        pendingVideoId = curTrack ? curTrack.id : null;
+        pendingAutoPlay = true;
+        state.isPlaying = true;
         emit('engine:stateChanged', state);
-
+        if (curTrack && (!curTrack.id || curTrack.id.length !== 11 || curTrack.id.includes('4819g'))) {
+          resolveAndPlayTrack(curTrack);
+        }
         return;
-
       }
 
 
@@ -2617,9 +2632,24 @@ window.JuiceEngine = (() => {
 
 })();
 
-
+// Global one-time interaction media stack unlocker
+function unlockMediaStack() {
+  if (window.engine && typeof window.engine.ensureAudioContext === 'function') {
+    window.engine.ensureAudioContext();
+  }
+  if (window.engine && typeof window.engine.unlockAudio === 'function') {
+    window.engine.unlockAudio();
+  }
+  window.removeEventListener('pointerdown', unlockMediaStack);
+  window.removeEventListener('touchstart', unlockMediaStack);
+  window.removeEventListener('click', unlockMediaStack);
+}
+if (typeof window !== 'undefined') {
+  window.addEventListener('pointerdown', unlockMediaStack, { once: true, passive: true });
+  window.addEventListener('touchstart', unlockMediaStack, { once: true, passive: true });
+  window.addEventListener('click', unlockMediaStack, { once: true, passive: true });
+}
 
 // Keep alive
-
 document.addEventListener('visibilitychange', () => { if (document.hidden && window.engine) { const state = window.engine.getState(); if (state.isPlaying && !state.isLocalPlaying && typeof ytPlayer !== 'undefined') { setTimeout(() => { if (typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo(); }, 100); } } });
 
