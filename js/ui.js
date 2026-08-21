@@ -330,19 +330,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (5 iOS 28 & GOOGLE M3 EXPRESSIVE VISUALIZERS) ═══
-  const VISUALIZER_STYLES = ['vinyl', 'orb', 'm3', 'blobs', 'hifi'];
+  // ═══ AUDIO-REACT 
+  const VISUALIZER_STYLES = ['vinyl', 'cassette', 'neon'];
 
   let currentCenterpieceStyle = localStorage.getItem('juicebx_center_style') || 'vinyl';
   if (!VISUALIZER_STYLES.includes(currentCenterpieceStyle)) currentCenterpieceStyle = 'vinyl';
 
   const deckStageWindow = document.getElementById('deck-stage-window');
 
-  const deckDisplayOrb = document.getElementById('deck-display-orb');
-  const deckDisplayM3 = document.getElementById('deck-display-m3');
-  const deckDisplayBlobs = document.getElementById('deck-display-blobs');
-  const deckDisplayHifi = document.getElementById('deck-display-hifi');
   const deckDisplayVinyl = document.getElementById('deck-display-vinyl');
+  const deckDisplayCassette = document.getElementById('deck-display-cassette');
+  const deckDisplayNeon = document.getElementById('deck-display-neon');
+
+  // Legacy refs (no longer in DOM, kept as null to prevent errors)
+  const deckDisplayOrb = null;
+  const deckDisplayM3 = null;
+  const deckDisplayBlobs = null;
+  const deckDisplayHifi = null;
 
   const orbCanvas = document.getElementById('deck-reactive-orb-canvas');
   const orbCtx = orbCanvas ? orbCanvas.getContext('2d') : null;
@@ -356,11 +360,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const hifiCanvas = document.getElementById('deck-reactive-hifi-canvas');
   const hifiCtx = hifiCanvas ? hifiCanvas.getContext('2d') : null;
 
-  // 1. iOS 28 Dynamic Siri Orb State
-  let orbPhase = 0;
-  const orbDust = Array.from({ length: 28 }, () => ({
-    angle: Math.random() * Math.PI * 2,
-    dist: 50 + Math.random() * 90,
     speed: (0.005 + Math.random() * 0.015) * (Math.random() > 0.5 ? 1 : -1),
     size: 1 + Math.random() * 2,
     alpha: 0.2 + Math.random() * 0.6
