@@ -98,10 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
     searchResultsCount: document.getElementById('search-results-count'),
     searchEraChips: document.getElementById('search-era-chips'),
 
-    // Rabbit R1 Mode & Hardware
-    btnToggleRabbitMode: document.getElementById('btn-toggle-rabbit-mode'),
-    toggleSettingsRabbit: document.getElementById('toggle-settings-rabbit'),
-    rabbitScrollWheel: document.getElementById('rabbit-scroll-wheel'),
     toggleSettingsHaptics: document.getElementById('toggle-settings-haptics'),
 
     // Music & Storage in Settings
@@ -233,63 +229,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // ═══ RABBIT R1 HARDWARE CHASSIS & AUTO-DETECTION ═══
-  function setRabbitR1Mode(active) {
-    if (active) {
-      document.body.classList.add('rabbit-mode-active');
-      if (els.toggleSettingsRabbit) els.toggleSettingsRabbit.classList.add('active');
-      localStorage.setItem('juicebx_rabbit_mode', 'true');
-    } else {
-      document.body.classList.remove('rabbit-mode-active');
-      if (els.toggleSettingsRabbit) els.toggleSettingsRabbit.classList.remove('active');
-      localStorage.setItem('juicebx_rabbit_mode', 'false');
-    }
-  }
-
-  function checkRabbitAutoDetect() {
-    const isSquareScreen = (window.innerWidth / window.innerHeight) >= 0.85 && (window.innerWidth / window.innerHeight) <= 1.15 && window.innerWidth <= 600;
-    const isRabbitUA = navigator.userAgent && (navigator.userAgent.includes('Rabbit') || navigator.userAgent.includes('r1'));
-    const isExplicitlyEnabled = localStorage.getItem('juicebx_rabbit_mode') === 'true';
-    if (isSquareScreen || isRabbitUA || isExplicitlyEnabled) {
-      setRabbitR1Mode(true);
-    }
-  }
-
-  checkRabbitAutoDetect();
-  window.addEventListener('resize', checkRabbitAutoDetect);
-
-  if (els.toggleSettingsRabbit) {
-    els.toggleSettingsRabbit.addEventListener('click', () => {
-      const isCurrentlyActive = document.body.classList.contains('rabbit-mode-active');
-      setRabbitR1Mode(!isCurrentlyActive);
-    });
-  }
-
-  // Rabbit Scroll Wheel analog volume gesture
-  if (els.rabbitScrollWheel) {
-    let startY = 0;
-    els.rabbitScrollWheel.addEventListener('touchstart', (e) => {
-      startY = e.touches[0].clientY;
-    }, { passive: true });
-
-    els.rabbitScrollWheel.addEventListener('touchmove', (e) => {
-      const currentY = e.touches[0].clientY;
-      const diffY = startY - currentY;
-      if (Math.abs(diffY) > 8) {
-        const state = engine.getState();
-        const newVol = Math.max(0, Math.min(100, state.volume + (diffY > 0 ? 5 : -5)));
-        engine.setVolume(newVol);
-        startY = currentY;
-      }
-    }, { passive: true });
-
-    els.rabbitScrollWheel.addEventListener('wheel', (e) => {
+  // ═══ RABBIT R1 & MOBILE PHYSICAL HARDWARE INPUT BINDINGS ═══
+  window.addEventListener('wheel', (e) => {
+    // In Player Deck view (activeNavIndex === 2), wheel adjusts volume smoothly
+    if (activeNavIndex === 2) {
       e.preventDefault();
       const state = engine.getState();
       const newVol = Math.max(0, Math.min(100, state.volume + (e.deltaY < 0 ? 5 : -5)));
       engine.setVolume(newVol);
-    }, { passive: false });
-  }
+      if (els.deckVolSlider) els.deckVolSlider.value = newVol;
+      engine.playHaptic(450, 0.015);
+    }
+  }, { passive: false });
+
+  // Rabbit R1 side buttons & Keyboard Controls (Space = Play/Pause, Arrows = Skip/Prev)
+  window.addEventListener('keydown', (e) => {
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+    if (e.key === ' ' || e.key === 'MediaPlayPause') {
+      e.preventDefault();
+      engine.togglePlay();
+      engine.playHaptic(600, 0.02);
+    } else if (e.key === 'ArrowRight' || e.key === 'MediaTrackNext') {
+      e.preventDefault();
+      engine.next();
+      engine.playHaptic(500, 0.02);
+    } else if (e.key === 'ArrowLeft' || e.key === 'MediaTrackPrevious') {
+      e.preventDefault();
+      engine.previous();
+      engine.playHaptic(500, 0.02);
+    }
+  });
 
   // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (5 iOS 28 & GOOGLE M3 EXPRESSIVE VISUALIZERS) ═══
   const VISUALIZER_STYLES = ['orb', 'm3', 'blobs', 'hifi', 'vinyl'];
@@ -3088,11 +3057,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (els.rabbitScrollWheel) {
-    els.rabbitScrollWheel.addEventListener('wheel', () => {
-      engine.playHaptic(450, 0.015);
-    });
-  }
+
 
   navBtns.forEach(btn => {
     btn.addEventListener('click', () => engine.playHaptic(500, 0.02));

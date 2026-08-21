@@ -254,134 +254,35 @@
       transform: scale(0.985);
     }
 
-    /* ═══ RABBIT R1 HARDWARE CHASSIS ═══ */
-    #rabbit-chassis-wrapper {
-      transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    .rabbit-mode-active #rabbit-chassis-wrapper {
-      background: #ff4f00;
-      border-radius: 40px;
-      padding: 16px 20px 18px 16px;
-      box-shadow: 0 25px 60px -10px rgba(255, 79, 0, 0.45), 0 10px 30px rgba(0,0,0,0.8), inset 0 2px 4px rgba(255,255,255,0.4);
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      max-width: 540px;
-      width: 100%;
-    }
-    .rabbit-mode-active #app-frame {
-      border-radius: 24px !important;
-      border: 3px solid #141416 !important;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.9) !important;
-      max-height: 640px !important;
-      height: 600px !important;
-      width: 100% !important;
-      max-width: 390px !important;
-      aspect-ratio: auto !important;
-    }
-    .rabbit-mode-active #view-player-deck {
-      padding: 12px 14px 54px 14px !important;
-      overflow-y: hidden !important;
-    }
-    .rabbit-mode-active .vinyl-platter {
-      max-width: 170px !important;
-      margin: 4px auto 8px auto !important;
-    }
-    .rabbit-mode-active #deck-track-title {
-      font-size: 16px !important;
-      margin-top: 2px !important;
-    }
-    .rabbit-mode-active #deck-track-artist {
-      font-size: 12px !important;
-    }
-    .rabbit-mode-active #deck-btn-play {
-      width: 50px !important;
-      height: 50px !important;
-    }
-    .rabbit-mode-active #deck-play-icon {
-      font-size: 24px !important;
-    }
-    .rabbit-mode-active .absolute.bottom-0 {
-      height: 54px !important;
-    }
-    .rabbit-mode-active .nav-btn i {
-      font-size: 20px !important;
-    }
-    .rabbit-hardware-side {
-      display: none;
-    }
-    .rabbit-mode-active .rabbit-hardware-side {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      height: 540px;
-      width: 60px;
-    }
-    .rabbit-camera-eye {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #111114;
-      border: 3px solid #222228;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.3);
-      position: relative;
-    }
-    .rabbit-camera-eye::after {
-      content: '';
-      position: absolute;
-      width: 18px;
-      height: 18px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: radial-gradient(circle, #0ea5e9 0%, #1e1b4b 70%, #000 100%);
-      border-radius: 50%;
-      box-shadow: 0 0 6px rgba(14, 165, 233, 0.8);
-    }
-    .rabbit-scroll-wheel {
-      width: 32px;
-      height: 90px;
-      border-radius: 16px;
-      background: linear-gradient(180deg, #333 0%, #1a1a1e 50%, #333 100%);
-      box-shadow: inset 0 0 4px rgba(0,0,0,0.8), 0 4px 10px rgba(0,0,0,0.4);
-      border: 2px solid #444;
-      cursor: ns-resize;
-    }
-
     /* Scrollbar */
     ::-webkit-scrollbar { display: none; }
   </style>
 </head>
-<body class="min-h-screen p-0 m-0 overflow-hidden">
+<body class="h-screen w-screen p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
 
-  <!-- RABBIT R1 HARDWARE CHASSIS CONTAINER -->
-  <div id="rabbit-chassis-wrapper" class="relative transition-all duration-300">
+  <!-- MAIN APP CONTAINER -->
+  <div id="app-frame" class="relative w-full h-full min-h-screen overflow-hidden flex flex-col" style="background: var(--bg-app);">
 
-    <!-- APP INNER FRAME -->
-    <div id="app-frame" class="relative w-full h-[100dvh] overflow-hidden flex flex-col" style="background: var(--bg-app);">
+    <!-- 5-Panel Horizontal Swipe Carousel -->
+    <div class="flex-1 relative flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full h-full" id="app-container">
 
-      <!-- MAIN APP CONTENT AREA (5-Panel Horizontal Swipe Carousel) -->
-      <div class="flex-1 relative flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full" id="app-container">
-
-        <!-- ═══ PANEL 0: HOME / TOP 100 SHUFFLES ═══ -->
-        <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-64 px-5 pt-5" style="background: var(--bg-panel);">
-          
-          <!-- Top Bar -->
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex items-center gap-2">
-              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-16 w-auto max-w-[210px] object-contain filter drop-shadow-[0_4px_16px_rgba(255,79,0,0.35)] cursor-pointer active:scale-95 transition-transform" title="JuiceBx">
-            </div>
-            <div class="text-right">
-              <div class="flex items-center justify-end gap-1.5 mb-0.5">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span class="text-[10px] font-black tracking-widest uppercase text-purple-400">v2.9.0 MASTER</span>
-              </div>
-              <span class="text-xs font-bold" style="color: var(--text-secondary);">Top 100 Shuffles</span>
-            </div>
+      <!-- ═══ PANEL 0: HOME / TOP 100 SHUFFLES ═══ -->
+      <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-28 px-4 pt-3.5" style="background: var(--bg-panel);">
+        
+        <!-- Top Bar -->
+        <div class="flex items-center justify-between mb-3.5">
+          <div class="flex items-center gap-2">
+            <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-8 sm:h-10 w-auto max-w-[160px] object-contain filter drop-shadow-[0_2px_12px_rgba(255,79,0,0.35)] cursor-pointer active:scale-95 transition-transform" title="JuiceBx">
           </div>
+          <div class="text-right">
+            <div class="flex items-center justify-end gap-1 mb-0.5">
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-[9px] font-black tracking-widest uppercase text-purple-400">v2.9.0</span>
+            </div>
+            <span class="text-[11px] font-bold" style="color: var(--text-secondary);">Top 100 Shuffles</span>
+        </div>
 
-          <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
+        <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
           <div class="mb-5 space-y-3">
             <div class="flex items-center justify-between px-1">
               <span class="text-xs font-black uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
@@ -536,7 +437,7 @@
         </div>
 
         <!-- ═══ PANEL 1: DEDICATED SEARCH VIEW ═══ -->
-        <div id="view-search" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-64 px-5 pt-5" style="background: var(--bg-panel);">
+        <div id="view-search" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-28 px-4 pt-3.5" style="background: var(--bg-panel);">
           <!-- Search Header -->
           <div class="mb-3">
             <h1 class="text-[24px] font-black tracking-tight mb-2.5" style="color: var(--text-primary);">Search</h1>
@@ -613,7 +514,7 @@
           <div class="flex-1 flex flex-col items-center justify-center relative w-full overflow-hidden my-1 z-10">
             
             <!-- UNIFIED SQUIRCLE STAGE FRAME (Universally Identical Size Across All Modes) -->
-            <div id="deck-stage-window" class="w-[94%] max-w-[365px] h-[260px] rounded-[28px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border border-white/10 mx-auto transition-all cursor-pointer select-none active:scale-[0.985]" style="background: rgba(10, 10, 15, 0.95);" title="Tap to switch visualizer style">
+            <div id="deck-stage-window" class="w-[90%] max-w-[320px] h-[200px] sm:h-[240px] rounded-[24px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border border-white/10 mx-auto transition-all cursor-pointer select-none active:scale-[0.985]" style="background: rgba(10, 10, 15, 0.95);" title="Tap to switch visualizer style">
 
               <!-- 1. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb & Chromatic Aura (DEFAULT) -->
               <div id="deck-display-orb" class="centerpiece-display w-full h-full relative">
@@ -735,7 +636,7 @@
         </div>
 
         <!-- ═══ PANEL 3: DEDICATED LIBRARY & PLAYLISTS ═══ -->
-        <div id="view-library" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-64 px-0" style="background: var(--bg-panel);">
+        <div id="view-library" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-28 px-0" style="background: var(--bg-panel);">
           <div class="px-5 pt-5 pb-2 sticky top-0 z-20" style="background: linear-gradient(180deg, var(--bg-panel) 84%, transparent 100%); pointer-events: none;">
             <!-- Top Bar -->
             <div class="flex items-center justify-between mb-4 pointer-events-auto">
@@ -891,10 +792,10 @@
         </div>
 
         <!-- ═══ PANEL 4: SETTINGS ═══ -->
-        <div id="view-settings" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-72 px-5 pt-5" style="background: var(--bg-panel);">
+        <div id="view-settings" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-28 px-4 pt-3.5" style="background: var(--bg-panel);">
           <h1 class="text-[24px] font-black tracking-tight mb-4" style="color: var(--text-primary);">Settings</h1>
           
-          <!-- General Display & Hardware -->
+          <!-- General Display & Audio Settings -->
           <div class="glass-card p-4 mb-3 space-y-3">
             <div class="flex items-center justify-between">
               <div>
@@ -902,16 +803,6 @@
                 <p class="text-xs" style="color: var(--text-tertiary);">Toggle light / dark aesthetics</p>
               </div>
               <div class="toggle-switch" id="toggle-light-mode">
-                <div class="toggle-knob"></div>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
-              <div>
-                <p class="font-bold text-sm" style="color: #ff4f00;">Rabbit R1 Hardware Mode</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Authentic Teenage Engineering casing</p>
-              </div>
-              <div class="toggle-switch" id="toggle-settings-rabbit">
                 <div class="toggle-knob"></div>
               </div>
             </div>
@@ -1052,12 +943,6 @@
 
     </div>
 
-    <!-- HARDWARE SIDE CONTROLS FOR RABBIT R1 -->
-    <div class="rabbit-hardware-side">
-      <div class="rabbit-camera-eye" title="360° Rotational Camera"></div>
-      <div class="rabbit-scroll-wheel" id="rabbit-scroll-wheel" title="Analog Scroll Wheel"></div>
-      <div class="w-4 h-4 rounded-full bg-black/40"></div>
-    </div>
   </div>
 
   <!-- ═══ MODAL: SLEEP TIMER ═══ -->
