@@ -2315,7 +2315,7 @@ window.JuiceEngine = (() => {
 
             id: "pl_heavy_rotation",
 
-            name: "≡ƒöÑ Heavy Rotation",
+            name: "🔥 Heavy Rotation",
 
             description: "Daily studio grails & essential anthems",
 
@@ -2339,7 +2339,7 @@ window.JuiceEngine = (() => {
 
             id: "pl_midnight_vibes",
 
-            name: "≡ƒîÖ Midnight Vibes",
+            name: "🌙 Midnight Vibes",
 
             description: "Late night drive & atmospheric gems",
 

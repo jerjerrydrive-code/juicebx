@@ -906,9 +906,10 @@
               <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex flex-col items-center justify-center relative">
                 <div class="vinyl-deck-wrapper relative flex items-center justify-center transition-transform duration-300" id="deck-vinyl-wrapper">
                   <div class="vinyl-platter paused relative transition-all duration-300 shadow-2xl" id="deck-vinyl-platter" style="width: min(230px,60vw,28vh); height: min(230px,60vw,28vh);">
-                    <div class="vinyl-platter-grooves"></div>
-                    <div class="vinyl-center-hole"></div>
-                    <div class="vinyl-label-art" id="deck-vinyl-art" style="background-image: url('999_rose_heart_logo.png');"></div>
+                    <div class="vinyl-grooves"></div>
+                    <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('999_rose_heart_logo.png');"></div>
+                    <div class="vinyl-reflection"></div>
+                    <div class="spindle-hole"></div>
                   </div>
                 </div>
               </div>
@@ -1206,16 +1207,35 @@
         </div>
 
         <!-- ═══ PANEL 4: SETTINGS ═══ -->
-        <div id="view-settings" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-4 pt-3.5" style="background: var(--bg-panel);">
-          <div class="w-full max-w-md mx-auto flex flex-col">
-          <h1 class="text-[24px] font-black tracking-tight mb-4" style="color: var(--text-primary);">Settings</h1>
+        <div id="view-settings" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-10 px-4 pt-3.5" style="background: var(--bg-panel);">
+          <div class="w-full max-w-md mx-auto flex flex-col space-y-3 pt-1">
           
-          <!-- General Display & Audio Settings -->
-          <div class="glass-card p-4 mb-3 space-y-3">
+          <!-- Top Bar -->
+          <div class="flex items-center justify-between px-1">
+            <h1 class="text-[22px] font-black tracking-tight" style="color: var(--text-primary);">Settings</h1>
+            <span class="text-[10px] font-black px-2.5 py-0.5 rounded-full bg-white/10 text-white/80 border border-white/10">v3.0.0</span>
+          </div>
+
+          <!-- 1. Aesthetic Themes (Pure Circles Only) -->
+          <div class="glass-card p-3.5 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Themes</p>
+                <p class="text-[11px]" style="color: var(--text-tertiary);">Tap circle to cycle 4 colors • Hold to save</p>
+              </div>
+              <button id="btn-theme-expand" class="text-xs font-black px-3 py-1 rounded-lg glass-input active:scale-95 transition-all" style="color: var(--accent);">Browse 338</button>
+            </div>
+            <div class="swatch-strip-container pt-1">
+              <div id="theme-swatch-row" class="theme-swatch-row"></div>
+            </div>
+          </div>
+
+          <!-- 2. System Preferences (Organized Clean Toggles) -->
+          <div class="glass-card p-3.5 space-y-2.5">
             <div class="flex items-center justify-between">
               <div>
                 <p class="font-bold text-sm" style="color: var(--text-primary);">Light Mode</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Toggle light / dark aesthetics</p>
+                <p class="text-[11px]" style="color: var(--text-tertiary);">Toggle light / dark aesthetics</p>
               </div>
               <div class="toggle-switch" id="toggle-light-mode">
                 <div class="toggle-knob"></div>
@@ -1224,8 +1244,8 @@
 
             <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
               <div>
-                <p class="font-bold text-sm" style="color: var(--text-primary);">Tactile Haptic Feedback</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Synthesized mechanical click sounds</p>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Tactile Haptics</p>
+                <p class="text-[11px]" style="color: var(--text-tertiary);">Synthesized click vibrations</p>
               </div>
               <div class="toggle-switch active" id="toggle-settings-haptics">
                 <div class="toggle-knob"></div>
@@ -1234,137 +1254,60 @@
 
             <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
               <div>
-                <p class="font-bold text-sm" style="color: var(--text-primary);">Fullscreen Mode</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Immersive edge-to-edge experience</p>
-              </div>
-              <div class="toggle-switch" id="toggle-fullscreen">
-                <div class="toggle-knob"></div>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
-              <div>
-                <p class="font-bold text-sm" style="color: var(--text-primary);">Auto-Rotate to Fullscreen Video</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Landscape tilt flips Deck to Video mode</p>
-              </div>
-              <div class="toggle-switch" id="toggle-auto-rotate">
-                <div class="toggle-knob"></div>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
-              <div>
-                <p class="font-bold text-sm" style="color: var(--text-primary);">Keep Screen Awake (WakeLock)</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Keep screen on during visualizer playback</p>
-              </div>
-              <div class="toggle-switch" id="toggle-wakelock">
-                <div class="toggle-knob"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
-              <div>
-                <p class="font-bold text-sm" style="color: var(--text-primary);">Remember Last Session</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Restore last song & queue on boot</p>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Remember Session</p>
+                <p class="text-[11px]" style="color: var(--text-tertiary);">Restore song & queue on boot</p>
               </div>
               <div class="toggle-switch active" id="toggle-remember-session">
                 <div class="toggle-knob"></div>
               </div>
             </div>
-          </div>
 
-          <!-- 🎨 Aesthetic Theme Engine: Pure Circles Only -->
-          <div class="glass-card p-4 mb-3 space-y-3">
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
               <div>
-                <p class="font-bold text-sm" style="color: var(--text-primary);">Themes</p>
-                <p class="text-[11px]" style="color: var(--text-tertiary);">Tap circle to cycle 4 colors • Hold to save favorite</p>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Keep Screen Awake</p>
+                <p class="text-[11px]" style="color: var(--text-tertiary);">Prevent screen sleep during playback</p>
               </div>
-              <button id="btn-theme-expand" class="text-xs font-black px-2.5 py-1 rounded-lg glass-input active:scale-95 transition-all" style="color: var(--accent);">Browse 338</button>
-            </div>
-
-            <!-- Pure Circles Swatch Strip -->
-            <div class="swatch-strip-container pt-1">
-              <div id="theme-swatch-row" class="theme-swatch-row"></div>
-            </div>
-          </div>
-
-          <!-- Software Version & System Status Card -->
-          <div class="glass-card p-4 mb-3 space-y-2.5">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-sm">
-                  <i class="ph-bold ph-sparkle"></i>
-                </div>
-                <div>
-                  <p class="font-black text-sm" style="color: var(--text-primary);">JuiceBx Audio Deck</p>
-                  <p class="text-[10px] font-bold text-emerald-400 flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span> Latest Version (v3.0.0 Rabbit R1 Native Edition)
-                  </p>
-                </div>
+              <div class="toggle-switch" id="toggle-wakelock">
+                <div class="toggle-knob"></div>
               </div>
-              <span class="text-[10px] font-black px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10">LATEST</span>
             </div>
-            <div class="text-[11px] font-medium pt-2 border-t flex justify-between" style="border-color: var(--border-card); color: var(--text-tertiary);">
-              <span>Engine: Zero-Latency 2.0</span>
-              <span class="text-indigo-400 font-bold">Synced LRC Active</span>
-            </div>
-          </div>
 
-          <!-- Sleep Timer Launcher in Settings -->
-          <div class="glass-card p-4 mb-3">
-            <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
               <div>
-                <p class="font-bold text-sm" style="color: var(--text-primary);">Sleep Timer</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Gradual volume fade-out after duration</p>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Auto-Rotate Video</p>
+                <p class="text-[11px]" style="color: var(--text-tertiary);">Landscape tilt flips Deck to Video</p>
               </div>
-              <button id="settings-btn-sleep" class="px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1 active:scale-95 transition-all shadow-sm" style="background: var(--btn-active-bg); color: var(--btn-active-text);">
-                <i class="ph-bold ph-timer"></i> Set Timer
-              </button>
+              <div class="toggle-switch" id="toggle-auto-rotate">
+                <div class="toggle-knob"></div>
+              </div>
             </div>
           </div>
 
-          <!-- Music Library & Storage Management -->
-          <div class="glass-card p-4 mb-3 space-y-3">
-            <div>
-              <p class="font-bold text-sm" style="color: var(--text-primary);">Music Storage & Data Management</p>
-              <p class="text-xs" style="color: var(--text-tertiary);">Manage local files, downloads cache, and search history</p>
-            </div>
+          <!-- 3. Storage & Local Files -->
+          <div class="glass-card p-3.5 space-y-2.5">
+            <p class="font-bold text-sm" style="color: var(--text-primary);">Storage & Local Files</p>
+            
+            <button id="btn-import-folder-settings" class="w-full py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all glass-input" style="color: var(--text-primary);">
+              <i class="ph-bold ph-folder-simple-plus text-sm text-indigo-400"></i> Import Local Audio Files
+            </button>
+            <input type="file" id="local-folder-input-settings" webkitdirectory directory multiple accept="audio/*" class="hidden">
 
-            <!-- Import Local Music Folder -->
-            <div class="pt-2 border-t" style="border-color: var(--border-card);">
-              <button id="btn-import-folder-settings" class="w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all glass-input" style="color: var(--text-primary);">
-                <i class="ph-bold ph-folder-simple-plus text-base text-indigo-400"></i> Import Local Audio Files / Folder
+            <div class="grid grid-cols-2 gap-2 pt-0.5">
+              <button id="btn-clear-downloads" class="py-2 rounded-xl font-bold text-[11px] flex items-center justify-center gap-1 active:scale-95 transition-all glass-input" style="color: #ef4444;">
+                <i class="ph-bold ph-trash text-xs"></i> Clear Cache
               </button>
-              <input type="file" id="local-folder-input-settings" webkitdirectory directory multiple accept="audio/*" class="hidden">
-            </div>
-
-            <!-- Clear Search History -->
-            <div class="pt-2 border-t" style="border-color: var(--border-card);">
-              <button id="btn-clear-searches-settings" class="w-full py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition-all glass-input" style="color: var(--text-secondary);">
-                <i class="ph-bold ph-clock-counter-clockwise text-sm"></i> Clear Search History
-              </button>
-            </div>
-
-            <!-- Clear Offline Downloads Cache -->
-            <div class="pt-2 border-t" style="border-color: var(--border-card);">
-              <button id="btn-clear-downloads" class="w-full py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition-all glass-input" style="color: #ef4444;">
-                <i class="ph-bold ph-trash text-sm"></i> Clear Offline Downloads Cache
-              </button>
-            </div>
-
-            <!-- Reset Playlists to Default -->
-            <div class="pt-2 border-t" style="border-color: var(--border-card);">
-              <button id="btn-reset-playlists-settings" class="w-full py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition-all glass-input" style="color: var(--text-tertiary);">
-                <i class="ph-bold ph-arrows-clockwise text-sm"></i> Reset Default Playlists
+              <button id="btn-reset-playlists-settings" class="py-2 rounded-xl font-bold text-[11px] flex items-center justify-center gap-1 active:scale-95 transition-all glass-input" style="color: var(--text-secondary);">
+                <i class="ph-bold ph-arrows-clockwise text-xs"></i> Reset Playlists
               </button>
             </div>
           </div>
 
           <!-- 999 Tribute Footer -->
-          <div class="text-center pt-2 pb-4 cursor-pointer active:scale-95 transition-transform" id="settings-tribute-link">
+          <div class="text-center pt-1 pb-4 cursor-pointer active:scale-95 transition-transform" id="settings-tribute-link">
             <span class="text-xs font-black tracking-widest text-purple-400">🕊️ 999 FOREVER</span>
             <p class="text-[10px] font-medium mt-0.5" style="color: var(--text-tertiary);">A Tribute to Jarad Higgins (Juice WRLD)</p>
           </div>
+
           </div>
         </div>
 
