@@ -1,0 +1,12 @@
+node_modules/
+npm-debug.log
+.DS_Store
+.env
+*.log
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+dist/
+build/
+coverage/

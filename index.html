@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>JuiceBx — Rabbit R1 Master Audio Deck</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            rabbit: '#ff4f00'
+          }
+        }
+      }
+    };
+  </script>
+  
+  <!-- Phosphor Icons CSS -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <style>
+    :root {
+      --bg-app: #08080a;
+      --bg-panel: #0d0d12;
+      --bg-card: rgba(22, 22, 28, 0.7);
+      --bg-card-solid: #16161c;
+      --bg-input: #1b1b24;
+      --bg-nav: rgba(13, 13, 18, 0.88);
+      --bg-mini: rgba(22, 22, 30, 0.94);
+      --text-primary: #ffffff;
+      --text-secondary: #94a3b8;
+      --text-tertiary: #64748b;
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-input: rgba(255, 255, 255, 0.12);
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.35);
+      --btn-active-bg: #ffffff;
+      --btn-active-text: #000000;
+      --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.65);
+      --rabbit-orange: #ff4f00;
+    }
+
+    html.light {
+      --bg-app: #f1f5f9;
+      --bg-panel: #f8fafc;
+      --bg-card: rgba(255, 255, 255, 0.88);
+      --bg-card-solid: #ffffff;
+      --bg-input: #e2e8f0;
+      --bg-nav: rgba(255, 255, 255, 0.92);
+      --bg-mini: rgba(255, 255, 255, 0.96);
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-tertiary: #94a3b8;
+      --border-card: rgba(15, 23, 42, 0.09);
+      --border-input: rgba(15, 23, 42, 0.15);
+      --accent: #4f46e5;
+      --accent-glow: rgba(79, 70, 229, 0.25);
+      --btn-active-bg: #0f172a;
+      --btn-active-text: #ffffff;
+      --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.07);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      overscroll-behavior: none;
+      background-color: #030305;
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .app-view {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* ═══ CRISP JUICEBX LOGO BRANDING ═══ */
+    .juicebx-logo {
+      object-fit: contain;
+      image-rendering: auto;
+      transition: filter 0.25s ease, opacity 0.25s ease, transform 0.2s ease;
+      will-change: filter, transform;
+    }
+    html.dark .juicebx-logo {
+      filter: brightness(0) invert(1);
+    }
+    html.light .juicebx-logo {
+      filter: brightness(0);
+    }
+
+    /* ═══ GLASSMORPHIC & NEUMORPHIC CARDS ═══ */
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border-radius: 22px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-card);
+    }
+
+    .glass-input {
+      background: var(--bg-input);
+      border: 1px solid var(--border-input);
+      color: var(--text-primary);
+    }
+
+    /* ═══ 3D VINYL TURNTABLE ═══ */
+    .vinyl-platter {
+      width: 100%;
+      max-width: 240px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: #0a0a0d;
+      position: relative;
+      transform: translateZ(0) scale(1);
+      box-shadow: 0 20px 45px -8px rgba(0, 0, 0, 0.7), 0 10px 20px -4px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.08);
+      animation: spinVinyl 8s linear infinite;
+      animation-play-state: paused;
+      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+    }
+    .vinyl-platter.paused {
+      transform: translateZ(0) scale(0.96);
+      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.4), 0 6px 12px -2px rgba(0,0,0,0.2);
+    }
+    .vinyl-grooves {
+      position: absolute; inset: 0; border-radius: 50%;
+      background: repeating-radial-gradient(circle at center, #0e0e11 0px, #16161b 2px, #0e0e11 4px, #131317 5px);
+      mask-image: radial-gradient(circle, transparent 34%, black 35%);
+      -webkit-mask-image: radial-gradient(circle, transparent 34%, black 35%);
+      opacity: 0.7;
+    }
+    .album-art-center {
+      position: absolute; top: 50%; left: 50%; width: 44%; height: 44%;
+      transform: translate(-50%, -50%) translateZ(0); border-radius: 50%;
+      overflow: hidden; border: 3px solid #141418; background-color: #000;
+      background-size: cover; background-position: center;
+      box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    }
+    .vinyl-reflection {
+      position: absolute; inset: 0; border-radius: 50%;
+      background: conic-gradient(from 45deg, transparent 0%, rgba(255,255,255,0.18) 15%, transparent 26%, transparent 46%, rgba(255,255,255,0.18) 66%, transparent 76%, transparent 100%);
+      mix-blend-mode: screen; pointer-events: none;
+    }
+    .spindle-hole {
+      position: absolute; top: 50%; left: 50%; width: 13px; height: 13px;
+      transform: translate(-50%, -50%) translateZ(0); background: radial-gradient(circle, #2a2a32 0%, #16161b 100%);
+      border-radius: 50%; box-shadow: inset 0 2px 4px rgba(0,0,0,0.85); border: 1px solid #000;
+    }
+    @keyframes spinVinyl { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    /* ═══ RETRO STEREO CASSETTE TAPE ═══ */
+    .cassette-body {
+      width: 100%;
+      max-width: 280px;
+      height: 180px;
+      background: linear-gradient(145deg, #181820 0%, #0c0c10 100%);
+      border-radius: 16px;
+      border: 2px solid rgba(255,255,255,0.12);
+      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .cassette-window {
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 20px;
+      border: 1.5px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 14px;
+      backdrop-filter: blur(4px);
+    }
+    .tape-spool {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #24242e;
+      border: 3px solid #ffffff;
+      position: relative;
+      animation: spinSpool 3.5s linear infinite;
+      animation-play-state: paused;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .tape-spool::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      background: #0d0d12;
+      border: 2px dashed #ffffff;
+    }
+    @keyframes spinSpool {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .tape-vu-segment {
+      width: 5px;
+      height: 11px;
+      border-radius: 2px;
+      background: rgba(255,255,255,0.1);
+      transition: background-color 0.05s ease, box-shadow 0.05s ease;
+    }
+    .tape-vu-segment.lit-green { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
+    .tape-vu-segment.lit-yellow { background: #eab308; box-shadow: 0 0 6px #eab308; }
+    .tape-vu-segment.lit-red { background: #ef4444; box-shadow: 0 0 8px #ef4444; }
+
+    /* ═══ SCRUBBER ═══ */
+    .scrubber-track { height: 5px; background: rgba(255,255,255,0.14); border-radius: 999px; position: relative; cursor: pointer; }
+    html.light .scrubber-track { background: #cbd5e1; }
+    .scrubber-fill { position: absolute; left: 0; top: 0; height: 100%; background: var(--accent); border-radius: 999px; width: 100%; transform-origin: left; transform: scaleX(0); will-change: transform; }
+    .scrubber-thumb { position: absolute; left: 0; top: 50%; width: 14px; height: 14px; background: #ffffff; border-radius: 50%; transform: translate(-50%, -50%); box-shadow: 0 2px 8px rgba(0,0,0,0.5); border: 2px solid var(--accent); }
+
+    /* ═══ TOGGLE SWITCH ═══ */
+    .toggle-switch {
+      width: 48px; height: 28px; background-color: rgba(255,255,255,0.12); border-radius: 9999px;
+      position: relative; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    html.light .toggle-switch { background-color: #cbd5e1; }
+    .toggle-switch.active { background-color: var(--accent); }
+    .toggle-switch .toggle-knob {
+      position: absolute; left: 3px; top: 3px; width: 22px; height: 22px;
+      background-color: #ffffff; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .toggle-switch.active .toggle-knob { transform: translateX(20px); }
+
+    /* ═══ TRACK ITEMS ═══ */
+    .track-item {
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      border-radius: 18px;
+      border: 1px solid var(--border-card);
+      padding: 9px 12px;
+      margin-bottom: 8px;
+      transition: transform 0.18s ease, background 0.18s ease;
+      touch-action: pan-y;
+      user-select: none;
+    }
+    .track-item:active {
+      transform: scale(0.985);
+    }
+
+    /* ═══ RABBIT R1 HARDWARE CHASSIS ═══ */
+    #rabbit-chassis-wrapper {
+      transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .rabbit-mode-active #rabbit-chassis-wrapper {
+      background: #ff4f00;
+      border-radius: 40px;
+      padding: 16px 20px 18px 16px;
+      box-shadow: 0 25px 60px -10px rgba(255, 79, 0, 0.45), 0 10px 30px rgba(0,0,0,0.8), inset 0 2px 4px rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 540px;
+      width: 100%;
+    }
+    .rabbit-mode-active #app-frame {
+      border-radius: 24px !important;
+      border: 3px solid #141416 !important;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.9) !important;
+      max-height: 640px !important;
+      height: 600px !important;
+      width: 100% !important;
+      max-width: 390px !important;
+      aspect-ratio: auto !important;
+    }
+    .rabbit-mode-active #view-player-deck {
+      padding: 12px 14px 54px 14px !important;
+      overflow-y: hidden !important;
+    }
+    .rabbit-mode-active .vinyl-platter {
+      max-width: 170px !important;
+      margin: 4px auto 8px auto !important;
+    }
+    .rabbit-mode-active #deck-track-title {
+      font-size: 16px !important;
+      margin-top: 2px !important;
+    }
+    .rabbit-mode-active #deck-track-artist {
+      font-size: 12px !important;
+    }
+    .rabbit-mode-active #deck-btn-play {
+      width: 50px !important;
+      height: 50px !important;
+    }
+    .rabbit-mode-active #deck-play-icon {
+      font-size: 24px !important;
+    }
+    .rabbit-mode-active .absolute.bottom-0 {
+      height: 54px !important;
+    }
+    .rabbit-mode-active .nav-btn i {
+      font-size: 20px !important;
+    }
+    .rabbit-hardware-side {
+      display: none;
+    }
+    .rabbit-mode-active .rabbit-hardware-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 540px;
+      width: 60px;
+    }
+    .rabbit-camera-eye {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #111114;
+      border: 3px solid #222228;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .rabbit-camera-eye::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, #0ea5e9 0%, #1e1b4b 70%, #000 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 6px rgba(14, 165, 233, 0.8);
+    }
+    .rabbit-scroll-wheel {
+      width: 32px;
+      height: 90px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #333 0%, #1a1a1e 50%, #333 100%);
+      box-shadow: inset 0 0 4px rgba(0,0,0,0.8), 0 4px 10px rgba(0,0,0,0.4);
+      border: 2px solid #444;
+      cursor: ns-resize;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-0 m-0 overflow-hidden">
+
+  <!-- RABBIT R1 HARDWARE CHASSIS CONTAINER -->
+  <div id="rabbit-chassis-wrapper" class="relative transition-all duration-300">
+
+    <!-- APP INNER FRAME -->
+    <div id="app-frame" class="relative w-full max-w-[430px] h-[100dvh] sm:h-[92vh] sm:max-h-[880px] sm:rounded-[48px] sm:border-[10px] sm:border-[#1b1b22] overflow-hidden flex flex-col shadow-2xl" style="background: var(--bg-app);">
+
+      <!-- MAIN APP CONTENT AREA (5-Panel Horizontal Swipe Carousel) -->
+      <div class="flex-1 relative flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full" id="app-container">
+
+        <!-- ═══ PANEL 0: HOME / TOP 100 SHUFFLES ═══ -->
+        <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-64 px-5 pt-5" style="background: var(--bg-panel);">
+          
+          <!-- Top Bar -->
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-16 w-auto max-w-[210px] object-contain filter drop-shadow-[0_4px_16px_rgba(255,79,0,0.35)] cursor-pointer active:scale-95 transition-transform" title="JuiceBx">
+            </div>
+            <div class="text-right">
+              <div class="flex items-center justify-end gap-1.5 mb-0.5">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-[10px] font-black tracking-widest uppercase text-purple-400">v2.9.0 MASTER</span>
+              </div>
+              <span class="text-xs font-bold" style="color: var(--text-secondary);">Top 100 Shuffles</span>
+            </div>
+          </div>
+
+          <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
+          <div class="mb-5 space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <span class="text-xs font-black uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
+                <i class="ph-fill ph-crown-simple text-sm text-amber-400"></i> Featured Shuffles
+              </span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300">100 Tracks Each</span>
+            </div>
+
+            <!-- Top 2 Hero Cards -->
+            <div class="grid grid-cols-2 gap-3.5">
+              <!-- Official Discography -->
+              <div class="genre-card relative h-40 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3.5 flex flex-col justify-between bg-gradient-to-br from-purple-800 via-indigo-950 to-black shadow-xl border border-purple-500/40 group hover:border-purple-400/60" data-genre="Juice WRLD: Official Discography">
+                <div class="flex items-center justify-between">
+                  <span class="text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-purple-500/60 text-white flex items-center gap-1 shadow-sm">
+                    <i class="ph-fill ph-broadcast animate-pulse"></i> OFFICIAL
+                  </span>
+                  <div class="w-8 h-8 rounded-full bg-purple-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i class="ph-fill ph-shuffle text-base text-purple-300"></i>
+                  </div>
+                </div>
+                <div>
+                  <span class="font-black text-white text-[15px] leading-tight block">Official Discography</span>
+                  <span class="text-[11px] font-medium text-purple-200/80 mt-0.5 block">All Albums, Singles & Hits</span>
+                  <span class="text-[10px] font-bold text-amber-300 mt-1 block">107 Tracks Shuffled</span>
+                </div>
+              </div>
+
+              <!-- The Lost Vault -->
+              <div class="genre-card relative h-40 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3.5 flex flex-col justify-between bg-gradient-to-br from-amber-700 via-rose-950 to-black shadow-xl border border-amber-500/40 group hover:border-amber-400/60" data-genre="Juice WRLD: The Lost Vault">
+                <div class="flex items-center justify-between">
+                  <span class="text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-500/60 text-white flex items-center gap-1 shadow-sm">
+                    <i class="ph-fill ph-lock-key animate-pulse"></i> THE VAULT
+                  </span>
+                  <div class="w-8 h-8 rounded-full bg-amber-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i class="ph-fill ph-shuffle text-base text-amber-300"></i>
+                  </div>
+                </div>
+                <div>
+                  <span class="font-black text-white text-[15px] leading-tight block">The Lost Vault</span>
+                  <span class="text-[11px] font-medium text-amber-200/80 mt-0.5 block">Unreleased Grails & Leaks</span>
+                  <span class="text-[10px] font-bold text-amber-300 mt-1 block">90 Grails Shuffled</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOP 100 GENRE SHUFFLES GRID -->
+          <div class="mb-4">
+            <div class="flex items-center justify-between px-1 mb-2.5">
+              <p class="text-xs font-black uppercase tracking-wider" style="color: var(--text-tertiary);">Top 100 Genre Shuffles</p>
+              <span class="text-[10px] font-bold" style="color: var(--text-tertiary);">Tap to Shuffle & Play</span>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-3" id="home-shuffles-grid">
+              <!-- Hip-Hop & Trap -->
+              <div class="genre-card relative h-28 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-amber-600 via-red-900 to-black shadow-md border border-amber-500/30" data-genre="hiphop_top100">
+                <div class="flex justify-between items-center">
+                  <span class="text-[9px] font-bold text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded-full">TOP 100</span>
+                  <i class="ph-fill ph-shuffle text-white/70"></i>
+                </div>
+                <div>
+                  <span class="font-black text-white text-sm block">Hip-Hop & Trap</span>
+                  <span class="text-[10px] text-white/70 font-medium truncate block">Drake, Travis, Kendrick</span>
+                </div>
+              </div>
+
+              <!-- Emo Rap & Heartbreak -->
+              <div class="genre-card relative h-28 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-purple-900 via-indigo-950 to-black shadow-md border border-purple-500/30" data-genre="emo_rap_top100">
+                <div class="flex justify-between items-center">
+                  <span class="text-[9px] font-bold text-purple-300 bg-purple-500/20 px-1.5 py-0.5 rounded-full">TOP 100</span>
+                  <i class="ph-fill ph-shuffle text-white/70"></i>
+                </div>
+                <div>
+                  <span class="font-black text-white text-sm block">Emo Rap & Sad Vibes</span>
+                  <span class="text-[10px] text-white/70 font-medium truncate block">Juice, Peep, X, Trippie</span>
+                </div>
+              </div>
+
+              <!-- Pop & Global Hits -->
+              <div class="genre-card relative h-28 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-pink-600 via-purple-900 to-black shadow-md border border-pink-500/30" data-genre="pop_top100">
+                <div class="flex justify-between items-center">
+                  <span class="text-[9px] font-bold text-pink-300 bg-pink-500/20 px-1.5 py-0.5 rounded-full">TOP 100</span>
+                  <i class="ph-fill ph-shuffle text-white/70"></i>
+                </div>
+                <div>
+                  <span class="font-black text-white text-sm block">Pop & Global Hits</span>
+                  <span class="text-[10px] text-white/70 font-medium truncate block">Weeknd, Dua, Billie</span>
+                </div>
+              </div>
+
+              <!-- R&B & Late Night Waves -->
+              <div class="genre-card relative h-28 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-blue-900 via-indigo-950 to-black shadow-md border border-blue-500/30" data-genre="rnb_top100">
+                <div class="flex justify-between items-center">
+                  <span class="text-[9px] font-bold text-blue-300 bg-blue-500/20 px-1.5 py-0.5 rounded-full">TOP 100</span>
+                  <i class="ph-fill ph-shuffle text-white/70"></i>
+                </div>
+                <div>
+                  <span class="font-black text-white text-sm block">R&B & Late Night</span>
+                  <span class="text-[10px] text-white/70 font-medium truncate block">Frank Ocean, SZA, Brent</span>
+                </div>
+              </div>
+
+              <!-- Rock & Alternative -->
+              <div class="genre-card relative h-28 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-red-800 via-rose-950 to-black shadow-md border border-red-500/30" data-genre="rock_top100">
+                <div class="flex justify-between items-center">
+                  <span class="text-[9px] font-bold text-red-300 bg-red-500/20 px-1.5 py-0.5 rounded-full">TOP 100</span>
+                  <i class="ph-fill ph-shuffle text-white/70"></i>
+                </div>
+                <div>
+                  <span class="font-black text-white text-sm block">Rock & Alternative</span>
+                  <span class="text-[10px] text-white/70 font-medium truncate block">Nirvana, Linkin Park, Monkeys</span>
+                </div>
+              </div>
+
+              <!-- Phonk & High-Octane EDM -->
+              <div class="genre-card relative h-28 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-cyan-700 via-blue-950 to-black shadow-md border border-cyan-500/30" data-genre="phonk_edm_top100">
+                <div class="flex justify-between items-center">
+                  <span class="text-[9px] font-bold text-cyan-300 bg-cyan-500/20 px-1.5 py-0.5 rounded-full">TOP 100</span>
+                  <i class="ph-fill ph-shuffle text-white/70"></i>
+                </div>
+                <div>
+                  <span class="font-black text-white text-sm block">Phonk & Electronic</span>
+                  <span class="text-[10px] text-white/70 font-medium truncate block">Kordhell, DVRST, Daft Punk</span>
+                </div>
+              </div>
+
+              <!-- Lo-Fi Beats & Chill -->
+              <div class="genre-card relative h-28 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-amber-700 via-orange-950 to-black shadow-md border border-amber-500/30" data-genre="lofi_top100">
+                <div class="flex justify-between items-center">
+                  <span class="text-[9px] font-bold text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded-full">TOP 100</span>
+                  <i class="ph-fill ph-shuffle text-white/70"></i>
+                </div>
+                <div>
+                  <span class="font-black text-white text-sm block">Lo-Fi Beats & Study</span>
+                  <span class="text-[10px] text-white/70 font-medium truncate block">ChilledCow, Lofi Girl</span>
+                </div>
+              </div>
+
+              <!-- 90s & 2000s Throwback Legends -->
+              <div class="genre-card relative h-28 rounded-2xl overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-emerald-700 via-teal-950 to-black shadow-md border border-emerald-500/30" data-genre="throwback_top100">
+                <div class="flex justify-between items-center">
+                  <span class="text-[9px] font-bold text-emerald-300 bg-emerald-500/20 px-1.5 py-0.5 rounded-full">TOP 100</span>
+                  <i class="ph-fill ph-shuffle text-white/70"></i>
+                </div>
+                <div>
+                  <span class="font-black text-white text-sm block">90s & 2000s Legends</span>
+                  <span class="text-[10px] text-white/70 font-medium truncate block">Eminem, 50 Cent, Outkast</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ PANEL 1: DEDICATED SEARCH VIEW ═══ -->
+        <div id="view-search" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-64 px-5 pt-5" style="background: var(--bg-panel);">
+          <!-- Search Header -->
+          <div class="mb-3">
+            <h1 class="text-[24px] font-black tracking-tight mb-2.5" style="color: var(--text-primary);">Search</h1>
+            <div class="relative">
+              <input type="text" id="main-search-input" placeholder="Search songs, artists, albums..." class="w-full py-3 px-11 rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/40 glass-input" style="color: var(--text-primary);">
+              <i class="ph-bold ph-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-lg" style="color: var(--text-tertiary);"></i>
+              <button id="btn-clear-search" class="hidden absolute right-3.5 top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs" style="color: var(--text-tertiary);">
+                <i class="ph-bold ph-x"></i>
+              </button>
+            </div>
+          </div>
+
+
+
+          <!-- Recent Searches -->
+          <div id="search-recent-section" class="mb-5">
+            <div class="flex items-center justify-between mb-2.5">
+              <p class="text-xs font-bold uppercase tracking-wider" style="color: var(--text-tertiary);">Recent Searches</p>
+              <button id="btn-clear-recent-searches" class="text-[11px] font-bold opacity-75 hover:opacity-100 transition-opacity cursor-pointer active:scale-95" style="color: var(--text-tertiary);">Clear All</button>
+            </div>
+            <div id="search-recent-chips" class="flex flex-wrap gap-2"></div>
+          </div>
+
+          <!-- Search Results Section -->
+          <div id="search-results-section" class="hidden">
+            <div class="flex items-center justify-between mb-2 px-1">
+              <p class="text-xs font-bold uppercase tracking-wider" style="color: var(--text-tertiary);" id="search-results-label">Top Results</p>
+              <span class="text-[11px] font-medium" style="color: var(--text-tertiary);" id="search-results-count"></span>
+            </div>
+            <div id="search-results-list">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ PANEL 2: UNIFIED HERO VINYL PLAYER DECK ═══ -->
+        <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-24 px-5 pt-3 relative" style="background: var(--bg-app);">
+          
+          <!-- Dynamic Ambient Aura Glow -->
+          <div id="ambient-aura-glow" class="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full blur-3xl opacity-35 pointer-events-none transition-all duration-1000" style="background: radial-gradient(circle, #a855f7 0%, #6366f1 50%, transparent 80%);"></div>
+
+          <!-- Top Player Header Bar -->
+          <div class="flex items-center justify-between pt-1 pb-2 shrink-0 z-20">
+            <div class="flex items-center gap-2">
+              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-10 w-auto max-w-[150px] object-contain filter drop-shadow-[0_2px_12px_rgba(255,79,0,0.35)] cursor-pointer active:scale-95 transition-transform" id="deck-brand-tribute" title="999 Forever Tribute">
+            </div>
+            
+            <!-- View Switcher Pills (YouTube Music style: SONG / VIDEO / LYRICS) -->
+            <div class="flex items-center gap-1 p-1 rounded-full glass-card" id="deck-mode-pills">
+              <button class="deck-mode-pill active px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="vinyl" style="background: var(--btn-active-bg); color: var(--btn-active-text);">SONG</button>
+              <button class="deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="video" style="color: var(--text-tertiary);">VIDEO</button>
+              <button class="deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="lyrics" style="color: var(--text-tertiary);">LYRICS</button>
+            </div>
+
+            <!-- Header Quick Actions (Like, Download, Add to Playlist, Sleep Timer) -->
+            <div class="flex items-center gap-1.5">
+              <button id="deck-btn-favorite" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card text-pink-500" title="Like / Favorite">
+                <i class="ph-bold ph-heart text-base" id="deck-heart-icon"></i>
+              </button>
+              <button id="deck-btn-download-hero" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Download for Offline">
+                <i class="ph-bold ph-download-simple text-sm" id="deck-download-hero-icon"></i>
+              </button>
+              <button id="deck-btn-add-playlist" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Add to Playlist">
+                <i class="ph-bold ph-playlist text-base"></i>
+              </button>
+              <button id="deck-btn-sleep" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card relative" style="color: var(--text-primary);" title="Sleep Timer">
+                <i class="ph-bold ph-timer text-sm" id="deck-sleep-icon"></i>
+                <span id="deck-sleep-badge" class="hidden text-[8px] font-black text-indigo-400"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- CENTER STAGE (ENLARGED UNIVERSAL SQUIRCLE STAGE - TAP TO MORPH 2028 / M3 VISUALIZERS) -->
+          <div class="flex-1 flex flex-col items-center justify-center relative w-full overflow-hidden my-1 z-10">
+            
+            <!-- UNIFIED SQUIRCLE STAGE FRAME (Universally Identical Size Across All Modes) -->
+            <div id="deck-stage-window" class="w-[94%] max-w-[365px] h-[260px] rounded-[28px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border border-white/10 mx-auto transition-all cursor-pointer select-none active:scale-[0.985]" style="background: rgba(10, 10, 15, 0.95);" title="Tap to switch visualizer style">
+
+              <!-- 1. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb & Chromatic Aura (DEFAULT) -->
+              <div id="deck-display-orb" class="centerpiece-display w-full h-full relative">
+                <canvas id="deck-reactive-orb-canvas" class="w-full h-full block" width="365" height="260"></canvas>
+              </div>
+
+              <!-- 2. 🎨 Google Material 3 Expressive Dynamic Fluid Ribbons & Chroma Waveform -->
+              <div id="deck-display-m3" class="centerpiece-display hidden w-full h-full relative">
+                <canvas id="deck-reactive-m3-canvas" class="w-full h-full block" width="365" height="260"></canvas>
+              </div>
+
+              <!-- 3. 🫧 Spatial Fluid Glass Metaballs & Audio Plasma -->
+              <div id="deck-display-blobs" class="centerpiece-display hidden w-full h-full relative">
+                <canvas id="deck-reactive-blobs-canvas" class="w-full h-full block" width="365" height="260"></canvas>
+              </div>
+
+              <!-- 4. ⚡ 2028 Precision M3 Hi-Fi Fluid Spectrum & Floating Peaks -->
+              <div id="deck-display-hifi" class="centerpiece-display hidden w-full h-full relative">
+                <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block" width="365" height="260"></canvas>
+              </div>
+
+              <!-- 5. 💽 iOS Dynamic Luxe Holographic Vinyl Platter -->
+              <div id="deck-display-vinyl" class="centerpiece-display hidden w-full h-full flex flex-col items-center justify-center relative">
+                <div class="vinyl-platter paused mx-auto relative transition-all duration-300" id="deck-vinyl-platter" style="width: 205px; height: 205px;">
+                  <div class="vinyl-grooves"></div>
+                  <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80');"></div>
+                  <div class="vinyl-reflection"></div>
+                  <div class="spindle-hole cursor-pointer hover:scale-110 active:scale-95 transition-all" id="deck-spindle-tribute" title="999 Forever"></div>
+                </div>
+              </div>
+
+              <!-- 6. Clean Video Stage (100% Pure Video - Zero YouTube UI Overlay) -->
+              <div id="deck-display-video" class="hidden w-full h-full relative overflow-hidden flex items-center justify-center bg-black group">
+                <div id="yt-player-host" class="w-full h-full overflow-hidden pointer-events-none flex items-center justify-center scale-[1.38] origin-center"></div>
+                <div id="deck-video-tap-overlay" class="absolute inset-0 z-20 cursor-pointer flex items-center justify-center">
+                  <div id="deck-video-tap-indicator" class="w-14 h-14 rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white text-2xl opacity-0 scale-75 transition-all duration-300 pointer-events-none shadow-xl border border-white/20">
+                    <i class="ph-fill ph-play" id="deck-video-tap-icon"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7. Real-Time Synced Karaoke Lyrics -->
+              <div id="deck-display-lyrics" class="hidden w-full h-full flex flex-col justify-between p-3.5 relative overflow-hidden">
+                <!-- Top Sync Calibration Toolbar -->
+                <div class="flex items-center justify-between px-2.5 py-1 mb-1 rounded-full glass-input text-[10px] font-black shrink-0 border border-white/10 z-20">
+                  <span class="text-[9px] text-orange-400 font-black flex items-center gap-1">
+                    <i class="ph-bold ph-sliders-horizontal text-xs"></i> SYNC OFFSET
+                  </span>
+                  <div class="flex items-center gap-1">
+                    <button id="btn-lyric-nudge-back" class="px-2 py-0.5 rounded-full active:scale-90 transition-all font-black text-[9px] bg-white/10 hover:bg-white/20 text-zinc-300" title="Shift Lyrics Earlier (-0.5s)">-0.5s</button>
+                    <span id="lyric-sync-offset-label" class="font-bold font-mono px-1 text-[9px] text-orange-300">±0.0s</span>
+                    <button id="btn-lyric-nudge-fwd" class="px-2 py-0.5 rounded-full active:scale-90 transition-all font-black text-[9px] bg-white/10 hover:bg-white/20 text-zinc-300" title="Shift Lyrics Later (+0.5s)">+0.5s</button>
+                    <button id="btn-lyric-sync-reset" class="w-5 h-5 rounded-full flex items-center justify-center active:scale-90 transition-all font-bold text-[9px] bg-white/10 hover:bg-white/20 text-zinc-400 hover:text-white ml-0.5" title="Reset Calibration">↺</button>
+                  </div>
+                </div>
+
+                <!-- Lyric Lines Scroll Area -->
+                <div id="deck-lyrics-text" class="space-y-4 py-4 flex-1 overflow-y-auto pr-1 text-center scrollbar-none z-10">
+                  <div class="flex flex-col items-center justify-center py-6 text-zinc-500">
+                    <i class="ph-bold ph-music-notes text-2xl mb-1 animate-pulse text-orange-400"></i>
+                    <span class="text-xs font-semibold">Loading synced lyrics...</span>
+                  </div>
+                </div>
+
+                <!-- Top and Bottom Smooth Fade Shadows -->
+                <div class="pointer-events-none absolute top-10 left-0 right-0 h-6 bg-gradient-to-b from-[rgba(10,10,15,0.9)] to-transparent z-15"></div>
+                <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[rgba(10,10,15,0.9)] to-transparent z-15"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- BOTTOM CONTROLS STACK -->
+          <div class="w-full shrink-0 space-y-3 z-20 pb-2">
+            
+            <!-- Metadata -->
+            <div class="text-center px-2">
+              <h2 id="deck-track-title" class="font-black text-[22px] tracking-tight truncate" style="color: var(--text-primary);">Lucid Dreams</h2>
+              <p id="deck-track-artist" class="text-sm font-bold truncate mt-0.5" style="color: var(--text-secondary);">Juice WRLD</p>
+            </div>
+
+            <!-- Time Scrubber -->
+            <div class="px-1">
+              <div class="scrubber-track" id="deck-scrubber-track">
+                <div class="scrubber-fill" id="deck-scrubber-fill"></div>
+                <div class="scrubber-thumb" id="deck-scrubber-thumb"></div>
+              </div>
+              <div class="flex justify-between items-center text-[11px] font-black mt-1.5 tracking-wider" style="color: var(--text-tertiary);">
+                <span id="deck-time-current">0:00</span>
+                <button id="deck-btn-speed" class="px-2.5 py-0.5 rounded-full text-[10px] font-black transition-all glass-input hover:border-orange-500/40 active:scale-90" style="color: var(--text-secondary);" title="Change Playback Speed">1.0x</button>
+                <span id="deck-time-total">0:00</span>
+              </div>
+            </div>
+
+            <!-- Master Transport Bar -->
+            <div class="flex items-center justify-between px-4 pt-1">
+              <button id="deck-btn-shuffle" class="p-2 active:scale-75 transition-all text-xl" style="color: var(--text-tertiary);" title="Shuffle">
+                <i class="ph-bold ph-shuffle"></i>
+              </button>
+              
+              <button id="deck-btn-prev" class="p-2 active:scale-75 transition-all text-2xl" style="color: var(--text-primary);" title="Previous">
+                <i class="ph-fill ph-skip-back"></i>
+              </button>
+
+              <button id="deck-btn-play" class="w-[66px] h-[66px] rounded-full flex items-center justify-center active:scale-90 shadow-2xl transition-all" style="background: var(--btn-active-bg); color: var(--btn-active-text);" title="Play/Pause">
+                <i class="ph-fill ph-play text-3xl ml-1" id="deck-play-icon"></i>
+              </button>
+
+              <button id="deck-btn-next" class="p-2 active:scale-75 transition-all text-2xl" style="color: var(--text-primary);" title="Next">
+                <i class="ph-fill ph-skip-forward"></i>
+              </button>
+
+              <button id="deck-btn-repeat" class="p-2 active:scale-75 transition-all text-xl" style="color: var(--text-tertiary);" title="Repeat">
+                <i class="ph-bold ph-repeat"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ═══ PANEL 3: DEDICATED LIBRARY & PLAYLISTS ═══ -->
+        <div id="view-library" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-64 px-0" style="background: var(--bg-panel);">
+          <div class="px-5 pt-5 pb-2 sticky top-0 z-20" style="background: linear-gradient(180deg, var(--bg-panel) 84%, transparent 100%); pointer-events: none;">
+            <!-- Top Bar -->
+            <div class="flex items-center justify-between mb-4 pointer-events-auto">
+              <div>
+                <h1 class="text-[24px] font-black tracking-tight" style="color: var(--text-primary);">Library</h1>
+              </div>
+              <div class="flex items-center gap-2">
+                <!-- Create Playlist Action Button -->
+                <button class="px-3.5 py-1.5 rounded-full flex items-center gap-1.5 text-xs font-bold active:scale-95 transition-all outline-none glass-card shadow-sm" id="btn-create-playlist-header" title="Create Playlist" style="color: var(--text-primary);">
+                  <i class="ph-bold ph-plus text-xs text-indigo-400"></i> New Playlist
+                </button>
+              </div>
+            </div>
+
+            <!-- Category Filter Pills (Playlists, Queue, Artists, Albums, Downloads) -->
+            <div class="flex items-center gap-1.5 mb-3 overflow-x-auto pointer-events-auto scrollbar-none pr-4" id="library-subtabs-bar">
+              <button class="lib-tab active px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" data-tab="playlists" style="background: var(--btn-active-bg); color: var(--btn-active-text);">Playlists</button>
+              <button class="lib-tab px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" style="background: var(--bg-input); color: var(--text-secondary);" data-tab="queue">Queue</button>
+              <button class="lib-tab px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" style="background: var(--bg-input); color: var(--text-secondary);" data-tab="artists">Artists</button>
+              <button class="lib-tab px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" style="background: var(--bg-input); color: var(--text-secondary);" data-tab="albums">Albums</button>
+              <button class="lib-tab px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" style="background: var(--bg-input); color: var(--text-secondary);" data-tab="downloads">Downloads</button>
+            </div>
+
+            <!-- Sub-header -->
+            <div class="flex items-center justify-between pointer-events-auto" id="library-sub-header">
+              <div>
+                <h2 class="text-[17px] font-black tracking-[-0.5px] leading-tight" style="color: var(--text-primary);" id="library-title">Playlists</h2>
+                <p class="font-medium text-[12px]" style="color: var(--text-secondary);" id="library-subtitle">Custom Mixes & Favorites</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1. Playlists Sub-View (Liked Songs Hero + User Playlists Grid) -->
+          <div class="px-5 pt-1 space-y-4" id="library-playlists-view">
+            <!-- Liked Songs Hero Card -->
+            <div class="glass-card p-4 rounded-2xl relative overflow-hidden cursor-pointer group active:scale-[0.98] transition-all bg-gradient-to-r from-purple-900/60 via-pink-900/40 to-indigo-900/60 border" style="border-color: rgba(236, 72, 153, 0.3);" id="hero-liked-songs-card">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-pink-500 via-rose-500 to-purple-600 flex items-center justify-center text-white shadow-lg shrink-0">
+                    <i class="ph-fill ph-heart text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-black" style="color: var(--text-primary);">Liked Songs</h3>
+                    <p class="text-xs font-bold text-pink-400" id="liked-songs-count-badge">3 Favorite Tracks</p>
+                    <p class="text-[10px] mt-0.5" style="color: var(--text-tertiary);">Auto-synced favorites</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button id="btn-play-liked-songs" class="w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform shadow-md" style="background: var(--btn-active-bg); color: var(--btn-active-text);" title="Play All Likes">
+                    <i class="ph-fill ph-play text-lg ml-0.5"></i>
+                  </button>
+                  <button id="btn-shuffle-liked-songs" class="w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Shuffle Likes">
+                    <i class="ph-bold ph-shuffle text-base"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom Playlists Section Header -->
+            <div class="flex items-center justify-between px-1 pt-1">
+              <h3 class="text-xs font-bold uppercase tracking-wider" style="color: var(--text-tertiary);">Your Playlists</h3>
+              <button id="btn-create-playlist-inline" class="text-xs font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-1 active:scale-95 transition-all">
+                <i class="ph-bold ph-plus"></i> Create
+              </button>
+            </div>
+
+            <!-- Playlists Grid -->
+            <div class="grid grid-cols-2 gap-3" id="user-playlists-grid"></div>
+          </div>
+
+          <!-- 2. Playlist Detail Sub-View -->
+          <div class="px-5 pt-2 hidden" id="library-playlist-detail-view">
+            <button id="playlist-back-btn" class="flex items-center gap-1 mb-3 active:scale-95 transition-all text-xs font-bold" style="color: var(--text-secondary);">
+              <i class="ph-bold ph-caret-left text-base"></i> Back to Playlists
+            </button>
+            
+            <div class="glass-card p-4 flex items-center gap-4 mb-4" id="playlist-detail-header-card">
+              <div id="playlist-detail-art-box" class="w-16 h-16 rounded-2xl overflow-hidden shadow-md border-2 flex items-center justify-center bg-gradient-to-tr from-indigo-600 to-purple-600 shrink-0" style="border-color: var(--border-card);">
+                <i class="ph-fill ph-playlist text-white text-2xl" id="playlist-detail-icon"></i>
+              </div>
+              <div class="flex-1">
+                <h2 id="playlist-detail-title" class="text-xl font-black" style="color: var(--text-primary);">Playlist Name</h2>
+                <p id="playlist-detail-meta" class="text-xs font-medium" style="color: var(--text-secondary);">0 Tracks</p>
+                <div class="flex gap-2 mt-2.5">
+                  <button id="playlist-btn-play-all" class="px-3.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 active:scale-95 shadow-sm" style="background: var(--btn-active-bg); color: var(--btn-active-text);">
+                    <i class="ph-fill ph-play text-xs"></i> Play All
+                  </button>
+                  <button id="playlist-btn-shuffle" class="px-3.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 active:scale-95 glass-input" style="color: var(--text-primary);">
+                    <i class="ph-bold ph-shuffle text-xs"></i> Shuffle
+                  </button>
+                  <button id="playlist-btn-delete" class="px-2.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 active:scale-95 text-red-400 hover:bg-red-500/10 transition-all ml-auto" title="Delete Playlist">
+                    <i class="ph-bold ph-trash text-xs"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-xs font-bold uppercase tracking-wider mb-2 px-1" style="color: var(--text-tertiary);">Tracks</h3>
+            <div id="playlist-detail-tracks-list"></div>
+          </div>
+
+          <!-- 3. Track List / Live Queue -->
+          <div class="px-5 pt-1 hidden" id="library-track-list"></div>
+
+          <!-- 4. Artists Grid -->
+          <div class="px-5 pt-2 hidden" id="library-artists-grid">
+            <div class="grid grid-cols-2 gap-3" id="artists-grid-inner"></div>
+          </div>
+
+          <!-- 5. Albums Grid -->
+          <div class="px-5 pt-2 hidden" id="library-albums-grid">
+            <div class="grid grid-cols-2 gap-3" id="albums-grid-inner"></div>
+          </div>
+
+          <!-- 6. Downloads Sub-View (Dedicated Offline Storage) -->
+          <div class="px-5 pt-2 hidden" id="library-downloads-view">
+            <div class="flex items-center justify-between mb-3 px-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1">
+                <i class="ph-fill ph-check-circle"></i> Available Offline
+              </span>
+              <span id="downloads-total-count" class="text-xs font-medium" style="color: var(--text-secondary);">0 Offline Tracks</span>
+            </div>
+            <div id="library-downloads-list"></div>
+          </div>
+
+          <!-- 7. Artist Detail Sub-View -->
+          <div class="px-5 pt-2 hidden" id="library-artist-view">
+            <button id="artist-back-btn" class="flex items-center gap-1 mb-3 active:scale-95 transition-all text-xs font-bold" style="color: var(--text-secondary);">
+              <i class="ph-bold ph-caret-left text-base"></i> Back to Artists
+            </button>
+            
+            <div class="glass-card p-4 flex items-center gap-4 mb-4">
+              <div id="artist-view-avatar-box" class="w-16 h-16 rounded-full overflow-hidden shadow-md border-2 flex items-center justify-center bg-gradient-to-tr from-purple-600 via-indigo-700 to-black shrink-0" style="border-color: var(--border-card);">
+                <span id="artist-view-avatar-initials" class="text-white font-black text-xl">JW</span>
+              </div>
+              <div class="flex-1">
+                <h2 id="artist-view-name" class="text-xl font-black" style="color: var(--text-primary);"></h2>
+                <p id="artist-view-meta" class="text-xs font-medium" style="color: var(--text-secondary);">Top Popular Tracks</p>
+                <div class="flex gap-2 mt-2.5">
+                  <button id="artist-btn-play-all" class="px-3.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 active:scale-95 shadow-sm" style="background: var(--btn-active-bg); color: var(--btn-active-text);">
+                    <i class="ph-fill ph-play text-xs"></i> Play All
+                  </button>
+                  <button id="artist-btn-shuffle" class="px-3.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 active:scale-95 glass-input" style="color: var(--text-primary);">
+                    <i class="ph-bold ph-shuffle text-xs"></i> Shuffle
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-xs font-bold uppercase tracking-wider mb-2 px-1" style="color: var(--text-tertiary);">Top Songs</h3>
+            <div id="artist-view-tracks"></div>
+          </div>
+        </div>
+
+        <!-- ═══ PANEL 4: SETTINGS ═══ -->
+        <div id="view-settings" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-72 px-5 pt-5" style="background: var(--bg-panel);">
+          <h1 class="text-[24px] font-black tracking-tight mb-4" style="color: var(--text-primary);">Settings</h1>
+          
+          <!-- General Display & Hardware -->
+          <div class="glass-card p-4 mb-3 space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Light Mode</p>
+                <p class="text-xs" style="color: var(--text-tertiary);">Toggle light / dark aesthetics</p>
+              </div>
+              <div class="toggle-switch" id="toggle-light-mode">
+                <div class="toggle-knob"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
+              <div>
+                <p class="font-bold text-sm" style="color: #ff4f00;">Rabbit R1 Hardware Mode</p>
+                <p class="text-xs" style="color: var(--text-tertiary);">Authentic Teenage Engineering casing</p>
+              </div>
+              <div class="toggle-switch" id="toggle-settings-rabbit">
+                <div class="toggle-knob"></div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
+              <div>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Tactile Haptic Feedback</p>
+                <p class="text-xs" style="color: var(--text-tertiary);">Synthesized mechanical click sounds</p>
+              </div>
+              <div class="toggle-switch active" id="toggle-settings-haptics">
+                <div class="toggle-knob"></div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Software Version & System Status Card -->
+          <div class="glass-card p-4 mb-3 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-sm">
+                  <i class="ph-bold ph-sparkle"></i>
+                </div>
+                <div>
+                  <p class="font-black text-sm" style="color: var(--text-primary);">JuiceBx Audio Deck</p>
+                  <p class="text-[10px] font-bold text-emerald-400 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span> Latest Version (v2.9.0 Master)
+                  </p>
+                </div>
+              </div>
+              <span class="text-[10px] font-black px-2.5 py-1 rounded-full bg-white/10 text-white border border-white/10">LATEST</span>
+            </div>
+            <div class="text-[11px] font-medium pt-2 border-t flex justify-between" style="border-color: var(--border-card); color: var(--text-tertiary);">
+              <span>Engine: Zero-Latency 2.0</span>
+              <span class="text-indigo-400 font-bold">Synced LRC Active</span>
+            </div>
+          </div>
+
+          <!-- Sleep Timer Launcher in Settings -->
+          <div class="glass-card p-4 mb-3">
+            <div class="flex items-center justify-between mb-2">
+              <div>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Sleep Timer</p>
+                <p class="text-xs" style="color: var(--text-tertiary);">Gradual volume fade-out after duration</p>
+              </div>
+              <button id="settings-btn-sleep" class="px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-1 active:scale-95 transition-all shadow-sm" style="background: var(--btn-active-bg); color: var(--btn-active-text);">
+                <i class="ph-bold ph-timer"></i> Set Timer
+              </button>
+            </div>
+          </div>
+
+          <!-- Music Library & Storage Management -->
+          <div class="glass-card p-4 mb-3 space-y-3">
+            <div>
+              <p class="font-bold text-sm" style="color: var(--text-primary);">Music Storage & Data Management</p>
+              <p class="text-xs" style="color: var(--text-tertiary);">Manage local files, downloads cache, and search history</p>
+            </div>
+
+            <!-- Import Local Music Folder -->
+            <div class="pt-2 border-t" style="border-color: var(--border-card);">
+              <button id="btn-import-folder-settings" class="w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all glass-input" style="color: var(--text-primary);">
+                <i class="ph-bold ph-folder-simple-plus text-base text-indigo-400"></i> Import Local Audio Files / Folder
+              </button>
+              <input type="file" id="local-folder-input-settings" webkitdirectory directory multiple accept="audio/*" class="hidden">
+            </div>
+
+            <!-- Clear Search History -->
+            <div class="pt-2 border-t" style="border-color: var(--border-card);">
+              <button id="btn-clear-searches-settings" class="w-full py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition-all glass-input" style="color: var(--text-secondary);">
+                <i class="ph-bold ph-clock-counter-clockwise text-sm"></i> Clear Search History
+              </button>
+            </div>
+
+            <!-- Clear Offline Downloads Cache -->
+            <div class="pt-2 border-t" style="border-color: var(--border-card);">
+              <button id="btn-clear-downloads" class="w-full py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition-all glass-input" style="color: #ef4444;">
+                <i class="ph-bold ph-trash text-sm"></i> Clear Offline Downloads Cache
+              </button>
+            </div>
+
+            <!-- Reset Playlists to Default -->
+            <div class="pt-2 border-t" style="border-color: var(--border-card);">
+              <button id="btn-reset-playlists-settings" class="w-full py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5 active:scale-95 transition-all glass-input" style="color: var(--text-tertiary);">
+                <i class="ph-bold ph-arrows-clockwise text-sm"></i> Reset Default Playlists
+              </button>
+            </div>
+          </div>
+
+          <!-- 999 Tribute Footer -->
+          <div class="text-center pt-2 pb-4 cursor-pointer active:scale-95 transition-transform" id="settings-tribute-link">
+            <span class="text-xs font-black tracking-widest text-purple-400">🕊️ 999 FOREVER</span>
+            <p class="text-[10px] font-medium mt-0.5" style="color: var(--text-tertiary);">A Tribute to Jarad Higgins (Juice WRLD)</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ FLOATING MINI-PLAYER ═══ -->
+      <div id="mini-player" class="absolute bottom-[72px] left-3 right-3 rounded-[20px] p-2 px-3 flex items-center justify-between z-40 hidden shadow-xl border" style="background: var(--bg-mini); border-color: var(--border-card);">
+        <div class="flex items-center space-x-3 overflow-hidden flex-1 cursor-pointer active:opacity-80 transition-opacity" id="mini-player-info" title="Open Player Deck">
+          <div class="w-[42px] h-[42px] rounded-[12px] overflow-hidden flex-shrink-0 relative shadow-sm" id="mini-art">
+            <img src="" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80'">
+          </div>
+          <div class="overflow-hidden flex-1">
+            <h4 class="font-bold text-[13px] truncate" style="color: var(--text-primary);" id="mini-title">Track Title</h4>
+            <p class="text-[11px] truncate font-medium" style="color: var(--text-secondary);" id="mini-artist">Artist</p>
+          </div>
+        </div>
+        <button class="w-[38px] h-[38px] rounded-full flex items-center justify-center active:scale-90 transition-transform outline-none" id="mini-play-btn" style="background: var(--btn-active-bg); color: var(--btn-active-text);" title="Play / Pause">
+          <i class="ph-fill ph-play text-base ml-0.5"></i>
+        </button>
+      </div>
+
+      <!-- ═══ BOTTOM NAVIGATION DOCK (5 Tabs: Home, Search, Player, Library, Settings) ═══ -->
+      <div class="absolute bottom-0 left-0 right-0 h-[68px] flex justify-around items-center px-2 z-50" style="background: var(--bg-nav); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-top: 1px solid var(--border-card);">
+        <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-home" style="color: var(--text-primary);" title="Home">
+          <i class="ph-fill ph-house text-[21px]"></i>
+          <div class="w-1 h-1 rounded-full mt-1" style="background: var(--text-primary);"></div>
+        </button>
+        <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-search" style="color: var(--text-tertiary);" title="Search">
+          <i class="ph-bold ph-magnifying-glass text-[21px]"></i>
+          <div class="w-1 h-1 rounded-full mt-1 bg-transparent"></div>
+        </button>
+        <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-player-deck" style="color: var(--text-tertiary);" title="Player">
+          <i class="ph-fill ph-disc text-[21px]"></i>
+          <div class="w-1 h-1 rounded-full mt-1 bg-transparent"></div>
+        </button>
+        <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-library" style="color: var(--text-tertiary);" title="Library & Queue">
+          <i class="ph-bold ph-playlist text-[21px]"></i>
+          <div class="w-1 h-1 rounded-full mt-1 bg-transparent"></div>
+        </button>
+        <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-settings" style="color: var(--text-tertiary);" title="Settings">
+          <i class="ph-bold ph-gear text-[21px]"></i>
+          <div class="w-1 h-1 rounded-full mt-1 bg-transparent"></div>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- HARDWARE SIDE CONTROLS FOR RABBIT R1 -->
+    <div class="rabbit-hardware-side">
+      <div class="rabbit-camera-eye" title="360° Rotational Camera"></div>
+      <div class="rabbit-scroll-wheel" id="rabbit-scroll-wheel" title="Analog Scroll Wheel"></div>
+      <div class="w-4 h-4 rounded-full bg-black/40"></div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL: SLEEP TIMER ═══ -->
+  <div id="modal-sleep-timer" class="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-4 bg-black/70 backdrop-blur-md hidden transition-opacity opacity-0">
+    <div class="glass-card w-full max-w-sm p-5 rounded-3xl space-y-4 shadow-2xl border" style="background: var(--bg-card-solid); border-color: var(--border-card);">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm">
+            <i class="ph-bold ph-timer"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-base" style="color: var(--text-primary);">Sleep Timer</h3>
+            <p class="text-xs" style="color: var(--text-tertiary);">Fades out audio gently</p>
+          </div>
+        </div>
+        <button id="btn-close-sleep-modal" class="w-7 h-7 rounded-full flex items-center justify-center text-sm" style="color: var(--text-tertiary);">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 gap-2" id="sleep-preset-buttons">
+        <button class="sleep-preset-btn p-3 rounded-2xl font-bold text-xs flex flex-col items-center gap-1 active:scale-95 transition-all glass-card hover:border-indigo-500/50" data-mins="15">
+          <span class="text-base font-black text-indigo-400">15 min</span>
+          <span class="text-[10px]" style="color: var(--text-tertiary);">Quick Nap</span>
+        </button>
+        <button class="sleep-preset-btn p-3 rounded-2xl font-bold text-xs flex flex-col items-center gap-1 active:scale-95 transition-all glass-card hover:border-indigo-500/50" data-mins="30">
+          <span class="text-base font-black text-purple-400">30 min</span>
+          <span class="text-[10px]" style="color: var(--text-tertiary);">Standard</span>
+        </button>
+        <button class="sleep-preset-btn p-3 rounded-2xl font-bold text-xs flex flex-col items-center gap-1 active:scale-95 transition-all glass-card hover:border-indigo-500/50" data-mins="45">
+          <span class="text-base font-black text-pink-400">45 min</span>
+          <span class="text-[10px]" style="color: var(--text-tertiary);">Extended</span>
+        </button>
+        <button class="sleep-preset-btn p-3 rounded-2xl font-bold text-xs flex flex-col items-center gap-1 active:scale-95 transition-all glass-card hover:border-indigo-500/50" data-mins="60">
+          <span class="text-base font-black text-amber-400">60 min</span>
+          <span class="text-[10px]" style="color: var(--text-tertiary);">Full Hour</span>
+        </button>
+      </div>
+
+      <button id="btn-cancel-sleep-timer" class="w-full py-2.5 rounded-xl font-bold text-xs flex items-center justify-center gap-1 active:scale-95 transition-all glass-input hidden" style="color: #ef4444;">
+        <i class="ph-bold ph-x-circle"></i> Cancel Active Timer (<span id="sleep-modal-countdown"></span>)
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL: 999 MEMORIAL TRIBUTE (SACRED SANCTUARY) ═══ -->
+  <div id="modal-999-tribute" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl hidden transition-opacity opacity-0">
+    <div class="glass-card w-full max-w-sm p-6 rounded-[32px] space-y-4 shadow-2xl border text-center relative overflow-hidden" style="background: rgba(10, 10, 15, 0.96); border-color: rgba(255, 255, 255, 0.12);">
+      <!-- Subtle Ambient Glows -->
+      <div class="absolute -top-16 -right-16 w-44 h-44 bg-purple-600/25 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-16 -left-16 w-44 h-44 bg-orange-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Close Button -->
+      <button id="btn-close-tribute-modal" class="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-sm z-20 glass-input hover:scale-110 active:scale-95 transition-all" style="color: var(--text-tertiary);">
+        <i class="ph-bold ph-x"></i>
+      </button>
+
+      <div class="relative z-10 flex flex-col items-center pt-2">
+        <!-- Floating 3D Thorn Rose 999 Heart Emblem with Luminous Celestial Halo -->
+        <div class="relative my-3 flex items-center justify-center">
+          <div class="absolute w-52 h-52 rounded-full bg-gradient-to-tr from-purple-500/60 via-pink-500/45 to-orange-400/50 blur-2xl pointer-events-none"></div>
+          <div class="absolute w-36 h-36 rounded-full bg-white/30 blur-xl pointer-events-none"></div>
+          <div class="absolute w-24 h-24 rounded-full bg-indigo-300/40 blur-lg pointer-events-none"></div>
+          <img src="999_rose_heart_logo.png" alt="999 Rose Heart Emblem" class="relative z-10 w-48 h-48 object-contain filter drop-shadow-[0_0_16px_rgba(255,255,255,0.4)] drop-shadow-[0_0_32px_rgba(192,132,252,0.8)] drop-shadow-[0_8px_24px_rgba(0,0,0,0.95)] transform hover:scale-105 transition-transform duration-500">
+        </div>
+
+        <!-- Memorial Name & Era -->
+        <h2 class="text-[22px] font-black text-white tracking-tight mt-1">Jarad Anthony Higgins</h2>
+        <span class="text-[11px] font-black text-orange-400 uppercase tracking-widest mt-1">Juice WRLD • 1998 — 2019</span>
+
+        <!-- The 999 Philosophy Inscription -->
+        <div class="glass-input p-4 rounded-2xl border border-white/10 mt-4 text-left relative overflow-hidden shadow-inner w-full">
+          <i class="ph-fill ph-quotes text-purple-400/40 text-3xl absolute top-1 right-2 pointer-events-none"></i>
+          <p class="text-xs font-medium text-zinc-200 italic leading-relaxed relative z-10">
+            “999 represents taking whatever ill, whatever bad situation, whatever struggle you're going through and turning it into something positive to push yourself forward.”
+          </p>
+          <p class="text-[10px] font-mono font-bold text-orange-400/90 text-right mt-2 relative z-10">— Jarad Higgins</p>
+        </div>
+
+        <!-- Sacred Sanctuary Tribute Badge -->
+        <div class="flex items-center justify-center gap-2 py-2 px-4 rounded-full glass-input text-zinc-400 text-[11px] font-semibold border border-white/5 mt-4 w-full">
+          <span class="text-xs">🕊️</span>
+          <span>A dedicated sanctuary for eternal energy & 999 legacy</span>
+        </div>
+
+        <!-- Gentle Dismiss Button -->
+        <button id="btn-tribute-peaceful-close" class="w-full mt-4 py-3 rounded-2xl font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-1.5 active:scale-95 transition-all glass-input hover:bg-white/10 text-white/90 border border-white/10">
+          <i class="ph-bold ph-heart text-pink-500"></i> Forever 999
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL: ADD TO PLAYLIST ═══ -->
+  <div id="modal-add-to-playlist" class="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-4 bg-black/70 backdrop-blur-md hidden transition-opacity opacity-0">
+    <div class="glass-card w-full max-w-sm p-5 rounded-3xl space-y-4 shadow-2xl border" style="background: var(--bg-card-solid); border-color: var(--border-card);">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm">
+            <i class="ph-bold ph-playlist"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-base" style="color: var(--text-primary);">Add to Playlist</h3>
+            <p class="text-[11px] truncate max-w-[200px]" style="color: var(--text-tertiary);" id="add-playlist-track-sub">Select playlist</p>
+          </div>
+        </div>
+        <button id="btn-close-add-playlist-modal" class="w-7 h-7 rounded-full flex items-center justify-center text-sm" style="color: var(--text-tertiary);">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+
+      <!-- Quick Favorite Toggle -->
+      <button id="btn-quick-toggle-like" class="w-full p-3 rounded-2xl flex items-center justify-between active:scale-95 transition-all glass-card border" style="border-color: rgba(236, 72, 153, 0.3);">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center">
+            <i class="ph-fill ph-heart text-base"></i>
+          </div>
+          <div class="text-left">
+            <div class="text-xs font-black" style="color: var(--text-primary);">Liked Songs</div>
+            <div class="text-[10px]" style="color: var(--text-tertiary);">Save to favorites</div>
+          </div>
+        </div>
+        <i class="ph-fill ph-heart text-pink-500 text-lg" id="quick-like-check-icon"></i>
+      </button>
+
+      <!-- User Playlists List -->
+      <div class="space-y-2 max-h-48 overflow-y-auto pr-1" id="add-playlist-items-list">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <!-- Create New Playlist Inline -->
+      <div class="pt-2 border-t flex gap-2" style="border-color: var(--border-card);">
+        <input type="text" id="input-new-playlist-quick" placeholder="New playlist name..." class="flex-1 px-3 py-2 rounded-xl text-xs font-medium glass-input focus:outline-none" style="color: var(--text-primary);">
+        <button id="btn-create-playlist-quick" class="px-3.5 py-2 rounded-xl text-xs font-bold shrink-0 active:scale-95 transition-all shadow-sm" style="background: var(--btn-active-bg); color: var(--btn-active-text);">
+          Create
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL: CREATE PLAYLIST ═══ -->
+  <div id="modal-create-playlist" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-md hidden transition-opacity opacity-0">
+    <div class="glass-card w-full max-w-sm p-5 rounded-3xl space-y-4 shadow-2xl border" style="background: var(--bg-card-solid); border-color: var(--border-card);">
+      <div class="flex items-center justify-between">
+        <h3 class="font-black text-base" style="color: var(--text-primary);">Create New Playlist</h3>
+        <button id="btn-close-create-playlist-modal" class="w-7 h-7 rounded-full flex items-center justify-center text-sm" style="color: var(--text-tertiary);">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3">
+        <div>
+          <label class="text-[11px] font-bold uppercase tracking-wider block mb-1" style="color: var(--text-tertiary);">Playlist Name</label>
+          <input type="text" id="input-create-playlist-name" placeholder="e.g. Late Night Drives" class="w-full px-3.5 py-2.5 rounded-xl text-sm font-medium glass-input focus:outline-none" style="color: var(--text-primary);">
+        </div>
+        <div>
+          <label class="text-[11px] font-bold uppercase tracking-wider block mb-1" style="color: var(--text-tertiary);">Description (Optional)</label>
+          <input type="text" id="input-create-playlist-desc" placeholder="e.g. Atmospheric 999 gems & grails" class="w-full px-3.5 py-2.5 rounded-xl text-sm font-medium glass-input focus:outline-none" style="color: var(--text-primary);">
+        </div>
+      </div>
+
+      <div class="flex gap-2 pt-2">
+        <button id="btn-cancel-create-playlist" class="flex-1 py-2.5 rounded-xl font-bold text-xs active:scale-95 transition-all glass-input" style="color: var(--text-secondary);">
+          Cancel
+        </button>
+        <button id="btn-submit-create-playlist" class="flex-1 py-2.5 rounded-xl font-bold text-xs active:scale-95 transition-all shadow-md" style="background: var(--btn-active-bg); color: var(--btn-active-text);">
+          Create Playlist
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCAL AUDIO ENGINE -->
+  <audio id="local-audio-player" style="display: none;"></audio>
+
+  <!-- SCRIPTS -->
+  <script src="js/shuffles_catalog.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
