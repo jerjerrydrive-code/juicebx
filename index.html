@@ -24,7 +24,23 @@
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="juice_catalogs.js"></script>
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').then(reg => {
+          console.log('SW registered!', reg);
+        }).catch(err => console.log('SW registration failed', err));
+      });
+    }
+  </script>
   
   <style>
     :root {
@@ -641,8 +657,6 @@
             <div class="flex items-center gap-1.5 mb-3 overflow-x-auto pointer-events-auto scrollbar-none pr-4" id="library-subtabs-bar">
               <button class="lib-tab active px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" data-tab="playlists" style="background: var(--btn-active-bg); color: var(--btn-active-text);">Playlists</button>
               <button class="lib-tab px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" style="background: var(--bg-input); color: var(--text-secondary);" data-tab="queue">Queue</button>
-              <button class="lib-tab px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" style="background: var(--bg-input); color: var(--text-secondary);" data-tab="artists">Artists</button>
-              <button class="lib-tab px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" style="background: var(--bg-input); color: var(--text-secondary);" data-tab="albums">Albums</button>
               <button class="lib-tab px-3.5 py-1.5 rounded-full text-[11px] font-bold transition-all shrink-0" style="background: var(--bg-input); color: var(--text-secondary);" data-tab="downloads">Downloads</button>
             </div>
 
@@ -727,17 +741,7 @@
           <!-- 3. Track List / Live Queue -->
           <div class="px-5 pt-1 hidden" id="library-track-list"></div>
 
-          <!-- 4. Artists Grid -->
-          <div class="px-5 pt-2 hidden" id="library-artists-grid">
-            <div class="grid grid-cols-2 gap-3" id="artists-grid-inner"></div>
-          </div>
-
-          <!-- 5. Albums Grid -->
-          <div class="px-5 pt-2 hidden" id="library-albums-grid">
-            <div class="grid grid-cols-2 gap-3" id="albums-grid-inner"></div>
-          </div>
-
-          <!-- 6. Downloads Sub-View (Dedicated Offline Storage) -->
+          <!-- 4. Downloads Sub-View (Dedicated Offline Storage) -->
           <div class="px-5 pt-2 hidden" id="library-downloads-view">
             <div class="flex items-center justify-between mb-3 px-1">
               <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1">
