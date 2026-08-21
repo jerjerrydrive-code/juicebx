@@ -3503,8 +3503,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (els.deckTrackTitle) els.deckTrackTitle.innerText = t.title;
     if (els.deckTrackArtist) els.deckTrackArtist.innerText = t.artist;
     if (els.miniTitle) els.miniTitle.innerText = t.title;
-    if (els.miniArtist) els.miniArtist.innerText = t.artist;
-    if (cassetteTrackLabel) cassetteTrackLabel.innerText = t.title;
+    const cassetteLabel = document.getElementById('cassette-track-label');
+    if (cassetteLabel) cassetteLabel.innerText = t.title;
   }
 
   // ═══ ACCELEROMETER & ROTATION AUTO-LYRICS ENGINE (Rabbit R1 & Mobile) ═══
