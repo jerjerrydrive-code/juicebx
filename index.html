@@ -426,8 +426,8 @@
         padding: 4px !important;
       }
       #view-player-deck {
-        padding: 4px 6px 44px 6px !important;
-        justify-content: space-around !important;
+        padding: 2px 4px 4px 4px !important;
+        justify-content: space-between !important;
       }
       #view-player-deck .pt-1 { padding-top: 1px !important; }
       #view-player-deck .pb-2 { padding-bottom: 1px !important; }
@@ -447,23 +447,33 @@
         display: none !important;
       }
 
-      /* Vinyl record / Orb center */
-      .turntable-container {
-        width: 90px !important;
-        height: 90px !important;
+      /* Squircle Stage Window & Visualizers on R1 */
+      #deck-stage-window {
+        width: 100px !important;
+        height: 72px !important;
+        max-width: 100px !important;
+        max-height: 72px !important;
+        border-radius: 12px !important;
         margin: 2px auto !important;
       }
+
+      /* Vinyl record / Orb center */
+      .turntable-container {
+        width: 68px !important;
+        height: 68px !important;
+        margin: 1px auto !important;
+      }
       .vinyl-disc {
-        width: 85px !important;
-        height: 85px !important;
+        width: 64px !important;
+        height: 64px !important;
       }
       .vinyl-label {
-        width: 32px !important;
-        height: 32px !important;
+        width: 24px !important;
+        height: 24px !important;
       }
       .vinyl-label img {
-        width: 28px !important;
-        height: 28px !important;
+        width: 20px !important;
+        height: 20px !important;
       }
 
       /* Song title / artist in player */
@@ -569,18 +579,18 @@
 </head>
 <body class="h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
 
-  <!-- MAIN APP CONTAINER -->
-  <div id="app-frame" class="relative w-[100vw] h-[100dvh] max-w-[100vw] max-h-[100dvh] overflow-hidden" style="background: var(--bg-app);">
+  <!-- MAIN APP CONTAINER (Flex Column to guarantee nav bar is always inside visible screen) -->
+  <div id="app-frame" class="relative flex flex-col w-[100vw] h-[100dvh] max-w-[100vw] max-h-[100dvh] overflow-hidden" style="background: var(--bg-app);">
 
-    <!-- 5-Panel Horizontal Swipe Carousel -->
-    <div class="relative flex flex-row overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full h-full" id="app-container">
+    <!-- 5-Panel Horizontal Swipe Carousel (Fills remaining height perfectly) -->
+    <div class="flex-1 min-h-0 relative flex flex-row overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full" id="app-container">
 
       <!-- ═══ PANEL 0: HOME / TOP 100 SHUFFLES ═══ -->
-      <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-36 px-4" style="background: var(--bg-panel);">
+      <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-4" style="background: var(--bg-panel);">
         
         <!-- Top Bar: Massive Logo (Sticky) -->
-        <div class="sticky top-0 z-40 flex items-center justify-center mb-6 py-4 -mx-4 px-4" style="background: rgba(3, 3, 5, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,0.05); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.8);">
-          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-16 sm:h-20 w-auto max-w-[240px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
+        <div class="sticky top-0 z-40 flex items-center justify-center mb-4 py-2.5 -mx-4 px-4" style="background: rgba(3, 3, 5, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,0.05); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.8);">
+          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-14 sm:h-20 w-auto max-w-[220px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
         </div>
 
         <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
@@ -728,24 +738,22 @@
         </div>
 
       <!-- ═══ PANEL 1: DEDICATED SEARCH VIEW ═══ -->
-        <div id="view-search" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-36 px-4 pt-3.5" style="background: var(--bg-panel);">
+        <div id="view-search" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-4 px-4 pt-3" style="background: var(--bg-panel);">
           <!-- Search Header -->
           <div class="mb-3">
-            <h1 class="text-[24px] font-black tracking-tight mb-2.5" style="color: var(--text-primary);">Search</h1>
+            <h1 class="text-[22px] font-black tracking-tight mb-2" style="color: var(--text-primary);">Search</h1>
             <div class="relative">
-              <input type="text" id="main-search-input" placeholder="Search songs, artists, albums..." class="w-full py-3 px-11 rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/40 glass-input" style="color: var(--text-primary);">
-              <i class="ph-bold ph-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-lg" style="color: var(--text-tertiary);"></i>
-              <button id="btn-clear-search" class="hidden absolute right-3.5 top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs" style="color: var(--text-tertiary);">
+              <input type="text" id="main-search-input" placeholder="Search songs, artists, albums..." class="w-full py-2.5 px-10 rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/40 glass-input" style="color: var(--text-primary);">
+              <i class="ph-bold ph-magnifying-glass absolute left-3.5 top-1/2 transform -translate-y-1/2 text-base" style="color: var(--text-tertiary);"></i>
+              <button id="btn-clear-search" class="hidden absolute right-3 top-1/2 transform -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs" style="color: var(--text-tertiary);">
                 <i class="ph-bold ph-x"></i>
               </button>
             </div>
           </div>
 
-
-
           <!-- Recent Searches -->
-          <div id="search-recent-section" class="mb-5">
-            <div class="flex items-center justify-between mb-2.5">
+          <div id="search-recent-section" class="mb-4">
+            <div class="flex items-center justify-between mb-2">
               <p class="text-xs font-bold uppercase tracking-wider" style="color: var(--text-tertiary);">Recent Searches</p>
               <button id="btn-clear-recent-searches" class="text-[11px] font-bold opacity-75 hover:opacity-100 transition-opacity cursor-pointer active:scale-95" style="color: var(--text-tertiary);">Clear All</button>
             </div>
@@ -765,7 +773,7 @@
         </div>
 
         <!-- ═══ PANEL 2: UNIFIED HERO VINYL PLAYER DECK ═══ -->
-        <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-24 px-5 pt-3 relative" style="background: var(--bg-app);">
+        <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-2 px-3 sm:px-5 pt-1 sm:pt-3 relative" style="background: var(--bg-app);">
           
           <!-- Dynamic Ambient Aura Glow -->
           <div id="ambient-aura-glow" class="absolute top-1/4 left-1/2 -translate-x-1/2 w-64 h-64 rounded-full blur-3xl opacity-35 pointer-events-none transition-all duration-1000" style="background: radial-gradient(circle, #a855f7 0%, #6366f1 50%, transparent 80%);"></div>
@@ -930,7 +938,7 @@
         </div>
 
         <!-- ═══ PANEL 3: DEDICATED LIBRARY & PLAYLISTS ═══ -->
-        <div id="view-library" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-36 px-0" style="background: var(--bg-panel);">
+        <div id="view-library" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-0" style="background: var(--bg-panel);">
           <div class="px-5 pt-5 pb-2 sticky top-0 z-20" style="background: linear-gradient(180deg, var(--bg-panel) 84%, transparent 100%); pointer-events: none;">
             <!-- Top Bar -->
             <div class="flex items-center justify-between mb-4 pointer-events-auto">
@@ -1074,7 +1082,7 @@
         </div>
 
         <!-- ═══ PANEL 4: SETTINGS ═══ -->
-        <div id="view-settings" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-36 px-4 pt-3.5" style="background: var(--bg-panel);">
+        <div id="view-settings" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-4 pt-3.5" style="background: var(--bg-panel);">
           <h1 class="text-[24px] font-black tracking-tight mb-4" style="color: var(--text-primary);">Settings</h1>
           
           <!-- General Display & Audio Settings -->
@@ -1194,7 +1202,7 @@
       </div>
 
       <!-- ═══ FLOATING MINI-PLAYER ═══ -->
-      <div id="mini-player" class="absolute bottom-[72px] left-3 right-3 rounded-[20px] p-2 px-3 flex items-center justify-between z-40 hidden shadow-xl border" style="background: var(--bg-mini); border-color: var(--border-card);">
+      <div id="mini-player" class="absolute bottom-[56px] sm:bottom-[72px] left-3 right-3 rounded-[20px] p-2 px-3 flex items-center justify-between z-40 hidden shadow-xl border" style="background: var(--bg-mini); border-color: var(--border-card);">
         <div class="flex items-center space-x-3 overflow-hidden flex-1 cursor-pointer active:opacity-80 transition-opacity" id="mini-player-info" title="Open Player Deck">
           <div class="w-[42px] h-[42px] rounded-[12px] overflow-hidden flex-shrink-0 relative shadow-sm" id="mini-art">
             <img src="" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80'">
@@ -1209,26 +1217,26 @@
         </button>
       </div>
 
-      <!-- ═══ BOTTOM NAVIGATION DOCK (5 Tabs: Home, Search, Player, Library, Settings) ═══ -->
-      <div class="glass-nav absolute bottom-0 left-0 right-0 h-[68px] flex justify-around items-center px-2 z-50">
+      <!-- ═══ BOTTOM NAVIGATION DOCK (In-Flow Flex child - Always 100% visible on any screen) ═══ -->
+      <div class="glass-nav shrink-0 w-full h-[52px] sm:h-[68px] flex justify-around items-center px-2 z-50" style="padding-bottom: max(2px, env(safe-area-inset-bottom));">
         <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-home" style="color: var(--text-primary);" title="Home">
-          <i class="ph-fill ph-house text-[21px]"></i>
+          <i class="ph-fill ph-house text-[20px] sm:text-[21px]"></i>
           <div class="w-1 h-1 rounded-full mt-1" style="background: var(--text-primary);"></div>
         </button>
         <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-search" style="color: var(--text-tertiary);" title="Search">
-          <i class="ph-bold ph-magnifying-glass text-[21px]"></i>
+          <i class="ph-bold ph-magnifying-glass text-[20px] sm:text-[21px]"></i>
           <div class="w-1 h-1 rounded-full mt-1 bg-transparent"></div>
         </button>
         <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-player-deck" style="color: var(--text-tertiary);" title="Player">
-          <i class="ph-fill ph-disc text-[21px]"></i>
+          <i class="ph-fill ph-disc text-[20px] sm:text-[21px]"></i>
           <div class="w-1 h-1 rounded-full mt-1 bg-transparent"></div>
         </button>
         <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-library" style="color: var(--text-tertiary);" title="Library & Queue">
-          <i class="ph-bold ph-playlist text-[21px]"></i>
+          <i class="ph-bold ph-playlist text-[20px] sm:text-[21px]"></i>
           <div class="w-1 h-1 rounded-full mt-1 bg-transparent"></div>
         </button>
         <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-settings" style="color: var(--text-tertiary);" title="Settings">
-          <i class="ph-bold ph-gear text-[21px]"></i>
+          <i class="ph-bold ph-gear text-[20px] sm:text-[21px]"></i>
           <div class="w-1 h-1 rounded-full mt-1 bg-transparent"></div>
         </button>
       </div>
