@@ -3430,13 +3430,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createThemeSwatch(quad) {
       const btn = document.createElement('button');
-      btn.className = 'accent-swatch flex flex-col p-0 overflow-hidden';
+      btn.className = 'accent-swatch flex flex-row p-0 overflow-hidden rounded-full shrink-0';
       btn._quad = quad;
-      btn.setAttribute('title', `Palette: ${quad.join(', ')} (Tap to apply, Hold to favorite)`);
+      btn.setAttribute('title', `Palette: ${quad.join(', ')} (Tap to select, Tap active to cycle colors, Hold to save)`);
 
       quad.forEach(col => {
         const band = document.createElement('div');
-        band.className = 'flex-1 w-full';
+        band.className = 'flex-1 h-full';
         band.style.background = col;
         btn.appendChild(band);
       });
@@ -3466,11 +3466,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     selectSwatch(quad, hex, event) {
-      const targetQuad = quad || this.currentQuad;
-      const targetHex = (hex || targetQuad[0]).toUpperCase();
-      engine.playHaptic(700, 0.02);
-      this.applyPalette(targetQuad, targetHex, true);
-      this.showThemeToast(targetQuad);
+      if (quad) {
+        // Check if tapping the already selected palette -> cycle its single palette colors
+        const isSamePalette = this.currentQuad && this.currentQuad.length === 4 &&
+          this.currentQuad.every((c, i) => c.toUpperCase() === quad[i].toUpperCase());
+
+        if (isSamePalette) {
+          this.rotateCurrentPalette();
+          return;
+        }
+
+        // Selected a new palette -> apply fresh
+        engine.playHaptic(700, 0.02);
+        this.applyPalette(quad, quad[0], true);
+        this.showThemeToast(quad);
+      } else if (hex) {
+        engine.playHaptic(700, 0.02);
+        this.applyPalette(this.currentQuad, hex.toUpperCase(), true);
+      }
     }
 
     toggleFavorite(item) {
@@ -3704,11 +3717,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="text-xs font-black text-white flex items-center gap-1.5">
           <i class="ph-fill ph-sparkle text-amber-400"></i> ${themeName}
         </span>
-        <div class="flex items-center gap-1">
-          <span class="w-3 h-3 rounded-full border border-white/30" style="background:${quad[0]}"></span>
-          <span class="w-3 h-3 rounded-full border border-white/30" style="background:${quad[1]}"></span>
-          <span class="w-3 h-3 rounded-full border border-white/30" style="background:${quad[2]}"></span>
-          <span class="w-3 h-3 rounded-full border border-white/30" style="background:${quad[3]}"></span>
+        <div class="w-6 h-6 rounded-full overflow-hidden flex flex-row border border-white/40 shadow-sm shrink-0">
+          <div class="flex-1 h-full" style="background:${quad[0]}"></div>
+          <div class="flex-1 h-full" style="background:${quad[1]}"></div>
+          <div class="flex-1 h-full" style="background:${quad[2]}"></div>
+          <div class="flex-1 h-full" style="background:${quad[3]}"></div>
         </div>
       `;
 
