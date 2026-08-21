@@ -707,21 +707,18 @@
     <!-- 5-Panel Horizontal Swipe Carousel (Fills remaining height perfectly) -->
     
     <!-- ═══ MATERIAL 3 REACTIVE FLUID MESH & ORGANIC SHAPES BACKDROP ═══ -->
-    <div id="m3-ambient-backdrop" class="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none">
+    <div id="m3-ambient-backdrop" class="fixed inset-0 pointer-events-none overflow-hidden z-0 select-none">
       <!-- Shape 1: Top-Left Organic Squircle Blob (Theme Color 1: Primary Accent) -->
-      <div id="m3-shape-1" class="m3-blob m3-blob-1 absolute -top-12 -left-12 w-96 h-96 rounded-[48%] blur-[70px] opacity-60 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-1, #a855f7) 0%, transparent 70%);"></div>
+      <div id="m3-shape-1" class="m3-blob m3-blob-1 absolute -top-16 -left-16 w-80 h-80 rounded-[48%] blur-[60px] opacity-25 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-1, #a855f7) 0%, transparent 70%);"></div>
       
       <!-- Shape 2: Top-Right Fluid Pill Blob (Theme Color 2: Secondary Accent) -->
-      <div id="m3-shape-2" class="m3-blob m3-blob-2 absolute top-1/4 -right-16 w-88 h-88 rounded-[42%_58%_70%_30%/45%_45%_55%_55%] blur-[70px] opacity-55 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-2, #ff4f00) 0%, transparent 70%);"></div>
+      <div id="m3-shape-2" class="m3-blob m3-blob-2 absolute top-1/4 -right-16 w-72 h-72 rounded-[42%_58%_70%_30%/45%_45%_55%_55%] blur-[60px] opacity-22 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-2, #ff4f00) 0%, transparent 70%);"></div>
 
       <!-- Shape 3: Center-Bottom Morphing Star/Sun Blob (Theme Color 3: Card Tint) -->
-      <div id="m3-shape-3" class="m3-blob m3-blob-3 absolute bottom-20 left-1/5 w-96 h-96 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] blur-[80px] opacity-50 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-3, #1f5c6b) 0%, transparent 75%);"></div>
+      <div id="m3-shape-3" class="m3-blob m3-blob-3 absolute bottom-20 left-1/4 w-80 h-80 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] blur-[70px] opacity-20 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-3, #1f5c6b) 0%, transparent 75%);"></div>
 
       <!-- Shape 4: Deep Ambient Base Atmosphere (Theme Color 4) -->
-      <div id="m3-shape-4" class="m3-blob m3-blob-4 absolute -bottom-16 -right-16 w-88 h-88 rounded-[50%] blur-[70px] opacity-45 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-4, #080911) 0%, transparent 70%);"></div>
-      
-      <!-- Soft translucent grain/ambient mesh -->
-      <div class="absolute inset-0 pointer-events-none bg-black/25 dark:bg-black/40"></div>
+      <div id="m3-shape-4" class="m3-blob m3-blob-4 absolute -bottom-16 -right-16 w-72 h-72 rounded-[50%] blur-[60px] opacity-18 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, var(--pal-4, #080911) 0%, transparent 70%);"></div>
     </div>
 
     <div class="flex-1 min-h-0 relative flex flex-row overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth w-full" id="app-container">
@@ -947,7 +944,7 @@
 
           <!-- 2. CENTER STAGE (RESPONSIVE CENTERPIECE SQUIRCLE) -->
           <div class="flex-1 min-h-0 flex items-center justify-center py-2 relative z-10 w-full">
-            <div id="deck-stage-window" class="w-[min(280px,74vw,34vh)] h-[min(280px,74vw,34vh)] rounded-[36px] overflow-hidden relative glass-card shadow-2xl flex items-center justify-center border mx-auto transition-all cursor-pointer select-none active:scale-[0.99]" style="background: var(--bg-card); border-color: var(--border-card); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); box-shadow: var(--shadow-card);" title="Tap to switch visualizer style">
+            <div id="deck-stage-window" class="w-[min(280px,74vw,34vh)] h-[min(280px,74vw,34vh)] rounded-[36px] overflow-hidden relative shadow-2xl flex items-center justify-center border mx-auto transition-all cursor-pointer select-none" style="background: var(--bg-card-solid, #0d0e14); border-color: var(--border-card); box-shadow: var(--shadow-card); z-index: 10;" title="Tap to switch visualizer style">
 
               <!-- 1. Holographic Vinyl Platter (DEFAULT) -->
               <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex flex-col items-center justify-center relative">
@@ -1006,7 +1003,7 @@
               <!-- 4. Video Player Mode Container -->
               <div id="deck-display-video" class="centerpiece-display w-full h-full flex items-center justify-center hidden relative bg-black">
                 <div id="deck-video-container" class="w-full h-full relative">
-                  <div id="yt-player-slot" class="w-full h-full"></div>
+                  <div id="yt-player-host" class="w-full h-full"></div>
                 </div>
               </div>
 
