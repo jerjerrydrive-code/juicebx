@@ -3184,24 +3184,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ═══ SCRUBBER ═══
+  // ═══ SCRUBBER (PIXEL-PERFECT MOUSE & TOUCH PROGRESS SEEKING) ═══
   if (els.deckScrubberTrack) {
+    function getClientX(e) {
+      if (e.clientX !== undefined) return e.clientX;
+      if (e.touches && e.touches.length > 0) return e.touches[0].clientX;
+      if (e.changedTouches && e.changedTouches.length > 0) return e.changedTouches[0].clientX;
+      return 0;
+    }
+
     function scrub(e) {
       const rect = els.deckScrubberTrack.getBoundingClientRect();
-      let x = e.clientX || (e.touches && e.touches[0].clientX);
-      let pct = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
+      const x = getClientX(e);
+      const pct = Math.max(0, Math.min(1, (x - rect.left) / (rect.width || 1)));
       if (els.deckScrubberFill) els.deckScrubberFill.style.transform = `scaleX(${pct})`;
       if (els.deckScrubberThumb) els.deckScrubberThumb.style.left = `${pct * 100}%`;
-      return pct * 100;
+      const dur = engine.getState().duration || 0;
+      const targetSeconds = pct * dur;
+      if (els.deckTimeCurrent && dur > 0) els.deckTimeCurrent.innerText = formatTime(targetSeconds);
+      return targetSeconds;
     }
-    els.deckScrubberTrack.addEventListener('mousedown', (e) => { isDragging = true; scrub(e); });
-    window.addEventListener('mousemove', (e) => { if (isDragging) scrub(e); });
-    window.addEventListener('mouseup', (e) => { if (isDragging) { engine.seek(scrub(e)); isDragging = false; } });
-    els.deckScrubberTrack.addEventListener('touchstart', (e) => { isDragging = true; scrub(e); }, { passive: true });
-    window.addEventListener('touchmove', (e) => { if (isDragging) scrub(e); }, { passive: true });
+
+    els.deckScrubberTrack.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      const targetSec = scrub(e);
+      engine.seek(targetSec);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (isDragging) scrub(e);
+    });
+
+    window.addEventListener('mouseup', (e) => {
+      if (isDragging) {
+        const targetSec = scrub(e);
+        engine.seek(targetSec);
+        isDragging = false;
+      }
+    });
+
+    els.deckScrubberTrack.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      const targetSec = scrub(e);
+      engine.seek(targetSec);
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (isDragging) scrub(e);
+    }, { passive: true });
+
     window.addEventListener('touchend', (e) => {
-      if (isDragging && e.changedTouches && e.changedTouches[0]) engine.seek(scrub(e.changedTouches[0]));
-      isDragging = false;
+      if (isDragging) {
+        const targetSec = scrub(e);
+        engine.seek(targetSec);
+        isDragging = false;
+      }
     });
   }
 

@@ -1669,40 +1669,32 @@ window.JuiceEngine = (() => {
 
     },
 
-    seek: (percentOrSeconds) => {
-
+    seek: (seconds) => {
       const track = state.queue[state.currentIndex];
-
       const isDirect = track && (track.isLocal || track.isDirectAudio) && localAudio;
+      const totalDuration = state.duration || (localAudio && localAudio.duration) || 0;
+      const targetSec = Math.max(0, Math.min(totalDuration > 0 ? totalDuration : 99999, Number(seconds) || 0));
 
-      if (isDirect && localAudio.duration) {
-
-        const sec = percentOrSeconds > 1 ? percentOrSeconds : (percentOrSeconds / 100) * localAudio.duration;
-
-        localAudio.currentTime = Math.min(localAudio.duration, Math.max(0, sec));
-
-        state.currentTime = localAudio.currentTime;
-
+      if (isDirect && localAudio) {
+        try {
+          localAudio.currentTime = targetSec;
+        } catch(e) {
+          console.warn("[JuiceEngine] localAudio seek error:", e);
+        }
+        state.currentTime = targetSec;
         emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
-
         return;
-
       }
 
-
-
-      if (ytPlayer && state.duration > 0) {
-
-        const seconds = percentOrSeconds > 1 ? percentOrSeconds : (percentOrSeconds / 100) * state.duration;
-
-        ytPlayer.seekTo(seconds, true);
-
-        state.currentTime = seconds;
-
+      if (ytPlayer && typeof ytPlayer.seekTo === 'function') {
+        try {
+          ytPlayer.seekTo(targetSec, true);
+        } catch(e) {
+          console.warn("[JuiceEngine] ytPlayer seek error:", e);
+        }
+        state.currentTime = targetSec;
         emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
-
       }
-
     },
 
     setVolume: (val) => {
