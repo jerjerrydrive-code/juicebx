@@ -781,17 +781,20 @@ window.JuiceEngine = (() => {
     search: async (query) => {
       if (!query || !query.trim()) return [];
       try {
-        const q = query.toLowerCase().trim();
-        // Client-side search across the built-in library (since GitHub Pages has no backend)
-        const results = DEFAULT_LIBRARY.filter(t => 
-          (t.title && t.title.toLowerCase().includes(q)) || 
-          (t.artist && t.artist.toLowerCase().includes(q))
-        );
-        return results;
+        const res = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
+        if (res.ok) {
+          const results = await res.json();
+          if (Array.isArray(results) && results.length > 0) return results;
+        }
       } catch (e) {
-        console.warn("Client-side search failed:", e);
+        console.warn("Backend search failed, falling back to local library.");
       }
-      return [];
+      // Fallback: Client-side search across the built-in library
+      const q = query.toLowerCase().trim();
+      return DEFAULT_LIBRARY.filter(t => 
+        (t.title && t.title.toLowerCase().includes(q)) || 
+        (t.artist && t.artist.toLowerCase().includes(q))
+      );
     },
     playJuiceRadio: async () => {
       try {
@@ -804,9 +807,11 @@ window.JuiceEngine = (() => {
           }
         }
       } catch(e) {
-        console.warn("Could not play Juice Radio:", e);
+        console.warn("Backend Juice Radio failed, falling back to local.");
       }
-      return null;
+      const randomTrack = DEFAULT_LIBRARY[Math.floor(Math.random() * DEFAULT_LIBRARY.length)];
+      api.setQueue([randomTrack], true);
+      return randomTrack;
     },
     searchJuiceVault: async (query) => {
       if (!query) return [];

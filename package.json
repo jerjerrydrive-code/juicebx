@@ -3,5 +3,8 @@
     "@distube/ytdl-core": "^4.16.12",
     "puppeteer-core": "^25.8.0",
     "yt-search": "^2.13.1"
+  },
+  "scripts": {
+    "start": "node lan_server.js"
   }
 }
