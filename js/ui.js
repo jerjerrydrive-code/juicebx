@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     deckVideoIframe: document.getElementById('deck-video-iframe'),
     deckDisplayLyrics: document.getElementById('deck-display-lyrics'),
     deckLyricsText: document.getElementById('deck-lyrics-text'),
+    deckBtnFullscreen: document.getElementById('deck-btn-fullscreen'),
+    deckFullscreenIcon: document.getElementById('deck-fullscreen-icon'),
     deckBtnFavorite: document.getElementById('deck-btn-favorite'),
     deckHeartIcon: document.getElementById('deck-heart-icon'),
     deckBtnAddPlaylist: document.getElementById('deck-btn-add-playlist'),
@@ -148,7 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
     settingsEqGrid: document.getElementById('settings-eq-grid'),
 
     // Settings & Theme
-    toggleLightMode: document.getElementById('toggle-light-mode')
+    toggleLightMode: document.getElementById('toggle-light-mode'),
+    toggleFullscreen: document.getElementById('toggle-fullscreen')
   };
 
   let isDragging = false;
@@ -1462,6 +1465,32 @@ document.addEventListener('DOMContentLoaded', () => {
       refreshCurrentLibrary();
     });
   }
+
+  // ═══ FULLSCREEN TOGGLE ═══
+  function toggleFullscreenMode() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(err => {
+        console.warn(`Error attempting to enable full-screen mode: ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
+  if (els.toggleFullscreen) els.toggleFullscreen.addEventListener('click', toggleFullscreenMode);
+  if (els.deckBtnFullscreen) els.deckBtnFullscreen.addEventListener('click', toggleFullscreenMode);
+
+  // Listen for hardware esc or system-level fullscreen changes to sync UI
+  document.addEventListener('fullscreenchange', () => {
+    const isFull = !!document.fullscreenElement;
+    if (els.toggleFullscreen) {
+      if (isFull) els.toggleFullscreen.classList.add('active');
+      else els.toggleFullscreen.classList.remove('active');
+    }
+    if (els.deckFullscreenIcon) {
+      els.deckFullscreenIcon.className = isFull ? 'ph-bold ph-corners-in text-base' : 'ph-bold ph-corners-out text-base';
+    }
+  });
 
   // ═══ MINI PLAYER ═══
   const miniPlayerInfo = document.getElementById('mini-player-info');
@@ -3064,7 +3093,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ═══ SETTINGS TOGGLES ═══
-  const settingsToggles = document.querySelectorAll('.toggle-switch:not(#toggle-light-mode):not(#toggle-settings-rabbit):not(#toggle-settings-haptics)');
+  const settingsToggles = document.querySelectorAll('.toggle-switch:not(#toggle-light-mode):not(#toggle-settings-rabbit):not(#toggle-settings-haptics):not(#toggle-fullscreen)');
   settingsToggles.forEach(toggle => {
     const toggleId = toggle.id || `toggle-${Math.random().toString(36).slice(2, 8)}`;
     toggle.id = toggleId;
