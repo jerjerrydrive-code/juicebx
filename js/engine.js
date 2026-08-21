@@ -154,6 +154,9 @@ window.JuiceEngine = (() => {
 
   function playHapticSound(freq = 550, duration = 0.025) {
     if (!state.hapticsEnabled) return;
+    if (window.JuiceNative && typeof window.JuiceNative.triggerHaptic === 'function') {
+      try { window.JuiceNative.triggerHaptic(Math.round(duration * 1000) || 20); } catch(e) {}
+    }
     try {
       const ctx = getAudioContext();
       if (!ctx) return;
@@ -538,6 +541,17 @@ window.JuiceEngine = (() => {
   }
 
   function syncMediaPlaybackState() {
+    if (window.JuiceNative && typeof window.JuiceNative.postPlaybackState === 'function') {
+      try {
+        const currentTrack = state.queue[state.currentIndex] || {};
+        window.JuiceNative.postPlaybackState(
+          currentTrack.title || 'JuiceBx',
+          currentTrack.artist || 'Juice WRLD',
+          currentTrack.thumb || '',
+          state.isPlaying
+        );
+      } catch(e) {}
+    }
     if ('mediaSession' in navigator) {
       navigator.mediaSession.playbackState = state.isPlaying ? 'playing' : 'paused';
       if ('setPositionState' in navigator.mediaSession && state.duration > 0) {
