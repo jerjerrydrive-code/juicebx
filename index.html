@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="styles.css">
+
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="juice_catalogs.js"></script>
   <!-- Service Worker Registration -->
@@ -44,44 +44,30 @@
   
   <style>
     :root {
-      --bg-app: #08080a;
-      --bg-panel: #0d0d12;
-      --bg-card: rgba(22, 22, 28, 0.7);
-      --bg-card-solid: #16161c;
-      --bg-input: #1b1b24;
-      --bg-nav: rgba(13, 13, 18, 0.88);
-      --bg-mini: rgba(22, 22, 30, 0.94);
-      --text-primary: #ffffff;
-      --text-secondary: #94a3b8;
-      --text-tertiary: #64748b;
-      --border-card: rgba(255, 255, 255, 0.08);
-      --border-input: rgba(255, 255, 255, 0.12);
-      --accent: #6366f1;
-      --accent-glow: rgba(99, 102, 241, 0.35);
-      --btn-active-bg: #ffffff;
-      --btn-active-text: #000000;
-      --shadow-card: 0 12px 32px -8px rgba(0, 0, 0, 0.65);
+      --bg-app: #e0e5ec;
+      --bg-panel: #e0e5ec;
+      --bg-card: #e0e5ec;
+      --bg-card-solid: #e0e5ec;
+      --bg-input: #e0e5ec;
+      --bg-nav: rgba(224, 229, 236, 0.95);
+      --bg-mini: #e0e5ec;
+      --text-primary: #4b5563;
+      --text-secondary: #9ca3af;
+      --text-tertiary: #cbd5e1;
+      --border-card: transparent;
+      --border-input: transparent;
+      --accent: #ff4f00;
+      --accent-glow: rgba(255, 79, 0, 0.35);
+      --btn-active-bg: #e0e5ec;
+      --btn-active-text: #ff4f00;
+      
+      /* Pure Neumorphism Shadows */
+      --neu-shadow-flat: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.6);
+      --neu-shadow-inset: inset 6px 6px 12px rgba(163,177,198,0.6), inset -6px -6px 12px rgba(255,255,255, 0.6);
+      --neu-shadow-soft: 5px 5px 10px rgba(163,177,198,0.5), -5px -5px 10px rgba(255,255,255, 0.8);
+      
+      --shadow-card: var(--neu-shadow-flat);
       --rabbit-orange: #ff4f00;
-    }
-
-    html.light {
-      --bg-app: #f1f5f9;
-      --bg-panel: #f8fafc;
-      --bg-card: rgba(255, 255, 255, 0.88);
-      --bg-card-solid: #ffffff;
-      --bg-input: #e2e8f0;
-      --bg-nav: rgba(255, 255, 255, 0.92);
-      --bg-mini: rgba(255, 255, 255, 0.96);
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
-      --text-tertiary: #94a3b8;
-      --border-card: rgba(15, 23, 42, 0.09);
-      --border-input: rgba(15, 23, 42, 0.15);
-      --accent: #4f46e5;
-      --accent-glow: rgba(79, 70, 229, 0.25);
-      --btn-active-bg: #0f172a;
-      --btn-active-text: #ffffff;
-      --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.07);
     }
 
     *, *::before, *::after {
@@ -90,7 +76,7 @@
 
     body {
       overscroll-behavior: none;
-      background-color: #030305;
+      background-color: var(--bg-app);
       color: var(--text-primary);
       font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
@@ -118,20 +104,45 @@
       filter: brightness(0);
     }
 
-    /* ═══ GLASSMORPHIC & NEUMORPHIC CARDS ═══ */
+    /* ═══ NEUMORPHIC COMPONENTS ═══ */
     .glass-card {
       background: var(--bg-card);
-      backdrop-filter: blur(28px);
-      -webkit-backdrop-filter: blur(28px);
-      border-radius: 22px;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-card);
+      border-radius: 20px;
+      box-shadow: var(--neu-shadow-flat);
+      border: none;
+    }
+    
+    .glass-card-solid {
+      background: var(--bg-card-solid);
+      border-radius: 20px;
+      box-shadow: var(--neu-shadow-flat);
+      border: none;
     }
 
     .glass-input {
       background: var(--bg-input);
-      border: 1px solid var(--border-input);
+      border-radius: 12px;
+      box-shadow: var(--neu-shadow-inset);
+      border: none;
       color: var(--text-primary);
+    }
+    .glass-input:focus {
+      outline: none;
+      box-shadow: var(--neu-shadow-inset), 0 0 0 2px var(--accent-glow);
+    }
+
+    .glass-nav {
+      background: var(--bg-nav);
+      box-shadow: 0 -4px 16px rgba(163,177,198,0.3);
+      border-top: none;
+    }
+    
+    .neu-pressed {
+      box-shadow: var(--neu-shadow-inset) !important;
+    }
+    
+    .neu-flat {
+      box-shadow: var(--neu-shadow-flat) !important;
     }
 
     /* ═══ 3D VINYL TURNTABLE ═══ */
@@ -917,7 +928,7 @@
       </div>
 
       <!-- ═══ BOTTOM NAVIGATION DOCK (5 Tabs: Home, Search, Player, Library, Settings) ═══ -->
-      <div class="absolute bottom-0 left-0 right-0 h-[68px] flex justify-around items-center px-2 z-50" style="background: var(--bg-nav); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-top: 1px solid var(--border-card);">
+      <div class="glass-nav absolute bottom-0 left-0 right-0 h-[68px] flex justify-around items-center px-2 z-50">
         <button class="nav-btn flex flex-col items-center justify-center p-2 active:scale-90 transition-transform outline-none" data-target="view-home" style="color: var(--text-primary);" title="Home">
           <i class="ph-fill ph-house text-[21px]"></i>
           <div class="w-1 h-1 rounded-full mt-1" style="background: var(--text-primary);"></div>
