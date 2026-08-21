@@ -3740,6 +3740,173 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
+  // ═══ DEDICATED ARTIST + SIMILAR ARTIST SHUFFLE RADIO ENGINE ═══
+  const SIMILAR_ARTIST_MAP = {
+    'juice wrld': ['The Kid LAROI', 'XXXTENTACION', 'Lil Peep', 'Trippie Redd', 'Lil Skies', 'Polo G', 'Lil Uzi Vert', 'iann dior', 'Post Malone'],
+    'travis scott': ['Don Toliver', 'Sheck Wes', 'Future', 'Young Thug', 'Gunna', 'Playboi Carti', 'Metro Boomin', 'Lil Uzi Vert', 'Drake', '21 Savage'],
+    'drake': ['Future', '21 Savage', 'Travis Scott', 'Lil Baby', 'PartyNextDoor', 'The Weeknd', 'Rick Ross', 'J. Cole', 'Kendrick Lamar'],
+    'the weeknd': ['Post Malone', 'Dua Lipa', 'SZA', 'Frank Ocean', 'Brent Faiyaz', 'Giveon', 'Lana Del Rey', 'Justin Bieber', 'Khalid'],
+    'kendrick lamar': ['J. Cole', 'Baby Keem', 'ScHoolboy Q', 'Jay Rock', 'A$AP Rocky', 'Pusha T', 'Tyler, The Creator', 'Eminem', 'Nas'],
+    'lil peep': ['Juice WRLD', 'XXXTENTACION', 'Lil Tracy', 'Bilmuri', 'Brodnax', 'GothBoiClique', 'Cold Hart', 'Wicca Phase Springs Eternal'],
+    'xxxtentacion': ['Juice WRLD', 'Ski Mask The Slump God', 'Lil Peep', 'Trippie Redd', 'Denzel Curry', 'Jasiah', 'Craig Xen', 'Robb Bank$'],
+    'future': ['Metro Boomin', 'Young Thug', 'Gunna', 'Lil Baby', 'Drake', 'Travis Scott', '21 Savage', 'Don Toliver', 'Playboi Carti'],
+    'gunna': ['Young Thug', 'Lil Baby', 'Future', 'Roddy Ricch', 'Lil Durk', 'Moneybagg Yo', 'Travis Scott', 'Don Toliver'],
+    'playboi carti': ['Ken Carson', 'Destroy Lonely', 'Lil Uzi Vert', 'Travis Scott', 'Yeat', 'Pi\'erre Bourne', 'SoFaygo'],
+    'sza': ['Summer Walker', 'Jhené Aiko', 'Frank Ocean', 'Kehlani', 'Snoh Aalegra', 'Kali Uchis', 'Solange', 'Brent Faiyaz'],
+    'frank ocean': ['Daniel Caesar', 'Brent Faiyaz', 'Steve Lacy', 'Tyler, The Creator', 'Childish Gambino', 'SZA', 'Rex Orange County', 'Dominic Fike'],
+    'eminem': ['50 Cent', 'Dr. Dre', 'Snoop Dogg', 'D12', 'Jay-Z', 'Tupac', 'The Notorious B.I.G.', 'Royce da 5\'9"', 'Outkast'],
+    'billie eilish': ['FINNEAS', 'Olivia Rodrigo', 'Lorde', 'Lana Del Rey', 'Melanie Martinez', 'Girl in Red', 'Clairo', 'Phoebe Bridgers'],
+    'taylor swift': ['Olivia Rodrigo', 'Sabrina Carpenter', 'Gracie Abrams', 'Phoebe Bridgers', 'Kacey Musgraves', 'Lorde', 'Halsey']
+  };
+
+  window.launchArtistRadioShuffle = async function(artistName) {
+    if (!artistName || !artistName.trim()) artistName = 'Juice WRLD';
+    artistName = artistName.trim();
+    engine.playHaptic(600, 0.03);
+
+    console.log(`[Artist Radio] Building Shuffle for: "${artistName}" + Similar Artists...`);
+    const cleanArt = artistName.toLowerCase();
+    
+    // Find mapped similar artists or infer
+    let similarArtists = SIMILAR_ARTIST_MAP[cleanArt] || [];
+    if (similarArtists.length === 0) {
+      for (const [k, v] of Object.entries(SIMILAR_ARTIST_MAP)) {
+        if (cleanArt.includes(k) || k.includes(cleanArt)) {
+          similarArtists = v;
+          break;
+        }
+      }
+    }
+
+    let allTracks = [];
+
+    // 1. Instant 0ms Match from Built-in Catalogs (Juice WRLD, Hip-Hop, Emo Rap, Pop, R&B, Rock, etc.)
+    if (typeof TOP_SHUFFLES_CATALOG !== 'undefined') {
+      Object.values(TOP_SHUFFLES_CATALOG).forEach(cat => {
+        if (cat.tracks) {
+          cat.tracks.forEach(t => {
+            const tArt = (t.artist || '').toLowerCase();
+            if (tArt.includes(cleanArt) || cleanArt.includes(tArt)) {
+              allTracks.push(t);
+            } else if (similarArtists.some(sim => tArt.includes(sim.toLowerCase()) || sim.toLowerCase().includes(tArt))) {
+              allTracks.push(t);
+            }
+          });
+        }
+      });
+    }
+
+    // 2. If catalog gave tracks, start playing IMMEDIATELY (0ms latency!)
+    if (allTracks.length > 0) {
+      const seen = new Set();
+      const unique = allTracks.filter(t => {
+        const k = (t.title || '').toLowerCase();
+        if (seen.has(k)) return false;
+        seen.add(k);
+        return true;
+      });
+
+      for (let i = unique.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [unique[i], unique[j]] = [unique[j], unique[i]];
+      }
+
+      engine.setQueue(unique, true);
+      scrollToPanel(2); // Player Deck
+      setDeckMode('vinyl');
+      console.log(`[Artist Radio] Instant catalog launch for "${artistName}" with ${unique.length} tracks!`);
+      
+      // Concurrently fetch dynamic extensions in background
+      (async () => {
+        try {
+          const dynamic = await engine.search(`${artistName} songs greatest hits`);
+          if (dynamic && dynamic.length > 0) {
+            const newOnes = dynamic.filter(t => !seen.has((t.title || '').toLowerCase()));
+            if (newOnes.length > 0) {
+              const curState = engine.getState();
+              curState.queue.push(...newOnes.slice(0, 10));
+              engine.setQueue(curState.queue, false);
+            }
+          }
+        } catch(e) {}
+      })();
+
+      return unique;
+    }
+
+    // 3. Dynamic Search Fallback if artist was not in built-in catalogs
+    try {
+      const primaryTracks = await engine.search(`${artistName} greatest hits audio`);
+      if (primaryTracks && primaryTracks.length > 0) {
+        allTracks.push(...primaryTracks);
+      }
+    } catch(e) {}
+
+    if (allTracks.length > 0) {
+      engine.setQueue(allTracks, true);
+      scrollToPanel(2);
+      setDeckMode('vinyl');
+      return allTracks;
+    }
+    return [];
+  };
+
+  // Bind Custom Artist Shuffle Modal
+  const modalArtistShuffle = document.getElementById('modal-artist-shuffle');
+  const btnOpenArtistShuffle = document.getElementById('btn-open-custom-artist-shuffle');
+  const btnCloseArtistShuffle = document.getElementById('btn-close-artist-shuffle-modal');
+  const inputArtistShuffle = document.getElementById('input-artist-shuffle-name');
+  const btnGenerateArtistShuffle = document.getElementById('btn-generate-artist-shuffle-submit');
+
+  if (btnOpenArtistShuffle && modalArtistShuffle) {
+    btnOpenArtistShuffle.addEventListener('click', () => {
+      modalArtistShuffle.classList.remove('hidden');
+      setTimeout(() => {
+        modalArtistShuffle.classList.remove('opacity-0');
+        if (inputArtistShuffle) inputArtistShuffle.focus();
+      }, 20);
+    });
+  }
+
+  if (btnCloseArtistShuffle && modalArtistShuffle) {
+    btnCloseArtistShuffle.addEventListener('click', () => {
+      modalArtistShuffle.classList.add('opacity-0');
+      setTimeout(() => modalArtistShuffle.classList.add('hidden'), 300);
+    });
+  }
+
+  if (btnGenerateArtistShuffle && inputArtistShuffle) {
+    btnGenerateArtistShuffle.addEventListener('click', async () => {
+      const name = inputArtistShuffle.value.trim();
+      if (!name) return;
+      btnGenerateArtistShuffle.innerHTML = '<i class="ph-bold ph-spinner animate-spin text-base"></i> Generating Mix...';
+      await window.launchArtistRadioShuffle(name);
+      btnGenerateArtistShuffle.innerHTML = '<i class="ph-bold ph-play text-base"></i> Launch Artist Radio Shuffle';
+      if (modalArtistShuffle) {
+        modalArtistShuffle.classList.add('opacity-0');
+        setTimeout(() => modalArtistShuffle.classList.add('hidden'), 300);
+      }
+    });
+
+    inputArtistShuffle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        btnGenerateArtistShuffle.click();
+      }
+    });
+  }
+
+  // Quick suggestion chips inside modal
+  document.querySelectorAll('.btn-quick-artist').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const art = chip.getAttribute('data-artist');
+      if (art && inputArtistShuffle) {
+        inputArtistShuffle.value = art;
+        if (btnGenerateArtistShuffle) btnGenerateArtistShuffle.click();
+      }
+    });
+  });
+
   startAudioReactivity();
   engine.init();
   refreshCurrentLibrary();
