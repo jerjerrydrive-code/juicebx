@@ -701,7 +701,7 @@ window.JuiceEngine = (() => {
       try {
         const cleanTitle = track.title.replace(/\(.*\)/g, '').trim();
         const jwCtrl = new AbortController();
-        setTimeout(() => jwCtrl.abort(), 6000);
+        setTimeout(() => jwCtrl.abort(), 1500);
         const jwRes = await fetch(`https://juicewrldapi.com/juicewrld/songs/?search=${encodeURIComponent(cleanTitle)}`, { signal: jwCtrl.signal });
         if (jwRes.ok) {
           const jwData = await jwRes.json();

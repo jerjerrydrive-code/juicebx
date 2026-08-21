@@ -1360,18 +1360,18 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
           </div>
-          <div class="flex items-center gap-1 shrink-0">
-            <button class="btn-search-like w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-pink-500" data-track-id="${t.id}" title="Favorite">
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button class="btn-search-like w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all ${isFav ? 'text-pink-500' : 'text-white/40 hover:text-pink-500'}" data-track-id="${t.id}" title="Favorite">
               <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'} text-base"></i>
             </button>
             <button class="btn-search-add-pl w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-white" data-track-id="${t.id}" title="Add to Playlist">
               <i class="ph-bold ph-plus text-base"></i>
             </button>
-            <button class="btn-search-download w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-white" data-track-id="${t.id}" title="Download song">
+            <button class="btn-search-download w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all ${isSaved ? 'text-emerald-400' : 'text-white/40 hover:text-white'}" data-track-id="${t.id}" title="${isSaved ? 'Downloaded' : 'Download for Offline'}">
               <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-400' : 'ph-bold ph-download-simple'} text-base"></i>
             </button>
-            <button class="btn-search-play px-3.5 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 active:scale-95 transition-transform shadow-md hover:scale-105" style="background: var(--btn-active-bg); color: var(--btn-active-text);">
-              <i class="ph-fill ph-play text-xs"></i> Play
+            <button class="btn-search-play w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform shadow-md hover:scale-105 shrink-0" style="background: var(--btn-active-bg); color: var(--btn-active-text);" title="Play Track">
+              <i class="ph-fill ph-play text-sm ml-0.5"></i>
             </button>
           </div>
         </div>
@@ -1508,17 +1508,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let tracks = [];
 
-    // 1. Check Pre-cached Top 100 Shuffles catalog
-    if (typeof TOP_SHUFFLES_CATALOG !== 'undefined' && TOP_SHUFFLES_CATALOG[genreKey]) {
-      tracks = TOP_SHUFFLES_CATALOG[genreKey].tracks || [];
-    } else if (genreKey === "Juice WRLD: Official Discography" || genreKey === "official_discography") {
-      tracks = (typeof TOP_SHUFFLES_CATALOG !== 'undefined' && TOP_SHUFFLES_CATALOG["Juice WRLD: Official Discography"]) 
-        ? TOP_SHUFFLES_CATALOG["Juice WRLD: Official Discography"].tracks 
-        : (typeof JUICE_OFFICIAL_CATALOG !== 'undefined' ? JUICE_OFFICIAL_CATALOG : []);
+    // 1. Direct verified catalogs for Juice WRLD Shuffles (Instant 0ms audio start)
+    if (genreKey === "Juice WRLD: Official Discography" || genreKey === "official_discography") {
+      tracks = (typeof JUICE_OFFICIAL_CATALOG !== 'undefined' && JUICE_OFFICIAL_CATALOG.length > 0)
+        ? JUICE_OFFICIAL_CATALOG
+        : (typeof TOP_SHUFFLES_CATALOG !== 'undefined' && TOP_SHUFFLES_CATALOG["Juice WRLD: Official Discography"] ? TOP_SHUFFLES_CATALOG["Juice WRLD: Official Discography"].tracks : []);
     } else if (genreKey === "Juice WRLD: The Lost Vault" || genreKey === "the_lost_vault") {
-      tracks = (typeof TOP_SHUFFLES_CATALOG !== 'undefined' && TOP_SHUFFLES_CATALOG["Juice WRLD: The Lost Vault"])
-        ? TOP_SHUFFLES_CATALOG["Juice WRLD: The Lost Vault"].tracks
-        : (typeof JUICE_UNRELEASED_CATALOG !== 'undefined' ? JUICE_UNRELEASED_CATALOG : []);
+      tracks = (typeof JUICE_VAULT_CATALOG !== 'undefined' && JUICE_VAULT_CATALOG.length > 0)
+        ? JUICE_VAULT_CATALOG
+        : (typeof TOP_SHUFFLES_CATALOG !== 'undefined' && TOP_SHUFFLES_CATALOG["Juice WRLD: The Lost Vault"] ? TOP_SHUFFLES_CATALOG["Juice WRLD: The Lost Vault"].tracks : []);
+    } else if (typeof TOP_SHUFFLES_CATALOG !== 'undefined' && TOP_SHUFFLES_CATALOG[genreKey]) {
+      tracks = TOP_SHUFFLES_CATALOG[genreKey].tracks || [];
     }
 
     // Fallback: If not found in catalog, fetch from LAN server or search
@@ -2043,8 +2043,17 @@ document.addEventListener('DOMContentLoaded', () => {
         engine.downloadTrack(track);
         engine.playHaptic(700, 0.03);
         updateDeckFavoriteState();
-        showToast(`Saved "${track.title}" for offline playback`);
       }
+    });
+  }
+
+  const deckBtnQueue = document.getElementById('deck-btn-queue');
+  if (deckBtnQueue) {
+    deckBtnQueue.addEventListener('click', () => {
+      engine.playHaptic(600, 0.02);
+      scrollToPanel(3); // Jump to Library Panel
+      const queueTabBtn = document.querySelector('.lib-tab[data-tab="queue"]');
+      if (queueTabBtn) queueTabBtn.click();
     });
   }
 
@@ -2323,6 +2332,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('engine:queueUpdated', () => {
+    const qLen = (engine.getState().queue || []).length;
+    const badge = document.getElementById('deck-queue-badge');
+    if (badge) {
+      badge.innerText = qLen;
+      badge.classList.toggle('hidden', qLen === 0);
+    }
     // Small delay so remove-queue slide animation completes before DOM is replaced
     setTimeout(() => refreshCurrentLibrary(), 250);
   });
