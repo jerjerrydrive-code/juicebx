@@ -3339,22 +3339,19 @@ document.addEventListener('DOMContentLoaded', () => {
     bloodruby: { name: "Blood Ruby", quad: ["#EF4444", "#B91C1C", "#450A0A", "#140204"] }
   };
 
-    class OSThemeManager {
+      class OSThemeManager {
     constructor() {
       this.rowEl = document.getElementById('theme-swatch-row');
       this.expandBtn = document.getElementById('btn-theme-expand');
       this.favorites = this.loadFavorites();
       
       const savedQuad = this.loadSavedQuad();
-      const savedHex = localStorage.getItem('juicebx_accent') || savedQuad[0];
-      this.currentQuad = savedQuad;
-      this.currentHex = savedHex.toUpperCase();
+      this.currentQuad = [...savedQuad];
+      this.currentHex = this.currentQuad[0].toUpperCase();
 
-      this.applyPalette(this.currentQuad, this.currentHex, false);
+      this.applyPalette(this.currentQuad, true);
       this.render();
       this.initExpandToggle();
-      this.bindPresets();
-      this.bindRandomizer();
     }
 
     loadFavorites() {
@@ -3394,147 +3391,168 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!this.rowEl) return;
       this.rowEl.innerHTML = '';
 
-      // 1. Render user saved favorite themes first
+      // 1. User saved favorite palettes first
       if (this.favorites && this.favorites.length > 0) {
         this.favorites.forEach((fav) => {
-          if (Array.isArray(fav)) {
-            this.rowEl.appendChild(this.createThemeSwatch(fav));
-          } else if (typeof fav === 'string') {
-            this.rowEl.appendChild(this.createColorDot(fav, true));
+          if (Array.isArray(fav) && fav.length === 4) {
+            this.rowEl.appendChild(this.createThemeSwatch(fav, true));
           }
         });
       }
 
-      // 2. Render all 338 curated ColorHunt palettes
+      // 2. All 338 curated ColorHunt palettes
       THEMES.forEach((quad) => {
-        this.rowEl.appendChild(this.createThemeSwatch(quad));
+        this.rowEl.appendChild(this.createThemeSwatch(quad, false));
       });
 
       this.syncActiveRings();
     }
 
-    createColorDot(hex, isPinned = false) {
-      const dot = document.createElement('div');
-      dot.className = 'accent-swatch';
-      dot._pinnedHex = hex;
-      dot.style.background = hex;
-      dot.style.boxShadow = `0 4px 14px ${hex}55`;
-      dot.setAttribute('title', `Favorite Accent: ${hex}`);
-
-      dot.addEventListener('click', (e) => {
-        e.stopPropagation();
-        this.selectSwatch(null, hex, e);
-      });
-      return dot;
-    }
-
-    createThemeSwatch(quad) {
+    createThemeSwatch(quad, isFavorite = false) {
       const btn = document.createElement('button');
-      btn.className = 'accent-swatch flex flex-row p-0 overflow-hidden rounded-full shrink-0';
-      btn._quad = quad;
-      btn.setAttribute('title', `Palette: ${quad.join(', ')} (Tap to select, Tap active to cycle colors, Hold to save)`);
+      btn.className = 'accent-swatch w-10 h-10 rounded-full flex flex-row p-0 overflow-hidden shrink-0 border-2 border-white/20 shadow-md transition-transform active:scale-90 cursor-pointer relative';
+      btn._quad = [...quad];
+      btn.setAttribute('title', `Palette: ${quad.join(', ')} (Tap to select, Tap again to cycle 4 colors, Hold to save)`);
 
+      // 4 Vertical Color Slices
       quad.forEach(col => {
         const band = document.createElement('div');
-        band.className = 'flex-1 h-full';
+        band.className = 'flex-1 h-full pointer-events-none transition-colors duration-200';
         band.style.background = col;
         btn.appendChild(band);
       });
 
+      if (isFavorite) {
+        const star = document.createElement('span');
+        star.className = 'absolute top-0.5 right-0.5 text-[8px] text-amber-300 pointer-events-none drop-shadow';
+        star.textContent = '★';
+        btn.appendChild(star);
+      }
+
       let pressTimer = null;
       let longPressed = false;
 
-      const startPress = () => {
+      const startPress = (e) => {
         longPressed = false;
         pressTimer = setTimeout(() => {
           longPressed = true;
-          this.toggleFavorite(quad);
+          this.toggleFavorite(btn._quad);
           engine.playHaptic(800, 0.04);
-          if (typeof showToast === 'function') showToast("Saved to Favorite Themes!", "success");
-        }, 500);
+          if (typeof showToast === 'function') showToast("Saved 4-color palette as favorite!", "success");
+        }, 450);
       };
       const cancelPress = () => { if (pressTimer) clearTimeout(pressTimer); };
 
       btn.addEventListener('pointerdown', startPress);
       btn.addEventListener('pointerup', (e) => {
         cancelPress();
-        if (!longPressed) this.selectSwatch(quad, null, e);
+        if (longPressed) return;
+        
+        if (e.shiftKey) {
+          this.toggleFavorite(btn._quad);
+          if (typeof showToast === 'function') showToast("Saved 4-color palette as favorite!", "success");
+          return;
+        }
+
+        // Tap action:
+        const isCurrent = this.isCurrentQuad(btn._quad);
+        if (isCurrent) {
+          // Already active: rotate all 4 colors in this single palette!
+          this.rotateCurrentPalette(btn);
+        } else {
+          // Select new palette
+          this.currentQuad = [...btn._quad];
+          this.applyPalette(this.currentQuad, true);
+          this.syncActiveRings();
+          engine.playHaptic(700, 0.02);
+          this.showThemeToast(this.currentQuad);
+        }
       });
       btn.addEventListener('pointerleave', cancelPress);
 
       return btn;
     }
 
-    selectSwatch(quad, hex, event) {
-      if (quad) {
-        // Check if tapping the already selected palette -> cycle its single palette colors
-        const isSamePalette = this.currentQuad && this.currentQuad.length === 4 &&
-          this.currentQuad.every((c, i) => c.toUpperCase() === quad[i].toUpperCase());
-
-        if (isSamePalette) {
-          this.rotateCurrentPalette();
-          return;
-        }
-
-        // Selected a new palette -> apply fresh
-        engine.playHaptic(700, 0.02);
-        this.applyPalette(quad, quad[0], true);
-        this.showThemeToast(quad);
-      } else if (hex) {
-        engine.playHaptic(700, 0.02);
-        this.applyPalette(this.currentQuad, hex.toUpperCase(), true);
-      }
+    isCurrentQuad(quad) {
+      if (!this.currentQuad || this.currentQuad.length !== 4 || !quad || quad.length !== 4) return false;
+      const sortedA = [...this.currentQuad].map(c => c.toUpperCase()).sort();
+      const sortedB = [...quad].map(c => c.toUpperCase()).sort();
+      return sortedA.every((c, i) => c === sortedB[i]);
     }
 
-    toggleFavorite(item) {
-      if (Array.isArray(item)) {
-        const key = item.join('-');
-        const idx = this.favorites.findIndex(f => Array.isArray(f) && f.join('-') === key);
-        if (idx !== -1) {
-          this.favorites.splice(idx, 1);
-        } else {
-          this.favorites.unshift(item);
+    // ═══ PURE 4-COLOR ROTATION FOR A SINGLE PALETTE ═══
+    rotateCurrentPalette(activeBtn) {
+      if (!this.currentQuad || this.currentQuad.length !== 4) return;
+      
+      // Rotate all 4 colors: [C1, C2, C3, C4] -> [C2, C3, C4, C1]
+      const [c1, c2, c3, c4] = this.currentQuad;
+      this.currentQuad = [c2, c3, c4, c1];
+
+      // Update the 4 vertical stripes inside the active button element
+      if (activeBtn) {
+        activeBtn._quad = [...this.currentQuad];
+        const bands = activeBtn.querySelectorAll('div');
+        if (bands.length === 4) {
+          bands[0].style.background = this.currentQuad[0];
+          bands[1].style.background = this.currentQuad[1];
+          bands[2].style.background = this.currentQuad[2];
+          bands[3].style.background = this.currentQuad[3];
         }
-      } else if (typeof item === 'string') {
-        const upper = item.toUpperCase();
-        const idx = this.favorites.findIndex(f => typeof f === 'string' && f.toUpperCase() === upper);
-        if (idx !== -1) {
-          this.favorites.splice(idx, 1);
-        } else {
-          this.favorites.unshift(upper);
-        }
+      }
+
+      this.applyPalette(this.currentQuad, true);
+      this.syncActiveRings();
+      engine.playHaptic(350, 0.03);
+      this.showThemeToast(this.currentQuad);
+    }
+
+    toggleFavorite(quad) {
+      if (!Array.isArray(quad) || quad.length !== 4) return;
+      const key = quad.map(c => c.toUpperCase()).join('-');
+      const idx = this.favorites.findIndex(f => Array.isArray(f) && f.map(c => c.toUpperCase()).join('-') === key);
+      if (idx !== -1) {
+        this.favorites.splice(idx, 1);
+      } else {
+        this.favorites.unshift([...quad]);
       }
       this.saveFavorites();
       this.render();
     }
 
-    // ═══ SYSTEM-WIDE THEME APPLICATION ═══
-    applyPalette(quad, hex, persist = true) {
+    // ═══ SYSTEM-WIDE 4-COLOR ATMOSPHERE APPLICATION ═══
+    applyPalette(quad, persist = true) {
       if (!quad || quad.length !== 4) return;
-      this.currentQuad = quad;
-      this.currentHex = (hex || quad[0]).toUpperCase();
+      this.currentQuad = [...quad];
+      this.currentHex = quad[0].toUpperCase();
 
       const [c1, c2, c3, c4] = quad;
       const root = document.documentElement.style;
 
+      // Color 1: Primary Accent & Buttons
       root.setProperty('--pal-1', c1);
+      root.setProperty('--accent', c1);
+      root.setProperty('--accent-glow', `color-mix(in srgb, ${c1} 45%, transparent)`);
+      
+      // Color 2: Secondary Accent, Switches & Ring Highlights
       root.setProperty('--pal-2', c2);
-      root.setProperty('--pal-3', c3);
-      root.setProperty('--pal-4', c4);
-      root.setProperty('--accent', this.currentHex);
       root.setProperty('--rabbit-orange', c2);
-      root.setProperty('--accent-glow', `color-mix(in srgb, ${this.currentHex} 50%, transparent)`);
+
+      // Color 3: Card Tint & Borders
+      root.setProperty('--pal-3', c3);
+
+      // Color 4: App Backdrop & Base Panels
+      root.setProperty('--pal-4', c4);
 
       const isLight = document.body.classList.contains('light-mode');
 
       if (!isLight) {
-        // Dark Mode: Deep themeing using palette colors
+        // Dark Mode: Deep themeing using all 4 palette colors
         root.setProperty('--bg-app', `color-mix(in srgb, ${c4} 45%, #030408)`);
         root.setProperty('--bg-panel', `color-mix(in srgb, ${c4} 45%, #030408)`);
-        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 26%, rgba(18, 19, 26, 0.72))`);
-        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c4} 38%, #0d0e14)`);
+        root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 26%, rgba(18, 19, 26, 0.75))`);
+        root.setProperty('--bg-card-solid', `color-mix(in srgb, ${c4} 40%, #0d0e14)`);
         root.setProperty('--bg-input', `color-mix(in srgb, ${c4} 32%, rgba(27, 28, 38, 0.55))`);
-        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 42%, rgba(10, 11, 16, 0.88))`);
+        root.setProperty('--bg-nav', `color-mix(in srgb, ${c4} 42%, rgba(10, 11, 16, 0.90))`);
         root.setProperty('--bg-mini', `color-mix(in srgb, ${c4} 45%, rgba(18, 19, 26, 0.92))`);
         root.setProperty('--text-primary', '#ffffff');
         root.setProperty('--text-secondary', '#94a3b8');
@@ -3545,7 +3563,7 @@ document.addEventListener('DOMContentLoaded', () => {
         root.setProperty('--btn-active-text', '#000000');
         root.setProperty('--shadow-card', '0 24px 48px -12px rgba(0, 0, 0, 0.8)');
       } else {
-        // Light Mode: Clean high-contrast white glass themeing
+        // Light Mode: Clean high-contrast white ceramic glass themeing
         root.setProperty('--bg-app', `color-mix(in srgb, ${c4} 8%, #f4f5fa)`);
         root.setProperty('--bg-panel', `color-mix(in srgb, ${c4} 8%, #f4f5fa)`);
         root.setProperty('--bg-card', `color-mix(in srgb, ${c3} 10%, rgba(255, 255, 255, 0.92))`);
@@ -3569,30 +3587,10 @@ document.addEventListener('DOMContentLoaded', () => {
         aura.style.background = `radial-gradient(circle, ${c1} 0%, ${c2} 50%, transparent 80%)`;
       }
 
-      // Update live indicator chips in Settings
-      const sw1 = document.getElementById('swatch-1');
-      const sw2 = document.getElementById('swatch-2');
-      const sw3 = document.getElementById('swatch-3');
-      const sw4 = document.getElementById('swatch-4');
-      const dot = document.getElementById('theme-indicator-dot');
-      const nameLabel = document.getElementById('theme-active-name');
-
-      if (sw1) sw1.style.background = c1;
-      if (sw2) sw2.style.background = c2;
-      if (sw3) sw3.style.background = c3;
-      if (sw4) sw4.style.background = c4;
-      if (dot) dot.style.background = this.currentHex;
-      if (nameLabel) {
-        const themeIdx = THEMES.indexOf(quad) >= 0 ? THEMES.indexOf(quad) + 1 : 'Custom';
-        nameLabel.innerText = `Palette #${themeIdx}`;
-      }
-
-      this.syncActiveRings();
-
       if (persist) {
         try {
           localStorage.setItem('juicebx_accent', this.currentHex);
-          localStorage.setItem('juicebx_quad', JSON.stringify(quad));
+          localStorage.setItem('juicebx_quad', JSON.stringify(this.currentQuad));
         } catch(e) {}
       }
     }
@@ -3600,102 +3598,17 @@ document.addEventListener('DOMContentLoaded', () => {
     syncActiveRings() {
       if (!this.rowEl) return;
       Array.from(this.rowEl.children).forEach(el => {
-        if (!el._quad && !el._pinnedHex) return;
-        const isActive = el._pinnedHex
-          ? el._pinnedHex.toUpperCase() === this.currentHex
-          : el._quad && el._quad.some(c => c.toUpperCase() === this.currentHex);
+        if (!el._quad) return;
+        const isActive = this.isCurrentQuad(el._quad);
         el.classList.toggle('active', isActive);
+        if (isActive) {
+          el.style.borderColor = 'var(--accent)';
+          el.style.boxShadow = '0 0 16px var(--accent), 0 4px 12px rgba(0,0,0,0.5)';
+        } else {
+          el.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+          el.style.boxShadow = '0 4px 10px rgba(0,0,0,0.3)';
+        }
       });
-    }
-
-    bindPresets() {}
-
-    // ═══ TAP TO ROTATE / CYCLE COLORS, HOLD TO SAVE FAVORITE ═══
-    bindCycleButtons() {
-      const cycleButtons = [
-        document.getElementById('btn-settings-palette-icon'),
-        document.getElementById('theme-active-indicator')
-      ].filter(Boolean);
-
-      cycleButtons.forEach(btn => {
-        let pressTimer = null;
-        let isLongPress = false;
-
-        const startPress = (e) => {
-          isLongPress = false;
-          pressTimer = setTimeout(() => {
-            isLongPress = true;
-            if (window.engine && typeof window.engine.playHaptic === 'function') {
-              window.engine.playHaptic(300, 0.1);
-            }
-            // Save favorite
-            this.toggleFavorite(this.currentQuad);
-            if (typeof showToast === 'function') showToast("Saved palette variant as favorite!", "success");
-          }, 450);
-        };
-
-        const cancelPress = () => {
-          if (pressTimer) clearTimeout(pressTimer);
-        };
-
-        const endPress = (e) => {
-          if (pressTimer) clearTimeout(pressTimer);
-          if (isLongPress) {
-            e.stopPropagation();
-            e.preventDefault();
-            return;
-          }
-          // Shift-click also saves
-          if (e.shiftKey) {
-            e.stopPropagation();
-            e.preventDefault();
-            this.toggleFavorite(this.currentQuad);
-            if (typeof showToast === 'function') showToast("Saved palette variant as favorite!", "success");
-            return;
-          }
-          // Normal Tap: Rotate the 4 colors of the current palette
-          e.stopPropagation();
-          e.preventDefault();
-          this.rotateCurrentPalette();
-        };
-
-        // Desktop
-        btn.addEventListener('mousedown', startPress);
-        btn.addEventListener('mouseleave', cancelPress);
-        btn.addEventListener('mouseup', endPress);
-        
-        // Mobile
-        btn.addEventListener('touchstart', startPress, {passive: true});
-        btn.addEventListener('touchcancel', cancelPress, {passive: true});
-        btn.addEventListener('touchend', endPress, {passive: false});
-        
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          e.preventDefault();
-        });
-      });
-    }
-
-    // Rotates the 4 colors in the current palette: [C1, C2, C3, C4] -> [C2, C3, C4, C1]
-    rotateCurrentPalette() {
-      if (!this.currentQuad || this.currentQuad.length !== 4) return;
-      const [c1, c2, c3, c4] = this.currentQuad;
-      const rotated = [c2, c3, c4, c1];
-      this.applyPalette(rotated, rotated[0], true);
-      this.showThemeToast(rotated);
-      if (window.engine && typeof window.engine.playHaptic === 'function') {
-        window.engine.playHaptic(100, 0.05);
-      }
-    }
-
-    cycleTheme() {
-      this.themeIndex = ((this.themeIndex !== undefined ? this.themeIndex : THEMES.indexOf(this.currentQuad)) + 1) % THEMES.length;
-      if (this.themeIndex < 0) this.themeIndex = 0;
-      const nextQuad = THEMES[this.themeIndex] || THEMES[0];
-      const nextHex = nextQuad[0];
-      engine.playHaptic(700, 0.02);
-      this.applyPalette(nextQuad, nextHex, true);
-      this.showThemeToast(nextQuad);
     }
 
     showThemeToast(quad) {
@@ -3710,8 +3623,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(toast);
       }
 
-      const themeIdx = THEMES.indexOf(quad) >= 0 ? THEMES.indexOf(quad) + 1 : 'Custom';
-      const themeName = `Palette #${themeIdx}`;
+      const matchPreset = Object.values(PRESET_NAMED_THEMES).find(p => p.quad[0] === quad[0] && p.quad[1] === quad[1]);
+      const themeIdx = THEMES.findIndex(t => t[0] === quad[0] && t[1] === quad[1]);
+      const themeName = matchPreset ? matchPreset.name : (themeIdx >= 0 ? `Palette #${themeIdx + 1}` : 'Custom Variant');
 
       toast.innerHTML = `
         <span class="text-xs font-black text-white flex items-center gap-1.5">
@@ -3733,23 +3647,10 @@ document.addEventListener('DOMContentLoaded', () => {
         toast.style.transform = 'translateX(-50%) scale(0.9)';
       }, 1600);
     }
-
-    bindRandomizer() {
-      const randBtn = document.getElementById('btn-random-colorhunt');
-      if (!randBtn) return;
-      randBtn.addEventListener('click', () => {
-        engine.playHaptic(800, 0.03);
-        const randQuad = THEMES[Math.floor(Math.random() * THEMES.length)] || THEMES[0];
-        const randHex = randQuad[Math.floor(Math.random() * 4)];
-        this.applyPalette(randQuad, randHex, true);
-        this.showThemeToast(randQuad);
-      });
-    }
   }
 
   window.ThemeManager = new OSThemeManager();
-  window.ThemeManager.bindCycleButtons();
-
+  
   // ═══ BOOT ═══
 
   // === TOAST NOTIFICATION SYSTEM ===
