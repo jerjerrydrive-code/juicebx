@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JuiceBx — Install on r1</title>
+  <title>JuiceBx — Install on Rabbit r1</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0D0D0D;
+      background: #08080a;
       color: #F9FAFB;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -18,43 +18,49 @@
       padding: 24px;
       text-align: center;
     }
-    .logo { width: 100px; margin-bottom: 16px; border-radius: 20px; }
-    h1 { font-size: 28px; font-weight: 300; margin-bottom: 6px; }
-    .tagline { color: #8D8D8D; font-size: 14px; margin-bottom: 28px; }
+    .logo { width: 110px; margin-bottom: 16px; border-radius: 24px; box-shadow: 0 8px 32px rgba(255, 79, 0, 0.3); }
+    h1 { font-size: 32px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.5px; }
+    .tagline { color: #94a3b8; font-size: 15px; margin-bottom: 28px; font-weight: 500; }
     .qr-container {
-      background: #fff;
-      padding: 20px;
-      border-radius: 20px;
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 24px;
       margin-bottom: 24px;
+      box-shadow: 0 20px 50px -10px rgba(255, 79, 0, 0.35);
     }
-    .qr-container img { width: 260px; height: 260px; display: block; }
+    .qr-container img { width: 280px; height: 280px; display: block; border-radius: 12px; }
     .instructions {
-      color: #8D8D8D;
-      font-size: 14px;
+      color: #cbd5e1;
+      font-size: 15px;
       line-height: 1.6;
-      max-width: 340px;
+      max-width: 360px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 16px 20px;
+      border-radius: 16px;
     }
-    .instructions strong { color: #FF5C00; }
+    .instructions strong { color: #ff4f00; }
     .footer {
       margin-top: 32px;
-      color: #555;
-      font-size: 12px;
+      color: #64748b;
+      font-size: 13px;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
-  <img class="logo" src="logo_master.png" alt="JuiceBx"/>
+  <img class="logo" src="../logo_master.png" alt="JuiceBx"/>
   <h1>🧃 JuiceBx</h1>
   <p class="tagline">The Juice Box. Where you get the juice from.</p>
   <div class="qr-container">
     <img
-      src="https://api.qrserver.com/v1/create-qr-code/?size=520x520&data=https://jerjerrydrive-code.github.io/juicebx/"
-      alt="Scan with your r1 to install JuiceBx"
+      src="https://api.qrserver.com/v1/create-qr-code/?size=520x520&data=%7B%22title%22%3A%22JuiceBx%22%2C%22url%22%3A%22https%3A%2F%2Fjerjerrydrive-code.github.io%2Fjuicebx%2F%22%2C%22description%22%3A%22Juice%20WRLD%20Music%20Player%20for%20Rabbit%20R1%22%2C%22iconUrl%22%3A%22%22%2C%22themeColor%22%3A%22%23FE5000%22%7D"
+      alt="Scan with Rabbit r1"
     />
   </div>
-  <p class="instructions">
-    Open <strong>Creations</strong> on your r1, point the camera at this QR code, and JuiceBx will install as a creation on your device.
-  </p>
-  <p class="footer">🕊️ 999 Forever 🕊️</p>
+  <div class="instructions">
+    Open <strong>Creations</strong> on your Rabbit r1, point the camera at this QR code, and tap to install <strong>JuiceBx</strong> directly to your device deck.
+  </div>
+  <p class="footer">🕊️ 999 Forever • Jarad Anthony Higgins 🕊️</p>
 </body>
 </html>
