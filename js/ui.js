@@ -1039,10 +1039,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const chosenTrack = tracks[idx];
         if (chosenTrack) {
           saveRecentSearch(query);
-          const state = engine.getState();
-          const newQueue = [chosenTrack, ...state.queue.filter(t => t.id !== chosenTrack.id)];
-          engine.setQueue(newQueue, true);
+          // 1. Play song instantly (0ms latency)
+          engine.setQueue([chosenTrack], true);
           scrollToPanel(2); // Jump straight to Player Deck
+          // 2. Automatically generate YouTube Music style Up Next radio queue in background
+          if (engine.autoGenerateRadio) {
+            engine.autoGenerateRadio(chosenTrack);
+          }
         }
       });
     });
