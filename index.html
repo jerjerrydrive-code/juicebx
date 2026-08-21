@@ -162,13 +162,24 @@
       box-sizing: border-box;
     }
 
+    button, .btn, .genre-card, .glass-card, .deck-mode-pill, .lib-tab, .accent-swatch, .shuffle-card {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
     body {
       overscroll-behavior: none;
       background-color: var(--bg-app);
       color: var(--text-primary);
       font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
-      transition: background-color 0.25s ease, color 0.25s ease;
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+
+    #app-frame, .glass-card, .glass-nav, .glass-input, #ambient-aura-glow, #deck-stage-window, .deck-mode-pill, .genre-card {
+      transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, color 0.35s ease;
     }
 
     .app-view {
@@ -650,9 +661,13 @@
       <!-- ═══ PANEL 0: HOME / TOP 100 SHUFFLES ═══ -->
       <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-4" style="background: var(--bg-panel);">
         
-        <!-- Top Bar: Massive Logo (Sticky) -->
-        <div class="sticky top-0 z-40 flex items-center justify-center mb-4 py-2.5 -mx-4 px-4" style="background: rgba(3, 3, 5, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,0.05); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.8);">
-          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-14 sm:h-20 w-auto max-w-[220px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
+        <!-- Top Bar: Sticky Logo + Cycle Theme Action -->
+        <div class="sticky top-0 z-40 flex items-center justify-between mb-4 py-2.5 -mx-4 px-4" style="background: rgba(3, 3, 5, 0.85); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,0.05); box-shadow: 0 16px 32px -8px rgba(0,0,0,0.8);">
+          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-12 sm:h-16 w-auto max-w-[180px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
+          <button id="home-cycle-theme-btn" class="px-3.5 py-1.5 rounded-full text-xs font-black flex items-center gap-1.5 active:scale-95 transition-all shadow-md text-white border border-white/20 glass-card cursor-pointer hover:border-white/40" style="background: linear-gradient(135deg, color-mix(in srgb, var(--pal-1) 75%, transparent), color-mix(in srgb, var(--pal-2) 75%, transparent));" title="Cycle Theme Palette">
+            <i class="ph-fill ph-palette text-sm"></i>
+            <span>Theme</span>
+          </button>
         </div>
 
         <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
@@ -853,8 +868,11 @@
               <button class="deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all" data-mode="lyrics" style="color: var(--text-tertiary);">LYRICS</button>
             </div>
 
-            <!-- Header Quick Actions (Like, Download, Add to Playlist, Sleep Timer, Fullscreen) -->
+            <!-- Header Quick Actions (Theme, Fullscreen, Like, Download, Add to Playlist, Sleep Timer) -->
             <div class="flex items-center gap-1.5">
+              <button id="deck-cycle-theme-btn" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--accent);" title="Cycle Aesthetic Theme">
+                <i class="ph-fill ph-palette text-base"></i>
+              </button>
               <button id="deck-btn-fullscreen" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-transform glass-card" style="color: var(--text-primary);" title="Enter Fullscreen">
                 <i class="ph-bold ph-corners-out text-base" id="deck-fullscreen-icon"></i>
               </button>
@@ -1204,12 +1222,18 @@
           <div class="glass-card p-4 mb-3 space-y-3">
             <div class="flex items-center justify-between">
               <div>
-                <p class="font-bold text-sm" style="color: var(--text-primary);">ColorHunt Studio (338 Themes)</p>
-                <p class="text-xs" style="color: var(--text-tertiary);">Curated 4-band palettes from ColorHunt.co</p>
+                <p class="font-bold text-sm" style="color: var(--text-primary);">Aesthetic Themes (338 Palettes)</p>
+                <p class="text-xs" style="color: var(--text-tertiary);">Curated 4-band palettes from ColorHunt</p>
               </div>
-              <button id="btn-random-colorhunt" class="px-3 py-1.5 rounded-full text-xs font-black flex items-center gap-1.5 active:scale-95 transition-all shadow-md bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white hover:opacity-90">
-                <i class="ph-bold ph-dice-five text-sm"></i> 🎲 Random
-              </button>
+              <div class="flex items-center gap-2">
+                <button id="btn-cycle-theme-hero" class="px-3.5 py-1.5 rounded-full text-xs font-black flex items-center gap-1.5 active:scale-95 transition-all shadow-md text-white border border-white/20" style="background: linear-gradient(135deg, var(--pal-1), var(--pal-2));" title="Cycle to next palette">
+                  <i class="ph-fill ph-sparkle text-sm"></i>
+                  <span>Cycle Theme</span>
+                </button>
+                <button id="btn-random-colorhunt" class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black active:scale-95 transition-all glass-input text-white border border-white/10" title="Randomize Palette">
+                  <i class="ph-bold ph-dice-five text-base"></i>
+                </button>
+              </div>
             </div>
 
             <!-- Active Palette Live Indicator -->

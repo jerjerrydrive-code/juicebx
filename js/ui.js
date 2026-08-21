@@ -3515,9 +3515,73 @@ document.addEventListener('DOMContentLoaded', () => {
           if (preset) {
             engine.playHaptic(600, 0.02);
             this.applyPalette(preset.quad, preset.quad[0], true);
+            this.showThemeToast(preset.quad);
           }
         });
       });
+    }
+
+    bindCycleButtons() {
+      const cycleButtons = [
+        document.getElementById('home-cycle-theme-btn'),
+        document.getElementById('deck-cycle-theme-btn'),
+        document.getElementById('btn-cycle-theme-hero')
+      ].filter(Boolean);
+
+      cycleButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.cycleTheme();
+        });
+      });
+    }
+
+    cycleTheme() {
+      this.themeIndex = ((this.themeIndex !== undefined ? this.themeIndex : THEMES.indexOf(this.currentQuad)) + 1) % THEMES.length;
+      if (this.themeIndex < 0) this.themeIndex = 0;
+      const nextQuad = THEMES[this.themeIndex] || THEMES[0];
+      const nextHex = nextQuad[0];
+      engine.playHaptic(700, 0.02);
+      this.applyPalette(nextQuad, nextHex, true);
+      this.showThemeToast(nextQuad);
+    }
+
+    showThemeToast(quad) {
+      let toast = document.getElementById('theme-toast-pill');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'theme-toast-pill';
+        toast.className = 'fixed top-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 px-4 py-2 rounded-full glass-card border border-white/20 shadow-2xl transition-all duration-300 pointer-events-none opacity-0 scale-90';
+        toast.style.background = 'rgba(10, 10, 15, 0.92)';
+        toast.style.backdropFilter = 'blur(20px)';
+        toast.style.webkitBackdropFilter = 'blur(20px)';
+        document.body.appendChild(toast);
+      }
+
+      const matchPreset = Object.values(PRESET_NAMED_THEMES).find(p => p.quad[0] === quad[0] && p.quad[1] === quad[1]);
+      const themeIdx = THEMES.indexOf(quad) >= 0 ? THEMES.indexOf(quad) + 1 : 'Palette';
+      const themeName = matchPreset ? matchPreset.name : `Aesthetic #${themeIdx}`;
+
+      toast.innerHTML = `
+        <span class="text-xs font-black text-white flex items-center gap-1.5">
+          <i class="ph-fill ph-sparkle text-amber-400"></i> ${themeName}
+        </span>
+        <div class="flex items-center gap-1">
+          <span class="w-3 h-3 rounded-full border border-white/30" style="background:${quad[0]}"></span>
+          <span class="w-3 h-3 rounded-full border border-white/30" style="background:${quad[1]}"></span>
+          <span class="w-3 h-3 rounded-full border border-white/30" style="background:${quad[2]}"></span>
+          <span class="w-3 h-3 rounded-full border border-white/30" style="background:${quad[3]}"></span>
+        </div>
+      `;
+
+      toast.classList.remove('opacity-0', 'scale-90');
+      toast.classList.add('opacity-100', 'scale-100');
+
+      if (this.toastTimeout) clearTimeout(this.toastTimeout);
+      this.toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'scale-100');
+        toast.classList.add('opacity-0', 'scale-90');
+      }, 1600);
     }
 
     bindRandomizer() {
@@ -3528,11 +3592,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const randHex = randQuad[Math.floor(Math.random() * 4)];
         engine.playHaptic(750, 0.025);
         this.applyPalette(randQuad, randHex, true);
+        this.showThemeToast(randQuad);
       });
     }
   }
 
   window.ThemeManager = new OSThemeManager();
+  window.ThemeManager.bindCycleButtons();
 
   // ═══ BOOT ═══
   engine.init();
