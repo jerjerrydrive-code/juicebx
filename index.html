@@ -6,6 +6,28 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>JuiceBx — Rabbit R1 Master Audio Deck</title>
   
+  <!-- CONTINUOUS BACKGROUND PLAYBACK & SCREEN-OFF LOCK -->
+  <script>
+    try {
+      Object.defineProperty(document, 'hidden', { get: () => false, configurable: true });
+      Object.defineProperty(document, 'visibilityState', { get: () => 'visible', configurable: true });
+      Object.defineProperty(document, 'webkitHidden', { get: () => false, configurable: true });
+      Object.defineProperty(document, 'webkitVisibilityState', { get: () => 'visible', configurable: true });
+
+      const _origDocAdd = document.addEventListener;
+      document.addEventListener = function(type, listener, options) {
+        if (type === 'visibilitychange' || type === 'webkitvisibilitychange') return;
+        return _origDocAdd.call(this, type, listener, options);
+      };
+
+      const _origWinAdd = window.addEventListener;
+      window.addEventListener = function(type, listener, options) {
+        if (type === 'visibilitychange' || type === 'webkitvisibilitychange' || type === 'pagehide') return;
+        return _origWinAdd.call(this, type, listener, options);
+      };
+    } catch(e) {}
+  </script>
+  
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
