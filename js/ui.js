@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Vinyl & Track Info
     deckVinyl: document.getElementById('deck-vinyl-platter'),
     deckVinylArt: document.getElementById('deck-vinyl-art'),
+    deckAmbientGlow: document.getElementById('deck-ambient-glow'),
+    deckTonearm: document.getElementById('deck-tonearm'),
+    deckVinylWrapper: document.getElementById('deck-vinyl-wrapper'),
     deckTrackTitle: document.getElementById('deck-track-title'),
     deckTrackArtist: document.getElementById('deck-track-artist'),
 
@@ -402,7 +405,17 @@ document.addEventListener('DOMContentLoaded', () => {
       if (deckDisplayM3) deckDisplayM3.classList.toggle('hidden', style !== 'm3');
       if (deckDisplayBlobs) deckDisplayBlobs.classList.toggle('hidden', style !== 'blobs');
       if (deckDisplayHifi) deckDisplayHifi.classList.toggle('hidden', style !== 'hifi');
-      if (deckDisplayVinyl) deckDisplayVinyl.classList.toggle('hidden', style !== 'vinyl');
+      if (deckDisplayVinyl) {
+        deckDisplayVinyl.classList.toggle('hidden', style !== 'vinyl');
+        const tonearm = document.getElementById('deck-tonearm');
+        if (tonearm) {
+          if (engine && engine.getState && engine.getState().isPlaying) {
+            tonearm.classList.add('playing');
+          } else {
+            tonearm.classList.remove('playing');
+          }
+        }
+      }
     }
   }
   window.setCenterpieceStyle = setCenterpieceStyle;
@@ -2334,11 +2347,74 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ═══ DYNAMIC AMBIENT ALBUM ART GLOW EXTRACTION ═══
+  const colorExtractionCanvas = document.createElement('canvas');
+  colorExtractionCanvas.width = 16;
+  colorExtractionCanvas.height = 16;
+  const colorExtractionCtx = colorExtractionCanvas.getContext('2d', { willReadFrequently: true });
+
+  function extractDominantColors(imageUrl) {
+    if (!imageUrl) return;
+    const img = new Image();
+    img.crossOrigin = 'Anonymous';
+    img.onload = () => {
+      try {
+        colorExtractionCtx.drawImage(img, 0, 0, 16, 16);
+        const imgData = colorExtractionCtx.getImageData(0, 0, 16, 16).data;
+        let rSum = 0, gSum = 0, bSum = 0, count = 0;
+        let maxVibe = 0;
+        let pR = 168, pG = 85, pB = 247;
+        let sR = 236, sG = 72, sB = 153;
+
+        for (let i = 0; i < imgData.length; i += 4) {
+          const r = imgData[i];
+          const g = imgData[i + 1];
+          const b = imgData[i + 2];
+          const maxC = Math.max(r, g, b);
+          const minC = Math.min(r, g, b);
+          const sat = maxC === 0 ? 0 : (maxC - minC) / maxC;
+          const brightness = (r + g + b) / 3;
+
+          // Prefer colorful, non-muddy pixels
+          if (brightness > 30 && brightness < 235 && sat > 0.2) {
+            const vibeScore = sat * brightness;
+            if (vibeScore > maxVibe) {
+              maxVibe = vibeScore;
+              sR = pR; sG = pG; sB = pB;
+              pR = r; pG = g; pB = b;
+            }
+            rSum += r; gSum += g; bSum += b; count++;
+          }
+        }
+
+        if (count === 0) {
+          pR = 168; pG = 85; pB = 247;
+          sR = 236; sG = 72; sB = 153;
+        }
+
+        document.documentElement.style.setProperty('--ambient-primary', `rgba(${pR}, ${pG}, ${pB}, 0.38)`);
+        document.documentElement.style.setProperty('--ambient-secondary', `rgba(${sR}, ${sG}, ${sB}, 0.22)`);
+        
+        const glowEl = document.getElementById('deck-ambient-glow');
+        if (glowEl) {
+          glowEl.style.background = `radial-gradient(circle, rgba(${pR}, ${pG}, ${pB}, 0.42) 0%, rgba(${sR}, ${sG}, ${sB}, 0.24) 45%, transparent 75%)`;
+        }
+      } catch (err) {
+        // Fallback default neon purple/pink glow
+        document.documentElement.style.setProperty('--ambient-primary', 'rgba(168, 85, 247, 0.35)');
+        document.documentElement.style.setProperty('--ambient-secondary', 'rgba(236, 72, 153, 0.20)');
+      }
+    };
+    img.onerror = () => {};
+    img.src = imageUrl;
+  }
+
   // ═══ MASTER TRACK & ARTWORK CONTROLLER ═══
   function updateArtwork(id, customUrl) {
     const thumbUrl = customUrl || (id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80');
     if (els.deckVinylArt) els.deckVinylArt.style.backgroundImage = `url('${thumbUrl}')`;
     if (els.miniArt) els.miniArt.src = thumbUrl;
+    extractDominantColors(thumbUrl);
   }
 
   // ═══ MASTER ENGINE STATE LISTENERS ═══
@@ -2367,6 +2443,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (els.deckVinyl) {
       els.deckVinyl.style.animationPlayState = isPlaying ? 'running' : 'paused';
       isPlaying ? els.deckVinyl.classList.remove('paused') : els.deckVinyl.classList.add('paused');
+    }
+    const tonearm = document.getElementById('deck-tonearm');
+    if (tonearm) {
+      if (isPlaying) {
+        tonearm.classList.add('playing');
+      } else {
+        tonearm.classList.remove('playing');
+      }
     }
 
     if (miniPlayer) {
@@ -3420,14 +3504,15 @@ document.addEventListener('DOMContentLoaded', () => {
       lineElements.forEach((lineEl, idx) => {
         if (idx === activeLyricIndex) {
           lineEl.style.color = '#ffffff';
-          lineEl.style.fontSize = '1.05rem';
+          lineEl.style.fontSize = '1.12rem';
           lineEl.style.fontWeight = '900';
           lineEl.style.opacity = '1.0';
-          lineEl.style.transform = 'scale(1.04)';
-          lineEl.style.textShadow = '0 0 14px rgba(255, 120, 40, 0.7), 0 2px 6px rgba(0,0,0,0.8)';
-          lineEl.style.background = 'transparent';
-          lineEl.style.border = 'none';
-          lineEl.style.boxShadow = 'none';
+          lineEl.style.transform = 'scale(1.08)';
+          lineEl.style.textShadow = '0 0 18px var(--ambient-primary, rgba(168, 85, 247, 0.9)), 0 0 32px var(--ambient-secondary, rgba(236, 72, 153, 0.7)), 0 2px 8px rgba(0,0,0,0.9)';
+          lineEl.style.background = 'rgba(255, 255, 255, 0.09)';
+          lineEl.style.backdropFilter = 'blur(12px)';
+          lineEl.style.border = '1px solid rgba(255, 255, 255, 0.15)';
+          lineEl.style.boxShadow = '0 8px 24px -4px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.3)';
           lineEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
           lineEl.style.color = 'rgba(255, 255, 255, 0.4)';
@@ -4279,3 +4364,96 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 });
+
+  // ═══ INTERACTIVE VINYL SCRATCH & TOUCH DRAG PHYSICS ═══
+  (function initVinylScratchPhysics() {
+    const wrapper = document.getElementById('deck-vinyl-wrapper');
+    const platter = document.getElementById('deck-vinyl-platter');
+    const tonearm = document.getElementById('deck-tonearm');
+    if (!wrapper || !platter) return;
+
+    let isScratching = false;
+    let startAngle = 0;
+    let currentPlatterAngle = 0;
+    let lastAngle = 0;
+    let initialScrubTime = 0;
+    let lastHapticTime = 0;
+
+    function getAngle(e) {
+      const rect = platter.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      return Math.atan2(clientY - cy, clientX - cx) * (180 / Math.PI);
+    }
+
+    function onPointerDown(e) {
+      if (e.target.closest('#deck-mode-pills')) return;
+      isScratching = true;
+      platter.style.animationPlayState = 'paused';
+      if (tonearm) tonearm.classList.add('scratching');
+
+      startAngle = getAngle(e);
+      lastAngle = startAngle;
+      initialScrubTime = engine.getState().currentTime || 0;
+      engine.playHaptic(800, 0.02);
+      e.preventDefault();
+    }
+
+    function onPointerMove(e) {
+      if (!isScratching) return;
+      const angle = getAngle(e);
+      let deltaAngle = angle - lastAngle;
+
+      // Handle wraparound across 180 / -180 boundary
+      if (deltaAngle > 180) deltaAngle -= 360;
+      if (deltaAngle < -180) deltaAngle += 360;
+
+      currentPlatterAngle += deltaAngle;
+      lastAngle = angle;
+
+      platter.style.transform = `rotate(${currentPlatterAngle}deg)`;
+
+      // Time scrub conversion: 360 deg = ~3.0s scrub
+      const totalDeltaAngle = currentPlatterAngle;
+      const timeDelta = (deltaAngle / 360) * 3.5;
+      const state = engine.getState();
+      const duration = state.duration || 200;
+      const newTime = Math.max(0, Math.min(duration, (state.currentTime || 0) + timeDelta));
+      
+      // Real-time audio seek
+      engine.seek(newTime);
+
+      // Scratch vibration tick
+      const now = performance.now();
+      if (now - lastHapticTime > 45) {
+        engine.playHaptic(900, 0.008);
+        lastHapticTime = now;
+      }
+      e.preventDefault();
+    }
+
+    function onPointerUp(e) {
+      if (!isScratching) return;
+      isScratching = false;
+      if (tonearm) tonearm.classList.remove('scratching');
+
+      const state = engine.getState();
+      if (state.isPlaying) {
+        platter.style.animationPlayState = 'running';
+        if (tonearm) tonearm.classList.add('playing');
+      } else {
+        if (tonearm) tonearm.classList.remove('playing');
+      }
+      engine.playHaptic(600, 0.015);
+    }
+
+    wrapper.addEventListener('mousedown', onPointerDown);
+    window.addEventListener('mousemove', onPointerMove);
+    window.addEventListener('mouseup', onPointerUp);
+
+    wrapper.addEventListener('touchstart', onPointerDown, { passive: false });
+    window.addEventListener('touchmove', onPointerMove, { passive: false });
+    window.addEventListener('touchend', onPointerUp);
+  })();

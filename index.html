@@ -610,6 +610,111 @@
     }
     @keyframes spinVinyl { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
+    /* ═══ MECHANICAL TONEARM & SCRATCH PHYSICS ═══ */
+    .tonearm-assembly {
+      position: absolute;
+      top: 6px;
+      right: 14px;
+      width: 72px;
+      height: 180px;
+      transform-origin: 52px 20px;
+      transform: rotate(0deg);
+      transition: transform 0.75s cubic-bezier(0.34, 1.3, 0.64, 1);
+      pointer-events: none;
+      z-index: 25;
+      filter: drop-shadow(-4px 8px 10px rgba(0, 0, 0, 0.75));
+    }
+    .tonearm-assembly.playing {
+      transform: rotate(25deg);
+    }
+    .tonearm-assembly.scratching {
+      transition: transform 0.05s ease-out;
+    }
+    .tonearm-base {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #cbd5e1 0%, #64748b 60%, #0f172a 100%);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+      border: 1.5px solid #475569;
+    }
+    .tonearm-pivot-center {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #1e293b;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.8);
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+    .tonearm-counterweight {
+      position: absolute;
+      top: -6px;
+      right: 11px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #475569 0%, #94a3b8 50%, #1e293b 100%);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    }
+    .tonearm-shaft {
+      position: absolute;
+      top: 20px;
+      right: 17px;
+      width: 4.5px;
+      height: 120px;
+      background: linear-gradient(90deg, #94a3b8 0%, #ffffff 50%, #475569 100%);
+      border-radius: 3px;
+      transform: rotate(-6deg);
+      transform-origin: top center;
+      box-shadow: -1px 2px 4px rgba(0,0,0,0.5);
+    }
+    .tonearm-cartridge {
+      position: absolute;
+      bottom: -6px;
+      left: -12px;
+      width: 18px;
+      height: 24px;
+      background: linear-gradient(135deg, #e11d48 0%, #9f1239 100%);
+      border-radius: 3px;
+      transform: rotate(20deg);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .tonearm-needle {
+      position: absolute;
+      bottom: -4px;
+      left: 7px;
+      width: 3px;
+      height: 6px;
+      background: #ffd700;
+      border-radius: 1px;
+      box-shadow: 0 0 6px rgba(255, 215, 0, 0.9);
+    }
+
+    /* ═══ DYNAMIC AMBIENT ALBUM ART GLOW ═══ */
+    .deck-ambient-glow-layer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: min(390px, 96vw, 46vh);
+      height: min(390px, 96vw, 46vh);
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--ambient-primary, rgba(168, 85, 247, 0.32)) 0%, var(--ambient-secondary, rgba(236, 72, 153, 0.18)) 45%, transparent 75%);
+      filter: blur(48px);
+      opacity: 0.85;
+      pointer-events: none;
+      z-index: 0;
+      transition: background 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.8s ease;
+      will-change: transform, opacity;
+    }
+
     /* ═══ RETRO STEREO CASSETTE TAPE ═══ */
     .cassette-body {
       width: 100%;
@@ -1350,9 +1455,12 @@
             </button>
           </div>
 
-          <!-- 3. CENTER STAGE (RESPONSIVE CENTERPIECE SQUIRCLE) -->
+          <!-- 3. CENTER STAGE (RESPONSIVE CENTERPIECE SQUIRCLE WITH AMBIENT GLOW) -->
           <div class="flex-1 min-h-0 flex items-center justify-center py-1 relative z-10 w-full">
-            <div id="deck-stage-window" class="neu-stage w-[min(340px,88vw,41vh)] h-[min(340px,88vw,41vh)] rounded-[32px] overflow-hidden relative flex items-center justify-center mx-auto transition-all cursor-pointer select-none active:scale-[0.99]" title="Tap to switch visualizer style">
+            <!-- Dynamic Album Art Ambient Glow Layer -->
+            <div id="deck-ambient-glow" class="deck-ambient-glow-layer"></div>
+
+            <div id="deck-stage-window" class="neu-stage w-[min(340px,88vw,41vh)] h-[min(340px,88vw,41vh)] rounded-[32px] overflow-hidden relative flex items-center justify-center mx-auto transition-all cursor-pointer select-none active:scale-[0.99] z-10" title="Tap to switch visualizer style">
 
               <!-- 1. Material 3 meets iOS 28 Wave Equalizer (Exact Mockup: 1000260681.jpg - DEFAULT) -->
               <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#0a0c16] rounded-[32px]">
@@ -1379,9 +1487,9 @@
                 <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 6. Holographic Vinyl Platter -->
+              <!-- 6. Holographic Vinyl Platter with Tone Arm Assembly -->
               <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex flex-col items-center justify-center relative hidden overflow-hidden rounded-[32px]">
-                <div class="vinyl-deck-wrapper relative flex items-center justify-center transition-transform duration-300 w-full h-full" id="deck-vinyl-wrapper">
+                <div class="vinyl-deck-wrapper relative flex items-center justify-center transition-transform duration-300 w-full h-full touch-none select-none" id="deck-vinyl-wrapper">
                   <div class="vinyl-platter paused relative transition-all duration-300 shadow-2xl" id="deck-vinyl-platter">
                     <div class="vinyl-grooves"></div>
                     <div class="vinyl-rim"></div>
@@ -1392,6 +1500,19 @@
                     </div>
                     <div class="spindle-hub">
                       <div class="spindle-hole"></div>
+                    </div>
+                  </div>
+
+                  <!-- Mechanical Tone Arm Assembly -->
+                  <div class="tonearm-assembly" id="deck-tonearm">
+                    <div class="tonearm-counterweight"></div>
+                    <div class="tonearm-base">
+                      <div class="tonearm-pivot-center"></div>
+                    </div>
+                    <div class="tonearm-shaft">
+                      <div class="tonearm-cartridge">
+                        <div class="tonearm-needle"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
