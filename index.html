@@ -1843,6 +1843,45 @@
       width: calc(100% - 16px) !important;
       margin: 0 auto !important;
     }
+  
+    /* ─── HOME SHUFFLES CLEAN PORCELAIN CARDS ─── */
+    .genre-card {
+      background: var(--c1-surface) !important;
+      border-radius: 22px !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 6px 6px 16px var(--c1-shadow-dark), -6px -6px 16px var(--c1-shadow-light) !important;
+      padding: 16px 14px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+      cursor: pointer !important;
+      min-height: 90px !important;
+    }
+    .genre-card:active {
+      box-shadow: inset 3px 3px 7px var(--c1-shadow-dark), inset -3px -3px 7px var(--c1-shadow-light) !important;
+      transform: scale(0.96) !important;
+    }
+    .genre-card-title {
+      font-size: 15px !important;
+      font-weight: 800 !important;
+      color: var(--c1-text-main) !important;
+      letter-spacing: -0.01em !important;
+      line-height: 1.2 !important;
+    }
+    .genre-card-tag {
+      font-size: 9px !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      padding: 3px 8px !important;
+      border-radius: 999px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      width: fit-content !important;
+      margin-bottom: 8px !important;
+    }
+
   </style>
 </head>
 <body class="light-mode h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
@@ -1856,222 +1895,101 @@
       <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-4" style="background: var(--bg-panel);">
         <div class="w-full max-w-md mx-auto flex flex-col">
         
-        <!-- Top Bar: Massive Logo (Sticky) -->
-        <div class="sticky top-0 z-40 flex items-center justify-center mb-4 py-2.5 -mx-4 px-4" style="background: var(--bg-panel); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border-card);">
-          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-14 sm:h-20 w-auto max-w-[220px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
+                <!-- Top Bar: Massive Logo (Sticky) -->
+        <div class="sticky top-0 z-40 flex items-center justify-center mb-2 py-2.5 -mx-4 px-4" style="background: var(--bg-panel); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border-card);">
+          <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-12 sm:h-16 w-auto max-w-[200px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
         </div>
 
-        <!-- TOP 2 HERO SIGNATURE SHUFFLES -->
-          <div class="mb-5 space-y-3">
-            <!-- Top 2 Hero Cards -->
-            <div class="grid grid-cols-2 gap-3.5">
-              <!-- Official Discography -->
-              <div class="genre-card relative h-40 rounded-[24px] overflow-hidden cursor-pointer active:scale-95 transition-all p-4 flex flex-col justify-between bg-gradient-to-br from-purple-900/90 via-indigo-950/80 to-black/90 shadow-xl border border-white/10 hover:border-purple-400/40 group" data-genre="Juice WRLD: Official Discography">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-purple-500/30 text-purple-200 border border-purple-400/30 flex items-center gap-1.5 backdrop-blur-md shadow-sm">
-                    <i class="ph-fill ph-broadcast animate-pulse"></i> OFFICIAL
-                  </span>
-                  <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                    <i class="ph-fill ph-shuffle text-sm text-purple-300"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-base leading-snug block tracking-tight">Official Discography</span>
-                  <span class="text-[11px] font-medium text-white/60 mt-0.5 block truncate">All Albums, Singles & Hits</span>
-                </div>
-              </div>
+        <!-- SECTION: SHUFFLES -->
+        <div class="mb-5">
+          <div class="flex items-center justify-between px-1 mb-3">
+            <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">Shuffles</h2>
+            <span class="text-xs font-bold text-slate-500">12 Mixes</span>
+          </div>
 
-              <!-- The Lost Vault -->
-              <div class="genre-card relative h-40 rounded-[24px] overflow-hidden cursor-pointer active:scale-95 transition-all p-4 flex flex-col justify-between bg-gradient-to-br from-amber-800/90 via-orange-950/80 to-black/90 shadow-xl border border-white/10 hover:border-amber-400/40 group" data-genre="Juice WRLD: The Lost Vault">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-500/30 text-amber-200 border border-amber-400/30 flex items-center gap-1.5 backdrop-blur-md shadow-sm">
-                    <i class="ph-fill ph-lock-key animate-pulse"></i> THE VAULT
-                  </span>
-                  <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                    <i class="ph-fill ph-shuffle text-sm text-amber-300"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-base leading-snug block tracking-tight">The Lost Vault</span>
-                  <span class="text-[11px] font-medium text-white/60 mt-0.5 block truncate">Unreleased Grails & Leaks</span>
-                </div>
+          <!-- TOP 2 SIGNATURE HERO SHUFFLES -->
+          <div class="grid grid-cols-2 gap-3.5 mb-3.5">
+            <!-- Official Discography -->
+            <div class="genre-card" data-genre="Juice WRLD: Official Discography">
+              <div>
+                <span class="genre-card-tag bg-purple-100 text-purple-700">OFFICIAL</span>
               </div>
+              <div class="genre-card-title">Official Discography</div>
+            </div>
+
+            <!-- The Lost Vault -->
+            <div class="genre-card" data-genre="Juice WRLD: The Lost Vault">
+              <div>
+                <span class="genre-card-tag bg-amber-100 text-amber-800">THE VAULT</span>
+              </div>
+              <div class="genre-card-title">The Lost Vault</div>
             </div>
           </div>
 
-          <!-- TOP 100 GENRE SHUFFLES GRID -->
-          <div class="mb-4">
-            <div class="grid grid-cols-2 gap-3" id="home-shuffles-grid">
-              <!-- Hip-Hop & Trap -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-amber-700/80 via-red-950/80 to-black/90 shadow-md border border-white/10 hover:border-amber-500/30 group" data-genre="hiphop_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-amber-200 bg-amber-500/25 border border-amber-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Hip-Hop & Trap</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Drake, Travis, Kendrick</span>
-                </div>
-              </div>
+          <!-- ALL GENRE SHUFFLES GRID (ZERO META TEXT, NO SHUFFLE ICONS, NO REPETITIVE TOP 100 TAGS) -->
+          <div class="grid grid-cols-2 gap-3.5" id="home-shuffles-grid">
+            <!-- Hip-Hop & Trap -->
+            <div class="genre-card" data-genre="hiphop_top100">
+              <div><span class="genre-card-tag bg-amber-100/80 text-amber-700">RAP</span></div>
+              <div class="genre-card-title">Hip-Hop & Trap</div>
+            </div>
 
-              <!-- Emo Rap & Heartbreak -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-purple-800/80 via-indigo-950/80 to-black/90 shadow-md border border-white/10 hover:border-purple-500/30 group" data-genre="emo_rap_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-purple-200 bg-purple-500/25 border border-purple-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Emo Rap & Sad Vibes</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Juice, Peep, X, Trippie</span>
-                </div>
-              </div>
+            <!-- Emo Rap & Sad Vibes -->
+            <div class="genre-card" data-genre="emo_rap_top100">
+              <div><span class="genre-card-tag bg-purple-100/80 text-purple-700">EMO</span></div>
+              <div class="genre-card-title">Emo Rap & Sad Vibes</div>
+            </div>
 
-              <!-- Pop & Global Hits -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-pink-700/80 via-purple-950/80 to-black/90 shadow-md border border-white/10 hover:border-pink-500/30 group" data-genre="pop_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-pink-200 bg-pink-500/25 border border-pink-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Pop & Global Hits</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Weeknd, Dua, Billie</span>
-                </div>
-              </div>
+            <!-- Pop & Global Hits -->
+            <div class="genre-card" data-genre="pop_top100">
+              <div><span class="genre-card-tag bg-pink-100/80 text-pink-700">POP</span></div>
+              <div class="genre-card-title">Pop & Global Hits</div>
+            </div>
 
-              <!-- R&B & Late Night Waves -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-blue-800/80 via-indigo-950/80 to-black/90 shadow-md border border-white/10 hover:border-blue-500/30 group" data-genre="rnb_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-blue-200 bg-blue-500/25 border border-blue-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">R&B & Late Night</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Frank Ocean, SZA, Brent</span>
-                </div>
-              </div>
+            <!-- R&B & Late Night -->
+            <div class="genre-card" data-genre="rnb_top100">
+              <div><span class="genre-card-tag bg-blue-100/80 text-blue-700">R&B</span></div>
+              <div class="genre-card-title">R&B & Late Night</div>
+            </div>
 
-              <!-- Rock & Alternative -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-red-800/80 via-rose-950/80 to-black/90 shadow-md border border-white/10 hover:border-red-500/30 group" data-genre="rock_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-rose-200 bg-rose-500/25 border border-rose-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Rock & Alternative</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Nirvana, Linkin Park, Monkeys</span>
-                </div>
-              </div>
+            <!-- Rock & Alternative -->
+            <div class="genre-card" data-genre="rock_top100">
+              <div><span class="genre-card-tag bg-rose-100/80 text-rose-700">ROCK</span></div>
+              <div class="genre-card-title">Rock & Alternative</div>
+            </div>
 
-              <!-- Phonk & High-Octane EDM -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-cyan-800/80 via-teal-950/80 to-black/90 shadow-md border border-white/10 hover:border-cyan-500/30 group" data-genre="phonk_edm_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-cyan-200 bg-cyan-500/25 border border-cyan-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Phonk & Electronic</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Kordhell, DVRST, Daft Punk</span>
-                </div>
-              </div>
+            <!-- Phonk & Electronic -->
+            <div class="genre-card" data-genre="phonk_edm_top100">
+              <div><span class="genre-card-tag bg-cyan-100/80 text-cyan-700">PHONK</span></div>
+              <div class="genre-card-title">Phonk & Electronic</div>
+            </div>
 
-              <!-- Lo-Fi Beats & Chill -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-amber-800/80 via-orange-950/80 to-black/90 shadow-md border border-white/10 hover:border-amber-500/30 group" data-genre="lofi_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-amber-200 bg-amber-500/25 border border-amber-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Lo-Fi Beats & Study</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">ChilledCow, Lofi Girl</span>
-                </div>
-              </div>
+            <!-- Lo-Fi Beats & Study -->
+            <div class="genre-card" data-genre="lofi_top100">
+              <div><span class="genre-card-tag bg-amber-100/80 text-amber-800">LO-FI</span></div>
+              <div class="genre-card-title">Lo-Fi Beats & Study</div>
+            </div>
 
-              <!-- 90s & 2000s Throwback Legends -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-emerald-800/80 via-teal-950/80 to-black/90 shadow-md border border-white/10 hover:border-emerald-500/30 group" data-genre="throwback_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-emerald-200 bg-emerald-500/25 border border-emerald-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">90s & 2000s Legends</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Eminem, 50 Cent, Outkast</span>
-                </div>
-              </div>
+            <!-- 90s & 2000s Legends -->
+            <div class="genre-card" data-genre="throwbacks_top100">
+              <div><span class="genre-card-tag bg-emerald-100/80 text-emerald-700">CLASSIC</span></div>
+              <div class="genre-card-title">90s & 2000s Legends</div>
+            </div>
 
-              <!-- Classic Rock Legends -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-amber-800/80 via-yellow-950/80 to-black/90 shadow-md border border-white/10 hover:border-amber-500/30 group" data-genre="classic_rock_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-amber-200 bg-amber-500/25 border border-amber-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Classic Rock Legends</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Queen, Zeppelin, AC/DC, Floyd</span>
-                </div>
-              </div>
+            <!-- Latin & Reggaeton -->
+            <div class="genre-card" data-genre="latin_top100">
+              <div><span class="genre-card-tag bg-red-100/80 text-red-700">LATIN</span></div>
+              <div class="genre-card-title">Latin & Reggaeton</div>
+            </div>
 
-              <!-- Country & Americana -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-yellow-700/80 via-amber-950/80 to-black/90 shadow-md border border-white/10 hover:border-yellow-500/30 group" data-genre="country_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-yellow-200 bg-yellow-500/25 border border-yellow-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Country & Americana</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Wallen, Zach Bryan, Combs, Cash</span>
-                </div>
-              </div>
-
-              <!-- Latin 100 -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-rose-700/80 via-amber-950/80 to-black/90 shadow-md border border-white/10 hover:border-rose-500/30 group" data-genre="latin_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-rose-200 bg-rose-500/25 border border-rose-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Latin & Reggaeton</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Bad Bunny, Peso Pluma, Karol G, Rauw</span>
-                </div>
-              </div>
-
-              <!-- Instrumentals 100 -->
-              <div class="genre-card relative h-28 rounded-[20px] overflow-hidden cursor-pointer active:scale-95 transition-all p-3 flex flex-col justify-between bg-gradient-to-br from-teal-700/80 via-cyan-950/80 to-black/90 shadow-md border border-white/10 hover:border-teal-500/30 group" data-genre="instrumentals_top100">
-                <div class="flex justify-between items-center">
-                  <span class="text-[9px] font-bold tracking-wider text-teal-200 bg-teal-500/25 border border-teal-400/20 px-2 py-0.5 rounded-full backdrop-blur-sm">TOP 100</span>
-                  <div class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <i class="ph-fill ph-shuffle text-xs text-white/80"></i>
-                  </div>
-                </div>
-                <div>
-                  <span class="font-bold text-white text-sm block tracking-tight">Instrumentals & Beats</span>
-                  <span class="text-[11px] text-white/60 font-medium truncate block">Lofi, Hans Zimmer, Piano & Metro Beats</span>
-                </div>
-              </div>
+            <!-- Synthwave & Retro -->
+            <div class="genre-card" data-genre="synthwave_top100">
+              <div><span class="genre-card-tag bg-indigo-100/80 text-indigo-700">SYNTH</span></div>
+              <div class="genre-card-title">Synthwave & Retro</div>
             </div>
           </div>
         </div>
+
       </div>
 
       <!-- ═══ PANEL 1: DEDICATED SEARCH VIEW ═══ -->
