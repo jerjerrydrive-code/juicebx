@@ -2023,6 +2023,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const deckBtnDownloadHero = document.getElementById('deck-btn-download-hero');
   const deckDownloadHeroIcon = document.getElementById('deck-download-hero-icon');
 
+  
+  // ═══ DYNAMIC UP NEXT CLAY BENTO CARD CONTROLLER ═══
+  function updateUpNextDisplay() {
+    const state = engine.getState();
+    const upNextThumb = document.getElementById('deck-up-next-thumb');
+    const upNextTitle = document.getElementById('deck-up-next-title');
+    const upNextBadge = document.getElementById('deck-up-next-badge');
+
+    if (!upNextTitle) return;
+
+    if (state.queue && state.queue.length > 0) {
+      const nextIndex = (state.currentIndex + 1) % state.queue.length;
+      const nextTrack = state.queue[nextIndex];
+
+      if (nextTrack && state.queue.length > 1) {
+        if (upNextThumb) upNextThumb.src = nextTrack.artwork || nextTrack.thumb || 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80';
+        upNextTitle.textContent = `${nextTrack.title} • ${nextTrack.artist || 'Juice WRLD'}`;
+        if (upNextBadge) upNextBadge.textContent = 'UP NEXT';
+      } else {
+        if (upNextThumb) upNextThumb.src = 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80';
+        upNextTitle.textContent = 'End of Queue (Loop Active)';
+        if (upNextBadge) upNextBadge.textContent = 'QUEUE';
+      }
+    } else {
+      if (upNextThumb) upNextThumb.src = 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80';
+      upNextTitle.textContent = 'No tracks in queue';
+      if (upNextBadge) upNextBadge.textContent = 'EMPTY';
+    }
+  }
+
+  const deckUpNextBtn = document.getElementById('deck-up-next-btn');
+  if (deckUpNextBtn) {
+    deckUpNextBtn.addEventListener('click', () => {
+      engine.playHaptic(500, 0.02);
+      engine.next();
+      updateUpNextDisplay();
+    });
+  }
+
   function updateDeckFavoriteState() {
     const state = engine.getState();
     const track = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
@@ -2053,6 +2092,7 @@ document.addEventListener('DOMContentLoaded', () => {
         engine.toggleFavorite(track);
         engine.playHaptic(650, 0.03);
         updateDeckFavoriteState();
+    updateUpNextDisplay();
         if (els.deckBtnFavorite) {
           els.deckBtnFavorite.style.transform = 'scale(1.3)';
           setTimeout(() => {
@@ -2071,6 +2111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         engine.downloadTrack(track);
         engine.playHaptic(700, 0.03);
         updateDeckFavoriteState();
+    updateUpNextDisplay();
       }
     });
   }
@@ -2387,6 +2428,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     updateDeckFavoriteState();
+    updateUpNextDisplay();
     refreshCurrentLibrary();
   });
 
@@ -2421,12 +2463,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updateArtwork(track.id, track.thumb);
     updateAmbientAura(track);
     updateDeckFavoriteState();
+    updateUpNextDisplay();
     if (currentDeckMode === 'lyrics') loadTrackLyrics(track.title, track.artist);
     refreshCurrentLibrary();
   });
 
   window.addEventListener('engine:favoritesUpdated', () => {
     updateDeckFavoriteState();
+    updateUpNextDisplay();
     if (els.likedSongsCountBadge) {
       els.likedSongsCountBadge.innerText = `${engine.getFavorites().length} Favorite Tracks`;
     }

@@ -1830,6 +1830,19 @@
       color: #ec4899 !important;
       filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.45)) !important;
     }
+      /* ─── 4. REFINED UP NEXT CLAY BENTO CARD ─── */
+    .c1-up-next-card {
+      background: var(--c1-surface) !important;
+      box-shadow: 6px 6px 16px var(--c1-shadow-dark), -6px -6px 16px var(--c1-shadow-light) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+      border-radius: 20px !important;
+      padding: 6px 12px 6px 8px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: calc(100% - 16px) !important;
+      margin: 0 auto !important;
+    }
   </style>
 </head>
 <body class="light-mode h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
@@ -2172,19 +2185,29 @@
             </div>
           </div>
 
-          <!-- 4. Track Info & Options Row (with Indented Neumorphic Favorite Heart) -->
-          <div class="c1-track-info-row shrink-0 w-full pt-2 flex items-center justify-between">
-            <div class="overflow-hidden pr-2 flex-1">
-              <div class="c1-info-title truncate" id="deck-sub-title">Morning Light</div>
-              <div class="c1-info-artist truncate" id="deck-sub-artist">The Midnight</div>
-            </div>
-            <div class="flex items-center gap-2">
-              <button id="deck-btn-favorite" class="c1-btn-favorite-heart" title="Favorite / Like">
-                <i class="ph-bold ph-heart text-base" id="deck-heart-icon"></i>
-              </button>
-              <button id="deck-btn-more-options" class="c1-btn-more" title="More Options">
-                <i class="ph-bold ph-dots-three text-2xl"></i>
-              </button>
+          <!-- 4. Refined Neumorphic "Up Next" Bento Card -->
+          <div class="shrink-0 w-full pt-1.5 pb-1">
+            <div class="c1-up-next-card" id="deck-up-next-container">
+              <div class="flex items-center gap-3 overflow-hidden flex-1 cursor-pointer active:opacity-80 transition-opacity" id="deck-up-next-btn" title="Tap to skip to next track">
+                <div class="w-9 h-9 rounded-xl overflow-hidden shrink-0 bg-slate-200 border border-white shadow-sm" id="deck-up-next-art-wrap">
+                  <img id="deck-up-next-thumb" src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?w=200&q=80" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80'">
+                </div>
+                <div class="overflow-hidden text-left flex-1">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 shadow-sm" id="deck-up-next-badge">UP NEXT</span>
+                    <span class="text-[10px] font-medium text-slate-400" id="deck-up-next-countdown"></span>
+                  </div>
+                  <p class="text-xs font-extrabold text-slate-900 truncate mt-0.5" id="deck-up-next-title">Loading next track...</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 shrink-0 pl-2">
+                <button id="deck-btn-favorite" class="c1-btn-favorite-heart" title="Favorite / Like">
+                  <i class="ph-bold ph-heart text-base" id="deck-heart-icon"></i>
+                </button>
+                <button id="deck-btn-more-options" class="c1-btn-more" title="More Options">
+                  <i class="ph-bold ph-dots-three text-2xl"></i>
+                </button>
+              </div>
             </div>
           </div>
 
