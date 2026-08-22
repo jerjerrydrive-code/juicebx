@@ -2690,19 +2690,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const count = pl.tracks ? pl.tracks.length : 0;
       const grad = gradients[idx % gradients.length];
       return `
-        <div class="user-playlist-card p-3.5 rounded-2xl relative overflow-hidden cursor-pointer active:scale-95 transition-all group flex flex-col justify-between h-36 border border-black/5 shadow-md" style="background: ${grad}; color: #ffffff;" data-pl-id="${pl.id}">
+        <div class="user-playlist-card c1-now-playing-card p-3.5 rounded-2xl relative overflow-hidden cursor-pointer active:scale-95 transition-all group flex flex-col justify-between h-36 text-left" data-pl-id="${pl.id}">
           <div class="flex items-center justify-between">
-            <div class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center text-white text-base">
+            <div class="w-8 h-8 rounded-xl flex items-center justify-center text-blue-600 text-base" style="background: #dbe8fc; box-shadow: inset 1px 1px 3px #b8cbe4, inset -1px -1px 3px #ffffff;">
               <i class="ph-fill ph-playlist"></i>
             </div>
-            <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <i class="ph-fill ph-play text-white text-xs"></i>
+            <div class="w-7 h-7 rounded-full flex items-center justify-center text-slate-700 shadow-sm" style="background: #ebf0f7; box-shadow: 2px 2px 6px #c2cee0, -2px -2px 6px #ffffff;">
+              <i class="ph-fill ph-play text-xs ml-0.5"></i>
             </div>
           </div>
           <div>
-            <h4 class="font-black text-sm text-white truncate">${pl.name}</h4>
-            <p class="text-[11px] text-white/70 truncate mt-0.5">${pl.description || 'Custom Playlist'}</p>
-            <span class="text-[10px] font-bold text-pink-300 mt-1 block">${count} ${count === 1 ? 'Track' : 'Tracks'}</span>
+            <h4 class="font-extrabold text-sm text-slate-900 truncate">${pl.name}</h4>
+            <p class="text-[11px] text-slate-500 font-medium truncate mt-0.5">${pl.description || 'Custom Playlist'}</p>
+            <span class="text-[10px] font-bold text-blue-600 mt-1 block">${count} ${count === 1 ? 'Track' : 'Tracks'}</span>
           </div>
         </div>
       `;
@@ -2935,17 +2935,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ═══ LIBRARY SUBTABS (PLAYLISTS, QUEUE, ARTISTS, ALBUMS, DOWNLOADS) ═══
-  const libTabs = document.querySelectorAll('.lib-tab');
   libTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       libTabs.forEach(t => {
         t.classList.remove('active');
-        t.style.background = 'var(--bg-input)';
-        t.style.color = 'var(--text-secondary)';
+        t.style.background = '';
+        t.style.color = '';
       });
       tab.classList.add('active');
-      tab.style.background = 'var(--btn-active-bg)';
-      tab.style.color = 'var(--btn-active-text)';
+      tab.style.background = '';
+      tab.style.color = '';
 
       const tabName = tab.getAttribute('data-tab');
       showLibrarySubView(tabName);

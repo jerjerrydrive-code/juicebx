@@ -184,34 +184,18 @@
       justify-content: center !important;
     }
 
-    body.light-mode #btn-create-playlist-header {
-      background: #ffffff !important;
-      border: 1px solid #ddd6fe !important;
-      color: #7c3aed !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    body.light-mode .lib-tab.active,
+    .lib-tab.active {
+      background: var(--c1-blue-bg) !important;
+      color: var(--c1-blue-text) !important;
+      box-shadow: 4px 4px 10px var(--c1-blue-shadow), -3px -3px 8px var(--c1-shadow-light) !important;
+      font-weight: 700 !important;
     }
-    body.light-mode .lib-tab.active {
-      background: #0d1322 !important;
-      color: #ffffff !important;
-    }
-    body.light-mode .lib-tab:not(.active) {
-      background: rgba(226, 232, 240, 0.7) !important;
-      color: #64748b !important;
-      border: none !important;
-    }
-    body.light-mode #hero-liked-songs-card {
-      background: linear-gradient(135deg, #f472b6, #c084fc, #818cf8) !important;
-      border: none !important;
-      box-shadow: 0 14px 32px -6px rgba(192, 132, 252, 0.4) !important;
-    }
-    body.light-mode #btn-play-liked-songs {
-      background: #0d1322 !important;
-      color: #ffffff !important;
-    }
-    body.light-mode #btn-shuffle-liked-songs {
-      background: rgba(255, 255, 255, 0.25) !important;
-      color: #ffffff !important;
-      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    body.light-mode .lib-tab:not(.active),
+    .lib-tab:not(.active) {
+      background: transparent !important;
+      color: var(--c1-text-muted) !important;
+      box-shadow: none !important;
     }
     body.light-mode #library-title,
     body.light-mode #view-library h1,
@@ -1506,6 +1490,227 @@
       box-shadow: 0 0 28px var(--accent-glow, rgba(255, 120, 40, 0.6)), 0 12px 32px rgba(0,0,0,0.6) !important;
     }
 
+      /* ─── FULL-APP CONCEPT 1 PORCELAIN NEUMORPHIC UNIFICATION ─── */
+    
+    /* 1. Universal Headings & Text */
+    h1, h2, h3, h4 {
+      color: var(--c1-text-main) !important;
+      letter-spacing: -0.02em;
+    }
+
+    /* 2. Search View */
+    #main-search-input {
+      background: var(--c1-surface-sunken) !important;
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
+      color: var(--c1-text-main) !important;
+      border-radius: 22px !important;
+      box-shadow: inset 3px 3px 6px var(--c1-shadow-dark), inset -3px -3px 6px var(--c1-shadow-light) !important;
+      padding: 14px 18px 14px 44px !important;
+    }
+    #main-search-input::placeholder {
+      color: var(--c1-text-muted) !important;
+    }
+    #view-search i.ph-magnifying-glass {
+      color: var(--c1-text-sub) !important;
+    }
+    #search-recent-section p, #search-results-section p {
+      color: var(--c1-text-sub) !important;
+      font-weight: 700 !important;
+    }
+    #btn-clear-recent-searches {
+      color: var(--c1-text-muted) !important;
+    }
+    .recent-chip {
+      background: var(--c1-surface) !important;
+      border: 1px solid rgba(255, 255, 255, 0.8) !important;
+      color: var(--c1-text-main) !important;
+      border-radius: 16px !important;
+      box-shadow: 4px 4px 10px var(--c1-shadow-dark), -4px -4px 10px var(--c1-shadow-light) !important;
+      font-weight: 600 !important;
+      font-size: 12px !important;
+      padding: 8px 14px !important;
+      transition: all 0.15s ease !important;
+    }
+    .recent-chip:active {
+      box-shadow: inset 2px 2px 5px var(--c1-shadow-dark), inset -2px -2px 5px var(--c1-shadow-light) !important;
+      transform: scale(0.96) !important;
+    }
+
+    /* 3. Library View & Subtabs */
+    #library-tabs {
+      background: #e2eaf4 !important;
+      border-radius: 22px !important;
+      padding: 4px !important;
+      display: flex !important;
+      align-items: center !important;
+      box-shadow: inset 3px 3px 7px var(--c1-shadow-dark), inset -3px -3px 7px var(--c1-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    }
+    .lib-tab {
+      flex: 1 !important;
+      text-align: center !important;
+      padding: 8px 0 !important;
+      border-radius: 18px !important;
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      color: var(--c1-text-muted) !important;
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+      cursor: pointer !important;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    }
+    .lib-tab.active {
+      background: var(--c1-blue-bg) !important;
+      color: var(--c1-blue-text) !important;
+      font-weight: 700 !important;
+      box-shadow: 4px 4px 10px var(--c1-blue-shadow), -3px -3px 8px var(--c1-shadow-light) !important;
+    }
+    #btn-open-create-playlist {
+      background: var(--c1-surface) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      color: var(--c1-text-main) !important;
+      border-radius: 999px !important;
+      box-shadow: 4px 4px 12px var(--c1-shadow-dark), -4px -4px 12px var(--c1-shadow-light) !important;
+      font-weight: 700 !important;
+      font-size: 12px !important;
+      padding: 8px 16px !important;
+      transition: all 0.15s ease !important;
+    }
+    #btn-open-create-playlist:active {
+      box-shadow: inset 2px 2px 5px var(--c1-shadow-dark), inset -2px -2px 5px var(--c1-shadow-light) !important;
+      transform: scale(0.95) !important;
+    }
+
+    /* Liked Songs Hero Card */
+    #library-liked-card {
+      background: var(--c1-surface) !important;
+      border-radius: 26px !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 8px 8px 22px var(--c1-shadow-dark), -8px -8px 22px var(--c1-shadow-light) !important;
+      padding: 16px !important;
+    }
+    #library-liked-card .text-white {
+      color: var(--c1-text-main) !important;
+    }
+    #library-liked-card .text-white\/60, #library-liked-card .text-white\/70 {
+      color: var(--c1-text-sub) !important;
+    }
+    #library-liked-card #btn-liked-play-all {
+      background: var(--c1-surface) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 4px 4px 10px var(--c1-shadow-dark), -4px -4px 10px var(--c1-shadow-light) !important;
+      color: var(--c1-text-main) !important;
+    }
+    #library-liked-card #btn-liked-play-all:active {
+      box-shadow: inset 2px 2px 5px var(--c1-shadow-dark), inset -2px -2px 5px var(--c1-shadow-light) !important;
+    }
+    #library-liked-card #btn-liked-shuffle {
+      background: var(--c1-surface) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 4px 4px 10px var(--c1-shadow-dark), -4px -4px 10px var(--c1-shadow-light) !important;
+      color: var(--c1-text-main) !important;
+    }
+
+    /* Playlist Cards */
+    .playlist-card {
+      background: var(--c1-surface) !important;
+      border-radius: 24px !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 6px 6px 18px var(--c1-shadow-dark), -6px -6px 18px var(--c1-shadow-light) !important;
+      color: var(--c1-text-main) !important;
+    }
+    .playlist-card:active {
+      box-shadow: inset 3px 3px 7px var(--c1-shadow-dark), inset -3px -3px 7px var(--c1-shadow-light) !important;
+      transform: scale(0.97) !important;
+    }
+    .playlist-card .text-white {
+      color: var(--c1-text-main) !important;
+    }
+    .playlist-card .text-white\/60, .playlist-card .text-white\/70 {
+      color: var(--c1-text-sub) !important;
+    }
+
+    /* Track List Items (Queue / Playlist / Search) */
+    .track-item, .track-result-item {
+      background: var(--c1-surface) !important;
+      border-radius: 18px !important;
+      border: 1px solid rgba(255, 255, 255, 0.8) !important;
+      box-shadow: 3px 3px 8px var(--c1-shadow-dark), -3px -3px 8px var(--c1-shadow-light) !important;
+      margin-bottom: 8px !important;
+      padding: 10px 14px !important;
+      color: var(--c1-text-main) !important;
+      transition: all 0.15s ease !important;
+    }
+    .track-item:active, .track-result-item:active {
+      box-shadow: inset 2px 2px 4px var(--c1-shadow-dark), inset -2px -2px 4px var(--c1-shadow-light) !important;
+      transform: scale(0.98) !important;
+    }
+    .track-item .text-white, .track-result-item .text-white {
+      color: var(--c1-text-main) !important;
+    }
+    .track-item .text-white\/60, .track-result-item .text-white\/60 {
+      color: var(--c1-text-sub) !important;
+    }
+
+    /* 4. Settings View */
+    .settings-card, #view-settings .glass-card {
+      background: var(--c1-surface) !important;
+      border-radius: 24px !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 6px 6px 18px var(--c1-shadow-dark), -6px -6px 18px var(--c1-shadow-light) !important;
+      padding: 18px !important;
+      margin-bottom: 14px !important;
+    }
+    .settings-toggle {
+      background: #d8e2ee !important;
+      box-shadow: inset 2px 2px 4px var(--c1-shadow-dark), inset -2px -2px 4px var(--c1-shadow-light) !important;
+      border-radius: 999px !important;
+      width: 48px !important;
+      height: 26px !important;
+      position: relative !important;
+      transition: background 0.25s ease !important;
+    }
+    .settings-toggle.active {
+      background: var(--c1-blue-bg) !important;
+      box-shadow: inset 2px 2px 4px var(--c1-blue-shadow), inset -2px -2px 4px var(--c1-shadow-light) !important;
+    }
+    .settings-toggle .toggle-knob {
+      width: 20px !important;
+      height: 20px !important;
+      border-radius: 50% !important;
+      background: #ffffff !important;
+      box-shadow: 2px 2px 6px var(--c1-shadow-dark) !important;
+      position: absolute !important;
+      top: 3px !important;
+      left: 3px !important;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    }
+    .settings-toggle.active .toggle-knob {
+      transform: translateX(22px) !important;
+    }
+    #btn-theme-expand, #btn-import-folder-settings, #btn-select-storage-directory, #btn-clear-search-history, #btn-clear-downloads, #btn-reset-playlists-settings {
+      background: var(--c1-surface) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 4px 4px 10px var(--c1-shadow-dark), -4px -4px 10px var(--c1-shadow-light) !important;
+      color: var(--c1-text-main) !important;
+      border-radius: 16px !important;
+      font-weight: 700 !important;
+      transition: all 0.15s ease !important;
+    }
+    #btn-theme-expand:active, #btn-import-folder-settings:active, #btn-select-storage-directory:active, #btn-clear-search-history:active, #btn-clear-downloads:active, #btn-reset-playlists-settings:active {
+      box-shadow: inset 2px 2px 5px var(--c1-shadow-dark), inset -2px -2px 5px var(--c1-shadow-light) !important;
+      transform: scale(0.97) !important;
+    }
+
+    /* 5. Modals */
+    .modal-card {
+      background: var(--c1-surface) !important;
+      border-radius: 28px !important;
+      border: 2px solid rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 16px 16px 36px var(--c1-shadow-dark), -16px -16px 36px var(--c1-shadow-light) !important;
+      color: var(--c1-text-main) !important;
+    }
   </style>
 </head>
 <body class="light-mode h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
@@ -1895,27 +2100,29 @@
         </div>
 
         <!-- ═══ PANEL 3: DEDICATED LIBRARY & PLAYLISTS ═══ -->
-        <div id="view-library" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-0" style="background: var(--bg-panel);">
+        <div id="view-library" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-0" style="background: var(--c1-bg);">
           <div class="w-full max-w-md mx-auto flex flex-col">
-          <div class="px-5 pt-5 pb-2 sticky top-0 z-20" style="background: linear-gradient(180deg, var(--bg-panel) 84%, transparent 100%); pointer-events: none;">
+          <div class="px-5 pt-5 pb-2 sticky top-0 z-20" style="background: linear-gradient(180deg, var(--c1-bg) 84%, transparent 100%); pointer-events: none;">
             <!-- Top Bar -->
-            <div class="flex items-center justify-between mb-4 pointer-events-auto">
+            <div class="flex items-center justify-between mb-3 pointer-events-auto">
               <div>
-                <h1 class="text-2xl font-bold tracking-tight text-white">Library</h1>
+                <h1 class="text-2xl font-bold tracking-tight text-slate-900">Library</h1>
               </div>
               <div class="flex items-center gap-2">
                 <!-- Create Playlist Action Button -->
-                <button class="px-3.5 py-1.5 rounded-full flex items-center gap-1.5 text-xs font-semibold active:scale-95 transition-all outline-none bg-white/5 border border-white/10 backdrop-blur-md shadow-sm text-white/90 hover:text-white" id="btn-create-playlist-header" title="Create Playlist">
-                  <i class="ph-bold ph-plus text-xs text-indigo-400"></i> New Playlist
+                <button class="c1-now-playing-card py-1.5 px-3.5 rounded-full flex items-center gap-1.5 text-xs font-bold active:scale-95 transition-all outline-none text-slate-800" id="btn-create-playlist-header" title="Create Playlist">
+                  <i class="ph-bold ph-plus text-xs text-blue-600"></i> New Playlist
                 </button>
               </div>
             </div>
 
-            <!-- Category Filter Pills (Playlists, Queue, Artists, Albums, Downloads) -->
-            <div class="flex items-center gap-2 mb-3 overflow-x-auto pointer-events-auto scrollbar-none pr-4" id="library-subtabs-bar">
-              <button class="lib-tab active px-4 py-1.5 rounded-full text-xs font-bold transition-all shrink-0 shadow-sm" data-tab="playlists" style="background: var(--btn-active-bg); color: var(--btn-active-text);">Playlists</button>
-              <button class="lib-tab px-4 py-1.5 rounded-full text-xs font-semibold transition-all shrink-0 bg-white/5 border border-white/10 text-white/70 hover:text-white" data-tab="queue">Queue</button>
-              <button class="lib-tab px-4 py-1.5 rounded-full text-xs font-semibold transition-all shrink-0 bg-white/5 border border-white/10 text-white/70 hover:text-white" data-tab="downloads">Downloads</button>
+            <!-- Category Filter Pills (Playlists, Queue, Downloads in Sunken Cradle) -->
+            <div class="c1-segmented-bar mb-3 pointer-events-auto" id="library-subtabs-bar">
+              <button class="c1-segment-btn lib-tab active" data-tab="playlists">Playlists</button>
+              <div class="c1-segment-divider"></div>
+              <button class="c1-segment-btn lib-tab" data-tab="queue">Queue</button>
+              <div class="c1-segment-divider"></div>
+              <button class="c1-segment-btn lib-tab" data-tab="downloads">Downloads</button>
             </div>
 
             <!-- Sub-header -->
@@ -1929,25 +2136,25 @@
 
           <!-- 1. Playlists Sub-View (Liked Songs Hero + User Playlists Grid) -->
           <div class="px-5 pt-1 space-y-4" id="library-playlists-view">
-            <!-- Liked Songs Hero Card -->
-            <div class="p-4 rounded-[22px] relative overflow-hidden cursor-pointer group active:scale-[0.98] transition-all bg-gradient-to-r from-purple-900/70 via-pink-900/50 to-indigo-900/70 border border-pink-500/30 shadow-xl backdrop-blur-md" id="hero-liked-songs-card">
+            <!-- Liked Songs Hero Card (Concept 1 Neumorphic) -->
+            <div class="c1-now-playing-card p-4 rounded-[26px] relative overflow-hidden cursor-pointer group active:scale-[0.98] transition-all mb-4 text-left" id="hero-liked-songs-card">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3.5">
-                  <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-pink-500 via-rose-500 to-purple-600 flex items-center justify-center text-white shadow-lg shrink-0">
+                  <div class="w-13 h-13 rounded-2xl bg-gradient-to-tr from-pink-500 via-rose-500 to-purple-500 flex items-center justify-center text-white shadow-md shrink-0">
                     <i class="ph-fill ph-heart text-2xl"></i>
                   </div>
                   <div>
-                    <h3 class="text-base font-bold text-white">Liked Songs</h3>
-                    <p class="text-xs font-semibold text-pink-300" id="liked-songs-count-badge">3 Favorite Tracks</p>
-                    <p class="text-[11px] mt-0.5 text-white/50">Auto-synced favorites</p>
+                    <h3 class="text-base font-extrabold text-slate-900">Liked Songs</h3>
+                    <p class="text-xs font-bold text-pink-600" id="liked-songs-count-badge">3 Favorite Tracks</p>
+                    <p class="text-[11px] font-medium text-slate-500">Auto-synced favorites</p>
                   </div>
                 </div>
                 <div class="flex items-center gap-2">
-                  <button id="btn-play-liked-songs" class="w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform shadow-md hover:scale-105" style="background: var(--btn-active-bg); color: var(--btn-active-text);" title="Play All Likes">
-                    <i class="ph-fill ph-play text-lg ml-0.5"></i>
+                  <button id="btn-play-liked-songs" class="c1-btn-transport-secondary w-10 h-10 rounded-full flex items-center justify-center active:scale-90 shadow-sm" style="background: #ebf0f7; box-shadow: 4px 4px 10px #c2cee0, -4px -4px 10px #ffffff;" title="Play All Likes">
+                    <i class="ph-fill ph-play text-base text-slate-800 ml-0.5"></i>
                   </button>
-                  <button id="btn-shuffle-liked-songs" class="w-10 h-10 rounded-full flex items-center justify-center active:scale-90 transition-transform bg-white/10 border border-white/15 backdrop-blur-md text-white shadow-sm" title="Shuffle Likes">
-                    <i class="ph-bold ph-shuffle text-base"></i>
+                  <button id="btn-shuffle-liked-songs" class="c1-btn-transport-secondary w-10 h-10 rounded-full flex items-center justify-center active:scale-90 shadow-sm" style="background: #ebf0f7; box-shadow: 4px 4px 10px #c2cee0, -4px -4px 10px #ffffff;" title="Shuffle Likes">
+                    <i class="ph-bold ph-shuffle text-base text-slate-800"></i>
                   </button>
                 </div>
               </div>
@@ -2182,19 +2389,19 @@
 
       </div>
 
-      <!-- ═══ FLOATING MINI-PLAYER ═══ -->
-      <div id="mini-player" class="absolute bottom-[56px] sm:bottom-[72px] left-1/2 -translate-x-1/2 w-[calc(100%-24px)] max-w-md rounded-[22px] p-2 px-3.5 flex items-center justify-between z-40 hidden shadow-2xl border border-white/15 backdrop-blur-2xl" style="background: var(--bg-mini);">
+      <!-- ═══ FLOATING MINI-PLAYER (Concept 1 Neumorphic Capsule) ═══ -->
+      <div id="mini-player" class="absolute bottom-[58px] sm:bottom-[72px] left-1/2 -translate-x-1/2 w-[calc(100%-24px)] max-w-md c1-now-playing-card p-2 px-3 flex items-center justify-between z-40 hidden" style="border-radius: 22px;">
         <div class="flex items-center space-x-3 overflow-hidden flex-1 cursor-pointer active:opacity-80 transition-opacity" id="mini-player-info" title="Open Player Deck">
-          <div class="w-[42px] h-[42px] rounded-[14px] overflow-hidden flex-shrink-0 relative shadow-sm" id="mini-art">
+          <div class="w-[40px] h-[40px] rounded-[14px] overflow-hidden flex-shrink-0 relative shadow-sm border border-white/80" id="mini-art">
             <img src="" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80'">
           </div>
-          <div class="overflow-hidden flex-1">
-            <h4 class="font-bold text-[13px] truncate text-white" id="mini-title">Track Title</h4>
-            <p class="text-[11px] truncate font-medium text-white/60" id="mini-artist">Artist</p>
+          <div class="overflow-hidden flex-1 text-left">
+            <h4 class="font-extrabold text-[13px] truncate text-slate-900" id="mini-title">Track Title</h4>
+            <p class="text-[11px] truncate font-medium text-slate-500" id="mini-artist">Artist</p>
           </div>
         </div>
-        <button class="w-[40px] h-[40px] rounded-full flex items-center justify-center active:scale-90 transition-transform outline-none shadow-md hover:scale-105" id="mini-play-btn" style="background: var(--btn-active-bg); color: var(--btn-active-text);" title="Play / Pause">
-          <i class="ph-fill ph-play text-base ml-0.5"></i>
+        <button class="w-[38px] h-[38px] rounded-full flex items-center justify-center active:scale-90 transition-transform outline-none" id="mini-play-btn" style="background: #ebf0f7; box-shadow: 4px 4px 10px #c2cee0, -4px -4px 10px #ffffff; color: #475569;" title="Play / Pause">
+          <i class="ph-fill ph-play text-sm text-slate-700 ml-0.5" id="mini-play-icon"></i>
         </button>
       </div>
 
