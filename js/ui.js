@@ -2396,6 +2396,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!track) return;
     if (els.deckTrackTitle) els.deckTrackTitle.innerText = track.title;
     if (els.deckTrackArtist) els.deckTrackArtist.innerText = track.artist;
+    const subTitle = document.getElementById('deck-sub-title'); if (subTitle) subTitle.innerText = track.title;
+    const subArtist = document.getElementById('deck-sub-artist'); if (subArtist) subArtist.innerText = track.artist;
     if (els.miniTitle) els.miniTitle.innerText = track.title;
     if (els.miniArtist) els.miniArtist.innerText = track.artist;
     if (els.deckTimeCurrent) els.deckTimeCurrent.innerText = "0:00";

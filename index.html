@@ -444,134 +444,123 @@
       border-top: 1px solid var(--border-card);
     }
 
-        /* ═══ ADVANCED LUXURY NEUMORPHIC DESIGN SYSTEM ═══ */
-    .neu-btn {
-      background: rgba(22, 26, 42, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-      transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+            /* ═══ CONCEPT 1: PURE MASTER NEUMORPHIC DESIGN SYSTEM ═══ */
+    body, body.light-mode {
+      background: #eef2f7 !important;
+      color: #0f172a !important;
     }
-    .neu-btn:hover {
-      box-shadow: 7px 7px 16px rgba(0, 0, 0, 0.6), -5px -5px 12px rgba(255, 255, 255, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.25);
-      transform: translateY(-2px) scale(1.04);
-      border-color: rgba(255, 255, 255, 0.22);
+
+    .neu-card {
+      background: #eef2f7;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 24px;
+      box-shadow: 6px 6px 16px rgba(166, 180, 200, 0.55), -6px -6px 16px rgba(255, 255, 255, 0.95);
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-    .neu-btn:active {
-      box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.7), inset -2px -2px 6px rgba(255, 255, 255, 0.05);
-      transform: scale(0.92) translateY(1px);
-    }
+
     .neu-mode-container {
-      background: rgba(12, 14, 24, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.6), inset -2px -2px 5px rgba(255, 255, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.4);
-      padding: 4px;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-    }
-    .deck-mode-pill {
-      color: rgba(255, 255, 255, 0.6);
-      background: transparent;
-      padding: 5px 14px;
+      background: #e4ebf5;
+      border: 1px solid rgba(255, 255, 255, 0.6);
       border-radius: 999px;
-      font-weight: 800;
-      font-size: 10px;
-      letter-spacing: 0.06em;
+      box-shadow: inset 3px 3px 6px rgba(166, 180, 200, 0.65), inset -3px -3px 6px rgba(255, 255, 255, 0.95);
+      padding: 4px;
+    }
+
+    .deck-mode-pill {
+      color: #64748b;
+      background: transparent;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.05em;
       transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     .deck-mode-pill:hover {
-      color: #ffffff;
+      color: #0f172a;
     }
     .deck-mode-pill.active {
-      background: #ffffff;
-      color: #0b0d17 !important;
-      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.35), 0 2px 6px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%) !important;
+      color: #2563eb !important;
+      box-shadow: 3px 3px 8px rgba(166, 180, 200, 0.45), -3px -3px 8px rgba(255, 255, 255, 0.95) !important;
       transform: scale(1.02);
+      font-weight: 900;
     }
 
-    /* ═══ SUNKEN BEVELED TURNTABLE STAGE CHASSIS ═══ */
-    .neu-stage {
-      background: radial-gradient(circle at 50% 50%, rgba(20, 24, 40, 0.95) 0%, rgba(8, 10, 18, 0.98) 100%);
-      border: 1.5px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 
-        0 28px 60px -14px rgba(0, 0, 0, 0.85),
-        inset 0 6px 20px rgba(0, 0, 0, 0.9),
-        inset 0 -3px 8px rgba(255, 255, 255, 0.06),
-        0 0 40px var(--ambient-glow-color, rgba(147, 51, 234, 0.18));
-      transition: box-shadow 0.6s ease, border-color 0.4s ease;
+    .neu-stage-card {
+      background: #eef2f7;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      border-radius: 28px;
+      box-shadow: 10px 10px 24px rgba(166, 180, 200, 0.55), -10px -10px 24px rgba(255, 255, 255, 0.95);
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    /* ═══ AMBIENT GLOW BACKDROP RADIATOR ═══ */
-    .ambient-glow-radiator {
-      position: absolute;
-      inset: -20px;
-      background: radial-gradient(circle at 50% 50%, var(--ambient-primary, rgba(168, 85, 247, 0.35)) 0%, var(--ambient-secondary, rgba(236, 72, 153, 0.15)) 45%, transparent 75%);
-      filter: blur(28px);
-      opacity: 0.75;
-      pointer-events: none;
-      z-index: 0;
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* ═══ MECHANICAL PIVOTING TONEARM ═══ */
-    .tonearm-assembly {
-      position: absolute;
-      top: 14px;
-      right: 18px;
-      width: 75px;
-      height: 140px;
-      pointer-events: none;
-      z-index: 25;
-      transform-origin: 58px 18px;
-      transform: rotate(-32deg);
-      transition: transform 0.8s cubic-bezier(0.34, 1.3, 0.64, 1);
-    }
-    .tonearm-assembly.playing {
-      transform: rotate(6deg);
-    }
-    .tonearm-base {
-      position: absolute;
-      top: 4px;
-      right: 4px;
-      width: 28px;
-      height: 28px;
+    .neu-btn-circle {
+      background: #eef2f7;
+      border: 1px solid rgba(255, 255, 255, 0.8);
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 35%, #e2e8f0 0%, #64748b 50%, #1e293b 100%);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.8);
-      border: 1px solid rgba(255,255,255,0.4);
+      box-shadow: 4px 4px 10px rgba(166, 180, 200, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.9);
+      color: #475569;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-    .tonearm-rod {
-      position: absolute;
-      top: 18px;
-      right: 16px;
-      width: 4.5px;
-      height: 95px;
-      background: linear-gradient(90deg, #cbd5e1 0%, #f8fafc 40%, #64748b 100%);
-      border-radius: 3px;
-      box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
-      transform-origin: top center;
+    .neu-btn-circle:hover {
+      box-shadow: 6px 6px 14px rgba(166, 180, 200, 0.6), -6px -6px 14px rgba(255, 255, 255, 0.95);
+      color: #0f172a;
+      transform: scale(1.05);
     }
-    .tonearm-headshell {
-      position: absolute;
-      bottom: -16px;
-      left: -5px;
+    .neu-btn-circle:active {
+      box-shadow: inset 3px 3px 6px rgba(166, 180, 200, 0.65), inset -3px -3px 6px rgba(255, 255, 255, 0.95);
+      transform: scale(0.92);
+    }
+
+    .neu-btn-hero {
+      background: #eef2f7;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      box-shadow: 8px 8px 18px rgba(166, 180, 200, 0.6), -8px -8px 18px rgba(255, 255, 255, 0.95);
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .neu-btn-hero:hover {
+      box-shadow: 10px 10px 22px rgba(166, 180, 200, 0.65), -10px -10px 22px rgba(255, 255, 255, 1);
+      transform: scale(1.04);
+    }
+    .neu-btn-hero:active {
+      box-shadow: inset 4px 4px 8px rgba(166, 180, 200, 0.7), inset -4px -4px 8px rgba(255, 255, 255, 0.95);
+      transform: scale(0.93);
+    }
+
+    .neu-scrubber-groove {
+      background: #dce4ed;
+      box-shadow: inset 2px 2px 4px rgba(166, 180, 200, 0.7), inset -2px -2px 4px rgba(255, 255, 255, 0.9);
+      border-radius: 999px;
+      height: 6px;
+      position: relative;
+      cursor: pointer;
+    }
+    .neu-scrubber-fill {
+      background: #3b82f6;
+      border-radius: 999px;
+      height: 100%;
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+    }
+    .neu-scrubber-thumb {
       width: 14px;
-      height: 22px;
-      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-      border-radius: 3px 3px 6px 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.6), 0 0 10px rgba(59, 130, 246, 0.5);
-      border: 1px solid rgba(255,255,255,0.3);
-    }
-    .tonearm-stylus {
-      position: absolute;
-      bottom: -4px;
-      left: 5px;
-      width: 4px;
-      height: 4px;
+      height: 14px;
       border-radius: 50%;
-      background: #ef4444;
-      box-shadow: 0 0 6px #ef4444;
+      background: #ffffff;
+      border: 2px solid #3b82f6;
+      box-shadow: 2px 2px 6px rgba(166, 180, 200, 0.6);
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
     /* ═══ LUXE 3D HOLOGRAPHIC VINYL TURNTABLE ═══ */
@@ -1399,74 +1388,55 @@
           </div>
         </div>
 
-        <!-- ═══ PANEL 2: UNIFIED HERO VINYL PLAYER DECK (Exact Mockup Match) ═══ -->
+        <!-- ═══ PANEL 2: UNIFIED HERO VINYL PLAYER DECK (EXACT CONCEPT 1 MATCH) ═══ -->
         <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-3 px-4 pt-1 sm:pt-2 relative select-none" style="background: transparent;">
           <div class="w-full max-w-md mx-auto h-full flex flex-col justify-between relative z-10">
 
-          <!-- 1. Top Player Header Bar (Logo Left, Mode Switcher Right) -->
-          <div class="flex items-center justify-between pt-1 pb-1 shrink-0 z-20 w-full px-1">
-            <div class="flex items-center justify-start">
-              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-10 sm:h-11 w-auto max-w-[90px] object-contain cursor-pointer active:scale-95 transition-transform drop-shadow-md" id="deck-brand-tribute" title="999 Forever Tribute">
-            </div>
-            
-            <!-- View Switcher Pills (SONG / VIDEO / LYRICS in line with Header) -->
-            <div class="flex items-center justify-end">
-              <div class="neu-mode-container flex items-center gap-1 p-1 rounded-full backdrop-blur-xl" id="deck-mode-pills">
-                <button class="deck-mode-pill active px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="vinyl">SONG</button>
-                <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="video">VIDEO</button>
-                <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="lyrics">LYRICS</button>
-              </div>
-            </div>
+          <!-- 1. Top "Now Playing" Extruded Card (Concept 1 Header) -->
+          <div class="neu-card p-3 rounded-[22px] text-center shrink-0 w-full mb-1 shadow-sm" id="deck-now-playing-card">
+            <span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 block mb-0.5">Now Playing</span>
+            <h2 id="deck-track-title" class="font-black text-base text-slate-900 truncate">JuiceBx 999</h2>
+            <p id="deck-track-artist" class="text-xs font-semibold text-slate-600 truncate">Select a Track</p>
           </div>
 
-          <!-- 2. Quick Action Dock (4 Clean Actions) -->
-          <div class="flex items-center justify-between px-2 pt-1 pb-1 shrink-0 z-20 w-full">
-            <button id="deck-btn-fullscreen" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-slate-700 dark:text-white/80 hover:text-white" title="Focus / Fullscreen">
-              <i class="ph-bold ph-corners-out text-sm" id="deck-fullscreen-icon"></i>
-            </button>
-            <button id="deck-btn-favorite" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-pink-500 hover:scale-105" title="Like / Favorite">
-              <i class="ph-bold ph-heart text-sm" id="deck-heart-icon"></i>
-            </button>
-            <button id="deck-btn-download-hero" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-slate-700 dark:text-white/80 hover:text-white" title="Save / Download Offline">
-              <i class="ph-bold ph-download-simple text-sm" id="deck-download-hero-icon"></i>
-            </button>
-            <button id="deck-btn-queue" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-purple-600 dark:text-purple-400 hover:text-purple-300 relative" title="View Queue">
-              <i class="ph-bold ph-queue text-sm"></i>
-              <span id="deck-queue-badge" class="absolute -top-1 -right-1 bg-purple-600 text-white text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-md hidden">0</span>
-            </button>
+          <!-- 2. Segmented Mode Switcher (Sunken Pill Cradle: SONG / VIDEO / LYRICS) -->
+          <div class="neu-mode-container flex items-center justify-between p-1 rounded-full shrink-0 w-full mb-1.5" id="deck-mode-pills">
+            <button class="deck-mode-pill active flex-1 py-1.5 rounded-full text-xs font-black uppercase tracking-wider" data-mode="vinyl">SONG</button>
+            <button class="deck-mode-pill flex-1 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider" data-mode="video">VIDEO</button>
+            <button class="deck-mode-pill flex-1 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider" data-mode="lyrics">LYRICS</button>
           </div>
 
-          <!-- 3. CENTER STAGE (RESPONSIVE CENTERPIECE SQUIRCLE) -->
+          <!-- 3. CENTER STAGE (CONCEPT 1 EXTRUDED SQUIRCLE CARD) -->
           <div class="flex-1 min-h-0 flex items-center justify-center py-1 relative z-10 w-full">
-            <div id="deck-stage-window" class="neu-stage w-[min(340px,88vw,41vh)] h-[min(340px,88vw,41vh)] rounded-[32px] overflow-hidden relative flex items-center justify-center mx-auto transition-all cursor-pointer select-none active:scale-[0.99]" title="Tap to switch visualizer style">
+            <div id="deck-stage-window" class="neu-stage-card w-[min(310px,80vw,36vh)] h-[min(310px,80vw,36vh)] rounded-[28px] overflow-hidden relative flex items-center justify-center mx-auto cursor-pointer select-none active:scale-[0.99]" title="Tap to switch visualizer style">
 
-              <!-- 1. Material 3 meets iOS 28 Wave Equalizer (Exact Mockup: 1000260681.jpg - DEFAULT) -->
-              <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#0a0c16] rounded-[32px]">
+              <!-- 1. Material 3 Equalizer -->
+              <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#0a0c16] rounded-[28px]">
                 <canvas id="deck-reactive-equalizer-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 2. iOS 28 Siri Dynamic Liquid Glass Orb -->
-              <div id="deck-display-orb" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#07050e] rounded-[32px] hidden">
+              <!-- 2. Siri Liquid Orb -->
+              <div id="deck-display-orb" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#07050e] rounded-[28px] hidden">
                 <canvas id="deck-reactive-orb-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 3. Google Material 3 Expressive Dynamic Fluid Ribbons -->
-              <div id="deck-display-m3" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#09050d] rounded-[32px] hidden">
+              <!-- 3. M3 Fluid Ribbons -->
+              <div id="deck-display-m3" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#09050d] rounded-[28px] hidden">
                 <canvas id="deck-reactive-m3-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 4. Spatial Fluid Glass Metaballs & Audio Plasma -->
-              <div id="deck-display-blobs" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#050b14] rounded-[32px] hidden">
+              <!-- 4. Fluid Metaballs Plasma -->
+              <div id="deck-display-blobs" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#050b14] rounded-[28px] hidden">
                 <canvas id="deck-reactive-blobs-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 5. 2028 Precision M3 Hi-Fi Fluid Spectrum -->
-              <div id="deck-display-hifi" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#08060c] rounded-[32px] hidden">
+              <!-- 5. Hi-Fi Spectrum -->
+              <div id="deck-display-hifi" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#08060c] rounded-[28px] hidden">
                 <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block"></canvas>
               </div>
 
               <!-- 6. Holographic Vinyl Platter -->
-              <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex flex-col items-center justify-center relative hidden overflow-hidden rounded-[32px]">
+              <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex flex-col items-center justify-center relative hidden overflow-hidden rounded-[28px]">
                 <div class="vinyl-deck-wrapper relative flex items-center justify-center transition-transform duration-300 w-full h-full" id="deck-vinyl-wrapper">
                   <div class="vinyl-platter paused relative transition-all duration-300 shadow-2xl" id="deck-vinyl-platter">
                     <div class="vinyl-grooves"></div>
@@ -1474,7 +1444,7 @@
                     <div class="vinyl-reflection"></div>
                     <div class="vinyl-reflection-reverse"></div>
                     <div class="vinyl-label-rim">
-                      <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('999_rose_heart_logo.png');"></div>
+                      <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('logo.png');"></div>
                     </div>
                     <div class="spindle-hub">
                       <div class="spindle-hole"></div>
@@ -1483,84 +1453,76 @@
                 </div>
               </div>
 
-              <!-- 8. Video Player Mode Container (Persistent for uninterrupted playback) -->
-              <div id="deck-display-video" class="centerpiece-display absolute inset-0 w-full h-full flex items-center justify-center bg-black rounded-[32px] overflow-hidden opacity-0 pointer-events-none z-0 transition-opacity duration-300">
-                <div id="deck-video-container" class="w-full h-full relative overflow-hidden rounded-[32px]">
+              <!-- 8. Video Player Mode Container -->
+              <div id="deck-display-video" class="centerpiece-display absolute inset-0 w-full h-full flex items-center justify-center bg-black rounded-[28px] overflow-hidden opacity-0 pointer-events-none z-0 transition-opacity duration-300">
+                <div id="deck-video-container" class="w-full h-full relative overflow-hidden rounded-[28px]">
                   <div id="yt-player-slot" class="w-full h-full"></div>
                 </div>
               </div>
 
-              <!-- 9. Synced Lyrics Mode Container (Exact Mockup Match) -->
-              <div id="deck-display-lyrics" class="centerpiece-display w-full h-full flex flex-col items-center justify-between p-3 hidden relative select-none rounded-[32px]" style="background: #0c121e; color: #ffffff;">
+              <!-- 9. Synced Lyrics Mode Container -->
+              <div id="deck-display-lyrics" class="centerpiece-display w-full h-full flex flex-col items-center justify-between p-3 hidden relative select-none rounded-[28px]" style="background: #0c121e; color: #ffffff;">
                 <div id="deck-lyrics-text" class="space-y-4 py-2 flex-1 overflow-y-auto px-2 text-center scrollbar-none z-10 w-full">
                   <div class="flex flex-col items-center justify-center py-6 text-white/50">
                     <i class="ph-bold ph-music-notes text-2xl mb-1 animate-pulse text-purple-400"></i>
                     <span class="text-xs font-semibold">Loading synced lyrics...</span>
                   </div>
                 </div>
-
-                <div class="flex items-center justify-between w-full px-3 py-1.5 rounded-full border mt-2 shrink-0 z-20" style="background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1);">
-                  <span class="text-[9px] font-black flex items-center gap-1 text-purple-400">
-                    <i class="ph-bold ph-sliders-horizontal text-xs"></i> SYNC OFFSET
-                  </span>
-                  <div class="flex items-center gap-1">
-                    <button id="btn-lyric-nudge-back" class="px-2 py-0.5 rounded-full active:scale-90 transition-all font-black text-[9px] bg-white/10 border border-white/10 text-white/80 hover:text-white">-0.5s</button>
-                    <span id="lyric-sync-offset-label" class="font-bold font-mono px-1 text-[9px] text-purple-400">±0.0s</span>
-                    <button id="btn-lyric-nudge-fwd" class="px-2 py-0.5 rounded-full active:scale-90 transition-all font-black text-[9px] bg-white/10 border border-white/10 text-white/80 hover:text-white">+0.5s</button>
-                    <button id="btn-lyric-sync-reset" class="w-5 h-5 rounded-full flex items-center justify-center active:scale-90 transition-all font-bold text-[9px] bg-white/10 border border-white/10 text-white/60 ml-0.5" title="Reset Calibration">↺</button>
-                  </div>
-                </div>
               </div>
-
             </div>
           </div>
 
-          <!-- 4. BOTTOM CONTROLS STACK (PIXEL-PERFECT SYMMETRICAL & CENTERED) -->
-          <div class="w-full shrink-0 space-y-2.5 z-20 pb-1">
-            
-            <!-- 4A. Track Metadata (Left/Centered with high legibility) -->
-            <div class="text-center w-full px-2 overflow-hidden">
-              <h2 id="deck-track-title" class="font-bold text-[19px] sm:text-[21px] tracking-tight truncate leading-snug text-slate-900">Ain't Talkin' 'Bout Love (2015 Remaster)</h2>
-              <p id="deck-track-artist" class="text-xs sm:text-sm font-semibold truncate mt-0.5 text-slate-500">Van Halen</p>
+          <!-- 4. Track Info & Action Dock -->
+          <div class="flex items-center justify-between px-2 pt-1 pb-0.5 shrink-0 z-20 w-full">
+            <div class="overflow-hidden flex-1 pr-2">
+              <h3 class="font-black text-sm sm:text-base text-slate-900 truncate" id="deck-sub-title">JuiceBx Master Deck</h3>
+              <p class="text-xs font-semibold text-slate-500 truncate" id="deck-sub-artist">999 Family Edition</p>
             </div>
-
-            <!-- 4B. Time Scrubber with 1.0x Speed Pill in Center -->
-            <div class="px-1 space-y-1.5">
-              <div class="scrubber-track" id="deck-scrubber-track">
-                <div class="scrubber-fill" id="deck-scrubber-fill"></div>
-                <div class="scrubber-thumb" id="deck-scrubber-thumb"></div>
-              </div>
-              <div class="flex justify-between items-center text-[11px] font-bold font-mono px-0.5 text-slate-500">
-                <span id="deck-time-current">0:00</span>
-                <button id="deck-btn-speed" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold transition-all bg-white border border-slate-200 text-slate-700 shadow-sm hover:scale-105 active:scale-95" title="Playback Speed">1.0x</button>
-                <span id="deck-time-total">0:00</span>
-              </div>
-            </div>
-
-            <!-- 4C. Master Transport Bar -->
-            <div class="flex items-center justify-between px-3 pt-0.5">
-              <button id="deck-btn-shuffle" class="p-2 active:scale-75 transition-all text-xl text-slate-400 hover:text-slate-600" title="Shuffle">
-                <i class="ph-bold ph-shuffle"></i>
+            <div class="flex items-center gap-2">
+              <button id="deck-btn-favorite" class="neu-btn-circle w-9 h-9 active:scale-90" title="Like / Favorite">
+                <i class="ph-bold ph-heart text-sm text-pink-500" id="deck-heart-icon"></i>
               </button>
-              
-              <button id="deck-btn-prev" class="p-2 active:scale-75 transition-all text-2xl text-slate-900 hover:scale-110" title="Previous">
-                <i class="ph-fill ph-skip-back"></i>
+              <button id="deck-btn-download-hero" class="neu-btn-circle w-9 h-9 active:scale-90" title="Save Offline">
+                <i class="ph-bold ph-download-simple text-sm text-slate-700" id="deck-download-hero-icon"></i>
               </button>
-
-              <button id="deck-btn-play" class="w-[64px] h-[64px] rounded-full flex items-center justify-center active:scale-90 shadow-xl transition-all hover:scale-105" style="background: var(--btn-active-bg); color: var(--btn-active-text);" title="Play/Pause">
-                <i class="ph-fill ph-play text-3xl ml-1" id="deck-play-icon"></i>
-              </button>
-
-              <button id="deck-btn-next" class="p-2 active:scale-75 transition-all text-2xl text-slate-900 hover:scale-110" title="Next">
-                <i class="ph-fill ph-skip-forward"></i>
-              </button>
-
-              <button id="deck-btn-repeat" class="p-2 active:scale-75 transition-all text-xl text-slate-400 hover:text-slate-600" title="Repeat">
-                <i class="ph-bold ph-repeat"></i>
+              <button id="deck-btn-queue" class="neu-btn-circle w-9 h-9 active:scale-90 relative" title="View Queue">
+                <i class="ph-bold ph-queue text-sm text-purple-600"></i>
+                <span id="deck-queue-badge" class="absolute -top-1 -right-1 bg-purple-600 text-white text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-md hidden">0</span>
               </button>
             </div>
-
           </div>
+
+          <!-- 5. Recessed Scrubber Bar & Timestamps -->
+          <div class="px-2 pt-1 pb-1 shrink-0 z-20 w-full">
+            <div class="neu-scrubber-groove w-full relative" id="deck-scrubber-container">
+              <div class="neu-scrubber-fill w-0" id="deck-scrubber-fill"></div>
+              <div class="neu-scrubber-thumb left-0" id="deck-scrubber-thumb"></div>
+            </div>
+            <div class="flex justify-between text-[11px] font-bold text-slate-500 px-0.5 pt-1">
+              <span id="deck-time-current">0:00</span>
+              <span id="deck-time-total">0:00</span>
+            </div>
+          </div>
+
+          <!-- 6. Transport Controls (Concept 1 Circular Neumorphic Dock) -->
+          <div class="flex items-center justify-between px-3 pt-1 pb-2 shrink-0 z-20 w-full">
+            <button id="deck-btn-shuffle" class="neu-btn-circle w-10 h-10 active:scale-90" title="Shuffle">
+              <i class="ph-bold ph-shuffle text-base text-slate-600" id="deck-shuffle-icon"></i>
+            </button>
+            <button id="deck-btn-prev" class="neu-btn-circle w-11 h-11 active:scale-90" title="Previous Track">
+              <i class="ph-fill ph-skip-back text-base text-slate-800"></i>
+            </button>
+            <button id="deck-btn-play" class="neu-btn-hero w-16 h-16 active:scale-90" title="Play / Pause">
+              <i class="ph-fill ph-play text-2xl text-slate-900 ml-0.5" id="deck-play-icon"></i>
+            </button>
+            <button id="deck-btn-next" class="neu-btn-circle w-11 h-11 active:scale-90" title="Next Track">
+              <i class="ph-fill ph-skip-forward text-base text-slate-800"></i>
+            </button>
+            <button id="deck-btn-repeat" class="neu-btn-circle w-10 h-10 active:scale-90" title="Repeat Mode">
+              <i class="ph-bold ph-repeat text-base text-slate-600" id="deck-repeat-icon"></i>
+            </button>
+          </div>
+
           </div>
         </div>
 
