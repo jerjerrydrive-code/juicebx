@@ -394,20 +394,84 @@
       border-top: 1px solid var(--border-card);
     }
 
-                    /* ═══ MASTER CONCEPT 1 PIXEL-PERFECT NEUMORPHIC SYSTEM ═══ */
+                        /* ═══ MASTERCLASS NEUMORPHIC 2.0 CLAY DEPTH & CURVATURE ═══ */
     :root {
       --c1-bg: #e6ecf4;
-      --c1-surface: #ebf0f7;
-      --c1-surface-raised: #ebf0f7;
-      --c1-surface-sunken: #dce4f0;
-      --c1-shadow-dark: rgba(175, 190, 210, 0.6);
+      --c1-surface: linear-gradient(145deg, #f0f5fb, #e2ebf5);
+      --c1-surface-flat: #ebf0f7;
+      --c1-surface-sunken: #d8e2ee;
+      --c1-shadow-dark: rgba(162, 178, 198, 0.65);
       --c1-shadow-light: #ffffff;
-      --c1-text-main: #1b2533;
-      --c1-text-muted: #7a8b9e;
-      --c1-text-sub: #5a6e85;
-      --c1-blue-bg: linear-gradient(145deg, #e3efff, #d2e2fa);
-      --c1-blue-text: #2563eb;
-      --c1-blue-shadow: rgba(184, 203, 228, 0.65);
+      --c1-text-main: #141c2b;
+      --c1-text-muted: #728396;
+      --c1-text-sub: #4f6176;
+      --c1-blue-bg: linear-gradient(145deg, #e4efff, #cfdffa);
+      --c1-blue-text: #1d4ed8;
+      --c1-blue-shadow: rgba(175, 196, 224, 0.7);
+    }
+
+    /* ─── TACTILE PHYSICAL BUTTON FEEL ─── */
+    .c1-btn-hero-play, #deck-btn-play {
+      background: var(--c1-surface) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 9px 9px 24px var(--c1-shadow-dark), -9px -9px 24px var(--c1-shadow-light) !important;
+      transition: all 0.12s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    }
+    .c1-btn-hero-play:active, #deck-btn-play:active {
+      box-shadow: inset 4px 4px 10px var(--c1-shadow-dark), inset -4px -4px 10px var(--c1-shadow-light) !important;
+      transform: scale(0.93) !important;
+    }
+
+    /* ─── LYRICS READING WELL ─── */
+    #deck-lyrics-container {
+      background: #dde6f2 !important;
+      border-radius: 28px !important;
+      box-shadow: inset 4px 4px 10px var(--c1-shadow-dark), inset -4px -4px 10px var(--c1-shadow-light) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+      padding: 18px 14px !important;
+    }
+    .lyric-line {
+      color: var(--c1-text-muted) !important;
+      font-size: 15px !important;
+      font-weight: 600 !important;
+      transition: all 0.25s ease !important;
+      padding: 8px 10px !important;
+      border-radius: 12px !important;
+    }
+    .lyric-line.active {
+      color: #141c2b !important;
+      font-size: 18px !important;
+      font-weight: 800 !important;
+      background: rgba(255, 255, 255, 0.7) !important;
+      box-shadow: 3px 3px 8px rgba(162, 178, 198, 0.4), -2px -2px 6px #ffffff !important;
+      transform: scale(1.02) !important;
+    }
+
+    /* ─── VIDEO STAGE EMBED ─── */
+    #deck-video-wrapper {
+      border-radius: 26px !important;
+      overflow: hidden !important;
+      box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* ─── TACTILE RANGE SLIDERS (EQ & VOLUME) ─── */
+    input[type="range"] {
+      -webkit-appearance: none !important;
+      background: #d8e2ee !important;
+      height: 6px !important;
+      border-radius: 999px !important;
+      box-shadow: inset 2px 2px 4px var(--c1-shadow-dark), inset -2px -2px 4px var(--c1-shadow-light) !important;
+      outline: none !important;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none !important;
+      width: 18px !important;
+      height: 18px !important;
+      border-radius: 50% !important;
+      background: var(--c1-surface-flat) !important;
+      border: 2px solid #ffffff !important;
+      box-shadow: 3px 3px 8px var(--c1-shadow-dark), -2px -2px 6px var(--c1-shadow-light) !important;
+      cursor: pointer !important;
     }
 
     body {
@@ -1710,6 +1774,32 @@
       border: 2px solid rgba(255, 255, 255, 0.95) !important;
       box-shadow: 16px 16px 36px var(--c1-shadow-dark), -16px -16px 36px var(--c1-shadow-light) !important;
       color: var(--c1-text-main) !important;
+    }
+      /* ─── LYRICS READING WELL (CONCEPT 1 NEUMORPHIC) ─── */
+    #deck-display-lyrics {
+      background: #dce4f0 !important;
+      border-radius: 26px !important;
+      box-shadow: inset 4px 4px 10px var(--c1-shadow-dark), inset -4px -4px 10px var(--c1-shadow-light) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+      color: var(--c1-text-main) !important;
+      padding: 16px 12px !important;
+      width: 100% !important;
+      height: 100% !important;
+      overflow-y: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+    }
+    #deck-lyrics-text {
+      color: var(--c1-text-main) !important;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      line-height: 1.8 !important;
+      text-align: center !important;
+    }
+    #deck-lyrics-text i {
+      color: var(--c1-text-muted) !important;
     }
   </style>
 </head>

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const els = {
     // Top Player Deck Header & Mode Switcher
-    deckModePills: document.querySelectorAll('.deck-mode-pill'),
+    deckModePills: document.querySelectorAll('.c1-segment-btn[data-mode], .deck-mode-pill'),
     deckDisplayVinyl: document.getElementById('deck-display-vinyl'),
     deckDisplayVideo: document.getElementById('deck-display-video'),
     deckVideoIframe: document.getElementById('deck-video-iframe'),
@@ -429,26 +429,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ═══ UNIFIED PLAYER DECK MODE SWITCHER (SONG / VIDEO / LYRICS) ═══
   function setDeckMode(mode) {
-    currentDeckMode = mode;
+    const normalizedMode = (mode === 'song' || mode === 'vinyl') ? 'song' : mode;
+    currentDeckMode = normalizedMode;
     if (engine && typeof engine.setDeckMode === 'function') {
-      engine.setDeckMode(mode);
+      engine.setDeckMode(normalizedMode === 'song' ? 'vinyl' : normalizedMode);
     }
-    els.deckModePills.forEach(pill => {
-      if (pill.getAttribute('data-mode') === mode) {
-        pill.className = 'deck-mode-pill active px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all shadow-sm';
-        pill.style.background = 'var(--btn-active-bg)';
-        pill.style.color = 'var(--btn-active-text)';
-      } else {
-        pill.className = 'deck-mode-pill px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase transition-all';
+    const modePills = document.querySelectorAll('.deck-mode-btn, .deck-mode-pill, .c1-segment-btn');
+    modePills.forEach(pill => {
+      const pMode = pill.getAttribute('data-mode');
+      const isMatch = (pMode === normalizedMode) || (pMode === 'song' && normalizedMode === 'song') || (pMode === 'vinyl' && normalizedMode === 'song');
+      if (isMatch) {
+        pill.classList.add('active');
         pill.style.background = '';
-        pill.style.color = 'var(--text-tertiary)';
+        pill.style.color = '';
+      } else if (pMode) {
+        pill.classList.remove('active');
+        pill.style.background = '';
+        pill.style.color = '';
       }
     });
 
     const state = engine.getState();
     const track = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
 
-    if (mode === 'vinyl') {
+    if (normalizedMode === 'song') {
       setCenterpieceStyle(currentCenterpieceStyle);
       if (els.deckDisplayVideo) {
         els.deckDisplayVideo.style.opacity = '0';
