@@ -146,10 +146,16 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
     }
 
-    body.light-mode #deck-btn-play {
-      background: #0d1322 !important;
-      color: #ffffff !important;
-      box-shadow: 0 14px 28px -4px rgba(13, 19, 34, 0.35) !important;
+    body.light-mode #deck-btn-play,
+    #deck-btn-play {
+      background: #ebf0f7 !important;
+      color: #475569 !important;
+      box-shadow: 8px 8px 20px #c2cee0, -8px -8px 20px #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+    }
+    body.light-mode #deck-btn-play i,
+    #deck-btn-play i {
+      color: #475569 !important;
     }
 
     body.light-mode #deck-btn-prev,
@@ -444,123 +450,261 @@
       border-top: 1px solid var(--border-card);
     }
 
-            /* ═══ CONCEPT 1: PURE MASTER NEUMORPHIC DESIGN SYSTEM ═══ */
-    body, body.light-mode {
-      background: #eef2f7 !important;
-      color: #0f172a !important;
+                /* ═══ 1:1 EXACT CONCEPT 1 MASTER NEUMORPHIC SYSTEM ═══ */
+    .glass-nav {
+      background: #e6ecf4 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
+      box-shadow: 0 -4px 16px rgba(194, 206, 224, 0.4) !important;
+    }
+    .glass-nav .nav-btn {
+      color: #7a8b9e !important;
+    }
+    .glass-nav .nav-btn[style*="var(--text-primary)"], .glass-nav .nav-btn.active {
+      color: #1b2533 !important;
+    }
+    :root {
+      --c1-bg: #e6ecf4;
+      --c1-surface: #ebf0f7;
+      --c1-shadow-dark: #c2cee0;
+      --c1-shadow-light: #ffffff;
+      --c1-text-main: #1b2533;
+      --c1-text-muted: #7a8b9e;
+      --c1-text-sub: #5a6e85;
+      --c1-blue-bg: #dbe8fc;
+      --c1-blue-text: #2563eb;
     }
 
-    .neu-card {
-      background: #eef2f7;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      border-radius: 24px;
-      box-shadow: 6px 6px 16px rgba(166, 180, 200, 0.55), -6px -6px 16px rgba(255, 255, 255, 0.95);
-      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    body {
+      background-color: var(--c1-bg) !important;
+      color: var(--c1-text-main) !important;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif !important;
     }
 
-    .neu-mode-container {
-      background: #e4ebf5;
+    #app-container {
+      background: var(--c1-bg) !important;
+    }
+
+    /* Top Now Playing Floating Card */
+    .c1-now-playing-card {
+      background: var(--c1-surface);
+      border-radius: 26px;
+      padding: 18px 20px;
+      text-align: center;
+      box-shadow: 8px 8px 22px var(--c1-shadow-dark), -8px -8px 22px var(--c1-shadow-light);
       border: 1px solid rgba(255, 255, 255, 0.6);
-      border-radius: 999px;
-      box-shadow: inset 3px 3px 6px rgba(166, 180, 200, 0.65), inset -3px -3px 6px rgba(255, 255, 255, 0.95);
-      padding: 4px;
     }
-
-    .deck-mode-pill {
-      color: #64748b;
-      background: transparent;
-      padding: 6px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 11px;
-      letter-spacing: 0.05em;
-      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    .c1-now-playing-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--c1-text-muted);
+      margin-bottom: 3px;
     }
-    .deck-mode-pill:hover {
-      color: #0f172a;
-    }
-    .deck-mode-pill.active {
-      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%) !important;
-      color: #2563eb !important;
-      box-shadow: 3px 3px 8px rgba(166, 180, 200, 0.45), -3px -3px 8px rgba(255, 255, 255, 0.95) !important;
-      transform: scale(1.02);
-      font-weight: 900;
-    }
-
-    .neu-stage-card {
-      background: #eef2f7;
-      border: 2px solid rgba(255, 255, 255, 0.85);
-      border-radius: 28px;
-      box-shadow: 10px 10px 24px rgba(166, 180, 200, 0.55), -10px -10px 24px rgba(255, 255, 255, 0.95);
+    .c1-now-playing-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--c1-text-main);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      white-space: nowrap;
       overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-overflow: ellipsis;
+    }
+    .c1-now-playing-artist {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--c1-text-sub);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .neu-btn-circle {
-      background: #eef2f7;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      border-radius: 50%;
-      box-shadow: 4px 4px 10px rgba(166, 180, 200, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.9);
-      color: #475569;
+    /* Segmented Mode Switcher (SONG | VIDEO | LYRICS) */
+    .c1-segmented-bar {
+      background: #e2eaf4;
+      border-radius: 20px;
+      padding: 5px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: inset 4px 4px 8px var(--c1-shadow-dark), inset -4px -4px 8px var(--c1-shadow-light);
     }
-    .neu-btn-circle:hover {
-      box-shadow: 6px 6px 14px rgba(166, 180, 200, 0.6), -6px -6px 14px rgba(255, 255, 255, 0.95);
-      color: #0f172a;
-      transform: scale(1.05);
-    }
-    .neu-btn-circle:active {
-      box-shadow: inset 3px 3px 6px rgba(166, 180, 200, 0.65), inset -3px -3px 6px rgba(255, 255, 255, 0.95);
-      transform: scale(0.92);
-    }
-
-    .neu-btn-hero {
-      background: #eef2f7;
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      border-radius: 50%;
-      box-shadow: 8px 8px 18px rgba(166, 180, 200, 0.6), -8px -8px 18px rgba(255, 255, 255, 0.95);
-      color: #0f172a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .neu-btn-hero:hover {
-      box-shadow: 10px 10px 22px rgba(166, 180, 200, 0.65), -10px -10px 22px rgba(255, 255, 255, 1);
-      transform: scale(1.04);
-    }
-    .neu-btn-hero:active {
-      box-shadow: inset 4px 4px 8px rgba(166, 180, 200, 0.7), inset -4px -4px 8px rgba(255, 255, 255, 0.95);
-      transform: scale(0.93);
-    }
-
-    .neu-scrubber-groove {
-      background: #dce4ed;
-      box-shadow: inset 2px 2px 4px rgba(166, 180, 200, 0.7), inset -2px -2px 4px rgba(255, 255, 255, 0.9);
-      border-radius: 999px;
-      height: 6px;
-      position: relative;
+    .c1-segment-btn {
+      flex: 1;
+      text-align: center;
+      padding: 8px 0;
+      border-radius: 15px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--c1-text-muted);
+      background: transparent;
+      border: none;
+      outline: none;
       cursor: pointer;
+      transition: all 0.2s ease;
     }
-    .neu-scrubber-fill {
-      background: #3b82f6;
-      border-radius: 999px;
-      height: 100%;
-      box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+    .c1-segment-btn.active {
+      background: var(--c1-blue-bg) !important;
+      color: var(--c1-blue-text) !important;
+      font-weight: 700;
+      box-shadow: 4px 4px 10px #b8cbe4, -3px -3px 8px var(--c1-shadow-light) !important;
     }
-    .neu-scrubber-thumb {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 2px solid #3b82f6;
-      box-shadow: 2px 2px 6px rgba(166, 180, 200, 0.6);
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
+    .c1-segment-divider {
+      width: 1px;
+      height: 16px;
+      background: #d0dce8;
+    }
+
+    /* Center Stage Artwork Squircle Frame */
+    .c1-stage-frame, #deck-stage-window {
+      background: #ebf0f7 !important;
+      border-radius: 34px !important;
+      padding: 8px !important;
+      box-shadow: 12px 12px 28px #c2cee0, -12px -12px 28px #ffffff !important;
+      border: 2px solid rgba(255, 255, 255, 0.85) !important;
+      width: min(310px, 80vw, 38vh) !important;
+      height: min(310px, 80vw, 38vh) !important;
+      margin: 0 auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+    .c1-stage-art {
+      width: 100% !important;
+      height: 100% !important;
+      border-radius: 26px !important;
+      object-fit: cover !important;
+      background-size: cover !important;
+      background-position: center !important;
+      display: block !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    /* Track Info Row */
+    .c1-track-info-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4px;
+    }
+    .c1-info-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--c1-text-main);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    .c1-info-artist {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--c1-text-muted);
+      margin-top: 2px;
+    }
+    .c1-btn-more {
+      background: transparent;
+      border: none;
+      color: var(--c1-text-sub);
+      font-size: 22px;
+      padding: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      transition: transform 0.15s;
+    }
+    .c1-btn-more:active {
+      transform: scale(0.9);
+    }
+
+    /* Recessed Scrubber Bar */
+    .c1-scrubber-groove {
+      width: 100% !important;
+      height: 5px !important;
+      background: #d8e2ee !important;
+      border-radius: 999px !important;
+      box-shadow: inset 2px 2px 4px #c2cee0, inset -2px -2px 4px #ffffff !important;
+      position: relative !important;
+      cursor: pointer !important;
+      margin: 12px 0 6px 0 !important;
+    }
+    .c1-scrubber-fill {
+      height: 100% !important;
+      background: #7a8b9e !important;
+      border-radius: 999px !important;
+      width: 25% !important;
+      position: relative !important;
+      transition: width 0.1s linear !important;
+    }
+    .c1-scrubber-thumb {
+      width: 13px !important;
+      height: 13px !important;
+      border-radius: 50% !important;
+      background: #5a6e85 !important;
+      border: 2px solid #ffffff !important;
+      box-shadow: 2px 2px 5px rgba(122, 139, 158, 0.5) !important;
+      position: absolute !important;
+      top: 50% !important;
+      right: -6px !important;
+      transform: translateY(-50%) !important;
+    }
+    .c1-time-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--c1-text-muted);
+      padding: 0 1px;
+    }
+
+    /* Transport Controls */
+    .c1-transport-dock {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 6px 10px 6px;
+    }
+    .c1-btn-transport-secondary {
+      background: transparent;
+      border: none;
+      color: var(--c1-text-sub);
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      cursor: pointer;
+      outline: none;
+      transition: transform 0.15s, color 0.15s;
+    }
+    .c1-btn-transport-secondary:active {
+      transform: scale(0.85);
+      color: var(--c1-text-main);
+    }
+    .c1-btn-hero-play, #deck-btn-play {
+      width: 68px !important;
+      height: 68px !important;
+      border-radius: 50% !important;
+      background: #ebf0f7 !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 8px 8px 20px #c2cee0, -8px -8px 20px #ffffff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #475569 !important;
+      font-size: 26px !important;
+      cursor: pointer !important;
+      outline: none !important;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    }
+    .c1-btn-hero-play:active, #deck-btn-play:active {
+      box-shadow: inset 4px 4px 10px #c2cee0, inset -4px -4px 10px #ffffff !important;
+      transform: scale(0.94) !important;
+    }
+    .c1-btn-hero-play i, #deck-btn-play i {
+      color: #475569 !important;
+      font-size: 26px !important;
     }
 
     /* ═══ LUXE 3D HOLOGRAPHIC VINYL TURNTABLE ═══ */
@@ -1388,80 +1532,69 @@
           </div>
         </div>
 
-        <!-- ═══ PANEL 2: UNIFIED HERO VINYL PLAYER DECK (EXACT CONCEPT 1 MATCH) ═══ -->
-        <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-3 px-4 pt-1 sm:pt-2 relative select-none" style="background: transparent;">
-          <div class="w-full max-w-md mx-auto h-full flex flex-col justify-between relative z-10">
+                <!-- ═══ PANEL 2: UNIFIED HERO VINYL PLAYER DECK (EXACT 1:1 CONCEPT 1 MATCH) ═══ -->
+        <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-3 px-5 pt-3 select-none" style="background: var(--c1-bg);">
+          <div class="w-full max-w-sm mx-auto h-full flex flex-col justify-between">
 
-          <!-- 1. Top "Now Playing" Extruded Card (Concept 1 Header) -->
-          <div class="neu-card p-3 rounded-[22px] text-center shrink-0 w-full mb-1 shadow-sm" id="deck-now-playing-card">
-            <span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 block mb-0.5">Now Playing</span>
-            <h2 id="deck-track-title" class="font-black text-base text-slate-900 truncate">JuiceBx 999</h2>
-            <p id="deck-track-artist" class="text-xs font-semibold text-slate-600 truncate">Select a Track</p>
+          <!-- 1. Top "Now Playing" Extruded Card -->
+          <div class="c1-now-playing-card shrink-0 w-full mb-3" id="deck-now-playing-card">
+            <div class="c1-now-playing-label">Now Playing</div>
+            <div class="c1-now-playing-title" id="deck-track-title">Morning Light</div>
+            <div class="c1-now-playing-artist" id="deck-track-artist">The Midnight</div>
           </div>
 
-          <!-- 2. Segmented Mode Switcher (Sunken Pill Cradle: SONG / VIDEO / LYRICS) -->
-          <div class="neu-mode-container flex items-center justify-between p-1 rounded-full shrink-0 w-full mb-1.5" id="deck-mode-pills">
-            <button class="deck-mode-pill active flex-1 py-1.5 rounded-full text-xs font-black uppercase tracking-wider" data-mode="vinyl">SONG</button>
-            <button class="deck-mode-pill flex-1 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider" data-mode="video">VIDEO</button>
-            <button class="deck-mode-pill flex-1 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider" data-mode="lyrics">LYRICS</button>
+          <!-- 2. Segmented Mode Switcher (SONG | VIDEO | LYRICS) -->
+          <div class="c1-segmented-bar shrink-0 w-full mb-3" id="deck-mode-pills">
+            <button class="c1-segment-btn active" data-mode="vinyl">SONG</button>
+            <div class="c1-segment-divider"></div>
+            <button class="c1-segment-btn" data-mode="video">VIDEO</button>
+            <div class="c1-segment-divider"></div>
+            <button class="c1-segment-btn" data-mode="lyrics">LYRICS</button>
           </div>
 
-          <!-- 3. CENTER STAGE (CONCEPT 1 EXTRUDED SQUIRCLE CARD) -->
-          <div class="flex-1 min-h-0 flex items-center justify-center py-1 relative z-10 w-full">
-            <div id="deck-stage-window" class="neu-stage-card w-[min(310px,80vw,36vh)] h-[min(310px,80vw,36vh)] rounded-[28px] overflow-hidden relative flex items-center justify-center mx-auto cursor-pointer select-none active:scale-[0.99]" title="Tap to switch visualizer style">
+          <!-- 3. Center Stage (Extruded Squircle Frame with Artwork) -->
+          <div class="flex-1 min-h-0 flex items-center justify-center py-1 w-full">
+            <div id="deck-stage-window" class="c1-stage-frame cursor-pointer select-none active:scale-[0.99]" title="Tap to switch visualizer style">
 
-              <!-- 1. Material 3 Equalizer -->
-              <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#0a0c16] rounded-[28px]">
+              <!-- Album Art Display (Exact Concept 1 Default) -->
+              <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex items-center justify-center">
+                <div class="c1-stage-art" id="deck-vinyl-art" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80');"></div>
+              </div>
+
+              <!-- Equalizer Display -->
+              <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#0a0c16] rounded-[24px] hidden">
                 <canvas id="deck-reactive-equalizer-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 2. Siri Liquid Orb -->
-              <div id="deck-display-orb" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#07050e] rounded-[28px] hidden">
+              <!-- Siri Orb Display -->
+              <div id="deck-display-orb" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#07050e] rounded-[24px] hidden">
                 <canvas id="deck-reactive-orb-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 3. M3 Fluid Ribbons -->
-              <div id="deck-display-m3" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#09050d] rounded-[28px] hidden">
+              <!-- M3 Display -->
+              <div id="deck-display-m3" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#09050d] rounded-[24px] hidden">
                 <canvas id="deck-reactive-m3-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 4. Fluid Metaballs Plasma -->
-              <div id="deck-display-blobs" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#050b14] rounded-[28px] hidden">
+              <!-- Blobs Display -->
+              <div id="deck-display-blobs" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#050b14] rounded-[24px] hidden">
                 <canvas id="deck-reactive-blobs-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 5. Hi-Fi Spectrum -->
-              <div id="deck-display-hifi" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#08060c] rounded-[28px] hidden">
+              <!-- Hi-Fi Display -->
+              <div id="deck-display-hifi" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#08060c] rounded-[24px] hidden">
                 <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 6. Holographic Vinyl Platter -->
-              <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex flex-col items-center justify-center relative hidden overflow-hidden rounded-[28px]">
-                <div class="vinyl-deck-wrapper relative flex items-center justify-center transition-transform duration-300 w-full h-full" id="deck-vinyl-wrapper">
-                  <div class="vinyl-platter paused relative transition-all duration-300 shadow-2xl" id="deck-vinyl-platter">
-                    <div class="vinyl-grooves"></div>
-                    <div class="vinyl-rim"></div>
-                    <div class="vinyl-reflection"></div>
-                    <div class="vinyl-reflection-reverse"></div>
-                    <div class="vinyl-label-rim">
-                      <div class="album-art-center" id="deck-vinyl-art" style="background-image: url('logo.png');"></div>
-                    </div>
-                    <div class="spindle-hub">
-                      <div class="spindle-hole"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 8. Video Player Mode Container -->
-              <div id="deck-display-video" class="centerpiece-display absolute inset-0 w-full h-full flex items-center justify-center bg-black rounded-[28px] overflow-hidden opacity-0 pointer-events-none z-0 transition-opacity duration-300">
-                <div id="deck-video-container" class="w-full h-full relative overflow-hidden rounded-[28px]">
+              <!-- Video Player Slot -->
+              <div id="deck-display-video" class="centerpiece-display absolute inset-0 w-full h-full flex items-center justify-center bg-black rounded-[24px] overflow-hidden opacity-0 pointer-events-none z-0 transition-opacity duration-300">
+                <div id="deck-video-container" class="w-full h-full relative overflow-hidden rounded-[24px]">
                   <div id="yt-player-slot" class="w-full h-full"></div>
                 </div>
               </div>
 
-              <!-- 9. Synced Lyrics Mode Container -->
-              <div id="deck-display-lyrics" class="centerpiece-display w-full h-full flex flex-col items-center justify-between p-3 hidden relative select-none rounded-[28px]" style="background: #0c121e; color: #ffffff;">
+              <!-- Synced Lyrics Mode -->
+              <div id="deck-display-lyrics" class="centerpiece-display w-full h-full flex flex-col items-center justify-between p-3 hidden relative select-none rounded-[24px]" style="background: #0c121e; color: #ffffff;">
                 <div id="deck-lyrics-text" class="space-y-4 py-2 flex-1 overflow-y-auto px-2 text-center scrollbar-none z-10 w-full">
                   <div class="flex flex-col items-center justify-center py-6 text-white/50">
                     <i class="ph-bold ph-music-notes text-2xl mb-1 animate-pulse text-purple-400"></i>
@@ -1469,57 +1602,50 @@
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
 
-          <!-- 4. Track Info & Action Dock -->
-          <div class="flex items-center justify-between px-2 pt-1 pb-0.5 shrink-0 z-20 w-full">
-            <div class="overflow-hidden flex-1 pr-2">
-              <h3 class="font-black text-sm sm:text-base text-slate-900 truncate" id="deck-sub-title">JuiceBx Master Deck</h3>
-              <p class="text-xs font-semibold text-slate-500 truncate" id="deck-sub-artist">999 Family Edition</p>
+          <!-- 4. Track Info & Options Row -->
+          <div class="c1-track-info-row shrink-0 w-full pt-2">
+            <div class="overflow-hidden pr-2 flex-1">
+              <div class="c1-info-title truncate" id="deck-sub-title">Morning Light</div>
+              <div class="c1-info-artist truncate" id="deck-sub-artist">The Midnight</div>
             </div>
-            <div class="flex items-center gap-2">
-              <button id="deck-btn-favorite" class="neu-btn-circle w-9 h-9 active:scale-90" title="Like / Favorite">
-                <i class="ph-bold ph-heart text-sm text-pink-500" id="deck-heart-icon"></i>
-              </button>
-              <button id="deck-btn-download-hero" class="neu-btn-circle w-9 h-9 active:scale-90" title="Save Offline">
-                <i class="ph-bold ph-download-simple text-sm text-slate-700" id="deck-download-hero-icon"></i>
-              </button>
-              <button id="deck-btn-queue" class="neu-btn-circle w-9 h-9 active:scale-90 relative" title="View Queue">
-                <i class="ph-bold ph-queue text-sm text-purple-600"></i>
-                <span id="deck-queue-badge" class="absolute -top-1 -right-1 bg-purple-600 text-white text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-md hidden">0</span>
-              </button>
+            <button id="deck-btn-more-options" class="c1-btn-more" title="More Options">
+              <i class="ph-bold ph-dots-three text-2xl"></i>
+            </button>
+          </div>
+
+          <!-- 5. Recessed Scrubber Bar -->
+          <div class="shrink-0 w-full">
+            <div class="c1-scrubber-groove" id="deck-scrubber-container">
+              <div class="c1-scrubber-fill" id="deck-scrubber-fill">
+                <div class="c1-scrubber-thumb" id="deck-scrubber-thumb"></div>
+              </div>
+            </div>
+            <div class="c1-time-row">
+              <span id="deck-time-current">0:01</span>
+              <span id="deck-time-total">-3:35</span>
             </div>
           </div>
 
-          <!-- 5. Recessed Scrubber Bar & Timestamps -->
-          <div class="px-2 pt-1 pb-1 shrink-0 z-20 w-full">
-            <div class="neu-scrubber-groove w-full relative" id="deck-scrubber-container">
-              <div class="neu-scrubber-fill w-0" id="deck-scrubber-fill"></div>
-              <div class="neu-scrubber-thumb left-0" id="deck-scrubber-thumb"></div>
-            </div>
-            <div class="flex justify-between text-[11px] font-bold text-slate-500 px-0.5 pt-1">
-              <span id="deck-time-current">0:00</span>
-              <span id="deck-time-total">0:00</span>
-            </div>
-          </div>
-
-          <!-- 6. Transport Controls (Concept 1 Circular Neumorphic Dock) -->
-          <div class="flex items-center justify-between px-3 pt-1 pb-2 shrink-0 z-20 w-full">
-            <button id="deck-btn-shuffle" class="neu-btn-circle w-10 h-10 active:scale-90" title="Shuffle">
-              <i class="ph-bold ph-shuffle text-base text-slate-600" id="deck-shuffle-icon"></i>
+          <!-- 6. Transport Controls (Concept 1 Dock) -->
+          <div class="c1-transport-dock shrink-0 w-full">
+            <button id="deck-btn-shuffle" class="c1-btn-transport-secondary" title="Shuffle">
+              <i class="ph-bold ph-shuffle" id="deck-shuffle-icon"></i>
             </button>
-            <button id="deck-btn-prev" class="neu-btn-circle w-11 h-11 active:scale-90" title="Previous Track">
-              <i class="ph-fill ph-skip-back text-base text-slate-800"></i>
+            <button id="deck-btn-prev" class="c1-btn-transport-secondary" title="Previous">
+              <i class="ph-fill ph-skip-back text-2xl"></i>
             </button>
-            <button id="deck-btn-play" class="neu-btn-hero w-16 h-16 active:scale-90" title="Play / Pause">
-              <i class="ph-fill ph-play text-2xl text-slate-900 ml-0.5" id="deck-play-icon"></i>
+            <button id="deck-btn-play" class="c1-btn-hero-play" title="Play / Pause">
+              <i class="ph-fill ph-play" id="deck-play-icon"></i>
             </button>
-            <button id="deck-btn-next" class="neu-btn-circle w-11 h-11 active:scale-90" title="Next Track">
-              <i class="ph-fill ph-skip-forward text-base text-slate-800"></i>
+            <button id="deck-btn-next" class="c1-btn-transport-secondary" title="Next">
+              <i class="ph-fill ph-skip-forward text-2xl"></i>
             </button>
-            <button id="deck-btn-repeat" class="neu-btn-circle w-10 h-10 active:scale-90" title="Repeat Mode">
-              <i class="ph-bold ph-repeat text-base text-slate-600" id="deck-repeat-icon"></i>
+            <button id="deck-btn-repeat" class="c1-btn-transport-secondary" title="Repeat">
+              <i class="ph-bold ph-repeat" id="deck-repeat-icon"></i>
             </button>
           </div>
 

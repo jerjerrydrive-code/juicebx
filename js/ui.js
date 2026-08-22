@@ -2438,11 +2438,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const dur = (typeof duration === 'number' && !isNaN(duration)) ? Math.max(0, duration) : 0;
 
     if (els.deckTimeCurrent) els.deckTimeCurrent.innerText = formatTime(cur);
-    if (els.deckTimeTotal && dur > 0) els.deckTimeTotal.innerText = formatTime(dur);
+    if (els.deckTimeTotal && dur > 0) {
+      const rem = Math.max(0, dur - cur);
+      els.deckTimeTotal.innerText = `-${formatTime(rem)}`;
+    }
 
     if (dur > 0) {
       const pct = Math.min(100, Math.max(0, (cur / dur) * 100));
-      if (els.deckScrubberFill) els.deckScrubberFill.style.transform = `scaleX(${pct / 100})`;
+      if (els.deckScrubberFill) {
+        els.deckScrubberFill.style.width = `${pct}%`;
+        els.deckScrubberFill.style.transform = `scaleX(${pct / 100})`;
+      }
       if (els.deckScrubberThumb) els.deckScrubberThumb.style.left = `${pct}%`;
     }
   });
@@ -4180,9 +4186,11 @@ document.addEventListener('DOMContentLoaded', () => {
           vinylPlatter.style.transform = `translateZ(0) scale(${vScale.toFixed(3)})`;
         }
 
-        // 2. Play Button energetic pulse
+        // 2. Play Button energetic pulse (Keep pure Neumorphic dual-light)
         if (playBtn) {
-          playBtn.style.boxShadow = `0 0 ${(16 + bass * 28).toFixed(0)}px var(--accent-glow, rgba(255,120,40,0.6)), 0 12px 24px rgba(0,0,0,0.5)`;
+          playBtn.style.background = '#ebf0f7';
+          playBtn.style.color = '#475569';
+          playBtn.style.boxShadow = '8px 8px 20px #c2cee0, -8px -8px 20px #ffffff';
         }
 
         // 3. Mini-player soundwave bars
