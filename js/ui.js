@@ -167,8 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentDeckMode = 'vinyl'; // 'vinyl' | 'video' | 'lyrics' | 'visualizer'
   let parsedLyrics = [];
   let lyricsHighlightInterval = null;
-  let isOfflineMode = false;
-  let currentPanelIndex = 0;
+  let currentPanelIndex = 2; // Default to Concept 1 Master Player Deck
 
   // ═══ DEDICATED JUICE WRLD & GENRE RADIO STATIONS CATALOG ═══
   const GENRE_STATIONS = [
@@ -4325,4 +4324,9 @@ document.addEventListener('DOMContentLoaded', () => {
       handleOrientationTrigger(false);
     }
   }, { passive: true });
+
+  // Boot directly to Concept 1 Player Deck
+  setTimeout(() => {
+    scrollToPanel(2);
+  }, 60);
 });
