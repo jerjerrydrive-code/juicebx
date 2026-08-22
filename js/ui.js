@@ -420,6 +420,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.setCenterpieceStyle = setCenterpieceStyle;
 
+  const STYLE_NAMES = {
+    equalizer: '🌊 Wave Equalizer',
+    orb: '🔮 Siri Liquid Orb',
+    m3: '🌈 Fluid Ribbons',
+    blobs: '🫧 Metaballs Plasma',
+    hifi: '⚡ Hi-Fi Spectrum',
+    vinyl: '💿 Holographic Vinyl'
+  };
+
   function morphToNextVisualizer() {
     if (currentDeckMode !== 'vinyl') return;
     const currentIdx = VISUALIZER_STYLES.indexOf(currentCenterpieceStyle);
@@ -428,6 +437,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     engine.playHaptic(650, 0.02);
     setCenterpieceStyle(nextStyle);
+    if (typeof showToast === 'function') {
+      showToast(STYLE_NAMES[nextStyle] || 'Visualizer Switched', 'info');
+    }
   }
 
   if (deckStageWindow) {
