@@ -1317,42 +1317,42 @@
         <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-3 px-4 pt-1 sm:pt-2 relative select-none" style="background: transparent;">
           <div class="w-full max-w-md mx-auto h-full flex flex-col justify-between relative z-10">
 
-          <!-- 1. Top Player Header Bar (Single Row: Logo Left, 4 Actions Right) -->
+          <!-- 1. Top Player Header Bar (Logo Left, Mode Switcher Right) -->
           <div class="flex items-center justify-between pt-1 pb-1 shrink-0 z-20 w-full px-1">
             <div class="flex items-center justify-start">
-              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-10 sm:h-12 w-auto max-w-[95px] object-contain cursor-pointer active:scale-95 transition-transform drop-shadow-md" id="deck-brand-tribute" title="999 Forever Tribute">
+              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-10 sm:h-11 w-auto max-w-[90px] object-contain cursor-pointer active:scale-95 transition-transform drop-shadow-md" id="deck-brand-tribute" title="999 Forever Tribute">
             </div>
             
-            <!-- 4 Tactile Neumorphic Quick Actions -->
-            <div class="flex items-center gap-2">
-              <button id="deck-btn-fullscreen" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-slate-700 dark:text-white/80 hover:text-white" title="Focus / Fullscreen">
-                <i class="ph-bold ph-corners-out text-sm" id="deck-fullscreen-icon"></i>
-              </button>
-              <button id="deck-btn-favorite" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-pink-500 hover:scale-105" title="Like / Favorite">
-                <i class="ph-bold ph-heart text-sm" id="deck-heart-icon"></i>
-              </button>
-              <button id="deck-btn-download-hero" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-slate-700 dark:text-white/80 hover:text-white" title="Save / Download Offline">
-                <i class="ph-bold ph-download-simple text-sm" id="deck-download-hero-icon"></i>
-              </button>
-              <button id="deck-btn-queue" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-purple-600 dark:text-purple-400 hover:text-purple-300 relative" title="View Queue">
-                <i class="ph-bold ph-queue text-sm"></i>
-                <span id="deck-queue-badge" class="absolute -top-1 -right-1 bg-purple-600 text-white text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-md hidden">0</span>
-              </button>
+            <!-- View Switcher Pills (SONG / VIDEO / LYRICS in line with Header) -->
+            <div class="flex items-center justify-end">
+              <div class="neu-mode-container flex items-center gap-1 p-1 rounded-full backdrop-blur-xl" id="deck-mode-pills">
+                <button class="deck-mode-pill active px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="vinyl">SONG</button>
+                <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="video">VIDEO</button>
+                <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="lyrics">LYRICS</button>
+              </div>
             </div>
           </div>
 
-          <!-- 2. CENTER STAGE (RESPONSIVE CENTERPIECE SQUIRCLE WITH FLOATING SWITCHER) -->
+          <!-- 2. Quick Action Dock (4 Clean Actions) -->
+          <div class="flex items-center justify-between px-2 pt-1 pb-1 shrink-0 z-20 w-full">
+            <button id="deck-btn-fullscreen" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-slate-700 dark:text-white/80 hover:text-white" title="Focus / Fullscreen">
+              <i class="ph-bold ph-corners-out text-sm" id="deck-fullscreen-icon"></i>
+            </button>
+            <button id="deck-btn-favorite" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-pink-500 hover:scale-105" title="Like / Favorite">
+              <i class="ph-bold ph-heart text-sm" id="deck-heart-icon"></i>
+            </button>
+            <button id="deck-btn-download-hero" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-slate-700 dark:text-white/80 hover:text-white" title="Save / Download Offline">
+              <i class="ph-bold ph-download-simple text-sm" id="deck-download-hero-icon"></i>
+            </button>
+            <button id="deck-btn-queue" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-purple-600 dark:text-purple-400 hover:text-purple-300 relative" title="View Queue">
+              <i class="ph-bold ph-queue text-sm"></i>
+              <span id="deck-queue-badge" class="absolute -top-1 -right-1 bg-purple-600 text-white text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-md hidden">0</span>
+            </button>
+          </div>
+
+          <!-- 3. CENTER STAGE (RESPONSIVE CENTERPIECE SQUIRCLE) -->
           <div class="flex-1 min-h-0 flex items-center justify-center py-1 relative z-10 w-full">
             <div id="deck-stage-window" class="neu-stage w-[min(340px,88vw,41vh)] h-[min(340px,88vw,41vh)] rounded-[32px] overflow-hidden relative flex items-center justify-center mx-auto transition-all cursor-pointer select-none active:scale-[0.99]" title="Tap to switch visualizer style">
-
-              <!-- Floating Frosted Glass Neumorphic Mode Switcher -->
-              <div class="absolute top-3.5 z-30 flex items-center justify-center pointer-events-auto">
-                <div class="neu-mode-container flex items-center gap-1 p-1 rounded-full backdrop-blur-xl" id="deck-mode-pills">
-                  <button class="deck-mode-pill active px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="vinyl">SONG</button>
-                  <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="video">VIDEO</button>
-                  <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="lyrics">LYRICS</button>
-                </div>
-              </div>
 
               <!-- 1. Material 3 meets iOS 28 Wave Equalizer (Exact Mockup: 1000260681.jpg - DEFAULT) -->
               <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#0a0c16] rounded-[32px]">
@@ -1405,7 +1405,7 @@
               </div>
 
               <!-- 9. Synced Lyrics Mode Container (Exact Mockup Match) -->
-              <div id="deck-display-lyrics" class="centerpiece-display w-full h-full flex flex-col items-center justify-between p-3 pt-14 hidden relative select-none rounded-[32px]" style="background: #0c121e; color: #ffffff;">
+              <div id="deck-display-lyrics" class="centerpiece-display w-full h-full flex flex-col items-center justify-between p-3 hidden relative select-none rounded-[32px]" style="background: #0c121e; color: #ffffff;">
                 <div id="deck-lyrics-text" class="space-y-4 py-2 flex-1 overflow-y-auto px-2 text-center scrollbar-none z-10 w-full">
                   <div class="flex flex-col items-center justify-center py-6 text-white/50">
                     <i class="ph-bold ph-music-notes text-2xl mb-1 animate-pulse text-purple-400"></i>
