@@ -2283,6 +2283,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const btnSelectStorageDir = document.getElementById('btn-select-storage-directory');
+  const storageDirStatus = document.getElementById('storage-dir-status');
+  const storageDirName = document.getElementById('storage-dir-name');
+
+  function updateStorageDirUI() {
+    if (!storageDirStatus || !storageDirName) return;
+    const currentName = engine.getStorageDirectoryName ? engine.getStorageDirectoryName() : null;
+    if (currentName) {
+      storageDirName.textContent = currentName;
+      storageDirStatus.classList.remove('hidden');
+    } else {
+      storageDirStatus.classList.add('hidden');
+    }
+  }
+  updateStorageDirUI();
+
+  if (btnSelectStorageDir) {
+    btnSelectStorageDir.addEventListener('click', async () => {
+      engine.playHaptic(600, 0.02);
+      if (engine.selectStorageDirectory) {
+        const dir = await engine.selectStorageDirectory();
+        if (dir) {
+          updateStorageDirUI();
+          if (typeof showToast === 'function') showToast(`Storage folder set: ${dir}`, 'success');
+        }
+      } else {
+        if (typeof showToast === 'function') showToast('Direct Folder Access not supported on this browser', 'warning');
+      }
+    });
+  }
+
   if (els.btnClearDownloads) {
     els.btnClearDownloads.addEventListener('click', () => {
       engine.clearDownloads();

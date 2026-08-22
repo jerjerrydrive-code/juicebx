@@ -945,6 +945,8 @@ window.JuiceEngine = (() => {
   // ΓòÉΓòÉΓòÉ MASTER AUDIO-REACTIVE ENGINE ΓòÉΓòÉΓòÉ
 
   let analyserNode = null;
+  let selectedDirectoryHandle = null;
+
 
   const freqBuffer = new Uint8Array(32);
 
@@ -1992,9 +1994,47 @@ window.JuiceEngine = (() => {
 
     },
 
+    selectStorageDirectory: async () => {
+      if (typeof window !== 'undefined' && 'showDirectoryPicker' in window) {
+        try {
+          selectedDirectoryHandle = await window.showDirectoryPicker({
+            mode: 'readwrite',
+            startIn: 'music'
+          });
+          const dirName = selectedDirectoryHandle.name || 'Selected Folder';
+          localStorage.setItem('juicebx_storage_dir_name', dirName);
+          emit('engine:storageDirChanged', { name: dirName });
+          return dirName;
+        } catch (err) {
+          if (err.name !== 'AbortError') console.warn('Directory selection failed', err);
+          return null;
+        }
+      }
+      return null;
+    },
+
+    getStorageDirectoryName: () => {
+      return (typeof localStorage !== 'undefined') ? localStorage.getItem('juicebx_storage_dir_name') : null;
+    },
+
     downloadTrack: async (track) => {
 
       if (!track) return;
+
+      // If user configured a direct physical disk directory on PC, write file directly to disk
+      if (selectedDirectoryHandle) {
+        try {
+          const safeTitle = (track.title || 'track').replace(/[\\/*?:"<>|]/g, '_');
+          const safeArtist = (track.artist || 'artist').replace(/[\\/*?:"<>|]/g, '_');
+          const fileName = `${safeArtist} - ${safeTitle}.json`;
+          const fileHandle = await selectedDirectoryHandle.getFileHandle(fileName, { create: true });
+          const writable = await fileHandle.createWritable();
+          await writable.write(JSON.stringify({ ...track, savedDirectToDisk: true, savedAt: Date.now() }, null, 2));
+          await writable.close();
+        } catch(e) {
+          console.warn('[JuiceBx] Direct disk write fallback to local storage:', e);
+        }
+      }
 
       try {
 

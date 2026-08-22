@@ -444,6 +444,50 @@
       border-top: 1px solid var(--border-card);
     }
 
+    /* ═══ NEUMORPHIC DESIGN SYSTEM ═══ */
+    .neu-btn {
+      background: var(--bg-card, #ffffff);
+      border: 1px solid var(--border-card, rgba(0,0,0,0.06));
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.22), -3px -3px 8px rgba(255, 255, 255, 0.05);
+      transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .neu-btn:hover {
+      box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.08);
+      transform: translateY(-1px);
+    }
+    .neu-btn:active {
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.35), inset -2px -2px 5px rgba(255, 255, 255, 0.04);
+      transform: scale(0.92);
+    }
+    .neu-stage {
+      background: #090a12;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 
+        0 24px 48px -12px rgba(0, 0, 0, 0.65),
+        inset 0 1px 2px rgba(255, 255, 255, 0.12),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.8);
+    }
+    .neu-mode-container {
+      background: rgba(14, 16, 26, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+    .deck-mode-pill {
+      color: rgba(255, 255, 255, 0.65);
+      background: transparent;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .deck-mode-pill:hover {
+      color: rgba(255, 255, 255, 0.95);
+    }
+    .deck-mode-pill.active {
+      background: #ffffff;
+      color: #0c0d14 !important;
+      opacity: 1 !important;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+      transform: scale(1.02);
+    }
+
     /* ═══ LUXE 3D HOLOGRAPHIC VINYL TURNTABLE ═══ */
     .vinyl-platter {
       width: min(310px, 86vw, 38vh);
@@ -1273,49 +1317,42 @@
         <div id="view-player-deck" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-hidden flex flex-col justify-between pb-3 px-4 pt-1 sm:pt-2 relative select-none" style="background: transparent;">
           <div class="w-full max-w-md mx-auto h-full flex flex-col justify-between relative z-10">
 
-          <!-- 1. Top Player Header Bar (Logo on Left, Mode Switcher on Right) -->
+          <!-- 1. Top Player Header Bar (Single Row: Logo Left, 4 Actions Right) -->
           <div class="flex items-center justify-between pt-1 pb-1 shrink-0 z-20 w-full px-1">
             <div class="flex items-center justify-start">
-              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-10 sm:h-12 w-auto max-w-[95px] object-contain cursor-pointer active:scale-95 transition-transform" id="deck-brand-tribute" title="999 Forever Tribute">
+              <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-10 sm:h-12 w-auto max-w-[95px] object-contain cursor-pointer active:scale-95 transition-transform drop-shadow-md" id="deck-brand-tribute" title="999 Forever Tribute">
             </div>
             
-            <!-- View Switcher Pills (SONG / VIDEO / LYRICS) -->
-            <div class="flex items-center justify-end">
-              <div class="flex items-center gap-1 p-1 rounded-full bg-white/80 border border-black/5 backdrop-blur-xl shadow-sm" id="deck-mode-pills">
-                <button class="deck-mode-pill active px-3.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase transition-all shadow-sm" data-mode="vinyl" style="background: var(--btn-active-bg); color: var(--btn-active-text);">SONG</button>
-                <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase transition-all" data-mode="video" style="color: var(--text-tertiary);">VIDEO</button>
-                <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase transition-all" data-mode="lyrics" style="color: var(--text-tertiary);">LYRICS</button>
-              </div>
+            <!-- 4 Tactile Neumorphic Quick Actions -->
+            <div class="flex items-center gap-2">
+              <button id="deck-btn-fullscreen" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-slate-700 dark:text-white/80 hover:text-white" title="Focus / Fullscreen">
+                <i class="ph-bold ph-corners-out text-sm" id="deck-fullscreen-icon"></i>
+              </button>
+              <button id="deck-btn-favorite" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-pink-500 hover:scale-105" title="Like / Favorite">
+                <i class="ph-bold ph-heart text-sm" id="deck-heart-icon"></i>
+              </button>
+              <button id="deck-btn-download-hero" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-slate-700 dark:text-white/80 hover:text-white" title="Save / Download Offline">
+                <i class="ph-bold ph-download-simple text-sm" id="deck-download-hero-icon"></i>
+              </button>
+              <button id="deck-btn-queue" class="neu-btn w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-all text-purple-600 dark:text-purple-400 hover:text-purple-300 relative" title="View Queue">
+                <i class="ph-bold ph-queue text-sm"></i>
+                <span id="deck-queue-badge" class="absolute -top-1 -right-1 bg-purple-600 text-white text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-md hidden">0</span>
+              </button>
             </div>
           </div>
 
-          <!-- 2. Secondary Quick Action Dock (Aligned under Header, above Center Stage) -->
-          <div class="flex items-center justify-between px-1 pt-1 pb-1 shrink-0 z-20 w-full">
-            <button id="deck-btn-fullscreen" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform bg-white border border-black/5 shadow-sm text-slate-700 hover:text-slate-900" title="Focus Mode">
-              <i class="ph-bold ph-corners-out text-sm" id="deck-fullscreen-icon"></i>
-            </button>
-            <button id="deck-btn-favorite" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform bg-white border border-black/5 shadow-sm text-pink-500 hover:scale-105" title="Like / Favorite">
-              <i class="ph-bold ph-heart text-sm" id="deck-heart-icon"></i>
-            </button>
-            <button id="deck-btn-download-hero" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform bg-white border border-black/5 shadow-sm text-slate-700 hover:text-slate-900" title="Download for Offline">
-              <i class="ph-bold ph-download-simple text-sm" id="deck-download-hero-icon"></i>
-            </button>
-            <button id="deck-btn-queue" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform bg-white border border-black/5 shadow-sm text-purple-600 hover:text-purple-800 relative" title="View Queue">
-              <i class="ph-bold ph-queue text-sm"></i>
-              <span id="deck-queue-badge" class="absolute -top-1 -right-1 bg-purple-600 text-white text-[8px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-sm hidden">0</span>
-            </button>
-            <button id="deck-btn-add-playlist" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform bg-white border border-black/5 shadow-sm text-slate-700 hover:text-slate-900" title="Add to Playlist">
-              <i class="ph-bold ph-playlist text-sm"></i>
-            </button>
-            <button id="deck-btn-sleep" class="w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform bg-white border border-black/5 shadow-sm text-slate-700 hover:text-slate-900 relative" title="Sleep Timer">
-              <i class="ph-bold ph-timer text-sm" id="deck-sleep-icon"></i>
-              <span id="deck-sleep-badge" class="hidden text-[8px] font-black text-indigo-400"></span>
-            </button>
-          </div>
+          <!-- 2. CENTER STAGE (RESPONSIVE CENTERPIECE SQUIRCLE WITH FLOATING SWITCHER) -->
+          <div class="flex-1 min-h-0 flex items-center justify-center py-1 relative z-10 w-full">
+            <div id="deck-stage-window" class="neu-stage w-[min(340px,88vw,41vh)] h-[min(340px,88vw,41vh)] rounded-[32px] overflow-hidden relative flex items-center justify-center mx-auto transition-all cursor-pointer select-none active:scale-[0.99]" title="Tap to switch visualizer style">
 
-          <!-- 3. CENTER STAGE (RESPONSIVE CENTERPIECE SQUIRCLE) -->
-          <div class="flex-1 min-h-0 flex items-center justify-center py-1.5 relative z-10 w-full">
-            <div id="deck-stage-window" class="w-[min(340px,88vw,41vh)] h-[min(340px,88vw,41vh)] rounded-[32px] overflow-hidden relative flex items-center justify-center mx-auto transition-all cursor-pointer select-none active:scale-[0.98]" style="background: #0a0c16; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 20px 45px -10px rgba(0,0,0,0.25);" title="Tap to switch visualizer style">
+              <!-- Floating Frosted Glass Neumorphic Mode Switcher -->
+              <div class="absolute top-3.5 z-30 flex items-center justify-center pointer-events-auto">
+                <div class="neu-mode-container flex items-center gap-1 p-1 rounded-full backdrop-blur-xl" id="deck-mode-pills">
+                  <button class="deck-mode-pill active px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="vinyl">SONG</button>
+                  <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="video">VIDEO</button>
+                  <button class="deck-mode-pill px-3.5 py-1 rounded-full text-[10px] font-extrabold tracking-wider uppercase" data-mode="lyrics">LYRICS</button>
+                </div>
+              </div>
 
               <!-- 1. Material 3 meets iOS 28 Wave Equalizer (Exact Mockup: 1000260681.jpg - DEFAULT) -->
               <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#0a0c16] rounded-[32px]">
@@ -1368,8 +1405,15 @@
               </div>
 
               <!-- 9. Synced Lyrics Mode Container (Exact Mockup Match) -->
-              <div id="deck-display-lyrics" class="centerpiece-display w-full h-full flex flex-col items-center justify-between p-3 hidden relative select-none rounded-[32px]" style="background: #0c121e; color: #ffffff;">
-                <div class="flex items-center justify-between w-full px-3 py-1.5 rounded-full border mb-1.5 shrink-0 z-20" style="background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1);">
+              <div id="deck-display-lyrics" class="centerpiece-display w-full h-full flex flex-col items-center justify-between p-3 pt-14 hidden relative select-none rounded-[32px]" style="background: #0c121e; color: #ffffff;">
+                <div id="deck-lyrics-text" class="space-y-4 py-2 flex-1 overflow-y-auto px-2 text-center scrollbar-none z-10 w-full">
+                  <div class="flex flex-col items-center justify-center py-6 text-white/50">
+                    <i class="ph-bold ph-music-notes text-2xl mb-1 animate-pulse text-purple-400"></i>
+                    <span class="text-xs font-semibold">Loading synced lyrics...</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between w-full px-3 py-1.5 rounded-full border mt-2 shrink-0 z-20" style="background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1);">
                   <span class="text-[9px] font-black flex items-center gap-1 text-purple-400">
                     <i class="ph-bold ph-sliders-horizontal text-xs"></i> SYNC OFFSET
                   </span>
@@ -1378,13 +1422,6 @@
                     <span id="lyric-sync-offset-label" class="font-bold font-mono px-1 text-[9px] text-purple-400">±0.0s</span>
                     <button id="btn-lyric-nudge-fwd" class="px-2 py-0.5 rounded-full active:scale-90 transition-all font-black text-[9px] bg-white/10 border border-white/10 text-white/80 hover:text-white">+0.5s</button>
                     <button id="btn-lyric-sync-reset" class="w-5 h-5 rounded-full flex items-center justify-center active:scale-90 transition-all font-bold text-[9px] bg-white/10 border border-white/10 text-white/60 ml-0.5" title="Reset Calibration">↺</button>
-                  </div>
-                </div>
-
-                <div id="deck-lyrics-text" class="space-y-4 py-3 flex-1 overflow-y-auto px-2 text-center scrollbar-none z-10 w-full">
-                  <div class="flex flex-col items-center justify-center py-6 text-white/50">
-                    <i class="ph-bold ph-music-notes text-2xl mb-1 animate-pulse text-purple-400"></i>
-                    <span class="text-xs font-semibold">Loading synced lyrics...</span>
                   </div>
                 </div>
               </div>
@@ -1694,6 +1731,13 @@
               <i class="ph-bold ph-folder-simple-plus text-sm text-indigo-500"></i> Import Local Audio Files / Folder
             </button>
             <input type="file" id="local-folder-input-settings" webkitdirectory directory multiple accept="audio/*" class="hidden">
+
+            <button id="btn-select-storage-directory" class="w-full py-2.5 px-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all bg-white border border-slate-200 text-slate-800 hover:bg-slate-50 shadow-sm">
+              <i class="ph-bold ph-hard-drives text-sm text-emerald-500"></i> Set Offline Download Folder (Direct Disk)
+            </button>
+            <div id="storage-dir-status" class="text-[11px] font-medium px-1 text-slate-500 hidden">
+              Current Folder: <span class="font-mono text-emerald-600 dark:text-emerald-400" id="storage-dir-name">None</span>
+            </div>
 
             <button id="btn-clear-search-history" class="w-full py-2.5 px-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all bg-white border border-slate-200 text-slate-800 hover:bg-slate-50 shadow-sm">
               <i class="ph-bold ph-clock-counter-clockwise text-sm text-amber-500"></i> Clear Search History
