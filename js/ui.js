@@ -2025,11 +2025,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateDeckFavoriteState() {
     const state = engine.getState();
-    const track = state.queue[state.currentIndex];
+    const track = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
     if (!track) return;
+    const isFav = engine.isFavorite(track.id);
     if (els.deckHeartIcon) {
-      const isFav = engine.isFavorite(track.id);
-      els.deckHeartIcon.className = isFav ? 'ph-fill ph-heart text-pink-500 text-lg' : 'ph-bold ph-heart text-lg';
+      els.deckHeartIcon.className = isFav ? 'ph-fill ph-heart text-pink-500 text-base' : 'ph-bold ph-heart text-base';
+    }
+    if (els.deckBtnFavorite) {
+      if (isFav) {
+        els.deckBtnFavorite.classList.add('active', 'liked');
+      } else {
+        els.deckBtnFavorite.classList.remove('active', 'liked');
+      }
     }
     if (deckDownloadHeroIcon) {
       const downloads = engine.getDownloads();

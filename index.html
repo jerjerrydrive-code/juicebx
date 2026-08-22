@@ -1801,6 +1801,35 @@
     #deck-lyrics-text i {
       color: var(--c1-text-muted) !important;
     }
+      /* ─── INDENTED NEUMORPHIC FAVORITE HEART BUTTON ─── */
+    .c1-btn-favorite-heart {
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 50% !important;
+      background: var(--c1-surface) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 4px 4px 10px var(--c1-shadow-dark), -4px -4px 10px var(--c1-shadow-light) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: var(--c1-text-muted) !important;
+      font-size: 18px !important;
+      cursor: pointer !important;
+      outline: none !important;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    }
+    .c1-btn-favorite-heart:active {
+      transform: scale(0.9) !important;
+    }
+    .c1-btn-favorite-heart.active, .c1-btn-favorite-heart.liked {
+      background: #e2eaf4 !important;
+      box-shadow: inset 3px 3px 6px var(--c1-shadow-dark), inset -3px -3px 6px var(--c1-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    }
+    .c1-btn-favorite-heart.active i, .c1-btn-favorite-heart.liked i {
+      color: #ec4899 !important;
+      filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.45)) !important;
+    }
   </style>
 </head>
 <body class="light-mode h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
@@ -2143,15 +2172,20 @@
             </div>
           </div>
 
-          <!-- 4. Track Info & Options Row -->
-          <div class="c1-track-info-row shrink-0 w-full pt-2">
+          <!-- 4. Track Info & Options Row (with Indented Neumorphic Favorite Heart) -->
+          <div class="c1-track-info-row shrink-0 w-full pt-2 flex items-center justify-between">
             <div class="overflow-hidden pr-2 flex-1">
               <div class="c1-info-title truncate" id="deck-sub-title">Morning Light</div>
               <div class="c1-info-artist truncate" id="deck-sub-artist">The Midnight</div>
             </div>
-            <button id="deck-btn-more-options" class="c1-btn-more" title="More Options">
-              <i class="ph-bold ph-dots-three text-2xl"></i>
-            </button>
+            <div class="flex items-center gap-2">
+              <button id="deck-btn-favorite" class="c1-btn-favorite-heart" title="Favorite / Like">
+                <i class="ph-bold ph-heart text-base" id="deck-heart-icon"></i>
+              </button>
+              <button id="deck-btn-more-options" class="c1-btn-more" title="More Options">
+                <i class="ph-bold ph-dots-three text-2xl"></i>
+              </button>
+            </div>
           </div>
 
           <!-- 5. Recessed Scrubber Bar -->
