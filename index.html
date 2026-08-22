@@ -444,48 +444,134 @@
       border-top: 1px solid var(--border-card);
     }
 
-    /* ═══ NEUMORPHIC DESIGN SYSTEM ═══ */
+        /* ═══ ADVANCED LUXURY NEUMORPHIC DESIGN SYSTEM ═══ */
     .neu-btn {
-      background: var(--bg-card, #ffffff);
-      border: 1px solid var(--border-card, rgba(0,0,0,0.06));
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.22), -3px -3px 8px rgba(255, 255, 255, 0.05);
-      transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      background: rgba(22, 26, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5), -4px -4px 10px rgba(255, 255, 255, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
     .neu-btn:hover {
-      box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.08);
-      transform: translateY(-1px);
+      box-shadow: 7px 7px 16px rgba(0, 0, 0, 0.6), -5px -5px 12px rgba(255, 255, 255, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px) scale(1.04);
+      border-color: rgba(255, 255, 255, 0.22);
     }
     .neu-btn:active {
-      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.35), inset -2px -2px 5px rgba(255, 255, 255, 0.04);
-      transform: scale(0.92);
-    }
-    .neu-stage {
-      background: #090a12;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 
-        0 24px 48px -12px rgba(0, 0, 0, 0.65),
-        inset 0 1px 2px rgba(255, 255, 255, 0.12),
-        inset 0 -2px 6px rgba(0, 0, 0, 0.8);
+      box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.7), inset -2px -2px 6px rgba(255, 255, 255, 0.05);
+      transform: scale(0.92) translateY(1px);
     }
     .neu-mode-container {
-      background: rgba(14, 16, 26, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      background: rgba(12, 14, 24, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.6), inset -2px -2px 5px rgba(255, 255, 255, 0.05), 0 8px 24px rgba(0, 0, 0, 0.4);
+      padding: 4px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
     }
     .deck-mode-pill {
-      color: rgba(255, 255, 255, 0.65);
+      color: rgba(255, 255, 255, 0.6);
       background: transparent;
-      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     .deck-mode-pill:hover {
-      color: rgba(255, 255, 255, 0.95);
+      color: #ffffff;
     }
     .deck-mode-pill.active {
       background: #ffffff;
-      color: #0c0d14 !important;
-      opacity: 1 !important;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+      color: #0b0d17 !important;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.35), 0 2px 6px rgba(0, 0, 0, 0.4);
       transform: scale(1.02);
+    }
+
+    /* ═══ SUNKEN BEVELED TURNTABLE STAGE CHASSIS ═══ */
+    .neu-stage {
+      background: radial-gradient(circle at 50% 50%, rgba(20, 24, 40, 0.95) 0%, rgba(8, 10, 18, 0.98) 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 
+        0 28px 60px -14px rgba(0, 0, 0, 0.85),
+        inset 0 6px 20px rgba(0, 0, 0, 0.9),
+        inset 0 -3px 8px rgba(255, 255, 255, 0.06),
+        0 0 40px var(--ambient-glow-color, rgba(147, 51, 234, 0.18));
+      transition: box-shadow 0.6s ease, border-color 0.4s ease;
+    }
+
+    /* ═══ AMBIENT GLOW BACKDROP RADIATOR ═══ */
+    .ambient-glow-radiator {
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(circle at 50% 50%, var(--ambient-primary, rgba(168, 85, 247, 0.35)) 0%, var(--ambient-secondary, rgba(236, 72, 153, 0.15)) 45%, transparent 75%);
+      filter: blur(28px);
+      opacity: 0.75;
+      pointer-events: none;
+      z-index: 0;
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ═══ MECHANICAL PIVOTING TONEARM ═══ */
+    .tonearm-assembly {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      width: 75px;
+      height: 140px;
+      pointer-events: none;
+      z-index: 25;
+      transform-origin: 58px 18px;
+      transform: rotate(-32deg);
+      transition: transform 0.8s cubic-bezier(0.34, 1.3, 0.64, 1);
+    }
+    .tonearm-assembly.playing {
+      transform: rotate(6deg);
+    }
+    .tonearm-base {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #e2e8f0 0%, #64748b 50%, #1e293b 100%);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+    .tonearm-rod {
+      position: absolute;
+      top: 18px;
+      right: 16px;
+      width: 4.5px;
+      height: 95px;
+      background: linear-gradient(90deg, #cbd5e1 0%, #f8fafc 40%, #64748b 100%);
+      border-radius: 3px;
+      box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+      transform-origin: top center;
+    }
+    .tonearm-headshell {
+      position: absolute;
+      bottom: -16px;
+      left: -5px;
+      width: 14px;
+      height: 22px;
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      border-radius: 3px 3px 6px 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6), 0 0 10px rgba(59, 130, 246, 0.5);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .tonearm-stylus {
+      position: absolute;
+      bottom: -4px;
+      left: 5px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #ef4444;
+      box-shadow: 0 0 6px #ef4444;
     }
 
     /* ═══ LUXE 3D HOLOGRAPHIC VINYL TURNTABLE ═══ */
@@ -1631,7 +1717,10 @@
           <!-- Top Bar -->
           <div class="flex items-center justify-between px-1">
             <h1 class="text-2xl font-bold tracking-tight" style="color: var(--text-primary);">Settings</h1>
-            <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white/80 border border-black/5 text-slate-700 shadow-sm">v3.0.0</span>
+            <span id="settings-version-badge" class="text-[11px] font-black px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/40 text-purple-600 dark:text-purple-400 shadow-sm flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+              v3.2.0 • 🎨 Neumorphic UI
+            </span>
           </div>
 
           <!-- 1. Aesthetic Themes (2x2 Quick Swatches Grid + Full 338 Strip) -->

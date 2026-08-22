@@ -2456,6 +2456,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (els.miniArt) els.miniArt.src = url;
     if (els.deckVinylArt) els.deckVinylArt.style.backgroundImage = `url('${url}')`;
+
+    // Dynamic Ambient Color Extraction
+    try {
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.src = url;
+      img.onload = () => {
+        try {
+          const cvs = document.createElement('canvas');
+          cvs.width = 16; cvs.height = 16;
+          const ctx = cvs.getContext('2d');
+          ctx.drawImage(img, 0, 0, 16, 16);
+          const data = ctx.getImageData(0, 0, 16, 16).data;
+          let r = 0, g = 0, b = 0, count = 0;
+          for (let i = 0; i < data.length; i += 4) {
+            // Ignore near-black and near-white pixels
+            const maxVal = Math.max(data[i], data[i+1], data[i+2]);
+            const minVal = Math.min(data[i], data[i+1], data[i+2]);
+            if (maxVal > 40 && minVal < 240) {
+              r += data[i]; g += data[i+1]; b += data[i+2];
+              count++;
+            }
+          }
+          if (count > 0) {
+            r = Math.round(r / count);
+            g = Math.round(g / count);
+            b = Math.round(b / count);
+            document.documentElement.style.setProperty('--ambient-primary', `rgba(${r}, ${g}, ${b}, 0.45)`);
+            document.documentElement.style.setProperty('--ambient-secondary', `rgba(${Math.min(255, r+40)}, ${Math.max(0, g-20)}, ${Math.min(255, b+50)}, 0.25)`);
+            document.documentElement.style.setProperty('--ambient-glow-color', `rgba(${r}, ${g}, ${b}, 0.35)`);
+          }
+        } catch(e) {}
+      };
+    } catch(err) {}
   }
 
   function formatTime(seconds) {
