@@ -1845,6 +1845,60 @@
     }
   
     /* ─── HOME SHUFFLES CLEAN PORCELAIN CARDS ─── */
+
+    /* ─── INDENTED NEUMORPHIC GENRE PILL WELLS ─── */
+    .genre-card {
+      background: var(--c1-surface) !important;
+      border-radius: 24px !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 6px 6px 16px var(--c1-shadow-dark), -6px -6px 16px var(--c1-shadow-light) !important;
+      padding: 16px 16px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+      cursor: pointer !important;
+      min-height: 98px !important;
+    }
+    .genre-card:active {
+      box-shadow: inset 3px 3px 7px var(--c1-shadow-dark), inset -3px -3px 7px var(--c1-shadow-light) !important;
+      transform: scale(0.96) !important;
+    }
+    .genre-card-title {
+      font-size: 15px !important;
+      font-weight: 800 !important;
+      color: var(--c1-text-main) !important;
+      letter-spacing: -0.01em !important;
+      line-height: 1.25 !important;
+    }
+    .genre-card-tag {
+      background: var(--c1-surface-sunken) !important;
+      box-shadow: inset 2.5px 2.5px 5px var(--c1-shadow-dark), inset -2.5px -2.5px 5px var(--c1-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.6) !important;
+      font-size: 10px !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      padding: 4px 10px !important;
+      border-radius: 999px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      width: fit-content !important;
+      margin-bottom: 10px !important;
+    }
+    .tag-official { color: #9333ea !important; }
+    .tag-vault { color: #d97706 !important; }
+    .tag-rap { color: #d97706 !important; }
+    .tag-emo { color: #a855f7 !important; }
+    .tag-pop { color: #ec4899 !important; }
+    .tag-rnb { color: #2563eb !important; }
+    .tag-rock { color: #e11d48 !important; }
+    .tag-phonk { color: #0891b2 !important; }
+    .tag-lofi { color: #d97706 !important; }
+    .tag-classic { color: #059669 !important; }
+    .tag-latin { color: #dc2626 !important; }
+    .tag-synth { color: #4f46e5 !important; }
+
     .genre-card {
       background: var(--c1-surface) !important;
       border-radius: 22px !important;
@@ -1882,6 +1936,118 @@
       margin-bottom: 8px !important;
     }
 
+  
+    /* ─── DESIGN C: ASYMMETRIC BENTO TWIN-CAPSULE ─── */
+    .c1-twin-capsule-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 10px !important;
+      width: calc(100% - 16px) !important;
+      margin: 0 auto !important;
+      padding: 2px 0 !important;
+    }
+    .c1-capsule-queue {
+      flex: 1 !important;
+      background: var(--c1-surface-sunken) !important;
+      box-shadow: inset 3px 3px 6px var(--c1-shadow-dark), inset -3px -3px 6px var(--c1-shadow-light) !important;
+      border-radius: 999px !important;
+      padding: 5px 12px 5px 6px !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      border: 1px solid rgba(255, 255, 255, 0.5) !important;
+      overflow: hidden !important;
+      cursor: pointer !important;
+      transition: opacity 0.15s ease !important;
+    }
+    .c1-capsule-queue:active {
+      opacity: 0.8 !important;
+    }
+    .c1-capsule-actions {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      padding: 3px 6px !important;
+      border-radius: 999px !important;
+      background: var(--c1-surface) !important;
+      box-shadow: 4px 4px 10px var(--c1-shadow-dark), -4px -4px 10px var(--c1-shadow-light) !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+      shrink: 0 !important;
+    }
+    .c1-btn-capsule-fav {
+      width: 32px !important;
+      height: 32px !important;
+      border-radius: 50% !important;
+      background: var(--c1-surface) !important;
+      border: 1px solid rgba(255, 255, 255, 0.9) !important;
+      box-shadow: 2px 2px 6px var(--c1-shadow-dark), -2px -2px 6px var(--c1-shadow-light) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: var(--c1-text-muted) !important;
+      font-size: 15px !important;
+      cursor: pointer !important;
+      outline: none !important;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    }
+    .c1-btn-capsule-fav:active {
+      transform: scale(0.9) !important;
+    }
+    .c1-btn-capsule-fav.active, .c1-btn-capsule-fav.liked {
+      background: var(--c1-surface-sunken) !important;
+      box-shadow: inset 2px 2px 5px var(--c1-shadow-dark), inset -2px -2px 5px var(--c1-shadow-light) !important;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    }
+    .c1-btn-capsule-fav.active i, .c1-btn-capsule-fav.liked i {
+      color: #ec4899 !important;
+      filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.5)) !important;
+    }
+    .c1-btn-capsule-more {
+      width: 32px !important;
+      height: 32px !important;
+      border-radius: 50% !important;
+      background: transparent !important;
+      border: none !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: var(--c1-text-sub) !important;
+      font-size: 18px !important;
+      cursor: pointer !important;
+      outline: none !important;
+      transition: transform 0.15s ease !important;
+    }
+    .c1-btn-capsule-more:active {
+      transform: scale(0.85) !important;
+    }
+
+  
+    /* ─── STRICT PANEL ISOLATION & ZERO HORIZONTAL BLEED ─── */
+    #app-container {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      scroll-snap-type: x mandatory !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    .app-view {
+      flex: 0 0 100% !important;
+      width: 100% !important;
+      min-width: 100% !important;
+      max-width: 100% !important;
+      height: 100% !important;
+      min-height: 100% !important;
+      max-height: 100% !important;
+      box-sizing: border-box !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      scroll-snap-align: start !important;
+    }
+
   </style>
 </head>
 <body class="light-mode h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
@@ -1895,13 +2061,13 @@
       <div id="view-home" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-6 px-4" style="background: var(--bg-panel);">
         <div class="w-full max-w-md mx-auto flex flex-col">
         
-                <!-- Top Bar: Massive Logo (Sticky) -->
+                        <!-- Top Bar: Massive Logo (Sticky) -->
         <div class="sticky top-0 z-40 flex items-center justify-center mb-2 py-2.5 -mx-4 px-4" style="background: var(--bg-panel); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid var(--border-card);">
           <img src="logo.png" alt="JuiceBx" class="juicebx-logo h-12 sm:h-16 w-auto max-w-[200px] object-contain cursor-pointer active:scale-95 transition-transform" id="home-brand-tribute" title="999 Forever Tribute">
         </div>
 
         <!-- SECTION: SHUFFLES -->
-        <div class="mb-5">
+        <div class="mb-8">
           <div class="flex items-center justify-between px-1 mb-3">
             <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">Shuffles</h2>
             <span class="text-xs font-bold text-slate-500">12 Mixes</span>
@@ -1912,7 +2078,7 @@
             <!-- Official Discography -->
             <div class="genre-card" data-genre="Juice WRLD: Official Discography">
               <div>
-                <span class="genre-card-tag bg-purple-100 text-purple-700">OFFICIAL</span>
+                <span class="genre-card-tag tag-official">OFFICIAL</span>
               </div>
               <div class="genre-card-title">Official Discography</div>
             </div>
@@ -1920,76 +2086,76 @@
             <!-- The Lost Vault -->
             <div class="genre-card" data-genre="Juice WRLD: The Lost Vault">
               <div>
-                <span class="genre-card-tag bg-amber-100 text-amber-800">THE VAULT</span>
+                <span class="genre-card-tag tag-vault">THE VAULT</span>
               </div>
               <div class="genre-card-title">The Lost Vault</div>
             </div>
           </div>
 
-          <!-- ALL GENRE SHUFFLES GRID (ZERO META TEXT, NO SHUFFLE ICONS, NO REPETITIVE TOP 100 TAGS) -->
+          <!-- ALL GENRE SHUFFLES GRID (INDENTED NEUMORPHIC WELLS, ZERO META TEXT) -->
           <div class="grid grid-cols-2 gap-3.5" id="home-shuffles-grid">
             <!-- Hip-Hop & Trap -->
             <div class="genre-card" data-genre="hiphop_top100">
-              <div><span class="genre-card-tag bg-amber-100/80 text-amber-700">RAP</span></div>
+              <div><span class="genre-card-tag tag-rap">RAP</span></div>
               <div class="genre-card-title">Hip-Hop & Trap</div>
             </div>
 
             <!-- Emo Rap & Sad Vibes -->
             <div class="genre-card" data-genre="emo_rap_top100">
-              <div><span class="genre-card-tag bg-purple-100/80 text-purple-700">EMO</span></div>
+              <div><span class="genre-card-tag tag-emo">EMO</span></div>
               <div class="genre-card-title">Emo Rap & Sad Vibes</div>
             </div>
 
             <!-- Pop & Global Hits -->
             <div class="genre-card" data-genre="pop_top100">
-              <div><span class="genre-card-tag bg-pink-100/80 text-pink-700">POP</span></div>
+              <div><span class="genre-card-tag tag-pop">POP</span></div>
               <div class="genre-card-title">Pop & Global Hits</div>
             </div>
 
             <!-- R&B & Late Night -->
             <div class="genre-card" data-genre="rnb_top100">
-              <div><span class="genre-card-tag bg-blue-100/80 text-blue-700">R&B</span></div>
+              <div><span class="genre-card-tag tag-rnb">R&B</span></div>
               <div class="genre-card-title">R&B & Late Night</div>
             </div>
 
             <!-- Rock & Alternative -->
             <div class="genre-card" data-genre="rock_top100">
-              <div><span class="genre-card-tag bg-rose-100/80 text-rose-700">ROCK</span></div>
+              <div><span class="genre-card-tag tag-rock">ROCK</span></div>
               <div class="genre-card-title">Rock & Alternative</div>
             </div>
 
             <!-- Phonk & Electronic -->
             <div class="genre-card" data-genre="phonk_edm_top100">
-              <div><span class="genre-card-tag bg-cyan-100/80 text-cyan-700">PHONK</span></div>
+              <div><span class="genre-card-tag tag-phonk">PHONK</span></div>
               <div class="genre-card-title">Phonk & Electronic</div>
             </div>
 
             <!-- Lo-Fi Beats & Study -->
             <div class="genre-card" data-genre="lofi_top100">
-              <div><span class="genre-card-tag bg-amber-100/80 text-amber-800">LO-FI</span></div>
+              <div><span class="genre-card-tag tag-lofi">LO-FI</span></div>
               <div class="genre-card-title">Lo-Fi Beats & Study</div>
             </div>
 
             <!-- 90s & 2000s Legends -->
             <div class="genre-card" data-genre="throwbacks_top100">
-              <div><span class="genre-card-tag bg-emerald-100/80 text-emerald-700">CLASSIC</span></div>
+              <div><span class="genre-card-tag tag-classic">CLASSIC</span></div>
               <div class="genre-card-title">90s & 2000s Legends</div>
             </div>
 
             <!-- Latin & Reggaeton -->
             <div class="genre-card" data-genre="latin_top100">
-              <div><span class="genre-card-tag bg-red-100/80 text-red-700">LATIN</span></div>
+              <div><span class="genre-card-tag tag-latin">LATIN</span></div>
               <div class="genre-card-title">Latin & Reggaeton</div>
             </div>
 
             <!-- Synthwave & Retro -->
             <div class="genre-card" data-genre="synthwave_top100">
-              <div><span class="genre-card-tag bg-indigo-100/80 text-indigo-700">SYNTH</span></div>
+              <div><span class="genre-card-tag tag-synth">SYNTH</span></div>
               <div class="genre-card-title">Synthwave & Retro</div>
             </div>
           </div>
         </div>
-
+        </div>
       </div>
 
       <!-- ═══ PANEL 1: DEDICATED SEARCH VIEW ═══ -->
@@ -2078,6 +2244,11 @@
                 <canvas id="deck-reactive-blobs-canvas" class="w-full h-full block"></canvas>
               </div>
 
+                            <!-- Chroma Breakout & Confetti Particle Physics Visualizer -->
+              <div id="deck-display-chroma" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#06070d] rounded-[26px] hidden">
+                <canvas id="deck-reactive-chroma-canvas" class="w-full h-full block"></canvas>
+              </div>
+
               <!-- Hi-Fi Display -->
               <div id="deck-display-hifi" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#08060c] rounded-[24px] hidden">
                 <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block"></canvas>
@@ -2103,27 +2274,27 @@
             </div>
           </div>
 
-          <!-- 4. Refined Neumorphic "Up Next" Bento Card -->
+                    <!-- 4. Asymmetric Bento Twin-Capsule (Queue Left + Actions Right) -->
           <div class="shrink-0 w-full pt-1.5 pb-1">
-            <div class="c1-up-next-card" id="deck-up-next-container">
-              <div class="flex items-center gap-3 overflow-hidden flex-1 cursor-pointer active:opacity-80 transition-opacity" id="deck-up-next-btn" title="Tap to skip to next track">
-                <div class="w-9 h-9 rounded-xl overflow-hidden shrink-0 bg-slate-200 border border-white shadow-sm" id="deck-up-next-art-wrap">
-                  <img id="deck-up-next-thumb" src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?w=200&q=80" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80'">
+            <div class="c1-twin-capsule-row" id="deck-twin-capsule-container">
+              <!-- Left Capsule: Sunken Queue Peek (Tap to skip to next) -->
+              <div class="c1-capsule-queue" id="deck-up-next-btn" title="Up Next Track (Tap to play)">
+                <div class="w-6 h-6 rounded-full overflow-hidden shrink-0 border border-white shadow-sm">
+                  <img id="deck-up-next-thumb" src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?w=100&q=80" class="w-full h-full object-cover">
                 </div>
                 <div class="overflow-hidden text-left flex-1">
-                  <div class="flex items-center gap-1.5">
-                    <span class="text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 shadow-sm" id="deck-up-next-badge">UP NEXT</span>
-                    <span class="text-[10px] font-medium text-slate-400" id="deck-up-next-countdown"></span>
-                  </div>
-                  <p class="text-xs font-extrabold text-slate-900 truncate mt-0.5" id="deck-up-next-title">Loading next track...</p>
+                  <span class="text-[8px] font-black uppercase tracking-wider text-blue-600 block leading-none">UP NEXT</span>
+                  <p class="text-[11px] font-bold text-slate-800 truncate mt-0.5" id="deck-up-next-title">Iron On Me • Juice WRLD</p>
                 </div>
               </div>
-              <div class="flex items-center gap-1.5 shrink-0 pl-2">
-                <button id="deck-btn-favorite" class="c1-btn-favorite-heart" title="Favorite / Like">
-                  <i class="ph-bold ph-heart text-base" id="deck-heart-icon"></i>
+
+              <!-- Right Capsule: Raised Action Hub (Current Song Heart + More) -->
+              <div class="c1-capsule-actions shrink-0">
+                <button id="deck-btn-favorite" class="c1-btn-capsule-fav active liked" title="Favorite Current Track">
+                  <i class="ph-fill ph-heart"></i>
                 </button>
-                <button id="deck-btn-more-options" class="c1-btn-more" title="More Options">
-                  <i class="ph-bold ph-dots-three text-2xl"></i>
+                <button id="deck-btn-more-options" class="c1-btn-capsule-more" title="More Options">
+                  <i class="ph-bold ph-dots-three"></i>
                 </button>
               </div>
             </div>

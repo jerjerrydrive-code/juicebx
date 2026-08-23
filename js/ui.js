@@ -4381,3 +4381,154 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToPanel(2);
   }, 60);
 });
+
+
+
+  // ═══ RAZER CHROMA COLOR ENGINE & CONFETTI BREAKOUT PARTICLE PHYSICS ═══
+  let chromaCanvas = null;
+  let chromaCtx = null;
+  let chromaParticles = [];
+  let chromaHue = 0;
+  let chromaAnimId = null;
+
+  function initChromaBreakoutVisualizer() {
+    chromaCanvas = document.getElementById('deck-reactive-chroma-canvas');
+    if (!chromaCanvas) return;
+    chromaCtx = chromaCanvas.getContext('2d');
+
+    function resizeChroma() {
+      if (!chromaCanvas) return;
+      const rect = chromaCanvas.getBoundingClientRect();
+      chromaCanvas.width = (rect.width || 280) * 2;
+      chromaCanvas.height = (rect.height || 280) * 2;
+    }
+    resizeChroma();
+    window.addEventListener('resize', resizeChroma);
+
+    // Particle Confetti Pool
+    class BreakoutParticle {
+      constructor(x, y, hue) {
+        this.x = x;
+        this.y = y;
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 2 + Math.random() * 8;
+        this.vx = Math.cos(angle) * speed;
+        this.vy = Math.sin(angle) * speed;
+        this.size = 3 + Math.random() * 6;
+        this.hue = hue + (Math.random() * 40 - 20);
+        this.alpha = 1;
+        this.decay = 0.015 + Math.random() * 0.025;
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotSpeed = (Math.random() - 0.5) * 0.2;
+        this.shape = Math.random() > 0.5 ? 'rect' : 'circle';
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.vy += 0.15; // Gravity
+        this.vx *= 0.98;
+        this.rotation += this.rotSpeed;
+        this.alpha -= this.decay;
+      }
+      draw(ctx) {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.fillStyle = `hsla(${this.hue}, 100%, 65%, ${Math.max(0, this.alpha)})`;
+        ctx.shadowColor = `hsla(${this.hue}, 100%, 50%, 0.8)`;
+        ctx.shadowBlur = 10;
+        if (this.shape === 'rect') {
+          ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size * 1.5);
+        } else {
+          ctx.beginPath();
+          ctx.arc(0, 0, this.size / 2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+    }
+
+    function renderChromaFrame() {
+      if (!chromaCtx || !chromaCanvas) return;
+      const w = chromaCanvas.width;
+      const h = chromaCanvas.height;
+      const cx = w / 2;
+      const cy = h / 2;
+
+      // Multi-pass dark fade for neon bloom trails
+      chromaCtx.fillStyle = 'rgba(6, 7, 13, 0.25)';
+      chromaCtx.fillRect(0, 0, w, h);
+
+      chromaHue = (chromaHue + 0.8) % 360; // Razer Chroma cycle
+
+      const isPlaying = engine.isPlaying && engine.isPlaying();
+      const energy = isPlaying ? (0.4 + Math.sin(Date.now() * 0.005) * 0.35 + Math.random() * 0.25) : 0.1;
+
+      // Central Pulsing Chroma Core
+      const baseRadius = (w * 0.22) * (1 + energy * 0.35);
+      const gradient = chromaCtx.createRadialGradient(cx, cy, baseRadius * 0.2, cx, cy, baseRadius * 1.4);
+      gradient.addColorStop(0, `hsla(${chromaHue}, 100%, 65%, 0.9)`);
+      gradient.addColorStop(0.5, `hsla(${(chromaHue + 60) % 360}, 100%, 50%, 0.5)`);
+      gradient.addColorStop(1, 'transparent');
+
+      chromaCtx.save();
+      chromaCtx.fillStyle = gradient;
+      chromaCtx.beginPath();
+      chromaCtx.arc(cx, cy, baseRadius * 1.4, 0, Math.PI * 2);
+      chromaCtx.fill();
+      chromaCtx.restore();
+
+      // Multi-layer reactive orbital waveform rings
+      const numRays = 36;
+      for (let r = 0; r < 2; r++) {
+        chromaCtx.save();
+        chromaCtx.beginPath();
+        for (let i = 0; i <= numRays; i++) {
+          const angle = (i / numRays) * Math.PI * 2;
+          const wave = Math.sin(angle * 8 + Date.now() * 0.008 + r) * (15 + energy * 30);
+          const rad = baseRadius + wave;
+          const x = cx + Math.cos(angle) * rad;
+          const y = cy + Math.sin(angle) * rad;
+          if (i === 0) chromaCtx.moveTo(x, y);
+          else chromaCtx.lineTo(x, y);
+        }
+        chromaCtx.closePath();
+        chromaCtx.strokeStyle = `hsla(${(chromaHue + r * 90) % 360}, 100%, 70%, ${0.7 - r * 0.2})`;
+        chromaCtx.lineWidth = 4;
+        chromaCtx.shadowColor = `hsla(${(chromaHue + r * 90) % 360}, 100%, 50%, 0.9)`;
+        chromaCtx.shadowBlur = 16;
+        chromaCtx.stroke();
+        chromaCtx.restore();
+      }
+
+      // Spawn beat confetti particles on energy peaks
+      if (isPlaying && (energy > 0.6 || Math.random() < 0.35)) {
+        const burstCount = Math.floor(1 + Math.random() * 3);
+        for (let b = 0; b < burstCount; b++) {
+          chromaParticles.push(new BreakoutParticle(cx + (Math.random() - 0.5) * 40, cy + (Math.random() - 0.5) * 40, chromaHue));
+        }
+      }
+
+      // Update and draw confetti particles
+      for (let i = chromaParticles.length - 1; i >= 0; i--) {
+        const p = chromaParticles[i];
+        p.update();
+        p.draw(chromaCtx);
+        if (p.alpha <= 0 || p.y > h + 50) {
+          chromaParticles.splice(i, 1);
+        }
+      }
+
+      // Cap particles pool
+      if (chromaParticles.length > 120) {
+        chromaParticles.splice(0, chromaParticles.length - 120);
+      }
+
+      chromaAnimId = requestAnimationFrame(renderChromaFrame);
+    }
+
+    renderChromaFrame();
+  }
+
+  // Auto-init Chroma Breakout engine
+  setTimeout(initChromaBreakoutVisualizer, 100);
