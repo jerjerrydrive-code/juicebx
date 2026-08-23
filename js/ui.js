@@ -3476,10 +3476,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     els.deckLyricsText.innerHTML = parsedLyrics.map((p, idx) => `
-      <p class="lyric-line transition-all duration-300 py-1.5 px-3 rounded-xl cursor-pointer select-none text-[13px] font-semibold leading-relaxed hover:opacity-90" 
+      <p class="lyric-line transition-all duration-300 py-2 px-3 rounded-xl cursor-pointer select-none text-[14px] font-bold leading-relaxed hover:text-white" 
          data-idx="${idx}" 
          data-time="${p.time}" 
-         style="color: rgba(255,255,255,0.4); opacity: 0.4;">
+         style="color: rgba(255,255,255,0.65); opacity: 0.7;">
         ${p.text}
       </p>
     `).join('');
@@ -3516,18 +3516,18 @@ document.addEventListener('DOMContentLoaded', () => {
       lineElements.forEach((lineEl, idx) => {
         if (idx === activeLyricIndex) {
           lineEl.style.color = '#ffffff';
-          lineEl.style.fontSize = '1.05rem';
+          lineEl.style.fontSize = '1.1rem';
           lineEl.style.fontWeight = '900';
           lineEl.style.opacity = '1.0';
-          lineEl.style.transform = 'scale(1.04)';
-          lineEl.style.textShadow = '0 0 14px rgba(255, 120, 40, 0.7), 0 2px 6px rgba(0,0,0,0.8)';
+          lineEl.style.transform = 'scale(1.05)';
+          lineEl.style.textShadow = '0 0 16px rgba(168, 85, 247, 0.9), 0 2px 8px rgba(0,0,0,0.9)';
           lineEl.style.background = 'transparent';
           lineEl.style.border = 'none';
           lineEl.style.boxShadow = 'none';
           lineEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-          lineEl.style.color = 'rgba(255, 255, 255, 0.4)';
-          lineEl.style.fontSize = '0.85rem';
+          lineEl.style.color = 'rgba(255, 255, 255, 0.65)';
+          lineEl.style.fontSize = '0.88rem';
           lineEl.style.fontWeight = '600';
           lineEl.style.opacity = '0.35';
           lineEl.style.transform = 'scale(0.96)';
