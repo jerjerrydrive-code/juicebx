@@ -2989,6 +2989,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ═══ LIBRARY SUBTABS (PLAYLISTS, QUEUE, ARTISTS, ALBUMS, DOWNLOADS) ═══
+  const libTabs = document.querySelectorAll('.lib-tab');
   libTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       libTabs.forEach(t => {
