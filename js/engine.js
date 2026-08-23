@@ -407,6 +407,8 @@ window.JuiceEngine = (() => {
         startLocalProgressTracker();
 
         emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
       });
 
@@ -421,6 +423,8 @@ window.JuiceEngine = (() => {
         stopProgressTracker();
 
         emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
       });
 
@@ -435,6 +439,8 @@ window.JuiceEngine = (() => {
         stopProgressTracker();
 
         emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
         if (state.repeat) {
 
@@ -459,6 +465,9 @@ window.JuiceEngine = (() => {
         state.duration = localAudio.duration || state.duration || 0;
 
         emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
+        if ('mediaSession' in navigator && state.duration > 0 && typeof navigator.mediaSession.setPositionState === 'function') {
+          try { navigator.mediaSession.setPositionState({ duration: Math.max(0, state.duration), playbackRate: 1.0, position: Math.min(state.duration, Math.max(0, state.currentTime)) }); } catch(e) {}
+        }
 
       });
 
@@ -473,6 +482,9 @@ window.JuiceEngine = (() => {
         state.duration = localAudio.duration || state.duration || 0;
 
         emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
+        if ('mediaSession' in navigator && state.duration > 0 && typeof navigator.mediaSession.setPositionState === 'function') {
+          try { navigator.mediaSession.setPositionState({ duration: Math.max(0, state.duration), playbackRate: 1.0, position: Math.min(state.duration, Math.max(0, state.currentTime)) }); } catch(e) {}
+        }
 
       });
 
@@ -495,6 +507,9 @@ window.JuiceEngine = (() => {
         state.duration = localAudio.duration || state.duration || 0;
 
         emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
+        if ('mediaSession' in navigator && state.duration > 0 && typeof navigator.mediaSession.setPositionState === 'function') {
+          try { navigator.mediaSession.setPositionState({ duration: Math.max(0, state.duration), playbackRate: 1.0, position: Math.min(state.duration, Math.max(0, state.currentTime)) }); } catch(e) {}
+        }
 
       }
 
@@ -611,6 +626,9 @@ window.JuiceEngine = (() => {
               }
               startYTProgressTracker();
               emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
+        if ('mediaSession' in navigator && state.duration > 0 && typeof navigator.mediaSession.setPositionState === 'function') {
+          try { navigator.mediaSession.setPositionState({ duration: Math.max(0, state.duration), playbackRate: 1.0, position: Math.min(state.duration, Math.max(0, state.currentTime)) }); } catch(e) {}
+        }
             } else if (event.data === window.YT.PlayerState.PAUSED) {
               state.isPlaying = false;
               stopProgressTracker();
@@ -625,6 +643,8 @@ window.JuiceEngine = (() => {
               }
             }
             emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
           },
           onError: (e) => {
             console.warn("YouTube Player Error code:", e.data, "on track:", state.queue[state.currentIndex]);
@@ -633,6 +653,8 @@ window.JuiceEngine = (() => {
               state.isPlaying = false;
               stopProgressTracker();
               emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
               return;
             }
 
@@ -646,6 +668,8 @@ window.JuiceEngine = (() => {
               state.isPlaying = false;
               stopProgressTracker();
               emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
               if (state.autoplay) {
                 setTimeout(() => api.next(), 600);
               }
@@ -734,6 +758,8 @@ window.JuiceEngine = (() => {
                 }
               } catch(e) {}
               emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
               return;
             }
           }
@@ -801,6 +827,8 @@ window.JuiceEngine = (() => {
     state.isPlaying = false;
     stopProgressTracker();
     emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
     emit('engine:streamError', {
       track,
       message: `Could not load stream for "${track.title}".`
@@ -895,6 +923,9 @@ window.JuiceEngine = (() => {
           checkAndSkipNonMusicSegments(cur);
 
           emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
+        if ('mediaSession' in navigator && state.duration > 0 && typeof navigator.mediaSession.setPositionState === 'function') {
+          try { navigator.mediaSession.setPositionState({ duration: Math.max(0, state.duration), playbackRate: 1.0, position: Math.min(state.duration, Math.max(0, state.currentTime)) }); } catch(e) {}
+        }
         } catch(e) {}
       }
     }, 250);
@@ -1334,6 +1365,8 @@ window.JuiceEngine = (() => {
         // Resolution tried and still invalid – bail cleanly
 
         emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
         return;
 
@@ -1394,6 +1427,8 @@ window.JuiceEngine = (() => {
     }
 
     emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
   }
 
@@ -1486,6 +1521,8 @@ window.JuiceEngine = (() => {
       emit('engine:queueUpdated', state.queue);
 
       emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
 
 
@@ -1598,6 +1635,8 @@ window.JuiceEngine = (() => {
       emit('engine:queueUpdated', state.queue);
 
       emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
     },
 
@@ -1658,6 +1697,8 @@ window.JuiceEngine = (() => {
         }
 
         emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
         return;
 
@@ -1671,6 +1712,8 @@ window.JuiceEngine = (() => {
         pendingAutoPlay = true;
         state.isPlaying = true;
         emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
         if (curTrack && (!curTrack.id || curTrack.id.length !== 11 || curTrack.id.includes('4819g'))) {
           resolveAndPlayTrack(curTrack);
         }
@@ -1712,12 +1755,16 @@ window.JuiceEngine = (() => {
         }
 
         emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
       } catch (e) {
 
         state.isPlaying = !state.isPlaying;
 
         emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
       }
 
@@ -1765,6 +1812,9 @@ window.JuiceEngine = (() => {
         }
         state.currentTime = targetSec;
         emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
+        if ('mediaSession' in navigator && state.duration > 0 && typeof navigator.mediaSession.setPositionState === 'function') {
+          try { navigator.mediaSession.setPositionState({ duration: Math.max(0, state.duration), playbackRate: 1.0, position: Math.min(state.duration, Math.max(0, state.currentTime)) }); } catch(e) {}
+        }
         return;
       }
 
@@ -1776,6 +1826,9 @@ window.JuiceEngine = (() => {
         }
         state.currentTime = targetSec;
         emit('engine:progress', { currentTime: state.currentTime, duration: state.duration });
+        if ('mediaSession' in navigator && state.duration > 0 && typeof navigator.mediaSession.setPositionState === 'function') {
+          try { navigator.mediaSession.setPositionState({ duration: Math.max(0, state.duration), playbackRate: 1.0, position: Math.min(state.duration, Math.max(0, state.currentTime)) }); } catch(e) {}
+        }
       }
     },
 
@@ -1792,6 +1845,8 @@ window.JuiceEngine = (() => {
       }
 
       emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
     },
 
@@ -1800,6 +1855,8 @@ window.JuiceEngine = (() => {
       state.shuffle = !state.shuffle;
 
       emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
     },
 
@@ -1808,6 +1865,8 @@ window.JuiceEngine = (() => {
       state.repeat = !state.repeat;
 
       emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
     },
 
@@ -1826,6 +1885,8 @@ window.JuiceEngine = (() => {
       emit('engine:speedChanged', speed);
 
       emit('engine:stateChanged', state);
+      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
+      updateMediaSession(state.queue[state.currentIndex]);
 
       return speed;
 
@@ -2693,3 +2754,92 @@ if (typeof window !== 'undefined') {
 // Keep alive
 document.addEventListener('visibilitychange', () => { if (document.hidden && window.engine) { const state = window.engine.getState(); if (state.isPlaying && !state.isLocalPlaying && typeof ytPlayer !== 'undefined') { setTimeout(() => { if (typeof ytPlayer.playVideo === 'function') ytPlayer.playVideo(); }, 100); } } });
 
+
+
+
+  // ═══ BACKGROUND AUDIO & MEDIASESSION PIPELINE (LOCK SCREEN & SCREEN-OFF PLAYBACK) ═══
+  // 1-second silent WAV loop for OS background audio keepalive
+  const SILENT_WAV_URI = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
+  let backgroundAudioCarrier = null;
+
+  function initBackgroundCarrier() {
+    if (!backgroundAudioCarrier) {
+      backgroundAudioCarrier = new Audio();
+      backgroundAudioCarrier.src = SILENT_WAV_URI;
+      backgroundAudioCarrier.loop = true;
+      backgroundAudioCarrier.volume = 0.01; // Non-zero to avoid OS power optimization kill
+      backgroundAudioCarrier.setAttribute('playsinline', 'true');
+      backgroundAudioCarrier.setAttribute('webkit-playsinline', 'true');
+    }
+  }
+
+  function startBackgroundCarrier() {
+    initBackgroundCarrier();
+    if (backgroundAudioCarrier && backgroundAudioCarrier.paused) {
+      backgroundAudioCarrier.play().catch(() => {});
+    }
+  }
+
+  function stopBackgroundCarrier() {
+    if (backgroundAudioCarrier && !backgroundAudioCarrier.paused) {
+      backgroundAudioCarrier.pause();
+    }
+  }
+
+  function updateMediaSession(track) {
+    if (!('mediaSession' in navigator) || !track) return;
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: track.title || 'Unknown Track',
+        artist: track.artist || 'Juice WRLD',
+        album: track.album || 'JuiceBx 999',
+        artwork: [
+          { src: track.thumb || 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=512&q=80', sizes: '512x512', type: 'image/jpeg' },
+          { src: track.thumb || 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=256&q=80', sizes: '256x256', type: 'image/jpeg' },
+          { src: track.thumb || 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=128&q=80', sizes: '128x128', type: 'image/jpeg' }
+        ]
+      });
+
+      navigator.mediaSession.playbackState = state.isPlaying ? 'playing' : 'paused';
+
+      if (state.duration > 0 && typeof navigator.mediaSession.setPositionState === 'function') {
+        try {
+          navigator.mediaSession.setPositionState({
+            duration: Math.max(0, state.duration),
+            playbackRate: 1.0,
+            position: Math.min(state.duration, Math.max(0, state.currentTime))
+          });
+        } catch(e) {}
+      }
+    } catch(e) {
+      console.warn("MediaSession update error:", e);
+    }
+  }
+
+  function initMediaSessionHandlers() {
+    if (!('mediaSession' in navigator)) return;
+
+    const actionMap = {
+      'play': () => api.togglePlay(),
+      'pause': () => api.togglePlay(),
+      'previoustrack': () => api.prev(),
+      'nexttrack': () => api.next(),
+      'seekto': (details) => { if (details && details.seekTime !== undefined) api.seek(details.seekTime); },
+      'seekforward': () => api.seek(state.currentTime + 10),
+      'seekbackward': () => api.seek(state.currentTime - 10),
+      'stop': () => { if (state.isPlaying) api.togglePlay(); }
+    };
+
+    for (const [action, handler] of Object.entries(actionMap)) {
+      try {
+        navigator.mediaSession.setActionHandler(action, handler);
+      } catch(e) {
+        console.warn(`MediaSession action ${action} not supported:`, e);
+      }
+    }
+  }
+
+  // Auto-init MediaSession handlers on script load
+  if (typeof window !== 'undefined') {
+    setTimeout(initMediaSessionHandlers, 200);
+  }
