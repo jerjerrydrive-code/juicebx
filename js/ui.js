@@ -329,17 +329,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (6 iOS 28 & GOOGLE M3 STYLES) ═══
-  const VISUALIZER_STYLES = ['chroma', 'equalizer', 'orb', 'm3', 'hifi', 'vinyl'];
+  // ═══ MASTER 6 AUDIO-REACTIVE VISUALIZERS (BY JERRY JERZ) ═══
+  const VISUALIZER_STYLES = ['vinyl', 'equalizer', 'horizon', 'orb', 'hifi', 'chroma'];
 
   const VISUALIZER_NAMES = {
-    'chroma': '🎉 Razer Chroma & Confetti Breakout Party',
-    'equalizer': '🌈 M3 & iOS 28 Wave Equalizer',
-    'orb': '🔮 iOS 28 Siri Liquid Glass Orb',
-    'm3': '🎨 Google M3 Expressive Ribbons',
-    'blobs': '🫧 Spatial Fluid Glass Plasma',
-    'hifi': '⚡ 2028 Precision M3 Hi-Fi Spectrum',
-    'vinyl': '💽 Dynamic Luxe Holographic Vinyl'
+    'vinyl': '💽 Dynamic Luxe Holographic Vinyl',
+    'equalizer': '🌈 M3 & iOS 28 Dual-Wave Spectrum',
+    'horizon': '⚡ Cyberpunk 3D Neon Horizon',
+    'orb': '🔮 Gemini Liquid Quantum Orb',
+    'hifi': '🎚️ Studio Precision Hi-Fi LED Analyzer',
+    'chroma': '🎉 Razer Chroma Laser Breakout Party'
   };
 
   let currentCenterpieceStyle = localStorage.getItem('juicebx_center_style') || 'equalizer';
@@ -350,12 +349,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deckStageWindow = document.getElementById('deck-stage-window');
   const deckDisplayEqualizer = document.getElementById('deck-display-equalizer');
+  const deckDisplayHorizon = document.getElementById('deck-display-horizon');
   const deckDisplayOrb = document.getElementById('deck-display-orb');
-  const deckDisplayM3 = document.getElementById('deck-display-m3');
-  const deckDisplayBlobs = document.getElementById('deck-display-blobs');
   const deckDisplayHifi = document.getElementById('deck-display-hifi');
   const deckDisplayVinyl = document.getElementById('deck-display-vinyl');
   const deckDisplayChroma = document.getElementById('deck-display-chroma');
+
+  const horizonCanvas = document.getElementById('deck-reactive-horizon-canvas');
+  const horizonCtx = horizonCanvas ? horizonCanvas.getContext('2d') : null;
 
   const equalizerCanvas = document.getElementById('deck-reactive-equalizer-canvas');
   const equalizerCtx = equalizerCanvas ? equalizerCanvas.getContext('2d') : null;
@@ -398,12 +399,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (deckStageWindow) deckStageWindow.setAttribute('data-visualizer-style', style);
 
     if (currentDeckMode === 'vinyl' || currentDeckMode === 'song') {
-      if (deckDisplayEqualizer) deckDisplayEqualizer.classList.toggle('hidden', style !== 'equalizer');
-      if (deckDisplayOrb) deckDisplayOrb.classList.toggle('hidden', style !== 'orb');
-      if (deckDisplayM3) deckDisplayM3.classList.toggle('hidden', style !== 'm3');
-      if (deckDisplayBlobs) deckDisplayBlobs.classList.toggle('hidden', style !== 'blobs');
-      if (deckDisplayHifi) deckDisplayHifi.classList.toggle('hidden', style !== 'hifi');
       if (deckDisplayVinyl) deckDisplayVinyl.classList.toggle('hidden', style !== 'vinyl');
+      if (deckDisplayEqualizer) deckDisplayEqualizer.classList.toggle('hidden', style !== 'equalizer');
+      if (deckDisplayHorizon) deckDisplayHorizon.classList.toggle('hidden', style !== 'horizon');
+      if (deckDisplayOrb) deckDisplayOrb.classList.toggle('hidden', style !== 'orb');
+      if (deckDisplayHifi) deckDisplayHifi.classList.toggle('hidden', style !== 'hifi');
       if (deckDisplayChroma) deckDisplayChroma.classList.toggle('hidden', style !== 'chroma');
     }
   }
@@ -417,11 +417,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     engine.playHaptic(650, 0.02);
     setCenterpieceStyle(nextStyle);
+    if (typeof showToast === 'function') {
+      showToast(`${VISUALIZER_NAMES[nextStyle]}`, 'info');
+    }
   }
+  window.morphToNextVisualizer = morphToNextVisualizer;
 
   if (deckStageWindow) {
     deckStageWindow.addEventListener('click', (e) => {
-      // Don't morph if clicking on video play overlay or spindle tribute or lyrics nudge
       if (e.target.closest('#deck-spindle-tribute') || e.target.closest('#deck-video-tap-overlay') || e.target.closest('#btn-lyric-nudge-back') || e.target.closest('#btn-lyric-nudge-fwd') || e.target.closest('#btn-lyric-sync-reset')) return;
       if (currentDeckMode === 'vinyl' || currentDeckMode === 'song') {
         morphToNextVisualizer();
@@ -442,17 +445,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const isMatch = (pMode === normalizedMode) || (pMode === 'song' && normalizedMode === 'song') || (pMode === 'vinyl' && normalizedMode === 'song');
       if (isMatch) {
         pill.classList.add('active');
-        pill.style.background = '';
-        pill.style.color = '';
       } else if (pMode) {
         pill.classList.remove('active');
-        pill.style.background = '';
-        pill.style.color = '';
       }
     });
 
     const state = engine.getState();
-    const track = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
+    const track = state.queue[state.currentTrackIndex];
 
     if (normalizedMode === 'song') {
       setCenterpieceStyle(currentCenterpieceStyle);
@@ -462,8 +461,8 @@ document.addEventListener('DOMContentLoaded', () => {
         els.deckDisplayVideo.style.zIndex = '0';
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
-    } else if (mode === 'video') {
-      [deckDisplayChroma, deckDisplayEqualizer, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl].forEach(el => {
+    } else if (normalizedMode === 'video') {
+      [deckDisplayEqualizer, deckDisplayHorizon, deckDisplayOrb, deckDisplayHifi, deckDisplayChroma, deckDisplayVinyl].forEach(el => {
         if (el) el.classList.add('hidden');
       });
       if (els.deckDisplayVideo) {
@@ -472,12 +471,11 @@ document.addEventListener('DOMContentLoaded', () => {
         els.deckDisplayVideo.style.zIndex = '20';
       }
       if (els.deckDisplayLyrics) els.deckDisplayLyrics.classList.add('hidden');
-      // Ensure video is actively playing if engine state is playing
       if (state.isPlaying && window.engine && typeof window.engine.play === 'function') {
         try { window.engine.play(); } catch(e) {}
       }
-    } else if (mode === 'lyrics') {
-      [deckDisplayChroma, deckDisplayEqualizer, deckDisplayOrb, deckDisplayM3, deckDisplayBlobs, deckDisplayHifi, deckDisplayVinyl].forEach(el => {
+    } else if (normalizedMode === 'lyrics') {
+      [deckDisplayEqualizer, deckDisplayHorizon, deckDisplayOrb, deckDisplayHifi, deckDisplayChroma, deckDisplayVinyl].forEach(el => {
         if (el) el.classList.add('hidden');
       });
       if (els.deckDisplayVideo) {
@@ -498,15 +496,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ═══ 1. 🌈 MATERIAL 3 MEETS IOS 28 DUAL-WAVE EQUALIZER (Exact 1000260681.jpg) ═══
+  // ═══════════════════════════════════════════════════════════════
+  // 🌟 THE 6 MASTER HIGH-PRECISION AUDIO VISUALIZERS (BY JERRY JERZ)
+  // ═══════════════════════════════════════════════════════════════
+
+  // ─── 1. 🌈 M3 & iOS 28 DUAL-WAVE HARMONIC SPECTRUM ───
   const eqBarsCount = 42;
   const eqPeaks = new Array(eqBarsCount).fill(0);
   const eqPeakVels = new Array(eqBarsCount).fill(0);
   let eqWavePhase = 0;
-  const eqEmbers = Array.from({ length: 42 }, () => ({
+  const eqEmbers = Array.from({ length: 48 }, () => ({
     x: Math.random(),
-    y: Math.random() * 0.58,
-    size: 0.8 + Math.random() * 1.6,
+    y: Math.random() * 0.65,
+    size: 0.8 + Math.random() * 1.8,
     alpha: 0.2 + Math.random() * 0.8,
     speedY: 0.0006 + Math.random() * 0.0016,
     speedX: (Math.random() - 0.5) * 0.0008,
@@ -515,21 +517,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function drawM3iOS28Equalizer(ctx, w, h, levels, isPlaying) {
     ctx.clearRect(0, 0, w, h);
-
-    // Deep Obsidian Atmosphere
-    ctx.fillStyle = '#0a0c16';
+    ctx.fillStyle = '#090b14';
     ctx.fillRect(0, 0, w, h);
 
     eqWavePhase += isPlaying ? 0.035 + levels.energy * 0.04 : 0.012;
 
-    // 1. Drifting Twinkling Starry Embers in Sky
+    // Drifting Twinkling Starry Embers
     eqEmbers.forEach(em => {
       em.y -= em.speedY * (isPlaying ? 1 + levels.energy : 0.6);
       em.x += em.speedX;
-      if (em.y < 0.02) {
-        em.y = 0.58;
-        em.x = Math.random();
-      }
+      if (em.y < 0.02) { em.y = 0.65; em.x = Math.random(); }
       if (em.x < 0) em.x = 1;
       if (em.x > 1) em.x = 0;
 
@@ -544,30 +541,28 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.restore();
     });
 
-    // 2. Dual-Wave Harmonic Spectrum Bars
+    // Dual-Wave Harmonic Spectrum Bars
     const totalBars = eqBarsCount;
-    const paddingX = w * 0.035;
+    const paddingX = w * 0.04;
     const availableW = w - paddingX * 2;
     const barSpacing = availableW / totalBars;
-    const barWidth = Math.max(3.0, barSpacing - 2.0);
-    const baseY = h * 0.76;
-    const maxHeight = h * 0.52;
+    const barWidth = Math.max(3.5, barSpacing - 2.0);
+    const baseY = h * 0.78;
+    const maxHeight = h * 0.54;
 
     for (let i = 0; i < totalBars; i++) {
       const x = paddingX + i * barSpacing;
       const t = i / (totalBars - 1);
 
-      // Dual-Wave profile: First hill around t=0.22 (Bass), Second hill around t=0.72 (Mids/Treble)
       const hill1 = Math.exp(-Math.pow((t - 0.22) / 0.16, 2));
       const hill2 = Math.exp(-Math.pow((t - 0.72) / 0.20, 2));
-      
       const wave1 = Math.sin(t * Math.PI * 4.5 + eqWavePhase * 1.5) * 0.25;
       const wave2 = Math.cos(t * Math.PI * 2.5 - eqWavePhase * 2.0) * 0.20;
 
       let dynHeight = 6;
       if (isPlaying) {
-        const bassImpact = levels.bass * 1.3 * hill1;
-        const trebleImpact = (levels.mid * 0.8 + levels.treble * 1.0) * hill2;
+        const bassImpact = levels.bass * 1.35 * hill1;
+        const trebleImpact = (levels.mid * 0.85 + levels.treble * 1.1) * hill2;
         const energyWave = (wave1 + wave2) * levels.energy;
         const baseShape = (hill1 * 0.65 + hill2 * 0.95 + 0.15) * maxHeight;
         dynHeight = Math.max(6, baseShape * (0.4 + bassImpact + trebleImpact + energyWave));
@@ -577,16 +572,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       dynHeight = Math.min(maxHeight, dynHeight);
 
-      // Peak Physics
       if (dynHeight >= eqPeaks[i]) {
         eqPeaks[i] = dynHeight;
         eqPeakVels[i] = 0;
       } else {
-        eqPeakVels[i] += 0.3;
+        eqPeakVels[i] += 0.35;
         eqPeaks[i] = Math.max(dynHeight, eqPeaks[i] - eqPeakVels[i]);
       }
 
-      // 3. Smooth Multi-Stop Chromatic Gradient (Red/Orange -> Pink/Magenta -> Violet/Purple)
+      // Rounded Capsule Bar
       const barGrad = ctx.createLinearGradient(x, baseY, x, baseY - dynHeight);
       if (t < 0.36) {
         barGrad.addColorStop(0, '#ff3b30');
@@ -598,564 +592,413 @@ document.addEventListener('DOMContentLoaded', () => {
         barGrad.addColorStop(1, '#ff4081');
       } else {
         barGrad.addColorStop(0, '#673ab7');
-        barGrad.addColorStop(0.5, '#8e24aa');
-        barGrad.addColorStop(1, '#ba68c8');
+        barGrad.addColorStop(0.5, '#9c27b0');
+        barGrad.addColorStop(1, '#c2185b');
       }
 
-      // Draw Rounded Equalizer Bar
       ctx.save();
+      ctx.beginPath();
+      const r = barWidth / 2;
+      ctx.roundRect(x, baseY - dynHeight, barWidth, dynHeight, [r, r, 0, 0]);
       ctx.fillStyle = barGrad;
-      ctx.shadowBlur = isPlaying ? 10 : 3;
-      ctx.shadowColor = t < 0.4 ? '#ff5722' : (t < 0.7 ? '#e91e63' : '#8e24aa');
-      
-      const r = Math.min(barWidth / 2, 2.0);
-      const topY = baseY - dynHeight;
-      ctx.beginPath();
-      ctx.moveTo(x + r, topY);
-      ctx.lineTo(x + barWidth - r, topY);
-      ctx.quadraticCurveTo(x + barWidth, topY, x + barWidth, topY + r);
-      ctx.lineTo(x + barWidth, baseY);
-      ctx.lineTo(x, baseY);
-      ctx.lineTo(x, topY + r);
-      ctx.quadraticCurveTo(x, topY, x + r, topY);
-      ctx.closePath();
+      ctx.shadowBlur = isPlaying ? 8 + levels.energy * 10 : 4;
+      ctx.shadowColor = t < 0.4 ? '#ff6700' : (t < 0.7 ? '#e91e63' : '#9c27b0');
       ctx.fill();
-      ctx.restore();
 
-      // 4. Floating White Peak Cap / Dot
-      const peakY = baseY - eqPeaks[i] - 4.5;
-      ctx.save();
+      // Peak Hold Cap
+      const peakY = baseY - eqPeaks[i] - 3;
+      ctx.beginPath();
+      ctx.arc(x + barWidth / 2, peakY, Math.max(1.8, barWidth / 2.2), 0, Math.PI * 2);
       ctx.fillStyle = '#ffffff';
-      ctx.shadowBlur = 8;
+      ctx.shadowBlur = 10;
       ctx.shadowColor = '#ffffff';
-      ctx.fillRect(x, peakY, barWidth, 2.5);
+      ctx.fill();
       ctx.restore();
     }
-
-    // Subtle Baseline Floor Glow
-    ctx.save();
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(paddingX, baseY + 1);
-    ctx.lineTo(w - paddingX, baseY + 1);
-    ctx.stroke();
-    ctx.restore();
   }
 
-  // ═══ 2. 🍏 iOS 28 SIRI DYNAMIC LIQUID GLASS ORB RENDERER ═══
-  function drawFluidOrb(ctx, w, h, levels, isPlaying) {
-    ctx.clearRect(0, 0, w, h);
-
-    // Deep Apple spatial obsidian background
-    const bgGrad = ctx.createRadialGradient(w / 2, h / 2, 10, w / 2, h / 2, w / 1.3);
-    bgGrad.addColorStop(0, '#120d20');
-    bgGrad.addColorStop(0.55, '#080511');
-    bgGrad.addColorStop(1, '#020106');
-    ctx.fillStyle = bgGrad;
-    ctx.fillRect(0, 0, w, h);
-
-    const cx = w / 2;
-    const cy = h / 2;
-    orbPhase += isPlaying ? 0.02 + levels.energy * 0.04 : 0.008;
-
-    // Ambient Chromatic Aura behind Orb
-    const auraR = isPlaying ? 85 + levels.bass * 65 : 75;
-    const auraGrad = ctx.createRadialGradient(cx, cy, 10, cx, cy, auraR);
-    auraGrad.addColorStop(0, `rgba(255, 79, 0, ${isPlaying ? 0.45 + levels.bass * 0.35 : 0.2})`);
-    auraGrad.addColorStop(0.5, `rgba(168, 85, 247, ${isPlaying ? 0.35 + levels.mid * 0.25 : 0.15})`);
-    auraGrad.addColorStop(0.85, `rgba(6, 182, 212, ${isPlaying ? 0.25 + levels.treble * 0.2 : 0.08})`);
-    auraGrad.addColorStop(1, 'transparent');
-    ctx.fillStyle = auraGrad;
-    ctx.beginPath();
-    ctx.arc(cx, cy, auraR, 0, Math.PI * 2);
-    ctx.fill();
-
-    // Floating Glass Dispersion Particles
-    orbDust.forEach(pt => {
-      pt.angle += pt.speed * (isPlaying ? 1 + levels.energy * 1.5 : 0.8);
-      const px = cx + Math.cos(pt.angle) * (pt.dist + (isPlaying ? levels.bass * 25 : 0));
-      const py = cy + Math.sin(pt.angle) * (pt.dist * 0.7 + (isPlaying ? levels.mid * 20 : 0));
-      
-      ctx.beginPath();
-      ctx.arc(px, py, pt.size * (isPlaying ? 1 + levels.treble * 0.8 : 1), 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 255, 255, ${pt.alpha})`;
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = '#06b6d4';
-      ctx.fill();
-    });
-
-    // Dynamic Spline Harmonic Liquid Glass Orb
-    const baseRadius = isPlaying ? 54 + levels.bass * 22 : 50;
-    const vertices = 48;
-    const points = [];
-
-    for (let i = 0; i < vertices; i++) {
-      const angle = (i / vertices) * Math.PI * 2;
-      const wave1 = Math.sin(angle * 3 + orbPhase * 2) * (isPlaying ? 10 * levels.bass : 3);
-      const wave2 = Math.cos(angle * 5 - orbPhase * 3) * (isPlaying ? 8 * levels.mid : 2);
-      const wave3 = Math.sin(angle * 7 + orbPhase * 1.5) * (isPlaying ? 6 * levels.treble : 1.5);
-      const r = baseRadius + wave1 + wave2 + wave3;
-      points.push({
-        x: cx + Math.cos(angle) * r,
-        y: cy + Math.sin(angle) * r
-      });
-    }
-
-    // Fill Liquid Glass Gradient Core
-    ctx.save();
-    ctx.beginPath();
-    ctx.moveTo((points[0].x + points[vertices - 1].x) / 2, (points[0].y + points[vertices - 1].y) / 2);
-    for (let i = 0; i < vertices; i++) {
-      const next = points[(i + 1) % vertices];
-      const midX = (points[i].x + next.x) / 2;
-      const midY = (points[i].y + next.y) / 2;
-      ctx.quadraticCurveTo(points[i].x, points[i].y, midX, midY);
-    }
-    ctx.closePath();
-
-    const orbGrad = ctx.createLinearGradient(cx - baseRadius, cy - baseRadius, cx + baseRadius, cy + baseRadius);
-    orbGrad.addColorStop(0, '#ff4f00');
-    orbGrad.addColorStop(0.35, '#ec4899');
-    orbGrad.addColorStop(0.7, '#8b5cf6');
-    orbGrad.addColorStop(1, '#06b6d4');
-    ctx.fillStyle = orbGrad;
-    ctx.shadowBlur = isPlaying ? 35 : 18;
-    ctx.shadowColor = '#ec4899';
-    ctx.fill();
-
-    // Specular Glass Caustic Edge Rim
-    ctx.lineWidth = isPlaying ? 2.5 : 1.8;
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
-    ctx.shadowBlur = 12;
-    ctx.shadowColor = '#ffffff';
-    ctx.stroke();
-    ctx.restore();
-
-    // Apple Specular Top Highlight Crescent
-    ctx.save();
-    ctx.beginPath();
-    ctx.ellipse(cx, cy - baseRadius * 0.42, baseRadius * 0.55, baseRadius * 0.24, 0, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.35)';
-    ctx.fill();
-    ctx.restore();
-  }
-
-  // ═══ 3. 🌈 NEON SPECTRUM EQUALIZER (Exact Mockup Match: 1000260681.jpg) ═══
-  const spectrumBarsCount = 36;
-  const barPeaks = new Array(spectrumBarsCount).fill(0);
-  const barPeakVels = new Array(spectrumBarsCount).fill(0);
-  const starryEmbers = Array.from({ length: 35 }, () => ({
+  // ─── 2. ⚡ CYBERPUNK 3D NEON HORIZON WAVE ───
+  let horizonGridOffset = 0;
+  const horizonStars = Array.from({ length: 50 }, () => ({
     x: Math.random(),
-    y: Math.random() * 0.65,
-    size: 0.8 + Math.random() * 1.8,
-    alpha: 0.2 + Math.random() * 0.8,
-    speedY: 0.0008 + Math.random() * 0.002,
-    speedX: (Math.random() - 0.5) * 0.001,
-    color: ['#ff4500', '#ec4899', '#a855f7', '#ffffff', '#fbbf24'][Math.floor(Math.random() * 5)]
+    y: Math.random() * 0.48,
+    size: 0.6 + Math.random() * 1.6,
+    alpha: 0.3 + Math.random() * 0.7
   }));
 
-  function drawNeonSpectrumVisualizer(ctx, w, h, levels, isPlaying) {
+  function drawCyberpunkHorizon(ctx, w, h, levels, isPlaying) {
     ctx.clearRect(0, 0, w, h);
-
-    // Deep Obsidian Backdrop
-    ctx.fillStyle = '#07080f';
+    ctx.fillStyle = '#06040f';
     ctx.fillRect(0, 0, w, h);
 
-    // Floating Ember Star Particles in Sky
-    starryEmbers.forEach(em => {
-      em.y -= em.speedY * (isPlaying ? 1 + levels.energy : 0.6);
-      em.x += em.speedX;
-      if (em.y < 0) {
-        em.y = 0.65;
-        em.x = Math.random();
-      }
-      if (em.x < 0) em.x = 1;
-      if (em.x > 1) em.x = 0;
+    const horizonY = h * 0.50;
 
-      ctx.beginPath();
-      ctx.arc(em.x * w, em.y * h, em.size, 0, Math.PI * 2);
-      ctx.fillStyle = em.color;
-      ctx.globalAlpha = em.alpha * (isPlaying ? 0.6 + levels.treble * 0.4 : 0.4);
-      ctx.shadowBlur = 6;
-      ctx.shadowColor = em.color;
-      ctx.fill();
-    });
-    ctx.globalAlpha = 1.0;
-
-    // Spectrum Equalizer Bars
-    const totalBars = spectrumBarsCount;
-    const barWidth = (w - (totalBars + 1) * 2.5) / totalBars;
-    const baseY = h * 0.84;
-    const maxHeight = h * 0.58;
-
-    for (let i = 0; i < totalBars; i++) {
-      const x = 2.5 + i * (barWidth + 2.5);
-      
-      const normIdx = i / totalBars;
-      const freqWeight = Math.sin(normIdx * Math.PI) * (1 - normIdx * 0.25);
-      const wave = Math.sin(normIdx * 6 + Date.now() * 0.005) * 0.2;
-      
-      let targetHeight = 8;
-      if (isPlaying) {
-        const bandEnergy = normIdx < 0.33 ? levels.bass : (normIdx < 0.66 ? levels.mid : levels.treble);
-        targetHeight = 10 + (bandEnergy * freqWeight + wave + Math.random() * 0.12) * maxHeight;
-      } else {
-        targetHeight = 8 + Math.sin(normIdx * 4 + Date.now() * 0.002) * 5;
-      }
-      targetHeight = Math.max(6, Math.min(maxHeight, targetHeight));
-
-      if (targetHeight >= barPeaks[i]) {
-        barPeaks[i] = targetHeight;
-        barPeakVels[i] = 0;
-      } else {
-        barPeakVels[i] += 0.25;
-        barPeaks[i] = Math.max(6, barPeaks[i] - barPeakVels[i]);
-      }
-
-      const barGrad = ctx.createLinearGradient(x, baseY, x, baseY - targetHeight);
-      const colorRatio = i / totalBars;
-      if (colorRatio < 0.35) {
-        barGrad.addColorStop(0, '#ff3b30');
-        barGrad.addColorStop(0.6, '#ff6b00');
-        barGrad.addColorStop(1, '#ff9500');
-      } else if (colorRatio < 0.7) {
-        barGrad.addColorStop(0, '#e11d48');
-        barGrad.addColorStop(0.5, '#ec4899');
-        barGrad.addColorStop(1, '#f43f5e');
-      } else {
-        barGrad.addColorStop(0, '#8b5cf6');
-        barGrad.addColorStop(0.6, '#a855f7');
-        barGrad.addColorStop(1, '#c084fc');
-      }
-
-      ctx.fillStyle = barGrad;
-      ctx.shadowBlur = isPlaying ? 12 : 4;
-      ctx.shadowColor = colorRatio < 0.5 ? '#ff4500' : '#ec4899';
-      
-      ctx.beginPath();
-      const radius = Math.min(barWidth / 2, 2.5);
-      const topY = baseY - targetHeight;
-      ctx.moveTo(x + radius, topY);
-      ctx.lineTo(x + barWidth - radius, topY);
-      ctx.quadraticCurveTo(x + barWidth, topY, x + barWidth, topY + radius);
-      ctx.lineTo(x + barWidth, baseY);
-      ctx.lineTo(x, baseY);
-      ctx.lineTo(x, topY + radius);
-      ctx.quadraticCurveTo(x, topY, x + radius, topY);
-      ctx.closePath();
-      ctx.fill();
-
-      // Floating white peak cap dot
-      const peakY = baseY - barPeaks[i] - 3;
-      ctx.fillStyle = '#ffffff';
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = '#ffffff';
-      ctx.fillRect(x, peakY, barWidth, 2);
-    }
-  }
-
-  // ═══ 2. 🎨 GOOGLE MATERIAL 3 EXPRESSIVE DYNAMIC FLUID RIBBONS ═══
-  function drawM3Expressive(ctx, w, h, levels, isPlaying) {
-    ctx.clearRect(0, 0, w, h);
-
-    // M3 Expressive Deep Dark Background
-    const bgGrad = ctx.createRadialGradient(w / 2, h / 2, 20, w / 2, h / 2, w / 1.2);
-    bgGrad.addColorStop(0, '#150c18');
-    bgGrad.addColorStop(0.6, '#0b050d');
-    bgGrad.addColorStop(1, '#030104');
-    ctx.fillStyle = bgGrad;
-    ctx.fillRect(0, 0, w, h);
-
-    m3Phase += isPlaying ? 0.025 + levels.energy * 0.045 : 0.01;
-
-    // 4 Dynamic Interwoven M3 Tonal Ribbons
-    const ribbons = [
-      { color: 'rgba(255, 109, 0, 0.7)', yBase: h * 0.45, amp: 28, freq: 0.014, speed: 1.2, width: 6 },
-      { color: 'rgba(245, 0, 87, 0.65)', yBase: h * 0.52, amp: 34, freq: 0.018, speed: -1.0, width: 8 },
-      { color: 'rgba(124, 77, 255, 0.7)', yBase: h * 0.58, amp: 26, freq: 0.012, speed: 1.5, width: 7 },
-      { color: 'rgba(0, 229, 255, 0.6)', yBase: h * 0.65, amp: 30, freq: 0.022, speed: -1.3, width: 5 }
-    ];
-
-    ribbons.forEach(rb => {
+    // 1. Starfield in Upper Sky
+    horizonStars.forEach(st => {
       ctx.save();
       ctx.beginPath();
-      ctx.lineWidth = rb.width * (isPlaying ? 1 + levels.energy * 0.5 : 1);
-      ctx.strokeStyle = rb.color;
-      ctx.shadowBlur = isPlaying ? 24 : 10;
-      ctx.shadowColor = rb.color;
-      ctx.lineCap = 'round';
+      ctx.arc(st.x * w, st.y * h, st.size * (1 + levels.treble * 0.5), 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.globalAlpha = st.alpha * (0.6 + levels.energy * 0.4);
+      ctx.shadowBlur = 4;
+      ctx.shadowColor = '#00ffff';
+      ctx.fill();
+      ctx.restore();
+    });
 
-      const dynAmp = isPlaying ? rb.amp + levels.bass * 30 : 12;
-      for (let x = 0; x <= w; x += 4) {
-        const y = rb.yBase + Math.sin(x * rb.freq + m3Phase * rb.speed) * dynAmp * Math.cos(x * 0.005 + m3Phase * 0.4);
-        if (x === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
-      }
+    // 2. Glowing Synthwave Neon Sun on Horizon
+    const sunRadius = w * 0.20;
+    const sunGrad = ctx.createLinearGradient(w / 2, horizonY - sunRadius * 1.3, w / 2, horizonY);
+    sunGrad.addColorStop(0, '#ff007f');
+    sunGrad.addColorStop(0.6, '#ffaa00');
+    sunGrad.addColorStop(1, '#ffe600');
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(w / 2, horizonY, sunRadius, Math.PI, 0, false);
+    ctx.fillStyle = sunGrad;
+    ctx.shadowBlur = 28 + levels.bass * 24;
+    ctx.shadowColor = '#ff007f';
+    ctx.fill();
+    ctx.restore();
+
+    // 3. 3D Perspective Flowing Grid
+    horizonGridOffset = (horizonGridOffset + (isPlaying ? 1.5 + levels.energy * 2.5 : 0.8)) % 24;
+
+    const numPerspLines = 18;
+    for (let i = 0; i <= numPerspLines; i++) {
+      const t = i / numPerspLines;
+      const bottomX = t * w;
+      const topX = w / 2 + (t - 0.5) * (w * 0.28);
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(topX, horizonY);
+      ctx.lineTo(bottomX, h);
+      ctx.strokeStyle = '#00f0ff';
+      ctx.globalAlpha = 0.25 + levels.mid * 0.35;
+      ctx.lineWidth = 1.2;
+      ctx.shadowBlur = 6;
+      ctx.shadowColor = '#00f0ff';
       ctx.stroke();
       ctx.restore();
-    });
+    }
 
-    // M3 Expressive Floating Audio Pills at Bottom
-    const numPills = 24;
-    const pillSpacing = w / (numPills + 1);
-    for (let i = 0; i < numPills; i++) {
-      const px = (i + 1) * pillSpacing;
-      const freqVal = (levels.frequencies && levels.frequencies[i * 2]) ? levels.frequencies[i * 2] / 255 : (Math.sin(i * 0.4 + m3Phase) * 0.5 + 0.5) * (isPlaying ? levels.energy : 0.2);
-      const pillH = isPlaying ? 8 + freqVal * 55 : 6;
-      const py = h * 0.88 - pillH / 2;
+    // Horizontal Depth Grid Rungs with Audio-Reactive Mountain Peaks
+    const depthLines = 14;
+    for (let j = 1; j <= depthLines; j++) {
+      const normY = Math.pow((j * 24 + horizonGridOffset) / (depthLines * 24), 2.2);
+      const curY = horizonY + normY * (h - horizonY);
 
-      ctx.save();
-      ctx.beginPath();
-      ctx.roundRect(px - 3, py, 6, pillH, 3);
-      const pillGrad = ctx.createLinearGradient(px, py, px, py + pillH);
-      pillGrad.addColorStop(0, '#ff4081');
-      pillGrad.addColorStop(1, '#7c4dff');
-      ctx.fillStyle = pillGrad;
-      ctx.shadowBlur = isPlaying && freqVal > 0.4 ? 12 : 2;
-      ctx.shadowColor = '#ff4081';
-      ctx.fill();
-      ctx.restore();
+      if (curY <= h && curY >= horizonY) {
+        ctx.save();
+        ctx.beginPath();
+        for (let px = 0; px <= w; px += 10) {
+          const normX = px / w;
+          const distFromCenter = Math.abs(normX - 0.5) * 2;
+          const bassDisplacement = Math.sin(normX * Math.PI * 6 + horizonGridOffset * 0.2) * (distFromCenter * levels.bass * 22 * normY);
+          const py = curY - bassDisplacement;
+          if (px === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+
+        ctx.strokeStyle = '#ff00a0';
+        ctx.globalAlpha = Math.min(1.0, 0.15 + normY * 0.75 + levels.bass * 0.3);
+        ctx.lineWidth = 1.0 + normY * 1.8;
+        ctx.shadowBlur = 8 * normY;
+        ctx.shadowColor = '#ff00a0';
+        ctx.stroke();
+        ctx.restore();
+      }
     }
   }
 
-  // ═══ 3. 🫧 SPATIAL FLUID GLASS METABALLS & AUDIO PLASMA ═══
-  function drawSpatialBlobs(ctx, w, h, levels, isPlaying) {
-    ctx.clearRect(0, 0, w, h);
+  // ─── 3. 🔮 GEMINI / SIRI LIQUID QUANTUM ORB ───
+  let orbRotPhase = 0;
+  const orbParticles = Array.from({ length: 36 }, () => ({
+    angle: Math.random() * Math.PI * 2,
+    dist: 45 + Math.random() * 85,
+    speed: (0.006 + Math.random() * 0.018) * (Math.random() > 0.5 ? 1 : -1),
+    size: 1.2 + Math.random() * 2.2,
+    color: ['#00f0ff', '#a855f7', '#ec4899', '#3b82f6', '#ffffff'][Math.floor(Math.random() * 5)]
+  }));
 
-    // Deep spatial dark blue background
-    const bgGrad = ctx.createRadialGradient(w / 2, h / 2, 20, w / 2, h / 2, w / 1.3);
-    bgGrad.addColorStop(0, '#0a1020');
-    bgGrad.addColorStop(0.6, '#040710');
-    bgGrad.addColorStop(1, '#010206');
-    ctx.fillStyle = bgGrad;
+  function drawLiquidQuantumOrb(ctx, w, h, levels, isPlaying) {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#060610';
     ctx.fillRect(0, 0, w, h);
 
     const cx = w / 2;
     const cy = h / 2;
-    blobPhase += isPlaying ? 0.02 + levels.energy * 0.035 : 0.008;
+    orbRotPhase += isPlaying ? 0.025 + levels.energy * 0.035 : 0.01;
 
-    spatialBlobs.forEach((b, idx) => {
-      let bx, by, br;
-      if (idx === 0) {
-        // Central Sub-Bass Core Blob
-        bx = cx + (isPlaying ? Math.sin(blobPhase * 1.5) * 8 * levels.energy : 0);
-        by = cy + (isPlaying ? Math.cos(blobPhase * 1.2) * 6 * levels.energy : 0);
-        br = isPlaying ? b.baseR + levels.bass * 26 : b.baseR;
-      } else {
-        // Orbiting Satellite Spatial Spheres
-        const angle = blobPhase * b.speed * 80 + (idx * Math.PI * 0.5);
-        const dist = b.orbitR + (isPlaying ? levels.mid * 20 : 0);
-        bx = cx + Math.cos(angle) * dist;
-        by = cy + Math.sin(angle) * dist * 0.7;
-        br = isPlaying ? b.baseR + (idx % 2 === 0 ? levels.treble * 12 : levels.mid * 10) : b.baseR;
-      }
+    // Swirling Cosmic Stardust
+    orbParticles.forEach(p => {
+      p.angle += p.speed * (isPlaying ? 1 + levels.treble * 2 : 0.7);
+      const px = cx + Math.cos(p.angle) * (p.dist * (1 + levels.mid * 0.35));
+      const py = cy + Math.sin(p.angle) * (p.dist * (1 + levels.mid * 0.35));
 
       ctx.save();
-      // Outer Glow Halo
       ctx.beginPath();
-      ctx.arc(bx, by, br * 1.3, 0, Math.PI * 2);
-      ctx.fillStyle = idx === 0 ? 'rgba(255, 79, 0, 0.15)' : 'rgba(6, 182, 212, 0.12)';
-      ctx.fill();
-
-      // Fluid Glass Body
-      ctx.beginPath();
-      ctx.arc(bx, by, br, 0, Math.PI * 2);
-      const bGrad = ctx.createLinearGradient(bx - br, by - br, bx + br, by + br);
-      bGrad.addColorStop(0, b.color1);
-      bGrad.addColorStop(1, b.color2);
-      ctx.fillStyle = bGrad;
-      ctx.shadowBlur = isPlaying ? 24 : 8;
-      ctx.shadowColor = b.color1;
-      ctx.fill();
-
-      // Specular Glass Top Ring
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)';
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-
-      // Glass Crescent Glint
-      ctx.beginPath();
-      ctx.ellipse(bx, by - br * 0.4, br * 0.5, br * 0.22, 0, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.35)';
+      ctx.arc(px, py, p.size * (1 + levels.treble * 0.8), 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = p.color;
+      ctx.globalAlpha = 0.6 + levels.energy * 0.4;
       ctx.fill();
       ctx.restore();
     });
+
+    // 3 Layered Iridescent Liquid Plasma Spheres
+    const baseRadius = Math.min(w, h) * 0.28 * (1 + levels.bass * 0.22);
+
+    for (let layer = 0; layer < 3; layer++) {
+      ctx.save();
+      ctx.beginPath();
+      const numNodes = 12;
+      const angleStep = (Math.PI * 2) / numNodes;
+
+      for (let i = 0; i <= numNodes; i++) {
+        const theta = i * angleStep;
+        const offset = Math.sin(theta * 3 + orbRotPhase * (layer === 1 ? -2 : 2) + layer) * (10 + levels.energy * 18);
+        const r = baseRadius * (1 - layer * 0.15) + offset;
+        const nx = cx + Math.cos(theta) * r;
+        const ny = cy + Math.sin(theta) * r;
+        if (i === 0) ctx.moveTo(nx, ny);
+        else ctx.lineTo(nx, ny);
+      }
+      ctx.closePath();
+
+      const orbGrad = ctx.createRadialGradient(cx, cy, baseRadius * 0.2, cx, cy, baseRadius * 1.3);
+      if (layer === 0) {
+        orbGrad.addColorStop(0, 'rgba(0, 240, 255, 0.85)');
+        orbGrad.addColorStop(0.5, 'rgba(168, 85, 247, 0.7)');
+        orbGrad.addColorStop(1, 'rgba(236, 72, 153, 0)');
+      } else if (layer === 1) {
+        orbGrad.addColorStop(0, 'rgba(236, 72, 153, 0.9)');
+        orbGrad.addColorStop(0.6, 'rgba(59, 130, 246, 0.6)');
+        orbGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      } else {
+        orbGrad.addColorStop(0, 'rgba(255, 255, 255, 0.95)');
+        orbGrad.addColorStop(0.4, 'rgba(0, 240, 255, 0.5)');
+        orbGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      }
+
+      ctx.fillStyle = orbGrad;
+      ctx.shadowBlur = 30 + levels.bass * 25;
+      ctx.shadowColor = layer === 0 ? '#00f0ff' : '#ec4899';
+      ctx.globalCompositeOperation = 'screen';
+      ctx.fill();
+      ctx.restore();
+    }
   }
 
-  // ═══ 4. ⚡ 2028 PRECISION M3 HI-FI FLUID SPECTRUM ═══
-  function drawM3HiFiSpectrum(ctx, w, h, levels, isPlaying) {
-    ctx.clearRect(0, 0, w, h);
+  // ─── 4. 🎚️ STUDIO PRECISION HI-FI LED ANALYZER ───
+  const hifiBands = 32;
+  const hifiPeakLeds = new Array(hifiBands).fill(0);
+  const hifiDecays = new Array(hifiBands).fill(0);
 
-    // Obsidian Hi-Fi Studio Background
-    const bgGrad = ctx.createRadialGradient(w / 2, h / 2, 20, w / 2, h / 2, w / 1.3);
-    bgGrad.addColorStop(0, '#100c14');
-    bgGrad.addColorStop(0.6, '#060408');
-    bgGrad.addColorStop(1, '#020104');
-    ctx.fillStyle = bgGrad;
+  function drawStudioHifiAnalyzer(ctx, w, h, levels, isPlaying) {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#070913';
     ctx.fillRect(0, 0, w, h);
 
-    const numBars = 36;
-    const barWidth = 6;
-    const gap = (w - (numBars * barWidth)) / (numBars + 1);
-    const bottomY = h * 0.72;
+    const padX = w * 0.04;
+    const availW = w - padX * 2;
+    const bandW = availW / hifiBands;
+    const barW = Math.max(3.2, bandW - 2.5);
+    const numSegments = 20;
+    const segH = (h * 0.68) / numSegments;
+    const baseY = h * 0.84;
 
-    // Transient Particle Sparks on Bass Hits
-    if (isPlaying && levels.bass > 0.65 && hifiSparks.length < 35) {
-      for (let s = 0; s < 4; s++) {
-        hifiSparks.push({
-          x: w * 0.2 + Math.random() * (w * 0.6),
-          y: bottomY - 40 - Math.random() * 60,
-          vx: (Math.random() - 0.5) * 2,
-          vy: -2 - Math.random() * 4,
-          life: 1.0,
-          color: Math.random() > 0.5 ? '#ff4f00' : '#ec4899'
-        });
-      }
-    }
-
-    // Render Sparks
-    for (let s = hifiSparks.length - 1; s >= 0; s--) {
-      const sp = hifiSparks[s];
-      sp.x += sp.vx;
-      sp.y += sp.vy;
-      sp.life -= 0.035;
-      if (sp.life <= 0) {
-        hifiSparks.splice(s, 1);
-        continue;
-      }
-      ctx.beginPath();
-      ctx.arc(sp.x, sp.y, 2 * sp.life, 0, Math.PI * 2);
-      ctx.fillStyle = sp.color;
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = sp.color;
-      ctx.fill();
-    }
-
-    // 36 Google M3 Rounded Spectrum Bars & Gravity Deceleration Caps
-    for (let i = 0; i < numBars; i++) {
-      const x = gap + i * (barWidth + gap);
-      const rawLevel = (levels.frequencies && levels.frequencies[i * 3]) ? levels.frequencies[i * 3] / 255 : (Math.sin(i * 0.3) * 0.5 + 0.5) * (isPlaying ? levels.energy : 0.15);
-      const targetH = isPlaying ? Math.max(6, rawLevel * 125 * (1 + levels.bass * 0.3)) : 6;
+    for (let i = 0; i < hifiBands; i++) {
+      const x = padX + i * bandW;
+      const freqNorm = i / (hifiBands - 1);
       
-      const peak = hifiPeaks[i];
-      if (targetH > peak.y) {
-        peak.y = targetH;
-        peak.vel = 0;
+      let amp = 0.15;
+      if (isPlaying) {
+        if (freqNorm < 0.3) amp = levels.bass * 1.35 * (1 - freqNorm * 0.8);
+        else if (freqNorm < 0.7) amp = levels.mid * 1.15;
+        else amp = levels.treble * 1.3;
+        amp += Math.sin(freqNorm * 8 + Date.now() * 0.005) * 0.1;
+      }
+      amp = Math.max(0.08, Math.min(1.0, amp));
+
+      const litSegments = Math.round(amp * numSegments);
+
+      if (litSegments >= hifiPeakLeds[i]) {
+        hifiPeakLeds[i] = litSegments;
+        hifiDecays[i] = 0;
       } else {
-        peak.vel += 0.45; // Gravity
-        peak.y = Math.max(0, peak.y - peak.vel);
+        hifiDecays[i] += 0.25;
+        hifiPeakLeds[i] = Math.max(litSegments, hifiPeakLeds[i] - hifiDecays[i]);
       }
 
-      const y = bottomY - targetH;
+      for (let s = 0; s < numSegments; s++) {
+        const sy = baseY - (s + 1) * segH;
+        const isLit = s < litSegments;
+        const isPeak = s === Math.round(hifiPeakLeds[i]) && isLit;
 
-      // Bar Body (Google M3 Pill Shape)
-      ctx.save();
-      ctx.beginPath();
-      ctx.roundRect(x, y, barWidth, targetH, 3);
-      const barGrad = ctx.createLinearGradient(x, y, x, bottomY);
-      barGrad.addColorStop(0, '#ff4f00');
-      barGrad.addColorStop(0.5, '#ec4899');
-      barGrad.addColorStop(1, '#8b5cf6');
-      ctx.fillStyle = barGrad;
-      ctx.shadowBlur = isPlaying && rawLevel > 0.4 ? 12 : 2;
-      ctx.shadowColor = '#ff4f00';
-      ctx.fill();
-      ctx.restore();
+        let col = '#10b981';
+        if (s >= 14) col = '#ef4444';
+        else if (s >= 9) col = '#f59e0b';
 
-      // Precision Floating Peak Cap
-      const peakY = bottomY - peak.y - 4;
-      ctx.save();
-      ctx.beginPath();
-      ctx.roundRect(x, peakY, barWidth, 2.5, 1.2);
-      ctx.fillStyle = '#ffffff';
-      ctx.shadowBlur = 6;
-      ctx.shadowColor = '#ffffff';
-      ctx.fill();
-      ctx.restore();
+        ctx.save();
+        ctx.beginPath();
+        ctx.roundRect(x, sy + 1.5, barW, segH - 3, [2]);
+        if (isLit) {
+          ctx.fillStyle = col;
+          ctx.shadowBlur = isPeak ? 10 : 4;
+          ctx.shadowColor = col;
+          ctx.globalAlpha = 1.0;
+        } else {
+          ctx.fillStyle = col;
+          ctx.globalAlpha = 0.08;
+        }
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+  }
+
+  // ─── 5. 🎉 RAZER CHROMA LASER BREAKOUT PARTY ───
+  let chromaAngle = 0;
+  const chromaParticles = Array.from({ length: 64 }, () => ({
+    x: 0, y: 0, vx: 0, vy: 0, life: 0, maxLife: 1, size: 2, color: '#ff0055'
+  }));
+
+  function drawRazerChromaParty(ctx, w, h, levels, isPlaying) {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#05060c';
+    ctx.fillRect(0, 0, w, h);
+
+    const cx = w / 2;
+    const cy = h / 2;
+    chromaAngle += isPlaying ? 0.03 + levels.energy * 0.05 : 0.01;
+
+    // 1. 360-Degree Rainbow Chroma Edge Rim
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(0, 0, w, h);
+    const rimGrad = ctx.createConicGradient(chromaAngle, cx, cy);
+    rimGrad.addColorStop(0, '#ff0000');
+    rimGrad.addColorStop(0.2, '#ffff00');
+    rimGrad.addColorStop(0.4, '#00ff00');
+    rimGrad.addColorStop(0.6, '#00ffff');
+    rimGrad.addColorStop(0.8, '#0000ff');
+    rimGrad.addColorStop(1, '#ff0000');
+    ctx.strokeStyle = rimGrad;
+    ctx.lineWidth = 4 + levels.bass * 6;
+    ctx.shadowBlur = 18 + levels.bass * 20;
+    ctx.shadowColor = '#00ffff';
+    ctx.stroke();
+    ctx.restore();
+
+    // 2. Exploding Kick Drum Confetti Particles
+    if (isPlaying && levels.bass > 0.65) {
+      for (let k = 0; k < 6; k++) {
+        const p = chromaParticles.find(p => p.life <= 0);
+        if (p) {
+          p.x = cx;
+          p.y = cy;
+          const ang = Math.random() * Math.PI * 2;
+          const spd = 3 + Math.random() * 8 * levels.bass;
+          p.vx = Math.cos(ang) * spd;
+          p.vy = Math.sin(ang) * spd;
+          p.life = 1.0;
+          p.maxLife = 0.5 + Math.random() * 0.5;
+          p.size = 2 + Math.random() * 3.5;
+          p.color = ['#ff0055', '#00f0ff', '#ffe600', '#00ff66', '#a855f7'][Math.floor(Math.random() * 5)];
+        }
+      }
     }
 
-    // Polished Glass Reflection Baseline
+    chromaParticles.forEach(p => {
+      if (p.life > 0) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.12;
+        p.life -= 0.02;
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = p.color;
+        ctx.globalAlpha = Math.max(0, p.life);
+        ctx.fill();
+        ctx.restore();
+      }
+    });
+
+    // 3. Central Laser Shockwave Rings
+    const ringR = Math.min(w, h) * 0.25 * (1 + levels.bass * 0.4);
     ctx.save();
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
-    ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(0, bottomY + 2);
-    ctx.lineTo(w, bottomY + 2);
+    ctx.arc(cx, cy, ringR, 0, Math.PI * 2);
+    ctx.strokeStyle = '#00f0ff';
+    ctx.lineWidth = 3;
+    ctx.shadowBlur = 20;
+    ctx.shadowColor = '#00f0ff';
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(cx, cy, ringR * 0.65, 0, Math.PI * 2);
+    ctx.strokeStyle = '#ff0055';
+    ctx.lineWidth = 2;
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = '#ff0055';
     ctx.stroke();
     ctx.restore();
   }
 
-  function prepareCanvas(canvas) {
-    if (!canvas) return null;
-    const parent = canvas.parentElement;
-    const w = parent ? (parent.clientWidth || 340) : (canvas.clientWidth || 340);
-    const h = parent ? (parent.clientHeight || 340) : (canvas.clientHeight || 340);
-    if (w <= 0 || h <= 0) return null;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    if (canvas.width !== w * dpr || canvas.height !== h * dpr) {
-      canvas.width = w * dpr;
-      canvas.height = h * dpr;
-    }
-    const ctx = canvas.getContext('2d');
-    if (ctx) {
-      ctx.setTransform(1, 0, 0, 1, 0, 0);
-      ctx.scale(dpr, dpr);
-    }
-    return { ctx, width: w, height: h };
-  }
-
-  // ═══ 60FPS AUDIO REACTIVITY RENDER LOOP ═══
+  // ─── 6. 💽 MASTER ANIMATION DISPATCHER (120FPS RAF) ───
   function updateAudioReactivity() {
-    const state = engine.getState();
-    const levels = engine.getAudioLevels ? engine.getAudioLevels() : { bass: 0, mid: 0, treble: 0, energy: 0, frequencies: [] };
-    const isPlaying = state.isPlaying;
+    if (window.engine) {
+      const levels = engine.getLevels ? engine.getLevels() : { bass: 0.1, mid: 0.1, treble: 0.1, energy: 0.1 };
+      const state = engine.getState ? engine.getState() : { isPlaying: false };
+      const isPlaying = state.isPlaying;
 
-    if (currentDeckMode === 'vinyl' || currentDeckMode === 'song') {
-      // 1. 🌈 M3 & iOS 28 Wave Equalizer (Exact Mockup: 1000260681.jpg - DEFAULT)
-      if (currentCenterpieceStyle === 'equalizer' && equalizerCanvas) {
-        const c = prepareCanvas(equalizerCanvas);
-        if (c && c.ctx) drawM3iOS28Equalizer(c.ctx, c.width, c.height, levels, isPlaying);
-      }
-
-      // 2. 🍏 iOS 28 Siri Dynamic Liquid Glass Orb
-      if (currentCenterpieceStyle === 'orb' && orbCanvas) {
-        const c = prepareCanvas(orbCanvas);
-        if (c && c.ctx) drawFluidOrb(c.ctx, c.width, c.height, levels, isPlaying);
-      }
-
-      // 3. 🎨 Google Material 3 Expressive Dynamic Fluid Ribbons
-      if (currentCenterpieceStyle === 'm3' && m3Canvas) {
-        const c = prepareCanvas(m3Canvas);
-        if (c && c.ctx) drawM3Expressive(c.ctx, c.width, c.height, levels, isPlaying);
-      }
-
-      // 4. 🫧 Spatial Fluid Glass Metaballs & Audio Plasma
-      if (currentCenterpieceStyle === 'blobs' && blobsCanvas) {
-        const c = prepareCanvas(blobsCanvas);
-        if (c && c.ctx) drawSpatialBlobs(c.ctx, c.width, c.height, levels, isPlaying);
-      }
-
-      // 5. ⚡ 2028 Precision M3 Hi-Fi Fluid Spectrum
-      if (currentCenterpieceStyle === 'hifi' && hifiCanvas) {
-        const c = prepareCanvas(hifiCanvas);
-        if (c && c.ctx) drawM3HiFiSpectrum(c.ctx, c.width, c.height, levels, isPlaying);
-      }
-
-      // 6. 💽 Dynamic Luxe Holographic Vinyl Platter
-      if (currentCenterpieceStyle === 'vinyl' && els.deckVinyl) {
-        const wrapper = document.getElementById('deck-vinyl-wrapper');
-        if (isPlaying) {
-          els.deckVinyl.classList.remove('paused');
-          els.deckVinyl.style.animationPlayState = 'running';
-          if (wrapper) {
-            const scale = 1.0 + levels.bass * 0.05;
-            wrapper.style.transform = `scale(${scale})`;
+      if (currentCenterpieceStyle === 'equalizer' && equalizerCanvas && equalizerCtx) {
+        if (equalizerCanvas.width !== equalizerCanvas.clientWidth) {
+          equalizerCanvas.width = equalizerCanvas.clientWidth || 300;
+          equalizerCanvas.height = equalizerCanvas.clientHeight || 300;
+        }
+        drawM3iOS28Equalizer(equalizerCtx, equalizerCanvas.width, equalizerCanvas.height, levels, isPlaying);
+      } else if (currentCenterpieceStyle === 'horizon' && horizonCanvas && horizonCtx) {
+        if (horizonCanvas.width !== horizonCanvas.clientWidth) {
+          horizonCanvas.width = horizonCanvas.clientWidth || 300;
+          horizonCanvas.height = horizonCanvas.clientHeight || 300;
+        }
+        drawCyberpunkHorizon(horizonCtx, horizonCanvas.width, horizonCanvas.height, levels, isPlaying);
+      } else if (currentCenterpieceStyle === 'orb' && orbCanvas && orbCtx) {
+        if (orbCanvas.width !== orbCanvas.clientWidth) {
+          orbCanvas.width = orbCanvas.clientWidth || 300;
+          orbCanvas.height = orbCanvas.clientHeight || 300;
+        }
+        drawLiquidQuantumOrb(orbCtx, orbCanvas.width, orbCanvas.height, levels, isPlaying);
+      } else if (currentCenterpieceStyle === 'hifi' && hifiCanvas && hifiCtx) {
+        if (hifiCanvas.width !== hifiCanvas.clientWidth) {
+          hifiCanvas.width = hifiCanvas.clientWidth || 300;
+          hifiCanvas.height = hifiCanvas.clientHeight || 300;
+        }
+        drawStudioHifiAnalyzer(hifiCtx, hifiCanvas.width, hifiCanvas.height, levels, isPlaying);
+      } else if (currentCenterpieceStyle === 'chroma' && chromaCanvas && chromaCtx) {
+        if (chromaCanvas.width !== chromaCanvas.clientWidth) {
+          chromaCanvas.width = chromaCanvas.clientWidth || 300;
+          chromaCanvas.height = chromaCanvas.clientHeight || 300;
+        }
+        drawRazerChromaParty(chromaCtx, chromaCanvas.width, chromaCanvas.height, levels, isPlaying);
+      } else if (currentCenterpieceStyle === 'vinyl') {
+        const artEl = document.getElementById('deck-vinyl-art');
+        if (artEl) {
+          if (isPlaying) {
+            const scale = 1.0 + levels.bass * 0.04;
+            artEl.style.transform = `scale(${scale})`;
+          } else {
+            artEl.style.transform = 'scale(1.0)';
           }
-        } else {
-          els.deckVinyl.classList.add('paused');
-          els.deckVinyl.style.animationPlayState = 'paused';
-          if (wrapper) wrapper.style.transform = 'scale(0.96)';
         }
       }
     }

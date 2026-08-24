@@ -2388,34 +2388,32 @@
                 <div class="c1-stage-art" id="deck-vinyl-art" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80');"></div>
               </div>
 
-              <!-- Equalizer Display -->
-              <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#0a0c16] rounded-[24px] hidden">
+              <!-- 1. Vinyl / Album Artwork -->
+              <!-- (deck-display-vinyl is handled by #deck-vinyl-art container) -->
+
+              <!-- 2. M3 & iOS 28 Dual-Wave Harmonic Spectrum -->
+              <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#090b14] rounded-[24px] hidden">
                 <canvas id="deck-reactive-equalizer-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- Siri Orb Display -->
-              <div id="deck-display-orb" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#07050e] rounded-[24px] hidden">
+              <!-- 3. Cyberpunk 3D Neon Horizon -->
+              <div id="deck-display-horizon" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#06040f] rounded-[24px] hidden">
+                <canvas id="deck-reactive-horizon-canvas" class="w-full h-full block"></canvas>
+              </div>
+
+              <!-- 4. Gemini Liquid Quantum Orb -->
+              <div id="deck-display-orb" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#060610] rounded-[24px] hidden">
                 <canvas id="deck-reactive-orb-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- M3 Display -->
-              <div id="deck-display-m3" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#09050d] rounded-[24px] hidden">
-                <canvas id="deck-reactive-m3-canvas" class="w-full h-full block"></canvas>
-              </div>
-
-              <!-- Blobs Display -->
-              <div id="deck-display-blobs" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#050b14] rounded-[24px] hidden">
-                <canvas id="deck-reactive-blobs-canvas" class="w-full h-full block"></canvas>
-              </div>
-
-                            <!-- Chroma Breakout & Confetti Particle Physics Visualizer -->
-              <div id="deck-display-chroma" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#06070d] rounded-[26px] hidden">
-                <canvas id="deck-reactive-chroma-canvas" class="w-full h-full block"></canvas>
-              </div>
-
-              <!-- Hi-Fi Display -->
-              <div id="deck-display-hifi" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#08060c] rounded-[24px] hidden">
+              <!-- 5. Studio Hi-Fi LED Peak Analyzer -->
+              <div id="deck-display-hifi" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#070913] rounded-[24px] hidden">
                 <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block"></canvas>
+              </div>
+
+              <!-- 6. Razer Chroma Laser Breakout Party -->
+              <div id="deck-display-chroma" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#05060c] rounded-[24px] hidden">
+                <canvas id="deck-reactive-chroma-canvas" class="w-full h-full block"></canvas>
               </div>
 
               <!-- Video Player Slot -->
@@ -2702,10 +2700,24 @@
             </div>
           </div>
 
+          <!-- Creator & Executive Producer Badge (Jerry Jerz) -->
+          <div class="c1-now-playing-card p-4 rounded-[22px] flex items-center justify-between text-left mb-2">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center text-lg" style="background: #e2eaf4; box-shadow: inset 2px 2px 4px #c2cee0, inset -2px -2px 4px #ffffff;">
+                👑
+              </div>
+              <div>
+                <p class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Executive Producer & Creator</p>
+                <p class="text-sm font-black text-slate-900 tracking-tight">Jerry Jerz</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-200">JUICEBX</span>
+          </div>
+
           <!-- 999 Tribute Footer -->
-          <div class="text-center pt-2 pb-4 cursor-pointer active:scale-95 transition-transform" id="settings-tribute-link">
+          <div class="text-center pt-1 pb-4 cursor-pointer active:scale-95 transition-transform" id="settings-tribute-link">
             <span class="text-xs font-bold tracking-widest text-purple-600">🕊️ 999 FOREVER</span>
-            <p class="text-[10px] font-medium mt-0.5 text-slate-500">A Tribute to Jarad Higgins (Juice WRLD)</p>
+            <p class="text-[10px] font-medium mt-0.5 text-slate-500">A Tribute to Jarad Higgins (Juice WRLD) • Conceived by Jerry Jerz</p>
           </div>
 
           </div>
