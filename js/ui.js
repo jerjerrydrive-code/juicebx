@@ -1,3 +1,8 @@
+// ═══ GLOBAL JUICE ENGINE BINDING ═══
+let engine = typeof window !== 'undefined' ? (window.JuiceEngine || window.engine) : null;
+// ═══ GLOBAL JUICE ENGINE BINDING ═══
+const getEngine = () => window.engine || window.JuiceEngine;
+
 
   // ═══ MASTER GENRE SHUFFLE CONTROLLER (1,400+ VERIFIED TRACKS) ═══
   window.launchGenreShuffle = function(genreKey) {
@@ -142,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('engine:ready', dismissSplashScreen);
   setTimeout(dismissSplashScreen, 1200);
 
-  const engine = window.JuiceEngine; window.engine = engine;
+  engine = window.JuiceEngine || window.engine || engine; window.engine = engine;
   if (!engine) { console.error("JuiceEngine not found."); return; }
 
   // iOS Safari Audio Context Unlocker
@@ -3792,7 +3797,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createThemeSwatch(quad, isFavorite = false) {
       const btn = document.createElement('button');
-      btn.className = 'accent-swatch w-10 h-10 rounded-full flex flex-row p-0 overflow-hidden shrink-0 border-2 border-white/20 shadow-md transition-transform active:scale-90 cursor-pointer relative';
+      btn.className = 'accent-swatch theme-swatch w-10 h-10 rounded-full flex flex-row p-0 overflow-hidden shrink-0 border-2 border-white/20 shadow-md transition-transform active:scale-90 cursor-pointer relative';
       btn._quad = [...quad];
       btn.setAttribute('title', `Palette: ${quad.join(', ')} (Tap to select, Tap again to cycle 4 colors, Hold to save)`);
 
@@ -4095,7 +4100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clean first boot appearance
     if (els.deckTrackTitle) els.deckTrackTitle.innerText = "Juice WRLD 999";
     if (els.deckTrackArtist) els.deckTrackArtist.innerText = "Tap any shuffle to start";
-    if (els.deckVinylArt) els.deckVinylArt.style.backgroundImage = "url('999_rose_heart_logo.png')";
+    if (els.deckVinylArt) els.deckVinylArt.style.backgroundImage = "url('logo.png')";
   }
 
 

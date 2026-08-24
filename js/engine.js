@@ -1775,21 +1775,17 @@ window.JuiceEngine = (() => {
     },
 
     prev: () => {
-
       if (state.queue.length === 0) return;
-
       if (state.currentTime > 3) {
-
         api.seek(0);
-
       } else {
-
         const prevIndex = (state.currentIndex - 1 + state.queue.length) % state.queue.length;
-
         loadTrack(prevIndex, true);
-
       }
+    },
 
+    previous: () => {
+      api.prev();
     },
 
     seek: (seconds) => {
