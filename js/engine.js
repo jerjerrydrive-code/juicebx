@@ -577,9 +577,8 @@ window.JuiceEngine = (() => {
         showinfo: 0,
         playsinline: 1
       };
-      if (window.location.origin && window.location.origin.startsWith('http')) {
-        playerVars.origin = window.location.origin;
-      }
+      playerVars.origin = 'https://www.youtube.com';
+      playerVars.host = 'https://www.youtube.com';
 
       ytPlayer = new window.YT.Player(targetId, {
         height: '100%',

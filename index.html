@@ -50,6 +50,59 @@
   </script>
   
   <style>
+    /* ═══ HIGH-CONTRAST LIGHT & DARK MODE THEME SYSTEM ═══ */
+    :root, html.light {
+      --c1-bg: #ebf0f7;
+      --c1-surface: #ebf0f7;
+      --c1-surface-sunken: #e2eaf4;
+      --c1-text-main: #0f172a;
+      --c1-text-sub: #475569;
+      --c1-text-muted: #94a3b8;
+      --c1-shadow-dark: #c2cee0;
+      --c1-shadow-light: #ffffff;
+      --c1-blue-bg: #dbe8fc;
+      --c1-blue-text: #2563eb;
+      --c1-blue-shadow: #b8cbe4;
+      --bg-app: #ebf0f7;
+      --bg-card: rgba(255, 255, 255, 0.9);
+      --bg-card-solid: #ebf0f7;
+      --bg-input: #e2eaf4;
+      --bg-nav: rgba(235, 240, 247, 0.92);
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-tertiary: #94a3b8;
+      --border-card: rgba(255, 255, 255, 0.8);
+      --border-input: #cbd5e1;
+      --accent: #2563eb;
+      --accent-glow: rgba(37, 99, 235, 0.25);
+    }
+
+    html.dark, body.dark-mode {
+      --c1-bg: #0b0e17;
+      --c1-surface: #111624;
+      --c1-surface-sunken: #07090f;
+      --c1-text-main: #f8fafc;
+      --c1-text-sub: #94a3b8;
+      --c1-text-muted: #64748b;
+      --c1-shadow-dark: #04060a;
+      --c1-shadow-light: #1c2438;
+      --c1-blue-bg: #1e293b;
+      --c1-blue-text: #60a5fa;
+      --c1-blue-shadow: #0f172a;
+      --bg-app: #0b0e17;
+      --bg-card: rgba(17, 22, 36, 0.85);
+      --bg-card-solid: #111624;
+      --bg-input: #07090f;
+      --bg-nav: rgba(11, 14, 23, 0.92);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-tertiary: #64748b;
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-input: rgba(255, 255, 255, 0.12);
+      --accent: #a855f7;
+      --accent-glow: rgba(168, 85, 247, 0.35);
+    }
+
     :root {
       --pal-1: #a855f7;
       --pal-2: #ff4f00;
@@ -2191,9 +2244,174 @@
       will-change: transform, scroll-position;
     }
 
+
+    /* ═══ MASTER DARK MODE TEXT & CARD CONTRAST FIXES ═══ */
+    html.dark body,
+    body.dark-mode {
+      background: #0b0e17 !important;
+      color: #f8fafc !important;
+    }
+
+    html.dark .c1-now-playing-card,
+    body.dark-mode .c1-now-playing-card,
+    html.dark .glass-card,
+    body.dark-mode .glass-card,
+    html.dark .genre-card,
+    body.dark-mode .genre-card,
+    html.dark .playlist-card,
+    body.dark-mode .playlist-card,
+    html.dark .track-item,
+    body.dark-mode .track-item,
+    html.dark .track-result-item,
+    body.dark-mode .track-result-item,
+    html.dark .modal-card,
+    body.dark-mode .modal-card {
+      background: #111624 !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 6px 6px 18px #04060a, -4px -4px 14px #1c2438 !important;
+      color: #f8fafc !important;
+    }
+
+    html.dark h1, html.dark h2, html.dark h3, html.dark h4,
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4,
+    html.dark .text-slate-900, body.dark-mode .text-slate-900,
+    html.dark .c1-now-playing-title, body.dark-mode .c1-now-playing-title,
+    html.dark .genre-card-title, body.dark-mode .genre-card-title {
+      color: #f8fafc !important;
+    }
+
+    html.dark .text-slate-500, body.dark-mode .text-slate-500,
+    html.dark .text-slate-600, body.dark-mode .text-slate-600,
+    html.dark .text-slate-700, body.dark-mode .text-slate-700,
+    html.dark .c1-now-playing-artist, body.dark-mode .c1-now-playing-artist {
+      color: #94a3b8 !important;
+    }
+
+    html.dark .c1-surface-sunken,
+    body.dark-mode .c1-surface-sunken,
+    html.dark .c1-capsule-queue,
+    body.dark-mode .c1-capsule-queue,
+    html.dark #main-search-input,
+    body.dark-mode #main-search-input,
+    html.dark #library-tabs,
+    body.dark-mode #library-tabs {
+      background: #07090f !important;
+      border-color: rgba(255, 255, 255, 0.06) !important;
+      box-shadow: inset 3px 3px 6px #030407, inset -2px -2px 5px #151c2e !important;
+      color: #f8fafc !important;
+    }
+
+    html.dark .glass-nav,
+    body.dark-mode .glass-nav {
+      background: rgba(11, 14, 23, 0.94) !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    }
+
+    html.dark .c1-btn-favorite-heart,
+    body.dark-mode .c1-btn-favorite-heart,
+    html.dark .c1-capsule-actions,
+    body.dark-mode .c1-capsule-actions {
+      background: #111624 !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 3px 3px 8px #04060a, -2px -2px 6px #1c2438 !important;
+    }
+
+    html.dark #mini-player,
+    body.dark-mode #mini-player {
+      background: #111624 !important;
+      border-color: rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    html.dark #mini-play-btn,
+    body.dark-mode #mini-play-btn {
+      background: #182032 !important;
+      box-shadow: 3px 3px 8px #04060a, -2px -2px 6px #202b44 !important;
+      color: #f8fafc !important;
+    }
+
+    html.dark #mini-play-btn i,
+    body.dark-mode #mini-play-btn i {
+      color: #ffffff !important;
+    }
+
+
+    /* ═══ PERFECT HIGH-CONTRAST DARK & LIGHT MODE SPEC ═══ */
+    body.dark-mode,
+    html.dark body,
+    html.dark {
+      --bg-app: radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--pal-1) 34%, transparent) 0%, transparent 55%),
+                radial-gradient(circle at 85% 25%, color-mix(in srgb, var(--pal-2) 34%, transparent) 0%, transparent 60%),
+                radial-gradient(circle at 50% 80%, color-mix(in srgb, var(--pal-3) 34%, transparent) 0%, transparent 65%),
+                #080a12 !important;
+      --text-primary: #ffffff !important;
+      --text-secondary: #cbd5e1 !important;
+      --text-tertiary: #94a3b8 !important;
+      --c1-text-main: #ffffff !important;
+      --c1-text-sub: #cbd5e1 !important;
+      --c1-text-muted: #94a3b8 !important;
+      --c1-surface: #141a2e !important;
+      --c1-surface-sunken: #090c16 !important;
+      --c1-shadow-dark: #04060b !important;
+      --c1-shadow-light: #1e2642 !important;
+      --bg-card: rgba(20, 26, 46, 0.95) !important;
+      --bg-card-solid: #141a2e !important;
+      --bg-input: #090c16 !important;
+      --border-card: rgba(255, 255, 255, 0.12) !important;
+      --border-input: rgba(255, 255, 255, 0.15) !important;
+    }
+
+    body.dark-mode p,
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode span,
+    html.dark p,
+    html.dark h1,
+    html.dark h2,
+    html.dark h3,
+    html.dark h4 {
+      color: inherit;
+    }
+
+    body.dark-mode .glass-card,
+    body.dark-mode .c1-now-playing-card,
+    body.dark-mode .genre-card,
+    body.dark-mode .playlist-card,
+    body.dark-mode .track-item,
+    body.dark-mode .track-result-item {
+      background: var(--c1-surface) !important;
+      color: #ffffff !important;
+    }
+
+
+    html.dark .juicebx-logo,
+    body.dark-mode .juicebx-logo,
+    html.dark img[src*="logo.png"],
+    body.dark-mode img[src*="logo.png"] {
+      filter: brightness(0) invert(1) !important;
+    }
+
   </style>
 </head>
 <body class="light-mode h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
+  <!-- ═══ JUICEBX FIRST-BOOT SPLASH SCREEN & LOADING ANIMATION ═══ -->
+  <div id="app-splash-screen" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center select-none transition-opacity duration-500" style="background: #0b0e17;">
+    <div class="relative flex flex-col items-center">
+      <!-- Pulsing Glow Halo -->
+      <div class="absolute w-44 h-44 rounded-full filter blur-3xl opacity-40 animate-pulse" style="background: radial-gradient(circle, #a855f7, #ff4f00);"></div>
+      <!-- Official JuiceBx Logo -->
+      <img src="logo.png" alt="JuiceBx" class="relative w-28 h-28 object-contain drop-shadow-[0_0_25px_rgba(168,85,247,0.6)] animate-pulse">
+      <div class="mt-5 flex flex-col items-center">
+        <h2 class="text-lg font-black tracking-wider text-white">JUICE<span style="color: #ff4f00;">BX</span></h2>
+        <div class="w-36 h-1.5 bg-white/10 rounded-full mt-3 overflow-hidden">
+          <div id="splash-progress-bar" class="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-full w-0 transition-all duration-700"></div>
+        </div>
+        <p id="splash-status-text" class="text-[10px] font-bold text-white/50 tracking-wider mt-2 uppercase">Readying Your Music...</p>
+      </div>
+    </div>
+  </div>
 
     <!-- MAIN APP CONTAINER (Flex Column to guarantee nav bar is always inside visible screen) -->
   <div id="app-frame" class="relative flex flex-col w-[100vw] h-[100dvh] max-w-[100vw] max-h-[100dvh] overflow-hidden" style="background: var(--bg-app);">
@@ -2691,6 +2909,15 @@
 
             <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
               <div>
+                <p class="font-semibold text-sm" style="color: var(--text-primary);">Touch Sound Effects</p>
+                <p class="text-[11px]" style="color: var(--text-secondary);">Audio click feedback on button taps</p>
+              </div>
+              <div class="toggle-switch" id="toggle-touch-haptics">
+                <div class="toggle-knob"></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
+              <div>
                 <p class="font-semibold text-sm" style="color: var(--text-primary);">Remember Session</p>
                 <p class="text-[11px]" style="color: var(--text-secondary);">Restore song & queue on boot</p>
               </div>
@@ -2717,7 +2944,7 @@
           <!-- 999 Tribute Footer -->
           <div class="text-center pt-1 pb-4 cursor-pointer active:scale-95 transition-transform" id="settings-tribute-link">
             <span class="text-xs font-bold tracking-widest text-purple-600">🕊️ 999 FOREVER</span>
-            <p class="text-[10px] font-medium mt-0.5 text-slate-500">A Tribute to Jarad Higgins (Juice WRLD) • Conceived by Jerry Jerz</p>
+            <p class="text-[10px] font-medium mt-0.5 text-slate-500">A Tribute to Jarad Higgins (Juice WRLD) </p>
           </div>
 
           </div>

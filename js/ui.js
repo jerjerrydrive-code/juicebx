@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ═══ SPLASH SCREEN DISMISS CONTROLLER ═══
+  const splashScreen = document.getElementById('app-splash-screen');
+  const splashProgressBar = document.getElementById('splash-progress-bar');
+  const splashStatusText = document.getElementById('splash-status-text');
+
+  if (splashProgressBar) splashProgressBar.style.width = '60%';
+
+  function dismissSplashScreen() {
+    if (splashProgressBar) splashProgressBar.style.width = '100%';
+    if (splashStatusText) splashStatusText.textContent = 'Ready';
+    setTimeout(() => {
+      if (splashScreen) {
+        splashScreen.style.opacity = '0';
+        setTimeout(() => splashScreen.remove(), 500);
+      }
+    }, 450);
+  }
+
+  // Dismiss on engine ready or fallback after 1.2s
+  window.addEventListener('engine:ready', dismissSplashScreen);
+  setTimeout(dismissSplashScreen, 1200);
+
   const engine = window.JuiceEngine; window.engine = engine;
   if (!engine) { console.error("JuiceEngine not found."); return; }
 
@@ -1762,25 +1785,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ═══ THEME TOGGLE (Light/Dark) ═══
-  if (els.toggleLightMode) {
-    const savedTheme = localStorage.getItem('juicebx_theme');
-    if (savedTheme === 'light') {
+  // ═══ THEME TOGGLE (Light/Dark High-Contrast) ═══
+  function applyThemeMode(theme) {
+    const isLight = (theme === 'light');
+    if (isLight) {
       document.documentElement.classList.remove('dark');
       document.documentElement.classList.add('light');
-      els.toggleLightMode.classList.add('active');
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
+      document.body.style.background = '#ebf0f7';
+      if (els.toggleLightMode) els.toggleLightMode.classList.add('active');
+    } else {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+      document.body.classList.remove('light-mode');
+      document.body.classList.add('dark-mode');
+      document.body.style.background = '#0b0e17';
+      if (els.toggleLightMode) els.toggleLightMode.classList.remove('active');
     }
+    localStorage.setItem('juicebx_theme', theme);
+  }
+
+  const initialTheme = localStorage.getItem('juicebx_theme') || 'light';
+  applyThemeMode(initialTheme);
+
+  if (els.toggleLightMode) {
     els.toggleLightMode.addEventListener('click', () => {
-      const isLight = els.toggleLightMode.classList.toggle('active');
-      if (isLight) {
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
-        localStorage.setItem('juicebx_theme', 'light');
-      } else {
-        document.documentElement.classList.remove('light');
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('juicebx_theme', 'dark');
-      }
+      const current = localStorage.getItem('juicebx_theme') || 'light';
+      const nextTheme = (current === 'light') ? 'dark' : 'light';
+      applyThemeMode(nextTheme);
+      engine.playHaptic(500, 0.02);
       refreshCurrentLibrary();
     });
   }
@@ -4505,6 +4539,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+
+  
+  // ═══ TOUCH SOUND EFFECTS (HAPTICS) TOGGLE ═══
+  const toggleTouchHaptics = document.getElementById('toggle-touch-haptics') || document.getElementById('toggle-haptics');
+  if (toggleTouchHaptics) {
+    const isHapticsOn = localStorage.getItem('juicebx_haptics') === 'true'; // Default OFF for clean silent operation
+    toggleTouchHaptics.classList.toggle('active', isHapticsOn);
+    if (engine && typeof engine.setHaptics === 'function') {
+      engine.setHaptics(isHapticsOn);
+    }
+    toggleTouchHaptics.addEventListener('click', () => {
+      const active = toggleTouchHaptics.classList.toggle('active');
+      localStorage.setItem('juicebx_haptics', active ? 'true' : 'false');
+      if (engine && typeof engine.setHaptics === 'function') {
+        engine.setHaptics(active);
+      }
+      if (active) engine.playHaptic(600, 0.02);
+    });
+  }
 
   const toggleSkipSkits = document.getElementById('toggle-skip-video-skits');
   if (toggleSkipSkits) {
