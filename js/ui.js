@@ -2489,7 +2489,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('engine:progress', (e) => {
-    if (isDragging) return;
+    if (typeof isScrubberDragging !== "undefined" && isScrubberDragging) return;
     const { currentTime, duration } = e.detail || {};
     const cur = (typeof currentTime === 'number' && !isNaN(currentTime)) ? Math.max(0, currentTime) : 0;
     const dur = (typeof duration === 'number' && !isNaN(duration)) ? Math.max(0, duration) : 0;
@@ -4510,3 +4510,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Auto-init Chroma Breakout engine
   setTimeout(initChromaBreakoutVisualizer, 100);
+
+
+
+  // ═══ BULLETPROOF SCRUBBER SEEK CONTROLLER (CLICK & DRAG TO SEEK) ═══
+  const scrubberBar = document.getElementById('deck-scrubber-container') || document.querySelector('.c1-scrubber-groove');
+  const scrubberFill = document.getElementById('deck-scrubber-fill');
+  const scrubberThumb = document.getElementById('deck-scrubber-thumb');
+  let isScrubberDragging = false;
+
+  function performScrubberSeek(e) {
+    if (!scrubberBar) return;
+    const rect = scrubberBar.getBoundingClientRect();
+    const clientX = (e.touches && e.touches.length > 0) ? e.touches[0].clientX : e.clientX;
+    const offsetX = Math.max(0, Math.min(rect.width, clientX - rect.left));
+    const fraction = rect.width > 0 ? (offsetX / rect.width) : 0;
+    const state = engine.getState();
+    const curTrack = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
+    const dur = (state.duration && state.duration > 0) ? state.duration : (curTrack && curTrack.seconds ? curTrack.seconds : 0);
+
+    const targetSeconds = fraction * dur;
+
+    if (scrubberFill) {
+      scrubberFill.style.width = `${fraction * 100}%`;
+      scrubberFill.style.transform = `scaleX(${fraction})`;
+    }
+    if (scrubberThumb) {
+      scrubberThumb.style.left = `${fraction * 100}%`;
+    }
+    if (els.deckTimeCurrent && dur > 0) {
+      els.deckTimeCurrent.innerText = formatTime(targetSeconds);
+    }
+    if (els.deckTimeTotal && dur > 0) {
+      els.deckTimeTotal.innerText = `-${formatTime(Math.max(0, dur - targetSeconds))}`;
+    }
+
+    return targetSeconds;
+  }
+
+  if (scrubberBar) {
+    scrubberBar.style.cursor = 'pointer';
+    scrubberBar.addEventListener('pointerdown', (e) => {
+      isScrubberDragging = true;
+      const targetSec = performScrubberSeek(e);
+      if (typeof targetSec === 'number' && !isNaN(targetSec)) {
+        engine.seek(targetSec);
+        engine.playHaptic(500, 0.02);
+      }
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      if (isScrubberDragging) {
+        performScrubberSeek(e);
+      }
+    });
+
+    window.addEventListener('pointerup', (e) => {
+      if (isScrubberDragging) {
+        isScrubberDragging = false;
+        const targetSec = performScrubberSeek(e);
+        if (typeof targetSec === 'number' && !isNaN(targetSec)) {
+          engine.seek(targetSec);
+        }
+      }
+    });
+  }

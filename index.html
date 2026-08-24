@@ -2390,7 +2390,7 @@
               <div class="c1-segment-divider"></div>
               <button class="c1-segment-btn lib-tab" data-tab="queue">Queue</button>
               <div class="c1-segment-divider"></div>
-              <button class="c1-segment-btn lib-tab" data-tab="downloads">Downloads</button>
+              
             </div>
 
             <!-- Sub-header -->
@@ -2515,14 +2515,14 @@
           </div>
         </div>
 
-        <!-- ═══ PANEL 4: SETTINGS ═══ -->
+                <!-- ═══ PANEL 4: SETTINGS ═══ -->
         <div id="view-settings" class="app-view min-w-full w-full h-full shrink-0 snap-start overflow-y-auto pb-32 px-4 pt-3.5" style="background: transparent;">
           <div class="w-full max-w-md mx-auto flex flex-col space-y-3.5 pt-1 pb-36">
           
           <!-- Top Bar -->
           <div class="flex items-center justify-between px-1">
             <h1 class="text-2xl font-bold tracking-tight" style="color: var(--text-primary);">Settings</h1>
-            </div>
+          </div>
 
           <!-- 1. Aesthetic Themes (2x2 Quick Swatches Grid + Full 338 Strip) -->
           <div class="glass-card p-4 space-y-3 rounded-[22px]">
@@ -2538,7 +2538,7 @@
             </div>
           </div>
 
-          <!-- 2. System Preferences (Clean Toggles) -->
+          <!-- 2. System Preferences (Clean Toggles: Light Mode & Remember Session) -->
           <div class="glass-card p-4 space-y-3 rounded-[22px]">
             <div class="flex items-center justify-between">
               <div>
@@ -2552,16 +2552,6 @@
 
             <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
               <div>
-                <p class="font-semibold text-sm" style="color: var(--text-primary);">Tactile Haptics</p>
-                <p class="text-[11px]" style="color: var(--text-secondary);">Synthesized click vibrations</p>
-              </div>
-              <div class="toggle-switch active" id="toggle-settings-haptics">
-                <div class="toggle-knob"></div>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
-              <div>
                 <p class="font-semibold text-sm" style="color: var(--text-primary);">Remember Session</p>
                 <p class="text-[11px]" style="color: var(--text-secondary);">Restore song & queue on boot</p>
               </div>
@@ -2569,55 +2559,10 @@
                 <div class="toggle-knob"></div>
               </div>
             </div>
-
-            
-            </div>
-
-            <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
-              <div>
-                <p class="font-semibold text-sm" style="color: var(--text-primary);">Skip Video Skits (Song Mode)</p>
-                <p class="text-[11px]" style="color: var(--text-secondary);">Auto-skip music video dialogue & intros</p>
-              </div>
-              <div class="toggle-switch active" id="toggle-skip-non-music">
-                <div class="toggle-knob"></div>
-              </div>
-            </div>
-
-            
-            </div>
-          </div>
-
-          <!-- 4. Music Storage & Data Management (Exact Mockup Match) -->
-          <div class="glass-card p-4 space-y-2.5 rounded-[22px]">
-            <p class="font-bold text-sm" style="color: var(--text-primary);">Music Storage & Data Management</p>
-            
-            <button id="btn-import-folder-settings" class="w-full py-2.5 px-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all bg-white border border-slate-200 text-slate-800 hover:bg-slate-50 shadow-sm">
-              <i class="ph-bold ph-folder-simple-plus text-sm text-indigo-500"></i> Import Local Audio Files / Folder
-            </button>
-            <input type="file" id="local-folder-input-settings" webkitdirectory directory multiple accept="audio/*" class="hidden">
-
-            <button id="btn-select-storage-directory" class="w-full py-2.5 px-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all bg-white border border-slate-200 text-slate-800 hover:bg-slate-50 shadow-sm">
-              <i class="ph-bold ph-hard-drives text-sm text-emerald-500"></i> Set Offline Download Folder (Direct Disk)
-            </button>
-            <div id="storage-dir-status" class="text-[11px] font-medium px-1 text-slate-500 hidden">
-              Current Folder: <span class="font-mono text-emerald-600 dark:text-emerald-400" id="storage-dir-name">None</span>
-            </div>
-
-            <button id="btn-clear-search-history" class="w-full py-2.5 px-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all bg-white border border-slate-200 text-slate-800 hover:bg-slate-50 shadow-sm">
-              <i class="ph-bold ph-clock-counter-clockwise text-sm text-amber-500"></i> Clear Search History
-            </button>
-
-            <button id="btn-clear-downloads" class="w-full py-2.5 px-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all bg-white border border-slate-200 text-red-600 hover:bg-red-50 shadow-sm">
-              <i class="ph-bold ph-trash text-sm text-red-500"></i> Clear Offline Downloads Cache
-            </button>
-
-            <button id="btn-reset-playlists-settings" class="w-full py-2.5 px-3 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all bg-white border border-slate-200 text-slate-800 hover:bg-slate-50 shadow-sm">
-              <i class="ph-bold ph-arrows-clockwise text-sm text-purple-500"></i> Reset Default Playlists
-            </button>
           </div>
 
           <!-- 999 Tribute Footer -->
-          <div class="text-center pt-1 pb-4 cursor-pointer active:scale-95 transition-transform" id="settings-tribute-link">
+          <div class="text-center pt-2 pb-4 cursor-pointer active:scale-95 transition-transform" id="settings-tribute-link">
             <span class="text-xs font-bold tracking-widest text-purple-600">🕊️ 999 FOREVER</span>
             <p class="text-[10px] font-medium mt-0.5 text-slate-500">A Tribute to Jarad Higgins (Juice WRLD)</p>
           </div>
@@ -2850,7 +2795,7 @@
   <script src="js/engine.js"></script>
   <script src="js/ui.js"></script>
 
-  <!-- ═══ NOW PLAYING ••• ACTION SHEET / MODAL ═══ -->
+    <!-- ═══ NOW PLAYING ••• ACTION SHEET / MODAL ═══ -->
   <div id="modal-deck-options" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200">
     <div class="w-full max-w-sm rounded-t-[32px] sm:rounded-[32px] p-6 space-y-4 shadow-2xl transition-transform duration-200 transform translate-y-full" style="background: var(--bg-card-solid); border: 1px solid var(--border-card);">
       <div class="flex items-center justify-between border-b pb-3" style="border-color: var(--border-card);">
@@ -2862,18 +2807,9 @@
           <i class="ph-bold ph-x"></i>
         </button>
       </div>
-      <div class="space-y-2">
+      <div class="space-y-2.5">
         <button id="btn-opt-add-playlist" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
           <i class="ph-bold ph-playlist text-base text-indigo-400"></i> Add to Playlist
-        </button>
-        <button id="btn-opt-download" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
-          <i class="ph-bold ph-download-simple text-base text-emerald-400"></i> Download / Save Offline
-        </button>
-        <button id="btn-opt-equalizer" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
-          <i class="ph-bold ph-sliders text-base text-purple-400"></i> Audio Equalizer
-        </button>
-        <button id="btn-opt-sleep-timer" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
-          <i class="ph-bold ph-timer text-base text-amber-400"></i> Sleep Timer
         </button>
         <button id="btn-opt-sanctuary" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
           <i class="ph-bold ph-dove text-base text-pink-400"></i> 999 Memorial Sanctuary
