@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try { localStorage.setItem('juicebx_center_style', style); } catch(e) {}
     if (deckStageWindow) deckStageWindow.setAttribute('data-visualizer-style', style);
 
-    if (currentDeckMode === 'vinyl') {
+    if (currentDeckMode === 'vinyl' || currentDeckMode === 'song') {
       if (deckDisplayEqualizer) deckDisplayEqualizer.classList.toggle('hidden', style !== 'equalizer');
       if (deckDisplayOrb) deckDisplayOrb.classList.toggle('hidden', style !== 'orb');
       if (deckDisplayM3) deckDisplayM3.classList.toggle('hidden', style !== 'm3');
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.setCenterpieceStyle = setCenterpieceStyle;
 
   function morphToNextVisualizer() {
-    if (currentDeckMode !== 'vinyl') return;
+    if (currentDeckMode !== 'vinyl' && currentDeckMode !== 'song') return;
     const currentIdx = VISUALIZER_STYLES.indexOf(currentCenterpieceStyle);
     const nextIdx = (currentIdx + 1) % VISUALIZER_STYLES.length;
     const nextStyle = VISUALIZER_STYLES[nextIdx];
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
     deckStageWindow.addEventListener('click', (e) => {
       // Don't morph if clicking on video play overlay or spindle tribute or lyrics nudge
       if (e.target.closest('#deck-spindle-tribute') || e.target.closest('#deck-video-tap-overlay') || e.target.closest('#btn-lyric-nudge-back') || e.target.closest('#btn-lyric-nudge-fwd') || e.target.closest('#btn-lyric-sync-reset')) return;
-      if (currentDeckMode === 'vinyl') {
+      if (currentDeckMode === 'vinyl' || currentDeckMode === 'song') {
         morphToNextVisualizer();
       }
     });
@@ -1111,7 +1111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const levels = engine.getAudioLevels ? engine.getAudioLevels() : { bass: 0, mid: 0, treble: 0, energy: 0, frequencies: [] };
     const isPlaying = state.isPlaying;
 
-    if (currentDeckMode === 'vinyl') {
+    if (currentDeckMode === 'vinyl' || currentDeckMode === 'song') {
       // 1. 🌈 M3 & iOS 28 Wave Equalizer (Exact Mockup: 1000260681.jpg - DEFAULT)
       if (currentCenterpieceStyle === 'equalizer' && equalizerCanvas) {
         const c = prepareCanvas(equalizerCanvas);
@@ -2779,12 +2779,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let tracks = [];
     const isLikedSongs = (playlistId === 'liked_songs');
 
+    const detailIcon = document.getElementById('playlist-detail-icon');
+    const detailArtBox = document.getElementById('playlist-detail-art-box');
+
     if (isLikedSongs) {
       tracks = engine.getFavorites();
       title = "Liked Songs";
       desc = "Your favorite saved tracks";
       if (els.playlistBtnDelete) els.playlistBtnDelete.classList.add('hidden');
+      if (detailIcon) {
+        detailIcon.className = "ph-fill ph-heart text-pink-500 text-2xl drop-shadow-sm";
+      }
+      if (detailArtBox) {
+        detailArtBox.style.background = "#e2eaf4";
+        detailArtBox.style.boxShadow = "inset 3px 3px 6px #c2cee0, inset -3px -3px 6px #ffffff";
+      }
     } else {
+      if (detailIcon) {
+        detailIcon.className = "ph-fill ph-playlist text-blue-600 text-2xl drop-shadow-sm";
+      }
+      if (detailArtBox) {
+        detailArtBox.style.background = "#dbe8fc";
+        detailArtBox.style.boxShadow = "inset 3px 3px 6px #b8cbe4, inset -3px -3px 6px #ffffff";
+      }
       const pl = engine.getPlaylist(playlistId);
       if (!pl) return;
       tracks = pl.tracks || [];
@@ -4570,5 +4587,98 @@ document.addEventListener('DOMContentLoaded', () => {
           engine.seek(targetSec);
         }
       }
+    });
+  }
+
+
+
+  // ═══ DECK OPTIONS MODAL CONTROLLER (••• ACTION SHEET) ═══
+  const deckOptionsModal = document.getElementById('modal-deck-options');
+  const btnDeckMoreOptions = document.getElementById('deck-btn-more-options');
+  const btnCloseDeckOptions = document.getElementById('btn-close-deck-options');
+  const optTrackTitle = document.getElementById('deck-options-track-title');
+  const optTrackArtist = document.getElementById('deck-options-track-artist');
+  let currentModalTrack = null;
+
+  function openDeckOptionsModal(track, index) {
+    const cur = track || (engine.getState().queue[engine.getState().currentIndex]);
+    currentModalTrack = cur;
+    if (optTrackTitle && cur) optTrackTitle.innerText = cur.title || 'Track Options';
+    if (optTrackArtist && cur) optTrackArtist.innerText = cur.artist || 'Juice WRLD';
+
+    if (deckOptionsModal) {
+      deckOptionsModal.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        deckOptionsModal.classList.remove('opacity-0');
+        const sheet = deckOptionsModal.querySelector('div');
+        if (sheet) sheet.classList.remove('translate-y-full');
+      });
+    }
+  }
+  window.openDeckOptionsModal = openDeckOptionsModal;
+
+  function closeDeckOptionsModal() {
+    if (deckOptionsModal) {
+      deckOptionsModal.classList.add('opacity-0');
+      const sheet = deckOptionsModal.querySelector('div');
+      if (sheet) sheet.classList.add('translate-y-full');
+      setTimeout(() => {
+        deckOptionsModal.classList.add('hidden');
+      }, 200);
+    }
+  }
+
+  if (btnDeckMoreOptions) {
+    btnDeckMoreOptions.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openDeckOptionsModal();
+      engine.playHaptic(600, 0.02);
+    });
+  }
+
+  if (btnCloseDeckOptions) {
+    btnCloseDeckOptions.addEventListener('click', closeDeckOptionsModal);
+  }
+
+  if (deckOptionsModal) {
+    deckOptionsModal.addEventListener('click', (e) => {
+      if (e.target === deckOptionsModal) closeDeckOptionsModal();
+    });
+  }
+
+  const btnOptAddPl = document.getElementById('btn-opt-add-playlist');
+  if (btnOptAddPl) {
+    btnOptAddPl.addEventListener('click', () => {
+      closeDeckOptionsModal();
+      if (currentModalTrack && typeof openAddToPlaylistModal === 'function') {
+        openAddToPlaylistModal(currentModalTrack);
+      }
+    });
+  }
+
+  const btnOptSanctuary = document.getElementById('btn-opt-sanctuary');
+  if (btnOptSanctuary) {
+    btnOptSanctuary.addEventListener('click', () => {
+      closeDeckOptionsModal();
+      if (typeof openSanctuaryModal === 'function') openSanctuaryModal();
+    });
+  }
+
+
+
+  const toggleSkipSkits = document.getElementById('toggle-skip-video-skits');
+  if (toggleSkipSkits) {
+    const isSkipEnabled = localStorage.getItem('juicebx_skip_video_skits') !== 'false';
+    toggleSkipSkits.classList.toggle('active', isSkipEnabled);
+    if (engine && typeof engine.setSkipVideoSkits === 'function') {
+      engine.setSkipVideoSkits(isSkipEnabled);
+    }
+    toggleSkipSkits.addEventListener('click', () => {
+      const active = toggleSkipSkits.classList.toggle('active');
+      localStorage.setItem('juicebx_skip_video_skits', active ? 'true' : 'false');
+      if (engine && typeof engine.setSkipVideoSkits === 'function') {
+        engine.setSkipVideoSkits(active);
+      }
+      engine.playHaptic(600, 0.02);
     });
   }

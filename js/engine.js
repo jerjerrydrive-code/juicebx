@@ -125,6 +125,7 @@ window.JuiceEngine = (() => {
     repeat: false,
 
     autoplay: true,
+    skipVideoSkits: (typeof localStorage !== "undefined" ? localStorage.getItem("juicebx_skip_video_skits") !== "false" : true),
 
     isLocalPlaying: false,
 
@@ -1894,6 +1895,9 @@ window.JuiceEngine = (() => {
 
     getPlaybackSpeed: () => state.playbackSpeed || 1.0,
 
+    setSkipVideoSkits: (enabled) => {
+      state.skipVideoSkits = !!enabled;
+    },
     setDeckMode: (mode) => {
       currentDeckMode = mode;
       console.log(`[JuiceEngine] Deck mode switched to: ${mode}`);
