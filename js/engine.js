@@ -2512,28 +2512,16 @@ window.JuiceEngine = (() => {
 
 
 
-        // 1. Try local server lyrics proxy first
-
-        try {
-
-          const res = await fetch(`/api/lyrics?track=${encodeURIComponent(title)}&artist=${encodeURIComponent(artist)}`);
-
-          if (res.ok) {
-
-            const data = await res.json();
-
-            if (data && (data.syncedLyrics || data.plainLyrics)) {
-
-              return data.syncedLyrics || data.plainLyrics;
-
+        if (typeof location !== 'undefined' && location.protocol.startsWith('http') && (location.port === '3000' || location.port === '8080')) {
+          try {
+            const res = await fetch(`/api/lyrics?track=${encodeURIComponent(title)}&artist=${encodeURIComponent(artist)}`);
+            if (res.ok) {
+              const data = await res.json();
+              if (data && (data.syncedLyrics || data.plainLyrics)) {
+                return data.syncedLyrics || data.plainLyrics;
+              }
             }
-
-          }
-
-        } catch (err) {
-
-          console.warn("[JuiceEngine] Server lyrics proxy fallback:", err);
-
+          } catch (err) {}
         }
 
 

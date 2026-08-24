@@ -2670,19 +2670,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (track) openDeckOptionsModal(track, idx);
       });
     });
-  });
-
-    els.libraryList.querySelectorAll('.btn-direct-download').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const tid = btn.getAttribute('data-track-id');
-        const track = list.find(t => t.id === tid);
-        if (track) {
-          engine.downloadTrack(track);
-          btn.innerHTML = '<i class="ph-fill ph-check-circle text-emerald-500 text-base"></i>';
-        }
-      });
-    });
   }
 
   // ═══ PLAYLISTS SUBTAB & DETAIL CONTROLLER ═══
@@ -4525,7 +4512,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const clientX = (e.touches && e.touches.length > 0) ? e.touches[0].clientX : e.clientX;
     const offsetX = Math.max(0, Math.min(rect.width, clientX - rect.left));
     const fraction = rect.width > 0 ? (offsetX / rect.width) : 0;
-    const state = engine.getState();
+    const eng = window.JuiceEngine || window.engine;
+    if (!eng) return;
+    const state = eng.getState();
     const curTrack = (state.queue && state.currentIndex >= 0) ? state.queue[state.currentIndex] : null;
     const dur = (state.duration && state.duration > 0) ? state.duration : (curTrack && curTrack.seconds ? curTrack.seconds : 0);
 
@@ -4538,11 +4527,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (scrubberThumb) {
       scrubberThumb.style.left = `${fraction * 100}%`;
     }
-    if (els.deckTimeCurrent && dur > 0) {
-      els.deckTimeCurrent.innerText = formatTime(targetSeconds);
+    const fmt = (s) => {
+      const sec = Math.max(0, Math.floor(s || 0));
+      const m = Math.floor(sec / 60);
+      const rem = sec % 60;
+      return `${m}:${rem < 10 ? '0' : ''}${rem}`;
+    };
+    const timeCur = document.getElementById('deck-time-current');
+    const timeTot = document.getElementById('deck-time-total');
+    if (timeCur && dur > 0) {
+      timeCur.innerText = fmt(targetSeconds);
     }
-    if (els.deckTimeTotal && dur > 0) {
-      els.deckTimeTotal.innerText = `-${formatTime(Math.max(0, dur - targetSeconds))}`;
+    if (timeTot && dur > 0) {
+      timeTot.innerText = `-${fmt(Math.max(0, dur - targetSeconds))}`;
     }
 
     return targetSeconds;
