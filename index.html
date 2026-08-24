@@ -2403,6 +2403,29 @@
       color: #ffffff !important;
     }
 
+
+    /* ═══ 3D ROTATING VINYL ANIMATION ═══ */
+    @keyframes spin-vinyl-disc {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    #deck-vinyl {
+      animation: spin-vinyl-disc 4s linear infinite;
+      animation-play-state: paused;
+      will-change: transform;
+    }
+    #deck-vinyl.playing {
+      animation-play-state: running;
+    }
+
+
+    .hidden {
+      display: none !important;
+    }
+    .centerpiece-display.hidden {
+      display: none !important;
+    }
+
   </style>
 </head>
 <body class="light-mode h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
@@ -2609,39 +2632,51 @@
 
           <!-- 3. Center Stage (Extruded Squircle Frame with Artwork) -->
           <div class="flex-1 min-h-0 flex items-center justify-center py-1 w-full">
-            <div id="deck-stage-window" class="c1-stage-frame cursor-pointer select-none active:scale-[0.99]" title="Tap to switch visualizer style">
+                        <div id="deck-stage-window" class="c1-stage-frame cursor-pointer select-none active:scale-[0.99]" title="Tap to switch visualizer style">
 
-              <!-- Album Art Display (Exact Concept 1 Default) -->
-              <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex items-center justify-center">
-                <div class="c1-stage-art" id="deck-vinyl-art" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80');"></div>
+              <!-- 1. LUXE 3D HOLOGRAPHIC ROTATING VINYL TURNTABLE -->
+              <div id="deck-display-vinyl" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden">
+                <div id="deck-vinyl-wrapper" class="relative flex items-center justify-center transition-transform duration-300">
+                  <div id="deck-vinyl" class="w-[min(240px,64vw,28vh)] h-[min(240px,64vw,28vh)] rounded-full relative shadow-2xl flex items-center justify-center overflow-hidden" style="background: radial-gradient(circle, #1a1c24 0%, #0d0f14 60%, #050608 100%); border: 3px solid rgba(255, 255, 255, 0.15); box-shadow: 0 12px 36px rgba(0,0,0,0.6), inset 0 0 20px rgba(0,0,0,0.8);">
+                    <!-- Micro Grooves -->
+                    <div class="absolute inset-2 rounded-full border border-white/5 pointer-events-none"></div>
+                    <div class="absolute inset-5 rounded-full border border-white/5 pointer-events-none"></div>
+                    <div class="absolute inset-8 rounded-full border border-white/5 pointer-events-none"></div>
+                    <div class="absolute inset-11 rounded-full border border-white/5 pointer-events-none"></div>
+                    <!-- Holographic Vinyl Sheen Overlay -->
+                    <div class="absolute inset-0 rounded-full pointer-events-none" style="background: conic-gradient(from 45deg, transparent 0deg, rgba(255,255,255,0.12) 60deg, transparent 120deg, rgba(255,255,255,0.12) 240deg, transparent 300deg);"></div>
+                    <!-- Spinning Center Label with Album Artwork -->
+                    <div class="w-[min(96px,26vw,11vh)] h-[min(96px,26vw,11vh)] rounded-full overflow-hidden relative shadow-lg border-2 border-white/80 flex items-center justify-center z-10">
+                      <img id="deck-vinyl-art" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80" class="w-full h-full object-cover" alt="Artwork">
+                      <div class="absolute w-3.5 h-3.5 rounded-full bg-[#050608] border-2 border-white/90 shadow-inner z-20"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <!-- 1. Vinyl / Album Artwork -->
-              <!-- (deck-display-vinyl is handled by #deck-vinyl-art container) -->
-
-              <!-- 2. M3 & iOS 28 Dual-Wave Harmonic Spectrum -->
+              <!-- 2. M3 & iOS 28 DUAL-WAVE HARMONIC SPECTRUM -->
               <div id="deck-display-equalizer" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#090b14] rounded-[24px] hidden">
                 <canvas id="deck-reactive-equalizer-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 3. Cyberpunk 3D Neon Horizon -->
-              <div id="deck-display-horizon" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#06040f] rounded-[24px] hidden">
-                <canvas id="deck-reactive-horizon-canvas" class="w-full h-full block"></canvas>
+              <!-- 3. GOOGLE MATERIAL 3 EXPRESSIVE DYNAMIC FLUID RIBBONS -->
+              <div id="deck-display-m3" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#06040f] rounded-[24px] hidden">
+                <canvas id="deck-reactive-m3-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 4. Gemini Liquid Quantum Orb -->
+              <!-- 4. SIRI / GEMINI DYNAMIC LIQUID QUANTUM ORB -->
               <div id="deck-display-orb" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#060610] rounded-[24px] hidden">
                 <canvas id="deck-reactive-orb-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 5. Studio Hi-Fi LED Peak Analyzer -->
-              <div id="deck-display-hifi" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#070913] rounded-[24px] hidden">
-                <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block"></canvas>
+              <!-- 5. SPATIAL FLUID GLASS METABALLS & AUDIO PLASMA -->
+              <div id="deck-display-blobs" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#070512] rounded-[24px] hidden">
+                <canvas id="deck-reactive-blobs-canvas" class="w-full h-full block"></canvas>
               </div>
 
-              <!-- 6. Razer Chroma Laser Breakout Party -->
-              <div id="deck-display-chroma" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#05060c] rounded-[24px] hidden">
-                <canvas id="deck-reactive-chroma-canvas" class="w-full h-full block"></canvas>
+              <!-- 6. 2028 PRECISION M3 HI-FI FLUID SPECTRUM -->
+              <div id="deck-display-hifi" class="centerpiece-display w-full h-full flex items-center justify-center relative overflow-hidden bg-[#070913] rounded-[24px] hidden">
+                <canvas id="deck-reactive-hifi-canvas" class="w-full h-full block"></canvas>
               </div>
 
               <!-- Video Player Slot -->
@@ -2660,6 +2695,8 @@
                   </div>
                 </div>
               </div>
+
+            </div>
 
             </div>
           </div>
@@ -2722,7 +2759,6 @@
             </button>
           </div>
 
-          </div>
         </div>
 
         <!-- ═══ PANEL 3: DEDICATED LIBRARY & PLAYLISTS ═══ -->

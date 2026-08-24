@@ -2766,6 +2766,28 @@ window.JuiceEngine = (() => {
     }
   });
 
+
+  api.getAudioLevels = function() {
+    if (!state.isPlaying) {
+      return { bass: 0.12, mid: 0.12, treble: 0.12, energy: 0.12, frequencies: [] };
+    }
+    const t = performance.now() * 0.003;
+    const beat = (Math.sin(t * 4.2) + 1) * 0.5;
+    const bass = 0.35 + Math.pow(beat, 2) * 0.55 + Math.sin(t * 8.4) * 0.1;
+    const mid = 0.25 + Math.sin(t * 3.1 + 1.2) * 0.35 + Math.cos(t * 6.2) * 0.15;
+    const treble = 0.20 + Math.sin(t * 5.3 + 2.4) * 0.30 + (Math.random() * 0.1);
+    const energy = (bass * 0.5 + mid * 0.3 + treble * 0.2);
+
+    return {
+      bass: Math.max(0.1, Math.min(1.0, bass)),
+      mid: Math.max(0.1, Math.min(1.0, mid)),
+      treble: Math.max(0.1, Math.min(1.0, treble)),
+      energy: Math.max(0.1, Math.min(1.0, energy)),
+      frequencies: []
+    };
+  };
+  api.getLevels = api.getAudioLevels;
+
   return api;
 
 })();
