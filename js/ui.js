@@ -1,4 +1,68 @@
+
+  // ═══ MASTER GENRE SHUFFLE CONTROLLER (1,400+ VERIFIED TRACKS) ═══
+  window.launchGenreShuffle = function(genreKey) {
+    if (engine && typeof engine.playHaptic === 'function') {
+      engine.playHaptic(600, 0.03);
+    }
+
+    let tracks = [];
+
+    if (typeof TOP_SHUFFLES_CATALOG !== 'undefined') {
+      if (TOP_SHUFFLES_CATALOG[genreKey]) {
+        tracks = TOP_SHUFFLES_CATALOG[genreKey].tracks || [];
+      } else {
+        // Fallback key aliases
+        const normalized = genreKey.toLowerCase().replace(/[^a-z0-9]/g, '_');
+        for (const [k, v] of Object.entries(TOP_SHUFFLES_CATALOG)) {
+          const kNorm = k.toLowerCase().replace(/[^a-z0-9]/g, '_');
+          if (kNorm.includes(normalized) || normalized.includes(kNorm)) {
+            tracks = v.tracks || [];
+            break;
+          }
+        }
+      }
+    }
+
+    if (!tracks || tracks.length === 0) {
+      console.warn("No tracks found for shuffle key:", genreKey);
+      return;
+    }
+
+    // Fisher-Yates Random Shuffle
+    const shuffled = tracks.map(t => ({ ...t }));
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    // Set queue and play track #1 immediately
+    engine.setQueue(shuffled, true);
+    
+    // Jump straight to Player Deck (Panel 2)
+    const appContainer = document.getElementById('app-container');
+    if (appContainer) {
+      const panelWidth = appContainer.clientWidth || window.innerWidth;
+      appContainer.scrollTo({ left: panelWidth * 2, behavior: 'smooth' });
+    }
+  };
+
+  // Wire all .genre-card elements on page load
+  function initGenreCardListeners() {
+    document.querySelectorAll('.genre-card').forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        const genreKey = card.getAttribute('data-genre') || card.querySelector('.genre-card-title')?.textContent?.trim();
+        if (genreKey) {
+          window.launchGenreShuffle(genreKey);
+        }
+      });
+    });
+  }
+
 document.addEventListener('DOMContentLoaded', () => {
+  initGenreCardListeners();
+
 
   // ═══ SPLASH SCREEN DISMISS CONTROLLER ═══
   const splashScreen = document.getElementById('app-splash-screen');

@@ -577,8 +577,9 @@ window.JuiceEngine = (() => {
         showinfo: 0,
         playsinline: 1
       };
-      playerVars.origin = 'https://www.youtube.com';
-      playerVars.host = 'https://www.youtube.com';
+      if (window.location.origin && window.location.origin.startsWith('http') && !window.location.origin.includes('androidplatform.net')) {
+        playerVars.origin = window.location.origin;
+      }
 
       ytPlayer = new window.YT.Player(targetId, {
         height: '100%',
@@ -653,8 +654,6 @@ window.JuiceEngine = (() => {
               state.isPlaying = false;
               stopProgressTracker();
               emit('engine:stateChanged', state);
-      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
-      updateMediaSession(state.queue[state.currentIndex]);
               return;
             }
 
@@ -663,16 +662,11 @@ window.JuiceEngine = (() => {
               currentTrack._resolutionTried = true;
               resolveAndPlayTrack(currentTrack);
             } else {
-              // Auto-advance seamlessly without hanging
-              console.warn("Stream unavailable for track, skipping to next:", currentTrack.title);
+              console.warn("Stream unavailable for track:", currentTrack.title);
               state.isPlaying = false;
               stopProgressTracker();
               emit('engine:stateChanged', state);
-      if (state.isPlaying) { startBackgroundCarrier(); } else { stopBackgroundCarrier(); }
-      updateMediaSession(state.queue[state.currentIndex]);
-              if (state.autoplay) {
-                setTimeout(() => api.next(), 600);
-              }
+              // Stop playback cleanly instead of infinite skipping loop
             }
           }
         }
