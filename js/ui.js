@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ═══ AUDIO-REACTIVE CENTERPIECE CONTROLLER (6 iOS 28 & GOOGLE M3 STYLES) ═══
-  const VISUALIZER_STYLES = ['chroma', 'equalizer', 'orb', 'm3', 'blobs', 'hifi', 'vinyl'];
+  const VISUALIZER_STYLES = ['chroma', 'equalizer', 'orb', 'm3', 'hifi', 'vinyl'];
 
   const VISUALIZER_NAMES = {
     'chroma': '🎉 Razer Chroma & Confetti Breakout Party',

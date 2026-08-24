@@ -2176,6 +2176,21 @@
       background: rgba(10, 14, 23, 0.78);
     }
 
+  
+    /* ═══ 120Hz NATIVE HORIZONTAL FLUIDITY & SNAP STABILITY ═══ */
+    #app-container {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-x pan-y;
+      overscroll-behavior-x: contain;
+      scroll-behavior: smooth;
+    }
+    .app-view {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      will-change: transform, scroll-position;
+    }
+
   </style>
 </head>
 <body class="light-mode h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">

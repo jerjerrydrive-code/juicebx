@@ -7,13 +7,15 @@ import android.app.PendingIntent
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ServiceInfo
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.media.AudioAttributes
+import android.media.MediaPlayer
+import android.net.wifi.WifiManager
 import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
-import android.content.pm.ServiceInfo
-import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.MediaSessionCompat
 import android.support.v4.media.session.PlaybackStateCompat
 import androidx.core.app.NotificationCompat
@@ -23,10 +25,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.net.URL
 
-class MediaPlaybackService : Service() {
+class MediaPlaybackService : Service(), MediaPlayer.OnPreparedListener, MediaPlayer.OnErrorListener {
 
     private var mediaSession: MediaSessionCompat? = null
     private var wakeLock: PowerManager.WakeLock? = null
+    private var wifiLock: WifiManager.WifiLock? = null
+    private var silentCarrier: MediaPlayer? = null
+    
     private val CHANNEL_ID = "juicebx_media_playback"
     private val NOTIFICATION_ID = 999
 
@@ -47,11 +52,17 @@ class MediaPlaybackService : Service() {
         super.onCreate()
         createNotificationChannel()
 
-        // Acquire Partial WakeLock to keep audio thread alive with screen locked
+        // 1. Acquire Partial WakeLock to guarantee CPU execution with screen locked
         val powerManager = getSystemService(Context.POWER_SERVICE) as PowerManager
         wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "JuiceBx:AudioKeepAlive")
-        wakeLock?.acquire(12 * 60 * 60 * 1000L) // 12 hours max
+        wakeLock?.setReferenceCounted(false)
 
+        // 2. Acquire High-Performance Wi-Fi Lock for streaming continuity
+        val wifiManager = applicationContext.getSystemService(Context.WIFI_SERVICE) as? WifiManager
+        wifiLock = wifiManager?.createWifiLock(WifiManager.WIFI_MODE_FULL_HIGH_PERF, "JuiceBx:WifiLock")
+        wifiLock?.setReferenceCounted(false)
+
+        // 3. Initialize MediaSessionCompat
         mediaSession = MediaSessionCompat(this, "JuiceBxSession").apply {
             setCallback(object : MediaSessionCompat.Callback() {
                 override fun onPlay() {
@@ -69,6 +80,44 @@ class MediaPlaybackService : Service() {
             })
             isActive = true
         }
+
+        // 4. Initialize Native Silent Audio Carrier
+        initNativeAudioCarrier()
+    }
+
+    private fun initNativeAudioCarrier() {
+        try {
+            if (silentCarrier == null) {
+                silentCarrier = MediaPlayer().apply {
+                    setWakeMode(applicationContext, PowerManager.PARTIAL_WAKE_LOCK)
+                    setAudioAttributes(
+                        AudioAttributes.Builder()
+                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                            .setUsage(AudioAttributes.USAGE_MEDIA)
+                            .build()
+                    )
+                    setOnPreparedListener(this@MediaPlaybackService)
+                    setOnErrorListener(this@MediaPlaybackService)
+                    isLooping = true
+                    setVolume(0.01f, 0.01f) // Ultra-low amplitude keeps OS ALSA audio session active
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    override fun onPrepared(mp: MediaPlayer?) {
+        try {
+            mp?.start()
+        } catch (e: Exception) {}
+    }
+
+    override fun onError(mp: MediaPlayer?, what: Int, extra: Int): Boolean {
+        try {
+            mp?.reset()
+        } catch (e: Exception) {}
+        return true
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -78,6 +127,11 @@ class MediaPlaybackService : Service() {
             val artist = intent.getStringExtra(EXTRA_ARTIST) ?: "Juice WRLD"
             val thumb = intent.getStringExtra(EXTRA_THUMB) ?: ""
             val isPlaying = intent.getBooleanExtra(EXTRA_IS_PLAYING, true)
+
+            if (isPlaying) {
+                if (wakeLock?.isHeld != true) wakeLock?.acquire(12 * 60 * 60 * 1000L)
+                if (wifiLock?.isHeld != true) wifiLock?.acquire()
+            }
 
             updateMediaNotification(title, artist, thumb, isPlaying)
         } else if (action == ACTION_PLAY || action == ACTION_PAUSE || action == ACTION_NEXT || action == ACTION_PREV) {
@@ -139,13 +193,14 @@ class MediaPlaybackService : Service() {
             .setOngoing(isPlaying)
 
         val notification = builder.build()
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK)
         } else {
             startForeground(NOTIFICATION_ID, notification)
         }
 
-        // Async fetch artwork if provided
+        // Async fetch artwork for Notification largeIcon
         if (thumbUrl.isNotEmpty()) {
             CoroutineScope(Dispatchers.IO).launch {
                 try {
@@ -179,8 +234,17 @@ class MediaPlaybackService : Service() {
     override fun onDestroy() {
         super.onDestroy()
         mediaSession?.release()
+        try {
+            silentCarrier?.stop()
+            silentCarrier?.release()
+            silentCarrier = null
+        } catch (e: Exception) {}
+
         if (wakeLock?.isHeld == true) {
             wakeLock?.release()
+        }
+        if (wifiLock?.isHeld == true) {
+            wifiLock?.release()
         }
     }
 
