@@ -19603,6 +19603,8 @@ TOP_SHUFFLES_CATALOG["throwback_top100"] = TOP_SHUFFLES_CATALOG["throwback_90s_0
 TOP_SHUFFLES_CATALOG["lofi_top100"] = TOP_SHUFFLES_CATALOG["lofi_study"];
 TOP_SHUFFLES_CATALOG["classic_rock"] = TOP_SHUFFLES_CATALOG["classic_rock_top100"];
 TOP_SHUFFLES_CATALOG["country"] = TOP_SHUFFLES_CATALOG["country_top100"];
+TOP_SHUFFLES_CATALOG["classical_top100"] = TOP_SHUFFLES_CATALOG["instrumentals_top100"];
+TOP_SHUFFLES_CATALOG["classical"] = TOP_SHUFFLES_CATALOG["instrumentals_top100"];
 
 if (typeof window !== 'undefined') {
   window.TOP_SHUFFLES_CATALOG = TOP_SHUFFLES_CATALOG;
