@@ -1175,54 +1175,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloads = engine.getDownloads();
 
     const artistRadioHero = `
-      <div class="mb-3 p-3 rounded-[18px] bg-gradient-to-r from-purple-900/60 via-indigo-950/70 to-black/80 border border-purple-400/25 backdrop-blur-md flex items-center justify-between shadow-lg cursor-pointer active:scale-[0.98] transition-all" id="btn-search-artist-radio">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-500 to-indigo-600 flex items-center justify-center text-white shadow-md shrink-0">
+      <div class="c1-now-playing-card mb-3 p-3.5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-[0.98] transition-all" id="btn-search-artist-radio" style="background: #ebf0f7; box-shadow: 4px 4px 10px #c2cee0, -4px -4px 10px #ffffff;">
+        <div class="flex items-center gap-3 overflow-hidden">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-white shrink-0" style="background: linear-gradient(135deg, #a855f7, #6366f1); box-shadow: 2px 2px 6px rgba(168, 85, 247, 0.4);">
             <i class="ph-fill ph-broadcast text-lg animate-pulse"></i>
           </div>
           <div class="overflow-hidden">
-            <div class="font-bold text-sm text-white flex items-center gap-1.5 truncate">
+            <div class="font-black text-sm text-slate-900 flex items-center gap-1.5 truncate">
               <span>"${query}" Radio</span>
-              <span class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-purple-500/30 text-purple-200 border border-purple-400/30">SHUFFLE</span>
+              <span class="text-[9px] font-black px-2 py-0.5 rounded-full bg-purple-100 text-purple-700">SHUFFLE</span>
             </div>
-            <div class="text-[11px] font-medium text-white/60 truncate">Artist & similar tracks mix</div>
+            <div class="text-[11px] font-semibold text-slate-500 truncate">Artist & similar tracks mix</div>
           </div>
         </div>
-        <div class="w-8 h-8 rounded-full bg-white/10 border border-white/15 backdrop-blur-md flex items-center justify-center text-white shadow-sm shrink-0">
-          <i class="ph-fill ph-shuffle text-sm text-purple-300"></i>
+        <div class="w-8 h-8 rounded-full flex items-center justify-center text-purple-600 shrink-0" style="background: #ebf0f7; box-shadow: inset 1px 1px 3px #c2cee0, inset -1px -1px 3px #ffffff;">
+          <i class="ph-fill ph-shuffle text-sm"></i>
         </div>
       </div>
     `;
 
     const trackItemsHtml = tracks.map((t, i) => {
-      const isSaved = downloads.some(d => d.id === t.id);
-      const isFav = engine.isFavorite(t.id);
+      const isFav = engine.isFavorite(t.id || t.title);
+      const thumbUrl = t.thumb || (t.id && t.id.length === 11 ? `https://img.youtube.com/vi/${t.id}/hqdefault.jpg` : 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80');
+
       return `
-        <div class="search-result-item flex items-center justify-between p-3 rounded-[18px] mb-2.5 bg-white/5 border border-white/10 backdrop-blur-md cursor-pointer hover:bg-white/10 active:scale-[0.99] transition-all shadow-sm" data-search-idx="${i}">
-          <div class="flex items-center space-x-3 overflow-hidden flex-1 mr-2">
-            <div class="w-[46px] h-[46px] rounded-[14px] overflow-hidden flex-shrink-0 relative shadow-sm" style="background: var(--bg-card-solid);">
-              <img src="${t.thumb}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80'">
-            </div>
+        <div class="c1-now-playing-card search-result-item p-3 flex items-center justify-between rounded-2xl mb-2.5 cursor-pointer active:scale-[0.98] transition-all text-left" data-search-idx="${i}" style="background: #ebf0f7; box-shadow: 4px 4px 10px #c2cee0, -4px -4px 10px #ffffff;">
+          <div class="flex items-center gap-3 overflow-hidden flex-1 mr-2">
+            <span class="text-xs font-black text-slate-400 w-4 text-center shrink-0">${i + 1}</span>
+            <img src="${thumbUrl}" class="w-11 h-11 rounded-xl object-cover shrink-0 shadow-sm" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80'">
             <div class="overflow-hidden flex-1">
-              <div class="font-bold text-[14px] truncate text-white leading-tight">${t.title}</div>
-              <div class="flex items-center gap-2 mt-1">
-                <span class="font-medium text-[11px] truncate text-white/60">${t.artist}</span>
-                <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/60">${t.duration || ''}</span>
+              <p class="text-sm font-black text-slate-900 truncate leading-tight">${t.title}</p>
+              <div class="flex items-center gap-2 mt-0.5">
+                <span class="text-xs font-semibold text-slate-500 truncate">${t.artist || 'Juice WRLD'}</span>
+                ${t.duration ? `<span class="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-slate-200/60 text-slate-500">${t.duration}</span>` : ''}
               </div>
             </div>
           </div>
-          <div class="flex items-center gap-1.5 shrink-0">
-            <button class="btn-search-like w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all ${isFav ? 'text-pink-500' : 'text-white/40 hover:text-pink-500'}" data-track-id="${t.id}" title="Favorite">
-              <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'} text-base"></i>
+          <div class="flex items-center gap-2 shrink-0">
+            <button class="btn-search-like w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-all" data-track-id="${t.id}" data-search-idx="${i}" style="background: #ebf0f7; box-shadow: 2px 2px 5px #c2cee0, -2px -2px 5px #ffffff;">
+              <i class="${isFav ? 'ph-fill ph-heart text-pink-500 text-base' : 'ph-bold ph-heart text-slate-400 text-base'}"></i>
             </button>
-            <button class="btn-search-add-pl w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all text-white/40 hover:text-white" data-track-id="${t.id}" title="Add to Playlist">
-              <i class="ph-bold ph-plus text-base"></i>
-            </button>
-            <button class="btn-search-download w-8 h-8 rounded-full flex items-center justify-center active:scale-75 transition-all ${isSaved ? 'text-emerald-400' : 'text-white/40 hover:text-white'}" data-track-id="${t.id}" title="${isSaved ? 'Downloaded' : 'Download for Offline'}">
-              <i class="${isSaved ? 'ph-fill ph-check-circle text-emerald-400' : 'ph-bold ph-download-simple'} text-base"></i>
-            </button>
-            <button class="btn-search-play w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform shadow-md hover:scale-105 shrink-0" style="background: var(--btn-active-bg); color: var(--btn-active-text);" title="Play Track">
-              <i class="ph-fill ph-play text-sm ml-0.5"></i>
+            <button class="btn-search-more w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-all" data-search-idx="${i}" style="background: #ebf0f7; box-shadow: 2px 2px 5px #c2cee0, -2px -2px 5px #ffffff;">
+              <i class="ph-bold ph-dots-three text-slate-600 text-base"></i>
             </button>
           </div>
         </div>
@@ -1239,18 +1233,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Event listeners on search result items
+    // Click anywhere on search item to play and queue tracks
     els.searchResultsList.querySelectorAll('.search-result-item').forEach(item => {
       item.addEventListener('click', (e) => {
-        if (e.target.closest('.btn-search-download') || e.target.closest('.btn-search-like') || e.target.closest('.btn-search-add-pl')) return;
+        if (e.target.closest('.btn-search-like') || e.target.closest('.btn-search-more')) return;
         const idx = parseInt(item.getAttribute('data-search-idx'));
         const chosenTrack = tracks[idx];
         if (chosenTrack) {
           saveRecentSearch(query);
-          const state = engine.getState();
-          const newQueue = [chosenTrack, ...state.queue.filter(t => t.id !== chosenTrack.id)];
-          engine.setQueue(newQueue, true);
+          engine.setQueue(tracks, true, idx);
           scrollToPanel(2); // Jump straight to Player Deck
+          setDeckMode('vinyl');
         }
       });
     });
@@ -1263,28 +1256,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (track) {
           const isFav = engine.toggleFavorite(track);
           engine.playHaptic(600, 0.02);
-          btn.innerHTML = `<i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'}" style="${isFav ? '' : 'color: var(--text-tertiary);'}"></i>`;
+          btn.innerHTML = `<i class="${isFav ? 'ph-fill ph-heart text-pink-500 text-base' : 'ph-bold ph-heart text-slate-400 text-base'}"></i>`;
         }
       });
     });
 
-    els.searchResultsList.querySelectorAll('.btn-search-add-pl').forEach(btn => {
+    els.searchResultsList.querySelectorAll('.btn-search-more').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        const tid = btn.getAttribute('data-track-id');
-        const track = tracks.find(t => t.id === tid);
-        if (track) openAddToPlaylistModal(track);
-      });
-    });
-
-    els.searchResultsList.querySelectorAll('.btn-search-download').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const tid = btn.getAttribute('data-track-id');
-        const track = tracks.find(t => t.id === tid);
-        if (track) {
-          engine.downloadTrack(track);
-          btn.innerHTML = '<i class="ph-fill ph-check-circle text-emerald-400 text-base"></i>';
+        const idx = parseInt(btn.getAttribute('data-search-idx'));
+        const track = tracks[idx];
+        if (track && typeof openDeckOptionsModal === 'function') {
+          openDeckOptionsModal(track, idx);
         }
       });
     });
@@ -2696,26 +2679,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       els.playlistDetailTracksList.innerHTML = tracks.map((t, idx) => {
-        const isFav = engine.isFavorite(t.id);
+        const isFav = engine.isFavorite(t.id || t.title);
+        const thumbUrl = t.thumb || (t.id && t.id.length === 11 ? `https://img.youtube.com/vi/${t.id}/hqdefault.jpg` : 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80');
+
         return `
-          <div class="track-item flex items-center cursor-pointer p-2.5 rounded-2xl mb-1.5 glass-card" data-pl-track-idx="${idx}">
-            <span class="text-[11px] font-bold w-5 text-center mr-2" style="color: var(--text-tertiary);">${idx + 1}</span>
-            <div class="w-[42px] h-[42px] rounded-[13px] overflow-hidden flex-shrink-0 relative shadow-sm" style="background: var(--bg-card-solid);">
-              <img src="${t.thumb}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80'">
+          <div class="c1-now-playing-card track-item p-3 flex items-center justify-between rounded-2xl mb-2.5 cursor-pointer active:scale-[0.98] transition-all text-left" data-pl-track-idx="${idx}" style="background: #ebf0f7; box-shadow: 4px 4px 10px #c2cee0, -4px -4px 10px #ffffff;">
+            <div class="flex items-center gap-3 overflow-hidden flex-1 mr-2">
+              <span class="text-xs font-black text-slate-400 w-4 text-center shrink-0">${idx + 1}</span>
+              <img src="${thumbUrl}" class="w-11 h-11 rounded-xl object-cover shrink-0 shadow-sm" onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&q=80'">
+              <div class="overflow-hidden flex-1">
+                <p class="text-sm font-black text-slate-900 truncate leading-tight">${t.title}</p>
+                <div class="flex items-center gap-2 mt-0.5">
+                  <span class="text-xs font-semibold text-slate-500 truncate">${t.artist || 'Juice WRLD'}</span>
+                  ${t.duration ? `<span class="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-slate-200/60 text-slate-500">${t.duration}</span>` : ''}
+                </div>
+              </div>
             </div>
-            <div class="flex-1 overflow-hidden ml-3 mr-2">
-              <div class="font-bold truncate text-[13px] leading-tight" style="color: var(--text-primary);">${t.title}</div>
-              <span class="font-medium text-[11px]" style="color: var(--text-secondary);">${t.artist}</span>
-            </div>
-            <div class="flex items-center gap-1.5 shrink-0">
-              <span class="text-[11px] font-medium mr-1" style="color: var(--text-tertiary);">${t.duration || ''}</span>
-              <button class="btn-item-like w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all" data-track-id="${t.id}" title="Toggle Like">
-                <i class="${isFav ? 'ph-fill ph-heart text-pink-500' : 'ph-bold ph-heart'}" style="${isFav ? '' : 'color: var(--text-tertiary);'}"></i>
+            <div class="flex items-center gap-2 shrink-0">
+              <button class="btn-item-like w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-all" data-track-id="${t.id}" data-idx="${idx}" style="background: #ebf0f7; box-shadow: 2px 2px 5px #c2cee0, -2px -2px 5px #ffffff;">
+                <i class="${isFav ? 'ph-fill ph-heart text-pink-500 text-base' : 'ph-bold ph-heart text-slate-400 text-base'}"></i>
               </button>
-              <button class="btn-item-remove-pl w-7 h-7 rounded-full flex items-center justify-center active:scale-75 transition-all text-xs opacity-60 hover:opacity-100 hover:text-red-400" data-track-id="${t.id}" title="Remove">
-                <i class="ph-bold ph-x"></i>
+              <button class="btn-pl-track-more w-8 h-8 rounded-full flex items-center justify-center active:scale-90 transition-all" data-idx="${idx}" style="background: #ebf0f7; box-shadow: 2px 2px 5px #c2cee0, -2px -2px 5px #ffffff;">
+                <i class="ph-bold ph-dots-three text-slate-600 text-base"></i>
               </button>
-              <i class="ph-fill ph-play text-sm ml-0.5" style="color: var(--text-secondary);"></i>
             </div>
           </div>
         `;
@@ -2738,6 +2724,17 @@ document.addEventListener('DOMContentLoaded', () => {
           if (track) {
             engine.toggleFavorite(track);
             engine.playHaptic(600, 0.02);
+          }
+        });
+      });
+
+      els.playlistDetailTracksList.querySelectorAll('.btn-pl-track-more').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const idx = parseInt(btn.getAttribute('data-idx'));
+          const track = tracks[idx];
+          if (track && typeof openDeckOptionsModal === 'function') {
+            openDeckOptionsModal(track, idx);
           }
         });
       });

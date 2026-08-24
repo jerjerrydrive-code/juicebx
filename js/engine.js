@@ -2186,11 +2186,11 @@ window.JuiceEngine = (() => {
 
         const defaults = [
 
-          { id: "mzB1V935Gsw", title: "Lucid Dreams", artist: "Juice WRLD", duration: "3:51", seconds: 231, thumb: "https://i.ytimg.com/vi/mzB1V935Gsw/hqdefault.jpg" },
+          { id: "mzB1VGEGcSU", title: "Lucid Dreams", artist: "Juice WRLD", duration: "3:51", seconds: 231, thumb: "https://i.ytimg.com/vi/mzB1VGEGcSU/hqdefault.jpg" },
 
-          { id: "iILFsYwZ_eY", title: "Robbery", artist: "Juice WRLD", duration: "4:00", seconds: 240, thumb: "https://i.ytimg.com/vi/iILFsYwZ_eY/hqdefault.jpg" },
+          { id: "iI34LYmJ1Fs", title: "Robbery", artist: "Juice WRLD", duration: "3:38", seconds: 218, thumb: "https://i.ytimg.com/vi/iI34LYmJ1Fs/hqdefault.jpg" },
 
-          { id: "h4819g8471k", title: "Rental (Kiri's Final)", artist: "Juice WRLD", duration: "3:47", seconds: 227, thumb: "https://i.ytimg.com/vi/h4819g8471k/hqdefault.jpg" }
+          { id: "UlRQOU0qjOY", title: "Rental (Kiri's Final)", artist: "Juice WRLD", duration: "4:13", seconds: 253, thumb: "https://i.ytimg.com/vi/UlRQOU0qjOY/hqdefault.jpg" }
 
         ];
 
@@ -2270,13 +2270,13 @@ window.JuiceEngine = (() => {
 
             tracks: [
 
-              { id: "mzB1V935Gsw", title: "Lucid Dreams", artist: "Juice WRLD", duration: "3:51", seconds: 231, thumb: "https://i.ytimg.com/vi/mzB1V935Gsw/hqdefault.jpg" },
+              { id: "mzB1VGEGcSU", title: "Lucid Dreams", artist: "Juice WRLD", duration: "3:51", seconds: 231, thumb: "https://i.ytimg.com/vi/mzB1VGEGcSU/hqdefault.jpg" },
 
-              { id: "h3h035Eyz5A", title: "All Girls Are The Same", artist: "Juice WRLD", duration: "3:13", seconds: 193, thumb: "https://i.ytimg.com/vi/h3h035Eyz5A/hqdefault.jpg" },
+              { id: "h3EJICKwITw", title: "All Girls Are The Same", artist: "Juice WRLD", duration: "2:57", seconds: 177, thumb: "https://i.ytimg.com/vi/h3EJICKwITw/hqdefault.jpg" },
 
-              { id: "cr3nNflrO-c", title: "Wishing Well", artist: "Juice WRLD", duration: "3:14", seconds: 194, thumb: "https://i.ytimg.com/vi/cr3nNflrO-c/hqdefault.jpg" },
+              { id: "C5i-UnuUKUI", title: "Wishing Well", artist: "Juice WRLD", duration: "3:23", seconds: 203, thumb: "https://i.ytimg.com/vi/C5i-UnuUKUI/hqdefault.jpg" },
 
-              { id: "iILFsYwZ_eY", title: "Robbery", artist: "Juice WRLD", duration: "4:00", seconds: 240, thumb: "https://i.ytimg.com/vi/iILFsYwZ_eY/hqdefault.jpg" }
+              { id: "iI34LYmJ1Fs", title: "Robbery", artist: "Juice WRLD", duration: "3:38", seconds: 218, thumb: "https://i.ytimg.com/vi/iI34LYmJ1Fs/hqdefault.jpg" }
 
             ]
 
@@ -2294,7 +2294,7 @@ window.JuiceEngine = (() => {
 
             tracks: [
 
-              { id: "s510g8319fA", title: "Righteous", artist: "Juice WRLD", duration: "4:02", seconds: 242, thumb: "https://i.ytimg.com/vi/s510g8319fA/hqdefault.jpg" },
+              { id: "de7G0e5wK2s", title: "Righteous", artist: "Juice WRLD", duration: "4:02", seconds: 242, thumb: "https://i.ytimg.com/vi/de7G0e5wK2s/hqdefault.jpg" },
 
               { id: "WcsFWHZ5q88", title: "Wasted (feat. Lil Uzi Vert)", artist: "Juice WRLD", duration: "4:18", seconds: 258, thumb: "https://i.ytimg.com/vi/WcsFWHZ5q88/hqdefault.jpg" },
 
@@ -2694,6 +2694,58 @@ window.JuiceEngine = (() => {
 
       }, 1000);
 
+    },
+
+    // ═══ AUDIO SPECTRUM & BEAT ESTIMATOR (FOR 120FPS VISUALIZERS) ═══
+    getLevels: () => {
+      if (typeof audioAnalyserNode !== 'undefined' && audioAnalyserNode && state.isPlaying) {
+        try {
+          const bufferLength = audioAnalyserNode.frequencyBinCount;
+          const dataArray = new Uint8Array(bufferLength);
+          audioAnalyserNode.getByteFrequencyData(dataArray);
+
+          let bassSum = 0, midSum = 0, trebleSum = 0;
+          const bassEnd = Math.floor(bufferLength * 0.14);
+          const midEnd = Math.floor(bufferLength * 0.48);
+
+          for (let i = 0; i < bassEnd; i++) bassSum += dataArray[i];
+          for (let i = bassEnd; i < midEnd; i++) midSum += dataArray[i];
+          for (let i = midEnd; i < bufferLength; i++) trebleSum += dataArray[i];
+
+          const bass = bassSum / (bassEnd * 255);
+          const mid = midSum / ((midEnd - bassEnd) * 255);
+          const treble = trebleSum / ((bufferLength - midEnd) * 255);
+          const energy = (bass * 0.5 + mid * 0.3 + treble * 0.2);
+
+          if (energy > 0.03) {
+            return { bass, mid, treble, energy, frequencies: dataArray };
+          }
+        } catch(e) {}
+      }
+
+      if (state.isPlaying) {
+        const curT = (state.currentTime || 0);
+        const bpm = 135; // Standard energetic trap / hip-hop / pop average
+        const beatPeriod = 60 / bpm;
+        const beatPhase = (curT % beatPeriod) / beatPeriod;
+        
+        // 808 Kick & Transient Pulse
+        const kick = Math.pow(Math.max(0, 1 - beatPhase * 3.2), 2.5);
+        // Snare on 2 and 4
+        const barPhase = (curT % (beatPeriod * 4)) / (beatPeriod * 4);
+        const snare = Math.pow(Math.max(0, 1 - Math.abs(barPhase - 0.5) * 6), 2);
+        // Shimmering Hi-Hats
+        const hihat = (Math.sin(curT * 24) * 0.5 + 0.5) * 0.45;
+
+        const bass = Math.min(1.0, 0.22 + kick * 0.68 + Math.random() * 0.08);
+        const mid = Math.min(1.0, 0.18 + snare * 0.58 + Math.random() * 0.06);
+        const treble = Math.min(1.0, 0.14 + hihat * 0.52 + Math.random() * 0.05);
+        const energy = bass * 0.5 + mid * 0.3 + treble * 0.2;
+
+        return { bass, mid, treble, energy };
+      }
+
+      return { bass: 0.05, mid: 0.05, treble: 0.05, energy: 0.05 };
     },
 
     cancelSleepTimer: () => {
