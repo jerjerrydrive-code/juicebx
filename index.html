@@ -2048,6 +2048,38 @@
       scroll-snap-align: start !important;
     }
 
+  
+    /* Fluid Native Swiping */
+    #app-container {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: none;
+      touch-action: pan-x pan-y;
+    }
+
+    /* Larger Taller Now Playing Top Header Card */
+    .c1-now-playing-card {
+      padding: 14px 20px !important;
+      min-height: 82px !important;
+      border-radius: 26px !important;
+      margin-bottom: 12px !important;
+    }
+    .c1-now-playing-title {
+      font-size: 19px !important;
+      font-weight: 900 !important;
+      letter-spacing: -0.02em !important;
+      line-height: 1.2 !important;
+      margin-top: 3px !important;
+    }
+    .c1-now-playing-artist {
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      color: #64748b !important;
+    }
+    .c1-segmented-bar {
+      margin-bottom: 12px !important;
+    }
+
   </style>
 </head>
 <body class="light-mode h-[100dvh] w-[100vw] p-0 m-0 overflow-hidden select-none" style="background: var(--bg-app);">
@@ -2070,7 +2102,7 @@
         <div class="mb-8">
           <div class="flex items-center justify-between px-1 mb-3">
             <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">Shuffles</h2>
-            <span class="text-xs font-bold text-slate-500">12 Mixes</span>
+            
           </div>
 
           <!-- TOP 2 SIGNATURE HERO SHUFFLES -->
@@ -2376,8 +2408,8 @@
             <div class="c1-now-playing-card p-4 rounded-[26px] relative overflow-hidden cursor-pointer group active:scale-[0.98] transition-all mb-4 text-left" id="hero-liked-songs-card">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-3.5">
-                  <div class="w-13 h-13 rounded-2xl bg-gradient-to-tr from-pink-500 via-rose-500 to-purple-500 flex items-center justify-center text-white shadow-md shrink-0">
-                    <i class="ph-fill ph-heart text-2xl"></i>
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center text-pink-500 shrink-0" style="background: #e2eaf4; box-shadow: inset 3px 3px 6px rgba(170, 185, 205, 0.6), inset -3px -3px 6px #ffffff; border: 1px solid rgba(255,255,255,0.7);">
+                    <i class="ph-fill ph-heart text-2xl drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]"></i>
                   </div>
                   <div>
                     <h3 class="text-base font-extrabold text-slate-900">Liked Songs</h3>
@@ -2490,11 +2522,7 @@
           <!-- Top Bar -->
           <div class="flex items-center justify-between px-1">
             <h1 class="text-2xl font-bold tracking-tight" style="color: var(--text-primary);">Settings</h1>
-            <span id="settings-version-badge" class="text-[11px] font-black px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/40 text-purple-600 dark:text-purple-400 shadow-sm flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
-              v3.2.0 • 🎨 Neumorphic UI
-            </span>
-          </div>
+            </div>
 
           <!-- 1. Aesthetic Themes (2x2 Quick Swatches Grid + Full 338 Strip) -->
           <div class="glass-card p-4 space-y-3 rounded-[22px]">
@@ -2510,19 +2538,7 @@
             </div>
           </div>
 
-          <!-- 2. JuiceBx Audio Deck Status Card (Exact Mockup Match) -->
-          <div class="glass-card p-4 space-y-2 rounded-[22px]">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2">
-                <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
-                <p class="font-bold text-xs" style="color: var(--text-primary);">JuiceBx Audio Deck</p>
-              </div>
-              <span class="text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">v3.0.0 Rabbit R1 Native Edition</span>
-            </div>
-            <p class="text-[11px]" style="color: var(--text-secondary);">Engine: Zero-Latency 2.0 • Synced LRC Active</p>
-          </div>
-
-          <!-- 3. System Preferences (Clean Toggles) -->
+          <!-- 2. System Preferences (Clean Toggles) -->
           <div class="glass-card p-4 space-y-3 rounded-[22px]">
             <div class="flex items-center justify-between">
               <div>
@@ -2554,14 +2570,7 @@
               </div>
             </div>
 
-            <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
-              <div>
-                <p class="font-semibold text-sm" style="color: var(--text-primary);">Keep Screen Awake</p>
-                <p class="text-[11px]" style="color: var(--text-secondary);">Prevent screen sleep during playback</p>
-              </div>
-              <div class="toggle-switch" id="toggle-wakelock">
-                <div class="toggle-knob"></div>
-              </div>
+            
             </div>
 
             <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
@@ -2574,14 +2583,7 @@
               </div>
             </div>
 
-            <div class="flex items-center justify-between pt-2.5 border-t border-slate-100">
-              <div>
-                <p class="font-semibold text-sm" style="color: var(--text-primary);">Auto-Rotate Video</p>
-                <p class="text-[11px]" style="color: var(--text-secondary);">Landscape tilt flips Deck to Video</p>
-              </div>
-              <div class="toggle-switch" id="toggle-auto-rotate">
-                <div class="toggle-knob"></div>
-              </div>
+            
             </div>
           </div>
 
@@ -2847,5 +2849,38 @@
   <script src="js/shuffles_catalog.js"></script>
   <script src="js/engine.js"></script>
   <script src="js/ui.js"></script>
+
+  <!-- ═══ NOW PLAYING ••• ACTION SHEET / MODAL ═══ -->
+  <div id="modal-deck-options" class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200">
+    <div class="w-full max-w-sm rounded-t-[32px] sm:rounded-[32px] p-6 space-y-4 shadow-2xl transition-transform duration-200 transform translate-y-full" style="background: var(--bg-card-solid); border: 1px solid var(--border-card);">
+      <div class="flex items-center justify-between border-b pb-3" style="border-color: var(--border-card);">
+        <div class="overflow-hidden mr-3">
+          <h3 class="font-black text-sm truncate" id="deck-options-track-title" style="color: var(--text-primary);">Track Options</h3>
+          <p class="text-[11px] font-medium truncate" id="deck-options-track-artist" style="color: var(--text-secondary);">Juice WRLD</p>
+        </div>
+        <button id="btn-close-deck-options" class="w-8 h-8 rounded-full flex items-center justify-center active:scale-90" style="background: var(--bg-input); color: var(--text-primary);">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+      <div class="space-y-2">
+        <button id="btn-opt-add-playlist" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
+          <i class="ph-bold ph-playlist text-base text-indigo-400"></i> Add to Playlist
+        </button>
+        <button id="btn-opt-download" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
+          <i class="ph-bold ph-download-simple text-base text-emerald-400"></i> Download / Save Offline
+        </button>
+        <button id="btn-opt-equalizer" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
+          <i class="ph-bold ph-sliders text-base text-purple-400"></i> Audio Equalizer
+        </button>
+        <button id="btn-opt-sleep-timer" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
+          <i class="ph-bold ph-timer text-base text-amber-400"></i> Sleep Timer
+        </button>
+        <button id="btn-opt-sanctuary" class="w-full py-3 px-4 rounded-2xl font-bold text-xs flex items-center gap-3 active:scale-[0.98] transition-all" style="background: var(--bg-input); color: var(--text-primary);">
+          <i class="ph-bold ph-dove text-base text-pink-400"></i> 999 Memorial Sanctuary
+        </button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
