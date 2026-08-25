@@ -577,7 +577,7 @@ window.JuiceEngine = (() => {
         showinfo: 0,
         playsinline: 1
       };
-      if (window.location.origin && window.location.origin.startsWith('http') && !window.location.origin.includes('androidplatform.net')) {
+      if (window.location.origin && window.location.origin.startsWith('http')) {
         playerVars.origin = window.location.origin;
       }
 
